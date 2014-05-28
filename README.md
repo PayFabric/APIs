@@ -1,5 +1,3 @@
-![-](http://dev-cn.payfabric.com:1888/repository/samplecode/images/payfabric.png)
-
 # Overview
 PayFabric is an out-of-box application and a full featured API that facilitates merchants to integrate their application with PayFabric. The applications, which can utilize PayFabric, can vary from B2X web store applications to enterprise ERP systems. 
 
