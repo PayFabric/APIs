@@ -67,7 +67,7 @@ Catch (Exception ex)
 # Payment APIs
 
 
-> Before drilling down to each API, you may want to get familiar with all the [JSON Objects](https://github.com/PayFabric/APIs/wiki) we are heavily using as payload of request and response. 
+Before drilling down to each API, you may want to get familiar with all the [JSON Objects](https://github.com/PayFabric/APIs/wiki) we are heavily using as payload of request and response. 
 
 
 * [Create a New Transaction](https://github.com/PayFabric/APIs/wiki#create-a-new-transaction)
@@ -75,8 +75,8 @@ Catch (Exception ex)
 * [Process a Transaction by Transaction Key](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-key)
 * [Process a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-object)
 * [Retrieve a Transaction](https://github.com/PayFabric/APIs/wiki#retrieve-a-transaction)
-* Capture a Pre-Authorized Transaction
-* Cancel a Transaction 
+* [Capture a Pre-Authorized Transaction](#)
+* [Cancel a Transaction](#)
 
 Belows are API calls regarding PayFabric Wallet
 * [Add a Card into Wallet](https://github.com/PayFabric/APIs/wiki#add-a-card-into-wallet)
