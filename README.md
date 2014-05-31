@@ -3,7 +3,6 @@ PayFabric APIs are organized around Representational State Transfer (**REST**) a
 
 1. Live Server:    ``https://www.payfabric.com/rest/v1/api``
 1. Sandbox Server: ``https://sandbox.payfabric.com/rest/v1/api``
-1. API Help: ``https://www.payfabric.com/rest/v1/api/help``
 
 Before you programming with APIs, you need a PayFabric account, as well as simple configurations. [Quick Start](https://github.com/PayFabric/Portal/wiki) can go through for you.
 
