@@ -65,7 +65,7 @@ Catch (Exception ex)
 # Payment APIs
 
 
-> Before drilling down to each API, you may want to get familiar with all the [JSON Objects](https://www.payfabric.com) we are heavily using as payload of request and response. 
+> Before drilling down to each API, you may want to get familiar with all the [JSON Objects](https://github.com/PayFabric/APIs/wiki) we are heavily using as payload of request and response. 
 
 
 * [Create a transaction](https://www.payfabric.com)
