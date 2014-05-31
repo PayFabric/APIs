@@ -75,8 +75,9 @@ Before drilling down to each API, you may want to get familiar with all the [JSO
 * [Process a Transaction by Transaction Key](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-key)
 * [Process a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-object)
 * [Retrieve a Transaction](https://github.com/PayFabric/APIs/wiki#retrieve-a-transaction)
-* [Capture a Pre-Authorized Transaction](#)
-* [Cancel a Transaction](#)
+* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/wiki#capture-a-pre-authorized-transaction)
+* [Cancel a Transaction](https://github.com/PayFabric/APIs/wiki#cancel-a-transaction)
+* [Refund a Customer](https://github.com/PayFabric/APIs/wiki#refund-a-customer)
 
 Belows are API calls regarding PayFabric Wallet
 * [Add a Card into Wallet](https://github.com/PayFabric/APIs/wiki#add-a-card-into-wallet)
