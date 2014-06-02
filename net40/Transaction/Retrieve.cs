@@ -15,19 +15,19 @@ using System.IO;
 namespace Samples.Net40
 {
     /// <summary>
-    /// This sample is to demo how to cancel a transaction before it is settled
+    /// This sample is to demo how to retrieve a transaction back from PayFabric
     /// </summary>
     public partial class Transaction
     {
         /// <summary>
-        /// Only unsettled transaction can be cancelled.
+        /// This method call will return all transaction fields with masked account/card number
         /// </summary>
-        /// <param name="originalKey">Orignial transaction key</param>
-        public void Cancel(string originalKey)
+        /// <param name="transactionKey">Transaction key</param>
+        public void Retrieve(string transactionKey)
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/rest/v1/api/reference" + "/" + originalKey + "?trxtype=Void";
+                var url = "https://sandbox.payfabric.com/rest/v1/api/transaction" + "/" + transactionKey;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -43,31 +43,19 @@ namespace Samples.Net40
                 httpWebResponse.Close();
 
                 //
-                // Sample response - a transaction response object
-                // ------------------------------------------------------
-                //{
-                //    "AVSAddressResponse":"Y",
-                //    "AVSZipResponse":"Y",
-                //    "AuthCode":"010010",
-                //    "CVV2Response":"Y",
-                //    "IAVSAddressResponse":"Y",
-                //    "Message":"APPROVED",
-                //    "OriginationID":"987220999",
-                //    "RespTrxTag":"",
-                //    "ResultCode":"0",
-                //    "Status":"Approved",
-                //    "TrxDate":"",
-                //    "TrxKey":"140500229002"
-                //}
-                // ------------------------------------------------------
+                // "result" is a Transaction object with json format
+                // 
+                // Go to https://github.com/PayFabric/APIs/wiki/API-Objects#transaction for details
+                //
+
 
             }
             catch (WebException e)
-            { 
+            {
                 //  Handling exception from PayFabric
             }
             catch (Exception e)
-            { 
+            {
                 //  Handling exception
             }
         }

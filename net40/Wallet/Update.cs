@@ -9,53 +9,42 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Net;
 using System.IO;
+using System.Net;
+using System.Runtime.Serialization;
 
 namespace Samples.Net40
 {
     /// <summary>
-    /// This sample is to demo how to refund a customer
+    /// This sample is to demo how to update an existing card
     /// </summary>
-    public partial class Transaction
+    public partial class Wallet
     {
         /// <summary>
-        /// Refund a customer if the original transaction is already settled.
+        /// Card number is not able to be updated. But you can remove the old card and add the new one.
+        /// Below example is updating expiration date, billto city, and 2 user defined fields
         /// </summary>
-        public void Refund()
+        /// <param name="cardId">Card guid</param>
+        public void Update(Guid cardId)
         {
             try
             {
                 //  Populate POST String
                 StringBuilder datastring = new StringBuilder();
                 datastring.Append("{");
-                datastring.Append("\"Customer\":\"ARRONFIT0003\",");
-                datastring.Append("\"Currency\":\"USD\",");
-                datastring.Append("\"Amount\":\"10.05\",");
-                datastring.Append("\"Type\":\"Credit\",");
-                datastring.Append("\"SetupId\":\"Paypal\""); // Replace with your gateway account profile name
-                datastring.Append("\"Card\":{");
-                datastring.Append("\"Account\":\"5555555555554444\",");
-                datastring.Append("\"Cvc\":\"1453\",");
-                datastring.Append("\"Tender\":\"CreditCard\",");
-                datastring.Append("\"CardName\":\"MasterCard\",");
-                datastring.Append("\"ExpDate\":\"0115\",");
-                datastring.Append("\"CardHolder\":{");
-                datastring.Append("\"Name\":\"jason zhao\"");
-                datastring.Append("},");
+                datastring.Append("\"ID\":\"" + cardId.ToString() + "\",");
+                datastring.Append("\"ExpDate\":\"0219\",");
                 datastring.Append("\"Billto\":{");
-                datastring.Append("\"Country\":\"US\",");
-                datastring.Append("\"State\":\"CA\",");
-                datastring.Append("\"City\":\"ANAHEIM\",");
-                datastring.Append("\"Line1\":\"2099 S State College Blvd\",");
-                datastring.Append("\"Email\":\"support@payfabric.com\"");
-                datastring.Append("}");
-                datastring.Append("}");
+                datastring.Append("\"City\":\"Rowland Height\",");
+                datastring.Append("\"Line1\":\"Fullerton Blvd\",");
+                datastring.Append("},");
+                datastring.Append("\"UserDefined1\":\"New Update\",");
+                datastring.Append("\"UserDefined2\":\"New Update\"");
                 datastring.Append("}");
 
                 // POST
                 byte[] data = System.Text.Encoding.UTF8.GetBytes(datastring.ToString());
-                var url = "https://sandbox.payfabric.com/rest/v1/api/transaction/process";
+                var url = "https://sandbox.payfabric.com/rest/v1/api/wallet/update";
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -74,23 +63,14 @@ namespace Samples.Net40
                 httpWebRequest.Abort();
                 httpWebResponse.Close();
 
-                // 
-                // Sample repsonse is similar to below
                 //
+                // Sample response
+                // ----------------------------------------------------
                 //{
-                //    "AVSAddressResponse": null,
-                //    "AVSZipResponse": null,
-                //    "AuthCode": null,
-                //    "CVV2Response": null,
-                //    "IAVSAddressResponse": null,
-                //    "Message": "Approved",
-                //    "OriginationID": "A70E6C184BA5",
-                //    "RespTrxTag": null,
-                //    "ResultCode": "0",
-                //    "Status": "Approved",
-                //    "TrxDate": "5\/31\/2014 3:17:27 PM",
-                //    "TrxKey": "140531067716"
+                //    "Result":"true"  
                 //}
+                // ----------------------------------------------------
+                //
 
             }
             catch (WebException e)
@@ -101,7 +81,6 @@ namespace Samples.Net40
             {
                 //  Handling exception
             }
-
         }
     }
 }

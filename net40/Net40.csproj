@@ -40,19 +40,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GatewayAccount\Retrieve.cs" />
+    <Compile Include="GatewayAccount\RetrieveAll.cs" />
     <Compile Include="Misc\JsonHelper.cs" />
     <Compile Include="Misc\Token.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShippingAddress\Retrieve.cs" />
+    <Compile Include="ShippingAddress\RetrieveByCustomer.cs" />
     <Compile Include="Transaction\Cancel.cs" />
     <Compile Include="Transaction\Capture.cs" />
     <Compile Include="Transaction\Create.cs" />
     <Compile Include="Transaction\Process.cs" />
     <Compile Include="Transaction\Refund.cs" />
+    <Compile Include="Transaction\Retrieve.cs" />
     <Compile Include="Transaction\Update.cs" />
+    <Compile Include="Wallet\Add.cs" />
+    <Compile Include="Wallet\Remove.cs" />
+    <Compile Include="Wallet\Retrieve.cs" />
+    <Compile Include="Wallet\Update.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Wallet\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

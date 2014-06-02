@@ -9,25 +9,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Net;
 using System.IO;
+using System.Net;
+using System.Runtime.Serialization;
 
 namespace Samples.Net40
 {
     /// <summary>
-    /// This sample is to demo how to cancel a transaction before it is settled
+    /// This sample is to demo how to retrieve one of customer's shipping address
     /// </summary>
-    public partial class Transaction
+    public partial class ShippingAddress
     {
         /// <summary>
-        /// Only unsettled transaction can be cancelled.
+        /// Retrieve a shipping address record by id
         /// </summary>
-        /// <param name="originalKey">Orignial transaction key</param>
-        public void Cancel(string originalKey)
+        /// <param name="addressId">Address GUID</param>
+        public void Retrieve(Guid addressId)
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/rest/v1/api/reference" + "/" + originalKey + "?trxtype=Void";
+                var url = "https://sandbox.payfabric.com/rest/v1/api/address" + "/" + addressId.ToString();
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -35,7 +36,7 @@ namespace Samples.Net40
                 HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
                 Stream responseStream = httpWebResponse.GetResponseStream();
                 StreamReader streamReader = new StreamReader(responseStream);
-                string result = streamReader.ReadToEnd();
+                string result = streamReader.ReadToEnd();  // JSON result
                 Console.WriteLine(result);
                 streamReader.Close();
                 responseStream.Close();
@@ -43,31 +44,19 @@ namespace Samples.Net40
                 httpWebResponse.Close();
 
                 //
-                // Sample response - a transaction response object
+                // Sample response
                 // ------------------------------------------------------
-                //{
-                //    "AVSAddressResponse":"Y",
-                //    "AVSZipResponse":"Y",
-                //    "AuthCode":"010010",
-                //    "CVV2Response":"Y",
-                //    "IAVSAddressResponse":"Y",
-                //    "Message":"APPROVED",
-                //    "OriginationID":"987220999",
-                //    "RespTrxTag":"",
-                //    "ResultCode":"0",
-                //    "Status":"Approved",
-                //    "TrxDate":"",
-                //    "TrxKey":"140500229002"
-                //}
+                // Response text is an address object with json format
+                // Go to https://github.com/PayFabric/APIs/wiki/API-Objects#address for more details about address object.
                 // ------------------------------------------------------
 
             }
             catch (WebException e)
-            { 
+            {
                 //  Handling exception from PayFabric
             }
             catch (Exception e)
-            { 
+            {
                 //  Handling exception
             }
         }
