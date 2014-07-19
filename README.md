@@ -40,6 +40,7 @@ It is for sure you will encounter exceptions occasionally. The HTTP request to P
 | 200 OK| Everything goes fine | 
 | 400 Bad Request | Normally, this is because you requested a wrong URL |
 | 401 Unauthorized| Your authentication string (either device id/password or security token is wrong)|  
+| 404 Not Found | The requested resource could not be located. Check for typos in your resource URI. |  
 | 412 Precondition Failed| Missing fields or mandatory parameters|  
 | 500 Internal Server Error| Oops, this is our fault and we're going to fix it |
 
