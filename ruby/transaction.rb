@@ -274,7 +274,7 @@ module PayFabric
       #  @return [Transaction Response](https://github.com/PayFabric/APIs/wiki/API-Objects#transaction-response)   
       #
       def cancel(device_id, password, trx_key)
-        url = "https://sandbox.payfabric.com/rest/v1/api/reference/#{trx_key}?trxtype=VOID"
+        url = "https://sandbox.payfabric.com/rest/v1/api/reference/#{trx_key}?trxtype=Void"
         Share::cancel(url, device_id, password)
       end
 
@@ -358,7 +358,7 @@ module PayFabric
       end
       # see Sandbox::cancel
       def cancel(device_id, password, trx_key)
-        url = "https://payfabric.com/rest/v1/api/reference/#{trx_key}?trxtype=VOID"
+        url = "https://payfabric.com/rest/v1/api/reference/#{trx_key}?trxtype=Void"
         Share::cancel(url, device_id, password)
       end
       # see Sandbox::refund
