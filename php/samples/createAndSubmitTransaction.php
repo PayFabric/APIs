@@ -16,8 +16,4 @@ $fields = Array(
         "Type" => Constants::TRANSACTION_TYPE_SALE,
         "Card" => $card);
 
-/* Upon success PayFabric returns a transaction key. Right now the transaction
- * is only stored on the PayFabric server. It has not yet been submitted to a 
- * Payment Gateway. Use Transaction::submit($transactionKey) to submit the 
- * transaction to a Payment Gateway. */ 
-$key = Transaction::create($fields);
+$transactionResponse = Transaction::createAndSubmit($fields);
