@@ -1,9 +1,7 @@
 <?php
 
-require_once "PaymentGatewayManager.php";
+require_once "PaymentGateway.php";
 
-$paymentGatewayManager = new PaymentGatewayManager();
+$paymentGateways = PaymentGateway::getAllPaymentGateways();
 
-$paymentGateways = $paymentGatewayManager->getAllPaymentGateways();
-
-$paymentGateway = $paymentGatewayManager->getPaymentGatewayById($paymentGateways[0]["ID"]);
+$paymentGateway = PaymentGateway::getPaymentGatewayById($paymentGateways[0]["ID"]);
