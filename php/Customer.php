@@ -4,6 +4,10 @@ require_once "Constants.php";
 require_once "HttpClient.php";
 require_once "Utilities.php";
 
+/* Customer - Handles customer management tasks.
+ * 
+ * Use this class to access a Customer's addresses, credit cards, etc.
+ * Pass the Customer ID of the Customer as the argument constructor. */
 class Customer {
     private $_id; // Customer ID
 
@@ -55,11 +59,13 @@ class Customer {
     }
  
     public function getAllCreditCards() {
-        return HttpClient::get("wallet/get/" . $this->_id . "?tender=" . Constants::TENDER_TYPE_CREDIT_CARD);
+        return HttpClient::get("wallet/get/" . $this->_id . "?tender=" . 
+                Constants::TENDER_TYPE_CREDIT_CARD);
     }
 
     public function getAllEchecks() {
-        return HttpClient::get("wallet/get/". $this->_id . "?tender=" . Constants::TENDER_TYPE_ECHECK);
+        return HttpClient::get("wallet/get/". $this->_id . "?tender=" . 
+                Constants::TENDER_TYPE_ECHECK);
     }
 
     public function deleteEcheck($echeckId) {
@@ -77,20 +83,6 @@ class Customer {
         $json = Utilities::toJsonFromArray($creditCardArray);
         $result = HttpClient::post("wallet/update", $json);
         return $result["Result"] === "True";
-    }
-
-
-    public function createTransaction($transactionArray) {
-        $result = HttpClient::post("transaction/create", 
-                Utilities::toJsonFromArray($transactionArray));
-        if (isset($result["Key"])) {
-            return $result["Key"];
-        }
-        return false;       
-    }
-
-    public function submitTransactionToPaymentGateway($transactionKey) {
-        $result = HttpClient::get("transaction/process/" . $transactionKey);
     }
 
     /* ADDRESSES */

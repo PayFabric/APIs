@@ -1,7 +1,7 @@
 <?php
 
 require_once "HttpClient.php";
-
+/* Transacation - Create, modify, and retrieve transactions. */
 class Transaction {
     public function create($transactionFieldsArray) {
         $result = HttpClient::post("transaction/create",
@@ -30,6 +30,12 @@ class Transaction {
 
     public function get($transactionKey) {
         $result = HttpClient::get("transaction/" . $transactionKey);
+        return $result;
+    }
+
+   public function update($transactionFieldsArray) {
+        $result = HttpClient::post("transaction/update", 
+                Utilities::toJsonFromArray($transactionFieldsArray));
         return $result;
     }
 }

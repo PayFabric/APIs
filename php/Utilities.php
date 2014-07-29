@@ -2,6 +2,7 @@
 
 require_once "Constants.php";
 
+/* Utilities - Miscellaneous utilties. */
 class Utilities {
     public function toArrayFromJson($json) {
         return json_decode($json, TRUE);
