@@ -7,11 +7,11 @@ as you see fit. If you think your changes would be beneficial to the general
 PayFabric community you are welcome to submit pull requests on this repository!
 
 ## Installation
-Set DEVICE\_ID and DEVICE\_PASSWORD in Constants.php to your application's Device ID
+Set `DEVICE\_ID` and `DEVICE\_PASSWORD` in Constants.php to your application's Device ID
 and Device Password. 
 
-BASE\_URL in Constants.php is set to the base URL of the PayFabric sandbox environment.
-When you want to go live, change BASE\_URL to the base URL of the PayFabric production
+`BASE\_URL` in Constants.php is set to the base URL of the PayFabric sandbox environment.
+When you want to go live, change `BASE\_URL` to the base URL of the PayFabric production
 environment.
 
 Install PHP's cURL library. cURL is used to execute HTTP requests. To install from 
