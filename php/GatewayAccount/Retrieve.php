@@ -1,7 +1,7 @@
 <?php
 
 const DEVICE_ID = "49b8e79d-bc02-9295-fe09-a4112427490c";
-const DEVICE_PASSWORD = "Samsonite";
+const DEVICE_PASSWORD = "SamsonitePhp1";
 
 class GatewayAccount {
     
