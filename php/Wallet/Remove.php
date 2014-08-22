@@ -30,10 +30,14 @@ class Wallet {
         $responseArray = json_decode($httpResponseBody, TRUE);
 
         // Output the results of the request.
-        var_dump($responseArray);
+        var_dump($httpResponseBody);
 
         return $responseArray;
         
     }
     
 }
+
+/* Example Response
+{"Result":"True"}
+*/

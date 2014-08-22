@@ -13,11 +13,11 @@ class Transaction {
         $transaction = Array(
                 "Key" => $transactionKey,
                 "Amount" => "1.12",
-                "Customer" => "0001", // Customer ID
+                "Customer" => "1", // Customer ID
                 "Currency" => "USD",
                 "SetupId" => "Strongtrans", // Payment Gateway name
                 "Tender" => "CreditCard",
-                "Type" => "SALE",
+                "Type" => "Book",
                 "Card" => $card);
 
         // Convert the data to JSON.
@@ -29,6 +29,7 @@ class Transaction {
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
         $curlOptions = Array(CURLOPT_RETURNTRANSFER => TRUE,
+                CURLOPT_VERBOSE => TRUE,
                 CURLOPT_POSTFIELDS => $json,
                 CURLOPT_HTTPHEADER => $httpHeader);
 
@@ -47,10 +48,14 @@ class Transaction {
         $responseArray = json_decode($httpResponseBody, TRUE);
 
         // Output the results of the request.
-        var_dump($responseArray);
+        var_dump($httpResponseBody);
 
         return $responseArray;        
 
     }
 
 }
+
+/* Example Response 
+{"Result":"True"}
+*/

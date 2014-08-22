@@ -27,13 +27,65 @@ class Wallet {
         }    
 
         // Convert the JSON into a multi-dimensional array.
-        $cardsArray = json_decode($httpResponseBody, TRUE);
+        $responseArray = json_decode($httpResponseBody, TRUE);
 
         // Output the results of the request.
-        var_dump($cardsArray);
+        var_dump($httpResponseBody);
 
-        return $cardsArray;
+        return $responseArray;
         
     }
     
 }
+
+/* Example Response 
+[
+  {
+    "Aba": "",
+    "Account": "XXXXXXXXXXXX1111",
+    "AccountType": "",
+    "Billto": {
+      "City": "San Francisco",
+      "Country": "USA",
+      "Customer": "",
+      "Email": "",
+      "ID": "80d4c693-5681-4733-a612-35c1e594ee44",
+      "Line1": "600 Ellis",
+      "Line2": "",
+      "Line3": "",
+      "ModifiedOn": "1\/1\/0001 12:00:00 AM",
+      "Phone": "",
+      "State": "CA",
+      "Zip": "94109"
+    },
+    "CVC": null,
+    "CardHolder": {
+      "DriverLicense": "",
+      "FirstName": "Herb",
+      "LastName": "Caen",
+      "MiddleName": "",
+      "SSN": ""
+    },
+    "CardName": "Visa",
+    "CheckNumber": null,
+    "Customer": "1",
+    "ExpDate": "1215",
+    "GPAddressCode": "",
+    "GatewayToken": "",
+    "ID": "1e700b9f-3e43-4cc0-9a02-884dd4c7e6ee",
+    "Identifier": "",
+    "IsDefaultCard": true,
+    "IsLocked": false,
+    "IsSaveCard": false,
+    "IssueNumber": "",
+    "ModifiedOn": "7\/28\/2014 11:57:40 AM",
+    "SetupId": null,
+    "StartDate": "",
+    "Tender": "CreditCard",
+    "UserDefine1": "",
+    "UserDefine2": "",
+    "UserDefine3": "",
+    "UserDefine4": ""
+  }
+]
+*/

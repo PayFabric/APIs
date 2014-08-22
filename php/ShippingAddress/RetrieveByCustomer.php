@@ -30,10 +30,43 @@ class ShippingAddress {
         $addressesArray = json_decode($httpResponseBody, TRUE);
 
         // Output the results of the request.
-        var_dump($addressesArray);
+        var_dump($httpResponseBody);
 
         return $addressesArray;
         
     }
     
 }
+
+/* Example Response 
+[
+  {
+    "City": "Burlingame",
+    "Country": "USA",
+    "Customer": "1",
+    "Email": "",
+    "ID": "1e622ec4-b9a1-4f5d-a79b-31134925ca32",
+    "Line1": "2000 Murchison Drive",
+    "Line2": "",
+    "Line3": "",
+    "ModifiedOn": "7\/27\/2014 4:11:28 PM",
+    "Phone": "",
+    "State": "CA",
+    "Zip": "94010"
+  },
+  {
+    "City": "Manitou",
+    "Country": "United States",
+    "Customer": "1",
+    "Email": "kaycebasques+MalcolmSolos@gmail.com",
+    "ID": "94d611fc-2ace-4ae6-a284-e4a3d9acd7db",
+    "Line1": "8536 Broad Street",
+    "Line2": "",
+    "Line3": "",
+    "ModifiedOn": "7\/15\/2014 7:52:17 PM",
+    "Phone": "14703694775",
+    "State": "Georgia",
+    "Zip": "39900-7658"
+  }
+]
+*/

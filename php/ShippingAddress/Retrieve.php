@@ -30,10 +30,27 @@ class ShippingAddress {
         $addressArray = json_decode($httpResponseBody, TRUE);
 
         // Output the results of the request.
-        var_dump($addressArray);
+        var_dump($httpResponseBody);
 
         return $addressArray;
         
     }
     
 }
+
+/* Example Response 
+{
+  "City": "Burlingame",
+  "Country": "USA",
+  "Customer": "1",
+  "Email": "",
+  "ID": "1e622ec4-b9a1-4f5d-a79b-31134925ca32",
+  "Line1": "2000 Murchison Drive",
+  "Line2": "",
+  "Line3": "",
+  "ModifiedOn": "7\/27\/2014 4:11:28 PM",
+  "Phone": "",
+  "State": "CA",
+  "Zip": "94010"
+}
+*/

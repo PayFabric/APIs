@@ -14,6 +14,7 @@ class Transaction {
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
         $curlOptions = Array(CURLOPT_RETURNTRANSFER => TRUE,
+                CURLOPT_VERBOSE => TRUE,
                 CURLOPT_HTTPHEADER => $httpHeader);
 
         // Execute the HTTP request.
@@ -31,7 +32,7 @@ class Transaction {
         $responseArray = json_decode($httpResponseBody, TRUE);
 
         // Output the results of the request.
-        var_dump($responseArray);
+        var_dump($httpResponseBody);
 
         return $responseArray;        
 
