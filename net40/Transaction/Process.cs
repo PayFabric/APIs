@@ -107,7 +107,9 @@ namespace Samples.Net40
 
                 // Card Holder
                 datastring.Append("\"CardHolder\":{");
-                datastring.Append("\"Name\":\"jason zhao\",");
+                datastring.Append("\"FirstName\":\"jason\",");
+                datastring.Append("\"MiddleName\":\"K\",");
+                datastring.Append("\"LastName\":\"zhao\"");
                 datastring.Append("\"Email\":\"jasonzhao@nodus.com\"");
                 datastring.Append("},");
 
