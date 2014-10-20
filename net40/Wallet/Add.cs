@@ -32,23 +32,21 @@ namespace Samples.Net40
                 datastring.Append("{");
                 datastring.Append("\"Tender\":\"CreditCard\",");
                 datastring.Append("\"Customer\":\"ARRONFIT0001\",");
-                datastring.Append("\"Account\":\"5555555555554444\",");
-                datastring.Append("\"Cvc\":\"1453\",");
-                datastring.Append("\"CardName\":\"MasterCard\",");
-                datastring.Append("\"ExpDate\":\"0115\",");
+                datastring.Append("\"Account\":\"4111111111111111\",");
+                datastring.Append("\"ExpDate\":\"0516\",");
+                datastring.Append("\"IsDefaultCard\":\"true\",");
                 datastring.Append("\"CardHolder\":{");
-                datastring.Append("\"Name\":\"jason zhao\"");
+                datastring.Append("\"FirstName\":\"jason\",");
+                datastring.Append("\"MiddleName\":\"K\",");
+                datastring.Append("\"LastName\":\"zhao\"");
                 datastring.Append("},");
                 datastring.Append("\"Billto\":{");
                 datastring.Append("\"Country\":\"US\",");
                 datastring.Append("\"State\":\"CA\",");
-                datastring.Append("\"City\":\"ANAHEIM\",");
-                datastring.Append("\"Line1\":\"2099 S State College Blvd\",");
-                datastring.Append("\"Email\":\"support@payfabric.com\"");
-                datastring.Append("},");
-                datastring.Append("\"IsDefaultCard\":\"true\",");
-                datastring.Append("\"UserDefined1\":\"Example\",");
-                datastring.Append("\"UserDefined2\":\"Example\""); 
+                datastring.Append("\"City\":\"Chicago\",");
+                datastring.Append("\"Zip\":\"92806\",");
+                datastring.Append("\"Email\":\"JasonZhao@nodus.com\",");
+                datastring.Append("\"Line1\":\"2009 S State College Blvd\"");
                 datastring.Append("}");
 
                 // POST
