@@ -19,7 +19,7 @@ For clients running on consumer devices (e.g. smartphones) PayFabric highly reco
 _Security Tokens_. Security tokens are one-time use authorization credentials.
 
 ```c#
-var url =  "http://www.payfabric.com/rest/v1/api/token/create";
+var url =  "http://www.payfabric.com/v2/rest/api/token/create";
 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
 httpWebRequest.ContentType = "application/json; charset=utf-8";
 httpWebRequest.Headers["authorization"] = "5DE0B1D9-213C-4B05-80CA-D8A125977E20|6ytesddd*7";
