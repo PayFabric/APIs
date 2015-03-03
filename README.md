@@ -81,25 +81,25 @@ Many of these objects are used in both requests and responses. Some of the objec
 as child elements of other objects.
 
 ## Transactions
-* [Create a New Transaction](https://github.com/PayFabric/APIs/wiki#create-a-new-transaction)
-* [Update a Transaction](https://github.com/PayFabric/APIs/wiki#update-a-transaction)
-* [Process a Transaction by Transaction Key](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-key)
-* [Process a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-object)
-* [Retrieve a Transaction](https://github.com/PayFabric/APIs/wiki#retrieve-a-transaction)
-* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/wiki#capture-a-pre-authorized-transaction)
-* [Cancel a Transaction](https://github.com/PayFabric/APIs/wiki#cancel-a-transaction)
-* [Refund a Customer](https://github.com/PayFabric/APIs/wiki#refund-a-customer)
+* [Create a New Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-transaction)
+* [Update a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-a-transaction)
+* [Process a Transaction by Transaction Key](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#submit-a-transaction-to-payment-gateway-by-transaction-key)
+* [Process a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-and-submit-a-transaction-by-transaction-object)
+* [Retrieve a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-a-transaction)
+* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#capture-a-pre-authorized-transaction)
+* [Cancel a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#cancel-a-transaction)
+* [Refund a Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#refund-a-customer)
 
 ## Wallets / Credit Cards / Echecks
-* [Add a Card into Wallet](https://github.com/PayFabric/APIs/wiki#add-a-card-into-wallet)
-* [Update an Existing Card](https://github.com/PayFabric/APIs/wiki#update-an-existing-card)
-* [Remove a Card](https://github.com/PayFabric/APIs/wiki#remove-a-card)
-* [Retrieve Cards by Customer](https://github.com/PayFabric/APIs/wiki#retrieve-cards-by-customer)
+* [Add a Card into Wallet](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-credit-card)
+* [Update an Existing Card](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-an-existing-card)
+* [Remove a Card](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#delete-a-card)
+* [Retrieve Cards by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-cards-by-customer)
 
 ## Payment Gateways
-* [Retrieve All Gateway Account Profiles](https://github.com/PayFabric/APIs/wiki#retrieve-all-gateway-account-profiles)
-* [Retrieve a Gateway Account Profile By Id](https://github.com/PayFabric/APIs/wiki#retrieve-a-gateway-account-profile-by-id)
+* [Retrieve All Gateway Account Profiles](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-all-payment-gateways)
+* [Retrieve a Gateway Account Profile By Id](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-a-payment-gateway-by-id)
 
 ## Addresses
-* [Retrieve Shipping addresses by Customer](https://github.com/PayFabric/APIs/wiki#retrieve-shipping-addresses-by-customer)
-* [Retrieve Shipping address by Id](https://github.com/PayFabric/APIs/wiki#retrieve-shipping-address-by-id)
+* [Retrieve Shipping addresses by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-shipping-addresses-by-customer)
+* [Retrieve Shipping address by Id](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-shipping-address-by-id)
