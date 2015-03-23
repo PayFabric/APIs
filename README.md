@@ -1,8 +1,8 @@
 #Overview
 PayFabric APIs are organized around Representational State Transfer (**REST**) architecture and are designed to have predictable, resource-oriented URLs and use HTTP response codes to indicate API errors. Below are the API endpoints:
 
-1. Live Server:    ``https://www.payfabric.com/rest/v1/api``
-1. Sandbox Server: ``https://sandbox.payfabric.com/rest/v1/api``
+1. Live Server:    ``https://www.payfabric.com/v2/rest/api``
+1. Sandbox Server: ``https://sandbox.payfabric.com/v2/rest/api``
 
 Check out the [Quick Start Guide](https://github.com/PayFabric/Portal/wiki) to learn how to register for a PayFabric account, configure your account, and get started with the PayFabric REST API.
 
@@ -19,7 +19,7 @@ For clients running on consumer devices (e.g. smartphones) PayFabric highly reco
 _Security Tokens_. Security tokens are one-time use authorization credentials.
 
 ```c#
-var url =  "http://www.payfabric.com/rest/v1/api/token/create";
+var url =  "http://www.payfabric.com/v2/rest/api/token/create";
 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
 httpWebRequest.ContentType = "application/json; charset=utf-8";
 httpWebRequest.Headers["authorization"] = "5DE0B1D9-213C-4B05-80CA-D8A125977E20|6ytesddd*7";
@@ -76,30 +76,31 @@ Catch (Exception ex)
 ```
 
 # Payment APIs
-PayFabric sends and receives payloads as structured [JSON Objects](https://github.com/PayFabric/APIs/wiki/API-Objects). 
+PayFabric sends and receives payloads as structured [JSON Objects](https://github.com/PayFabric/APIs/wiki/API-Object-V2). 
 Many of these objects are used in both requests and responses. Some of the objects (like Address or Cardholder) are embedded
 as child elements of other objects.
 
 ## Transactions
-* [Create a New Transaction](https://github.com/PayFabric/APIs/wiki#create-a-new-transaction)
-* [Update a Transaction](https://github.com/PayFabric/APIs/wiki#update-a-transaction)
-* [Process a Transaction by Transaction Key](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-key)
-* [Process a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-object)
-* [Retrieve a Transaction](https://github.com/PayFabric/APIs/wiki#retrieve-a-transaction)
-* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/wiki#capture-a-pre-authorized-transaction)
-* [Cancel a Transaction](https://github.com/PayFabric/APIs/wiki#cancel-a-transaction)
-* [Refund a Customer](https://github.com/PayFabric/APIs/wiki#refund-a-customer)
+* [Create a New Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-transaction)
+* [Update a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-a-transaction)
+* [Process a Transaction by Transaction Key](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#submit-a-transaction-to-payment-gateway-by-transaction-key)
+* [Process a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-and-submit-a-transaction-by-transaction-object)
+* [Retrieve a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-a-transaction)
+* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#capture-a-pre-authorized-transaction)
+* [Cancel a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#cancel-a-transaction)
+* [Refund a Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#refund-a-customer)
 
 ## Wallets / Credit Cards / Echecks
-* [Add a Card into Wallet](https://github.com/PayFabric/APIs/wiki#add-a-card-into-wallet)
-* [Update an Existing Card](https://github.com/PayFabric/APIs/wiki#update-an-existing-card)
-* [Remove a Card](https://github.com/PayFabric/APIs/wiki#remove-a-card)
-* [Retrieve Cards by Customer](https://github.com/PayFabric/APIs/wiki#retrieve-cards-by-customer)
+* [Add a Card into Wallet](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-credit-card)
+* [Update an Existing Card](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-an-existing-card)
+* [Remove a Card](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#delete-a-card)
+* [Retrieve Cards by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-cards-by-customer)
 
 ## Payment Gateways
-* [Retrieve All Gateway Account Profiles](https://github.com/PayFabric/APIs/wiki#retrieve-all-gateway-account-profiles)
-* [Retrieve a Gateway Account Profile By Id](https://github.com/PayFabric/APIs/wiki#retrieve-a-gateway-account-profile-by-id)
+* [Retrieve All Gateway Account Profiles](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-all-payment-gateways)
+* [Retrieve a Gateway Account Profile By Id](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-a-payment-gateway-by-id)
 
 ## Addresses
-* [Retrieve Shipping addresses by Customer](https://github.com/PayFabric/APIs/wiki#retrieve-shipping-addresses-by-customer)
-* [Retrieve Shipping address by Id](https://github.com/PayFabric/APIs/wiki#retrieve-shipping-address-by-id)
+* [Retrieve Shipping addresses by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-shipping-addresses-by-customer)
+* [Retrieve Shipping address by Id](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-shipping-address-by-id)
+RENA
