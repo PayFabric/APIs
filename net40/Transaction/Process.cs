@@ -103,13 +103,13 @@ namespace Samples.Net40
                 datastring.Append("\"Cvc\":\"745\",");
                 datastring.Append("\"Tender\":\"CreditCard\",");
                 datastring.Append("\"CardName\":\"Visa\",");
-                datastring.Append("\"ExpDate\":\"0115\",");
+                datastring.Append("\"ExpDate\":\"0117\",");
 
                 // Card Holder
                 datastring.Append("\"CardHolder\":{");
                 datastring.Append("\"FirstName\":\"jason\",");
                 datastring.Append("\"MiddleName\":\"K\",");
-                datastring.Append("\"LastName\":\"zhao\"");
+                datastring.Append("\"LastName\":\"zhao\",");
                 datastring.Append("\"Email\":\"jasonzhao@nodus.com\"");
                 datastring.Append("},");
 
@@ -190,7 +190,7 @@ namespace Samples.Net40
                 datastring.Append("\"ItemQuantity\":\"20\"");
                 datastring.Append("}");
 
-                datastring.Append("],");
+                datastring.Append("]");
 
                 // End "Document"
                 datastring.Append("}");
@@ -202,15 +202,19 @@ namespace Samples.Net40
                 #endregion
 
                 var url = "https://sandbox.payfabric.com/V2/Rest/api/transaction/process";
+                byte[] data = System.Text.Encoding.UTF8.GetBytes(datastring.ToString());
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
-                httpWebRequest.Method = "POST";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
                 httpWebRequest.Headers["authorization"] = new Token().Create();
+                httpWebRequest.Method = "POST";
+                httpWebRequest.ContentLength = data.Length;
+                Stream stream = httpWebRequest.GetRequestStream();
+                stream.Write(data, 0, data.Length);
+                stream.Close();
                 HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
                 Stream responseStream = httpWebResponse.GetResponseStream();
                 StreamReader streamReader = new StreamReader(responseStream);
                 string result = streamReader.ReadToEnd();
-                Console.WriteLine(result);
                 streamReader.Close();
                 responseStream.Close();
                 httpWebRequest.Abort();
