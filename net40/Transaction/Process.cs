@@ -118,6 +118,7 @@ namespace Samples.Net40
                 datastring.Append("\"Country\":\"US\",");
                 datastring.Append("\"State\":\"CA\",");
                 datastring.Append("\"City\":\"ANAHEIM\",");
+                datastring.Append("\"Zip\":\"92806\",");
                 datastring.Append("\"Line1\":\"2099 S State College Blvd\",");
                 datastring.Append("\"Email\":\"support@payfabric.com\"");
                 datastring.Append("}");
