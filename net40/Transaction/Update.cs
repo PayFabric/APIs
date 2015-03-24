@@ -36,14 +36,17 @@ namespace Samples.Net40
                 datastring.Append("\"Cvc\":\"1453\",");
                 datastring.Append("\"Tender\":\"CreditCard\",");
                 datastring.Append("\"CardName\":\"MasterCard\",");
-                datastring.Append("\"ExpDate\":\"0115\",");
+                datastring.Append("\"ExpDate\":\"0117\",");
                 datastring.Append("\"CardHolder\":{");
-                datastring.Append("\"Name\":\"jason zhao\"");
+                datastring.Append("\"FirstName\":\"Jason\",");
+                datastring.Append("\"MiddleName\":\"\",");
+                datastring.Append("\"LastName\":\"Zhao\"");      
                 datastring.Append("},");
                 datastring.Append("\"Billto\":{");
                 datastring.Append("\"Country\":\"US\",");
                 datastring.Append("\"State\":\"CA\",");
                 datastring.Append("\"City\":\"ANAHEIM\",");
+                datastring.Append("\"Zip\":\"92806\",");
                 datastring.Append("\"Line1\":\"2099 S State College Blvd\",");
                 datastring.Append("\"Email\":\"support@payfabric.com\"");
                 datastring.Append("}");
@@ -52,7 +55,7 @@ namespace Samples.Net40
 
                 // POST
                 byte[] data = System.Text.Encoding.UTF8.GetBytes(datastring.ToString());
-                var url = "https://sandbox.payfabric.com/rest/v1/api/transaction/update";
+                var url = "https://sandbox.payfabric.com/v2/rest/api/transaction/update";
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
