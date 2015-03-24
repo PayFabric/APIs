@@ -27,7 +27,7 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/rest/v1/api/transaction/process" + "/" + transactionKey;
+                var url = "https://sandbox.payfabric.com/V2/Rest/api/transaction/process/" + transactionKey;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -201,7 +201,7 @@ namespace Samples.Net40
 
                 #endregion
 
-                var url = "https://sandbox.payfabric.com/rest/v1/api/transaction/process";
+                var url = "https://sandbox.payfabric.com/V2/Rest/api/transaction/process";
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "POST";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
