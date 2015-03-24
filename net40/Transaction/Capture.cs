@@ -29,20 +29,18 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/rest/v1/api/reference" + "/" + preAuthorizedKey + "?trxtype=Ship";
+                var url = "https://sandbox.payfabric.com/v2/rest/api/reference/" + preAuthorizedKey + "?trxtype=Ship";
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
-                httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
-                httpWebRequest.Headers["authorization"] = new Token().Create();
-                HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
-                Stream responseStream = httpWebResponse.GetResponseStream();
-                StreamReader streamReader = new StreamReader(responseStream);
-                string result = streamReader.ReadToEnd();
-                Console.WriteLine(result);
-                streamReader.Close();
-                responseStream.Close();
-                httpWebRequest.Abort();
-                httpWebResponse.Close();
+                httpWebRequest.Headers["authorization"] = new Token().Create(); 
+                HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse; 
+                Stream responseStream = httpWebResponse.GetResponseStream(); 
+                StreamReader streamReader = new StreamReader(responseStream); 
+                string result = streamReader.ReadToEnd(); 
+                streamReader.Close(); 
+                responseStream.Close(); 
+                httpWebRequest.Abort(); 
+                httpWebResponse.Close(); 
 
                 //
                 // Sample response - a transaction response object
