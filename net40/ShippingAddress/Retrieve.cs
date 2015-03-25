@@ -28,7 +28,7 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/rest/v1/api/address" + "/" + addressId.ToString();
+                var url = "https://sandbox.payfabric.com/V2/rest/api/address/" + addressId.ToString();
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
