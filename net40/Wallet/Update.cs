@@ -32,11 +32,20 @@ namespace Samples.Net40
                 //  Populate POST String
                 StringBuilder datastring = new StringBuilder();
                 datastring.Append("{");
-                datastring.Append("\"ID\":\"" + cardId.ToString() + "\",");
+                datastring.Append("\"ID\":\"d8f265e3-fbae-459d-b04b-857679d35c84\",");
                 datastring.Append("\"ExpDate\":\"0219\",");
+                datastring.Append("\"CardHolder\":{");
+                datastring.Append("\"FirstName\":\"newupdate\",");
+                datastring.Append("\"MiddleName\":\"\",");
+                datastring.Append("\"LastName\":\"newupdate\"");
+                datastring.Append("},");
                 datastring.Append("\"Billto\":{");
+                datastring.Append("\"Zip\":\"123456\",");
+                datastring.Append("\"Country\":\"new\",");
+                datastring.Append("\"State\":\"new\",");
+                datastring.Append("\"Email\":\"\",");
                 datastring.Append("\"City\":\"Rowland Height\",");
-                datastring.Append("\"Line1\":\"Fullerton Blvd\",");
+                datastring.Append("\"Line1\":\"Fullerton Blvd\"");
                 datastring.Append("},");
                 datastring.Append("\"UserDefined1\":\"New Update\",");
                 datastring.Append("\"UserDefined2\":\"New Update\"");
@@ -44,7 +53,7 @@ namespace Samples.Net40
 
                 // POST
                 byte[] data = System.Text.Encoding.UTF8.GetBytes(datastring.ToString());
-                var url = "https://sandbox.payfabric.com/rest/v1/api/wallet/update";
+                var url = "https://sandbox.payfabric.com/V2/rest/api/wallet/update";
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
