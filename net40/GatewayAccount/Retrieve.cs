@@ -31,7 +31,7 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/rest/v1/api/setupid" + "/" + gatewayAccountId.ToString();
+                var url = "https://sandbox.payfabric.com/V2/rest/api/setupid/" + gatewayAccountId.ToString();
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
