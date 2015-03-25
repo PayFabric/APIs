@@ -33,7 +33,7 @@ namespace Samples.Net40
                 datastring.Append("\"Tender\":\"CreditCard\",");
                 datastring.Append("\"Customer\":\"ARRONFIT0001\",");
                 datastring.Append("\"Account\":\"4111111111111111\",");
-                datastring.Append("\"ExpDate\":\"0516\",");
+                datastring.Append("\"ExpDate\":\"0517\",");
                 datastring.Append("\"IsDefaultCard\":\"true\",");
                 datastring.Append("\"CardHolder\":{");
                 datastring.Append("\"FirstName\":\"jason\",");
@@ -51,7 +51,7 @@ namespace Samples.Net40
 
                 // POST
                 byte[] data = System.Text.Encoding.UTF8.GetBytes(datastring.ToString());
-                var url = "https://sandbox.payfabric.com/rest/v1/api/wallet/create";
+                var url = "https://sandbox.payfabric.com/V2/rest/api/wallet/create";
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
