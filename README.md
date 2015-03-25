@@ -107,5 +107,5 @@ as child elements of other objects.
 #Hosted Payment Page
 
 * [Embed PayFabric Hosted Payment Page into your application](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#embed-payfabric-hosted-payment-page-into-your-application)
-* [Configurations](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#configuration)
-* [Build your own page with CSS code]()
+* [Configurations](https://github.com/PayFabric/Portal/wiki#advanced-settings)
+* [Build your own page with CSS code](https://github.com/PayFabric/Themes)
