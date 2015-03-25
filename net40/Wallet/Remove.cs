@@ -28,7 +28,7 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/rest/v1/api/wallet/delete" + "/" + cardId.ToString();
+                var url = "https://sandbox.payfabric.com/v2/rest/api/wallet/delete/" + cardId.ToString();
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
