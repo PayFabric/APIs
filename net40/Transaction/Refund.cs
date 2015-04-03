@@ -109,15 +109,16 @@ namespace Samples.Net40
         
         /// <summary>
         /// Do reference credit for previous transactions with whole transaction object.
+        /// <param name="originalKey">Orignial transaction key</param>
         /// </summary>
-        public void Refund()
+        public void RefCreditWithWholeTrxObject()
         {
             try
             {
                 //  Populate POST String
                 StringBuilder datastring = new StringBuilder();
                 datastring.Append("{");
-                datastring.Append("\"ReferenceKey\":\"B150402180102\",");
+                datastring.Append("\"ReferenceKey\":\""+originalKey+"\",");
                 datastring.Append("\"Customer\":\"ARRONFIT0003\",");
                 datastring.Append("\"Currency\":\"USD\",");
                 datastring.Append("\"Amount\":\"10.05\",");
@@ -194,6 +195,58 @@ namespace Samples.Net40
                 //  Handling exception
             }
 
+        }
+        
+        /// <summary>
+        /// Only settled transaction can be credited.
+        /// </summary>
+        /// <param name="originalKey">Orignial transaction key</param>
+        public void RefCreditWithTrxkey(string originalKey)
+        {
+            try
+            {
+                var url = "https://sandbox.payfabric.com/V2/rest/api/reference/" + originalKey + "?trxtype=Credit";
+                HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
+                httpWebRequest.ContentType = "application/json; charset=utf-8";
+                httpWebRequest.Headers["authorization"] = new Token().Create();
+                httpWebRequest.Method = "GET";                                   
+                HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse; 
+                Stream responseStream = httpWebResponse.GetResponseStream(); 
+                StreamReader streamReader = new StreamReader(responseStream); 
+                string result = streamReader.ReadToEnd(); 
+                streamReader.Close(); 
+                responseStream.Close(); 
+                httpWebRequest.Abort(); 
+                httpWebResponse.Close(); 
+
+                //
+                // Sample response - a transaction response object
+                // ------------------------------------------------------
+                //{
+                //    "AVSAddressResponse":"Y",
+                //    "AVSZipResponse":"Y",
+                //    "AuthCode":"010010",
+                //    "CVV2Response":"Y",
+                //    "IAVSAddressResponse":"Y",
+                //    "Message":"APPROVED",
+                //    "OriginationID":"987220999",
+                //    "RespTrxTag":"",
+                //    "ResultCode":"0",
+                //    "Status":"Approved",
+                //    "TrxDate":"",
+                //    "TrxKey":"140500229002"
+                //}
+                // ------------------------------------------------------
+
+            }
+            catch (WebException e)
+            { 
+                //  Handling exception from PayFabric
+            }
+            catch (Exception e)
+            { 
+                //  Handling exception
+            }
         }
     }
 }
