@@ -37,7 +37,7 @@ PayFabric sends and receives payloads as structured [JSON Objects](https://githu
 Many of these objects are used in both requests and responses. Some of the objects (like Address or Cardholder) are embedded
 as child elements of other objects.
 
-## Transactions
+### Transactions
 * [Create a New Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-transaction)
 * [Update a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-a-transaction)
 * [Process a Transaction by Transaction Key](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#submit-a-transaction-to-payment-gateway-by-transaction-key)
@@ -47,22 +47,16 @@ as child elements of other objects.
 * [Cancel a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#cancel-a-transaction)
 * [Refund a Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#refund-a-customer)
 
-## Wallets / Credit Cards / Echecks
+### Wallets / Credit Cards / Echecks
 * [Add a Card into Wallet](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-credit-card)
 * [Update an Existing Card](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-an-existing-card)
 * [Remove a Card](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#delete-a-card)
 * [Retrieve Cards by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-cards-by-customer)
 
-## Payment Gateways
+### Payment Gateways
 * [Retrieve All Gateway Account Profiles](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-all-payment-gateways)
 * [Retrieve a Gateway Account Profile By Id](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-a-payment-gateway-by-id)
 
-## Addresses
+### Addresses
 * [Retrieve Shipping addresses by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-shipping-addresses-by-customer)
 * [Retrieve Shipping address by Id](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-shipping-address-by-id)
-
-#Hosted Payment Page
-
-* [Embed PayFabric Hosted Payment Page into your application](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#embed-payfabric-hosted-payment-page-into-your-application)
-* [Configurations](https://github.com/PayFabric/Portal/wiki/PayFabric-Settings)
-* [Build your own page with CSS code](https://github.com/PayFabric/Themes)
