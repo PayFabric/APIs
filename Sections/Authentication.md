@@ -26,9 +26,9 @@ httpWebRequest.Abort();
 httpWebResponse.Close();
 ```
 If everything goes fine, you can get a response as json format like this
-```c#
+```json
 {
-    "Token": "4ts3gxu3o5an"
+  "Token": "4ts3gxu3o5an"
 }
 ```
 Next, you parse this json text, extract the token string, and put this token string into other call's custom "authorization" header. One thing you have to be noticed is the token is valid to use once. PayFabric will revoke a security token once the token arrives and completes the authentication process.
