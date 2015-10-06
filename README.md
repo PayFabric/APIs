@@ -1,10 +1,19 @@
-#Overview
+Overview
+========
 PayFabric APIs are organized around Representational State Transfer (**REST**) architecture and are designed to have predictable, resource-oriented URLs and use HTTP response codes to indicate API errors. Below are the API endpoints:
 
 1. Live Server:    ``https://www.payfabric.com/v2/rest/api``
 1. Sandbox Server: ``https://sandbox.payfabric.com/v2/rest/api``
 
-Check out the [Quick Start Guide](https://github.com/PayFabric/Portal/wiki) to learn how to register for a PayFabric account, configure your account, and get started with the PayFabric REST API.
+Where do I start?
+-----------------
+
+Want to get started with PayFabric API integration? Here's a quick check list:
+
+1. Register and then configure a PayFabric account, check out the [Quick Start Guide](https://github.com/PayFabric/Portal/wiki) to learn how.
+2. Read up on how to [authenticate your app](#authentication) with our API's. 
+3. Browse the [API docs](#apis) for the API you need to work with.
+4. Have a question or need help? Contact [support@payfabric.com](mailto:support@payfabric.com).
 
 #Authentication
 PayFabric clients have two ways to authenticate. 
@@ -75,7 +84,7 @@ Catch (Exception ex)
 }
 ```
 
-# Payment APIs
+# APIs
 PayFabric sends and receives payloads as structured [JSON Objects](https://github.com/PayFabric/APIs/wiki/API-Object-V2). 
 Many of these objects are used in both requests and responses. Some of the objects (like Address or Cardholder) are embedded
 as child elements of other objects.
