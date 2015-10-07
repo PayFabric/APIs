@@ -4,21 +4,12 @@ Clients wishing to utilize PayFabric have two ways to authenticate.
 
 Clients running in server-side programming environments can include an authorization field in the HTTP header of each request that is made to PayFabric. The authorization field includes a _Device ID_ and a _Device Password_. These are the credentials for this application. You can generate these credentials via the PayFabric web portal. These credentials will provide access to all the PayFabric APIs, so you should only use this authentication method in secure environments.
 
-For clients running on consumer devices (e.g. smartphones) PayFabric highly recommends the use of _Security Tokens_. Security tokens are one-time use authorization credentials. Below is a **C#** example of creating a token:
+For clients running on consumer devices (e.g. smartphones) PayFabric highly recommends the use of _Security Tokens_. Security tokens are one-time use authorization credentials. Below is a **cURL** example of creating a token:
 
-```c#
-var url = "https://sandbox.payfabric.com/v2/rest/api/token/create";
-HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
-httpWebRequest.ContentType = "application/json; charset=utf-8";
-httpWebRequest.Headers["authorization"] = "5DE0B1D9-213C-4B05-80CA-D8A125977E20|6ytesddd*7";
-HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
-Stream responseStream = httpWebResponse.GetResponseStream();
-StreamReader streamReader = new StreamReader(responseStream);
-string result = streamReader.ReadToEnd();
-streamReader.Close();
-responseStream.Close();
-httpWebRequest.Abort();
-httpWebResponse.Close();
+```curl
+curl -X GET \
+  -H 'Authorization: deviceid|devicepassword' \
+  https://sandbox.payfabric.com/v2/rest/api/token/create
 ```
 If the HTTP Status Code is 200 - OK you will receive the following **JSON** response:
 ```JSON
