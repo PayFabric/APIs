@@ -38,20 +38,20 @@ Many of these objects are used in both requests and responses. Some of the objec
 as child elements of other objects.
 
 ### Transactions
-* [Create a New Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-transaction)
+* [Create a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-transaction)
 * [Update a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-a-transaction)
 * [Process a Transaction by Transaction Key](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#submit-a-transaction-to-payment-gateway-by-transaction-key)
-* [Process a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-and-submit-a-transaction-by-transaction-object)
+* [Create and process a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-and-submit-a-transaction-by-transaction-object)
 * [Retrieve a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-a-transaction)
 * [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#capture-a-pre-authorized-transaction)
 * [Cancel a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#cancel-a-transaction)
 * [Refund a Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#refund-a-customer)
 
 ### Wallets / Credit Cards / Echecks
-* [Add a Card into Wallet](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-credit-card)
-* [Update an Existing Card](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-an-existing-card)
-* [Remove a Card](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#delete-a-card)
-* [Retrieve Cards by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-cards-by-customer)
+* [Add a Card or ECheck into Wallet](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-credit-card)
+* [Update an Existing Card or ECheck](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-an-existing-card)
+* [Remove a Card or ECheck](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#delete-a-card)
+* [Retrieve Cards and EChecks by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-cards-by-customer)
 
 ### Payment Gateways
 * [Retrieve All Gateway Account Profiles](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-all-payment-gateways)
