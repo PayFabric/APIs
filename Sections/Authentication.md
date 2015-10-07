@@ -1,6 +1,5 @@
-Authentication
-==============
-
+PayFabric API Authentication
+============================
 
 Clients running in server-side programming environments can include an authorization field in the 
 HTTP header of each request that is made to PayFabric. The authorization includes a _Device ID_ and 
