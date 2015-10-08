@@ -58,8 +58,10 @@ as child elements of other objects.
 * [Retrieve a Gateway Account Profile By Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-a-payment-gateway-by-id)
 
 ### Addresses
-* [Retrieve Shipping addresses by Customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-shipping-addresses-by-customer)
-* [Retrieve Shipping address by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-shipping-address-by-id)
+* [Retrieve Shipping address by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-address)
+* [Retrieve Shipping addresses by Customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-addresses)
+* [Retrieve Shipping addresses by Query](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-addresses-query-with-paging)
+
 
 Help us make it better
 ----------------------
