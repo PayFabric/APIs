@@ -60,3 +60,7 @@ as child elements of other objects.
 ### Addresses
 * [Retrieve Shipping addresses by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-shipping-addresses-by-customer)
 * [Retrieve Shipping address by Id](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-shipping-address-by-id)
+
+Help us make it better
+----------------------
+Please tell us how we can make the APIs better. If you have a specific feature request or if you found a bug, please contact <support@payfabric.com>. Also, feel free to fork these docs and send a pull request with improvements!
