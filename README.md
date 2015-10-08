@@ -38,28 +38,28 @@ Many of these objects are used in both requests and responses. Some of the objec
 as child elements of other objects.
 
 ### Transactions
-* [Create a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-transaction)
-* [Update a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-a-transaction)
-* [Process a Transaction by Transaction Key](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#submit-a-transaction-to-payment-gateway-by-transaction-key)
-* [Create and process a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-and-submit-a-transaction-by-transaction-object)
-* [Retrieve a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-a-transaction)
-* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#capture-a-pre-authorized-transaction)
-* [Cancel a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#cancel-a-transaction)
-* [Refund a Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#refund-a-customer)
+* [Create a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#create-a-transaction)
+* [Update a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#update-a-transaction)
+* [Process a Transaction by Transaction Key](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#submit-a-transaction-to-payment-gateway-by-transaction-key)
+* [Create and process a Transaction by Transaction Object](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#create-and-submit-a-transaction-by-transaction-object)
+* [Retrieve a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#get-a-transaction)
+* [Capture a Pre-Authorized Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#capture-a-pre-authorized-transaction)
+* [Cancel a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#cancel-a-transaction)
+* [Refund a Customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#refund-a-customer)
 
 ### Wallets / Credit Cards / eChecks
-* [Add a Card or eCheck into Wallet](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-credit-card)
-* [Update an Existing Card or eCheck](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-an-existing-card)
-* [Remove a Card or eCheck](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#delete-a-card)
-* [Retrieve Cards and eChecks by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-cards-by-customer)
+* [Add a Card or eCheck into Wallet](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#create-a-credit-card)
+* [Update an Existing Card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#update-an-existing-card)
+* [Remove a Card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#delete-a-card)
+* [Retrieve Cards and eChecks by Customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#get-cards-by-customer)
 
 ### Payment Gateways
-* [Retrieve All Gateway Account Profiles](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-all-payment-gateways)
-* [Retrieve a Gateway Account Profile By Id](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-a-payment-gateway-by-id)
+* [Retrieve All Gateway Account Profiles](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-all-payment-gateways)
+* [Retrieve a Gateway Account Profile By Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-a-payment-gateway-by-id)
 
 ### Addresses
-* [Retrieve Shipping addresses by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-shipping-addresses-by-customer)
-* [Retrieve Shipping address by Id](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-shipping-address-by-id)
+* [Retrieve Shipping addresses by Customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-shipping-addresses-by-customer)
+* [Retrieve Shipping address by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-shipping-address-by-id)
 
 Help us make it better
 ----------------------
