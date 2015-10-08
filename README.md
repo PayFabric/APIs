@@ -47,11 +47,11 @@ as child elements of other objects.
 * [Cancel a Transaction](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#cancel-a-transaction)
 * [Refund a Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#refund-a-customer)
 
-### Wallets / Credit Cards / Echecks
-* [Add a Card or ECheck into Wallet](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-credit-card)
-* [Update an Existing Card or ECheck](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-an-existing-card)
-* [Remove a Card or ECheck](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#delete-a-card)
-* [Retrieve Cards and EChecks by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-cards-by-customer)
+### Wallets / Credit Cards / eChecks
+* [Add a Card or eCheck into Wallet](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-a-credit-card)
+* [Update an Existing Card or eCheck](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#update-an-existing-card)
+* [Remove a Card or eCheck](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#delete-a-card)
+* [Retrieve Cards and eChecks by Customer](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-cards-by-customer)
 
 ### Payment Gateways
 * [Retrieve All Gateway Account Profiles](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#get-all-payment-gateways)
