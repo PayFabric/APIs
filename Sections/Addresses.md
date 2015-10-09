@@ -12,14 +12,14 @@ Get Address
 {
   "City": "Anaheim",
   "Country": "USA",
-  "Customer": "CUST0001",
-  "Email": "Example@nodus.com",
+  "Customer": "John Doe Ltd",
+  "Email": "John.Doe@payfabric.com",
   "ID": "75B12D6B-B2C7-409D-89CB-006535D6CD95",
-  "Line1": "2099 S. State College Blvd, Suite 250",
+  "Line1": "123 PayFabric Way",
   "Line2": "",
   "Line3": "",
   "ModifiedOn": "10/2/2015 10:39:32 AM",
-  "Phone": "(909) 482-4701",
+  "Phone": "(123) 456-7890",
   "State": "CA",
   "Zip": "92806"
 }
@@ -28,35 +28,35 @@ Get Address
 Get Addresses
 -------------
 
-* `GET /rest/api/addresses/CUST0001` will return all shipping addresses for the specified customer
+* `GET /rest/api/addresses/John+Doe+Ltd` will return all shipping addresses for the specified customer
  
 ```json
 [
   {
     "City": "Anaheim",
     "Country": "USA",
-    "Customer": "CUST0001",
-    "Email": "Example@nodus.com",
+    "Customer": "John Doe Ltd",
+    "Email": "John.Doe@payfabric.com",
     "ID": "75B12D6B-B2C7-409D-89CB-006535D6CD95",
-    "Line1": "2099 S. State College Blvd, Suite 250",
+    "Line1": "123 PayFabric Way",
     "Line2": "",
     "Line3": "",
     "ModifiedOn": "10/2/2015 10:39:32 AM",
-    "Phone": "(909) 482-4701",
+    "Phone": "(123) 456-7890",
     "State": "CA",
     "Zip": "92806"
   },
   {
     "City": "Anaheim",
     "Country": "USA",
-    "Customer": "CUST0001",
-    "Email": "Example@nodus.com",
-    "ID": "82BCC961-8BB7-44A4-AB9E-70599460E366",
-    "Line1": "1099 N. State College Blvd, Suite 250",
+    "Customer": "John Doe Ltd",
+    "Email": "John.Doe@payfabric.com",
+    "ID": "75B12D6B-B2C7-409D-89CB-006535DDDDDD",
+    "Line1": "123 PayFabric Way",
     "Line2": "",
     "Line3": "",
-    "ModifiedOn": "8/2/2015 11:00:32 AM",
-    "Phone": "(909) 482-4701",
+    "ModifiedOn": "10/2/2015 10:39:32 AM",
+    "Phone": "(123) 456-7890",
     "State": "CA",
     "Zip": "92806"
   }
@@ -66,7 +66,7 @@ Get Addresses
 Get Addresses (Query with Paging)
 ---------------------
 
-* `GET /rest/api/addresses/get?customer=CUST0001&fromDate=01-01-2015&page=1` will return shipping addresses for the specified customer after a specified date
+* `GET /rest/api/addresses/get?customer=John+Doe+Ltd&fromDate=01-01-2015&page=1` will return shipping addresses for the specified customer after a specified date
 
 ```json
 {
@@ -81,28 +81,28 @@ Get Addresses (Query with Paging)
     {
       "City": "Anaheim",
       "Country": "USA",
-      "Customer": "CUST0001",
-      "Email": "Example@nodus.com",
+      "Customer": "John Doe Ltd",
+      "Email": "John.Doe@payfabric.com",
       "ID": "75B12D6B-B2C7-409D-89CB-006535D6CD95",
-      "Line1": "2099 S. State College Blvd, Suite 250",
+      "Line1": "123 PayFabric Way",
       "Line2": "",
       "Line3": "",
       "ModifiedOn": "10/2/2015 10:39:32 AM",
-      "Phone": "(909) 482-4701",
+      "Phone": "(123) 456-7890",
       "State": "CA",
       "Zip": "92806"
     },
     {
       "City": "Anaheim",
       "Country": "USA",
-      "Customer": "CUST0001",
-      "Email": "Example@nodus.com",
-      "ID": "82BCC961-8BB7-44A4-AB9E-70599460E366",
-      "Line1": "1099 N. State College Blvd, Suite 250",
+      "Customer": "John Doe Ltd",
+      "Email": "John.Doe@payfabric.com",
+      "ID": "75B12D6B-B2C7-409D-89CB-006535DDDDDD",
+      "Line1": "123 PayFabric Way",
       "Line2": "",
       "Line3": "",
-      "ModifiedOn": "8/2/2015 11:00:32 AM",
-      "Phone": "(909) 482-4701",
+      "ModifiedOn": "10/2/2015 10:39:32 AM",
+      "Phone": "(123) 456-7890",
       "State": "CA",
       "Zip": "92806"
     }
