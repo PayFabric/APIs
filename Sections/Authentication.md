@@ -16,8 +16,7 @@ curl -X GET \
 
 Security Token
 --------------
-
-Generate a token:
+##### Step 1: Generate Token
 ```shell
 curl -X GET \
   -H 'Authorization: deviceid|devicepassword' \
@@ -30,7 +29,7 @@ If the HTTP Status Code is 200 - OK you will receive the following **JSON** resp
 }
 ```
 
-Consume the token:
+##### Step 2: Authenticate with Token
 ```shell
 curl -X GET \
   -H 'Authorization: 4ts3gxu3o5an' \
