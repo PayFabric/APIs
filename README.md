@@ -54,13 +54,13 @@ as child elements of other objects.
 * [Retrieve Cards and eChecks by Customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#get-cards-by-customer)
 
 ### Payment Gateway Profiles
-* [Retrieve a payment gateway profile by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-payment-gateway-profile)
-* [Retrieve all payment gateway profiles](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-payment-gateway-profiles)
+* [Get a payment gateway profile by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-payment-gateway-profile)
+* [Get all payment gateway profiles](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-payment-gateway-profiles)
 
 ### Addresses
-* [Retrieve shipping address by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-address)
-* [Retrieve shipping addresses by customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-addresses)
-* [Retrieve shipping addresses by query](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-addresses-query-with-paging)
+* [Get shipping address by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-address)
+* [Get shipping addresses by customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-addresses)
+* [Get shipping addresses by query](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-addresses-query-with-paging)
 
 
 Help us make it better
