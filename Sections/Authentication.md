@@ -16,14 +16,8 @@ curl -X GET \
 
 Security Token
 --------------
-```shell
-curl -X GET \
-  -H 'Authorization: token' \
-  https://sandbox.payfabric.com/v2/rest/api/address/1
-```
 
-Below is the process of creating a token:
-
+Generate a token:
 ```shell
 curl -X GET \
   -H 'Authorization: deviceid|devicepassword' \
@@ -35,4 +29,12 @@ If the HTTP Status Code is 200 - OK you will receive the following **JSON** resp
   "Token": "4ts3gxu3o5an"
 }
 ```
-This token value must be supplied in the custom "authorization" header of the next HTTP web request. Once this token has been applied to a HTTP web request it will be revoked by PayFabric once it has completed the authentication process, any further requests will be required to generate a new token.
+
+Consume the token:
+```shell
+curl -X GET \
+  -H 'Authorization: 4ts3gxu3o5an' \
+  https://sandbox.payfabric.com/v2/rest/api/address/1
+```
+
+Once this token has been applied to a HTTP web request it will be revoked by PayFabric once it has completed the authentication process, any further requests will be required to generate a new token.
