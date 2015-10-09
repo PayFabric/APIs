@@ -10,23 +10,3 @@ PayFabric uses HTTP response codes to indicate the completion status of requests
 | 404 Not Found | The requested resource could not be located. Check for typos in your URL |  
 | 412 Precondition Failed | Missing fields or mandatory parameters. See description of status code 400 |  
 | 500 Internal Server Error| PayFabric server has encountered an error |
-
-Some programming languages, such as .NET, throw run-time exceptions when an HTTP response returns a status code other than 200. You can use these exceptions to programmatically recover or at least exit gracefully from errors. Below is an example in **C#** of catching exceptions.
-```c#
-try
-{
-   // Do Something
-}
-catch (WebException ex)
-{
-  using (StreamReader reader = new StreamReader(ex.Response.GetResponseStream()))
-  {
-    string errorMsg = reader.ReadToEnd();
-    Console.WriteLine("Error Message: " + errorMsg);
-  }
-}
-Catch (Exception ex)
-{
-   // Error Handling
-}
-```
