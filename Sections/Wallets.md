@@ -62,7 +62,7 @@ Get Credit Cards or eChecks
 
 * `GET /rest/api/wallet/get/CUST0001?tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_)
 
-```json
+<pre>
 [
   {
     "Aba": "",
@@ -157,7 +157,7 @@ Get Credit Cards or eChecks
     "UserDefine4": ""
   }
 ]
-```
+</pre>
 
 Get Credit Cards or eChecks (Query with Paging)
 -----------------------------------------------
