@@ -8,13 +8,12 @@ Get Credit Card / eCheck
 
 * `GET /rest/api/wallet/get/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will return the specified credit card or eCheck
 
-<pre>
-{
+<pre>{
   "Aba": "",
   "Account": "XXXXXXXXXXXX1115",
   "AccountType": "",
   "Billto": {
-    "City": "Anaheim",
+		"City": "Anaheim",
     "Country": "USA",
     "Customer": "",
     "Email": "",
@@ -54,16 +53,14 @@ Get Credit Card / eCheck
   "UserDefine2": "",
   "UserDefine3": "",
   "UserDefine4": ""
-}
-</pre>
+}</pre>
 
 Get Credit Cards or eChecks
 --------------------------
 
 * `GET /rest/api/wallet/get/John+Doe+Ltd?tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_)
 
-<pre>
-[
+<pre>[
 	{
 		"Aba": "",
 		"Account": "XXXXXXXXXXXX1115",
@@ -110,7 +107,7 @@ Get Credit Cards or eChecks
 		"UserDefine3": "",
 		"UserDefine4": ""
 	},
-  {
+	{
 		"Aba": "",
 		"Account": "XXXXXXXXXXXX1115",
 		"AccountType": "",
@@ -156,16 +153,14 @@ Get Credit Cards or eChecks
 		"UserDefine3": "",
 		"UserDefine4": ""
 	}
-]
-</pre>
+]</pre>
 
 Get Credit Cards or eChecks (Query with Paging)
 -----------------------------------------------
 
 * `GET /rest/api/wallet/get?customer=John+Doe+Ltd&tender=CreditCard&fromdate=01-01-2015&page=1` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_) after the specified date
 
-<pre>
-{
+<pre>{
   "Paging": {
     "Current": "1",
     "Size": "15",
@@ -267,49 +262,41 @@ Get Credit Cards or eChecks (Query with Paging)
 			"UserDefine4": ""
 		}
 	]
-}
-</pre>
+}</pre>
 
 Lock Credit Card / eCheck
 -------------------------
 
 * `GET /rest/api/wallet/lock/cbb571ea-e834-41c4-8a20-7d55bb7ae190?lockreason=Customer+being+audited` will lock the credit card or eCheck from being used with a specified reason
 
-<pre>
-{
-  "Result": "True"
-}
-</pre>
+<pre>{
+	"Result": "True"
+}</pre>
 
 Unlock Credit Card / eCheck
 ---------------------------
 
 * `GET /rest/api/wallet/unlock/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will unlock the credit card or eCheck from being used
 
-<pre>
-{
+<pre>{
   "Result": "True"
-}
-</pre>
+}</pre>
 
 Delete Credit Card / eCheck
 ---------------------------
 
 * `GET /rest/api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will delete the credit card or eCheck
 
-<pre>
-{
+<pre>{
 	"Result": "True"
-}
-</pre>
+}</pre>
 
 Create Credit Card
 ------------------
 
 * `POST /rest/api/wallet/create` will create a new credit card with the following JSON payload:
 
-<pre>
-{
+<pre>{
 	<b>"Account"</b>: "XXXXXXXXXXXX1115",
 	"Billto": {
 		"City": "Anaheim",
@@ -341,25 +328,21 @@ Create Credit Card
 	"UserDefine2": "",
 	"UserDefine3": "",
 	"UserDefine4": ""
-}
-</pre>
+}</pre>
 
 Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
 
-<pre>
-{
+<pre>{
   "Message": null,
   "Result": "ccfbf703-0fff-4e28-845e-3c5c5092f857"
-}
-</pre>
+}</pre>
 
 Create eCheck
 -------------
 
 * `POST /rest/api/wallet/create` will create a new eCheck with the following JSON payload:
 
-<pre>
-{
+<pre>{
 	<b>"Account"</b>: "1111111111111111",
 	<b>"Aba"</b>: "123",
 	"AccountType" : "",
@@ -392,33 +375,26 @@ Create eCheck
 	"UserDefine2": "",
 	"UserDefine3": "",
 	"UserDefine4": ""
-}
-</pre>
+}</pre>
 
 Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
 
-<pre>
-{
+<pre>{
   "Message": null,
   "Result": "6ae8448f-de67-4f71-89f9-07bb77621cc7"
-}
-</pre>
+}</pre>
 
 Update Credit Card / eCheck
 ---------------------------
 
 * `POST /rest/api/wallet/update` will update a credit card or eCheck with new information based on the request JSON payload
 
-<pre>
-{
+<pre>{
 	"ID" : "4ea31dda-4efb-4ed5-8f35-dbcc6b16017d"
-}
-</pre>
+}</pre>
 
 Please note that the **ID** field is the only required field for an update.  Only the fields that need updating should be included, see the **Create Credit Card / eCheck** endpoint for more information.
 
-<pre>
-{
+<pre>{
   "Result": "True"
-}
-</pre>
+}</pre>
