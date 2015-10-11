@@ -344,7 +344,7 @@ Create Credit Card
 }
 </pre>
 
-Please note that *bold* fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page]().
+Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
 
 <pre>
 {
@@ -395,7 +395,7 @@ Create eCheck
 }
 </pre>
 
-Please note that *bold* fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page]().
+Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
 
 <pre>
 {
@@ -407,7 +407,18 @@ Please note that *bold* fields are required fields, and all others are optional.
 Update Credit Card / eCheck
 ---------------------------
 
-* ``
+* `POST /rest/api/wallet/update` will update a credit card or eCheck with new information based on the request JSON payload
 
 <pre>
+{
+	"ID" : "4ea31dda-4efb-4ed5-8f35-dbcc6b16017d"
+}
+</pre>
+
+Please note that the **ID** field is the only required field for an update.  Only the fields that need updating should be included, see the **Create Credit Card / eCheck** endpoint for more information.
+
+<pre>
+{
+  "Result": "True"
+}
 </pre>
