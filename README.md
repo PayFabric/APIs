@@ -50,7 +50,7 @@ as child elements of other objects.
 ### Wallets / Credit Cards / eChecks
 * [Get a credit card or eCheck by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#get-credit-card--echeck)
 * [Get credit cards and eChecks by customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#get-credit-cards-or-echecks)
-* [Add a credit card or eCheck into Wallet]https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#create-credit-card)
+* [Add a credit card or eCheck into Wallet](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#create-credit-card)
 * [Update an existing credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#update-credit-card--echeck)
 * [Lock a credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#lock-credit-card--echeck)
 * [Unlock a credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#unlock-credit-card--echeck)
