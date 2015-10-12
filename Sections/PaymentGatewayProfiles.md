@@ -8,7 +8,7 @@ Get Payment Gateway Profile
 
 * `GET /rest/api/setupid/079C5DA2-DF91-4AD6-9BA2-A52300FEF06A` will return the specified payment gateway profile 
  
-```json
+<pre>
 {
   "CardClass": "Credit",
   "CardClassID": "1",
@@ -18,14 +18,14 @@ Get Payment Gateway Profile
   "Processor": "TSYS(Vital/VisaNet)",
   "ProcessorID": "18"
 }
-```
+</pre>
 
 Get Payment Gateway Profiles
 ----------------------------
 
 * `GET /rest/api/setupid` will return all payment gateway profiles configured for the PayFabric user
  
-```json
+<pre>
 [
   {
     "CardClass": "ECheck",
@@ -46,4 +46,4 @@ Get Payment Gateway Profiles
     "ProcessorID": "18"
   }
 ]
-```
+</pre>
