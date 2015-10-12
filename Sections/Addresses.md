@@ -8,7 +8,7 @@ Get Address
 
 * `GET /rest/api/address/75B12D6B-B2C7-409D-89CB-006535D6CD95` will return the specified address
 
-```json
+<pre>
 {
   "City": "Anaheim",
   "Country": "USA",
@@ -23,14 +23,14 @@ Get Address
   "State": "CA",
   "Zip": "92806"
 }
-```
+</pre>
 
 Get Addresses
 -------------
 
 * `GET /rest/api/addresses/John+Doe+Ltd` will return all shipping addresses for the specified customer
  
-```json
+<pre>
 [
   {
     "City": "Anaheim",
@@ -61,14 +61,14 @@ Get Addresses
     "Zip": "92806"
   }
 ]
-```
+</pre>
 
 Get Addresses (Query with Paging)
 ---------------------
 
 * `GET /rest/api/addresses/get?customer=John+Doe+Ltd&fromDate=01-01-2015&page=1` will return shipping addresses for the specified customer after a specified date
 
-```json
+<pre>
 {
   "Paging": {
     "Current": "1",
@@ -107,4 +107,4 @@ Get Addresses (Query with Paging)
       "Zip": "92806"
     }
   ]
-```
+</pre>
