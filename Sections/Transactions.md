@@ -551,7 +551,7 @@ Please note that the **Key** field is the only required field for an update. Onl
 Capture a Pre-Authorized Transaction
 ------------------------------------
 
-* ``
+* `GET /rest/api/reference/151013003792?trxtype=SHIP`
 
 <pre>
 </pre>
@@ -559,7 +559,7 @@ Capture a Pre-Authorized Transaction
 Cancel a Transaction
 --------------------
 
-* ``
+* `GET /rest/api/reference/151013003792?trxtype=VOID`
 
 <pre>
 </pre>
@@ -567,7 +567,22 @@ Cancel a Transaction
 Refund a Customer
 -----------------
 
-* ``
+A refund is performed the same way as either [Create Transaction](https://github.com/ShaunSharples/APIs/edit/ShaunSharples-patch-1/Sections/Transactions.md#create-transaction) or [Create and Process Transaction](https://github.com/ShaunSharples/APIs/edit/ShaunSharples-patch-1/Sections/Transactions.md#create-and-process-transaction) and setting the `Type` field to `Credit`
 
 <pre>
+{
+    "SetupId": "PFP",
+    <b>"Type": "Credit"</b>,
+    "Customer": "John Doe Ltd",
+    "Amount": 19.99,
+    "Currency": "USD",
+    "Card": {
+        "Account": "4111111111111111",
+        "ExpDate": "0918",
+        "CardHolder" : {
+            "FirstName": "John",
+            "LastName": "Doe"
+        }
+    }
+}
 </pre>
