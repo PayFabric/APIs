@@ -48,10 +48,14 @@ as child elements of other objects.
 * [Refund a Customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#refund-a-customer)
 
 ### Wallets / Credit Cards / eChecks
-* [Add a Card or eCheck into Wallet](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#create-a-credit-card)
-* [Update an Existing Card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#update-an-existing-card)
-* [Remove a Card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#delete-a-card)
-* [Retrieve Cards and eChecks by Customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#get-cards-by-customer)
+* [Get a credit card or eCheck by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#get-credit-card--echeck)
+* [Get credit cards and eChecks by customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#get-credit-cards-or-echecks)
+* [Add a credit card or eCheck into Wallet]https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#create-credit-card)
+* [Update an existing credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#update-credit-card--echeck)
+* [Lock a credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#lock-credit-card--echeck)
+* [Unlock a credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#unlock-credit-card--echeck)
+* [Remove a credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#delete-a-card)
+
 
 ### Payment Gateway Profiles
 * [Get a payment gateway profile by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-payment-gateway-profile)
@@ -60,7 +64,6 @@ as child elements of other objects.
 ### Addresses
 * [Get shipping address by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-address)
 * [Get shipping addresses by customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-addresses)
-* [Get shipping addresses by query](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-addresses-query-with-paging)
 
 
 Help us make it better
