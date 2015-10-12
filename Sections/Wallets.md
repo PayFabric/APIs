@@ -272,7 +272,7 @@ Create Credit Card
 * `POST /rest/api/wallet/create` will create a new credit card with the following JSON payload:
 
 <pre>{
-  <b>"Account"</b>: "XXXXXXXXXXXX1115",
+  <b>"Account": "4111111111111111"</b>,
   "Billto": {
     "City": "Anaheim",
     "Country": "USA",
@@ -286,19 +286,19 @@ Create Credit Card
   },
   <b>"CardHolder"</b>: {
     "DriverLicense": "",
-    <b>"FirstName"</b>: "John",
-    <b>"LastName"</b>: "Doe",
+    <b>"FirstName": "John"</b>,
+    <b>"LastName": "Doe"</b>,
     "MiddleName": "",
     "SSN": ""
   },
-  <b>"Customer"</b>: "John Doe Ltd",
-  <b>"ExpDate"</b>: "0918",
+  <b>"Customer": "John Doe Ltd"</b>,
+  <b>"ExpDate": "0918"</b>,
   "GPAddressCode": "",
   "GatewayToken": "",
   "Identifier": "",
   "IsDefaultCard": false,
   "IssueNumber": "",
-  <b>"Tender"</b>: "CreditCard",
+  <b>"Tender": "CreditCard"</b>,
   "UserDefine1": "",
   "UserDefine2": "",
   "UserDefine3": "",
@@ -318,8 +318,8 @@ Create eCheck
 * `POST /rest/api/wallet/create` will create a new eCheck with the following JSON payload:
 
 <pre>{
-  <b>"Account"</b>: "1111111111111111",
-  <b>"Aba"</b>: "123",
+  <b>"Account": "1111111111111111"</b>,
+  <b>"Aba": "123"</b>,
   "AccountType" : "",
   "Billto": {
     "City": "Anaheim",
@@ -334,18 +334,18 @@ Create eCheck
   },
   <b>"CardHolder"</b>: {
     "DriverLicense": "",
-    <b>"FirstName"</b>: "John",
-    <b>"LastName"</b>: "Doe",
+    <b>"FirstName": "John"</b>,
+    <b>"LastName": "Doe"</b>,
     "MiddleName": "",
     "SSN": ""
   },
-  <b>"Customer"</b>: "John Doe Ltd",
+  <b>"Customer": "John Doe Ltd"</b>,
   "GPAddressCode": "",
   "GatewayToken": "",
   "Identifier": "",
   "IsDefaultCard": false,
   "IssueNumber": "",
-  <b>"Tender"</b>: "ECheck",
+  <b>"Tender": "ECheck"</b>,
   "UserDefine1": "",
   "UserDefine2": "",
   "UserDefine3": "",
