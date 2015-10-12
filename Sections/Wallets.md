@@ -10,7 +10,6 @@ Get Credit Card / eCheck
 
 <pre>
 {
-	"Aba": "",
   "Account": "XXXXXXXXXXXX1115",
   "AccountType": "",
   "Billto": {
