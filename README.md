@@ -54,8 +54,7 @@ as child elements of other objects.
 * [Update an existing credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#update-credit-card--echeck)
 * [Lock a credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#lock-credit-card--echeck)
 * [Unlock a credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#unlock-credit-card--echeck)
-* [Remove a credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#delete-a-card)
-
+* [Remove a credit card or eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#delete-credit-card--echeck)
 
 ### Payment Gateway Profiles
 * [Get a payment gateway profile by Id](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-payment-gateway-profile)
