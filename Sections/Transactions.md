@@ -368,9 +368,42 @@ Create Transaction
 * `POST /rest/api/transaction/create` will create and save a transaction to the PayFabric server based on the request JSON payload
 
 <pre>
+{
+  <b>"Amount": "29.99"</b>,
+  "BatchNumber": "",
+  <b>"Currency": "USD"</b>,
+  <b>"Customer": "John Doe Ltd"</b>,
+  "Document": {
+    "Head": [],
+    "Lines": [],
+    "UserDefined": []
+  },
+  "PayDate": "",
+  "ReferenceKey": null,
+  "ReferenceTrxs": [],
+  "ReqAuthCode": "",
+  <b>"SetupId": "PFP"</b>,
+  "Shipto": {
+    "City": "",
+    "Country": "",
+    "Customer": "",
+    "Email": "",
+    "Line1": "",
+    "Line2": "",
+    "Line3": "",
+    "Phone": "",
+    "State": "",
+    "Zip": ""
+  },
+  "TrxUserDefine1": "",
+  "TrxUserDefine2": "",
+  "TrxUserDefine3": "",
+  "TrxUserDefine4": "",
+  <b>"Type": "Sale"</b>
+}
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [wiki page]().
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#transaction).
 
 <pre>
 {
@@ -384,9 +417,74 @@ Create and Process Transaction
 * `POST /rest/api/transaction/process?cvc=111` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload
 
 <pre>
+{
+  <b>"Amount": "29.99"</b>,
+  "BatchNumber": "",
+  <b>"Card":</b> {
+    <b>"Account": "4111111111111111"</b>,
+    "Billto": {
+      "City": "Anaheim",
+      "Country": "USA",
+      "Email": "",
+      "Line1": "123 PayFabric Way",
+      "Line2": "",
+      "Line3": "",
+      "Phone": "(123)456-7890",
+      "State": "CA",
+      "Zip": "92806"
+    },
+    <b>"CardHolder"</b>: {
+      "DriverLicense": "",
+      <b>"FirstName": "John"</b>,
+      <b>"LastName": "Doe"</b>,
+      "MiddleName": "",
+      "SSN": ""
+    },
+    <b>"Customer": "John Doe Ltd"</b>,
+    <b>"ExpDate": "0918"</b>,
+    "GPAddressCode": "",
+    "GatewayToken": "",
+    "Identifier": "",
+    "IsDefaultCard": false,
+    "IssueNumber": "",
+    "UserDefine1": "",
+    "UserDefine2": "",
+    "UserDefine3": "",
+    "UserDefine4": ""
+  },
+  <b>"Currency": "USD"</b>,
+  <b>"Customer": "John Doe Ltd"</b>,
+  "Document": {
+    "Head": [],
+    "Lines": [],
+    "UserDefined": []
+  },
+  "PayDate": "",
+  "ReferenceKey": null,
+  "ReferenceTrxs": [],
+  "ReqAuthCode": "",
+  <b>"SetupId": "PFP"</b>,
+  "Shipto": {
+    "City": "",
+    "Country": "",
+    "Customer": "",
+    "Email": "",
+    "Line1": "",
+    "Line2": "",
+    "Line3": "",
+    "Phone": "",
+    "State": "",
+    "Zip": ""
+  },
+  "TrxUserDefine1": "",
+  "TrxUserDefine2": "",
+  "TrxUserDefine3": "",
+  "TrxUserDefine4": "",
+  <b>"Type": "Sale"</b>
+}
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [wiki page]().
+Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](https://github.com/ShaunSharples/APIs/edit/ShaunSharples-patch-1/Sections/Wallets.md). For more information and descriptions on available fields please see our [wiki page]().
 
 <pre>
 {
@@ -438,7 +536,7 @@ Update Transaction
 
 <pre>
 {
-    "Key" : "151013003793"
+    "Key": "151013003793"
 }
 </pre>
 
