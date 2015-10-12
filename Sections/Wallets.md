@@ -8,7 +8,8 @@ Get Credit Card / eCheck
 
 * `GET /rest/api/wallet/get/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will return the specified credit card or eCheck
 
-<pre>{
+<pre>
+{
 	"Aba": "",
   "Account": "XXXXXXXXXXXX1115",
   "AccountType": "",
@@ -53,7 +54,8 @@ Get Credit Card / eCheck
   "UserDefine2": "",
   "UserDefine3": "",
   "UserDefine4": ""
-}</pre>
+}
+</pre>
 
 Get Credit Cards or eChecks
 --------------------------
