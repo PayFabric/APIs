@@ -266,33 +266,6 @@ Get Credit Cards or eChecks (Query with Paging)
   ]
 }</pre>
 
-Lock Credit Card / eCheck
--------------------------
-
-* `GET /rest/api/wallet/lock/cbb571ea-e834-41c4-8a20-7d55bb7ae190?lockreason=Customer+being+audited` will lock the credit card or eCheck from being used with a specified reason
-
-<pre>{
-  "Result": "True"
-}</pre>
-
-Unlock Credit Card / eCheck
----------------------------
-
-* `GET /rest/api/wallet/unlock/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will unlock the credit card or eCheck from being used
-
-<pre>{
-  "Result": "True"
-}</pre>
-
-Delete Credit Card / eCheck
----------------------------
-
-* `GET /rest/api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will delete the credit card or eCheck
-
-<pre>{
-  "Result": "True"
-}</pre>
-
 Create Credit Card
 ------------------
 
@@ -396,6 +369,33 @@ Update Credit Card / eCheck
 }</pre>
 
 Please note that the **ID** field is the only required field for an update.  Only the fields that need updating should be included, see the **Create Credit Card / eCheck** endpoint for more information.
+
+<pre>{
+  "Result": "True"
+}</pre>
+
+Lock Credit Card / eCheck
+-------------------------
+
+* `GET /rest/api/wallet/lock/cbb571ea-e834-41c4-8a20-7d55bb7ae190?lockreason=Customer+being+audited` will lock the credit card or eCheck from being used with a specified reason
+
+<pre>{
+  "Result": "True"
+}</pre>
+
+Unlock Credit Card / eCheck
+---------------------------
+
+* `GET /rest/api/wallet/unlock/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will unlock the credit card or eCheck from being used
+
+<pre>{
+  "Result": "True"
+}</pre>
+
+Delete Credit Card / eCheck
+---------------------------
+
+* `GET /rest/api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will delete the credit card or eCheck
 
 <pre>{
   "Result": "True"
