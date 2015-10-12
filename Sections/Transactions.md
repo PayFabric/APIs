@@ -19,11 +19,6 @@ Get Transactions
 <pre>
 </pre>
 
-* ``
-
-<pre>
-</pre>
-
 Create Transaction
 ------------------
 
