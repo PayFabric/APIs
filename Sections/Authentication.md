@@ -8,6 +8,7 @@ For clients running on consumer devices (e.g. smartphones) PayFabric highly reco
 
 Device ID and Password
 ----------------------
+
 ```shell
 curl -X GET \
   -H 'Authorization: deviceid|devicepassword' \
@@ -17,19 +18,22 @@ curl -X GET \
 Security Token
 --------------
 ##### Step 1: Generate Token
+
 ```shell
 curl -X GET \
   -H 'Authorization: deviceid|devicepassword' \
   https://sandbox.payfabric.com/v2/rest/api/token/create
 ```
 If the HTTP Status Code is 200 - OK you will receive the following **JSON** response:
-```JSON
+
+<pre>
 {
   "Token": "4ts3gxu3o5an"
 }
-```
+</pre>
 
 ##### Step 2: Authenticate with Token
+
 ```shell
 curl -X GET \
   -H 'Authorization: 4ts3gxu3o5an' \
