@@ -588,6 +588,8 @@ Refund a Customer
 
 To refund a customer, you just submit a credit to the customer that is owed the refund. The amount of the transaction should match the amount that is due to the customer. To perform a credit transaction, you just create a transaction object, set the `Type` field to `Credit`, and then use [Create and Process Transaction](https://github.com/ShaunSharples/APIs/edit/ShaunSharples-patch-1/Sections/Transactions.md#create-and-process-transaction) to execute the transaction.
 
+* `POST /rest/api/transaction/process?cvc=111`
+
 ###### Request
 <pre>
 {
