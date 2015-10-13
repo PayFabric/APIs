@@ -8,6 +8,7 @@ Get Transaction
 
 * `GET /rest/api/transaction/151013003792` will return the specified transaction
 
+###### Response
 <pre>
 {
   "Amount": "29.99",
@@ -127,6 +128,7 @@ Get Transactions
 
 * `GET /rest/api/transaction/get?fromdate=10-13-2015` will return the transactions created after the specified date
 
+###### Response
 <pre>
 {
   "Paging": {
@@ -367,6 +369,7 @@ Create Transaction
 
 * `POST /rest/api/transaction/create` will create and save a transaction to the PayFabric server based on the request JSON payload
 
+###### Request
 <pre>
 {
   <b>"Amount": "29.99"</b>,
@@ -405,6 +408,7 @@ Create Transaction
 
 Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#transaction).
 
+###### Response
 <pre>
 {
   "Key": "151013003794"
@@ -416,6 +420,7 @@ Create and Process Transaction
 
 * `POST /rest/api/transaction/process?cvc=111` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload
 
+###### Request
 <pre>
 {
   <b>"Amount": "29.99"</b>,
@@ -486,6 +491,7 @@ Create and Process Transaction
 
 Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](https://github.com/ShaunSharples/APIs/edit/ShaunSharples-patch-1/Sections/Wallets.md). For more information and descriptions on available fields please see our [wiki page]().
 
+###### Response
 <pre>
 {
   "AVSAddressResponse": null,
@@ -510,6 +516,7 @@ Process Existing Transaction
 
 * `GET /rest/api/transaction/process/151007010914?cvc=111` will attempt to process the transaction with the payment gateway
 
+###### Response
 <pre>
 {
   "AVSAddressResponse": null,
@@ -534,6 +541,7 @@ Update Transaction
 
 * `POST /rest/api/transaction/update` will update a transaction with new information based on the request JSON payload
 
+###### Request
 <pre>
 {
     "Key": "151013003793"
@@ -542,33 +550,45 @@ Update Transaction
 
 Please note that the **Key** field is the only required field for an update. Only the fields that need updating should be included, see the **Create Transaction** endpoint for more information.
 
+###### Response
 <pre>
 {
   "Result": "True"
 }
 </pre>
 
-Capture a Pre-Authorized Transaction
-------------------------------------
+Cancel Existing Transaction or Capture a Pre-Authorized Transaction
+-------------------------------------------------------------------
 
-* `GET /rest/api/reference/151013003792?trxtype=SHIP`
+* `GET /rest/api/reference/151013003792?trxtype=SHIP` will attempt to execute pre-authorized transactions are also known as book transactions.
+* `GET /rest/api/reference/151013003792?trxtype=VOID` will attempt to cancel a transaction that has already been submitted to a payment gateway. PayFabric attempts to cancel a transaction by submitting a void transaction to the payment gateway.
 
+###### Response
 <pre>
-</pre>
-
-Cancel a Transaction
---------------------
-
-* `GET /rest/api/reference/151013003792?trxtype=VOID`
-
-<pre>
+{
+  "AVSAddressResponse": null,
+  "AVSZipResponse": null,
+  "AuthCode": "010101",
+  "CVV2Response": "Y",
+  "IAVSAddressResponse": "N",
+  "Message": "Approved",
+  "OriginationID": "A70E7F9644C2",
+  "PayFabricErrorCode": null,
+  "RespTrxTag": null,
+  "ResultCode": "0",
+  "Status": "Approved",
+  "TAXml": "",
+  "TrxDate": "10/13/2015 8:41:44 AM",
+  "TrxKey": "151007010914"
+}
 </pre>
 
 Refund a Customer
 -----------------
 
-A refund is performed the same way as either [Create Transaction](https://github.com/ShaunSharples/APIs/edit/ShaunSharples-patch-1/Sections/Transactions.md#create-transaction) or [Create and Process Transaction](https://github.com/ShaunSharples/APIs/edit/ShaunSharples-patch-1/Sections/Transactions.md#create-and-process-transaction) and setting the `Type` field to `Credit`
+To refund a customer, you just submit a credit to the customer that is owed the refund. The amount of the transaction should match the amount that is due to the customer. To perform a credit transaction, you just create a transaction object, set the `Type` field to `Credit`, and then use [Create and Process Transaction](https://github.com/ShaunSharples/APIs/edit/ShaunSharples-patch-1/Sections/Transactions.md#create-and-process-transaction) to execute the transaction.
 
+###### Request
 <pre>
 {
     "SetupId": "PFP",
@@ -584,5 +604,23 @@ A refund is performed the same way as either [Create Transaction](https://github
             "LastName": "Doe"
         }
     }
+}
+</pre>
+
+###### Response
+<pre>
+{
+  "AVSAddressResponse": null,
+  "AVSZipResponse": null,
+  "AuthCode": null,
+  "CVV2Response": null,
+  "IAVSAddressResponse": null,
+  "Message": "Approved",
+  "OriginationID": "A70E6C184BA5",
+  "RespTrxTag": null,
+  "ResultCode": "0",
+  "Status": "Approved",
+  "TrxDate": "5/31/2014 3:17:27 PM",
+  "TrxKey": "140531067716"
 }
 </pre>
