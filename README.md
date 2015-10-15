@@ -40,8 +40,8 @@ as child elements of other objects.
 ### Transactions
 * [Create a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#create-a-transaction)
 * [Update a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#update-a-transaction)
-* [Process a Transaction by Transaction Key](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#submit-a-transaction-to-payment-gateway-by-transaction-key)
-* [Create and process a Transaction by Transaction Object](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#create-and-submit-a-transaction-by-transaction-object)
+* [Process a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#submit-a-transaction-to-payment-gateway-by-transaction-key)
+* [Create and Process a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#create-and-submit-a-transaction-by-transaction-object)
 * [Retrieve a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#get-a-transaction)
 * [Capture a Pre-Authorized Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#capture-a-pre-authorized-transaction)
 * [Cancel a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#cancel-a-transaction)
