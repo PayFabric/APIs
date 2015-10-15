@@ -3,8 +3,8 @@ Addresses
 
 The PayFabric Addresses API is used for returning customer shipping addresses which were entered previously.  Please note that all requests require API authentication, see our [guide](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Authentication.md) on how to authenticate.
 
-Retrieve an Address
--------------------
+Retrieve a Shipping Address
+---------------------------
 
 * `GET /rest/api/address/75B12D6B-B2C7-409D-89CB-006535D6CD95` will return the specified address
 
@@ -26,8 +26,8 @@ Retrieve an Address
 }
 </pre>
 
-Retrieve Addresses
-------------------
+Retrieve Shipping Addresses
+---------------------------
 
 * `GET /rest/api/addresses/John+Doe+Ltd` will return all shipping addresses for the specified customer
  
@@ -65,8 +65,8 @@ Retrieve Addresses
 ]
 </pre>
 
-Retrieve Addresses (Query with Paging)
---------------------------------------
+Retrieve Shipping Addresses (Query with Paging)
+-----------------------------------------------
 
 * `GET /rest/api/addresses/get?customer=John+Doe+Ltd&fromDate=01-01-2015&page=1` will return shipping addresses for the specified customer after a specified date
 
