@@ -62,7 +62,7 @@ as child elements of other objects.
 * [Retrieve Payment Gateway Profiles](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#retrieve-payment-gateway-profiles)
 
 ### Addresses
-* [Retrieve a Shipping Address]https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#retrieve-a-shipping-address)
+* [Retrieve a Shipping Address](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#retrieve-a-shipping-address)
 * [Retrieve Shipping Addresses](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#retrieve-shipping-addresses)
 
 
