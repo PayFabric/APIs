@@ -57,11 +57,11 @@ as child elements of other objects.
 * [Remove Credit Card / eCheck](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Wallets.md#delete-credit-card--echeck)
 
 ### Payment Gateway Profiles
-* [Retrieve Payment Gateway Profile](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-payment-gateway-profile)
+* [Retrieve a Payment Gateway Profile](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-payment-gateway-profile)
 * [Retrieve Payment Gateway Profiles](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/PaymentGatewayProfiles.md#get-payment-gateway-profiles)
 
 ### Addresses
-* [Retrieve Shipping Address](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-address)
+* [Retrieve a Shipping Address](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-address)
 * [Retrieve Shipping Addresses](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Addresses.md#get-addresses)
 
 
