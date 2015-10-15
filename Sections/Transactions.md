@@ -560,8 +560,8 @@ Please note that the **Key** field is the only required field for an update. Onl
 Cancel a Transaction or Capture a Pre-Authorized Transaction
 ------------------------------------------------------------
 
-* `GET /rest/api/reference/151013003792?trxtype=SHIP` will attempt to execute pre-authorized transactions are also known as book transactions.
-* `GET /rest/api/reference/151013003792?trxtype=VOID` will attempt to cancel a transaction that has already been submitted to a payment gateway. PayFabric attempts to cancel a transaction by submitting a void transaction to the payment gateway.
+* `GET /rest/api/reference/151013003792?trxtype=SHIP` will attempt to execute a pre-authorized transaction, also known as book transactions.
+* `GET /rest/api/reference/151013003792?trxtype=VOID` will attempt to cancel a transaction that has already been submitted to a payment gateway. PayFabric attempts to cancel a transaction by submitting a void transaction before settlement with the bank, if cancellation is not possible a refund must be performed.
 
 ###### Response
 <pre>
