@@ -3,8 +3,8 @@ Credit Card / eCheck Wallet
 
 The PayFabric Wallet API is used for returning customer created wallet records, creating new wallet records, locking, updating, and deleting existing wallet records.  Please note that all requests require API authentication, see our [guide](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Authentication.md) on how to authenticate.
 
-Get Credit Card / eCheck
-------------------------
+Retrieve a Credit Card / eCheck
+-------------------------------
 
 * `GET /rest/api/wallet/get/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will return the specified credit card or eCheck
 
@@ -58,8 +58,8 @@ Get Credit Card / eCheck
 }
 </pre>
 
-Get Credit Cards or eChecks
---------------------------
+Retrieve Credit Cards / eChecks
+-------------------------------
 
 * `GET /rest/api/wallet/get/John+Doe+Ltd?tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_)
 
@@ -161,7 +161,7 @@ Get Credit Cards or eChecks
 ]
 </pre>
 
-Get Credit Cards or eChecks (Query with Paging)
+Retrieve Credit Cards / eChecks (Query with Paging)
 -----------------------------------------------
 
 * `GET /rest/api/wallet/get?customer=John+Doe+Ltd&tender=CreditCard&fromdate=01-01-2015&page=1` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_) after the specified date
@@ -273,8 +273,8 @@ Get Credit Cards or eChecks (Query with Paging)
 }
 </pre>
 
-Create Credit Card
-------------------
+Create a Credit Card
+--------------------
 
 * `POST /rest/api/wallet/create` will create a new credit card with the following JSON payload:
 
@@ -325,8 +325,8 @@ Please note that **bold** fields are required fields, and all others are optiona
 }
 </pre>
 
-Create eCheck
--------------
+Create an eCheck
+----------------
 
 * `POST /rest/api/wallet/create` will create a new eCheck with the following JSON payload:
 
@@ -378,8 +378,8 @@ Please note that **bold** fields are required fields, and all others are optiona
 }
 </pre>
 
-Update Credit Card / eCheck
----------------------------
+Update a Credit Card / eCheck
+-----------------------------
 
 * `POST /rest/api/wallet/update` will update a credit card or eCheck with new information based on the request JSON payload
 
@@ -419,10 +419,10 @@ Unlock Credit Card / eCheck
   "Result": "True"
 }</pre>
 
-Delete Credit Card / eCheck
+Remove Credit Card / eCheck
 ---------------------------
 
-* `GET /rest/api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will delete the credit card or eCheck
+* `GET /rest/api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will remove the credit card or eCheck
 
 ###### Response
 <pre>{
