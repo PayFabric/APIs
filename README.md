@@ -44,8 +44,8 @@ as child elements of other objects.
 * [Create and Process a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#create-and-process-a-transaction)
 * [Retrieve a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#retrieve-a-transaction)
 * [Retrieve Transactions](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#retrieve-transactions)
-* [Capture a Pre-Authorized Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#cancel-a-transaction-or-capture-a-pre-authorized-transaction)
 * [Cancel a Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#cancel-a-transaction-or-capture-a-pre-authorized-transaction)
+* [Capture a Pre-Authorized Transaction](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#cancel-a-transaction-or-capture-a-pre-authorized-transaction)
 * [Refund a Customer](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Transactions.md#refund-a-customer)
 
 ### Wallets / Credit Cards / eChecks
