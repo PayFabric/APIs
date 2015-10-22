@@ -3,6 +3,134 @@ Credit Card / eCheck Wallet
 
 The PayFabric Wallet API is used for returning customer created wallet records, creating new wallet records, locking, updating, and deleting existing wallet records.  Please note that all requests require API authentication, see our [guide](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Authentication.md) on how to authenticate.
 
+
+Create a Credit Card
+--------------------
+
+* `POST /rest/api/wallet/create` will create a new credit card with the following JSON payload:
+
+###### Request
+<pre>
+{
+  <b>"Account": "4111111111111111"</b>,
+  "Billto": {
+    "City": "Anaheim",
+    "Country": "USA",
+    "Email": "",
+    "Line1": "123 PayFabric Way",
+    "Line2": "",
+    "Line3": "",
+    "Phone": "(123)456-7890",
+    "State": "CA",
+    "Zip": "92806"
+  },
+  <b>"CardHolder"</b>: {
+    "DriverLicense": "",
+    <b>"FirstName": "John"</b>,
+    <b>"LastName": "Doe"</b>,
+    "MiddleName": "",
+    "SSN": ""
+  },
+  <b>"Customer": "John Doe Ltd"</b>,
+  <b>"ExpDate": "0918"</b>,
+  "GPAddressCode": "",
+  "GatewayToken": "",
+  "Identifier": "",
+  "IsDefaultCard": false,
+  "IssueNumber": "",
+  <b>"Tender": "CreditCard"</b>,
+  "UserDefine1": "",
+  "UserDefine2": "",
+  "UserDefine3": "",
+  "UserDefine4": ""
+}
+</pre>
+
+Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
+
+###### Response
+<pre>
+{
+  "Message": null,
+  "Result": "ccfbf703-0fff-4e28-845e-3c5c5092f857"
+}
+</pre>
+
+Create an eCheck
+----------------
+
+* `POST /rest/api/wallet/create` will create a new eCheck with the following JSON payload:
+
+###### Request
+<pre>
+{
+  <b>"Account": "1111111111111111"</b>,
+  <b>"Aba": "123"</b>,
+  "AccountType" : "",
+  "Billto": {
+    "City": "Anaheim",
+    "Country": "USA",
+    "Email": "",
+    "Line1": "123 PayFabric Way",
+    "Line2": "",
+    "Line3": "",
+    "Phone": "(123)456-7890",
+    "State": "CA",
+    "Zip": "92806"
+  },
+  <b>"CardHolder"</b>: {
+    "DriverLicense": "",
+    <b>"FirstName": "John"</b>,
+    <b>"LastName": "Doe"</b>,
+    "MiddleName": "",
+    "SSN": ""
+  },
+  <b>"Customer": "John Doe Ltd"</b>,
+  "GPAddressCode": "",
+  "GatewayToken": "",
+  "Identifier": "",
+  "IsDefaultCard": false,
+  "IssueNumber": "",
+  <b>"Tender": "ECheck"</b>,
+  "UserDefine1": "",
+  "UserDefine2": "",
+  "UserDefine3": "",
+  "UserDefine4": ""
+}
+</pre>
+
+Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
+
+###### Response
+<pre>
+{
+  "Message": null,
+  "Result": "6ae8448f-de67-4f71-89f9-07bb77621cc7"
+}
+</pre>
+
+Update a Credit Card / eCheck
+-----------------------------
+
+* `POST /rest/api/wallet/update` will update a credit card or eCheck with new information based on the request JSON payload
+
+###### Request
+<pre>
+{
+  "ID" : "4ea31dda-4efb-4ed5-8f35-dbcc6b16017d"
+}
+</pre>
+
+Please note that the **ID** field is the only required field for an update.  Only the fields that need updating should be included, see the **Create Credit Card / eCheck** endpoint for more information.
+
+###### Response
+<pre>
+{
+  "Result": "True"
+}
+</pre>
+
+
 Retrieve a Credit Card / eCheck
 -------------------------------
 
@@ -59,6 +187,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
   "UserDefine4": ""
 }
 </pre>
+
 
 Retrieve Credit Cards / eChecks
 -------------------------------
@@ -279,131 +408,6 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 }
 </pre>
 
-Create a Credit Card
---------------------
-
-* `POST /rest/api/wallet/create` will create a new credit card with the following JSON payload:
-
-###### Request
-<pre>
-{
-  <b>"Account": "4111111111111111"</b>,
-  "Billto": {
-    "City": "Anaheim",
-    "Country": "USA",
-    "Email": "",
-    "Line1": "123 PayFabric Way",
-    "Line2": "",
-    "Line3": "",
-    "Phone": "(123)456-7890",
-    "State": "CA",
-    "Zip": "92806"
-  },
-  <b>"CardHolder"</b>: {
-    "DriverLicense": "",
-    <b>"FirstName": "John"</b>,
-    <b>"LastName": "Doe"</b>,
-    "MiddleName": "",
-    "SSN": ""
-  },
-  <b>"Customer": "John Doe Ltd"</b>,
-  <b>"ExpDate": "0918"</b>,
-  "GPAddressCode": "",
-  "GatewayToken": "",
-  "Identifier": "",
-  "IsDefaultCard": false,
-  "IssueNumber": "",
-  <b>"Tender": "CreditCard"</b>,
-  "UserDefine1": "",
-  "UserDefine2": "",
-  "UserDefine3": "",
-  "UserDefine4": ""
-}
-</pre>
-
-Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
-
-###### Response
-<pre>
-{
-  "Message": null,
-  "Result": "ccfbf703-0fff-4e28-845e-3c5c5092f857"
-}
-</pre>
-
-Create an eCheck
-----------------
-
-* `POST /rest/api/wallet/create` will create a new eCheck with the following JSON payload:
-
-###### Request
-<pre>
-{
-  <b>"Account": "1111111111111111"</b>,
-  <b>"Aba": "123"</b>,
-  "AccountType" : "",
-  "Billto": {
-    "City": "Anaheim",
-    "Country": "USA",
-    "Email": "",
-    "Line1": "123 PayFabric Way",
-    "Line2": "",
-    "Line3": "",
-    "Phone": "(123)456-7890",
-    "State": "CA",
-    "Zip": "92806"
-  },
-  <b>"CardHolder"</b>: {
-    "DriverLicense": "",
-    <b>"FirstName": "John"</b>,
-    <b>"LastName": "Doe"</b>,
-    "MiddleName": "",
-    "SSN": ""
-  },
-  <b>"Customer": "John Doe Ltd"</b>,
-  "GPAddressCode": "",
-  "GatewayToken": "",
-  "Identifier": "",
-  "IsDefaultCard": false,
-  "IssueNumber": "",
-  <b>"Tender": "ECheck"</b>,
-  "UserDefine1": "",
-  "UserDefine2": "",
-  "UserDefine3": "",
-  "UserDefine4": ""
-}
-</pre>
-
-Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
-
-###### Response
-<pre>
-{
-  "Message": null,
-  "Result": "6ae8448f-de67-4f71-89f9-07bb77621cc7"
-}
-</pre>
-
-Update a Credit Card / eCheck
------------------------------
-
-* `POST /rest/api/wallet/update` will update a credit card or eCheck with new information based on the request JSON payload
-
-###### Request
-<pre>
-{
-  "ID" : "4ea31dda-4efb-4ed5-8f35-dbcc6b16017d"
-}
-</pre>
-
-Please note that the **ID** field is the only required field for an update.  Only the fields that need updating should be included, see the **Create Credit Card / eCheck** endpoint for more information.
-
-###### Response
-<pre>
-{
-  "Result": "True"
-}
-</pre>
 
 Lock Credit Card / eCheck
 -------------------------
@@ -415,6 +419,7 @@ Lock Credit Card / eCheck
   "Result": "True"
 }</pre>
 
+
 Unlock Credit Card / eCheck
 ---------------------------
 
@@ -424,6 +429,7 @@ Unlock Credit Card / eCheck
 <pre>{
   "Result": "True"
 }</pre>
+
 
 Remove Credit Card / eCheck
 ---------------------------
