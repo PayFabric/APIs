@@ -47,6 +47,9 @@ Create a Transaction
 
 Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#transaction).
 
+###### Related Reading
+* [How to Submit Level 2 and 3 Fields](https://github.com/PayFabric/APIs/wiki/Level-2-and-Level-3-Fields)
+
 ###### Response
 <pre>
 {
@@ -178,6 +181,9 @@ Create and Process a Transaction
 </pre>
 
 Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](https://github.com/ShaunSharples/APIs/edit/ShaunSharples-patch-1/Sections/Wallets.md). For more information and descriptions on available fields please see our [wiki page]().
+
+###### Related Reading
+* [How to Submit Level 2 and 3 Fields](https://github.com/PayFabric/APIs/wiki/Level-2-and-Level-3-Fields)
 
 ###### Response
 <pre>
@@ -566,8 +572,8 @@ Retrieve Transactions
 Cancel a Transaction or Capture a Pre-Authorized Transaction
 ------------------------------------------------------------
 
-* `GET /rest/api/reference/151013003792?trxtype=SHIP` will attempt to execute a pre-authorized transaction, also known as book transactions.
-* `GET /rest/api/reference/151013003792?trxtype=VOID` will attempt to cancel a transaction that has already been submitted to a payment gateway. PayFabric attempts to cancel a transaction by submitting a void transaction before settlement with the bank, if cancellation is not possible a refund must be performed.
+* `GET /rest/api/reference/151013003792?trxtype=SHIP` will attempt to execute and finalize a pre-authorized transaction, also known as BOOK transactions.
+* `GET /rest/api/reference/151013003792?trxtype=VOID` will attempt to cancel a transaction that has already been submitted to a payment gateway. PayFabric attempts to cancel a transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund must be performed.
 
 ###### Response
 <pre>
