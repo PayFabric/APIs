@@ -8,6 +8,8 @@ Retrieve a Credit Card / eCheck
 
 * `GET /rest/api/wallet/get/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will return the specified credit card or eCheck
 
+Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
+
 ###### Response
 <pre>
 {
@@ -62,6 +64,8 @@ Retrieve Credit Cards / eChecks
 -------------------------------
 
 * `GET /rest/api/wallet/get/John+Doe+Ltd?tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_)
+
+Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
 ###### Response
 <pre>
@@ -165,6 +169,8 @@ Retrieve Credit Cards / eChecks (Query with Paging)
 -----------------------------------------------
 
 * `GET /rest/api/wallet/get?customer=John+Doe+Ltd&tender=CreditCard&fromdate=01-01-2015&page=1` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_) after the specified date
+
+Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
 ###### Response
 <pre>
