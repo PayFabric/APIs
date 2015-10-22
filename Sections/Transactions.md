@@ -3,6 +3,203 @@ Transactions
 
 The PayFabric Transactions API is used for creating, and processing payment transactions. Please note that all requests require API authentication, see our [guide](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Authentication.md) on how to authenticate.
 
+Create a Transaction
+--------------------
+
+* `POST /rest/api/transaction/create` will create and save a transaction to the PayFabric server based on the request JSON payload
+
+###### Request
+<pre>
+{
+  <b>"Amount": "29.99"</b>,
+  "BatchNumber": "",
+  <b>"Currency": "USD"</b>,
+  <b>"Customer": "John Doe Ltd"</b>,
+  "Document": {
+    "Head": [],
+    "Lines": [],
+    "UserDefined": []
+  },
+  "PayDate": "",
+  "ReferenceKey": null,
+  "ReferenceTrxs": [],
+  "ReqAuthCode": "",
+  <b>"SetupId": "PFP"</b>,
+  "Shipto": {
+    "City": "",
+    "Country": "",
+    "Customer": "",
+    "Email": "",
+    "Line1": "",
+    "Line2": "",
+    "Line3": "",
+    "Phone": "",
+    "State": "",
+    "Zip": ""
+  },
+  "TrxUserDefine1": "",
+  "TrxUserDefine2": "",
+  "TrxUserDefine3": "",
+  "TrxUserDefine4": "",
+  <b>"Type": "Sale"</b>
+}
+</pre>
+
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#transaction).
+
+###### Response
+<pre>
+{
+  "Key": "151013003794"
+}
+</pre>
+
+
+Update a Transaction
+--------------------
+
+* `POST /rest/api/transaction/update` will update a transaction with new information based on the request JSON payload
+
+###### Request
+<pre>
+{
+    "Key": "151013003793"
+}
+</pre>
+
+Please note that the **Key** field is the only required field for an update. Only the fields that need updating should be included, see the **Create Transaction** endpoint for more information.
+
+###### Response
+<pre>
+{
+  "Result": "True"
+}
+</pre>
+
+
+Process a Transaction
+---------------------
+
+* `GET /rest/api/transaction/process/151007010914?cvc=111` will attempt to process the transaction with the payment gateway
+
+###### Response
+<pre>
+{
+  "AVSAddressResponse": null,
+  "AVSZipResponse": null,
+  "AuthCode": "010101",
+  "CVV2Response": "Y",
+  "IAVSAddressResponse": "N",
+  "Message": "Approved",
+  "OriginationID": "A70E7F9644C2",
+  "PayFabricErrorCode": null,
+  "RespTrxTag": null,
+  "ResultCode": "0",
+  "Status": "Approved",
+  "TAXml": "",
+  "TrxDate": "10/13/2015 8:41:44 AM",
+  "TrxKey": "151007010914"
+}
+</pre>
+
+
+Create and Process a Transaction
+--------------------------------
+
+* `POST /rest/api/transaction/process?cvc=111` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload
+
+###### Request
+<pre>
+{
+  <b>"Amount": "29.99"</b>,
+  "BatchNumber": "",
+  <b>"Card":</b> {
+    <b>"Account": "4111111111111111"</b>,
+    "Billto": {
+      "City": "Anaheim",
+      "Country": "USA",
+      "Email": "",
+      "Line1": "123 PayFabric Way",
+      "Line2": "",
+      "Line3": "",
+      "Phone": "(123)456-7890",
+      "State": "CA",
+      "Zip": "92806"
+    },
+    <b>"CardHolder"</b>: {
+      "DriverLicense": "",
+      <b>"FirstName": "John"</b>,
+      <b>"LastName": "Doe"</b>,
+      "MiddleName": "",
+      "SSN": ""
+    },
+    <b>"Customer": "John Doe Ltd"</b>,
+    <b>"ExpDate": "0918"</b>,
+    "GPAddressCode": "",
+    "GatewayToken": "",
+    "Identifier": "",
+    "IsDefaultCard": false,
+    "IssueNumber": "",
+    "UserDefine1": "",
+    "UserDefine2": "",
+    "UserDefine3": "",
+    "UserDefine4": ""
+  },
+  <b>"Currency": "USD"</b>,
+  <b>"Customer": "John Doe Ltd"</b>,
+  "Document": {
+    "Head": [],
+    "Lines": [],
+    "UserDefined": []
+  },
+  "PayDate": "",
+  "ReferenceKey": null,
+  "ReferenceTrxs": [],
+  "ReqAuthCode": "",
+  <b>"SetupId": "PFP"</b>,
+  "Shipto": {
+    "City": "",
+    "Country": "",
+    "Customer": "",
+    "Email": "",
+    "Line1": "",
+    "Line2": "",
+    "Line3": "",
+    "Phone": "",
+    "State": "",
+    "Zip": ""
+  },
+  "TrxUserDefine1": "",
+  "TrxUserDefine2": "",
+  "TrxUserDefine3": "",
+  "TrxUserDefine4": "",
+  <b>"Type": "Sale"</b>
+}
+</pre>
+
+Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](https://github.com/ShaunSharples/APIs/edit/ShaunSharples-patch-1/Sections/Wallets.md). For more information and descriptions on available fields please see our [wiki page]().
+
+###### Response
+<pre>
+{
+  "AVSAddressResponse": null,
+  "AVSZipResponse": null,
+  "AuthCode": "010101",
+  "CVV2Response": "Y",
+  "IAVSAddressResponse": "N",
+  "Message": "Approved",
+  "OriginationID": "A70E7F9644C1",
+  "PayFabricErrorCode": null,
+  "RespTrxTag": null,
+  "ResultCode": "0",
+  "Status": "Approved",
+  "TAXml": "",
+  "TrxDate": "10/13/2015 8:41:44 AM",
+  "TrxKey": "151013003795"
+}
+</pre>
+
+
 Retrieve a Transaction
 ----------------------
 
@@ -122,6 +319,7 @@ Retrieve a Transaction
   "Type": "Sale"
 }
 </pre>
+
 
 Retrieve Transactions
 ---------------------
@@ -364,198 +562,6 @@ Retrieve Transactions
 }
 </pre>
 
-Create a Transaction
---------------------
-
-* `POST /rest/api/transaction/create` will create and save a transaction to the PayFabric server based on the request JSON payload
-
-###### Request
-<pre>
-{
-  <b>"Amount": "29.99"</b>,
-  "BatchNumber": "",
-  <b>"Currency": "USD"</b>,
-  <b>"Customer": "John Doe Ltd"</b>,
-  "Document": {
-    "Head": [],
-    "Lines": [],
-    "UserDefined": []
-  },
-  "PayDate": "",
-  "ReferenceKey": null,
-  "ReferenceTrxs": [],
-  "ReqAuthCode": "",
-  <b>"SetupId": "PFP"</b>,
-  "Shipto": {
-    "City": "",
-    "Country": "",
-    "Customer": "",
-    "Email": "",
-    "Line1": "",
-    "Line2": "",
-    "Line3": "",
-    "Phone": "",
-    "State": "",
-    "Zip": ""
-  },
-  "TrxUserDefine1": "",
-  "TrxUserDefine2": "",
-  "TrxUserDefine3": "",
-  "TrxUserDefine4": "",
-  <b>"Type": "Sale"</b>
-}
-</pre>
-
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#transaction).
-
-###### Response
-<pre>
-{
-  "Key": "151013003794"
-}
-</pre>
-
-Create and Process a Transaction
---------------------------------
-
-* `POST /rest/api/transaction/process?cvc=111` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload
-
-###### Request
-<pre>
-{
-  <b>"Amount": "29.99"</b>,
-  "BatchNumber": "",
-  <b>"Card":</b> {
-    <b>"Account": "4111111111111111"</b>,
-    "Billto": {
-      "City": "Anaheim",
-      "Country": "USA",
-      "Email": "",
-      "Line1": "123 PayFabric Way",
-      "Line2": "",
-      "Line3": "",
-      "Phone": "(123)456-7890",
-      "State": "CA",
-      "Zip": "92806"
-    },
-    <b>"CardHolder"</b>: {
-      "DriverLicense": "",
-      <b>"FirstName": "John"</b>,
-      <b>"LastName": "Doe"</b>,
-      "MiddleName": "",
-      "SSN": ""
-    },
-    <b>"Customer": "John Doe Ltd"</b>,
-    <b>"ExpDate": "0918"</b>,
-    "GPAddressCode": "",
-    "GatewayToken": "",
-    "Identifier": "",
-    "IsDefaultCard": false,
-    "IssueNumber": "",
-    "UserDefine1": "",
-    "UserDefine2": "",
-    "UserDefine3": "",
-    "UserDefine4": ""
-  },
-  <b>"Currency": "USD"</b>,
-  <b>"Customer": "John Doe Ltd"</b>,
-  "Document": {
-    "Head": [],
-    "Lines": [],
-    "UserDefined": []
-  },
-  "PayDate": "",
-  "ReferenceKey": null,
-  "ReferenceTrxs": [],
-  "ReqAuthCode": "",
-  <b>"SetupId": "PFP"</b>,
-  "Shipto": {
-    "City": "",
-    "Country": "",
-    "Customer": "",
-    "Email": "",
-    "Line1": "",
-    "Line2": "",
-    "Line3": "",
-    "Phone": "",
-    "State": "",
-    "Zip": ""
-  },
-  "TrxUserDefine1": "",
-  "TrxUserDefine2": "",
-  "TrxUserDefine3": "",
-  "TrxUserDefine4": "",
-  <b>"Type": "Sale"</b>
-}
-</pre>
-
-Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](https://github.com/ShaunSharples/APIs/edit/ShaunSharples-patch-1/Sections/Wallets.md). For more information and descriptions on available fields please see our [wiki page]().
-
-###### Response
-<pre>
-{
-  "AVSAddressResponse": null,
-  "AVSZipResponse": null,
-  "AuthCode": "010101",
-  "CVV2Response": "Y",
-  "IAVSAddressResponse": "N",
-  "Message": "Approved",
-  "OriginationID": "A70E7F9644C1",
-  "PayFabricErrorCode": null,
-  "RespTrxTag": null,
-  "ResultCode": "0",
-  "Status": "Approved",
-  "TAXml": "",
-  "TrxDate": "10/13/2015 8:41:44 AM",
-  "TrxKey": "151013003795"
-}
-</pre>
-
-Process a Transaction
----------------------
-
-* `GET /rest/api/transaction/process/151007010914?cvc=111` will attempt to process the transaction with the payment gateway
-
-###### Response
-<pre>
-{
-  "AVSAddressResponse": null,
-  "AVSZipResponse": null,
-  "AuthCode": "010101",
-  "CVV2Response": "Y",
-  "IAVSAddressResponse": "N",
-  "Message": "Approved",
-  "OriginationID": "A70E7F9644C2",
-  "PayFabricErrorCode": null,
-  "RespTrxTag": null,
-  "ResultCode": "0",
-  "Status": "Approved",
-  "TAXml": "",
-  "TrxDate": "10/13/2015 8:41:44 AM",
-  "TrxKey": "151007010914"
-}
-</pre>
-
-Update a Transaction
---------------------
-
-* `POST /rest/api/transaction/update` will update a transaction with new information based on the request JSON payload
-
-###### Request
-<pre>
-{
-    "Key": "151013003793"
-}
-</pre>
-
-Please note that the **Key** field is the only required field for an update. Only the fields that need updating should be included, see the **Create Transaction** endpoint for more information.
-
-###### Response
-<pre>
-{
-  "Result": "True"
-}
-</pre>
 
 Cancel a Transaction or Capture a Pre-Authorized Transaction
 ------------------------------------------------------------
@@ -582,6 +588,7 @@ Cancel a Transaction or Capture a Pre-Authorized Transaction
   "TrxKey": "151007010914"
 }
 </pre>
+
 
 Refund a Customer
 -----------------
