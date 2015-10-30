@@ -1,7 +1,7 @@
 Credit Card / eCheck Wallet
 ===========================
 
-The PayFabric Wallet API is used for returning customer created wallet records, creating new wallet records, locking, updating, and deleting existing wallet records.  Please note that all requests require API authentication, see our [guide](https://github.com/ShaunSharples/APIs/blob/ShaunSharples-patch-1/Sections/Authentication.md) on how to authenticate.
+The PayFabric Wallet API is used for returning customer created wallet records, creating new wallet records, locking, updating, and deleting existing wallet records.  Please note that all requests require API authentication, see our [guide](https://github.com/PayFabric/APIs/blob/v2/Sections/Authentication.md) on how to authenticate.
 
 
 Create a Credit Card
