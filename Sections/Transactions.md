@@ -70,7 +70,7 @@ Update a Transaction
 }
 </pre>
 
-Please note that the **Key** field is the only required field for an update. Only the fields that need updating should be included, see the **Create Transaction** endpoint for more information.
+Please note that the **Key** field is the only required field for an update. Only the fields that need updating should be included, see the **Create a Transaction** endpoint for more information.
 
 ###### Response
 <pre>
@@ -180,7 +180,7 @@ Create and Process a Transaction
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](https://github.com/PayFabric/APIs/blob/v2/Sections/Wallets.md). For more information and descriptions on available fields please see our [wiki page]().
+Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](https://github.com/PayFabric/APIs/blob/v2/Sections/Wallets.md). For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2).
 
 ###### Related Reading
 * [How to Submit Level 2 and 3 Fields](https://github.com/PayFabric/APIs/wiki/Level-2-and-Level-3-Fields)
@@ -599,7 +599,7 @@ Cancel a Transaction or Capture a Pre-Authorized Transaction
 Refund a Customer
 -----------------
 
-To refund a customer, you just submit a credit to the customer that is owed the refund. The amount of the transaction should match the amount that is due to the customer. To perform a credit transaction, you just create a transaction object, set the `Type` field to `Credit`, and then use [Create and Process Transaction](#create-and-process-transaction) to execute the transaction.
+To refund a customer, you just submit a credit to the customer that is owed the refund. The amount of the transaction should match the amount that is due to the customer. To perform a credit transaction, you just create a transaction object, set the `Type` field to `Credit`, and then use [Create and Process a Transaction](#create-and-process-a-transaction) to execute the transaction.
 
 * `POST /rest/api/transaction/process?cvc=111`
 
