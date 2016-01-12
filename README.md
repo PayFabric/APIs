@@ -44,7 +44,7 @@ as child elements of other objects.
 * [Create and Process a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#create-and-process-a-transaction)
 * [Retrieve a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#retrieve-a-transaction)
 * [Retrieve Transactions](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#retrieve-transactions)
-* [Cancel a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
+* [Void a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
 * [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
 * [Credit a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
 * [Refund a Customer](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#refund-a-customer)
