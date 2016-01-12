@@ -571,12 +571,14 @@ Retrieve Transactions
 </pre>
 
 
-Cancel a Transaction or Capture a Pre-Authorized Transaction or Credit a Transaction
-------------------------------------------------------------
+Referenced Transaction(s): Void, Capture (Ship) or Credit
+---------------------------------------------------------
 
-* `GET /rest/api/reference/151013003792?trxtype=SHIP` will attempt to execute and finalize a pre-authorized transaction, also known as BOOK transactions.
-* `GET /rest/api/reference/151013003792?trxtype=VOID` will attempt to cancel a transaction that has already been submitted to a payment gateway. PayFabric attempts to cancel a transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund must be performed.
-* `GET /rest/api/reference/151013003792?trxtype=CREDIT` will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled with the bank. PayFabric attempts to submit a new CREDIT transaction for the same exact amount as the referenced transaction.
+Referenced transaction uses the original transaction Key as the referenced factor to subsequently process a new transaction. There’re 3 types of referenced transactions: Void, Capture (Ship) and Credit. They all use the transaction Key from the original transaction to process the new transaction.
+
+* `GET /rest/api/reference/151013003792?trxtype=SHIP` will attempt to execute and finalize (capture) a pre-authorized transaction, also known as BOOK transactions.
+* `GET /rest/api/reference/151013003792?trxtype=VOID` will attempt to cancel a transaction that has already been processed successfully with a payment gateway. PayFabric attempts to reverse the transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund (credit) must be performed.
+* `GET /rest/api/reference/151013003792?trxtype=CREDIT` will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
 
 ###### Response
 <pre>
