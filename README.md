@@ -44,8 +44,9 @@ as child elements of other objects.
 * [Create and Process a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#create-and-process-a-transaction)
 * [Retrieve a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#retrieve-a-transaction)
 * [Retrieve Transactions](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#retrieve-transactions)
-* [Cancel a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#cancel-a-transaction-or-capture-a-pre-authorized-transaction)
-* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#cancel-a-transaction-or-capture-a-pre-authorized-transaction)
+* [Cancel a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#cancel-a-transaction-or-capture-a-pre-authorized-transaction-or-credit-a-transaction)
+* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#cancel-a-transaction-or-capture-a-pre-authorized-transaction-or-credit-a-transaction)
+* [Credit a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#cancel-a-transaction-or-capture-a-pre-authorized-transaction-or-credit-a-transaction)
 * [Refund a Customer](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#refund-a-customer)
 
 ### Wallets / Credit Cards / eChecks
