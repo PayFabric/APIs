@@ -571,11 +571,12 @@ Retrieve Transactions
 </pre>
 
 
-Cancel a Transaction or Capture a Pre-Authorized Transaction
+Cancel a Transaction or Capture a Pre-Authorized Transaction or Credit a Transaction
 ------------------------------------------------------------
 
 * `GET /rest/api/reference/151013003792?trxtype=SHIP` will attempt to execute and finalize a pre-authorized transaction, also known as BOOK transactions.
 * `GET /rest/api/reference/151013003792?trxtype=VOID` will attempt to cancel a transaction that has already been submitted to a payment gateway. PayFabric attempts to cancel a transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund must be performed.
+* `GET /rest/api/reference/151013003792?trxtype=CREDIT` will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled with the bank. PayFabric attempts to submit a new CREDIT transaction for the same exact amount as the referenced transaction.
 
 ###### Response
 <pre>
