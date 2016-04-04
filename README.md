@@ -70,3 +70,10 @@ as child elements of other objects.
 Help us make it better
 ----------------------
 Please tell us how we can make the APIs better. If you have a specific feature request or if you found a bug, please contact <support@payfabric.com>. Also, feel free to branch these documents and send a pull request with improvements!
+
+API Versions
+------------
+For our older but still supported versions of the APIs please see the below:
+
+* [Version 1.0](https://github.com/PayFabric/APIs/tree/v1)
+* [Version 2.0](https://github.com/PayFabric/APIs/tree/v2)
