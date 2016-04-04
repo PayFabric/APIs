@@ -73,7 +73,7 @@ Please tell us how we can make the APIs better. If you have a specific feature r
 
 API Versions
 ------------
-For our older but still supported versions of the APIs please see the below:
+For our other supported versions of the APIs please see the below:
 
 * [Version 1.0](https://github.com/PayFabric/APIs/tree/v1)
 * [Version 2.0](https://github.com/PayFabric/APIs/tree/v2)
