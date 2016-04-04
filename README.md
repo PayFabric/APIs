@@ -13,7 +13,7 @@ Want to get started with PayFabric API integration? Here's a quick check list:
 1. Register and then configure a PayFabric account, check out the [Quick Start Guide](https://github.com/PayFabric/Portal/wiki) to learn how.
 2. Read up on how to [authenticate](#authentication) with our APIs. 
 3. Read up on how to [handle errors](#handling-exceptions) with our APIs.
-4. Browse the [API docs](#api-documentation) for the API you need to work with, you could also view our [language specific examples](https://github.com/PayFabric/APIs/tree/v3/Samples).
+4. Browse the [API docs](#api-documentation) for the API you need to work with, you could also view our [language specific examples](https://github.com/PayFabric/APIs/tree/master/Samples).
 5. Have a question or need help? Contact <support@payfabric.com>.
 
 
@@ -21,14 +21,14 @@ Authentication
 --------------
 PayFabric clients have two ways to authenticate, *Device ID* and *Password* authentication and *Security Token* authentication.
 
-We have a [detailed guide](https://github.com/PayFabric/APIs/blob/v3/Sections/Authentication.md) for authenticating your users with our APIs.
+We have a [detailed guide](https://github.com/PayFabric/APIs/blob/master/Sections/Authentication.md) for authenticating your users with our APIs.
 
 
 Handling Exceptions
 -------------------
 PayFabric uses HTTP response codes to indicate the status of requests. 
 
-We have a [guide](https://github.com/PayFabric/APIs/blob/v3/Sections/Errors.md) detailing the meanings of the most common response codes that you will encounter. 
+We have a [guide](https://github.com/PayFabric/APIs/blob/master/Sections/Errors.md) detailing the meanings of the most common response codes that you will encounter. 
 
 
 API Documentation
@@ -38,33 +38,33 @@ Many of these objects are used in both requests and responses. Some of the objec
 as child elements of other objects.
 
 ### Transactions
-* [Create a Transaction](https://github.com/PayFabric/APIs/blob/v3/Sections/Transactions.md#create-a-transaction)
-* [Update a Transaction](https://github.com/PayFabric/APIs/blob/v3/Sections/Transactions.md#update-a-transaction)
-* [Process a Transaction](https://github.com/PayFabric/APIs/blob/v3/Sections/Transactions.md#process-a-transaction)
-* [Create and Process a Transaction](https://github.com/PayFabric/APIs/blob/v3/Sections/Transactions.md#create-and-process-a-transaction)
-* [Retrieve a Transaction](https://github.com/PayFabric/APIs/blob/v3/Sections/Transactions.md#retrieve-a-transaction)
-* [Retrieve Transactions](https://github.com/PayFabric/APIs/blob/v3/Sections/Transactions.md#retrieve-transactions)
-* [Cancel (Void) a Transaction](https://github.com/PayFabric/APIs/blob/v3/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
-* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/blob/v3/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
-* [Credit a Transaction](https://github.com/PayFabric/APIs/blob/v3/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
-* [Refund a Customer](https://github.com/PayFabric/APIs/blob/v3/Sections/Transactions.md#refund-a-customer)
+* [Create a Transaction](https://github.com/PayFabric/APIs/blob/master/Sections/Transactions.md#create-a-transaction)
+* [Update a Transaction](https://github.com/PayFabric/APIs/blob/master/Sections/Transactions.md#update-a-transaction)
+* [Process a Transaction](https://github.com/PayFabric/APIs/blob/master/Sections/Transactions.md#process-a-transaction)
+* [Create and Process a Transaction](https://github.com/PayFabric/APIs/blob/master/Sections/Transactions.md#create-and-process-a-transaction)
+* [Retrieve a Transaction](https://github.com/PayFabric/APIs/blob/master/Sections/Transactions.md#retrieve-a-transaction)
+* [Retrieve Transactions](https://github.com/PayFabric/APIs/blob/master/Sections/Transactions.md#retrieve-transactions)
+* [Cancel (Void) a Transaction](https://github.com/PayFabric/APIs/blob/master/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
+* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/blob/master/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
+* [Credit a Transaction](https://github.com/PayFabric/APIs/blob/master/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
+* [Refund a Customer](https://github.com/PayFabric/APIs/blob/master/Sections/Transactions.md#refund-a-customer)
 
 ### Wallets / Credit Cards / eChecks
-* [Create a Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v3/Sections/Wallets.md#create-a-credit-card)
-* [Update a Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v3/Sections/Wallets.md#update-a-credit-card--echeck)
-* [Retrieve a Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v3/Sections/Wallets.md#retrieve-a-credit-card--echeck)
-* [Retrieve Credit Cards / eChecks](https://github.com/PayFabric/APIs/blob/v3/Sections/Wallets.md#retrieve-credit-cards--echecks)
-* [Lock Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v3/Sections/Wallets.md#lock-credit-card--echeck)
-* [Unlock Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v3/Sections/Wallets.md#unlock-credit-card--echeck)
-* [Remove Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v3/Sections/Wallets.md#remove-credit-card--echeck)
+* [Create a Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/master/Sections/Wallets.md#create-a-credit-card)
+* [Update a Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/master/Sections/Wallets.md#update-a-credit-card--echeck)
+* [Retrieve a Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/master/Sections/Wallets.md#retrieve-a-credit-card--echeck)
+* [Retrieve Credit Cards / eChecks](https://github.com/PayFabric/APIs/blob/master/Sections/Wallets.md#retrieve-credit-cards--echecks)
+* [Lock Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/master/Sections/Wallets.md#lock-credit-card--echeck)
+* [Unlock Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/master/Sections/Wallets.md#unlock-credit-card--echeck)
+* [Remove Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/master/Sections/Wallets.md#remove-credit-card--echeck)
 
 ### Payment Gateway Profiles
-* [Retrieve a Payment Gateway Profile](https://github.com/PayFabric/APIs/blob/v3/Sections/PaymentGatewayProfiles.md#retrieve-a-payment-gateway-profile)
-* [Retrieve Payment Gateway Profiles](https://github.com/PayFabric/APIs/blob/v3/Sections/PaymentGatewayProfiles.md#retrieve-payment-gateway-profiles)
+* [Retrieve a Payment Gateway Profile](https://github.com/PayFabric/APIs/blob/master/Sections/PaymentGatewayProfiles.md#retrieve-a-payment-gateway-profile)
+* [Retrieve Payment Gateway Profiles](https://github.com/PayFabric/APIs/blob/master/Sections/PaymentGatewayProfiles.md#retrieve-payment-gateway-profiles)
 
 ### Addresses
-* [Retrieve a Shipping Address](https://github.com/PayFabric/APIs/blob/v3/Sections/Addresses.md#retrieve-a-shipping-address)
-* [Retrieve Shipping Addresses](https://github.com/PayFabric/APIs/blob/v3/Sections/Addresses.md#retrieve-shipping-addresses)
+* [Retrieve a Shipping Address](https://github.com/PayFabric/APIs/blob/master/Sections/Addresses.md#retrieve-a-shipping-address)
+* [Retrieve Shipping Addresses](https://github.com/PayFabric/APIs/blob/master/Sections/Addresses.md#retrieve-shipping-addresses)
 
 
 Help us make it better
