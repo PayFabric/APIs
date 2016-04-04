@@ -1,4 +1,4 @@
-PayFabric APIs
+PayFabric APIs - Version 3.0
 ==============
 PayFabric APIs are organized around Representational State Transfer (**REST**) architecture and are designed to have predictable, resource-oriented URLs and use HTTP response codes to indicate API errors. Below are the API endpoints:
 
