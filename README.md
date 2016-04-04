@@ -1,105 +1,72 @@
-#Overview
+PayFabric APIs
+==============
 PayFabric APIs are organized around Representational State Transfer (**REST**) architecture and are designed to have predictable, resource-oriented URLs and use HTTP response codes to indicate API errors. Below are the API endpoints:
 
-1. Live Server:    ``https://www.payfabric.com/rest/v1/api``
-1. Sandbox Server: ``https://sandbox.payfabric.com/rest/v1/api``
+1. Live Server:    ``https://www.payfabric.com/v2/rest/api``
+1. Sandbox Server: ``https://sandbox.payfabric.com/v2/rest/api``
 
-Check out the [Quick Start Guide](https://github.com/PayFabric/Portal/wiki) to learn how to register for a PayFabric account, configure your account, and get started with the PayFabric REST API.
+Where do I start?
+-----------------
 
-#Authentication
-PayFabric clients have two ways to authenticate. 
+Want to get started with PayFabric API integration? Here's a quick check list:
 
-Clients running in server-side programming environments can include an authorization field in the 
-HTTP header of each request that is made to PayFabric. The authorization includes a _Device ID_ and 
-a _Device Password_. These are the credentials for this application. You can generate these credentials
-via the PayFabric web portal. These credentials give you complete access to the PayFabric API, so you 
-should only use this authentication method in secure environments.
+1. Register and then configure a PayFabric account, check out the [Quick Start Guide](https://github.com/PayFabric/Portal/wiki) to learn how.
+2. Read up on how to [authenticate](#authentication) with our APIs. 
+3. Read up on how to [handle errors](#handling-exceptions) with our APIs.
+4. Browse the [API docs](#api-documentation) for the API you need to work with, you could also view our [language specific examples](https://github.com/PayFabric/APIs/tree/v2/Samples).
+5. Have a question or need help? Contact <support@payfabric.com>.
 
-For clients running on consumer devices (e.g. smartphones) PayFabric highly recommends the use of 
-_Security Tokens_. Security tokens are one-time use authorization credentials.
 
-```c#
-var url =  "http://www.payfabric.com/rest/v1/api/token/create";
-HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
-httpWebRequest.ContentType = "application/json; charset=utf-8";
-httpWebRequest.Headers["authorization"] = "5DE0B1D9-213C-4B05-80CA-D8A125977E20|6ytesddd*7";
-HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
-Stream responseStream = httpWebResponse.GetResponseStream();
-StreamReader streamReader = new StreamReader(responseStream);
-string result = streamReader.ReadToEnd();
-streamReader.Close();
-responseStream.Close();
-httpWebRequest.Abort();
-httpWebResponse.Close();
-```
-If everything goes fine, you can get a response as json format like this
-```c#
-{
-    "Token": "4ts3gxu3o5an"
-}
-```
-Next, you parse this json text, extract the token string, and put this token string into other call's custom "authorization" header. One thing you have to be noticed is the token is valid to use once. PayFabric will revoke a security token once the token arrives and completes the authentication process.
+Authentication
+--------------
+PayFabric clients have two ways to authenticate, *Device ID* and *Password* authentication and *Security Token* authentication.
 
-#Handling Exceptions
-PayFabric uses HTTP response codes to indicate the status of requests. Below is a description of the 
-meanings of the most common response codes that you will encounter. In general, status codes in 
-the range of 200 to 299 indicate success. 400 to 499 indicate that the client has made a mistake.
-500 and beyond indicate that PayFabric experienced an error. 
+We have a [detailed guide](https://github.com/PayFabric/APIs/blob/v2/Sections/Authentication.md) for authenticating your users with our APIs.
 
-| Code        | Description | 
-| ------------- | :------------- | 
-| 200 OK | Request Successful | 
-| 400 Bad Request | The request is missing required information. Verify that you are accessing the correct URL (including all query string parameters). If sending a JSON payload, check that you have provided all required elements, and make sure that there are no typos in your element names (JSON elements are case-sensitive!) |
-| 401 Unauthorized | The authentication string provided by the client (either Device ID / Device Password, or Security Token) is invalid. |  
-| 404 Not Found | The requested resource could not be located. Check for typos in your resource URI. |  
-| 412 Precondition Failed | Missing fields or mandatory parameters. See description of status code 400. |  
-| 500 Internal Server Error| PayFabric server encountered an error. |
 
-Some programming languages such as .NET throw run-time exceptions when an HTTP response returns a status code other than 200. You can use these exceptions to programmatically recover or at least exit gracefully from errors. Below is an example in C# of catching exceptions.
-```c#
-try
-{
-   // Do Something
-}
-catch (WebException ex)
-{
-  using (StreamReader reader = new StreamReader(ex.Response.GetResponseStream()))
-  {
-    string errorMsg = reader.ReadToEnd();
-    Console.WriteLine("Error Message: " + errorMsg);
-  }
-}
-Catch (Exception ex)
-{
-   // Error Handling
-}
-```
+Handling Exceptions
+-------------------
+PayFabric uses HTTP response codes to indicate the status of requests. 
 
-# Payment APIs
-PayFabric sends and receives payloads as structured [JSON Objects](https://github.com/PayFabric/APIs/wiki/API-Objects). 
+We have a [guide](https://github.com/PayFabric/APIs/blob/v2/Sections/Errors.md) detailing the meanings of the most common response codes that you will encounter. 
+
+
+API Documentation
+-----------------
+PayFabric sends and receives payloads as structured [JSON Objects](https://github.com/PayFabric/APIs/wiki/API-Object-V2). 
 Many of these objects are used in both requests and responses. Some of the objects (like Address or Cardholder) are embedded
 as child elements of other objects.
 
-## Transactions
-* [Create a New Transaction](https://github.com/PayFabric/APIs/wiki#create-a-new-transaction)
-* [Update a Transaction](https://github.com/PayFabric/APIs/wiki#update-a-transaction)
-* [Process a Transaction by Transaction Key](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-key)
-* [Process a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki#process-a-transaction-by-transaction-object)
-* [Retrieve a Transaction](https://github.com/PayFabric/APIs/wiki#retrieve-a-transaction)
-* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/wiki#capture-a-pre-authorized-transaction)
-* [Cancel a Transaction](https://github.com/PayFabric/APIs/wiki#cancel-a-transaction)
-* [Refund a Customer](https://github.com/PayFabric/APIs/wiki#refund-a-customer)
+### Transactions
+* [Create a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#create-a-transaction)
+* [Update a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#update-a-transaction)
+* [Process a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#process-a-transaction)
+* [Create and Process a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#create-and-process-a-transaction)
+* [Retrieve a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#retrieve-a-transaction)
+* [Retrieve Transactions](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#retrieve-transactions)
+* [Cancel (Void) a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
+* [Capture a Pre-Authorized Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
+* [Credit a Transaction](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
+* [Refund a Customer](https://github.com/PayFabric/APIs/blob/v2/Sections/Transactions.md#refund-a-customer)
 
-## Wallets / Credit Cards / Echecks
-* [Add a Card into Wallet](https://github.com/PayFabric/APIs/wiki#add-a-card-into-wallet)
-* [Update an Existing Card](https://github.com/PayFabric/APIs/wiki#update-an-existing-card)
-* [Remove a Card](https://github.com/PayFabric/APIs/wiki#remove-a-card)
-* [Retrieve Cards by Customer](https://github.com/PayFabric/APIs/wiki#retrieve-cards-by-customer)
+### Wallets / Credit Cards / eChecks
+* [Create a Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v2/Sections/Wallets.md#create-a-credit-card)
+* [Update a Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v2/Sections/Wallets.md#update-a-credit-card--echeck)
+* [Retrieve a Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v2/Sections/Wallets.md#retrieve-a-credit-card--echeck)
+* [Retrieve Credit Cards / eChecks](https://github.com/PayFabric/APIs/blob/v2/Sections/Wallets.md#retrieve-credit-cards--echecks)
+* [Lock Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v2/Sections/Wallets.md#lock-credit-card--echeck)
+* [Unlock Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v2/Sections/Wallets.md#unlock-credit-card--echeck)
+* [Remove Credit Card / eCheck](https://github.com/PayFabric/APIs/blob/v2/Sections/Wallets.md#remove-credit-card--echeck)
 
-## Payment Gateways
-* [Retrieve All Gateway Account Profiles](https://github.com/PayFabric/APIs/wiki#retrieve-all-gateway-account-profiles)
-* [Retrieve a Gateway Account Profile By Id](https://github.com/PayFabric/APIs/wiki#retrieve-a-gateway-account-profile-by-id)
+### Payment Gateway Profiles
+* [Retrieve a Payment Gateway Profile](https://github.com/PayFabric/APIs/blob/v2/Sections/PaymentGatewayProfiles.md#retrieve-a-payment-gateway-profile)
+* [Retrieve Payment Gateway Profiles](https://github.com/PayFabric/APIs/blob/v2/Sections/PaymentGatewayProfiles.md#retrieve-payment-gateway-profiles)
 
-## Addresses
-* [Retrieve Shipping addresses by Customer](https://github.com/PayFabric/APIs/wiki#retrieve-shipping-addresses-by-customer)
-* [Retrieve Shipping address by Id](https://github.com/PayFabric/APIs/wiki#retrieve-shipping-address-by-id)
+### Addresses
+* [Retrieve a Shipping Address](https://github.com/PayFabric/APIs/blob/v2/Sections/Addresses.md#retrieve-a-shipping-address)
+* [Retrieve Shipping Addresses](https://github.com/PayFabric/APIs/blob/v2/Sections/Addresses.md#retrieve-shipping-addresses)
+
+
+Help us make it better
+----------------------
+Please tell us how we can make the APIs better. If you have a specific feature request or if you found a bug, please contact <support@payfabric.com>. Also, feel free to branch these documents and send a pull request with improvements!
