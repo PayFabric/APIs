@@ -1,7 +1,7 @@
 Transactions
 ============
 
-The PayFabric Transactions API is used for creating, and processing payment transactions. Please note that all requests require API authentication, see our [guide](https://github.com/PayFabric/APIs/blob/v2/Sections/Authentication.md) on how to authenticate.
+The PayFabric Transactions API is used for creating, and processing payment transactions. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 Create a Transaction
 --------------------
@@ -45,7 +45,7 @@ Create a Transaction
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#transaction).
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../Reference/Objects.md#transaction).
 
 ###### Related Reading
 * [How to Submit Level 2 and 3 Fields](https://github.com/PayFabric/APIs/wiki/Level-2-and-Level-3-Fields)
@@ -181,7 +181,7 @@ Create and Process a Transaction
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](https://github.com/PayFabric/APIs/blob/v2/Sections/Wallets.md). For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2).
+Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](Wallets.md). For more information and descriptions on available fields please see our [object reference](../Reference/Objects.md).
 
 ###### Related Reading
 * [How to Submit Level 2 and 3 Fields](https://github.com/PayFabric/APIs/wiki/Level-2-and-Level-3-Fields)
