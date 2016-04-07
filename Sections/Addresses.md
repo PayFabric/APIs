@@ -1,7 +1,7 @@
 Addresses
 =========
 
-The PayFabric Addresses API is used for returning customer shipping addresses which were entered previously.  Please note that all requests require API authentication, see our [guide](https://github.com/PayFabric/APIs/blob/v2/Sections/Authentication.md) on how to authenticate.
+The PayFabric Addresses API is used for returning customer shipping addresses which were entered previously.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 Retrieve a Shipping Address
 ---------------------------
