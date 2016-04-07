@@ -1,7 +1,7 @@
 Payment Gateway Profiles
 ========================
 
-The PayFabric Payment Gateway Profiles API is used for returning the gateway profiles that have been setup from the PayFabric portal, see our [guide](https://github.com/PayFabric/Portal/wiki#setup-gateway-account) on how to set up a gateway.  Please note that all requests require API authentication, see our [guide](https://github.com/PayFabric/APIs/blob/v2/Sections/Authentication.md) on how to authenticate.
+The PayFabric Payment Gateway Profiles API is used for returning the gateway profiles that have been setup from the PayFabric portal, see our [guide](https://github.com/PayFabric/Portal/wiki#setup-gateway-account) on how to set up a gateway.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 Retrieve a Payment Gateway Profile
 ----------------------------------
