@@ -27,7 +27,7 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/v2/rest/api/transaction/" + transactionKey;
+                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/transaction/" + transactionKey;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
