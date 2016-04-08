@@ -29,7 +29,7 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/v2/rest/api/wallet/get/" + customer + "?tender=" + tender;
+                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/wallet/get/" + customer + "?tender=" + tender;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -71,7 +71,7 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/v2/rest/api/wallet/get/" + walletID;
+                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/wallet/get/" + walletID;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
