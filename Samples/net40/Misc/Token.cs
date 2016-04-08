@@ -27,7 +27,7 @@ namespace Samples.Net40
             {
 
                 // Replace url when going live
-                var url = "https://sandbox.payfabric.com/V2/rest/api/token/create";
+                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/token/create";
 
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
