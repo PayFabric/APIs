@@ -51,7 +51,7 @@ namespace Samples.Net40
 
                 // POST
                 byte[] data = System.Text.Encoding.UTF8.GetBytes(datastring.ToString());
-                var url = "https://sandbox.payfabric.com/V2/rest/api/wallet/create";
+                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/wallet/create";
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
