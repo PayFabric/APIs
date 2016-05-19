@@ -83,12 +83,7 @@ Please note that the **Key** field is the only required field for an update. Onl
 Add a Payment Method
 --------------------
 
-Adding a payment method can also be done during the following API calls:
-
-* [Create a Transaction](#create-a-transaction)  
-* [Update a Transaction](#update-a-transaction)  
-* [Create and Process a Transaction](#create-and-process-a-transaction)  
-
+Adding a payment method can also be done during [Create a Transaction](#create-a-transaction), [Update a Transaction](#update-a-transaction) and [Create and Process a Transaction](#create-and-process-a-transaction) API calls.  
 
 * `POST /rest/api/transaction/update` will update a transaction with a new payment method or an existing tokenized payment method based on the request JSON payload, a payment method is required before attempting to process a transaction through the API, if processing the transaction through the use of the hosted page adding a payment method is not required
 
