@@ -80,6 +80,116 @@ Please note that the **Key** field is the only required field for an update. Onl
 }
 </pre>
 
+Add a Payment Method
+--------------------
+
+Adding a payment method can also be done during the following API calls:
+* [Create a Transaction](#create-a-transaction)
+* [Update a Transaction](#update-a-transaction)
+* [Create and Process a Transaction](#create-and-process-a-transaction)
+
+* `POST /rest/api/transaction/update` will update a transaction with a new payment method or an existing tokenized payment method based on the request JSON payload, a payment method is required before attempting to process a transaction through the API, if processing the transaction through the use of the hosted page adding a payment method is not required
+
+###### Request for New Credit Card
+<pre>
+{
+    "Key": "151013003793",
+    <b>"Card":</b> {
+    <b>"Account": "4111111111111111"</b>,
+    "Billto": {
+      "City": "Anaheim",
+      "Country": "USA",
+      "Email": "",
+      "Line1": "123 PayFabric Way",
+      "Line2": "",
+      "Line3": "",
+      "Phone": "(123)456-7890",
+      "State": "CA",
+      "Zip": "92806"
+    },
+    <b>"CardHolder"</b>: {
+      "DriverLicense": "",
+      <b>"FirstName": "John"</b>,
+      <b>"LastName": "Doe"</b>,
+      "MiddleName": "",
+      "SSN": ""
+    },
+    <b>"Customer": "John Doe Ltd"</b>,
+    <b>"ExpDate": "0918"</b>,
+    "GPAddressCode": "",
+    "GatewayToken": "",
+    "Identifier": "",
+    "IsDefaultCard": false,
+    "IssueNumber": "",
+    "UserDefine1": "",
+    "UserDefine2": "",
+    "UserDefine3": "",
+    "UserDefine4": ""
+  }
+}
+</pre>
+
+###### Request for New eCheck
+<pre>
+{
+    "Key": "151013003793",
+    <b>"Card":</b> {
+    <b>"CheckNumber": "4111111111111111"</b>,
+    <b>"AccountType": "Checking"</b>,
+    "Billto": {
+      "City": "Anaheim",
+      "Country": "USA",
+      "Email": "",
+      "Line1": "123 PayFabric Way",
+      "Line2": "",
+      "Line3": "",
+      "Phone": "(123)456-7890",
+      "State": "CA",
+      "Zip": "92806"
+    },
+    <b>"CardHolder"</b>: {
+      "DriverLicense": "",
+      <b>"FirstName": "John"</b>,
+      <b>"LastName": "Doe"</b>,
+      "MiddleName": "",
+      "SSN": ""
+    },
+    <b>"Customer": "John Doe Ltd"</b>,
+    "GPAddressCode": "",
+    "GatewayToken": "",
+    "Identifier": "",
+    "IsDefaultCard": false,
+    "IssueNumber": "",
+    "UserDefine1": "",
+    "UserDefine2": "",
+    "UserDefine3": "",
+    "UserDefine4": ""
+  }
+}
+</pre>
+
+###### Request for Existing Payment Method
+<pre>
+{
+    "Key": "151013003793",
+    "Card": {
+      "ID": "8b4a9102-8207-4e8f-99fa-01c6f623ddb8"
+    }
+}
+</pre>
+
+Please note that the **Key** field is the only required field for an update. For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
+
+###### Related Reading
+* [How to Retrieve Tokenized Payment Methods](Wallets.md#retrieve-credit-cards--echecks)
+
+###### Response
+<pre>
+{
+  "Result": "True"
+}
+</pre>
+
 
 Process a Transaction
 ---------------------
