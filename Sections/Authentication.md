@@ -12,7 +12,7 @@ Device ID and Password
 ```shell
 curl -X GET \
   -H 'Authorization: deviceid|devicepassword' \
-  https://sandbox.payfabric.com/v3/PayFabric/rest/api/address/1
+  https://sandbox.payfabric.com/payment/api/address/1
 ```
 
 Security Token
@@ -22,7 +22,7 @@ Security Token
 ```shell
 curl -X GET \
   -H 'Authorization: deviceid|devicepassword' \
-  https://sandbox.payfabric.com/v3/PayFabric/rest/api/token/create
+  https://sandbox.payfabric.com/payment/api/token/create
 ```
 If the HTTP Status Code is 200 - OK you will receive the following **JSON** response:
 
@@ -37,7 +37,7 @@ If the HTTP Status Code is 200 - OK you will receive the following **JSON** resp
 ```shell
 curl -X GET \
   -H 'Authorization: 4ts3gxu3o5an' \
-  https://sandbox.payfabric.com/v3/PayFabric/rest/api/address/1
+  https://sandbox.payfabric.com/payment/api/address/1
 ```
 
 Once this token has been applied to a HTTP web request it will be revoked by PayFabric once it has completed the authentication process, any further requests will be required to generate a new token.
