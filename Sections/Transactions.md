@@ -6,7 +6,7 @@ The PayFabric Transactions API is used for creating, and processing payment tran
 Create a Transaction
 --------------------
 
-* `POST /rest/api/transaction/create` will create and save a transaction to the PayFabric server based on the request JSON payload
+* `POST /payment/api/transaction/create` will create and save a transaction to the PayFabric server based on the request JSON payload
 
 ###### Request
 <pre>
@@ -62,7 +62,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 Update a Transaction
 --------------------
 
-* `POST /rest/api/transaction/update` will update a transaction with new information based on the request JSON payload
+* `POST /payment/api/transaction/update` will update a transaction with new information based on the request JSON payload
 
 ###### Request
 <pre>
@@ -84,7 +84,7 @@ Please note that the **Key** field is the only required field for an update. Onl
 Process a Transaction
 ---------------------
 
-* `GET /rest/api/transaction/process/151007010914?cvc=111` will attempt to process the transaction with the payment gateway
+* `GET /payment/api/transaction/process/151007010914?cvc=111` will attempt to process the transaction with the payment gateway
 
 ###### Response
 <pre>
@@ -110,7 +110,7 @@ Process a Transaction
 Create and Process a Transaction
 --------------------------------
 
-* `POST /rest/api/transaction/process?cvc=111` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload
+* `POST /payment/api/transaction/process?cvc=111` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload
 
 ###### Request
 <pre>
@@ -211,7 +211,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 Retrieve a Transaction
 ----------------------
 
-* `GET /rest/api/transaction/151013003792` will return the specified transaction
+* `GET /payment/api/transaction/151013003792` will return the specified transaction
 
 ###### Response
 <pre>
@@ -332,7 +332,7 @@ Retrieve a Transaction
 Retrieve Transactions
 ---------------------
 
-* `GET /rest/api/transaction/get?fromdate=10-13-2015` will return the transactions created after the specified date
+* `GET /payment/api/transaction/get?fromdate=10-13-2015` will return the transactions created after the specified date
 
 ###### Response
 <pre>
@@ -576,9 +576,9 @@ Referenced Transaction(s): Void, Capture (Ship) or Credit
 
 Referenced transaction uses the original transaction Key as the referenced factor to subsequently process a new transaction. There’re 3 types of referenced transactions: Void, Capture (Ship) and Credit. They all use the transaction Key from the original transaction to process the new transaction.
 
-* `GET /rest/api/reference/151013003792?trxtype=SHIP` will attempt to execute and finalize (capture) a pre-authorized transaction, also known as BOOK transactions.
-* `GET /rest/api/reference/151013003792?trxtype=VOID` will attempt to cancel a transaction that has already been processed successfully with a payment gateway. PayFabric attempts to reverse the transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund (credit) must be performed.
-* `GET /rest/api/reference/151013003792?trxtype=CREDIT` will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
+* `GET /payment/api/reference/151013003792?trxtype=SHIP` will attempt to execute and finalize (capture) a pre-authorized transaction, also known as BOOK transactions.
+* `GET /payment/api/reference/151013003792?trxtype=VOID` will attempt to cancel a transaction that has already been processed successfully with a payment gateway. PayFabric attempts to reverse the transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund (credit) must be performed.
+* `GET /payment/api/reference/151013003792?trxtype=CREDIT` will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
 
 ###### Response
 <pre>
@@ -606,7 +606,7 @@ Refund a Customer
 
 To refund a customer, you just submit a credit to the customer that is owed the refund. The amount of the transaction should match the amount that is due to the customer. To perform a credit transaction, you just create a transaction object, set the `Type` field to `Credit`, and then use [Create and Process a Transaction](#create-and-process-a-transaction) to execute the transaction.
 
-* `POST /rest/api/transaction/process?cvc=111`
+* `POST /payment/api/transaction/process?cvc=111`
 
 ###### Request
 <pre>
