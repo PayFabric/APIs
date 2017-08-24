@@ -7,7 +7,7 @@ The PayFabric Wallet API is used for returning customer created wallet records, 
 Create a Credit Card
 --------------------
 
-* `POST /rest/api/wallet/create` will create a new credit card with the following JSON payload:
+* `POST /payment/api/wallet/create` will create a new credit card with the following JSON payload:
 
 ###### Request
 <pre>
@@ -59,7 +59,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 Create an eCheck
 ----------------
 
-* `POST /rest/api/wallet/create` will create a new eCheck with the following JSON payload:
+* `POST /payment/api/wallet/create` will create a new eCheck with the following JSON payload:
 
 ###### Request
 <pre>
@@ -112,7 +112,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 Update a Credit Card / eCheck
 -----------------------------
 
-* `POST /rest/api/wallet/update` will update a credit card or eCheck with new information based on the request JSON payload
+* `POST /payment/api/wallet/update` will update a credit card or eCheck with new information based on the request JSON payload
 
 ###### Request
 <pre>
@@ -134,7 +134,7 @@ Please note that the **ID** field is the only required field for an update.  Onl
 Retrieve a Credit Card / eCheck
 -------------------------------
 
-* `GET /rest/api/wallet/get/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will return the specified credit card or eCheck
+* `GET /payment/api/wallet/get/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will return the specified credit card or eCheck
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
@@ -192,7 +192,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 Retrieve Credit Cards / eChecks
 -------------------------------
 
-* `GET /rest/api/wallet/get/John+Doe+Ltd?tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_)
+* `GET /payment/api/wallet/get/John+Doe+Ltd?tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_)
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
@@ -297,7 +297,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 Retrieve Credit Cards / eChecks (Query with Paging)
 -----------------------------------------------
 
-* `GET /rest/api/wallet/get?customer=John+Doe+Ltd&tender=CreditCard&fromdate=01-01-2015&page=1` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_) after the specified date
+* `GET /payment/api/wallet/get?customer=John+Doe+Ltd&tender=CreditCard&fromdate=01-01-2015&page=1` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_) after the specified date
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
@@ -412,7 +412,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 Lock Credit Card / eCheck
 -------------------------
 
-* `GET /rest/api/wallet/lock/cbb571ea-e834-41c4-8a20-7d55bb7ae190?lockreason=Customer+being+audited` will lock the credit card or eCheck from being used with a specified reason
+* `GET /payment/api/wallet/lock/cbb571ea-e834-41c4-8a20-7d55bb7ae190?lockreason=Customer+being+audited` will lock the credit card or eCheck from being used with a specified reason
 
 ###### Response
 <pre>{
@@ -423,7 +423,7 @@ Lock Credit Card / eCheck
 Unlock Credit Card / eCheck
 ---------------------------
 
-* `GET /rest/api/wallet/unlock/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will unlock the credit card or eCheck from being used
+* `GET /payment/api/wallet/unlock/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will unlock the credit card or eCheck from being used
 
 ###### Response
 <pre>{
@@ -434,7 +434,7 @@ Unlock Credit Card / eCheck
 Remove Credit Card / eCheck
 ---------------------------
 
-* `GET /rest/api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will remove the credit card or eCheck
+* `GET /payment/api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will remove the credit card or eCheck
 
 ###### Response
 <pre>{
