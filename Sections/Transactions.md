@@ -1,7 +1,7 @@
 Transactions
 ============
 
-The PayFabric Transactions API is used for creating, and processing payment transactions. Please note that all requests require API authentication, see our [guide](https://github.com/PayFabric/APIs/blob/v2/Sections/Authentication.md) on how to authenticate.
+The PayFabric Transactions API is used for creating, and processing payment transactions. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 Create a Transaction
 --------------------
@@ -45,10 +45,10 @@ Create a Transaction
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#transaction).
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields, click [here](Objects#transaction).
 
 ###### Related Reading
-* [How to Submit Level 2 and 3 Fields](https://github.com/PayFabric/APIs/wiki/Level-2-and-Level-3-Fields)
+* [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 * [Which Transaction Type to Use](https://github.com/PayFabric/Portal/wiki/Transaction-Types)
 
 ###### Response
@@ -175,7 +175,7 @@ Adding a payment method can also be done during [Create a Transaction](#create-a
 }
 </pre>
 
-Please note that the **Key** field is the only required field for an update. For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
+Please note that the **Key** field is the only required field for an update. For more information and descriptions on available fields, click [here](Objects#card).
 
 ###### Related Reading
 * [How to Retrieve Tokenized Payment Methods](Wallets.md#retrieve-credit-cards--echecks)
@@ -288,10 +288,10 @@ Create and Process a Transaction
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](https://github.com/PayFabric/APIs/blob/v2/Sections/Wallets.md). For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2).
+Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](/Wallets.md). For more information and descriptions on available fields, click [here](Objects#transaction).
 
 ###### Related Reading
-* [How to Submit Level 2 and 3 Fields](https://github.com/PayFabric/APIs/wiki/Level-2-and-Level-3-Fields)
+* [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 * [Which Transaction Type to Use](https://github.com/PayFabric/Portal/wiki/Transaction-Types)
 
 ###### Response
