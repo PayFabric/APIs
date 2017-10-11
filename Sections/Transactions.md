@@ -45,10 +45,10 @@ Create a Transaction
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../Reference/Objects.md#transaction).
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](Objects.md#transaction).
 
 ###### Related Reading
-* [How to Submit Level 2 and 3 Fields](https://github.com/PayFabric/APIs/wiki/Level-2-and-Level-3-Fields)
+* [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 * [Which Transaction Type to Use](https://github.com/PayFabric/Portal/wiki/Transaction-Types)
 
 ###### Response
@@ -181,10 +181,10 @@ Create and Process a Transaction
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](Wallets.md). For more information and descriptions on available fields please see our [object reference](../Reference/Objects.md).
+Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](Wallets.md). For more information and descriptions on available fields please see our [object reference](Objects.md).
 
 ###### Related Reading
-* [How to Submit Level 2 and 3 Fields](https://github.com/PayFabric/APIs/wiki/Level-2-and-Level-3-Fields)
+* [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 * [Which Transaction Type to Use](https://github.com/PayFabric/Portal/wiki/Transaction-Types)
 
 ###### Response
