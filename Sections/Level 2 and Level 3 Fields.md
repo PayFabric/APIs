@@ -2,7 +2,7 @@
 Business, corporate, and purchasing cards are used just like personal credit and debit cards. However, these cards carry higher interchange rates because they offer employers high value (and costly) features such as enhanced reporting and statements. Many merchants can qualify for lower commercial rates  by collecting the more in‑depth Level 2 and Level 3 data with each commercial card transaction.
 
 ## Example
-When submitting a [Transaction](Objects#transaction) developers can incorporate Level 2 and Level 3 fields into the ``Document`` field of the Transaction object. Below is an example JSON transaction object that includes Level 2 and 3 fields.
+When submitting a [Transaction](Objects.md#transaction) developers can incorporate Level 2 and Level 3 fields into the ``Document`` field of the Transaction object. Below is an example JSON transaction object that includes Level 2 and 3 fields.
 ```json
 {
   "Amount": "3225.00",
