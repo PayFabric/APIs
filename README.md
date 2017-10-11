@@ -10,7 +10,7 @@ Where do I start?
 
 Want to get started with PayFabric API integration? Here's a quick check list:
 
-1. Register and then configure a PayFabric account, check out the [Quick Start Guide](https://github.com/PayFabric/Portal/wiki) to learn how.
+1. Register and then configure a PayFabric account, check out the [Quick Start Guide](https://github.com/PayFabric/Portal/tree/v2/Sections/Quick%20Start.md) to learn how.
 2. Read up on how to [authenticate](#authentication) with our APIs. 
 3. Read up on how to [handle errors](#handling-exceptions) with our APIs.
 4. Browse the [API docs](#api-documentation) for the API you need to work with, you could also view our [language specific examples](https://github.com/PayFabric/APIs/tree/v2/Samples).
