@@ -1,7 +1,7 @@
 Credit Card / eCheck Wallet
 ===========================
 
-The PayFabric Wallet API is used for returning customer created wallet records, creating new wallet records, locking, updating, and deleting existing wallet records.  Please note that all requests require API authentication, see our [guide](https://github.com/PayFabric/APIs/blob/v2/Sections/Authentication.md) on how to authenticate.
+The PayFabric Wallet API is used for returning customer created wallet records, creating new wallet records, locking, updating, and deleting existing wallet records.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 
 Create a Credit Card
@@ -46,7 +46,7 @@ Create a Credit Card
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
+Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields, click [here](Objects#card).
 
 ###### Response
 <pre>
@@ -99,7 +99,7 @@ Create an eCheck
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [wiki page](https://github.com/PayFabric/APIs/wiki/API-Object-V2#card).
+Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields, click [here](Objects#card).
 
 ###### Response
 <pre>
