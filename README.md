@@ -33,7 +33,7 @@ We have a [guide](Sections/Errors.md) detailing the meanings of the most common 
 
 API Documentation
 -----------------
-PayFabric sends and receives payloads as structured [JSON Objects](Reference/Objects.md). 
+PayFabric sends and receives payloads as structured [JSON Objects](Sections/Objects.md). 
 Many of these objects are used in both requests and responses. Some of the objects (like Address or Cardholder) are embedded
 as child elements of other objects.
 
@@ -45,8 +45,7 @@ as child elements of other objects.
 * [Retrieve a Transaction](Sections/Transactions.md#retrieve-a-transaction)
 * [Retrieve Transactions](Sections/Transactions.md#retrieve-transactions)
 * [Cancel (Void) a Transaction](Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
-* [Capture a Pre-Authorized Transaction](Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
-* [Credit a Transaction](Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
+* [Referenced Transaction(s): Void, Capture (ship) or Credit](Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
 * [Refund a Customer](Sections/Transactions.md#refund-a-customer)
 
 ### Wallets / Credit Cards / eChecks
