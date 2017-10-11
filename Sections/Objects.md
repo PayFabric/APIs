@@ -51,7 +51,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | CardName        | String | Type of credit card: ``Visa``, ``Mastercard``, ``Discover``,``JCB``,``American Express``,``Diners Club``. Only valid for credit cards. | nvarchar(16)|
 | IsDefaultCard   | Boolean | Indicates whether this is the primary card of the customer. Default value is ``False``. | bit, not null| 
 | IsLocked        | Boolean | Indicates whether the card is locked. Default value is ``False``.| bit, null |
-| IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. This attribute is only valid and should only be included in the object when using [Create and Submit a Transaction by Transaction Object](https://github.com/PayFabric/APIs/wiki/API-Reference---V2#create-and-submit-a-transaction-by-transaction-object). |  
+| IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). |  
 | ModifiedOn      | String | Timestamp indicating when this record was last modified. It's format should like "3/23/2015 11:16:19 PM".| datetime, not null| 
 | CardHolder*      | [Object](#cardholder) | Cardholder object. |  
 | Billto          | [Object](#address) | Address object. The required rule of address object will apply once if it is not NULL.| 
