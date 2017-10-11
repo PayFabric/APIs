@@ -51,7 +51,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | CardName        | String | Type of credit card: ``Visa``, ``Mastercard``, ``Discover``,``JCB``,``American Express``,``Diners Club``. Only valid for credit cards. | nvarchar(16)|
 | IsDefaultCard   | Boolean | Indicates whether this is the primary card of the customer. Default value is ``False``. | bit, not null| 
 | IsLocked        | Boolean | Indicates whether the card is locked. Default value is ``False``.| bit, null |
-| IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](../Sections/Transactions.md#create-and-process-a-transaction). |  
+| IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). |  
 | ModifiedOn      | String | Timestamp indicating when this record was last modified. It's format should like "3/23/2015 11:16:19 PM".| datetime, not null| 
 | CardHolder*      | [Object](#cardholder) | Cardholder object. |  
 | Billto          | [Object](#address) | Address object. The required rule of address object will apply once if it is not NULL.| 
@@ -106,7 +106,7 @@ The Document object is used to represent additional invoice, order, or other Lev
 | UserDefined     | String | Up to 50 key value pairs can be stored in this object.| 
 
 ### Related Reading
-* [Level 2 and Level 3 Fields](https://github.com/PayFabric/PayFabric-APIs/wiki/Level-2-and-Level-3-Fields)
+* [Level 2 and Level 3 Fields](Level-2-and-Level-3-Fields.md)
 
 ## Transaction
 The Transaction object represents a single transaction that will pass through PayFabric and be submitted to a Payment Gateway. It is probably the most important and most common object.
