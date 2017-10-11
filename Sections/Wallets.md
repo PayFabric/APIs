@@ -46,7 +46,7 @@ Create a Credit Card
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [object reference](../Reference/Objects.md#card).
+Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [object reference](Objects.md#card).
 
 ###### Response
 <pre>
@@ -99,7 +99,7 @@ Create an eCheck
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [object reference](../Reference/Objects.md#card).
+Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [object reference](Objects.md#card).
 
 ###### Response
 <pre>
