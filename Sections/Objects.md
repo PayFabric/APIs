@@ -106,7 +106,7 @@ The Document object is used to represent additional invoice, order, or other Lev
 | UserDefined     | String | Up to 50 key value pairs can be stored in this object.| 
 
 ### Related Reading
-* [Level 2 and Level 3 Fields](https://github.com/PayFabric/APIs/wiki/Level-2-and-Level-3-Fields)
+* [Level 2 and Level 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 
 ## Transaction
 The Transaction object represents a single transaction that will pass through PayFabric and be submitted to a Payment Gateway. It is probably the most important and most common object.
@@ -120,7 +120,7 @@ The Transaction object represents a single transaction that will pass through Pa
 | Card*  | [Object](#card) | Card object. If you are using an existing card, you only need to specify the ID of the card. If using a new card then all fields are required. |  
 | SetupId*        | String | Gateway account profile name. This name is configurable and is defined by the client on the PayFabric web portal. |nvarchar(64)|  
 | Tender*         | String | Tender type. Valid values are ``CreditCard``, ``ECheck``. |nvarchar(64)|  
-| Type*           | String | Transaction type. Valid values are ``Sale``,``Book``,``Ship``,``Void``,``Credit``, ``Force``.  For more information on PayFabric Transaction Types, see our [guide](https://github.com/PayFabric/Portal/wiki/Transaction-Types). |  nvarchar(64)|
+| Type*           | String | Transaction type. Valid values are ``Sale``,``Book``,``Ship``,``Void``,``Credit``, ``Force``.  For more information on PayFabric Transaction Types, see our [guide](https://github.com/PayFabric/Portal/tree/v2/Sections/Transaction%20Types.md). |  nvarchar(64)|
 | BatchNumber     | String | Batch number name. For saving this transaction into a PayFabric batch. Merchant can process the batch on PayFabric portal. | varchar(64)| 
 | ModifiedOn      | String | Timestamp indicating when this transaction was last modified. It's format should like "3/23/2015 11:16:19 PM". | datetime| 
 | Shipto   | [Object](#address)| Address object. |  
@@ -142,7 +142,7 @@ The Transaction object represents a single transaction that will pass through Pa
 > The Required fields above only apply to transactions that will be submitted to Payment Gateways. If the transaction is only being saved on the PayFabric server (and not being submitted to a Payment Gateway) then none of the fields are required.
 
 ## Gateway Account Profile
-A Gateway Account Profile is the account information of a single Payment Gateway. This is created by the merchant on the PayFabric server via the PayFabric web portal. See [Setup Gateway Account](https://github.com/PayFabric/Portal/wiki#setup-gateway-account) for more details.
+A Gateway Account Profile is the account information of a single Payment Gateway. This is created by the merchant on the PayFabric server via the PayFabric web portal. See [Setup Gateway Account](https://github.com/PayFabric/Portal/tree/v2/Sections/Quick%20Start.md#setup-gateway-account) for more details.
 
 | Attribute       | DataType| Definition|Max Length|
 | :-----------    |:---------| :---------| :---------| 
