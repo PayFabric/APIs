@@ -59,8 +59,8 @@ as child elements of other objects.
 * [Remove Credit Card / eCheck](Sections/Wallets.md#remove-credit-card--echeck)
 
 ### Payment Gateway Profiles
-* [Retrieve a Payment Gateway Profile](Sections/PaymentGatewayProfiles.md#retrieve-a-payment-gateway-profile)
-* [Retrieve Payment Gateway Profiles](Sections/PaymentGatewayProfiles.md#retrieve-payment-gateway-profiles)
+* [Retrieve a Payment Gateway Profile](Sections/Payment%20Gateway%20Profiles.md#retrieve-a-payment-gateway-profile)
+* [Retrieve Payment Gateway Profiles](Sections/Payment%20Gateway%20Profiles.md#retrieve-payment-gateway-profiles)
 
 ### Addresses
 * [Retrieve a Shipping Address](Sections/Addresses.md#retrieve-a-shipping-address)
