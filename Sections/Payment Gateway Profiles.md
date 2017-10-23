@@ -6,7 +6,7 @@ The PayFabric Payment Gateway Profiles API is used for returning the gateway pro
 Retrieve a Payment Gateway Profile
 ----------------------------------
 
-* `GET /rest/api/setupid/079C5DA2-DF91-4AD6-9BA2-A52300FEF06A` will return the specified payment gateway profile 
+* `GET /setupid/079C5DA2-DF91-4AD6-9BA2-A52300FEF06A` will return the specified payment gateway profile 
  
 ###### Response
 <pre>
@@ -24,7 +24,7 @@ Retrieve a Payment Gateway Profile
 Retrieve Payment Gateway Profiles
 ---------------------------------
 
-* `GET /rest/api/setupid` will return all payment gateway profiles configured for the PayFabric user
+* `GET /api/setupid` will return all payment gateway profiles configured for the PayFabric user
  
 ###### Response
 <pre>
