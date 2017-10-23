@@ -62,7 +62,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 Update a Transaction
 --------------------
 
-* `POST /payment/api/transaction/update` will update a transaction with new information based on the request JSON payload
+* `POST /transaction/update` will update a transaction with new information based on the request JSON payload
 
 ###### Request
 <pre>
