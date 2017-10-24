@@ -192,7 +192,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 Retrieve Credit Cards / eChecks
 -------------------------------
 
-* `GET /rest/api/wallet/get/John+Doe+Ltd?tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_)
+* `GET /rest/api/wallet/get/John+Doe+Ltd?tender=CreditCard` or GET `/rest/api/wallet/getByCustomer?customer=John+Doe+Ltd&tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_)
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
