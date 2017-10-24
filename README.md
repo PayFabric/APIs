@@ -57,6 +57,7 @@ as child elements of other objects.
 * [Lock Credit Card / eCheck](Sections/Wallets.md#lock-credit-card--echeck)
 * [Unlock Credit Card / eCheck](Sections/Wallets.md#unlock-credit-card--echeck)
 * [Remove Credit Card / eCheck](Sections/Wallets.md#remove-credit-card--echeck)
+* [Retrieve expired Creidt Cards](Sections/Wallets.md#retrieve-expired-wallet)
 
 ### Payment Gateway Profiles
 * [Retrieve a Payment Gateway Profile](Sections/Payment%20Gateway%20Profiles.md#retrieve-a-payment-gateway-profile)
