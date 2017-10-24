@@ -297,7 +297,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 Retrieve Credit Cards / eChecks (Query with Paging)
 -----------------------------------------------
 
-* `GET /rest/api/wallet/get?customer=John+Doe+Ltd&tender=CreditCard&fromdate=01-01-2015&page=1` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_) after the specified date
+* `GET /rest/api/wallet/get?customer=John+Doe+Ltd&tender=CreditCard&fromdate=01-01-2015&page=1` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_), which were modified after the specified date, and display records depending on the page number, each page size is 15 records.
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
@@ -440,3 +440,115 @@ Remove Credit Card / eCheck
 <pre>{
   "Result": "True"
 }</pre>
+
+Retrieve expired wallet
+-------------------------
+
+* `GET /expiredwallet/get?customer={CUSTOMER_NO}&startDate={STARTDATE}&endDate={ENDDATE}&pageSize={PAGESIZE}&page={PAGE}` will return the expired credit cards for a customer, whose Expiration date is in the specified date, and display records depending on the page number, each page size is 15 records.
+
+###### Response
+<pre>
+{
+  "Paging": {
+    "Current": "1",
+    "Size": "15",
+    "TotalPages": "1",
+    "TotalRecords": "2"
+  },
+  "Records": 
+  [
+    {
+      "Aba": "",
+      "Account": "XXXXXXXXXXXX1115",
+      "AccountType": "",
+      "Billto": {
+        "City": "Anaheim",
+        "Country": "USA",
+        "Customer": "",
+        "Email": "",
+        "ID": "4ca94c49-9724-492e-b20e-b11d53a8166b",
+        "Line1": "123 PayFabric Way",
+        "Line2": "",
+        "Line3": "",
+        "ModifiedOn": "1/1/0001 12:00:00 AM",
+        "Phone": "(123)456-7890",
+        "State": "CA",
+        "Zip": "92806"
+      },
+      "CardHolder": {
+        "DriverLicense": "",
+        "FirstName": "John",
+        "LastName": "Doe",
+        "MiddleName": "",
+        "SSN": ""
+      },
+      "CardName": "Visa",
+      "CheckNumber": null,
+      "Connector": "",
+      "Customer": "John Doe Ltd",
+      "ExpDate": "0918",
+      "GPAddressCode": "",
+      "GatewayToken": "",
+      "ID": "cbb571ea-e834-41c4-8a20-7d55bb7ae190",
+      "Identifier": "",
+      "IsDefaultCard": false,
+      "IsLocked": false,
+      "IsSaveCard": false,
+      "IssueNumber": "",
+      "ModifiedOn": "10/2/2015 3:40:41 PM",
+      "StartDate": "",
+      "Tender": "CreditCard",
+      "UserDefine1": "",
+      "UserDefine2": "",
+      "UserDefine3": "",
+      "UserDefine4": ""
+    },
+    {
+      "Aba": "",
+      "Account": "XXXXXXXXXXXX1115",
+      "AccountType": "",
+      "Billto": {
+        "City": "Anaheim",
+        "Country": "USA",
+        "Customer": "",
+        "Email": "",
+        "ID": "4ca94c49-9724-492e-b20e-b11d53a1111b",
+        "Line1": "123 PayFabric Way",
+        "Line2": "",
+        "Line3": "",
+        "ModifiedOn": "1/1/0001 12:00:00 AM",
+        "Phone": "(123)456-7890",
+        "State": "CA",
+        "Zip": "92806"
+      },
+      "CardHolder": {
+        "DriverLicense": "",
+        "FirstName": "John",
+        "LastName": "Doe",
+        "MiddleName": "",
+        "SSN": ""
+      },
+      "CardName": "Visa",
+      "CheckNumber": null,
+      "Connector": "",
+      "Customer": "John Doe Ltd",
+      "ExpDate": "0918",
+      "GPAddressCode": "",
+      "GatewayToken": "",
+      "ID": "cbb571ea-e834-41c4-8a20-7d55bb711111",
+      "Identifier": "",
+      "IsDefaultCard": false,
+      "IsLocked": false,
+      "IsSaveCard": false,
+      "IssueNumber": "",
+      "ModifiedOn": "10/2/2015 3:40:41 PM",
+      "StartDate": "",
+      "Tender": "CreditCard",
+      "UserDefine1": "",
+      "UserDefine2": "",
+      "UserDefine3": "",
+      "UserDefine4": ""
+    }
+  ]
+}
+</pre>
