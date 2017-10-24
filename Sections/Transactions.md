@@ -211,7 +211,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 Retrieve a Transaction
 ----------------------
 
-* `GET /transaction/151013003792` will return the specified transaction
+* `GET /transaction/{TransactionKey}` will return the specified transaction
 
 ###### Response
 <pre>
@@ -333,6 +333,21 @@ Retrieve Transactions
 ---------------------
 
 * `GET /transaction/get?fromdate=10-13-2015` will return the transactions created after the specified date
+
+Options
+-------
+
+This request accepts the below query string parameters to add options. You can use below query parameters by adding them to your request URL and conneciton them with '&'.
+
+>
+| QueryString| Description | 
+| :------------- | :------------- | 
+|perdevice |When the value is `true`, the transaction will be filtered by device, which's device ID is used to authorize the request. Default value is `false`.|
+|customer|This parameter is to filter the result by customer number, which is used to create/process transaction.|
+|fromdate|This parameter is to set specific 'date from' to filter transaction's ModifiedOn. The format: mm/dd/yyyy.|
+|page|This parameter is to set the result's page number, each page will return 15 records.|
+|status|This parameter is to fliter result against transaction's status, the value is `approved`, `failure`, `declined`, `none` and `denied`, response result will include all status transactions when don't submit this parameter.|
+|excludeunprocess|When the value is `true`, the result will filter out the unprocess transaction. Default value is `false`. |
 
 ###### Response
 <pre>
