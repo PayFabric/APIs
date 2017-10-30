@@ -13,7 +13,7 @@ Retrieve a Shipping Address
 {
   "City": "Anaheim",
   "Country": "USA",
-  "Customer": "John Doe Ltd",
+  "Customer": "JOHNDOE0001",
   "Email": "John.Doe@payfabric.com",
   "ID": "75B12D6B-B2C7-409D-89CB-006535D6CD95",
   "Line1": "123 PayFabric Way",
@@ -29,7 +29,7 @@ Retrieve a Shipping Address
 Retrieve Shipping Addresses
 ---------------------------
 
-* `GET /addresses/John+Doe+Ltd` or `/addressesByCustomer?customer=John+Doe+Ltd` will return all shipping addresses for the specified customer, the latter support special characters.
+* `GET /addresses/JOHNDOE0001` or `/addressesByCustomer?customer=JOHNDOE0001` will return all shipping addresses for the specified customer, the latter support special characters.
  
 ###### Response
 <pre>
@@ -37,7 +37,7 @@ Retrieve Shipping Addresses
   {
     "City": "Anaheim",
     "Country": "USA",
-    "Customer": "John Doe Ltd",
+    "Customer": "JOHNDOE0001",
     "Email": "John.Doe@payfabric.com",
     "ID": "75B12D6B-B2C7-409D-89CB-006535D6CD95",
     "Line1": "123 PayFabric Way",
@@ -51,7 +51,7 @@ Retrieve Shipping Addresses
   {
     "City": "Anaheim",
     "Country": "USA",
-    "Customer": "John Doe Ltd",
+    "Customer": "JOHNDOE0001",
     "Email": "John.Doe@payfabric.com",
     "ID": "75B12D6B-B2C7-409D-89CB-006535DDDDDD",
     "Line1": "123 PayFabric Way",
@@ -68,7 +68,7 @@ Retrieve Shipping Addresses
 Retrieve Shipping Addresses (Query with Paging)
 -----------------------------------------------
 
-* `GET /addresses/get?customer=John+Doe+Ltd&fromDate=01-01-2015&page=1` will return shipping addresses for the specified customer after a specified date
+* `GET /addresses/get?customer=JOHNDOE0001&fromDate=01-01-2015&page=1` will return shipping addresses for the specified customer after a specified date
 
 ###### Response
 <pre>
@@ -84,7 +84,7 @@ Retrieve Shipping Addresses (Query with Paging)
     {
       "City": "Anaheim",
       "Country": "USA",
-      "Customer": "John Doe Ltd",
+      "Customer": "JOHNDOE0001",
       "Email": "John.Doe@payfabric.com",
       "ID": "75B12D6B-B2C7-409D-89CB-006535D6CD95",
       "Line1": "123 PayFabric Way",
@@ -98,7 +98,7 @@ Retrieve Shipping Addresses (Query with Paging)
     {
       "City": "Anaheim",
       "Country": "USA",
-      "Customer": "John Doe Ltd",
+      "Customer": "JOHNDOE0001",
       "Email": "John.Doe@payfabric.com",
       "ID": "75B12D6B-B2C7-409D-89CB-006535DDDDDD",
       "Line1": "123 PayFabric Way",
