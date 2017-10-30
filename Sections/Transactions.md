@@ -14,7 +14,7 @@ Create a Transaction
   <b>"Amount": "29.99"</b>,
   "BatchNumber": "",
   <b>"Currency": "USD"</b>,
-  <b>"Customer": "John Doe Ltd"</b>,
+  <b>"Customer": "JOHNDOE0001"</b>,
   "Document": {
     "Head": [],
     "Lines": [],
@@ -137,7 +137,7 @@ Create and Process a Transaction
       "MiddleName": "",
       "SSN": ""
     },
-    <b>"Customer": "John Doe Ltd"</b>,
+    <b>"Customer": "JOHNDOE0001"</b>,
     <b>"ExpDate": "0918"</b>,
     "GPAddressCode": "",
     "GatewayToken": "",
@@ -150,7 +150,7 @@ Create and Process a Transaction
     "UserDefine4": ""
   },
   <b>"Currency": "USD"</b>,
-  <b>"Customer": "John Doe Ltd"</b>,
+  <b>"Customer": "JOHNDOE0001"</b>,
   "Document": {
     "Head": [],
     "Lines": [],
@@ -246,7 +246,7 @@ Retrieve a Transaction
     "CardName": "Visa",
     "CheckNumber": "",
     "Connector": "PayflowPro",
-    "Customer": "John Doe Ltd",
+    "Customer": "JOHNDOE0001",
     "ExpDate": "0918",
     "GPAddressCode": "",
     "GatewayToken": "",
@@ -265,7 +265,7 @@ Retrieve a Transaction
     "UserDefine4": ""
   },
   "Currency": "USD",
-  "Customer": "John Doe Ltd",
+  "Customer": "JOHNDOE0001",
   "Document": {
     "Head": [
       {
@@ -409,7 +409,7 @@ This request accepts the below query string parameters to add options. You can u
         "UserDefine4": null
       },
       "Currency": "USD",
-      "Customer": "John Doe Ltd",
+      "Customer": "JOHNDOE0001",
       "Document": {
         "Head": [
           {
@@ -520,7 +520,7 @@ This request accepts the below query string parameters to add options. You can u
         "UserDefine4": null
       },
       "Currency": "USD",
-      "Customer": "John Doe Ltd",
+      "Customer": "JOHNDOE0001",
       "Document": {
         "Head": [
           {
@@ -628,7 +628,7 @@ To refund a customer, you just submit a credit to the customer that is owed the 
 {
     "SetupId": "PFP",
     <b>"Type": "Credit"</b>,
-    "Customer": "John Doe Ltd",
+    "Customer": "JOHNDOE0001",
     "Amount": 19.99,
     "Currency": "USD",
     "Card": {
