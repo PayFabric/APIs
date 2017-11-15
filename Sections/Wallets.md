@@ -56,6 +56,8 @@ Please note that **bold** fields are required fields, and all others are optiona
 }
 </pre>
 
+**Note**: We highly recommand PayFabric wallet hosted page for creating/updating credit card or eCheck wallets, which is a secure page that can be embedded into your application. Please click [here](../../../../Hosted-Pages/blob/master/Sections/Wallet%20Page.md#create-a-credit-card--echeck).
+
 Create an eCheck
 ----------------
 
@@ -109,6 +111,8 @@ Please note that **bold** fields are required fields, and all others are optiona
 }
 </pre>
 
+**Note**: We highly recommand PayFabric wallet hosted page for creating/updating credit card or eCheck wallets, which is a secure page that can be embedded into your application. Please click [here](../../../../Hosted-Pages/blob/master/Sections/Wallet%20Page.md#create-a-credit-card--echeck).
+
 Update a Credit Card / eCheck
 -----------------------------
 
@@ -130,6 +134,7 @@ Please note that the **ID** field is the only required field for an update.  Onl
 }
 </pre>
 
+**Note**: We highly recommand PayFabric wallet hosted page for creating/updating credit card or eCheck wallets, which is a secure page that can be embedded into your application. Please click [here](../../../../Hosted-Pages/blob/master/Sections/Wallet%20Page.md#update-a-credit-card--echeck).
 
 Retrieve a Credit Card / eCheck
 -------------------------------
