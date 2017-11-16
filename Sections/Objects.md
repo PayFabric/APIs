@@ -44,7 +44,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | Customer*        | String | Customer ID as specified by the client upon creation of the customer. | nvarchar(128)|  
 | Account*         | String | The number of the credit card, or the eCheck/ACH account. When creating a new Card this attribute must be provided by the client in plaintext. When a client retrieves a card PayFabric always returns this attribute in masked format. **When updating a card omit this field.**|nvarchar(64)|  
 | ExpDate*         | String | Expiration date of the credit card in the format of MMYY. Only valid for credit cards. | varchar(4)| 
-| CVC             | String | CVC code. Only valid for credit cards. **Important**: PCI compliance does not permit storage of CVC code. PayFabric will only accept CVC code for real-time process and will not store the CVC code. |Integer(4)|  
+| CVC             | String | CVC code. Only valid for credit cards. **Important**: PCI DSS does not permit storing of CVC (Card Verification Code). PayFabric will only accept CVC for real-time processing and will not store CVC for future use. |Integer(4)|  
 | CheckNumber*     | String | Check number. Only valid for eChecks. | varchar(128)| 
 | AccountType*     | String | eCheck account type. Only valid for eCheck accounts. | varchar(32)| 
 | Aba*             | String | Bank Routing Number. Only valid for eChecks. | varchar(64)| 
