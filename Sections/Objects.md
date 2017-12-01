@@ -103,7 +103,8 @@ The Document object is used to represent additional invoice, order, or other Lev
 | Head            | Array | An array of key-value pairs. Usually, the key-value pairs represent the level 2 fields to submit to the gateway.| 
 | Lines           | Array | An array of columns object.The columns objects represent the columns that belong to a specific line. Usually the columns objects represent the level 3 fields that you can submit to the gateway.|
 | Columns         | Array | An array of key-value pairs. The key-value pairs represent the level 3 fields to submit to the gateway.|
-| UserDefined     | String | Up to 50 key value pairs can be stored in this object.| 
+| UserDefined     | String | Up to 50 key value pairs can be stored in this object.|
+|DefaultBillTo|[Object](#address)| Address object. no restriction to these address fields, partially input is acceptable.|
 
 ### Related Reading
 * [Level 2 and Level 3 Fields](Level-2-and-Level-3-Fields.md)
