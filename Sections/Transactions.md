@@ -346,7 +346,7 @@ This request accepts the below query string parameters to add options. You can u
 |customer|This parameter is to filter the result by customer number, which is used to create/process transaction.|
 |fromdate|This parameter is to set specific 'date from' to filter transaction's ModifiedOn. The format: mm/dd/yyyy.|
 |page|This parameter is to set the result's page number, each page will return 15 records.|
-|status|This parameter is to fliter result against transaction's status, the value is `approved`, `failure`, `declined`, `none` and `denied`, response result will include all status transactions when don't submit this parameter.|
+|status|This parameter is used to filter transaction result against processed transaction's status, the possible values are: `approved`, `failure`, `declined`, `none` and `denied`. Returned result will include all transaction status if application does not submit this parameter.|
 |excludeunprocess|When the value is `true`, the result will filter out the unprocess transaction. Default value is `false`. |
 
 ###### Response
