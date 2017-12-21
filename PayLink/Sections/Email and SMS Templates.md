@@ -1,5 +1,5 @@
 # Email and SMS Templates
-Payment Links and Wallet Links both utilize Email and SMS templates to send notifications to the intended recipient.  If no template is specified during the Payment and Wallet Link creation they will use the default template as defined within the PayLink Portal.  For more information on the templates and where to find them, please see our [Portal Documentation](https://github.com/PayLink/Portal/blob/v2/Sections/Features.md).
+Payment Links and Wallet Links both utilize Email and SMS templates to send notifications to the intended recipient.  If no template is specified during the Payment and Wallet Link creation they will use the default template as defined within the PayLink Portal.  For more information on the templates and where to find them, please see our [Portal Documentation](../../../../Portal/blob/master/Sections/Features.md).
 
 ## Specifying the Template
 The JSON payload sent during the API's exposes a [Notification object](JSON%20Objects.md#notification) which had two fields accepting both an EmailTemplate and SMSTemplate Name.  This name is defined by the PayLink user during creation of custom templates.

@@ -13,8 +13,7 @@ This object represents the PayLink record that customers will pay through their 
 | :----------- | :--------- | :--------- | :--------- |
 | Id | GUID | Unique Id GUID for the PayLink document | RO |
 | Device | GUID | Unique PayFabric Device that was used to create the authentication token | RO |
-| SetupId | String | PayFabric payment gateway account profile name, **required if** `Payment` field is omitted | RW |
-| Payment | [Payment Object](#payment) | Specify payment gateway account profile names and accepted payment types, **required if** `SetupId` is blank | RW |
+| Payment* | [Payment Object](#payment) | Specify payment gateway account profile names and accepted payment types, **required if** `SetupId` is blank | RW |
 | Currency* | String | Currency code, such as `USD`, `CAD` | RW |
 | Amount* | Decimal | Transaction amount | RW |
 | DocumentAmount* | Decimal | Document/invoice amount | RW |
@@ -36,7 +35,8 @@ This object represents the PayLink record that customers will pay through their 
 | BatchNo | String | Batch number. **Dynamics GP Only** | RW |
 | MerchantEmail | String | Email From | RW |
 | ReturnUrl | String | User defined return URL, overwrites PayLink confirmation page | RW |
-| Status | Integer | Document status, available values `0 = draft, 1 = waiting for payment, 2 = cancelled, 3 = paid, 4 = ERP posting failed, 5 = ERP posting completed` | RO |
+| Status | Integer | Document status, available values `0 = draft, 1 = waiting for payment, 2 = cancelled, 3 = paid` | RO |
+| IntegrationStatus | Integer | Document integration status, available values `0 = Pending, 1 = Failed, 2 = Successful` | RO |
 | ShippingAddress | [Address Object](#address) | Shipping address | RW |
 | BillingAddress | [Address Object](#address) | Billing address | RW |
 | Items | Array of [Item Object](#item) | Collection of line items | RW |

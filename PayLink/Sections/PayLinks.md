@@ -1,7 +1,7 @@
 PayLinks
 ========
 
-The PayLinks API is used for creating, updating and retrieving PayLinks. Please note that all requests require API authentication by PayFabric *Security Token*, see our [guide](https://github.com/PayFabric/APIs/blob/v2/Sections/Authentication.md#security-token) on how to create a token.
+The PayLinks API is used for creating, updating and retrieving PayLinks. Please note that all requests require API authentication by PayFabric *Security Token*, see our [guide](https://github.com/PayFabric/APIs/blob/master/Sections/Authentication.md#security-token) on how to create a token.
 
 Create a PayLink
 ----------------
@@ -45,21 +45,18 @@ Create a PayLink
     "ECheckGateway": "",
     "AcceptType": 1
   }</i></b>,
-  <b>"Notification":</b> {
-    <b>"Type": "All"</b>,
-    "EmailTemplate": null,
-    "SMSTemplate": null
-  },
+  <b>"Notification": {
+    "Type": "All"
+  }</b>,
   <b>"NotificationEmail": "John.Doe@payfabric.com"</b>,
   <b>"NotificationPhone": "123456789"</b>
 }
 </pre>
 
-Please note that **bold** fields are required fields, the **Payment** object *or* **SetupId** field must be supplied, and all others are optional. The **Status** field can be used to set the PayLink document status; specify 0 to save the document as a draft, specify 1 to save the document as an active document ready for payment. For more information and descriptions on available fields, click [here](JSON%20Objects.md#paylink-document).
+Please note that **bold** fields are required fields, the **Payment** object *or* **SetupId** field must be supplied, and all others are optional. The **Status** field can be used to set the PayLink document status; specify 0 to save the document as a draft, specify 1 to save the document as an active document ready for payment. For more information and descriptions on available fields please see our [JSON Objects](JSON%20Objects.md#paylink-document).
 
 ###### Related Reading
-* [Which Transaction Type to Use](https://github.com/PayLink/Portal/blob/v2/Sections/Transaction%20Types.md)
-* [How to Specify Email or SMS Template](Email%20and%20SMS%20Templates.md)
+* [Which Transaction Type to Use](../../../../portal/tree/master/Sections/Transaction%20Types.md)
 
 ###### Response
 <pre>
@@ -129,22 +126,18 @@ Create a Multiple Invoice PayLink
     "ECheckGateway": "",
     "AcceptType": 1
   }</i></b>,
-  <b>"Notification":</b> {
-    <b>"Type": "All"</b>,
-    "EmailTemplate": null,
-    "SMSTemplate": null
-  },
+  <b>"Notification": {
+    "Type": "All"
+  }</b>,
   <b>"NotificationEmail": "John.Doe@payfabric.com"</b>,
   <b>"NotificationPhone": "123456789"</b>
 }
 </pre>
 
-Please note that **bold** fields are required fields, the **Payment** object *or* **SetupId** field must be supplied, and all others are optional.  If you wish to apply a surcharge fee for multiple invoice payment, please use the **UserDefinedFields** field as shown in the example above. The **Status** field can be used to set the PayLink document status; specify 0 to save the document as a draft, specify 1 to save the document as an active document ready for payment. For more information and descriptions on available fields, click [here](JSON%20Objects.md#paylink-document).
+Please note that **bold** fields are required fields, the **Payment** object *or* **SetupId** field must be supplied, and all others are optional.  If you wish to apply a surcharge fee for multiple invoice payment, please use the **UserDefinedFields** field as shown in the example above. The **Status** field can be used to set the PayLink document status; specify 0 to save the document as a draft, specify 1 to save the document as an active document ready for payment. For more information and descriptions on available fields please see our [JSON Objects](JSON%20Objects.md#paylink-document).
 
 ###### Related Reading
-* [Which Transaction Type to Use](https://github.com/PayLink/Portal/blob/v2/Sections/Transaction%20Types.md)
-* [How to Specify Email or SMS Template](Email%20and%20SMS%20Templates.md)
-
+* [Which Transaction Type to Use](../../../../portal/tree/master/Sections/Transaction%20Types.md)
 
 ###### Response
 <pre>
@@ -182,7 +175,7 @@ Retrieve a PayLink
 ###### Response
 <pre>
 {
-  "Id": "AdFXqnNNf0GDNwiO5UE_fw",
+  "Id": "gwx9q6fqcEuagAJLA27CIA",
   "Device": "33665f05-8346-4809-e0f1-01050545236f",
   "SetupId": null,
   "Currency": "USD",
@@ -250,165 +243,13 @@ Retrieve a PayLink
   },
   "Notification": {
     "Type": "Email",
-    "EmailTemplate": null,
     "SMSTemplate": null,
     "ResponseStatus": null,
     "ResponseMessage": null
   },
   "NotificationEmail": "John.Doe@PayFabric.com",
   "NotificationPhone": "",
-  "OriginalTender": null,
-  "PayFabricTransactionData": {
-    "Key": "151104003878",
-    "ReferenceKey": null,
-    "Customer": "JOHNDOE0001",
-    "BatchNumber": "",
-    "SetupId": "PFP",
-    "MSO_EngineGUID": "00c2d66b-9b4e-4d63-b115-e6c5fc4e7430",
-    "Tender": "CreditCard",
-    "Type": "Sale",
-    "Currency": "USD",
-    "Amount": "49.99",
-    "ReqAuthCode": "",
-    "PayDate": "",
-    "TrxUserDefine1": "",
-    "TrxUserDefine2": "",
-    "TrxUserDefine3": "",
-    "TrxUserDefine4": "",
-    "Card": {
-      "ID": "00000000-0000-0000-0000-000000000000",
-      "Customer": "JOHNDOE0001",
-      "Tender": "CreditCard",
-      "Account": "",
-      "CardName": null,
-      "ExpDate": "",
-      "CheckNumber": "",
-      "AccountType": "",
-      "Aba": "",
-      "Connector": "PayflowPro",
-      "GatewayToken": "",
-      "CVC": null,
-      "Identifier": "",
-      "IssueNumber": "",
-      "StartDate": "",
-      "GPAddressCode": "",
-      "UserDefine1": "",
-      "UserDefine2": "",
-      "UserDefine3": "",
-      "UserDefine4": "",
-      "CardHolder": {
-        "FirstName": "",
-        "MiddleName": "",
-        "LastName": "",
-        "DriverLicense": "",
-        "SSN": ""
-      },
-      "Billto": {
-        "Customer": "",
-        "ID": "00000000-0000-0000-0000-000000000000",
-        "Line1": "",
-        "Line2": "",
-        "Line3": "",
-        "State": "",
-        "City": "",
-        "Country": "",
-        "Zip": "",
-        "Email": "",
-        "Phone": "",
-        "ModifiedOn": "1/1/0001 12:00:00 AM"
-      },
-      "IsSaveCard": false,
-      "IsDefaultCard": false,
-      "IsLocked": false,
-      "ModifiedOn": "1/1/0001 12:00:00 AM"
-    },
-    "Shipto": {
-      "Customer": "",
-      "ID": "00000000-0000-0000-0000-000000000000",
-      "Line1": "",
-      "Line2": "",
-      "Line3": "",
-      "State": "",
-      "City": "",
-      "Country": "",
-      "Zip": "",
-      "Email": "",
-      "Phone": "",
-      "ModifiedOn": "1/1/0001 12:00:00 AM"
-    },
-    "TrxResponse": {
-      "TrxKey": "151104003878",
-      "Status": "UnProcess",
-      "OriginationID": "",
-      "RespTrxTag": "",
-      "AuthCode": "",
-      "ResultCode": "",
-      "Message": "",
-      "CVV2Response": "",
-      "AVSAddressResponse": "",
-      "AVSZipResponse": "",
-      "IAVSAddressResponse": "",
-      "TrxDate": null,
-      "TAXml": ""
-    },
-    "Document": {
-      "Head": [
-        {
-          "Name": "InvoiceNumber",
-          "Value": "STDINV0001"
-        }
-      ],
-      "Lines": [],
-      "UserDefined": [
-        {
-          "Name": "ERPDocumentNumber",
-          "Value": ""
-        },
-        {
-          "Name": "IsForScribe",
-          "Value": "0"
-        },
-        {
-          "Name": "PayLinkTradeDiscount",
-          "Value": "0"
-        },
-        {
-          "Name": "PayLinkFreightAmount",
-          "Value": "0"
-        },
-        {
-          "Name": "PayLinkMiscAmount",
-          "Value": "0"
-        },
-        {
-          "Name": "PayLinkIsMultipleInvoice",
-          "Value": "0"
-        },
-        {
-          "Name": "PayLinkBatchNumber",
-          "Value": ""
-        },
-        {
-          "Name": "PayLinkPostDataType",
-          "Value": "PaymentLine"
-        },
-        {
-          "Name": "PayLinkDocumentType",
-          "Value": "0"
-        },
-        {
-          "Name": "AppID",
-          "Value": "PayLink"
-        },
-        {
-          "Name": "PayLinkID",
-          "Value": "AdFXqnNNf0GDNwiO5UE_fw"
-        }
-      ]
-    },
-    "ModifiedOn": "5/16/2016 11:07:49 PM",
-    "ReferenceTrxs": []
-  }
+  "OriginalTender": null
 }
 </pre>
 
@@ -430,7 +271,8 @@ Retrieve PayLinks
 | PaidOn | The date the PayLink was paid. |
 | Amount | The amount of the PayLink. |
 | Email | The notification email assigned to the PayLink. |
-| Status | The status of the PayLink, available values are `0 = draft, 1 = waiting for payment, 2 = cancelled, 3 = paid, 4 = ERP posting failed, 5 = ERP posting done` |
+| Status | The status of the PayLink, available values are `0 = draft, 1 = waiting for payment, 2 = cancelled and 3 = paid` |
+|IntegrationStatus| The integration status of the PayLink, available values are `0 = Pending, 1 = Failed and 2 = Successful`|
 | TransactionKey | The PayFabric transaction key. |
 
 ###### Response
@@ -447,7 +289,7 @@ Retrieve PayLinks
     "TradeDiscount": 0,
     "Freight": 0,
     "MiscAmount": 0,
-    "CustomerNumber": "John Doe Ltd",
+    "CustomerNumber": "JOHNDOE0001",
     "CustomerName": null,
     "IsMultipleInvoice": false,
     "DocumentNumber": "STDINV0001",
@@ -505,7 +347,6 @@ Retrieve PayLinks
     },
     "Notification": {
       "Type": "Email",
-      "EmailTemplate": null,
       "SMSTemplate": null,
       "ResponseStatus": null,
       "ResponseMessage": null
@@ -583,7 +424,6 @@ Retrieve PayLinks
     },
     "Notification": {
       "Type": "Email",
-      "EmailTemplate": null,
       "SMSTemplate": null,
       "ResponseStatus": null,
       "ResponseMessage": null
@@ -602,7 +442,7 @@ Retrieve a PayLink URL
 
 ###### Response
 <pre>
-"https://sandbox.payfabric.com/v2/paylink/gwx9q6fqcEuagAJLA27CIA"
+"https://sandbox.payfabric.com/paylink/web/gwx9q6fqcEuagAJLA27CIA"
 </pre>
 
 Remove a PayLink

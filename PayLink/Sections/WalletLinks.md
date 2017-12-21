@@ -1,7 +1,7 @@
 WalletLinks
 ===========
 
-The WalletLinks API is used for creating and retrieving WalletLinks. Please note that all requests require API authentication by PayFabric *Security Token*, see our [guide](https://github.com/PayFabric/APIs/blob/v2/Sections/Authentication.md#security-token) on how to create a token.
+The WalletLinks API is used for creating and retrieving WalletLinks. Please note that all requests require API authentication by PayFabric *Security Token*, see our [guide](https://github.com/PayFabric/APIs/blob/master/Sections/Authentication.md#security-token) on how to create a token.
 
 Create a WalletLink
 ----------------
@@ -16,19 +16,14 @@ Create a WalletLink
   "CustomeMessage": "",
   "ReturnUrl": "",
   <b>"Notification":</b> {
-    <b>"Type": "All"</b>,
-    "EmailTemplate": null,
-    "SMSTemplate": null
+    <b>"Type": "All"</b>
   },  
   <b>"NotificationEmail": "John.Doe@nodus.com"</b>,
   <b>"NotificationPhone": "123456789"</b>,
 }
 </pre>
 
-Please note that **bold** fields are required fields and all others are optional. For more information and descriptions on available fields, click [here](JSON%20Objects.md#walletlink-document).
-
-###### Related Reading
-* [How to Specify Email or SMS Template](Email%20and%20SMS%20Templates.md)
+Please note that **bold** fields are required fields and all others are optional. For more information and descriptions on available fields please see our [JSON Objects](Sections/JSON%20Objects.md#walletlink-document).
 
 ###### Response
 <pre>
@@ -45,7 +40,6 @@ Please note that **bold** fields are required fields and all others are optional
   "Status": 0,
   "Notification": {
     "Type": "All",
-    "EmailTemplate": null,
     "SMSTemplate": null,
     "ResponseStatus": "",
     "ResponseMessage": ""
@@ -65,7 +59,7 @@ Retrieve a WalletLink URL
 
 ###### Response
 <pre>
-"https://sandbox.payfabric.com/v2/paylink/walletlink/h3GSpCZKsEWNxFv6T_y_Gw"
+"https://sandbox.payfabric.com/paylink/web/walletlink/h3GSpCZKsEWNxFv6T_y_Gw"
 </pre>
 
 
