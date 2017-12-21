@@ -1,2 +1,2 @@
-[PayFabric](PayFabric/README.md)
-[PayLink](PayLink/README.md)
+* [PayFabric](PayFabric/README.md)
+* [PayLink](PayLink/README.md)
