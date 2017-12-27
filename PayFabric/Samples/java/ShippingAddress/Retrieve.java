@@ -25,7 +25,7 @@ public class Retrieve {
 	public void retrieveShippingAddress(UUID addressID) {
 		try {
 
-			String url = "https://sandbox.payfabric.com/rest/v1/api/address"
+			String url = "https://sandbox.payfabric.com/payment/api/address"
 					+ "/" + addressID.toString();
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
@@ -63,7 +63,7 @@ public class Retrieve {
             // Sample response
             // ------------------------------------------------------
             // Response text is an address object with json format
-            // Go to https://github.com/PayFabric/APIs/wiki/API-Objects#address for more details about address object.
+            // Go to https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#address for more details about address object.
             // ------------------------------------------------------
 			
 		} catch (IOException e) {
