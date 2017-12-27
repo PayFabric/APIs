@@ -18,7 +18,7 @@ public class Token {
 		try {
 
 			// Replace url when going live
-			String url = "https://sandbox.payfabric.com/rest/v1/api/token/create";
+			String url = "https://sandbox.payfabric.com/payment/api/token/create";
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 			con.setRequestMethod("GET");
