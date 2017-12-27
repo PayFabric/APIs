@@ -24,7 +24,7 @@ public class RetrieveByCustomer {
 	public void retrieveShippingAddressByCustomer(String customer) {
 		try {
 
-			String url = "https://sandbox.payfabric.com/rest/v1/api/addresses"
+			String url = "https://sandbox.payfabric.com/payment/addresses"
 					+ "/" + customer;
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
@@ -62,7 +62,7 @@ public class RetrieveByCustomer {
             // Sample response
             // ------------------------------------------------------
             // Response text is an array of address object with json format
-            // Go to https://github.com/PayFabric/APIs/wiki/API-Objects#address for more details about address object.
+            // Go to https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#address for more details about address object.
             // ------------------------------------------------------
 
 		} catch (IOException e) {
