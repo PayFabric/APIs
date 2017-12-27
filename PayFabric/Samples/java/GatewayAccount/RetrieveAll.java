@@ -22,7 +22,7 @@ public class RetrieveAll {
 		
 		try {
 
-			String url = "https://sandbox.payfabric.com/rest/v1/api/setupid";
+			String url = "https://sandbox.payfabric.com/payment/api/setupid";
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 			con.setRequestMethod("GET");
@@ -59,7 +59,7 @@ public class RetrieveAll {
             // Sample response
             // ------------------------------------------------------
             // Response text is an array of gateway account object with json format
-            // Go to https://github.com/PayFabric/APIs/wiki/API-Objects#gateway-account for more details about gateway account object.
+            // Go to https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#gateway-account-profile for more details about gateway account object.
             // ------------------------------------------------------
 			
 		} catch (IOException e) {
