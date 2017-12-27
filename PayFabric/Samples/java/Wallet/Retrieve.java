@@ -25,7 +25,7 @@ public class Retrieve {
 		try {
 			//Options are CreditCard, ECheck
 			String tender = "CreditCard";
-			String url = "https://sandbox.payfabric.com/rest/v1/api/wallet/get"
+			String url = "https://sandbox.payfabric.com/payment/api/wallet/get"
 					+ "/" + customer + "?tender=" + tender;
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
@@ -63,7 +63,7 @@ public class Retrieve {
             // Sample response
             // ------------------------------------------------------
             // Response text is an array of card object with json format
-            // Go to https://github.com/PayFabric/APIs/wiki/API-Objects#card for more details about card object.
+            // Go to https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#card for more details about card object.
             // ------------------------------------------------------
 			
 		} catch (IOException e) {
