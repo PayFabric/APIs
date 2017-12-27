@@ -27,7 +27,7 @@ namespace Samples.Net40
             {
 
                 // Replace url when going live
-                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/token/create";
+                var url = "https://sandbox.payfabric.com/payment/api/token/create";
 
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -35,7 +35,9 @@ namespace Samples.Net40
 
                 // Replace with your own device id and device password
                 httpWebRequest.Headers["authorization"] = "0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc";
-
+                
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                
                 HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
                 Stream responseStream = httpWebResponse.GetResponseStream();
                 StreamReader streamReader = new StreamReader(responseStream);
