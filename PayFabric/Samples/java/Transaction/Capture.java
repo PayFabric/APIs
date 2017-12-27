@@ -28,7 +28,7 @@ public class Capture {
 
 		try {
 
-			String url = "https://sandbox.payfabric.com/rest/v1/api/reference"
+			String url = "https://sandbox.payfabric.com/payment/api/reference"
 					+ "/" + preAuthorizedKey + "?trxtype=Ship";
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
