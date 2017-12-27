@@ -53,7 +53,7 @@ public class Update {
 		try {
 
 			byte[] data = datastring.toString().getBytes("UTF-8");
-			String url = "https://sandbox.payfabric.com/rest/v1/api/transaction/update";
+			String url = "https://sandbox.payfabric.com/payment/api/transaction/update";
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 			con.setRequestMethod("POST");
