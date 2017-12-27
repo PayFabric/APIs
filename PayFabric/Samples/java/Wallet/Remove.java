@@ -26,7 +26,7 @@ public class Remove {
 
 		try {
 
-			String url = "https://sandbox.payfabric.com/rest/v1/api/wallet/delete"
+			String url = "https://sandbox.payfabric.com/payment/api/wallet/delete"
 					+ "/" + cardID.toString();
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
