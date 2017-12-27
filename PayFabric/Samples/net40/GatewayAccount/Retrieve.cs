@@ -31,7 +31,7 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/setupid/" + gatewayAccountId.ToString();
+                var url = "https://sandbox.payfabric.com/payment/api/setupid/" + gatewayAccountId.ToString();
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -50,7 +50,7 @@ namespace Samples.Net40
                 // Sample response
                 // ------------------------------------------------------
                 // Response text is a gateway account object with json format
-                // Go to https://github.com/PayFabric/APIs/wiki/API-Objects#gateway-account for more details about gateway account object.
+                // Go to https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#gateway-account-profile for more details about gateway account object.
                 // ------------------------------------------------------
 
             }
