@@ -8,7 +8,7 @@ class Token {
     public function create() {
         
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/token/create";
+        $httpUrl = "https://sandbox.payfabric.com/payment/api/token/create";
         $httpHeader = Array(
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
