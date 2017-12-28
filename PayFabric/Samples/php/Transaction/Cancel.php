@@ -8,7 +8,7 @@ class Transaction {
     public function cancel($transactionKey) {
         
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/reference/" .  $transactionKey . "?trxtype=Void";
+        $httpUrl = "https://sandbox.payfabric.com/payment/api/reference/" .  $transactionKey . "?trxtype=Void";
         $httpHeader = Array(
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
