@@ -30,7 +30,7 @@ class Wallet {
         $json = json_encode($cardArray, TRUE);
 
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/wallet/update";
+        $httpUrl = "https://sandbox.payfabric.com/payment/api/wallet/update";
         $httpHeader = Array(
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
