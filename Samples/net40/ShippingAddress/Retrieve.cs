@@ -29,6 +29,7 @@ namespace Samples.Net40
             try
             {
                 var url = "https://sandbox.payfabric.com/V2/rest/api/address/" + addressId.ToString();
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -47,7 +48,7 @@ namespace Samples.Net40
                 // Sample response
                 // ------------------------------------------------------
                 // Response text is an address object with json format
-                // Go to https://github.com/PayFabric/APIs/wiki/API-Objects#address for more details about address object.
+                // Go to https://github.com/PayFabric/APIs/blob/v2/Sections/Objects.md#address for more details about address object.
                 // ------------------------------------------------------
 
             }
