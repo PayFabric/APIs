@@ -22,7 +22,7 @@ class GatewayAccount:
                 gatewayAccountId - GUID of gateway account profile
         """
 
-        r = requests.get(url='https://sandbox.payfabric.com/rest/v1/api/setupid/' + gatewayAccountId,
+        r = requests.get(url='https://sandbox.payfabric.com/payment/api/setupid/' + gatewayAccountId,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
                              'authorization': Token().Create()
@@ -32,7 +32,7 @@ class GatewayAccount:
         # Sample response
         # ------------------------------------------------------
         # Response text is a gateway account object with json format
-        # Go to https://github.com/PayFabric/APIs/wiki/API-Objects#gateway-account
+        # Go to https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#gateway-account-profile
         # for more details about gateway account object.
         # ------------------------------------------------------
         #
@@ -42,7 +42,7 @@ class GatewayAccount:
     def RetrieveAll(self):
         """ Retrieve all active gateway account profiles """
 
-        r = requests.get(url='https://sandbox.payfabric.com/rest/v1/api/setupid',
+        r = requests.get(url='https://sandbox.payfabric.com/payment/api/setupid',
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
                              'authorization': Token().Create()
@@ -54,7 +54,7 @@ class GatewayAccount:
         # Sample response
         # ------------------------------------------------------
         # Response text is an array of gateway account object with json format
-        # Go to https://github.com/PayFabric/APIs/wiki/API-Objects#gateway-account
+        # Go to https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#gateway-account-profile
         # for more details about gateway account object.
         # ------------------------------------------------------
         #
