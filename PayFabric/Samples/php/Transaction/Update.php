@@ -24,7 +24,7 @@ class Transaction {
         $json = json_encode($transaction, TRUE);
 
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/transaction/update";
+        $httpUrl = "https://sandbox.payfabric.com/payment/api/transaction/update";
         $httpHeader = Array(
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
