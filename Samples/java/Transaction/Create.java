@@ -42,7 +42,7 @@ public class Create {
 		try {
 
 			byte[] data = datastring.toString().getBytes("UTF-8");
-			String url = "https://sandbox.payfabric.com/rest/v1/api/transaction/create";
+			String url = "https://sandbox.payfabric.com/v2/rest/api/transaction/create";
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 			con.setRequestMethod("POST");
