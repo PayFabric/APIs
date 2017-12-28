@@ -11,9 +11,9 @@ module PayFabric
     def create(divece_id, password, sandbox) 
       authorization = "#{divece_id}|#{password}"
       url = if sandbox
-          "https://sandbox.payfabric.com/rest/v1/api/token/create"
+          "https://sandbox.payfabric.com/payment/api/token/create"
         else
-          "https://payfabric.com/rest/v1/api/token/create"
+          "https://www.payfabric.com/payment/api/token/create"
         end
       response = RestClient.get(url, 
         :accept => :json, 
