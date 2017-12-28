@@ -27,7 +27,8 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/transaction/" + transactionKey;
+                var url = "https://sandbox.payfabric.com/payment/api/transaction/" + transactionKey;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -45,7 +46,7 @@ namespace Samples.Net40
                 //
                 // "result" is a Transaction object with json format
                 // 
-                // Go to https://github.com/PayFabric/APIs/wiki/API-Objects#transaction for details
+                // Go to https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#transaction for details
                 //
 
 
