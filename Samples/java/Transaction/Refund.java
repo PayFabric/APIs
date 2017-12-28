@@ -55,7 +55,7 @@ public class Refund {
 		try {
 
 			byte[] data = datastring.toString().getBytes("UTF-8");
-			String url = "https://sandbox.payfabric.com/rest/v1/api/transaction/process";
+			String url = "https://sandbox.payfabric.com/v2/rest/api/transaction/process";
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 			con.setRequestMethod("POST");
