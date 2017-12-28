@@ -8,7 +8,7 @@ class Wallet {
     public function removeCard($cardId) {
         
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/wallet/delete/" . $cardId;
+        $httpUrl = "https://sandbox.payfabric.com/payment/api/wallet/delete/" . $cardId;
         $httpHeader = Array(
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
