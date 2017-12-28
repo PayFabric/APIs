@@ -25,7 +25,7 @@ public class Cancel {
 		
 		try {
 
-			String url = "https://sandbox.payfabric.com/rest/v1/api/reference" + "/" + originalKey + "?trxtype=Void";
+			String url = "https://sandbox.payfabric.com/v2/rest/api/reference" + "/" + originalKey + "?trxtype=Void";
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
 			con.setRequestMethod("GET");
