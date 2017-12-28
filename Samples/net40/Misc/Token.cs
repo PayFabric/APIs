@@ -28,7 +28,7 @@ namespace Samples.Net40
 
                 // Replace url when going live
                 var url = "https://sandbox.payfabric.com/V2/rest/api/token/create";
-
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
                 httpWebRequest.Method = "GET";
