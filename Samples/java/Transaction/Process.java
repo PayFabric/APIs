@@ -26,7 +26,7 @@ public class Process {
 		
 		try {
 
-			String url = "https://sandbox.payfabric.com/rest/v1/api/transaction/process"
+			String url = "https://sandbox.payfabric.com/v2/rest/api/transaction/process"
 					+ "/" + transactionKey;
 			URL obj = new URL(url);
 			HttpsURLConnection con = (HttpsURLConnection) obj.openConnection();
