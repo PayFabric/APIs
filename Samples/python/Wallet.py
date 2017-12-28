@@ -44,7 +44,7 @@ class Wallet:
             'UserDefined2': 'Example'
         }
 
-        r = requests.post(url='https://sandbox.payfabric.com/rest/v1/api/wallet/create',
+        r = requests.post(url='https://sandbox.payfabric.com/v2/rest/api/wallet/create',
                           data=json.dumps(data),
                           headers={
                               'Content-Type': 'application/json; charset=utf-8',
@@ -70,7 +70,7 @@ class Wallet:
         :return: all cards by customer
         """
 
-        r = requests.get(url='https://sandbox.payfabric.com/rest/v1/api/wallet/get/' + customer,
+        r = requests.get(url='https://sandbox.payfabric.com/v2/rest/api/wallet/get/' + customer,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
                              'authorization': Token().Create()
@@ -82,7 +82,7 @@ class Wallet:
         # Sample response
         # ------------------------------------------------------
         # Response text is an array of card object with json format
-        # Go to https:#github.com/PayFabric/APIs/wiki/API-Objects#card for more details about card object.
+        # Go to https:#github.com/PayFabric/APIs/blob/v2/Sections/Objects.md#card for more details about card object.
         # ------------------------------------------------------
         #
         return r.json()
@@ -105,7 +105,7 @@ class Wallet:
             'UserDefined1': 'New Update', 'UserDefined2': 'New Update'
         }
 
-        r = requests.post(url='https://sandbox.payfabric.com/rest/v1/api/wallet/update',
+        r = requests.post(url='https://sandbox.payfabric.com/v2/rest/api/wallet/update',
                           data=json.dumps(data),
                           headers={
                               'Content-Type': 'application/json; charset=utf-8',
@@ -130,7 +130,7 @@ class Wallet:
         :return: removing result
         """
 
-        r = requests.get(url='https://sandbox.payfabric.com/rest/v1/api/wallet/delete/' + cardId,
+        r = requests.get(url='https://sandbox.payfabric.com/v2/rest/api/wallet/delete/' + cardId,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
                              'authorization': Token().Create()
