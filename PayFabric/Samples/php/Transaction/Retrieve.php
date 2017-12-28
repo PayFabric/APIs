@@ -8,7 +8,7 @@ class Transaction {
     public function retrieve($transactionKey) {
         
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/transaction/" .  $transactionKey;
+        $httpUrl = "https://sandbox.payfabric.com/payment/api/transaction/" .  $transactionKey;
         $httpHeader = Array(
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
