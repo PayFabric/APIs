@@ -32,6 +32,7 @@ namespace Samples.Net40
             try
             {
                 var url = "https://sandbox.payfabric.com/V2/rest/api/setupid/" + gatewayAccountId.ToString();
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
