@@ -39,7 +39,7 @@ class Transaction:
             },
         }
 
-        r = requests.post(url='https://sandbox.payfabric.com/rest/v1/api/transaction/create',
+        r = requests.post(url='https://sandbox.payfabric.com/v2/rest/api/transaction/create',
                           data=json.dumps(data),
                           headers={
                               'Content-Type': 'application/json; charset=utf-8',
@@ -58,7 +58,7 @@ class Transaction:
         :return: retrieved transaction (JSON format)
         """
 
-        r = requests.get(url='https://sandbox.payfabric.com/rest/v1/api/transaction/' + transactionKey,
+        r = requests.get(url='https://sandbox.payfabric.com/v2/rest/api/transaction/' + transactionKey,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
                              'authorization': Token().Create()
@@ -68,7 +68,7 @@ class Transaction:
 
         # "result" is a Transaction object with json format
         # 
-        # Go to https:#github.com/PayFabric/APIs/wiki/API-Objects#transaction for details
+        # Go to https:#github.com/PayFabric/APIs/blob/v2/Sections/Objects.md#transaction for details
         #
         return r.json()
 
@@ -103,7 +103,7 @@ class Transaction:
             }
         }
 
-        r = requests.post(url='https://sandbox.payfabric.com/rest/v1/api/transaction/update',
+        r = requests.post(url='https://sandbox.payfabric.com/v2/rest/api/transaction/update',
                           data=json.dumps(data),
                           headers={
                               'Content-Type': 'application/json; charset=utf-8',
@@ -128,7 +128,7 @@ class Transaction:
         :return: process result (JSON object)
         """
 
-        r = requests.get(url='https://sandbox.payfabric.com/rest/v1/api/transaction/process/' + transactionKey,
+        r = requests.get(url='https://sandbox.payfabric.com/v2/rest/api/transaction/process/' + transactionKey,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
                              'authorization': Token().Create()
@@ -187,7 +187,7 @@ class Transaction:
             }
         }
 
-        r = requests.post(url='https://sandbox.payfabric.com/rest/v1/api/transaction/process',
+        r = requests.post(url='https://sandbox.payfabric.com/v2/rest/api/transaction/process',
                           data=json.dumps(data),
                           headers={
                               'Content-Type': 'application/json; charset=utf-8',
@@ -223,7 +223,7 @@ class Transaction:
                 originalKey - Original transaction key
         """
 
-        r = requests.get(url='https://sandbox.payfabric.com/rest/v1/api/reference/' + originalKey + '?trxtype=Void',
+        r = requests.get(url='https://sandbox.payfabric.com/v2/rest/api/reference/' + originalKey + '?trxtype=Void',
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
                              'authorization': Token().Create()
@@ -261,7 +261,7 @@ class Transaction:
         """
 
         r = requests.get(
-            url='https://sandbox.payfabric.com/rest/v1/api/reference/' + preAuthorizedKey + '?trxtype=Ship',
+            url='https://sandbox.payfabric.com/v2/rest/api/reference/' + preAuthorizedKey + '?trxtype=Ship',
             headers={
                 'Content-Type': 'application/json; charset=utf-8',
                 'authorization': Token().Create()
