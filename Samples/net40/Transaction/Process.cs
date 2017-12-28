@@ -28,6 +28,7 @@ namespace Samples.Net40
             try
             {
                 var url = "https://sandbox.payfabric.com/V2/Rest/api/transaction/process/" + transactionKey;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -203,6 +204,7 @@ namespace Samples.Net40
                 #endregion
 
                 var url = "https://sandbox.payfabric.com/V2/Rest/api/transaction/process";
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 byte[] data = System.Text.Encoding.UTF8.GetBytes(datastring.ToString());
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
