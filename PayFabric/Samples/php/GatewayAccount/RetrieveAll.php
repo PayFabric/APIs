@@ -8,7 +8,7 @@ class GatewayAccount {
     public function retrieveAll() {
 
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/setupid";
+        $httpUrl = "https://sandbox.payfabric.com/payment/api/setupid";
         $httpHeader = Array(
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
