@@ -42,6 +42,7 @@ namespace Samples.Net40
                 // POST
                 byte[] data = System.Text.Encoding.UTF8.GetBytes(datastring.ToString());
                 var url = "https://sandbox.payfabric.com/V2/Rest/api/transaction/create";
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
                 httpWebRequest.Headers["authorization"] = new Token().Create();
