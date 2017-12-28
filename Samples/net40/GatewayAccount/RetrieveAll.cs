@@ -46,7 +46,7 @@ namespace Samples.Net40
                 // Sample response
                 // ------------------------------------------------------
                 // Response text is an array of gateway account object with json format
-                // Go to https://github.com/PayFabric/APIs/wiki/API-Objects#gateway-account for more details about gateway account object.
+                // Go to https://github.com/PayFabric/APIs/blob/v2/Sections/Objects.md#gateway-account-profile for more details about gateway account object.
                 // ------------------------------------------------------
 
             }
