@@ -8,7 +8,7 @@ class GatewayAccount {
     public function retrieveByGatewayAccountId($gatewayAccountId) {
 
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/setupid/" . $gatewayAccountId;
+        $httpUrl = "https://sandbox.payfabric.com/payment/api/setupid/" . $gatewayAccountId;
         $httpHeader = Array(
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
