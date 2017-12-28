@@ -27,7 +27,7 @@ module PayFabric
       extend self 
 
       #  ## Retrieve Shipping Addresses By Customer
-      #  [Info](https://github.com/PayFabric/APIs/wiki#retrieve-shipping-addresses-by-customer)
+      #  [Info](https://github.com/PayFabric/APIs/blob/v2/Sections/Addresses.md#retrieve-a-shipping-address)
       #  
       #  +customer+ - unique name of custumer
       #  
@@ -37,15 +37,15 @@ module PayFabric
       #    array = PayFabric::ShippingAdress::Sandbox::retrieve_by_customer(device_id, password, customer)
       #    array # => [{"ID" => "123"}, {"ID" => "124"}, {"ID" => "125"}]
       #    
-      #  @return [Array with Adresses](https://github.com/PayFabric/APIs/wiki/API-Objects#address)
+      #  @return [Array with Adresses](https://github.com/PayFabric/APIs/blob/v2/Sections/Objects.md#address)
       #
       def retrieve_by_customer(device_id, password, customer)
-        url = "https://sandbox.payfabric.com/rest/v1/api/addresses/#{customer}"
+        url = "https://sandbox.payfabric.com/v2/rest/api/addresses/#{customer}"
         Share::retrieve_by_customer(url, device_id, password)
       end
 
       #  ## Retrieve Shipping Address By Id
-      #  [Info](https://github.com/PayFabric/APIs/wiki#retrieve-shipping-address-by-id)
+      #  [Info](https://github.com/PayFabric/APIs/blob/v2/Sections/Addresses.md#retrieve-shipping-addresses)
       #  
       #  +id+ - customer id
       #  
@@ -55,10 +55,10 @@ module PayFabric
       #    hash = PayFabric::ShippingAdress::Sandbox::retrieve(device_id, password, id)
       #    hash # => {"ID" => "123"}
       #
-      #  @return [Adress Hash](https://github.com/PayFabric/APIs/wiki/API-Objects#address)
+      #  @return [Adress Hash](https://github.com/PayFabric/APIs/blob/v2/Sections/Objects.md#address)
       #
       def retrieve(device_id, password, id)
-        url = "https://sandbox.payfabric.com/rest/v1/api/address/#{id}"
+        url = "https://sandbox.payfabric.com/v2/rest/api/address/#{id}"
         Share::retrieve(url, device_id, password)
       end
     end
@@ -67,12 +67,12 @@ module PayFabric
       extend self
 
       def retrieve_by_customer(device_id, password, customer)
-        url = "https://payfabric.com/rest/v1/api/addresses/#{customer}"
+        url = "https://www.payfabric.com/v2/rest/api/addresses/#{customer}"
         Share::retrieve_by_customer(url, device_id, password)
       end
 
       def retrieve(device_id, password, id)
-        url = "https://payfabric.com/rest/v1/api/address/#{id}"
+        url = "https://www.payfabric.com/v2/rest/api/address/#{id}"
         Share::retrieve(url, device_id, password)
       end
     end
