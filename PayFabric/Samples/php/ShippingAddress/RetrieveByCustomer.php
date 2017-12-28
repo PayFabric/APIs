@@ -8,7 +8,7 @@ class ShippingAddress {
     public function retrieveByCustomerId($customerId) {
         
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/addresses/" . $customerId;
+        $httpUrl = "https://sandbox.payfabric.com/payment/api/addresses/" . $customerId;
         $httpHeader = Array(
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
