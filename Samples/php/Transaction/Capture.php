@@ -8,7 +8,7 @@ class Transaction {
     public function capture($transactionKey) {
         
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/reference/"
+        $httpUrl = "https://sandbox.payfabric.com/v2/rest/api/reference/"
                 .  $transactionKey .  "?trxtype=Ship";
         $httpHeader = Array(
                 "Content-Type: application/json",
