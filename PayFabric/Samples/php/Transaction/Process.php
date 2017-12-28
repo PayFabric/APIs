@@ -8,7 +8,7 @@ class Transaction {
     public function process($transactionKey) {
         
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/transaction/process/" .  $transactionKey;
+        $httpUrl = "https://sandbox.payfabric.com/payment/api/transaction/process/" .  $transactionKey;
         $httpHeader = Array(
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
