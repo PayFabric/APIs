@@ -56,6 +56,7 @@ namespace Samples.Net40
                 // POST
                 byte[] data = System.Text.Encoding.UTF8.GetBytes(datastring.ToString());
                 var url = "https://sandbox.payfabric.com/v2/rest/api/transaction/update";
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
