@@ -20,7 +20,7 @@ class ShippingAddress:
                 addressId - Address GUID
         """
 
-        r = requests.get(url='https://sandbox.payfabric.com/rest/v1/api/address/' + addressId,
+        r = requests.get(url='https://sandbox.payfabric.com/v2/rest/api/address/' + addressId,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
                              'authorization': Token().Create()
@@ -31,7 +31,7 @@ class ShippingAddress:
         # Sample response
         # ------------------------------------------------------
         # Response text is an address object with json format
-        # Go to https://github.com/PayFabric/APIs/wiki/API-Objects#address for more details about address object.
+        # Go to https://github.com/PayFabric/APIs/blob/v2/Sections/Objects.md#address for more details about address object.
         # ------------------------------------------------------
         #
         return r.json()
@@ -43,7 +43,7 @@ class ShippingAddress:
         :return: all shipping addresses
         """
 
-        r = requests.get(url='https://sandbox.payfabric.com/rest/v1/api/addresses/' + customer,
+        r = requests.get(url='https://sandbox.payfabric.com/v2/rest/api/addresses/' + customer,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
                              'authorization': Token().Create()
@@ -54,7 +54,7 @@ class ShippingAddress:
         # Sample response
         # ------------------------------------------------------
         # Response text is an array of address object with json format
-        # Go to https://github.com/PayFabric/APIs/wiki/API-Objects#address for more details about address object.
+        # Go to https://github.com/PayFabric/APIs/blob/v2/Sections/Objects.md#address for more details about address object.
         # ------------------------------------------------------
         #
         return r.json();
