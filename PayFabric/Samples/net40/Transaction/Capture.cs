@@ -29,7 +29,8 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/reference/" + preAuthorizedKey + "?trxtype=Ship";
+                var url = "https://sandbox.payfabric.com/payment/api/reference/" + preAuthorizedKey + "?trxtype=Ship";
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
                 httpWebRequest.Headers["authorization"] = new Token().Create(); 
@@ -111,7 +112,7 @@ namespace Samples.Net40
 
                 // POST
                 byte[] data = System.Text.Encoding.UTF8.GetBytes(datastring.ToString());
-                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/transaction/process";
+                var url = "https://sandbox.payfabric.com/payment/api/transaction/process";
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
