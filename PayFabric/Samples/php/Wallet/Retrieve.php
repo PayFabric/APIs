@@ -8,7 +8,7 @@ class Wallet {
     public function retrieveCardsByCustomerId($customerId, $cardType) {
         
         // Setup the HTTP request.
-        $httpUrl = "https://sandbox.payfabric.com/rest/v1/api/wallet/get/" . $customerId . "?tender=" . $cardType;
+        $httpUrl = "https://sandbox.payfabric.com/payment/api/wallet/get/" . $customerId . "?tender=" . $cardType;
         $httpHeader = Array(
                 "Content-Type: application/json",
                 "authorization: " . DEVICE_ID . "|" . DEVICE_PASSWORD);        
