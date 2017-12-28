@@ -29,7 +29,8 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/wallet/get/" + customer + "?tender=" + tender;
+                var url = "https://sandbox.payfabric.com/payment/api/wallet/get/" + customer + "?tender=" + tender;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -71,7 +72,8 @@ namespace Samples.Net40
         {
             try
             {
-                var url = "https://sandbox.payfabric.com/V3/PayFabric/rest/api/wallet/get/" + walletID;
+                var url = "https://sandbox.payfabric.com/payment/api/wallet/get/" + walletID;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
@@ -90,7 +92,7 @@ namespace Samples.Net40
                 // Sample response
                 // ------------------------------------------------------
                 // Response text is an array of card object with json format
-                // Go to https://github.com/PayFabric/APIs/wiki/API-Objects#card for more details about card object.
+                // Go to https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#transaction for more details about card object.
                 // ------------------------------------------------------
 
             }
