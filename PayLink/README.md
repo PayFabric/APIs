@@ -38,7 +38,7 @@ Many of these objects are used in both requests and responses. Some of the objec
 as child elements of other objects.
 
 ### PayLinks
-* [Create a PayLink](/Sections/PayLinks.md#create-a-paylink)
+* [Create a PayLink](/PayLink/Sections/PayLinks.md#create-a-paylink)
 * [Update a PayLink](/Sections/PayLinks.md#update-a-paylink)
 * [Retrieve a PayLink](/Sections/PayLinks.md#retrieve-a-paylink)
 * [Retrieve PayLinks](/Sections/PayLinks.md#retrieve-paylinks)
