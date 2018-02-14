@@ -10,7 +10,7 @@ Where do I start?
 
 Want to get started with PayLink API integration? Here's a quick check list:
 
-1. Configure a PayLink service, check out the [Configure Portal](../../../Portal/blob/master/PayLink/README.md) to learn how.
+1. Configure a PayLink service, check out the [Configure Portal](https://github.com/PayFabric/Portal/blob/master/PayLink/README.md) to learn how.
 2. Read up on how to [authenticate](#authentication) with our APIs. 
 3. Read up on how to [handle errors](#handling-exceptions) with our APIs.
 4. Browse the [API docs](#api-documentation) for the API you need to work with.
