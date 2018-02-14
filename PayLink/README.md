@@ -39,22 +39,22 @@ as child elements of other objects.
 
 ### PayLinks
 * [Create a PayLink](/PayLink/Sections/PayLinks.md#create-a-paylink)
-* [Update a PayLink](/Sections/PayLinks.md#update-a-paylink)
-* [Retrieve a PayLink](/Sections/PayLinks.md#retrieve-a-paylink)
-* [Retrieve PayLinks](/Sections/PayLinks.md#retrieve-paylinks)
-* [Retrieve a PayLink URL](/Sections/PayLinks.md#retrieve-a-paylink-url)
-* [Remove a PayLink](/Sections/PayLinks.md#remove-a-paylink)
-* [Cancel a PayLink](/Sections/PayLinks.md#cancel-a-paylink)
+* [Update a PayLink](/PayLink/Sections/PayLinks.md#update-a-paylink)
+* [Retrieve a PayLink](/PayLink/Sections/PayLinks.md#retrieve-a-paylink)
+* [Retrieve PayLinks](/PayLink/Sections/PayLinks.md#retrieve-paylinks)
+* [Retrieve a PayLink URL](/PayLink/Sections/PayLinks.md#retrieve-a-paylink-url)
+* [Remove a PayLink](/PayLink/Sections/PayLinks.md#remove-a-paylink)
+* [Cancel a PayLink](/PayLink/Sections/PayLinks.md#cancel-a-paylink)
 
 ### WalletLinks
-* [Create a WalletLink](/Sections/WalletLinks.md#create-a-walletlink)
-* [Retrieve a WalletLink URL](/Sections/WalletLinks.md#retrieve-a-walletlink-url)
-* [Cancel a WalletLink](/Sections/WalletLinks.md#cancel-a-walletlink)
+* [Create a WalletLink](/PayLink/Sections/WalletLinks.md#create-a-walletlink)
+* [Retrieve a WalletLink URL](/PayLink/Sections/WalletLinks.md#retrieve-a-walletlink-url)
+* [Cancel a WalletLink](/PayLink/Sections/WalletLinks.md#cancel-a-walletlink)
 
 ### Notifications
-* [Resend PayLink Notification Email](/Sections/Notifications.md#resend-paylink-notifiation-email)
-* [Resend PayLink Notification SMS](/Sections/Notifications.md#resend-paylink-notification-sms)
-* [Retrieve SMS Notification Templates](/Sections/Notifications.md#retrieve-sms-notification-templates)
+* [Resend PayLink Notification Email](/PayLink/Sections/Notifications.md#resend-paylink-notifiation-email)
+* [Resend PayLink Notification SMS](/PayLink/Sections/Notifications.md#resend-paylink-notification-sms)
+* [Retrieve SMS Notification Templates](/PayLink/Sections/Notifications.md#retrieve-sms-notification-templates)
 
 
 Help us make it better
