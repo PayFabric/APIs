@@ -28,7 +28,7 @@ Handling Exceptions
 -------------------
 PayLink uses HTTP response codes to indicate the status of requests. 
 
-We have a [guide](/Sections/Errors.md) detailing the meanings of the most common response codes that you will encounter. 
+We have a [guide](/PayLink/Sections/Errors.md) detailing the meanings of the most common response codes that you will encounter. 
 
 
 API Documentation
