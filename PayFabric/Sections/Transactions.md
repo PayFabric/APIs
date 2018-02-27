@@ -49,7 +49,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 
 ###### Related Reading
 * [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
-* [Which Transaction Type to Use](https://github.com/PayFabric/Portal/blob/master/Sections/Transaction%20Types.md)
+* [Which Transaction Type to Use](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md)
 
 ###### Response
 <pre>
@@ -185,7 +185,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 
 ###### Related Reading
 * [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
-* [Which Transaction Type to Use](https://github.com/PayFabric/Portal/blob/master/Sections/Transaction%20Types.md)
+* [Which Transaction Type to Use](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md)
 
 ###### Response
 <pre>
