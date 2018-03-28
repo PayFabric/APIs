@@ -107,7 +107,7 @@ The Document object is used to represent additional invoice, order, or other Lev
 |DefaultBillTo|[Object](#address)| Address object. no restriction to these address fields, partially input is acceptable.|
 
 ### Related Reading
-* [Level 2 and Level 3 Fields](Level-2-and-Level-3-Fields.md)
+* [Level 2 and Level 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 
 ## Transaction
 The Transaction object represents a single transaction that will pass through PayFabric and be submitted to a Payment Gateway. It is probably the most important and most common object.
