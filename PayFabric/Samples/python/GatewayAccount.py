@@ -21,11 +21,11 @@ class GatewayAccount:
             Keywords:
                 gatewayAccountId - GUID of gateway account profile
         """
-
+        # Replace with your own device id and device password
         r = requests.get(url='https://sandbox.payfabric.com/payment/api/setupid/' + gatewayAccountId,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
-                             'authorization': Token().Create()
+                             'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                          })
 
         #
@@ -41,11 +41,11 @@ class GatewayAccount:
 
     def RetrieveAll(self):
         """ Retrieve all active gateway account profiles """
-
+        # Replace with your own device id and device password
         r = requests.get(url='https://sandbox.payfabric.com/payment/api/setupid',
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
-                             'authorization': Token().Create()
+                             'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                          })
 
         print r.status_code, r.text
