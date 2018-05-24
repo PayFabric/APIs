@@ -41,7 +41,7 @@ module PayFabric
       #  @return [Array of Gateway Account](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#gateway-account-profile)
       #
       def retrieve_all(device_id, password)
-        url = "https://sandbox.payfabric.com/rest/v1/api/setupid"
+        url = "https://sandbox.payfabric.com/payment/api/setupid"
         Share::retrieve_all(url, device_id, password)
       end  
 
