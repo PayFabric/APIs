@@ -1,7 +1,7 @@
 WalletLinks
 ===========
 
-The WalletLinks API is used for creating and retrieving WalletLinks. Please note that all requests require API authentication by PayFabric *Device ID* and *Device Password*, see our [guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md) on how to create a token.
+The WalletLinks API is used for creating and retrieving WalletLinks. Please note that all requests require API authentication by PayFabric *Device ID* and *Device Password*, see our [guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md).
 
 Create a WalletLink
 ----------------
