@@ -34,7 +34,10 @@ namespace Samples.Net40
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
-                httpWebRequest.Headers["authorization"] = new Token().Create();
+                 
+                // Replace with your own device id and device password
+                httpWebRequest.Headers["authorization"] = "0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc";
+                
                 HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
                 Stream responseStream = httpWebResponse.GetResponseStream();
                 StreamReader streamReader = new StreamReader(responseStream);
@@ -77,7 +80,10 @@ namespace Samples.Net40
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.Method = "GET";
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
-                httpWebRequest.Headers["authorization"] = new Token().Create();
+                 
+                // Replace with your own device id and device password
+                httpWebRequest.Headers["authorization"] = "0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc";
+                
                 HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
                 Stream responseStream = httpWebResponse.GetResponseStream();
                 StreamReader streamReader = new StreamReader(responseStream);
@@ -92,7 +98,7 @@ namespace Samples.Net40
                 // Sample response
                 // ------------------------------------------------------
                 // Response text is an array of card object with json format
-                // Go to https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#transaction for more details about card object.
+                // Go to https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#card for more details about card object.
                 // ------------------------------------------------------
 
             }
