@@ -43,12 +43,12 @@ class Wallet:
             'UserDefined1': 'Example',
             'UserDefined2': 'Example'
         }
-
+        # Replace with your own device id and device password
         r = requests.post(url='https://sandbox.payfabric.com/payment/api/wallet/create',
                           data=json.dumps(data),
                           headers={
                               'Content-Type': 'application/json; charset=utf-8',
-                              'authorization': Token().Create()
+                              'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                           })
 
         print r.status_code, r.text
@@ -69,11 +69,11 @@ class Wallet:
         :param customer: Customer unique name
         :return: all cards by customer
         """
-
+        # Replace with your own device id and device password
         r = requests.get(url='https://sandbox.payfabric.com/payment/api/wallet/get/' + customer,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
-                             'authorization': Token().Create()
+                             'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                          })
 
         print r.status_code, r.text
@@ -104,12 +104,12 @@ class Wallet:
                 },
             'UserDefined1': 'New Update', 'UserDefined2': 'New Update'
         }
-
+        # Replace with your own device id and device password
         r = requests.post(url='https://sandbox.payfabric.com/payment/api/wallet/update',
                           data=json.dumps(data),
                           headers={
                               'Content-Type': 'application/json; charset=utf-8',
-                              'authorization': Token().Create()
+                              'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                           })
 
         print r.status_code, r.text
@@ -129,11 +129,11 @@ class Wallet:
         :param cardId: Card guid
         :return: removing result
         """
-
+        # Replace with your own device id and device password
         r = requests.get(url='https://sandbox.payfabric.com/payment/api/wallet/delete/' + cardId,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
-                             'authorization': Token().Create()
+                             'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                          })
 
         print r.status_code, r.text
