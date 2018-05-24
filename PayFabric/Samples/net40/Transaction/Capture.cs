@@ -33,7 +33,10 @@ namespace Samples.Net40
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
-                httpWebRequest.Headers["authorization"] = new Token().Create(); 
+                 
+                // Replace with your own device id and device password
+                httpWebRequest.Headers["authorization"] = "0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc";
+                
                 HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse; 
                 Stream responseStream = httpWebResponse.GetResponseStream(); 
                 StreamReader streamReader = new StreamReader(responseStream); 
@@ -117,7 +120,10 @@ namespace Samples.Net40
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
                 httpWebRequest.ContentType = "application/json; charset=utf-8";
-                httpWebRequest.Headers["authorization"] = new Token().Create();
+                 
+                // Replace with your own device id and device password
+                httpWebRequest.Headers["authorization"] = "0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc";
+                
                 httpWebRequest.Method = "POST";
                 httpWebRequest.ContentLength = data.Length;
                 Stream stream = httpWebRequest.GetRequestStream();
