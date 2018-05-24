@@ -19,7 +19,7 @@ Want to get started with PayFabric API integration? Here's a quick check list:
 
 Authentication
 --------------
-PayFabric clients have two ways to authenticate, *Device ID* and *Password* authentication and *Security Token* authentication.
+PayFabric clients require PayFabric *Device ID* and *Password*  to authenticate with APIs.
 
 We have a [detailed guide](Sections/Authentication.md) for authenticating your users with our APIs.
 
