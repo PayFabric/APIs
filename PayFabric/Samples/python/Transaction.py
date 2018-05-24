@@ -38,12 +38,12 @@ class Transaction:
                 'Email': 'support@payfabric.com'
             },
         }
-
+        # Replace with your own device id and device password
         r = requests.post(url='https://sandbox.payfabric.com/payment/api/transaction/create',
                           data=json.dumps(data),
                           headers={
                               'Content-Type': 'application/json; charset=utf-8',
-                              'authorization': Token().Create()
+                              'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                           })
 
         print r.status_code, r.text
@@ -57,11 +57,11 @@ class Transaction:
         :param transactionKey: Transaction key
         :return: retrieved transaction (JSON format)
         """
-
+        # Replace with your own device id and device password
         r = requests.get(url='https://sandbox.payfabric.com/payment/api/transaction/' + transactionKey,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
-                             'authorization': Token().Create()
+                             'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                          })
 
         print r.status_code, r.text
@@ -102,12 +102,12 @@ class Transaction:
                 }
             }
         }
-
-        r = requests.post(url='https://sandbox.payfabric.com/rest/v1/api/transaction/update',
+        # Replace with your own device id and device password
+        r = requests.post(url='https://sandbox.payfabric.com/payment/api/transaction/update',
                           data=json.dumps(data),
                           headers={
                               'Content-Type': 'application/json; charset=utf-8',
-                              'authorization': Token().Create()
+                              'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                           })
 
         print r.status_code, r.text
@@ -127,11 +127,11 @@ class Transaction:
         :param transactionKey: PayFabric transaction which is ready to process
         :return: process result (JSON object)
         """
-
+        # Replace with your own device id and device password
         r = requests.get(url='https://sandbox.payfabric.com/payment/api/transaction/process/' + transactionKey,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
-                             'authorization': Token().Create()
+                             'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                          })
 
         print r.status_code, r.text
@@ -186,12 +186,12 @@ class Transaction:
                 }
             }
         }
-
+        # Replace with your own device id and device password
         r = requests.post(url='https://sandbox.payfabric.com/payment/api/transaction/process',
                           data=json.dumps(data),
                           headers={
                               'Content-Type': 'application/json; charset=utf-8',
-                              'authorization': Token().Create()
+                              'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                           })
 
         print r.status_code, r.text
@@ -222,11 +222,11 @@ class Transaction:
             Keywords:
                 originalKey - Original transaction key
         """
-
+        # Replace with your own device id and device password
         r = requests.get(url='https://sandbox.payfabric.com/payment/api/reference/' + originalKey + '?trxtype=Void',
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
-                             'authorization': Token().Create()
+                             'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                          })
 
         print r.status_code, r.text
@@ -259,12 +259,12 @@ class Transaction:
             Keywords:
                 preAuthorizedKey - Original pre-authorized transaction key
         """
-
+        # Replace with your own device id and device password
         r = requests.get(
             url='https://sandbox.payfabric.com/payment/api/reference/' + preAuthorizedKey + '?trxtype=Ship',
             headers={
                 'Content-Type': 'application/json; charset=utf-8',
-                'authorization': Token().Create()
+                'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
             })
 
         print r.status_code, r.text
