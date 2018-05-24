@@ -1,7 +1,7 @@
 Notifications
 =============
 
-The Notifications API is used for resending PayLink notifications, and retrieve available SMS notification templates. Please note that all requests require API authentication by PayFabric Device ID and Device Password, see our [guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md) on how to create a token.
+The Notifications API is used for resending PayLink notifications, and retrieve available SMS notification templates. Please note that all requests require API authentication by PayFabric *Device ID* and *Device Password*, see our [guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md).
 
 Resend PayLink Notification Email
 ---------------------------------
