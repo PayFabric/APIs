@@ -31,7 +31,10 @@ public class RetrieveByCustomer {
 			con.setRequestMethod("GET");
 			con.setRequestProperty("Content-Type",
 					"application/json; charset=utf-8");
-			con.setRequestProperty("authorization", new Token().Create());
+						
+			// Replace with your own device id and device password
+			con.setRequestProperty("authorization", "0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc");
+			
 			con.setDoOutput(true);
 
 			InputStream stream;
