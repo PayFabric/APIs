@@ -20,10 +20,11 @@ class ShippingAddress:
                 addressId - Address GUID
         """
 
+        # Replace with your own device id and device password
         r = requests.get(url='https://sandbox.payfabric.com/payment/api/address/' + addressId,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
-                             'authorization': Token().Create()
+                             'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                          })
 
         print r.status_code, r.text
@@ -42,11 +43,11 @@ class ShippingAddress:
         :param customer: Customer unique name
         :return: all shipping addresses
         """
-
+        # Replace with your own device id and device password
         r = requests.get(url='https://sandbox.payfabric.com/payment/api/addresses/' + customer,
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
-                             'authorization': Token().Create()
+                             'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                          })
 
         print r.status_code, r.text
