@@ -20,7 +20,7 @@ class Token:
         r = requests.get(url='https://sandbox.payfabric.com/payment/api/token/create',
                          headers={
                              'Content-Type': 'application/json; charset=utf-8',
-                             'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc',
+                             'authorization': '0ad64468-f4bc-0c99-4e31-bd08dd862c43|123456abc'
                          })
 
         return r.json()['Token']
