@@ -19,9 +19,9 @@ Want to get started with PayLink API integration? Here's a quick check list:
 
 Authentication
 --------------
-PayLink clients require a PayFabric *Security Token* to authenticate with APIs.
+PayLink clients require PayFabric *Device ID* and *Device Password* to authenticate with APIs.
 
-We have a [detailed guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md) in our PayFabric documentation for creating a new *Security Token*.
+We have a [detailed guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md) in our PayFabric documentation for more details.
 
 
 Handling Exceptions
