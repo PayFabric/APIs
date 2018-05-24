@@ -1,7 +1,7 @@
 PayLinks
 ========
 
-The PayLinks API is used for creating, updating and retrieving PayLinks. Please note that all requests require API authentication by PayFabric *Security Token*, see our [guide](https://github.com/PayFabric/APIs/blob/master/Sections/Authentication.md#security-token) on how to create a token.
+The PayLinks API is used for creating, updating and retrieving PayLinks. Please note that all requests require API authentication by PayFabric *Security Token*, see our [guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md) on how to create a token.
 
 Create a PayLink
 ----------------
@@ -56,7 +56,7 @@ Create a PayLink
 Please note that **bold** fields are required fields, the **Payment** object *or* **SetupId** field must be supplied, and all others are optional. The **Status** field can be used to set the PayLink document status; specify 0 to save the document as a draft, specify 1 to save the document as an active document ready for payment. For more information and descriptions on available fields please see our [JSON Objects](JSON%20Objects.md#paylink-document).
 
 ###### Related Reading
-* [Which Transaction Type to Use](../../../../portal/tree/master/Sections/Transaction%20Types.md)
+* [Which Transaction Type to Use](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Transaction%20Types.md)
 
 ###### Response
 <pre>
