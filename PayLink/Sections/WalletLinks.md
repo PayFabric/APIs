@@ -55,13 +55,108 @@ Please note that **bold** fields are required fields and all others are optional
 Retrieve a WalletLink URL
 -------------------------
 
-* `GET /api/wallet/retrieve/h3GSpCZKsEWNxFv6T_y_Gw/link` will return the specified WalletLink documents' unique URL
+* `GET /api/wallet/retrieve/h3GSpCZKsEWNxFv6T_y_Gw/link` will return the specified WalletLink document's unique URL
 
 ###### Response
 <pre>
 "https://sandbox.payfabric.com/paylink/web/walletlink/h3GSpCZKsEWNxFv6T_y_Gw"
 </pre>
 
+Retrieve a WalletLink
+-------------------------
+
+* `GET /api/wallet/YjBOQLdsgUudHEDpxg0T5zE` will return the specified WalletLink document
+
+###### Response
+<pre>
+{
+    "Id": "YjBOQLdsgUudHEDpxg0T5zE",
+    "InstID": "cd76620f-28a2-43d1-b3be-6cb1e70301f5",
+    "Device": "a284c1d0-a6fc-4938-98b4-0000b8cf4210",
+    "TenderType": 0,
+    "CustomerNumber": "test",
+    "CustomerName": null,
+    "NotificationEmail": "test@nodus.com",
+    "NotificationPhone": null,
+    "Message": "",
+    "CustomeMessage": null,
+    "Status": 0,
+    "Notification": {
+        "Type": "Email",
+        "SMSTemplate": null,
+        "EmailTemplate": null,
+        "ResponseStatus": null,
+        "ResponseMessage": null
+    },
+    "WalletID": "00000000-0000-0000-0000-000000000000",
+    "ReturnUrl": null,
+    "CompletedOn": null,
+    "CreatedOn": "2018-07-17T00:44:38.267",
+    "Link": "https://dev-cn.payfabric.com/PayLink/Web/walletlink/YjBOQLdsgUudHEDpxg0T5zE"
+}
+</pre>
+
+Retrieve WalletLinks
+-------------------------
+
+* `GET /api/wallet` will return all WalletLink documents created
+* `GET /api/wallet?$filter` will return all WalletLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query
+
+###### Response
+<pre>
+[
+    {
+        "Id": "YjBOQLdsgUudHEDpxg0T5zE",
+        "InstID": "cd76620f-28a2-43d1-b3be-6cb1e70301f5",
+        "Device": "a284c1d0-a6fc-4938-98b4-0000b8cf4210",
+        "TenderType": 0,
+        "CustomerNumber": "test",
+        "CustomerName": null,
+        "NotificationEmail": "test@nodus.com",
+        "NotificationPhone": null,
+        "Message": "",
+        "CustomeMessage": null,
+        "Status": 0,
+        "Notification": {
+            "Type": "Email",
+            "SMSTemplate": null,
+            "EmailTemplate": null,
+            "ResponseStatus": null,
+            "ResponseMessage": null
+        },
+        "WalletID": "00000000-0000-0000-0000-000000000000",
+        "ReturnUrl": null,
+        "CompletedOn": null,
+        "CreatedOn": "0001-01-01T00:00:00",
+        "Link": "https://dev-cn.payfabric.com/PayLink/Web/walletlink/YjBOQLdsgUudHEDpxg0T5zE"
+    },
+    {
+        "Id": "bxC_7z8JZ0-KB8_hdhy2JDE",
+        "InstID": "cd76620f-28a2-43d1-b3be-6cb1e70301f5",
+        "Device": "a284c1d0-a6fc-4938-98b4-0000b8cf4210",
+        "TenderType": 1,
+        "CustomerNumber": "Test1",
+        "CustomerName": null,
+        "NotificationEmail": "test@nodus.com",
+        "NotificationPhone": null,
+        "Message": "",
+        "CustomeMessage": null,
+        "Status": 1,
+        "Notification": {
+            "Type": "Email",
+            "SMSTemplate": null,
+            "EmailTemplate": null,
+            "ResponseStatus": null,
+            "ResponseMessage": null
+        },
+        "WalletID": "a4976d58-ea23-4e0e-95ae-7e7e9c2e5d47",
+        "ReturnUrl": null,
+        "CompletedOn": "2018-07-17T01:20:43.61",
+        "CreatedOn": "0001-01-01T00:00:00",
+        "Link": "https://dev-cn.payfabric.com/PayLink/Web/walletlink/bxC_7z8JZ0-KB8_hdhy2JDE"
+    }
+]
+</pre>
 
 Cancel a WalletLink
 -------------------
@@ -71,4 +166,5 @@ Cancel a WalletLink
 ###### Response
 A successful `POST` will result in a HTTP 200 OK Response.  
 A failed `POST` may result in a HTTP 404 Not Found Response if the specified document does not exist or the Device ID used for the *Security Token* does not match.  
-A failed `POST` may result in a HTTP 405 Method Not Allowed Response if the specified document has already been cancelled or completed.  
+A failed `POST` may result in a HTTP 405 Method Not Allowed Response if the specified document has already been cancelled or completed. 
+
