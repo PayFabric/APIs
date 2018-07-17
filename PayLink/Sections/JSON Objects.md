@@ -50,6 +50,7 @@ This object represents the PayLink record that customers will pay through their 
 | Notification* | [Notification Object](#notification) | Specify notification method and SMS template | RW |
 | NotificationEmail | String | Email where notification is sent, **required if** notification type is `All` *or* `Email` | RW |
 | NotificationPhone | String | Mobile phone number where notification is sent, **required if** notification type is `All` *or* `SMS` | RW |
+| Link | String | Return of the PayLink URL in the response | RO |
 \* Required
 
 
@@ -73,6 +74,7 @@ This object represents the WalletLink record that customers will be able to save
 | Notification* | [Notification Object](#notification) | Specify notification method and SMS template | RW |
 | NotificationEmail | String | Email where notification is sent, **required if** notification type is `All` *or* `Email` | RW |
 | NotificationPhone | String | Mobile phone number where notification is sent, **required if** notification type is `All` *or* `SMS` | RW |
+| Link | String | Return of the PayLink URL in the response | RO |
 \* Required
 
 
