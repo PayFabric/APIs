@@ -102,6 +102,18 @@ Retrieve WalletLinks
 * `GET /api/wallet` will return all WalletLink documents created
 * `GET /api/wallet?$filter` will return all WalletLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query
 
+###### Available OData Fields
+>
+| Field | Description | 
+| :------------- | ------------- | 
+| CustomerNumber | Customer number specified at the time of creating a wallet link. |
+| CreatedOn | The date the wallet link was created on. |
+| NotificationEmail | Email specified at the time of creating a wallet link. |
+| NotificationPhone | Phone number specified at the time of creating a wallet link. |
+| Status | `0=incomplete, 1=complete, 2=cancelled` |
+|Device| Device used at the time of creating a wallet link. |
+| CompletedOn | The date the wallet link was completed on. |
+
 ###### Response
 <pre>
 [
