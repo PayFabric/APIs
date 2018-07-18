@@ -48,7 +48,7 @@ Please note that **bold** fields are required fields and all others are optional
   "ReturnUrl": null,
   "CompleteOn": null,
   "CreatedOn": "2015-11-09T12:35:19.4571668+13:00"
-  "Link": "https://dev-cn.payfabric.com/PayLink/Web/walletlink/h3GSpCZKsEWNxFv6T_y_Gw"
+  "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/h3GSpCZKsEWNxFv6T_y_Gw"
 }
 </pre>
 
