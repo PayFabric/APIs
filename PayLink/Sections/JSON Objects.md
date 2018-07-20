@@ -28,11 +28,11 @@ This object represents the PayLink record that customers will pay through their 
 | TransactionType* | String | Credit card transaction type, such as `Sale` or `Book` | RW |
 | DocDate* | DateTime | Document/invoice date | RW |
 | DueDate | DateTime | Document/invoice due date | RW |
-| DocType | Integer | Document type. **Dynamics GP Only** | RW |
+| DocType | Integer | Document type. **Dynamics GP Only**, availalble values `2 = Order, 3 = Invoice, 4 = CashReceipt, 5 = RM_Invoice, 6 = IVC_Invoice, 7 = Payment, 8 = CCATranx` | RW |
 | PaymentTerm | String | Document payment term, such as `NET40` | RW |
 | SourceOfDocument | Integer | Source of document. **Dynamics GP Only** | RW |
-| BatchSource | Integer | Batch source. **Dynamics GP Only** | RW |
-| BatchNo | String | Batch number. **Dynamics GP Only** | RW |
+| BatchSource | Integer | Batch source. **Dynamics GP Only**, available values `SalesEntry, InvoiceEntry, RM_Cash, RM_Sales` | RW |
+| BatchNo | String | Batch number. This field will be required after ERP connection's EPR Provider set as Microsoft Dynamics GP or Microsoft Dynamics SL in [Settings](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Features.md#settings) | RW |
 | MerchantEmail | String | Email From | RW |
 | ReturnUrl | String | User defined return URL, overwrites PayLink confirmation page | RW |
 | Status | Integer | Document status, available values `0 = draft, 1 = waiting for payment, 2 = cancelled, 3 = paid` | RO |
