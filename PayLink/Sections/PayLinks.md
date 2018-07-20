@@ -11,26 +11,25 @@ Create a PayLink
 ###### Request
 <pre>
 {
-  <b><i>"SetupId": "PFP"</i></b>,
-  <b>"Currency": "USD"</b>,
-  <b>"Amount": 49.99</b>,
-  <b>"DocumentAmount": 49.99</b>,
+  "Currency": "USD",
+  "Amount": 49.99,
+  "DocumentAmount": 49.99,
   "TaxAmount": 0,
   "TradeDiscount": 0,
   "Freight": 0,
   "MiscAmount": 0,
-  <b>"CustomerNumber": "JOHNDOE0001"</b>,
+  "CustomerNumber": "JOHNDOE0001",
   "CustomerName": null,
-  <b>"IsMultipleInvoice": false</b>,
+  "IsMultipleInvoice": false,
   "DocumentNumber": null,
   "TransactionType": "Sale",
-  <b>"DocDate": "2015-10-28T00:00:00"</b>,
+  "DocDate": "2015-10-28T00:00:00",
   "DueDate": "2015-10-31T00:00:00",
-  "DocType": 0,
+  "DocType": 3,
   "PaymentTerm": null,
   "SourceOfDocument": 0,
   "BatchSource": 0,
-  "BatchNo": null,
+  "BatchNo": "B2018",
   "MerchantEmail": null,
   "ReturnUrl": null,
   "Tax": null,
@@ -38,18 +37,18 @@ Create a PayLink
   "BillingAddress": null,
   "Items": null,
   "UserDefinedFields": null,
-  "PostDataType": "PaymentLine",
+  "PostDataType": "CashReceipt",
   "Status": 0,
-  <b><i>"Payment": {
+  "Payment": {
     "CreditCardGateway": "PFP",
     "ECheckGateway": "",
     "AcceptType": 1
-  }</i></b>,
-  <b>"Notification": {
+  },
+  "Notification": {
     "Type": "All"
-  }</b>,
-  <b>"NotificationEmail": "John.Doe@payfabric.com"</b>,
-  <b>"NotificationPhone": "123456789"</b>
+  },
+  "NotificationEmail": "John.Doe@payfabric.com",
+  "NotificationPhone": "123456789"
 }
 </pre>
 
@@ -61,8 +60,62 @@ Please note that **bold** fields are required fields, the **Payment** object *or
 ###### Response
 <pre>
 {
-  "Id": "h3GSpCZKsEWNxFv6T_y_Gw",
-  "TransactionKey": "151028003864"
+    "Id": "xFNH3msjakqS2PNbRFCQ9TE",
+    "InstID": "cd76620f-28a2-43d1-b3be-6cb1e70301f5",
+    "Device": "a284c1d0-a6fc-4938-98b4-0000b8cf4210",
+    "SetupId": null,
+    "Currency": "USD",
+    "Amount": 49.99,
+    "DocumentAmount": 49.99,
+    "TaxAmount": 0,
+    "TradeDiscount": 0,
+    "Freight": 0,
+    "MiscAmount": 0,
+    "CustomerNumber": "JOHNDOE0001",
+    "CustomerName": null,
+    "IsMultipleInvoice": false,
+    "DocumentNumber": null,
+    "TransactionType": "Sale",
+    "CreatedOn": "2018-07-19T19:00:52.2094728-07:00",
+    "DocDate": "2015-10-28T00:00:00",
+    "DueDate": "2015-10-31T00:00:00",
+    "DocType": 3,
+    "PaymentTerm": null,
+    "SourceOfDocument": 0,
+    "BatchSource": 0,
+    "BatchNo": "B2018",
+    "MerchantEmail": null,
+    "ReturnUrl": null,
+    "Status": 0,
+    "IntegrationStatus": 0,
+    "Tax": null,
+    "ShippingAddress": null,
+    "BillingAddress": null,
+    "Items": null,
+    "UserDefinedFields": null,
+    "Notification": {
+        "Type": "All",
+        "SMSTemplate": null,
+        "EmailTemplate": null,
+        "ResponseStatus": "",
+        "ResponseMessage": ""
+    },
+    "PostDataType": "CashReceipt",
+    "TransactionKey": "180719177546",
+    "PaidOn": null,
+    "LastProcessDate": null,
+    "Message": "",
+    "CustomeMessage": null,
+    "Payment": {
+        "CreditCardGateway": "PFP",
+        "ECheckGateway": "",
+        "AcceptType": 1
+    },
+    "NotificationEmail": "John.Doe@payfabric.com",
+    "NotificationPhone": "123456789",
+    "OriginalTender": null,
+    "PayFabricTransactionData": null,
+    "Link": "https://sandbox.payfabric.com/PayLink/Web/xFNH3msjakqS2PNbRFCQ9TE"
 }
 </pre>
 
@@ -76,32 +129,31 @@ Create a Multiple Invoice PayLink
 ###### Request
 <pre>
 {
-  <b><i>"SetupId": "PFP"</i></b>,
-  <b>"Currency": "USD"</b>,
-  <b>"Amount": 49.99</b>,
-  <b>"DocumentAmount": 49.99</b>,
+  "Currency": "USD",
+  "Amount": 49.99,
+  "DocumentAmount": 49.99,
   "TaxAmount": 0,
   "TradeDiscount": 0,
   "Freight": 0,
   "MiscAmount": 0,
-  <b>"CustomerNumber": "JOHNDOE0001"</b>,
+  "CustomerNumber": "JOHNDOE0001",
   "CustomerName": null,
-  <b>"IsMultipleInvoice": true</b>,
-  "DocumentNumber": null,
+  "IsMultipleInvoice": true,
+  "DocumentNumber": "test01",
   "TransactionType": "Sale",
-  <b>"DocDate": "2015-10-28T00:00:00"</b>,
+  "DocDate": "2015-10-28T00:00:00",
   "DueDate": "2015-10-31T00:00:00",
-  "DocType": 0,
+  "DocType": 3,
   "PaymentTerm": null,
   "SourceOfDocument": 0,
   "BatchSource": 0,
-  "BatchNo": null,
+  "BatchNo": "B2018",
   "MerchantEmail": null,
   "ReturnUrl": null,
   "Tax": null,
   "ShippingAddress": null,
   "BillingAddress": null,
-  <b>"Items": [
+  "Items": [
     {
       "ItemCode": "INV0001",
       "AppliedAmount": 20.00,
@@ -112,25 +164,25 @@ Create a Multiple Invoice PayLink
       "AppliedAmount": 20.00,
       "DueDate": "2015-10-31"
     }
-  ]</b>,
-  <b><i>"UserDefinedFields": [
+  ],
+  "UserDefinedFields": [
     {
       "Key": "Surcharge",
       "Value": "9.99"
     }
-  ]</i></b>,
-  "PostDataType": "PaymentLine",
+  ],
+  "PostDataType": "CashReceipt",
   "Status": 0,
-  <b><i>"Payment": {
+  "Payment": {
     "CreditCardGateway": "PFP",
     "ECheckGateway": "",
     "AcceptType": 1
-  }</i></b>,
-  <b>"Notification": {
+  },
+  "Notification": {
     "Type": "All"
-  }</b>,
-  <b>"NotificationEmail": "John.Doe@payfabric.com"</b>,
-  <b>"NotificationPhone": "123456789"</b>
+  },
+  "NotificationEmail": "John.Doe@payfabric.com",
+  "NotificationPhone": "123456789"
 }
 </pre>
 
@@ -142,8 +194,100 @@ Please note that **bold** fields are required fields, the **Payment** object *or
 ###### Response
 <pre>
 {
-  "Id": "h3GSpCZKsEWNxFv6T_y_Gw",
-  "TransactionKey": "151028003864"
+    "Id": "hF5LOdXrC0amj0KliEUwxDE",
+    "InstID": "cd76620f-28a2-43d1-b3be-6cb1e70301f5",
+    "Device": "a284c1d0-a6fc-4938-98b4-0000b8cf4210",
+    "SetupId": null,
+    "Currency": "USD",
+    "Amount": 49.99,
+    "DocumentAmount": 49.99,
+    "TaxAmount": 0,
+    "TradeDiscount": 0,
+    "Freight": 0,
+    "MiscAmount": 0,
+    "CustomerNumber": "JOHNDOE0001",
+    "CustomerName": null,
+    "IsMultipleInvoice": true,
+    "DocumentNumber": "MINV0000000622",
+    "TransactionType": "Sale",
+    "CreatedOn": "2018-07-19T19:02:40.3761203-07:00",
+    "DocDate": "2015-10-28T00:00:00",
+    "DueDate": "2015-10-31T00:00:00",
+    "DocType": 3,
+    "PaymentTerm": null,
+    "SourceOfDocument": 0,
+    "BatchSource": 0,
+    "BatchNo": "B2018",
+    "MerchantEmail": null,
+    "ReturnUrl": null,
+    "Status": 0,
+    "IntegrationStatus": 0,
+    "Tax": null,
+    "ShippingAddress": null,
+    "BillingAddress": null,
+    "Items": [
+        {
+            "ItemCode": "INV0001",
+            "AppliedAmount": 20,
+            "DueDate": "2015-10-31T00:00:00",
+            "Description": null,
+            "UnitPrice": 0,
+            "Quantity": null,
+            "PriceLevel": null,
+            "UnitOfMeasure": null,
+            "SiteCode": null,
+            "MarkDown": 0,
+            "TaxAmount": 0,
+            "MiscAmount": 0,
+            "UserDefinedFields": null,
+            "Items": null
+        },
+        {
+            "ItemCode": "INV0002",
+            "AppliedAmount": 20,
+            "DueDate": "2015-10-31T00:00:00",
+            "Description": null,
+            "UnitPrice": 0,
+            "Quantity": null,
+            "PriceLevel": null,
+            "UnitOfMeasure": null,
+            "SiteCode": null,
+            "MarkDown": 0,
+            "TaxAmount": 0,
+            "MiscAmount": 0,
+            "UserDefinedFields": null,
+            "Items": null
+        }
+    ],
+    "UserDefinedFields": [
+        {
+            "Key": "Surcharge",
+            "Value": "9.99"
+        }
+    ],
+    "Notification": {
+        "Type": "All",
+        "SMSTemplate": null,
+        "EmailTemplate": null,
+        "ResponseStatus": "",
+        "ResponseMessage": ""
+    },
+    "PostDataType": "CashReceipt",
+    "TransactionKey": "180719177570",
+    "PaidOn": null,
+    "LastProcessDate": null,
+    "Message": "",
+    "CustomeMessage": null,
+    "Payment": {
+        "CreditCardGateway": "PFP",
+        "ECheckGateway": "",
+        "AcceptType": 1
+    },
+    "NotificationEmail": "John.Doe@payfabric.com",
+    "NotificationPhone": "123456789",
+    "OriginalTender": null,
+    "PayFabricTransactionData": null,
+    "Link": "https://sandbox.payfabric.com/PayLink/Web/hF5LOdXrC0amj0KliEUwxDE"
 }
 </pre>
 
