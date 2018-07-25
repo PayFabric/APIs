@@ -30,7 +30,7 @@ This object represents the PayLink record that customers will pay through their 
 | DueDate | DateTime | Document/invoice due date | RW |
 | DocType | Integer | Document type. **Dynamics GP Only**, availalble values `2 = Order, 3 = Invoice, 4 = CashReceipt, 5 = RM_Invoice, 6 = IVC_Invoice, 7 = Payment, 8 = CCATranx` | RW |
 | PaymentTerm | String | Document payment term, such as `NET40` | RW |
-| SourceOfDocument | Integer | Source of document. **Dynamics GP Only** | RW |
+| SourceOfDocument | Integer | Source of document. **Dynamics GP Only**, available values `1 = Sales Entry, 3 = Invoice Entry, 4 = RM_Sales, 5 = RM_Cash`| RW |
 | BatchSource | Integer | Batch source. **Dynamics GP Only**, available values `SalesEntry, InvoiceEntry, RM_Cash, RM_Sales` | RW |
 | BatchNo | String | Batch number. This field will be required after ERP connection's EPR Provider set as Microsoft Dynamics GP or Microsoft Dynamics SL in [Settings](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Features.md#settings) | RW |
 | MerchantEmail | String | Email From | RW |
