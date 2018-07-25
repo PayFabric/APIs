@@ -18,6 +18,7 @@ This object represents the PayLink record that customers will pay through their 
 | Amount* | Decimal | Transaction amount | RW |
 | DocumentAmount* | Decimal | Document/invoice amount | RW |
 | TaxAmount | Decimal | Tax amount | RW |
+| Tax | [Tax Object](#tax) | Tax detail information | RW |
 | TradeDiscount | Decimal | Trade discount amount | RW |
 | Freight | Decimal  | Freight amount | RW |
 | MiscAmount | Decimal  | Misc amount | RW |
@@ -120,8 +121,7 @@ The payment object allows the user to define which payment gateway account shoul
 
 
 ## Item
-Description
-
+The item object is used to submit the item line's details information.
 | Attribute | Data Type | Definition | Access |
 | :----------- | :--------- | :--------- | :--------- |
 | ItemCode* | String | If multiple invoice then single invoice number, if not multiple invoice then item code | RW |
@@ -140,6 +140,15 @@ Description
 | Items | Array of [Item Object](#item) | Collection of items for each single invoice. **Multiple Invoice Only** | RW |
 \* Required
 
+## Tax
+The tax object is used to submit tax details information.
+
+| Attribute | Data Type | Definition | Access |
+| :----------- | :--------- | :--------- | :--------- |
+| Name | String | Tax's name | RW |
+| percent | Decimal | Tax percentage | RW |
+| amount | Decimal | Tax amount | RW |
+\* Required
 
 ## Field
 The field object is used for custom user defined values.
@@ -152,7 +161,7 @@ The field object is used for custom user defined values.
 
 
 ## SMS Template
-The SMS Template object is a used to return information on created notification templates, this is used for retrieving available Ids for use in the [Notification Object](#notification).
+The SMS Template object is used to return information on created notification templates, this is used for retrieving available Ids for use in the [Notification Object](#notification).
 
 | Attribute | Data Type | Definition | Access |
 | :----------- | :--------- | :--------- | :--------- |
@@ -162,7 +171,7 @@ The SMS Template object is a used to return information on created notification 
 
 
 ## Email Template
-The Email Template object is a used to return information on created notification templates, this is used for retrieving available names for use in the [Notification Object](#notification).
+The Email Template object is used to return information on created notification templates, this is used for retrieving available names for use in the [Notification Object](#notification).
 
 | Attribute | Data Type | Definition | Access |
 | :----------- | :--------- | :--------- | :--------- |
