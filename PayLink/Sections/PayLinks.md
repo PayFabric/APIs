@@ -32,7 +32,11 @@ Create a PayLink
   "BatchNo": "B2018",
   "MerchantEmail": null,
   "ReturnUrl": null,
-  "Tax": null,
+  "Tax": {
+    "Name": "All Details",
+     "percent": 0.5,
+     "amount": 0.2
+    },
   "ShippingAddress": null,
   "BillingAddress": null,
   "Items": null,
@@ -88,7 +92,11 @@ Please note that **bold** fields are required fields, the **Payment** object *or
     "ReturnUrl": null,
     "Status": 0,
     "IntegrationStatus": 0,
-    "Tax": null,
+    "Tax": {
+        "Name": "All Details",
+        "percent": 0.5,
+        "amount": 0.2
+    },
     "ShippingAddress": null,
     "BillingAddress": null,
     "Items": null,
@@ -150,7 +158,11 @@ Create a Multiple Invoice PayLink
   "BatchNo": "B2018",
   "MerchantEmail": null,
   "ReturnUrl": null,
-  "Tax": null,
+  "Tax": {
+      "Name": "All Details",
+      "percent": 0.5,
+      "amount": 0.2
+    },
   "ShippingAddress": null,
   "BillingAddress": null,
   "Items": [
@@ -222,7 +234,11 @@ Please note that **bold** fields are required fields, the **Payment** object *or
     "ReturnUrl": null,
     "Status": 0,
     "IntegrationStatus": 0,
-    "Tax": null,
+    "Tax": {
+            "Name": "All Details",
+            "percent": 0.5,
+            "amount": 0.2
+    },
     "ShippingAddress": null,
     "BillingAddress": null,
     "Items": [
@@ -344,7 +360,11 @@ Retrieve a PayLink
   "MerchantEmail": null,
   "ReturnUrl": null,
   "Status": 1,
-  "Tax": null,
+  "Tax": {
+    "Name": "All Details",
+    "percent": 0.5,
+    "amount": 0.2
+  },
   "ShippingAddress": null,
   "BillingAddress": {
     "Email": null,
@@ -448,7 +468,11 @@ Retrieve PayLinks
     "MerchantEmail": null,
     "ReturnUrl": null,
     "Status": 1,
-    "Tax": null,
+    "Tax": {
+      "Name": "All Details",
+      "percent": 0.5,
+      "amount": 0.2
+  },
     "ShippingAddress": null,
     "BillingAddress": {
       "Email": null,
