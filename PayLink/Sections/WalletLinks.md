@@ -100,8 +100,8 @@ Retrieve a WalletLink
 Retrieve WalletLinks
 -------------------------
 
-* `GET /api/wallet` will return all WalletLink documents created
-* `GET /api/wallet?$filter` will return all WalletLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query
+* `GET /api/wallet` will return all WalletLink documents created.
+* `GET /api/wallet?$filter` will return all WalletLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query. e.g. https://sandbox.payfabric.com/paylink/api/wallet?$filter=CustomerNumber eq 'test' and Device eq GUID'a284c1d0-a6fc-4938-98b4-0000b8cf4210' and Status eq '0' and NotificationEmail eq 'test@nodus.com' and NotificationPhone eq '1234567890' and CreatedOn gt datetime'2018-06-16' & $orderby CompletedOn desc
 
 ###### Available OData Fields
 >
