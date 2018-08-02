@@ -438,6 +438,7 @@ Retrieve PayLinks
 | Status | The status of the PayLink, available values are `0 = draft, 1 = waiting for payment, 2 = cancelled and 3 = paid` |
 |IntegrationStatus| The integration status of the PayLink, available values are `0 = Pending, 1 = Failed and 2 = Successful`|
 | TransactionKey | The PayFabric transaction key. |
+|Device| Device used at the time of creating a PayLink. |
 
 ###### Response
 <pre>
