@@ -422,7 +422,9 @@ Retrieve PayLinks
 
 * `GET /api/document` will return all PayLink documents created
 * `GET /api/document?$filter` will return all PayLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query
- 
+
+e.g. `https://dev-cn.payfabric.com/paylink/api/document?$filter=CustomerNumber eq 'AARONFIT0001' and Device eq GUID'a284c1d0-a6fc-4938-98b4-0000b8cf4210' and DocumentNumber eq 'ORDER001' and DocDate lt datetime'2018-09-25' and DueDate eq null and PaidOn gt datetime'2017-02-02' and Amount gt 8 and NotificationEmail eq 'test@nodus.com' and Status eq '3' and IntegrationStatus eq '2' and TransactionKey eq '180227157886' & $orderby CreatedOn desc`
+
 ###### Available OData Fields
 >
 | Field | Description | 
@@ -434,7 +436,7 @@ Retrieve PayLinks
 | CreatedOn | The date the PayLink was created. |
 | PaidOn | The date the PayLink was paid. |
 | Amount | The amount of the PayLink. |
-| Email | The notification email assigned to the PayLink. |
+| NotificationEmail | The notification email assigned to the PayLink. |
 | Status | The status of the PayLink, available values are `0 = draft, 1 = waiting for payment, 2 = cancelled and 3 = paid` |
 |IntegrationStatus| The integration status of the PayLink, available values are `0 = Pending, 1 = Failed and 2 = Successful`|
 | TransactionKey | The PayFabric transaction key. |
