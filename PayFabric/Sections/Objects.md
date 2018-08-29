@@ -121,7 +121,7 @@ The Transaction object represents a single transaction that will pass through Pa
 | Card*  | [Object](#card) | Card object. If you are using an existing card, you only need to specify the ID of the card. If using a new card then all fields are required. |  
 | SetupId*        | String | Gateway account profile name. This name is configurable and is defined by the client on the PayFabric web portal. |nvarchar(64)|  
 | Tender*         | String | Tender type. Valid values are ``CreditCard``, ``ECheck``. |nvarchar(64)|  
-| Type*           | String | Transaction type. Valid values are ``Sale``,``Book``,``Ship``,``Void``,``Credit``, ``Force``.  For more information on PayFabric Transaction Types, click [here](https://github.com/PayFabric/Portal/blob/master/Sections/Transaction%20Types.md). |  nvarchar(64)|
+| Type*           | String | Transaction type. Valid values are ``Sale``,``Book``,``Ship``,``Void``,``Credit``, ``Force``.  For more information on PayFabric Transaction Types, click [here](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md). |  nvarchar(64)|
 | BatchNumber     | String | Batch number name. For saving this transaction into a PayFabric batch. Merchant can process the batch on PayFabric portal. | varchar(64)| 
 | ModifiedOn      | String | Timestamp indicating when this transaction was last modified. It's format should like "3/23/2015 11:16:19 PM". | datetime| 
 | Shipto   | [Object](#address)| Address object. |  
