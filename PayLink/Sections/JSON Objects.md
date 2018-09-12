@@ -122,6 +122,7 @@ The payment object allows the user to define which payment gateway account shoul
 
 ## Item
 The item object is used to submit the item line's details information.
+
 | Attribute | Data Type | Definition | Access |
 | :----------- | :--------- | :--------- | :--------- |
 | ItemCode* | String | If multiple invoice then single invoice number, if not multiple invoice then item code | RW |
