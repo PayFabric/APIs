@@ -44,7 +44,6 @@ The Card object represents a Credit Card or eCheck of a customer.
 | Customer*        | String | Customer ID as specified by the client upon creation of the customer. | nvarchar(128)|  
 | Account*         | String | The number of the credit card, or the eCheck/ACH account. When creating a new Card this attribute must be provided by the client in plaintext. When a client retrieves a card PayFabric always returns this attribute in masked format. **When updating a card omit this field.**|nvarchar(64)|  
 | ExpDate*         | String | Expiration date of the credit card in the format of MMYY. Only valid for credit cards. | varchar(4)| 
-| CVC             | String | CVC code. Only valid for credit cards. **Important**: PCI DSS does not permit storing of CVC (Card Verification Code). PayFabric will only accept CVC for real-time processing and will not store CVC for future use. |Integer(4)|  
 | CheckNumber*     | String | Check number. Only valid for eChecks. | varchar(128)| 
 | AccountType*     | String | eCheck account type. Only valid for eCheck accounts. | varchar(32)| 
 | Aba*             | String | Bank Routing Number. Only valid for eChecks. | varchar(64)| 
@@ -101,8 +100,7 @@ The Document object is used to represent additional invoice, order, or other Lev
 | Attribute       | DataType| Definition
 | :-----------    |:---------| :---------| 
 | Head            | Array | An array of key-value pairs. Usually, the key-value pairs represent the level 2 fields to submit to the gateway.| 
-| Lines           | Array | An array of columns object.The columns objects represent the columns that belong to a specific line. Usually the columns objects represent the level 3 fields that you can submit to the gateway.|
-| Columns         | Array | An array of key-value pairs. The key-value pairs represent the level 3 fields to submit to the gateway.|
+| Lines           | Array | An array of columns object.The columns objects represent the columns that belong to a specific line. Usually the columns objects represent the level 3 fields that you can submit to the gateway. Columns object is an array of key-value pairs. The key-value pairs represent the level 3 fields to submit to the gateway.|
 | UserDefined     | String | Up to 50 key value pairs can be stored in this object.|
 |DefaultBillTo|[Object](#address)| Address object. no restriction to these address fields, partially input is acceptable.|
 
@@ -126,7 +124,7 @@ The Transaction object represents a single transaction that will pass through Pa
 | ModifiedOn      | String | Timestamp indicating when this transaction was last modified. It's format should like "3/23/2015 11:16:19 PM". | datetime| 
 | Shipto   | [Object](#address)| Address object. |  
 | ReqAuthCode          | String | Required for ``Force`` transactions. |varchar(64)|
-| ReqOriginid          | String | Required for ``Void`` and ``Ship`` transactions. |varchar(64)|
+| ReferenceKey          | String | The transaction key of initial processed transaction, Required for ``Void``, ``Credit`` and ``Ship`` transactions. |varchar(64)|
 | ReqTrxTag            | String | Required by FirstData for ``Void``,``Ship`` and reference ``Credit`` transactions. |varchar(64)|
 | TrxResponse          | [Object](#transaction-response) | Transaction response from Payment Gateway. |
 | Document | [Object](#document) | Level 2/3 transaction fields, as well as User Defined fields. |nvarchar(max)|
