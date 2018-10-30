@@ -145,7 +145,7 @@ Create and Process a eCheck Transaction
 ###### Request
 <pre>
 {
-  <b>"Amount": "29.99",
+  <b>"Amount": "29.99"</b>,
   "BatchNumber": "",
   <b>"Card"</b>: {
     <b>"Account": "1234567830"</b>,
