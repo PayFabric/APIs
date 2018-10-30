@@ -14,7 +14,7 @@ Create a Transaction
   <b>"Amount": "29.99"</b>,
   "BatchNumber": "",
   <b>"Currency": "USD"</b>,
-  <b>"Customer": "JOHNDOE0001"</b>,
+  "Customer": "JOHNDOE0001",
   "Document": {
     "Head": [],
     "Lines": [],
@@ -150,7 +150,7 @@ Create and Process a Transaction
     "UserDefine4": ""
   },
   <b>"Currency": "USD"</b>,
-  <b>"Customer": "JOHNDOE0001"</b>,
+  "Customer": "JOHNDOE0001",
   "Document": {
     "Head": [],
     "Lines": [],
