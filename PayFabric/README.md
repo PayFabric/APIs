@@ -48,6 +48,7 @@ as child elements of other objects.
 * [Capture a Pre-Authorized Transaction](Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
 * [Credit a Transaction](Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
 * [Refund a Customer](Sections/Transactions.md#refund-a-customer)
+* [Process eCheck Transaction](Sections/Process%20eCheck%20Transaction.md)
 
 ### Wallets / Credit Cards / eChecks
 * [Create a Credit Card / eCheck](Sections/Wallets.md#create-a-credit-card)
