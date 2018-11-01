@@ -16,7 +16,7 @@ Address objects represent the shipping or billing address of a customer. This ob
 | Line3      | String | Street line 3 |nvarchar(128)|
 | Email      | String | Email address|nvarchar(128)|
 | Phone      | String | Phone number |varchar(16)|
-| ModifiedOn | String | Timestamp indicating when this record was last modified.It's format should like "3/23/2015 11:16:19 PM".|datetime,not null|
+| ModifiedOn | String | Timestamp indicating when this record was last modified. It's format should like "3/23/2015 11:16:19 PM".|datetime,not null|
 | Zip*        | String | Zip code |varchar(16)|
 *Required
 
