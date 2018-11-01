@@ -63,6 +63,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | GatewayToken    | String | Gateway token. PayFabric send this value to gateway for processing a transaction|varchar(32)|
 | IssueNumber     | String | This field is required for UK debit cards|nvarchar(64)|
 | StartDate       | String | This field is required for UK debit cards, format is MMYY.|varchar(4)|
+| NewCustomerNumber* | String | This field is used to submit new customer number for updating this record's customer field. | nvarchar(128)|  
 *Required 
 
 ## Transaction Response
