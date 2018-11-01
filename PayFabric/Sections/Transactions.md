@@ -137,7 +137,7 @@ Create and Process a Transaction
       "MiddleName": "",
       "SSN": ""
     },
-    <b>"Customer": "JOHNDOE0001"</b>,
+    "Customer": "JOHNDOE0001",
     <b>"ExpDate": "0918"</b>,
     "GPAddressCode": "",
     "GatewayToken": "",
