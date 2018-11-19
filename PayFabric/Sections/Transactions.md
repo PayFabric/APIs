@@ -586,14 +586,46 @@ This request accepts the below query string parameters to add options. You can u
 </pre>
 
 
-Referenced Transaction(s): Void, Capture (Ship) or Credit
+Referenced Transaction(s): Capture (Ship), Void or Credit
 ---------------------------------------------------------
 
 Referenced transaction uses the original transaction Key as the referenced factor to subsequently process a new transaction. There’re 3 types of referenced transactions: Void, Capture (Ship) and Credit. They all use the transaction Key from the original transaction to process the new transaction.
 
+#### Capture (Ship)
+
 * `GET /reference/151013003792?trxtype=SHIP` will attempt to execute and finalize (capture) a pre-authorized transaction, also known as BOOK transactions.
-* `GET /reference/151013003792?trxtype=VOID` will attempt to cancel a transaction that has already been processed successfully with a payment gateway. PayFabric attempts to reverse the transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund (credit) must be performed.
-* `GET /reference/151013003792?trxtype=CREDIT` will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
+* `POST /transaction/process` will attempt to execute and finalize (capture) a pre-authorized transaction with specific amount, if `Amount` is not provided in request body, it will capture with authorzied amount.
+
+###### Request
+<pre>
+{
+  "Amount": "1",
+  "Type": "Ship",
+  "ReferenceKey": "151013003792"
+}
+</pre>
+
+* `GET /reference/151013003792?trxtype=VOID` or `POST /transaction/process` with following request will attempt to cancel a transaction that has already been processed successfully with a payment gateway. PayFabric attempts to reverse the transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund (credit) must be performed.
+
+###### Request
+<pre>
+{
+  "Type": "Void",
+  "ReferenceKey": "151013003792"
+}
+</pre>
+
+* `GET /reference/151013003792?trxtype=CREDIT` or `POST /transaction/process` with following request will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
+
+###### Request
+<pre>
+{
+  "Type": "Credit",
+  "ReferenceKey": "151013003792"
+}
+</pre>
+
+Note: `ReferenceKey` is the initial processed transaction's `TrxKey`.
 
 ###### Response
 <pre>
