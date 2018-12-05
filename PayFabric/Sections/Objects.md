@@ -59,7 +59,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | UserDefine2    | String | User-defined field 2. Developer can store additional data in this field. | nvarchar(256)| 
 | UserDefine3    | String | User-defined field 3. Developer can store additional data in this field. |  nvarchar(256)|
 | UserDefine4    | String | User-defined field 4. Developer can store additional data in this field. | nvarchar(256)|
-| Connector       | String | The gateway name defined by PayFabric such as FirstDataGGe4, PayflowPro, Paymentech. This field will be set only if this card is a tokenized value for a specific gateway, such as FirstData or Paypal|nvarchar(64)|
+| Connector       | String | The gateway name defined by PayFabric such as FirstDataGGe4, PayflowPro or Paymentech. This field will be set only if this card is a tokenized value for a specific gateway, such as FirstData or Paypal|nvarchar(64)|
 | GatewayToken    | String | Gateway token. PayFabric send this value to gateway for processing a transaction|varchar(32)|
 | IssueNumber     | String | This field is required for UK debit cards|nvarchar(64)|
 | StartDate       | String | This field is required for UK debit cards, format is MMYY.|varchar(4)|
