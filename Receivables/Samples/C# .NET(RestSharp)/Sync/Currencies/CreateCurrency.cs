@@ -9,8 +9,8 @@ public void CreateCurrency(string json, string URL, Token token, ref Response re
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/Sync/Currency.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/Currency.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/Sync/Currencies.md#create-a-currency for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/Currency.md#CurrencyPost for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "sync/API/currencies");
