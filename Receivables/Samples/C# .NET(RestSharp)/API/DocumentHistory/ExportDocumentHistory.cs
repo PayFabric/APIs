@@ -4,12 +4,11 @@
 /// <param name="URL">URL of the PayFabric Receivables site</param>
 /// <param name="token">PayFabric Receivables token object</param>
 /// <param name="responses">Returned response object</param>
-public void CreatePayment(string URL, Token token, ref csvResponse responses)
+public void ExportDocumentHistory(string URL, Token token, ref csvResponse responses)
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/API/DocumentHistory.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/DocumentHistory.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/API/DocumentHistory.md#export-document-history for more details about request and response.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "API/documents/history/exports?filter.pageSize=10&filter.pageIndex=0");
