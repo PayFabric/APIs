@@ -4,12 +4,12 @@
 /// <param name="URL">URL of the PayFabric Receivables site</param>
 /// <param name="token">PayFabric Receivables token object</param>
 /// <param name="integrations">Returned integration object</param>
-public void GetIntegrations(string URL, Token token, ref IntegrationPagingResponse integrations)
+public void GetIntegrationPayments(string URL, Token token, ref IntegrationPagingResponse integrations)
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/sync/Integrations.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/Integrations.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/Sync/Integrations.md#retrieve-integration-payment-information for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/Payment.md#PaymentPagingResponse for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "sync/API/integrations/payments?filter.pageSize=10&filter.pageIndex=0");
