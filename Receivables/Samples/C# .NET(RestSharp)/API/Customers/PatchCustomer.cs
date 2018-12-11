@@ -9,8 +9,8 @@ public void PatchCustomer(string json, string URL, Token token, ref Response res
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/API/Customers.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/Customer.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/API/Customers.md#update-a-customer-by-id for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/Customer.md#CustomerPost for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "API/customers");
