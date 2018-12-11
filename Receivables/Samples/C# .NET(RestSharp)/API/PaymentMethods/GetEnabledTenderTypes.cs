@@ -9,8 +9,8 @@ public void GetPaymentMethodById(string URL, string walletId, Token token, ref P
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/API/PaymentMethods.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/PaymentMethods.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/API/PaymentMethods.md#retrieve-tendertype-enabling-on-wallet-page for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/PaymentMethod.md#PaymentMethodTenderTypeEnablingResponse for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "API/paymentmethods/tendertypeenabling");
