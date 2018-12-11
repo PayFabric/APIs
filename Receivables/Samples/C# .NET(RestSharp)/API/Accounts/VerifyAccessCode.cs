@@ -5,7 +5,7 @@
 /// <param name="registrationKey">Registration key string to be retrieved</param>
 /// <param name="token">PayFabric Receivables token object</param>
 /// <param name="responses">Returned response object</param>
-public void GetUsersByName(string URL, string registrationKey, Token token, ref RegistrationUser user)
+public void VerifyAccessCode(string URL, string registrationKey, Token token, ref RegistrationUser user)
 {
 	// Sample request and response
 	// ------------------------------------------------------
