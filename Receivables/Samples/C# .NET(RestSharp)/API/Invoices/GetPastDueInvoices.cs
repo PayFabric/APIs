@@ -4,12 +4,12 @@
 /// <param name="URL">URL of the PayFabric Receivables site</param>
 /// <param name="token">PayFabric Receivables token object</param>
 /// <param name="invoices">Returned invoice object</param>
-public void GetPaidInvoices(string URL, Token token, ref InvoicePagingResponse invoices)
+public void GetPastDueInvoices(string URL, Token token, ref InvoicePagingResponse invoices)
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/API/Invoices.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/Invoices.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/API/Invoices.md#view-past-due-invoices for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/Invoice.md#InvoicePagingResponse for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "API/invoices/pastdue?filter.pageSize=10&filter.pageIndex=0");
