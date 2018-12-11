@@ -70,7 +70,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 }
 </pre>
 
-For more information and descriptions on available fields please see our [object reference](../Objects/ProcessPayment.md#ProcessPaymentResponse).
+For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#ProcessPaymentResponse).
 
 
 Retrieve Payment Receipt
