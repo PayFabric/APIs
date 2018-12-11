@@ -5,12 +5,12 @@
 /// <param name="registrationKey">Registration key string to be retrieved</param>
 /// <param name="token">PayFabric Receivables token object</param>
 /// <param name="responses">Returned response object</param>
-public void VerifyAccessCode(string URL, string registrationKey, Token token, ref RegistrationUser user)
+public void VerifyRegistrationKey(string URL, string registrationKey, Token token, ref RegistrationUser user)
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/API/Accounts.md#verify-access-code for more details about request and response.
-	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/AccessCode.md#AccessCodeResponse for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/API/Accounts.md#verify-registration-key for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/AccessCode.md#AccessCodeVerifyResponse for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "API/users/registration/" + registrationKey);
