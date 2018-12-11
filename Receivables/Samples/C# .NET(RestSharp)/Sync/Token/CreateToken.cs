@@ -9,7 +9,7 @@ public void CreateToken(string username, string password, string URL, ref Token 
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/sync/Token.md for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/Sync/Token.md#payfabric-receivables-api-authentication for more details about request and response.
 	// ------------------------------------------------------	
 	
 	try
