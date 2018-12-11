@@ -8,8 +8,8 @@ public void GetAllSelectedOutstandingInvoices(string URL, Token token, ref Invoi
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/API/Invoices.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/Invoices.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/API/Invoices.md#view-outstanding-invoices-all-selected for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/InvoiceAllSelected.md for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "API/invoices/outstanding/allselected?filter.criteria.CustomerId=Nodus0001");
