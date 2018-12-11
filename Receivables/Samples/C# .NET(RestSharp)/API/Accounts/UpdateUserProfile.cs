@@ -5,7 +5,7 @@
 /// <param name="URL">URL of the PayFabric Receivables site</param>
 /// <param name="token">PayFabric Receivables token object</param>
 /// <param name="responses">Returned response object</param>
-public void CreateUserProfile(string json, string URL, Token token, ref Response responses)
+public void UpdateUserProfile(string json, string URL, Token token, ref Response responses)
 {
 	// Sample request and response
 	// ------------------------------------------------------
