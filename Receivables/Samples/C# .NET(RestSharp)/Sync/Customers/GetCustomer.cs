@@ -9,8 +9,8 @@ public void GetCustomer(string URL, string customerId, Token tokenList, ref Cust
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/Sync/Customers.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/Customer.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/Sync/Customers.md#retrieve-a-customer-by-customer-identifier for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/Customer.md#CustomerResponse for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "sync/API/customers?id=" + customerId);
