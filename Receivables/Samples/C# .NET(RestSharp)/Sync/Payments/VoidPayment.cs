@@ -9,8 +9,7 @@ public void CreatePayment(string URL, string paymentId, Token token, ref Respons
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/sync/Payments.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/Payment.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/Sync/Payments.md#update-an-existing-payment-and-void-it for more details about request and response.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "API/payments/" + paymentId + "/void");
