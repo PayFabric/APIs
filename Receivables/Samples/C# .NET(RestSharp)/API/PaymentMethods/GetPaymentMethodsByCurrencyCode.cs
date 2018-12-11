@@ -9,8 +9,8 @@ public void GetPaymentMethodsByCurrencyCode(string URL, string currencyCode, Tok
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/API/PaymentMethods.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/PaymentMethods.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/API/PaymentMethods.md#retrieve-payment-methods-by-currency-code for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/PaymentMethod.md#PaymentMethodResponse for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "API/paymentmethods?currencycode=" + currencyCode);
