@@ -9,8 +9,8 @@ public void GetUsersByName(string URL, string accessCode, Token token, ref Acces
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/API/Accounts.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/Accounts.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/API/Accounts.md#verify-access-code for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/AccessCode.md#AccessCodeResponse for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "API/users/isaccessible?accessCode=" + accessCode);
