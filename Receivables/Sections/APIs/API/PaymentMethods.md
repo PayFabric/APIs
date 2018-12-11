@@ -256,7 +256,7 @@ This request accepts the below query string parameters to add additional options
 }
 </pre>
 
-For more information and descriptions on response fields please see our [object reference](../Objects/PaymentMethod.md#PaymentMethodPagingResponse).
+For more information and descriptions on response fields please see our [object reference](../../Objects/PaymentMethod.md#PaymentPagingResponse).
 
 
 Retrieve TenderType Enabling on Wallet Page
