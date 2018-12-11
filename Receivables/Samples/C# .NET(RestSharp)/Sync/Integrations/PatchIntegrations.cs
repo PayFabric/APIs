@@ -9,8 +9,8 @@ public void PatchIntegrations(string json, string URL, Token token, ref Response
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/sync/Integrations.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/Integrations.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/Sync/Integrations.md#update-the-integration-document for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/Integration.md#IntegrationPost for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "sync/API/integrations/update");
