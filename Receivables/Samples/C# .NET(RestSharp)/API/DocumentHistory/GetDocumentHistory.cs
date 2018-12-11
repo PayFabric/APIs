@@ -8,8 +8,8 @@ public void GetDocumentHistory(string URL, Token token, ref DocumentHistoryPagin
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/API/DocumentHistory.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/DocumentHistory.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/API/DocumentHistory.md#retrieve-document-history for more details about request and response.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/Objects/DocumentHistory.md#DocumentHistoryPagingResponse for more details about the object.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "API/documents/history?filter.pageSize=10&filter.pageIndex=0");
