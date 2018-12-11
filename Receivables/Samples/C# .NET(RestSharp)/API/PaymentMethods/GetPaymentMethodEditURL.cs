@@ -5,12 +5,11 @@
 /// <param name="walletId">WalletId object to get</param>
 /// <param name="token">PayFabric Receivables token object</param>
 /// <param name="paymentMethods">Returned payment method object</param>
-public void GetPaymentMethodsCreateURL(string URL, string walletId, Token token, ref string walletUrl)
+public void GetPaymentMethodsEditURL(string URL, string walletId, Token token, ref string walletUrl)
 {
 	// Sample request and response
 	// ------------------------------------------------------
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/APIs/API/PaymentMethods.md for more details about request and response.
-	// Go to https://github.com/NodusTechnologies/ePay-Advantage/blob/master/Sections/Cloud%20API%20Guide/Sections/Objects/PaymentMethods.md for more details about the object.
+	// Go to https://github.com/PayFabric/APIs/blob/master/Receivables/Sections/APIs/API/PaymentMethods.md#retrieve-the-edit-wallet-url-for-payfabric-hosted-page for more details about request and response.
 	// ------------------------------------------------------
 	
 	var client = new RestClient(URL + "API/paymentmethods/" + walletId);
