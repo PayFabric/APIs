@@ -37,7 +37,7 @@ This object represents the PayLink record that customers will pay through their 
 | MerchantEmail | String | Email From | RW |
 | ReturnUrl | String | User defined return URL, overwrites PayLink confirmation page | RW |
 | Status | Integer | Document status, available values `0 = draft, 1 = waiting for payment, 2 = cancelled, 3 = paid` | RO |
-| IntegrationStatus | Integer | Document integration status, available values `0 = Pending, 1 = Failed, 2 = Successful`, Note: IntegrationStatus could be updated from `Pending` to `Sucessful` or `Failed` via API| RO |
+| IntegrationStatus | Integer | Document integration status, available values `0 = Pending, 1 = Failed, 2 = Successful`, Note: IntegrationStatus could be updated from `Pending` to `Sucessful` or `Failed` via API| RW |
 | ShippingAddress | [Address Object](#address) | Shipping address | RW |
 | BillingAddress | [Address Object](#address) | Billing address | RW |
 | Items | Array of [Item Object](#item) | Collection of line items | RW |
