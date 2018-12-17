@@ -7,8 +7,6 @@ This object is used when creating a request to process a payment on the PayFabri
 
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
-| AdditionalFee | Decimal | Total additional fee amount | decimal(19,2) |
-| ApplyCredit | [Object](ApplyCredit.md#ApplyCreditRequest) | Application of any credits | decimal(19,2) |
 | Comment | String | Comment of the payment | nvarchar(500) |
 | Currency | String | Currency code | nvarchar(10) |
 | CustomerId | String | Customer ID specified by the client | nvarchar(50) |
@@ -17,7 +15,6 @@ This object is used when creating a request to process a payment on the PayFabri
 | PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | nvarchar(25) |
 | Prepayment | decimal | Additional prepayment amount | decimal(19,2) |
 | SaveWallet | Boolean | Indicates if the wallet should be saved |
-| ScheduledDate | DateTime | Date of when the payment should be processed | datetime |
 | WalletEntryGuid | Guid | Unique identifier of the wallet to be used to process | uniqueidentifier |
 
 ## ProcessPaymentResponse
