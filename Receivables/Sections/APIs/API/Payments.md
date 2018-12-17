@@ -21,20 +21,7 @@ Process a Payment
 		"PayAmount": 1.00,
 		"DocumentType": 3
 	}],
-	"ApplyCredit": {
-		"CreditApplies": {
-			"AppliedToInvoice": true,
-			"InvoiceId": "STDINV2006",
-			"Identity": "",	
-			"PayAmount": 1.00,
-			"DocumentType": 3
-		},
-		"Identity": "",
-		"PaymentId": "APIPMT00000001"
-	},
 	"Prepayment": 1.00,
-	"AdditionalFee": 0.00,
-	"ScheduleDate": "2018-08-02",
 	"Comment": "ABC",
 	"WalletEntryGuid": "4bc44ebe-118a-46d1-a526-882a0e5c2aac",
 	"PaymentMethod": "CreditCard",
