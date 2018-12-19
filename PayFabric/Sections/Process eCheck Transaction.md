@@ -1,7 +1,7 @@
 ﻿Process an eCheck Transaction
 ============
 
-The PayFabric Transactions API support electronic check/ACH of multiple gateways, click [here](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Gateway%20Configuration.md) for supported gateways. Please make sure a eCheck [Gateway Profile](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Configure%20Portal.md#gateway-profile) must be created before process a eCheck/ACH transaction. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+The PayFabric Transactions API support electronic check/ACH of multiple gateways, click [here](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Gateway%20Configuration.md) for supported gateways. Please make sure a eCheck [Gateway Profile](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Configure%20Portal.md#gateway-profile) must be created before process an eCheck/ACH transaction. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 Create an eCheck Transaction
 --------------------
