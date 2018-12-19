@@ -109,7 +109,7 @@ Please note that the **Key** field is the only required field for an update. Onl
 </pre>
 
 
-Process a eCheck Transaction
+Process an eCheck Transaction
 ---------------------
 
 * `GET /transaction/process/18103000208029` will attempt to process the transaction with the payment gateway
