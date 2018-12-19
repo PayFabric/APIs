@@ -50,7 +50,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 ###### Related Reading
 * [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 * [Which Transaction Type to Use](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md)
-* [Create a eCheck Transaction](Process%20eCheck%20Transaction.md#create-a-echeck-transaction)
+* [Create an eCheck Transaction](Process%20eCheck%20Transaction.md#create-a-echeck-transaction)
 
 ###### Response
 <pre>
@@ -82,7 +82,7 @@ Please note that the **Key** field is the only required field for an update. Onl
 </pre>
 
 ###### Related Reading
-* [Update a eCheck Transaction](Process%20eCheck%20Transaction.md#update-a-echeck-transaction)
+* [Update an eCheck Transaction](Process%20eCheck%20Transaction.md#update-a-echeck-transaction)
 
 Process a Transaction
 ---------------------
@@ -110,7 +110,7 @@ Process a Transaction
 </pre>
 
 ###### Related Reading
-* [Process a eCheck Transaction](Process%20eCheck%20Transaction.md#process-a-echeck-transaction)
+* [Process an eCheck Transaction](Process%20eCheck%20Transaction.md#process-a-echeck-transaction)
 
 Create and Process a Transaction
 --------------------------------
