@@ -191,7 +191,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 ###### Related Reading
 * [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 * [Which Transaction Type to Use](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md)
-* [Create and Process a eCheck Transaction](Process%20eCheck%20Transaction.md#create-and-process-a-echeck-transaction)
+* [Create and Process an eCheck Transaction](Process%20eCheck%20Transaction.md#create-and-process-a-echeck-transaction)
 
 ###### Response
 <pre>
