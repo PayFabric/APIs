@@ -87,7 +87,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 </pre>
 
 
-Update a Transaction
+Update a eCheck Transaction
 --------------------
 
 * `POST /transaction/update` will update a transaction with new information based on the request JSON payload
@@ -99,7 +99,7 @@ Update a Transaction
 }
 </pre>
 
-Please note that the **Key** field is the only required field for an update. Only the fields that need updating should be included, see the **Create a Transaction** endpoint for more information.
+Please note that the **Key** field is the only required field for an update. Only the fields that need updating should be included, see the **Create a eCheck Transaction** endpoint for more information.
 
 ###### Response
 <pre>
@@ -109,7 +109,7 @@ Please note that the **Key** field is the only required field for an update. Onl
 </pre>
 
 
-Process a Transaction
+Process a eCheck Transaction
 ---------------------
 
 * `GET /transaction/process/18103000208029` will attempt to process the transaction with the payment gateway
