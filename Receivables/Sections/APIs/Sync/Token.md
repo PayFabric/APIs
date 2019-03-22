@@ -1,4 +1,4 @@
-PayFabric Receivables API Authentication
+PayFabric Receivables Sync API Authentication
 ============================
 Clients will always need to create a security token to authenticate with the PayFabric Receivables API. It is recommended to request a token for every API call to avoid any connection issue. However, the token will be valid for 100 days. All API calls made within that 100 day timeframe can use the same token. Once it hits the 100 day mark, it will become invalid and a new token will be needed.
 
