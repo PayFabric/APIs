@@ -19,8 +19,8 @@ Make a Form Post API call to the endpoint with the following parameters:
 
   * `grant_type=password` - This is used to specify the authentication type
   * `client_id=ePay_Customer_Portal` - This is used to specify the type of user to be authenticated
-  * `username={username}` - Replace `{username}` with the `Integration Key` from the previous step
-  * `password={password}` - Replace `{password}` with the `Integration Key Password` from the previous step
+  * `username={username}` - Replace `{username}` with the user's username
+  * `password={password}` - Replace `{password}` with the user's password
 
 ```shell
 curl -X POST \
