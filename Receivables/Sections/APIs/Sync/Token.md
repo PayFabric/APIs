@@ -22,7 +22,6 @@ Make a Form Post API call to the endpoint with the following parameters:
   * `username={username}` - Replace `{username}` with the `Integration Key` from the previous step
   * `password={password}` - Replace `{password}` with the `Integration Key Password` from the previous step
 
-
 Example:  
 ```shell
 curl -X POST \
