@@ -1,20 +1,36 @@
 PayFabric Receivables Sync API Authentication
 ============================
-Clients will always need to create a security token to authenticate with the PayFabric Receivables API. It is recommended to request a token for every API call to avoid any connection issue. However, the token will be valid for 100 days. All API calls made within that 100 day timeframe can use the same token. Once it hits the 100 day mark, it will become invalid and a new token will be needed.
+Clients will create a security token by making an API call. The security token can then be used to authenticate with the PayFabric Receivables Sync API. It is recommended to use the same API token for all Sync API calls for ease of use. However, the token will expire after 100 days and a new token will be needed.
 
-##### Step 1: Create / Get the User to be Used for the API Calls
-In the PayFabric Receivables Management Portal you will be able to create additional users
+##### Step 1:Obtain Credentials for the API Calls
+Obtain `Portal Name`, `Integration Key` and `Integration Key Password` under `Settings` > `General Settings` on the PayFabric Receivables Management Portal. These credentials will be used to authenticate with the Sync api.  
 
-##### Step 2: Generate the Security Token
-In the body add in the username and password created
+##### Step 2: Make an API Call to Generate the Security Token
+API Endpoint: `https://{PayFabric URL}/sync/{PortalName}/api/token`  
 
+Replace the following variables from the endpoint URL:
+
+  * `{PayFabric URL}`:
+    * Production: `www.payfabric.com`
+    * Sandbox: `sandbox.payfabric.com`
+  * `{PortalName}`:  Use the ‘Portal Name’ obtain from Step 1.  
+
+Make a Form Post API call to the endpoint with the following parameters:
+
+  * `grant_type=password` - This is used to specify the authentication type
+  * `client_id=ePay_Sync` - This is used to specify the type of user to be authenticated
+  * `username={username}` - Replace `{username}` with the `Integration Key` from the previous step
+  * `password={password}` - Replace `{password}` with the `Integration Key Password` from the previous step
+
+
+Example:  
 ```shell
 curl -X POST \
   http://sandbox.payfabric.com/sync/nodus/api/token \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'grant_type=password&client_id=ePay_Sync&username=nodus&password=password1'
 ```
-If the HTTP Status Code is 200 - OK, you will receive the following **JSON** response:
+If the HTTP Status Code is 200 - OK, you will receive the following JSON response:
 
 <pre>
 {
