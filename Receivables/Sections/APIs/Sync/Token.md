@@ -13,7 +13,7 @@ Replace the following variables from the endpoint URL:
   * `{PayFabric URL}`:
     * Production: `www.payfabric.com`
     * Sandbox: `sandbox.payfabric.com`
-  * `{PortalName}`:  Use the ‘Portal Name’ obtain from Step 1.  
+  * `{PortalName}`:  Use the `Portal Name` obtain from Step 1.  
 
 Make a Form Post API call to the endpoint with the following parameters:
 
