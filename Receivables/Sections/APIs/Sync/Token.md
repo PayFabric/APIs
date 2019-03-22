@@ -2,7 +2,7 @@ PayFabric Receivables Sync API Authentication
 ============================
 Clients will create a security token by making an API call. The security token can then be used to authenticate with the PayFabric Receivables Sync API. It is recommended to use the same API token for all Sync API calls for ease of use. However, the token will expire after 100 days and a new token will be needed.
 
-##### Step 1:Obtain Credentials for the API Calls
+##### Step 1: Obtain Credentials for the API Calls
 Obtain `Portal Name`, `Integration Key` and `Integration Key Password` under `Settings` > `General Settings` on the PayFabric Receivables Management Portal. These credentials will be used to authenticate with the Sync api.  
 
 ##### Step 2: Make an API Call to Generate the Security Token
