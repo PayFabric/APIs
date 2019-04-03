@@ -129,7 +129,7 @@ Please note that the **ID** field is the only required field for an update.  Onl
 
 **Update Customer Number/ID**
 
-To update the Customer ID/Number against an existing credit card record, include **NewCustomerNumber** field into the request body and populate it with a new Customer Number/ID. This will replace the existing Customer ID/Number. 
+To update the Customer ID/Number against an existing credit card/eCheck record, include **NewCustomerNumber** field into the request body and populate it with a new Customer Number/ID. This will replace the existing Customer ID/Number. 
 
 ###### Response
 <pre>
