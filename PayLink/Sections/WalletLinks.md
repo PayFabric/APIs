@@ -23,7 +23,7 @@ Create a WalletLink
 }
 </pre>
 
-Please note that **bold** fields are required fields and all others are optional. For more information and descriptions on available fields please see our [JSON Objects](Sections/JSON%20Objects.md#walletlink-document).
+Please note that **bold** fields are required fields and all others are optional. For more information and descriptions on available fields please see our [JSON Objects](JSON%20Objects.md#walletlink-document).
 
 ###### Response
 <pre>
