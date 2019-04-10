@@ -17,7 +17,7 @@ From the PayFabric Receivables Management portal, navigate to the `Integration` 
 ##### Step 2: Generate the Authorization Code
 The Authorization Code is the value the user will need in order to access the PayFabric Receivables Customer Portal. To generate the Authorization Code, use the following procedure:
 
-1. Replace the variables in the below endpoint URL.
+1. Replace the variables in the below endpoint URL. Note: The redirect_uri should be encoded.
 
 API Endpoint: `https://{PayFabric URL}/receivablesapi/{PortalName}/api/authorize?user_name={User Name}&client_id=ePay_Customer_Portal&response_type=code&customer_id={CustomerID}&scope=passthrough&redirect_uri=https://{PayFabric URL}/receivablesapi/{Portal Name}/api/authcode`
 
@@ -33,7 +33,7 @@ API Endpoint: `https://{PayFabric URL}/receivablesapi/{PortalName}/api/authorize
 Example:  
 ```shell
 curl -X POST \
-  'https://sandbox.payfabric.com/receivablesapi/nodus/api/authorize?user_name=Passthrough_User&client_id=ePay_Customer_Portal&response_type=code&customer_id=CUSTOMER1234&scope=passthrough&redirect_uri=https://sandbox.payfabric.com/receivablesapi/MyPortalName/api/authcode' \
+  'https://sandbox.payfabric.com/receivablesapi/nodus/api/authorize?user_name=Passthrough_User&client_id=ePay_Customer_Portal&response_type=code&customer_id=CUSTOMER1234&scope=passthrough&redirect_uri=https%3A%2F%2Fsandbox.payfabric.com%2Freceivablesapi%2FMyPortalName%2Fapi%2Fauthcode' \
   -H 'Content-Type: application/json' \
   -d '{
     "integration_key": "PortalName_Abcd123",
