@@ -123,6 +123,9 @@ as child elements of other objects.
 * [Process a Payment](Sections/APIs/API/Payments.md#process-a-payment)
 * [Retrieve Payment Receipt](Sections/APIs/API/Payments.md#retrieve-payment-receipt)
 
+Pass-Through Authentication
+-----------------
+* [Instructions](../Receivables/PassThroughAuthentication.md)
 
 Help us make it better
 ----------------------
