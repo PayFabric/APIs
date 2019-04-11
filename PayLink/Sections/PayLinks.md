@@ -11,19 +11,19 @@ Create a PayLink
 ###### Request
 <pre>
 {
-  "Currency": "USD",
-  "Amount": 49.99,
-  "DocumentAmount": 49.99,
+  <b>"Currency": "USD"</b>,
+  <b>"Amount": 49.99</b>,
+  <b>"DocumentAmount": 49.99</b>,
   "TaxAmount": 0,
   "TradeDiscount": 0,
   "Freight": 0,
   "MiscAmount": 0,
-  "CustomerNumber": "JOHNDOE0001",
+  <b>"CustomerNumber": "JOHNDOE0001"</b>,
   "CustomerName": null,
-  "IsMultipleInvoice": false,
+  <b>"IsMultipleInvoice": false</b>,
   "DocumentNumber": null,
   "TransactionType": "Sale",
-  "DocDate": "2015-10-28T00:00:00",
+  <b>"DocDate": "2015-10-28T00:00:00"</b>,
   "DueDate": "2015-10-31T00:00:00",
   "DocType": 3,
   "PaymentTerm": null,
@@ -43,16 +43,16 @@ Create a PayLink
   "UserDefinedFields": null,
   "PostDataType": "CashReceipt",
   "Status": 0,
-  "Payment": {
+  <b>"Payment": {
     "CreditCardGateway": "PFP",
     "ECheckGateway": "",
-    "AcceptType": 1
-  },
-  "Notification": {
-    "Type": "All"
-  },
-  "NotificationEmail": "John.Doe@payfabric.com",
-  "NotificationPhone": "123456789"
+    <b>"AcceptType": 1</b>
+  }</b>,
+  <b>"Notification": {
+    <b>"Type": "All"</b>
+  }</b>,
+  <b>"NotificationEmail": "John.Doe@payfabric.com"</b>,
+  <b>"NotificationPhone": "123456789"</b>
 }
 </pre>
 
@@ -137,19 +137,19 @@ Create a Multiple Invoice PayLink
 ###### Request
 <pre>
 {
-  "Currency": "USD",
-  "Amount": 49.99,
-  "DocumentAmount": 49.99,
+  <b>"Currency": "USD"</b>,
+  <b>"Amount": 49.99</b>,
+  <b>"DocumentAmount": 49.99</b>,
   "TaxAmount": 0,
   "TradeDiscount": 0,
   "Freight": 0,
   "MiscAmount": 0,
-  "CustomerNumber": "JOHNDOE0001",
+  <b>"CustomerNumber": "JOHNDOE0001"</b>,
   "CustomerName": null,
-  "IsMultipleInvoice": true,
+  <b>"IsMultipleInvoice": true</b>,
   "DocumentNumber": "test01",
   "TransactionType": "Sale",
-  "DocDate": "2015-10-28T00:00:00",
+  <b>"DocDate": "2015-10-28T00:00:00"</b>,
   "DueDate": "2015-10-31T00:00:00",
   "DocType": 3,
   "PaymentTerm": null,
@@ -185,16 +185,16 @@ Create a Multiple Invoice PayLink
   ],
   "PostDataType": "CashReceipt",
   "Status": 0,
-  "Payment": {
+  <b>"Payment": {
     "CreditCardGateway": "PFP",
     "ECheckGateway": "",
-    "AcceptType": 1
-  },
-  "Notification": {
-    "Type": "All"
-  },
-  "NotificationEmail": "John.Doe@payfabric.com",
-  "NotificationPhone": "123456789"
+    <b>"AcceptType": 1</b>
+  }</b>,
+  <b>"Notification": {
+    <b>"Type": "All"</b>
+  }</b>,
+  <b>"NotificationEmail": "John.Doe@payfabric.com"</b>,
+  <b>"NotificationPhone": "123456789"</b>
 }
 </pre>
 
