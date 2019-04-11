@@ -33,7 +33,7 @@ This object represents the PayLink record that customers will pay through their 
 | PaymentTerm | String | Document payment term, such as `NET40` | RW |
 | SourceOfDocument | Integer | Source of document. **Dynamics GP Only**, available values `1 = Sales Entry, 3 = Invoice Entry, 4 = RM_Sales, 5 = RM_Cash`| RW |
 | BatchSource | Integer | Batch source. **Dynamics GP Only**, available values `SalesEntry, InvoiceEntry, RM_Cash, RM_Sales` | RW |
-| BatchNo | String | Batch number. This field will be required after ERP connection's EPR Provider set as Microsoft Dynamics GP or Microsoft Dynamics SL in [Settings](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Features.md#settings) | RW |
+| BatchNo | String | Batch number. This field will be required after ERP connection's EPR Provider set as Microsoft Dynamics GP or Microsoft Dynamics SL in [Settings](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Settings.md#configure-erp-connection) | RW |
 | MerchantEmail | String | Email From | RW |
 | ReturnUrl | String | User defined return URL, overwrites PayLink confirmation page | RW |
 | Status | Integer | Document status, available values `0 = draft, 1 = waiting for payment, 2 = cancelled, 3 = paid` | RO |
