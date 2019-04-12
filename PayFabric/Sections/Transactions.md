@@ -600,7 +600,7 @@ Referenced transaction uses the original transaction Key as the referenced facto
 #### Capture (Ship)
 
 * `GET /reference/151013003792?trxtype=SHIP` will attempt to execute and finalize (capture) a pre-authorized transaction, also known as BOOK transactions.
-* `POST /transaction/process` will attempt to execute and finalize (capture) a pre-authorized transaction with specific amount, if `Amount` is not provided in request body, it will capture with authorzied amount.
+* `POST /transaction/process` will attempt to execute and finalize (capture) a pre-authorized transaction with specific amount, if `Amount` is not provided in request body, it will capture with authorized amount.
 
 ###### Request
 <pre>
@@ -653,6 +653,7 @@ Note: `ReferenceKey` is the initial processed transaction's `TrxKey`.
 }
 </pre>
 
+If `Amount` is not provided in request body for Credit/Refund transaction, it will processed with original transaction amount.
 
 Refund a Customer
 -----------------
