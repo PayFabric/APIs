@@ -85,7 +85,6 @@ as child elements of other objects.
 * [Retrieve Registration Key](Sections/APIs/API/Accounts.md#retrieve-registration-key)
 * [Verify registration key](Sections/APIs/API/Accounts.md#verify-registration-key)
 * [Send Reset Password Email](Sections/APIs/API/Accounts.md#send-reset-password-email)
-* [Retrieve customer's email](Sections/APIs/API/Accounts.md#retrieve-customer's-email)
 
 ### Currencies
 * [Retrieve a Currency](Sections/APIs/API/Currencies.md#retrieve-a-currency)
@@ -113,9 +112,9 @@ as child elements of other objects.
 * [Retrieve Payment Methods by Currency Code](Sections/APIs/API/PaymentMethods.md#retrieve-payment-methods-by-currency-code)
 * [Delete a Payment Method](Sections/APIs/API/PaymentMethods.md#delete-a-payment-method)
 * [Retrieve the Edit Wallet URL for PayFabric Hosted Page](Sections/APIs/API/PaymentMethods.md#retrieve-the-edit-wallet-url-for-payfabric-hosted-page)
-* [Retrieve a Payment Method and verify currency](Sections/APIs/API/PaymentMethods.md#retrieve-a-payment-method-and-verify-currency)
 * [Retrieve the Create Wallet URL for PayFabric Hosted Page](Sections/APIs/API/PaymentMethods.md#retrieve-the-create-wallet-url-for-payfabric-hosted-page)
 * [Retrieve the Default Payment Method](Sections/APIs/API/PaymentMethods.md#retrieve-the-default-payment-method)
+* [Retrieve Payment Checkout Page URL](Sections/APIs/API/PaymentMethods.md#retrieve-payment-checkout-page-url)
 * [Retrieve Payment Methods Paging](Sections/APIs/API/PaymentMethods.md#retrieve-payment-methods-paging)
 * [Retrieve TenderType Enabling on Wallet Page](Sections/APIs/API/PaymentMethods.md#retrieve-tendertype-enabling-on-wallet-page)
 
