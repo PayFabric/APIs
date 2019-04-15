@@ -119,7 +119,11 @@ as child elements of other objects.
 * [Retrieve TenderType Enabling on Wallet Page](Sections/APIs/API/PaymentMethods.md#retrieve-tendertype-enabling-on-wallet-page)
 
 ### Payments
-* [Process a Payment](Sections/APIs/API/Payments.md#process-a-payment)
+* [Delete Payments](Sections/APIs/API/Payments.md#delete-payments)
+* [Update an Existing Payment](Sections/APIs/API/Payments.md#update-an-existing-payment)
+* [Update an InProgress Payment](Sections/APIs/API/Payments.md#update-an-existing-inprogress-payment)
+* [Create an InProgress Payment](Sections/APIs/API/Payments.md#create-an-inprogress-payment)
+* [Process an Existing Payment](Sections/APIs/API/Payments.md#process-an-existing-payment)
 * [Retrieve Payment Receipt](Sections/APIs/API/Payments.md#retrieve-payment-receipt)
 
 Pass-Through Authentication
