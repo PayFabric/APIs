@@ -1,5 +1,5 @@
 ## Payment
-There are three Payment objects that represent a payment in the PayFabric Receivables website, PaymentPost, PaymentResponse, and PaymentPagingResponse. 
+There are four Payment objects that represent a payment in the PayFabric Receivables website, PaymentPost, PaymentPatch, PaymentResponse, and PaymentPagingResponse. 
 
 
 ## PaymentPost
@@ -17,7 +17,6 @@ This object is used when creating a payment on the PayFabric Receivables website
 | CustomerId\* | String | Customer ID specified by the client | nvarchar(50) |
 | Identity | String | Unique identifier for the payment | nvarchar(50) |
 | InvoiceApply | [Object](PaymentApply.md) | Application of the payment to invoices |
-| IsVoid | Boolean | Indicates if the payment is voided | bit |
 | Notes | String | Additional notes for the payment | nvarchar(500) |
 | PaymentId\* | String | Payment number | nvarchar(25) |
 | PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | nvarchar(25) |
@@ -25,6 +24,26 @@ This object is used when creating a payment on the PayFabric Receivables website
 | Status | String | Payment status. Valid options are ``Processed``, ``Voided``, and ``InProgress`` | varchar(10) |
 | User | String | User who made the payment | nvarchar(50) |
 \*Required
+
+## PaymentPatch
+This object is used when updating an existing payment on the PayFabric Receivables website.
+
+| Attribute | Data Type | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- |
+| Amount | Decimal | Total payment amount in the functional currency  | decimal(19,5) |
+| BalanceAmount | Decimal | Total balance amount in the functional currency | decimal(19,5) |
+| BatchNumber | String | Batch number | nvarchar(50) |
+| CCNumber | String | Credit card number | nvarchar(25) |
+| CheckNumber | String | Check number used | nvarchar(25) |
+| CreatedOn | String | Timestamp indicating when this document was created. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" | datetime |
+| CustomerId\* | String | Customer ID specified by the client | nvarchar(50) |
+| Identity | String | Unique identifier for the payment | nvarchar(50) |
+| InvoiceApply | [Object](PaymentApply.md) | Application of the payment to invoices |
+| Notes | String | Additional notes for the payment | nvarchar(500) |
+| PaymentId\* | String | Payment number | nvarchar(25) |
+| PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | nvarchar(25) |
+| PaymentType | String | Payment type of the transaction. Valid options are ``Unknown``, ``FinanceCharge``, ``CreditMemo``, ``Return``, and ``Payment`` | nvarchar(25) |
+| User | String | User who made the payment | nvarchar(50) |
 
 ## PaymentResponse
 This object is used when getting a payment on the PayFabric Receivables website.
@@ -47,7 +66,6 @@ This object is used when getting a payment on the PayFabric Receivables website.
 | FailedAttempts | int | Number of attempts the payment failed submitting to the back office | int |
 | Identity | String | Unique identifier for the payment | nvarchar(50) |
 | InvoiceApply | [Object](PaymentApply.md) | Application of the payment to invoices |
-| IsVoid | Boolean | Indicates if the payment is voided | bit |
 | LastAttempt | String | Timestamp indicating when the last time this document attempted to submit to the back office | datetime |
 | LastMessage | String | Message for the payment when it last attempted to submit to the back office | nvarchar(max) |
 | MasterType | String | Master type of the payment | nvarchar(20) |
