@@ -83,58 +83,6 @@ This request accepts the below query string parameters to add additional options
 </pre>
 
 
-Retrieve a Payment Method and verify currency
---------------------
-
-* `GET /paymentmethods/{WalletEntryGuid}/valid?currencyCode={CurrencyCode}` will retrieve the payment method as long as it is valid with the currency on the PayFabric Receivables website based on the JSON request payload.
-
-###### Request
-<pre>
-	GET /paymentmethods/9c89c8de-04f1-4db5-87de-b20a28056e62/valid?currencyCode=USD
-</pre>
-
-###### Response
-<pre>
-{
-    "WalletEntryGuid": "9c89c8de-04f1-4db5-87de-b20a28056e62",
-    "CustomerId": "AARONFIT0001",
-    "DisplayName": "Visa",
-    "CreditCardName": "nodus",
-    "CreditCardNumber": "XXXXXXXXX1111",
-    "CreditCardExpiredDate": "1932-01-31T00:00:00",
-    "TenderType": "CreditCard",
-    "CardName": "Visa",
-    "CardNameDisplay": "Visa",
-    "CreditCardType": null,
-    "ECheckType": "Checking",
-    "ECheckAccountNumber": "XXXXXXXXX1111",
-    "ECheckAbaNumber": "",
-    "IsDefault": false,
-    "IsLocked": false,
-    "ModifiedOn": "0001-01-01T00:00:00",
-    "BillTo": {
-        "Address1": "98765 Crossway Park Dr",
-        "Address2": "",
-        "Address3": "",
-        "City": "s",
-        "Country": "USA",
-        "EMail": "nodus.china@aliyun.com",
-        "Fax": null,
-        "Name": null,
-        "Phone1": null,
-        "Phone2": null,
-        "Phone3": null,
-        "State": "MN",
-        "UserDefine1": null,
-        "UserDefine2": null,
-        "Zip": "55304-9840"
-    }
-}
-</pre>
-
-For more information and descriptions on response fields please see our [object reference](../../Objects/PaymentMethod.md#PaymentMethodResponse).
-
-
 Retrieve the Create Wallet URL for PayFabric Hosted Page
 --------------------
 
@@ -195,6 +143,33 @@ Retrieve the Default Payment Method
 </pre>
 
 For more information and descriptions on response fields please see our [object reference](../../Objects/PaymentMethod.md#PaymentMethodResponse).
+
+
+Retrieve Payment Checkout Page URL
+--------------------
+
+* `GET /paymentmethods/hostedpayment/url?paymentIdentity={PaymentIdentity}"` will retrieve the payment method creation url used on the PayFabric Receivables website based on the JSON request payload.
+
+Options
+-------
+
+This request accepts the below query string parameters to add additional options to search. You can add them to your request URL by adding a '?' before the first parameter and connecting additional ones with a '&'.
+
+| QueryString | Description |
+| :------------- | :------------- |
+| setupId | SetupId to be used for processing if different then default |
+| newWallet | Boolean value if the wallet is new or not |
+| returnUri | Return URL to redirect after creation |
+
+###### Request
+<pre>
+	GET /paymentmethods/hostedpayment/url?paymentIdentity=WEBPMT000000020
+</pre>
+
+###### Response
+<pre>
+	"https://sandbox.payfabric.com//payment/web/transaction/process?Token=2%3a4u79jfzl6aqx&Key=19041500243061&ReturnUri=https%3a%2f%2fsandbox%2Epayfabric%2Ecom%2fcustomerportal%2fNodusMD%2fWallet%2fPayfabricWalletReturn&Symbol=%24&newWallet=True&Country=USA&Street1=One+Microsoft+Way&City=Redmond&State=WA&Zip=98052%2D6399&Email=Nodus0001%40nodus%2Ecom"
+</pre>
 
 
 Retrieve Payment Methods Paging
