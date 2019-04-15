@@ -1,5 +1,5 @@
 ## Process Payment
-There are two process payment objects that represent the processing of a payment in the PayFabric Receivables website, InProgressPaymentPost and InProgressPaymentPatch. 
+There are three process payment objects that represent the processing of a payment in the PayFabric Receivables website, InProgressPaymentPost, InProgressPaymentResponse and InProgressPaymentPatch. 
 
 
 ## InProgressPaymentPost
@@ -11,6 +11,13 @@ This object is used when creating a request to create an in-progress payment on 
 | CVV2 | String | CVV2 of the card being used | Not Saved |
 | PaymentApplies | [Object](PaymentApply.md) | Invoice(s) the payment is applied to | |
 | Prepayment | decimal | Additional prepayment amount | decimal(19,2) |
+
+## InProgressPaymentResponse
+This object is used when returning a response from a create in-progress payment request.
+
+| Attribute | Data Type | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- |
+| Identity | String | Payment identifier | nvarchar(50) |
 
 ## InProgressPaymentPatch
 This object is used when getting a payment on the PayFabric Receivables website.
