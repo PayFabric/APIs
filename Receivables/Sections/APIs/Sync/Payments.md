@@ -106,20 +106,20 @@ This request accepts the below query string parameters to add additional options
             "Currency": "Z-US$",
             "CustomerId": "Nodus0001",
             "Identity": "",
-             "PaymentApplies": [
-        {
-          "AppliedToInvoice": false,
-          "InvoiceId": "string",
-          "Identity": "string",
-          "PayAmount": 0,
-          "DocumentType": 0,
-          "RowVersion": "string"
-        }
+            "PaymentApplies": [
+		{
+		  "AppliedToInvoice": false,
+		  "InvoiceId": "string",
+		  "Identity": "string",
+		  "PayAmount": 0,
+		  "DocumentType": 0,
+		  "RowVersion": "string"
+		}
             ],
-            "IsVoid": false,
             "PaymentId": "WEBPMT0000000020",
             "PaymentType": "Payment",
-            "Notes": null
+	    "Status": "Processed",
+	    "User": "Nodus0001"
         }
     ]
 }
@@ -145,20 +145,23 @@ Create or Update a Payment
 	"Currency": "USD",
 	<b>"CustomerId": "Nodus0001"</b>,
 	"Identity": "",
-	 "PaymentApplies": [
-        {
-          "AppliedToInvoice": false,
-          "InvoiceId": "string",
-          "Identity": "string",
-          "PayAmount": 0,
-          "DocumentType": 0,
-          "RowVersion": "string"
-        }],
+	"PaymentApplies": [
+		{
+		  "AppliedToInvoice": false,
+		  "InvoiceId": "string",
+		  "Identity": "string",
+		  "PayAmount": 0,
+		  "DocumentType": 0,
+		  "RowVersion": "string"
+		}
+	],
 	"IsVoid": false,
 	"Notes": "",
 	<b>"PaymentId": "APIPMT000000001"</b>,
 	"PaymentMethod": "CreditCard",
-	"PaymentType": "Payment"
+	"PaymentType": "Payment",
+	"Status": "Processed",
+	"User": "Nodus0001"
 }
 </pre>
 
@@ -216,10 +219,10 @@ Retrieve a Payment
           "RowVersion": "string"
         }
     ],
-    "IsVoid": false,
     "PaymentId": "APIPMT000000001",
     "PaymentType": "Payment",
-    "Notes": null
+    "Status": "Processed",
+    "User": "Nodus0001"
 }
 </pre>
 
