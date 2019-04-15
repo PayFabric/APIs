@@ -42,12 +42,8 @@ Retrieve a Customer by customer identifier
         "EMail": "",
         "Fax": "",
         "Name": "Nodus Technologies",
-        "Phone1": null,
-        "Phone2": null,
-        "Phone3": null,
+        "Phone": null,
         "State": "CA",
-        "UserDefine1": null,
-        "UserDefine2": null,
         "Zip": "12345"
     },
     "PrimaryAddress": {
@@ -59,12 +55,8 @@ Retrieve a Customer by customer identifier
         "EMail": "",
         "Fax": "",
         "Name": "Nodus Technologies",
-        "Phone1": null,
-        "Phone2": null,
-        "Phone3": null,
+        "Phone": null,
         "State": "CA",
-        "UserDefine1": null,
-        "UserDefine2": null,
         "Zip": "12345"
     },
     "ShippingAddress": {
@@ -76,12 +68,8 @@ Retrieve a Customer by customer identifier
         "EMail": "",
         "Fax": "",
         "Name": "Nodus Technologies",
-        "Phone1": null,
-        "Phone2": null,
-        "Phone3": null,
+        "Phone": null,
         "State": "CA",
-        "UserDefine1": null,
-        "UserDefine2": null,
         "Zip": "12345"
     },
     "CreditBalance": 0,
@@ -100,7 +88,7 @@ Retrieve a Customer by customer identifier
     "PaymentTerms": null,
     "StatementName": "Nodus Technologies ",
     "Currency": "USD",
-	"ShippingMethod": "GROUND"
+    "ShippingMethod": "GROUND"
 }
 </pre>
 
@@ -126,12 +114,8 @@ Create or Update a Customer
 		"EMailAddress": "Nodus0002@nodus.com",
 		"Fax": null,
 		"Name": "Nodus Technologies",
-		"Phone1": "1234567890",
-		"Phone2": null,
-		"Phone3": null,
+		"Phone": "1234567890",
 		"State": "CA",
-		"UserDefine1": null,
-		"UserDefine2": null,
 		"Zip": "12345"
 	},
 	"PrimaryAddress": {
@@ -144,12 +128,8 @@ Create or Update a Customer
 		"EMailAddress": "Nodus0002@nodus.com",
 		"Fax": null,
 		"Name": "Nodus Technologies",
-		"Phone1": "1234567890",
-		"Phone2": null,
-		"Phone3": null,
+		"Phone": "1234567890",
 		"State": "CA",
-		"UserDefine1": null,
-		"UserDefine2": null,
 		"Zip": "12345"
 	},
 	"ShippingAddress": {
@@ -162,12 +142,8 @@ Create or Update a Customer
 		"EMailAddress": "Nodus0002@nodus.com",
 		"Fax": null,
 		"Name": "Nodus Technologies",
-		"Phone1": "1234567890",
-		"Phone2": null,
-		"Phone3": null,
+		"Phone": "1234567890",
 		"State": "CA",
-		"UserDefine1": null,
-		"UserDefine2": null,
 		"Zip": "12345"
 	},
 	"Class": "Customer",
