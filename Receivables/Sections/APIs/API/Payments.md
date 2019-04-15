@@ -3,61 +3,135 @@ Payments
 
 The Payment API is used for processing, and viewing payment information on the PayFabric Receivables website. Please note that all requests require API authentication, see our [guide](Token.md) on how to authenticate.
 
+Delete Payments
+-------------------
 
-Process a Payment
---------------------
+* `DELETE /payments?paymentIdentities={PaymentIdentity}` will delete a payment based on the payment identity specified in the query string parameter. Please note, you can string these together by specifying an `&` between each `paymentIdentityes={PaymentIdentity}`
 
-* `POST /payments/process` will process a payment on the PayFabric Receivables website based on the JSON request payload.
+###### Request
+<pre>
+	GET /payments?paymentIdentities=WEBPMT0000000020
+</pre>
+
+###### Response
+<pre>
+true
+</pre>
+
+
+Update an Existing Payment
+-------------------
+
+* `PATCH /payments?identity={PaymentIdentity}` will update an existing payment based on the JSON request payload.
+
+###### Request
+<pre>
+PATCH /payments?identity=WEBPMT00000020
+
+{
+	"Amount": 10,
+	"BalanceAmount": 10,
+  	"BatchNumber": "PFR2019117",
+  	"PaymentMethod": "CreditCard",
+  	"CCNumber": "",
+  	"CheckNumber": "",
+  	"CreatedOn": "2019-01-17T12:54:55.0952444-08:00",
+  	"CustomerId": "Nodus0001",
+  	"Identity": "",
+  	"PaymentApplies": [
+    		{
+      			"InvoiceId": "INV0001",
+      			"Identity": "",
+      			"PayAmount": 1,
+      			"RowVersion": ""
+    		}
+  	],
+  	"PaymentId": "PMT00001",
+  	"PaymentType": "Payment",
+  	"User": "Nodus0001",
+  	"Notes": ""
+}
+</pre>
+
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/Payment.md#PaymentPatch).
+
+###### Response
+<pre>
+true
+</pre>
+
+
+Update an Existing InProgress Payment
+-------------------
+
+* `PATCH /payments/inprogress` will update an existing payment based on the JSON request payload.
 
 ###### Request
 <pre>
 {
-	<b>"CustomerId": "Nodus0001"</b>,
-	"Currency": "USD",
-	"PaymentApplies": [{
-		"AppliedToInvoice": true,
-		"InvoiceId": "STDINV2006",
-		"Identity": "",	
-		"PayAmount": 1.00,
-		"DocumentType": 3
-	}],
-	"Prepayment": 1.00,
-	"Comment": "ABC",
-	"WalletEntryGuid": "4bc44ebe-118a-46d1-a526-882a0e5c2aac",
-	"PaymentMethod": "CreditCard",
-	"SaveWallet": false,
-	"CVV2": "123"
+	<b>"PaymentIdentity": "WEBPMT000000000000001"</b>,
+  	"CurrencyCode": "USD",
+  	"Prepayment": 10,
+  	"Comment": "my notes",
+  	"WalletEntryGuid": "2b9a5a48-f83a-e911-80d5-00155d000a89"
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#ProcessPaymentPost).
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#InProgressPaymentPatch).
+
+###### Response
+<pre>
+true
+</pre>
+
+
+Create an InProgress Payment
+--------------------
+
+* `POST /payments/inprogress` will create an in-progress payment on the PayFabric Receivables website based on the JSON request payload.
+
+###### Request
+<pre>
+{
+  	"Prepayment": 10,
+  	"PaymentApplies": [
+    		{
+      			"Identity": "INV0001",
+      			"InvoiceId": "INV0001",
+      			"PayAmount": 3,
+      			"RowVersion": ""
+    		}
+  	],
+  	"CurrencyCode": "USD"
+}
+</pre>
+
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#InProgressPaymentPost).
 
 ###### Response
 <pre>
 {
-    "PaymentId": "WEBPMT0000000020",
-    "EmailGuid": "00000000-0000-0000-0000-000000000000",
-    "EmailAddress": "nodus0001@nodus.com",
-    "AuthCode": "010101",
-    "Amount": 0,
-    "CreditCardName": null,
-    "CreditCardNumber": null,
-    "CreditCardType": null,
-    "CreditCardExpDate": "0001-01-01T00:00:00",
-    "ECheckType": 0,
-    "ECheckAccountNumber": null,
-    "ECheckAbaNumber": null,
-    "ECheckCheckNumber": null,
-    "Address1": null,
-    "Address2": null,
-    "City": null,
-    "State": null,
-    "Zip": null,
-    "Country": null
+    "Identity": "WEBPMT000000000000001"
 }
 </pre>
 
-For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#ProcessPaymentResponse).
+For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#InProgressPaymentResponse).
+
+
+Process an Existing Payment
+--------------------
+
+* `POST /payments/process?paymentIdentity={PaymentIdentity}&cvv2={CVV2}` will process an inprogress payment on the PayFabric Receivables website based on the JSON request payload. Please note, CVV2 is optional
+
+###### Request
+<pre>
+	POST /payments/process?paymentIdentity=WEBPMT0000000020&cvv2=123
+</pre>
+
+###### Response
+<pre>
+	true
+</pre>
 
 
 Retrieve Payment Receipt
