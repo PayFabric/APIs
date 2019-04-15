@@ -22,6 +22,8 @@ This object is used when creating a payment on the PayFabric Receivables website
 | PaymentId\* | String | Payment number | nvarchar(25) |
 | PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | nvarchar(25) |
 | PaymentType | String | Payment type of the transaction. Valid options are ``Unknown``, ``FinanceCharge``, ``CreditMemo``, ``Return``, and ``Payment`` | nvarchar(25) |
+| Status | String | Payment status. Valid options are ``Processed``, ``Voided``, and ``InProgress`` | varchar(10) |
+| User | String | User who made the payment | nvarchar(50) |
 \*Required
 
 ## PaymentResponse
@@ -50,11 +52,11 @@ This object is used when getting a payment on the PayFabric Receivables website.
 | LastMessage | String | Message for the payment when it last attempted to submit to the back office | nvarchar(max) |
 | MasterType | String | Master type of the payment | nvarchar(20) |
 | Name | String | Customer name | nvarchar(100) |
-| Notes | String | Additional notes for the payment | nvarchar(500) |
 | PaymentId | String | Payment number | nvarchar(25) |
 | PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | nvarchar(25) |
 | PaymentType | String | Payment type of the transaction. Valid options are ``Unknown``, ``FinanceCharge``, ``CreditMemo``, ``Return``, and ``Payment`` | nvarchar(25) |
 | Status | String | Status of the payment. Valid options are ``Scheduled``, ``Processed``, ``Failed``, and ``Voided`` | nvarchar(10) |
+| User | String | User who made the payment | nvarchar(50) |
 | WalletEntryGuid | Guid | Unique identifier of the wallet associated to the payment | uniqueidentifier |
 | Transaction | [Object](Transaction.md) | Transaction details associated to the payment | 
 
