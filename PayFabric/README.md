@@ -44,7 +44,7 @@ as child elements of other objects.
 * [Create and Process a Transaction](Sections/Transactions.md#create-and-process-a-transaction)
 * [Retrieve a Transaction](Sections/Transactions.md#retrieve-a-transaction)
 * [Retrieve Transactions](Sections/Transactions.md#retrieve-transactions)
-* [Cancel (Void) a Transaction](Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
+* [Cancel (Void) a Transaction](Sections/Transactions.md#referenced-transactions-capture-ship-void-or-credit)
 * [Capture a Pre-Authorized Transaction](Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
 * [Credit a Transaction](Sections/Transactions.md#referenced-transactions-void-capture-ship-or-credit)
 * [Refund a Customer](Sections/Transactions.md#refund-a-customer)
