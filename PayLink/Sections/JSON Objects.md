@@ -76,6 +76,7 @@ This object represents the WalletLink record that customers will be able to save
 | NotificationEmail | String | Email where notification is sent, **required if** notification type is `All` *or* `Email` | RW |
 | NotificationPhone | String | Mobile phone number where notification is sent, **required if** notification type is `All` *or* `SMS` | RW |
 | Link | String | Return of the PayLink URL in the response | RO |
+| AcceptType| String | Set the accepted tender type during create wallet link, available values `0` *or* null *or* any other values = Accept both credit card and eCheck, `1` = Only accept credit card, `2` = Only accept eCheck | RW |
 \* Required
 
 
