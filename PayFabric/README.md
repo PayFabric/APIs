@@ -24,6 +24,18 @@ PayFabric clients require PayFabric *Device ID* and *Password*  to authenticate 
 We have a [detailed guide](Sections/Authentication.md) for authenticating your users with our APIs.
 
 
+AppID
+--------------
+PayFabric's 3rd party integrator or integration partner will be provided with an AppID to be submitted through PayFabric Transaction APIs. The AppID  helps identify the application source for the corresponding transaction.
+
+Please submit a name-value-pair under **Document** object > **UserDefined** section with the Name 'AppID'. The value will be the AppID value provided to you by PayFabric Support team. 
+
+Example:
+"UserDefined": 
+[
+	 { "Name": "AppID", "Value": "Custom_App" }
+]
+
 Handling Exceptions
 -------------------
 PayFabric uses HTTP response codes to indicate the status of requests. 
