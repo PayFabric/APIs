@@ -86,15 +86,15 @@ The table below describes the requirements for Level 3 fields.
 
 | Fields             | How data must be entered|
 | -------------------| :-----------------------|
-| ItemAmount         | Must not be all spaces or all zeros, and last two digits are implied decimal places  | 
+| ItemAmount         | Must not be all spaces or all zeros.  | 
 | ItemCommodityCode  | Must not be all spaces or all zeros. Refer to document to the right for your industry’s commodity code. | 
-| ItemProdCode       | Must not be all spaces or all zeros   | 
-| ItemCost           | Must not be all spaces or all zeros. The last four digits are implied decimal places|
+| ItemProdCode       | Must not be all spaces or all zeros.   | 
+| ItemCost           | Must not be all spaces or all zeros.|
 | ItemDesc           | Must not be all spaces |
-| ItemDiscount       | Must not be all zeros if a discount amount exists and last two digits are implied decimal places. Must be all zeros if discount amount does not exist|
-| ItemFreightAmount  | Must not be all zeros if a freight/shipping amount exists and last two digits are implied decimal places. Must be all zeros if freight/shipping amount does not exist |
-| ItemHandlingAmount | Must not be all zeros if a handling amount exists and last two digits are implied decimal places. Must be all zeros if handling amount does not exist|
-| ItemQuantity       | Must not be all spaces or all zeros. The last four digits are implied decimal places|
-| ItemUOM            | Must not be all spaces or all zeros|
-| ItemUPC            | Must not be all spaces or all zeros|
+| ItemDiscount       | Must not be all zeros if a discount amount exists. Must be all zeros if discount amount does not exist|
+| ItemFreightAmount  | Must not be all zeros if a freight/shipping amount exists. Must be all zeros if freight/shipping amount does not exist |
+| ItemHandlingAmount | Must not be all zeros if a handling amount exists. Must be all zeros if handling amount does not exist|
+| ItemQuantity       | Must not be all spaces or all zeros.|
+| ItemUOM            | Must not be all spaces or all zeros.|
+| ItemUPC            | Must not be all spaces or all zeros.|
  
