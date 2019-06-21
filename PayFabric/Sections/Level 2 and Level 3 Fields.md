@@ -74,7 +74,7 @@ The table below describes the requirements for various Level 2 fields.
 | TaxAmount          | No comma and must be greater than zero once "TaxExempt" is "N". e.g. "4267.00"|
 | DiscountAmount     | No comma. Must be equal to the sum of all items' discount amount|
 | DutyAmount         | No comma. Must be equal to the sum of all items' duty amount       |
-| FreightAmount      | No comma.Must be equal to the sum of all items' freight amount |
+| FreightAmount      | No comma. Must be equal to the sum of all items' freight amount |
 | HandlingAmount     | No comma. Must be equal to the sum of all items' handling amount|
 | ShipFromZip        | Must not be all spaces or zero|
 | ShipToZip          | Must not be all spaces or zero|
