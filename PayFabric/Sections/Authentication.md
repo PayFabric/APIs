@@ -6,6 +6,7 @@ Clients running in server-side programming environments can include an authoriza
 Authentication C# Sample code snippet, for more sample codes, click [here](https://github.com/PayFabric/APIs/tree/master/PayFabric/Samples).
 ----------------------
 
+```C#
                 var url = "https://sandbox.payfabric.com/payment/api/address/" + addressId.ToString();
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
                 HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
@@ -24,11 +25,12 @@ Authentication C# Sample code snippet, for more sample codes, click [here](https
                 responseStream.Close();
                 httpWebRequest.Abort();
                 httpWebResponse.Close();
-
+```
 Basic Authentication
 ----------------------
 
 As there might be 3rd party system that doesn't support colon (:) in the authentication header, PayFabric supports Basic Authentication, which is essentially a Username and Password separated by a ':' and then base64 encoded using the format: `{DCN}{DeviceID}:{DevicePassword}`.
-
+```C#
 		// With previous C# sample code snippet, base64 encode the string '10ad64468-f4bc-0c99-4e31-bd08dd862c43:123456abc', which converts to  MTBhZDY0NDY4LWY0YmMtMGM5OS00ZTMxLWJkMDhkZDg2MmM0MzoxMjM0NTZhYmM='
                 httpWebRequest.Headers["authorization"] = "Basic MTBhZDY0NDY4LWY0YmMtMGM5OS00ZTMxLWJkMDhkZDg2MmM0MzoxMjM0NTZhYmM=";
+```
