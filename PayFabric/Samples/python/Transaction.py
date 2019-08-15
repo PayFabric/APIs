@@ -83,23 +83,7 @@ class Transaction:
         data = {
             'Key': transactionKey,
             'Card': {
-                'Account': '5555555555554444',
-                'Cvc': '1453',
-                'Tender': 'CreditCard',
-                'CardName': 'MasterCard',
-                'ExpDate': '0115',
-                'CardHolder': {
-                    'FirstName': 'Jason',
-                    'LastName': 'Zhao',
-                },
-                'Billto': {
-                    'Zip': '22313',
-                    'Country': 'US',
-                    'State': 'CA',
-                    'City': 'ANAHEIM',
-                    'Line1': '2099 S State College Blvd',
-                    'Email': 'support@payfabric.com'
-                }
+                'ID': 'cb111170-d7ba-4bf8-aae4-3477e12853b0'
             }
         }
         # Replace with your own device id and device password
@@ -167,23 +151,7 @@ class Transaction:
             'Type': 'Credit',
             'SetupId': 'Paypal',
             'Card': {
-                'Account': '5555555555554444',
-                'Cvc': '1453',
-                'Tender': 'CreditCard',
-                'CardName': 'MasterCard',
-                'ExpDate': '0115',
-                'CardHolder': {
-                    'FirstName': 'Jason',
-                    'LastName': 'Zhao',
-                },
-                'Billto': {
-                    'Zip': '22313',
-                    'Country': 'US',
-                    'State': 'CA',
-                    'City': 'ANAHEIM',
-                    'Line1': '2099 S State College Blvd',
-                    'Email': 'support@payfabric.com'
-                }
+                'ID': 'cb111170-d7ba-4bf8-aae4-3477e12853b0'
             }
         }
         # Replace with your own device id and device password
