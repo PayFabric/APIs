@@ -66,8 +66,8 @@ Create an eCheck
 ###### Request
 <pre>
 {
-  <b>"Account": "1111111111111111"</b>,
-  <b>"Aba": "123"</b>,
+  <b>"Account": "1234567890"</b>,
+  <b>"Aba": "031200730"</b>,
   "AccountType" : "",
   "Billto": {
     "City": "Anaheim",
