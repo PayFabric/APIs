@@ -1,4 +1,4 @@
-Transactions
+﻿Transactions
 ============
 
 The PayFabric Transactions API is used for creating, and processing payment transactions. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
@@ -123,36 +123,7 @@ Create and Process a Transaction
   <b>"Amount": "29.99"</b>,
   "BatchNumber": "",
   <b>"Card":</b> {
-    <b>"Account": "4111111111111111"</b>,
-    "Billto": {
-      "City": "Anaheim",
-      "Country": "USA",
-      "Email": "",
-      "Line1": "123 PayFabric Way",
-      "Line2": "",
-      "Line3": "",
-      "Phone": "(123)456-7890",
-      "State": "CA",
-      "Zip": "92806"
-    },
-    <b>"CardHolder"</b>: {
-      "DriverLicense": "",
-      <b>"FirstName": "John"</b>,
-      <b>"LastName": "Doe"</b>,
-      "MiddleName": "",
-      "SSN": ""
-    },
-    "Customer": "JOHNDOE0001",
-    <b>"ExpDate": "0918"</b>,
-    "GPAddressCode": "",
-    "GatewayToken": "",
-    "Identifier": "",
-    "IsDefaultCard": false,
-    "IssueNumber": "",
-    "UserDefine1": "",
-    "UserDefine2": "",
-    "UserDefine3": "",
-    "UserDefine4": ""
+  <b>"ID": "8b4a9102-8207-4e8f-99fa-01c6f623ddb8"</b>,
   },
   <b>"Currency": "USD"</b>,
   "Customer": "JOHNDOE0001",
@@ -186,7 +157,9 @@ Create and Process a Transaction
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](Wallets.md). For more information and descriptions on available fields please see our [object reference](Objects.md).
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](Objects.md). 
+
+PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wallet Page](https://github.com/PayFabric/Hosted-Pages/blob/master/Sections/Wallet%20Page.md), we highly recommand use hosted wallet page to create wallet for security, and get the wallet ID through [Wallet Retrieve](Wallets.md#retrieve-credit-cards--echecks) API call.
 
 ###### Related Reading
 * [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
@@ -671,11 +644,7 @@ To refund a customer, you just submit a credit to the customer that is owed the 
     "Amount": 19.99,
     "Currency": "USD",
     "Card": {
-        "Account": "4111111111111111",
-        "ExpDate": "0918",
-        "CardHolder" : {
-            "FirstName": "John",
-            "LastName": "Doe"
+        "ID": "8b4a9102-8207-4e8f-99fa-01c6f623ddb8"
         }
     }
 }

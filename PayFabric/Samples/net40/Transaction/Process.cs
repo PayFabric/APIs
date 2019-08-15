@@ -103,28 +103,7 @@ namespace Samples.Net40
                 #region Card Object
 
                 datastring.Append("\"Card\":{");
-                datastring.Append("\"Account\":\"4111111111111111\",");
-                datastring.Append("\"Tender\":\"CreditCard\",");
-                datastring.Append("\"CardName\":\"Visa\",");
-                datastring.Append("\"ExpDate\":\"0117\",");
-
-                // Card Holder
-                datastring.Append("\"CardHolder\":{");
-                datastring.Append("\"FirstName\":\"jason\",");
-                datastring.Append("\"MiddleName\":\"K\",");
-                datastring.Append("\"LastName\":\"zhao\",");
-                datastring.Append("\"Email\":\"jasonzhao@nodus.com\"");
-                datastring.Append("},");
-
-                // Bill to
-                datastring.Append("\"Billto\":{");
-                datastring.Append("\"Country\":\"US\",");
-                datastring.Append("\"State\":\"CA\",");
-                datastring.Append("\"City\":\"ANAHEIM\",");
-                datastring.Append("\"Zip\":\"92806\",");
-                datastring.Append("\"Line1\":\"2099 S State College Blvd\",");
-                datastring.Append("\"Email\":\"support@payfabric.com\"");
-                datastring.Append("}");
+                datastring.Append("\"ID\":\"cb111170-d7ba-4bf8-aae4-3477e12853b0\"");
 
                 datastring.Append("},");
 
