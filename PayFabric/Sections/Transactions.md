@@ -68,7 +68,10 @@ Update a Transaction
 ###### Request
 <pre>
 {
-    "Key": "151013003793"
+    "Key": "151013003793",
+    "Card":{
+  "ID": "8b4a9102-8207-4e8f-99fa-01c6f623ddb8"
+  }
 }
 </pre>
 
@@ -123,7 +126,7 @@ Create and Process a Transaction
   <b>"Amount": "29.99"</b>,
   "BatchNumber": "",
   <b>"Card":</b> {
-  <b>"ID": "8b4a9102-8207-4e8f-99fa-01c6f623ddb8"</b>,
+  <b>"ID": "8b4a9102-8207-4e8f-99fa-01c6f623ddb8"</b>
   },
   <b>"Currency": "USD"</b>,
   "Customer": "JOHNDOE0001",
