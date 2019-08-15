@@ -98,20 +98,7 @@ module PayFabric
       #    options = {
       #      "Key"  => transaction_key,
       #      "Card" => {
-      #      "Account"    => "5555555555554444",
-      #      "Cvc"        => "1453",
-      #      "Tender"     => "CreditCard",
-      #      "CardName"   => "MasterCard",
-      #      "ExpDate"    => "0115",
-      #      "CardHolder" => {
-      #        "Name" => "jason zhao"
-      #       },
-      #       "Billto" => {
-      #         "Country" => "US",
-      #         "State"   => "CA",
-      #         "City"    => "ANAHEIM",
-      #         "Line1"   => "2099 S State College Blvd",
-      #         "Email"   => "support@payfabric.com"
+      #      "ID"    => "cb111170-d7ba-4bf8-aae4-3477e12853b0"
       #       }
       #    }
       #    
@@ -166,7 +153,7 @@ module PayFabric
       #      "Customer" => "AARONFIT0001",
       #      "Currency" => "USD",
       #         "Card" => {
-      #           "Account" => "4111111111111111"
+      #           "ID" => "cb111170-d7ba-4bf8-aae4-3477e12853b0"
       #         }
       #       }  
       #    hash = PayFabric::Transaction::Sandbox::process_object(device_id, password, options)
@@ -206,7 +193,7 @@ module PayFabric
       #       "Customer" => "AARONFIT0001",
       #       "Currency" => "USD",
       #       "Card" => {
-      #         "Account" => "4111111111111111"
+      #         "ID" => "cb111170-d7ba-4bf8-aae4-3477e12853b0"
       #       }
       #     }
       #     
@@ -291,14 +278,8 @@ module PayFabric
       #       "Type" => "Credit",
       #       "SetupId" => "PayPal",
       #       "Card" => {
-      #         "Account" => "4111111111111111",
-      #         "Tender" => "CreditCard",
-      #         "ExpDate" => "0123",
-      #         "CardHolder" => {
-      #           "FirstName" => "Kirthi",
-      #           "LastName" => "Bu"
-      #         }
-      #       }
+      #         "ID" => "cb111170-d7ba-4bf8-aae4-3477e12853b0"
+      #     }
       #     }
       #
       #    hash = PayFabric::Transaction::Sandbox::refund(device_id, password, options)
