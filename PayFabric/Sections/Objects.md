@@ -47,7 +47,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | CheckNumber*     | String | Check number. Only valid for eChecks. | varchar(128)| 
 | AccountType*     | String | eCheck account type. Only valid for eCheck accounts. | varchar(32)| 
 | Aba*             | String | Bank Routing Number. Only valid for eChecks. | varchar(64)| 
-| CardName        | String | Type of credit card: ``Visa``, ``Mastercard``, ``Discover``,``JCB``,``American Express``,``Diners Club``. Only valid for credit cards. | nvarchar(16)|
+| CardName        | String | Type of credit card: ``Visa``, ``Mastercard``, ``Discover``,``JCB``,``AmericanExpress``,``DinersClub``. Only valid for credit cards. | nvarchar(16)|
 | IsDefaultCard   | Boolean | Indicates whether this is the primary card of the customer. Default value is ``False``. | bit, not null| 
 | IsLocked        | Boolean | Indicates whether the card is locked. Default value is ``False``.| bit, null |
 | IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). |  
