@@ -6,7 +6,7 @@ Clients will create a security token by making an API call. The security token c
 In the PayFabric Receivables Management Portal you will be able to create additional users
 
 ##### Step 2: Make an API Call to Generate the Security Token
-API Endpoint: `https://{PayFabric URL}/receivablesapi/{PortalName}/api/token`  
+API Endpoint: `https://{PayFabric URL}/customerportal/api/{PortalName}/api/token`  
 
 Replace the following variables from the endpoint URL:
 
@@ -24,7 +24,7 @@ Make a Form Post API call to the endpoint with the following parameters:
 
 ```shell
 curl -X POST \
-  http://sandbox.payfabric.com/receivablesapi/nodus/api/token \
+  http://sandbox.payfabric.com/customerportal/api/nodus/api/token \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -d 'grant_type=password&client_id=ePay_Customer_Portal&username=Nodus0001&password=password1'
 ```
@@ -48,6 +48,6 @@ In the header for authorization, combine "Bearer" with the access token from the
 
 ```shell
 curl -X GET \
-  http://sandbox.payfabric.com/receivablesapi/nodus/api/customers \
+  http://sandbox.payfabric.com/customerportal/api/nodus/api/customers \
   -H 'Authorization: Bearer AIGMzQN2jvAeFtbPt9J0zNNMWQ46Knl5jReIMXp7vAh0JHmbUBxXUrk-s_LwgFM4cLcnXVGYAtCTKlyUeCRQn2xcXIvSRBJSECu6STRrScuxTDJh0j7u_fZNo_f60xku0mqesN5GW14iSNDVHpic2dxAp_oXsMnq977UxKS2dl-slvuRl5q7wdsRq_SZxQzb7JTS4C5MF_WgPFHN56UnKljpSTyyzgsh8qeIaE85tqZWv1KJaHsaBVxGFODY1YQjSwPeM3BVlTik5l2RPiv747fPVotZKcAZ8rGYomkEEjUwdgj3hjHvktORb41rzorXm__BDx-EOCnHD72F7e6nYzj690Jn148b4MHu0k7l1oyA-QssjTbNUlFWieA700C2ujR6bpZtVdP3zrDzudN7Nw' \
 ```
