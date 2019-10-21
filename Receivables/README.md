@@ -3,7 +3,7 @@ API Guide
 PayFabric Receivables APIs are organized around Representational State Transfer (**REST**) architecture and are designed to have predictable, resource-oriented URLs and use HTTP response codes to indicate API errors. Below are the two API endpoints:
 
 Website API: ``https://<PayFabric Receivables Site URL>/customerportal/api/{PortalName}/api``  
-Sync API: ``https://<PayFabric Receivables Site URL>/receivables/sync/{PortalName}/api``
+Sync API: ``https://<PayFabric Receivables Site URL>/receivables/sync/api/{PortalName}/api``
 
 Where do I start?
 -----------------
