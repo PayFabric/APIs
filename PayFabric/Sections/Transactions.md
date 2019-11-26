@@ -90,7 +90,7 @@ Please note that the **Key** field is the only required field for an update. Onl
 Process a Transaction
 ---------------------
 
-* `GET /transaction/process/151007010914?cvc=111` will attempt to process the transaction with the payment gateway
+* `GET /transaction/process/151007010914?cvc=111` will attempt to process the transaction with the payment gateway. `cvc` is optional.
 
 ###### Response
 <pre>
@@ -118,7 +118,7 @@ Process a Transaction
 Create and Process a Transaction
 --------------------------------
 
-* `POST /transaction/process?cvc=111` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload
+* `POST /transaction/process?cvc=111` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload. `cvc` is optional.
 
 ###### Request
 <pre>
