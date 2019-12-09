@@ -64,7 +64,7 @@ When submitting a [Transaction](Objects.md#transaction) developers can incorpora
 }
 ```
 ## Usage
-The table below describes the requirements for various Level 2 fields.
+The table below describes the required fields for Level 2 qualification.
 
 | Fields             | How data must be entered|
 | -------------------| :-----------------------|
@@ -79,10 +79,10 @@ The table below describes the requirements for various Level 2 fields.
 | ShipFromZip        | Must not be all spaces or zero|
 | ShipToZip          | Must not be all spaces or zero|
 | OrderDate          | Must be datetime format|
-| VATTaxAmount       |
-| VATTaxRate         | 
+| VATTaxAmount       | Only required for countries applicable to VAT.|
+| VATTaxRate         | Only required for countries applicable to VAT.|
 
-The table below describes the requirements for Level 3 fields.
+The table below describes the required fields for Level 3 qualification.
 
 | Fields             | How data must be entered|
 | -------------------| :-----------------------|
