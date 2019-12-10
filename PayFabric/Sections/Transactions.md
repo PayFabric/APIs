@@ -576,7 +576,7 @@ Referenced transaction uses the original transaction Key as the referenced facto
 #### Capture (Ship)
 
 * `GET /reference/151013003792?trxtype=SHIP` will attempt to execute and finalize (capture) an authorization transaction, also known as Book transactions.
-* `POST /transaction/process` will attempt to execute and finalize (capture) a pre-authorized transaction with specific amount, if `Amount` is not provided in request body, it will capture with authorized amount. if `Amount` is provoided in request body, it could be able to capture an authorization transaction multiple times, which depends on what gateway been used.
+* `POST /transaction/process` will attempt to execute and finalize (capture) a pre-authorized transaction with specific amount, if `Amount` is not provided in request body, it will capture with authorized amount. if `Amount` is provoided in request body, it could be able to capture an authorization transaction multiple times, which depends on what gateway been used. (Note: Following gateways support multiple captures, Authorize.Net, USAePay & Payeezy(aka First Data GGE4).)
 
 ###### Request
 <pre>
