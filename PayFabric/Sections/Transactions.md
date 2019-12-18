@@ -314,7 +314,7 @@ Retrieve a Transaction
 Retrieve Transactions
 ---------------------
 
-* `GET /transaction/get?fromdate=10-13-2015` will return the transactions created after the specified date
+* `GET /transaction/get?fromdate=10-13-2015` will return the transactions created after the specified date.
 
 Options
 -------
@@ -326,7 +326,7 @@ This request accepts the below query string parameters to add options. You can u
 | :------------- | :------------- | 
 |perdevice |When the value is `true`, the transaction will be filtered by device, which's device ID is used to authorize the request. Default value is `false`.|
 |customer|This parameter is to filter the result by customer number, which is used to create/process transaction.|
-|fromdate|This parameter is to set specific 'date from' to filter transaction's ModifiedOn. The format: mm/dd/yyyy.|
+|fromdate|This parameter is to set specific 'date from' to filter transactions. The format: mm/dd/yyyy.|
 |page|This parameter is to set the result's page number, each page will return 15 records.|
 |status|This parameter is used to filter transaction result against processed transaction's status, the possible values are: `approved`, `failure`, `declined`, `none` and `denied`. Returned result will include all transaction status if application does not submit this parameter.|
 |excludeunprocess|When the value is `true`, the result will filter out the unprocess transaction. Default value is `false`. |
