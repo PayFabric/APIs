@@ -3,6 +3,7 @@ PayFabric Receivables uses JSON objects to send and receive client data. This is
 
    # API
    [Accounts](API/Accounts.md)  
+   [AutoPays](API/AutoPays.md)  
    [Currencies](API/Currencies.md)  
    [Customers](API/Customers.md)  
    [DocumentHistory](API/DocumentHistory.md)   

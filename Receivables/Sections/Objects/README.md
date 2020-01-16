@@ -4,6 +4,10 @@ PayFabric Receivables uses JSON objects to send and receive client data. This is
    # Addresses
    [Address](Address.md)  
    
+   # AutoPay
+   [AutoPay](AutoPay.md)
+   [AutoPayTemplate](AutoPayTemplate.md)
+   
    # Currency
    [Currency](Currency.md)
    
