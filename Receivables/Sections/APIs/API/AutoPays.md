@@ -65,7 +65,7 @@ Retrieve a specific AutoPay template
 For more information and descriptions on available fields please see our [object reference](../../Objects/AutoPayTemplate.md).
 
 
-Retrieve a the current customer's AutoPay
+Retrieve the current customer's AutoPay
 --------------------
 
 * `GET /autopay` will retrieve the autopay for the currently logged in customer.
