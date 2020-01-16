@@ -89,7 +89,7 @@ as child elements of other objects.
 ### AutoPay
 * [Retrieve all AutoPay templates](Sections/APIs/API/AutoPays.md#retrieve-all-autopay-templates)
 * [Retrieve a specific AutoPay template](Sections/APIs/API/AutoPays.md#retrieve-a-specific-autopay-template)
-* [Retrieve the current customer's AutoPay](Sections/APIs/API/AutoPays.md#retrieve-the-current-customer's-autopay)
+* [Retrieve the current customer's AutoPay](Sections/APIs/API/AutoPays.md#retrieve-the-current-customers-autopay)
 * [Save an AutoPay](Sections/APIs/API/AutoPays.md#save-an-autopay)
 * [Update an AutoPay](Sections/APIs/API/AutoPays.md#update-an-autopay)
 * [Delete an AutoPay](Sections/APIs/API/AutoPays.md#delete-an-autopay)
