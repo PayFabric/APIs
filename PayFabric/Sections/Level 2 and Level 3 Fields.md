@@ -78,7 +78,7 @@ The table below describes the required fields for Level 2 qualification.
 | HandlingAmount     | No comma. Must be equal to the sum of all items' handling amount|
 | ShipFromZip        | Must not be all spaces or zero|
 | ShipToZip          | Must not be all spaces or zero|
-| OrderDate          | Must be datetime format| (mm/dd/yyyy)
+| OrderDate          | Must be datetime format (mm/dd/yyyy)| 
 | VATTaxAmount       | Only required for countries applicable to VAT.|
 | VATTaxRate         | Only required for countries applicable to VAT.|
 
