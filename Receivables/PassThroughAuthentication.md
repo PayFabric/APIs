@@ -19,7 +19,7 @@ The Authorization Code is the value the user will need in order to access the Pa
 
 1. Replace the variables in the below endpoint URL. Note: The redirect_uri should be encoded.
 
-API Endpoint: `https://{PayFabric URL}/receivablesapi/{PortalName}/api/authorize?user_name={User Name}&client_id=ePay_Customer_Portal&response_type=code&customer_id={CustomerID}&scope=passthrough&redirect_uri=https://{PayFabric URL}/receivablesapi/{Portal Name}/api/authcode`
+API Endpoint: `https://{PayFabric URL}/customerportal/api/{PortalName}/api/authorize?user_name={User Name}&client_id=ePay_Customer_Portal&response_type=code&customer_id={CustomerID}&scope=passthrough&redirect_uri=https://{PayFabric URL}/customerportal/api/{Portal Name}/api/authcode`
 
   * `{PayFabric URL}` - URL of the production or sandbox PayFabric environment. 
     * Production URL: `www.payfabric.com`
@@ -33,7 +33,7 @@ API Endpoint: `https://{PayFabric URL}/receivablesapi/{PortalName}/api/authorize
 Example:  
 ```shell
 curl -X POST \
-  'https://sandbox.payfabric.com/receivablesapi/nodus/api/authorize?user_name=Passthrough_User&client_id=ePay_Customer_Portal&response_type=code&customer_id=CUSTOMER1234&scope=passthrough&redirect_uri=https%3A%2F%2Fsandbox.payfabric.com%2Freceivablesapi%2FMyPortalName%2Fapi%2Fauthcode' \
+  'https://sandbox.payfabric.com/customerportal/api/nodus/api/authorize?user_name=Passthrough_User&client_id=ePay_Customer_Portal&response_type=code&customer_id=CUSTOMER1234&scope=passthrough&redirect_uri=https%3A%2F%2Fsandbox.payfabric.com%2Fcustomerportal%2Fapi%2FMyPortalName%2Fapi%2Fauthcode' \
   -H 'Content-Type: application/json' \
   -d '{
     "integration_key": "PortalName_Abcd123",
