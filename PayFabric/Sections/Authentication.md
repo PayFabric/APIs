@@ -1,7 +1,7 @@
 PayFabric API Authentication
 ============================
 
-Clients running in server-side programming environments can include an authorization field in the HTTP header of each request that is made to PayFabric. The authorization field includes _DCN_, _Device ID_ and _Device Password_. The combination of {DCN}:{DeviceID}|{DevicePassword} are the credentials for this application. You can generate these values via the PayFabric web portal on Device Management page ((DCN stand for Database Collection Number, which is the number before the colon in the Device ID value). These credentials will provide access to all the PayFabric APIs, so you should only use this authentication method in secure environments.
+Clients running in server-side programming environments can include an authorization field in the HTTP header of each request that is made to PayFabric. The authorization field includes _DCN_, _Device ID_ and _Device Password_. The combination of {DCN}:{DeviceID}|{DevicePassword} are the credentials for this application. You can generate these values via the PayFabric web portal on Device Management page (DCN stand for Database Collection Number, which is the number before the colon in the Device ID value). These credentials will provide access to all the PayFabric APIs, so you should only use this authentication method in secure environments.
 
 Authentication C# Sample code snippet, for more sample codes, click [here](https://github.com/PayFabric/APIs/tree/master/PayFabric/Samples).
 ----------------------
