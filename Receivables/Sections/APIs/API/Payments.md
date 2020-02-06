@@ -6,11 +6,15 @@ The Payment API is used for processing, and viewing payment information on the P
 Delete Payments
 -------------------
 
-* `DELETE /payments?paymentIdentities={PaymentIdentity}` will delete a payment based on the payment identity specified in the query string parameter. Please note, you can string these together by specifying an `&` between each `paymentIdentityes={PaymentIdentity}`
+* `DELETE /payments` will delete the payments based on the payment identities based on the JSON request payload.
 
 ###### Request
 <pre>
-	GET /payments?paymentIdentities=WEBPMT0000000020
+	GET /payments
+	
+[ 
+	"WEBPMT0000000020" 
+]
 </pre>
 
 ###### Response
