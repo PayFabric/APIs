@@ -10,7 +10,7 @@ Delete Payments
 
 ###### Request
 <pre>
-	GET /payments
+GET /payments
 	
 [ 
 	"WEBPMT0000000020" 
