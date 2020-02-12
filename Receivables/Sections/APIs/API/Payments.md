@@ -6,11 +6,11 @@ The Payment API is used for processing, and viewing payment information on the P
 Delete Payments
 -------------------
 
-* `DELETE /payments` will delete the payments based on the payment identities based on the JSON request payload.
+* `DELETE /payments` will delete the "Inprogress" payments based on the payment identities based on the JSON request payload.
 
 ###### Request
 <pre>
-GET /payments
+DELETE /payments
 	
 [ 
 	"WEBPMT0000000020" 
