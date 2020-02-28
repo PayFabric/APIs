@@ -140,6 +140,7 @@ The Transaction object represents a single transaction that will pass through Pa
 | AuthorizationType| String| The authorization type of the transaction, Valid values are ``Reauthorization``, ``Resubmission``, ``Incremental`` or ``NotSet`` |varchar(25)|
 | TrxSchedule | String| The type authorization of transaction to be processed, Valid values are ``Unscheduled``, ``ScheduledInstallment``, ``ScheduledRecurring`` or ``NotSet`` |varchar(25)|
 |TrxInitiation| String| The entity that initiated the transaction, Valid values are ``Merchant``, ``Customer`` or ``NotSet`` |varchar(25)|
+|CCEntryIndicator| String| The entity that specifies whether the card used on the transaction is a stored credential or newly entered, Valid values are ``Entered`` or ``Stored`` |varchar(25)|
  
 
 > The Required fields above only apply to transactions that will be submitted to Payment Gateways. If the transaction is only being saved on the PayFabric server (and not being submitted to a Payment Gateway) then none of the fields are required.
