@@ -137,10 +137,10 @@ The Transaction object represents a single transaction that will pass through Pa
 | MSO_EngineGUID       | GUID | GUID of gateway account profile for this transaction. Developer can utilize this field|
 | PayDate              | String | A future date to process this transaction. In another word, this transaction won't be processed right away by setting this field. It's format should like "3/23/2015".|datetime|
 | ReferenceKey         | String| The original transaction key if this transaction is a reference transaction |varchar(64)|
-| AuthorizationType| String| The authorization type of the transaction, Valid values are ``Reauthorization``, ``Resubmission``, ``Incremental`` or ``NotSet`` |varchar(25)|
-| TrxSchedule | String| The type authorization of transaction to be processed, Valid values are ``Unscheduled``, ``ScheduledInstallment``, ``ScheduledRecurring`` or ``NotSet`` |varchar(25)|
-|TrxInitiation| String| The entity that initiated the transaction, Valid values are ``Merchant``, ``Customer`` or ``NotSet`` |varchar(25)|
-|CCEntryIndicator| String| The entity that specifies whether the card used on the transaction is a stored credential or newly entered, Valid values are ``Entered`` or ``Stored`` |varchar(25)|
+| AuthorizationType| String| The authorization type of the transaction, valid values are ``Reauthorization``, ``Resubmission``, ``Incremental`` or ``NotSet`` |varchar(25)|
+| TrxSchedule | String| The type authorization of transaction to be processed, valid values are ``Unscheduled``, ``ScheduledInstallment``, ``ScheduledRecurring`` or ``NotSet`` |varchar(25)|
+|TrxInitiation| String| The entity that initiated the transaction, valid values are ``Merchant``, ``Customer`` or ``NotSet`` |varchar(25)|
+|CCEntryIndicator| String| The identifier that specifies whether the card used on the transaction is a stored credential or newly entered, valid values are ``Entered`` or ``Stored`` |varchar(25)|
  
 
 > The Required fields above only apply to transactions that will be submitted to Payment Gateways. If the transaction is only being saved on the PayFabric server (and not being submitted to a Payment Gateway) then none of the fields are required.
