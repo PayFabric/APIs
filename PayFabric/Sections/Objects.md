@@ -138,7 +138,7 @@ The Transaction object represents a single transaction that will pass through Pa
 | PayDate              | String | A future date to process this transaction. In another word, this transaction won't be processed right away by setting this field. It's format should like "3/23/2015".|datetime|
 | ReferenceKey         | String| The original transaction key if this transaction is a reference transaction |varchar(64)|
 | AuthorizationType| String| The authorization type of the transaction, Valid values are ``Reauthorization``, ``Resubmission``, ``Incremental`` or ``NotSet`` |varchar(25)|
-| TrxSchedule | String| The type authorization of transaction to be processed, Valid values are ``Unscheduled``, ``Scheduled``, ``ScheduledInstallment``, ``ScheduledRecurring`` or ``NotSet`` |varchar(25)|
+| TrxSchedule | String| The type authorization of transaction to be processed, Valid values are ``Unscheduled``, ``ScheduledInstallment``, ``ScheduledRecurring`` or ``NotSet`` |varchar(25)|
 |TrxInitiation| String| The entity that initiated the transaction, Valid values are ``Merchant``, ``Customer`` or ``NotSet`` |varchar(25)|
  
 
