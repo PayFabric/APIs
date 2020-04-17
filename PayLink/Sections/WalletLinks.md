@@ -93,7 +93,7 @@ Retrieve a WalletLink
     "ReturnUrl": null,
     "CompletedOn": null,
     "CreatedOn": "2018-07-17T00:44:38.267",
-    "Link": "https://dev-cn.payfabric.com/PayLink/Web/walletlink/YjBOQLdsgUudHEDpxg0T5zE"
+    "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/YjBOQLdsgUudHEDpxg0T5zE"
 }
 </pre>
 
@@ -143,7 +143,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/wallet?$filter=CustomerNumber eq
         "ReturnUrl": null,
         "CompletedOn": null,
         "CreatedOn": "0001-01-01T00:00:00",
-        "Link": "https://dev-cn.payfabric.com/PayLink/Web/walletlink/YjBOQLdsgUudHEDpxg0T5zE"
+        "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/YjBOQLdsgUudHEDpxg0T5zE"
     },
     {
         "Id": "bxC_7z8JZ0-KB8_hdhy2JDE",
@@ -168,7 +168,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/wallet?$filter=CustomerNumber eq
         "ReturnUrl": null,
         "CompletedOn": "2018-07-17T01:20:43.61",
         "CreatedOn": "0001-01-01T00:00:00",
-        "Link": "https://dev-cn.payfabric.com/PayLink/Web/walletlink/bxC_7z8JZ0-KB8_hdhy2JDE"
+        "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/bxC_7z8JZ0-KB8_hdhy2JDE"
     }
 ]
 </pre>
