@@ -24,7 +24,7 @@ This object represents the PayLink record that customers will pay through their 
 | MiscAmount | Decimal  | Misc amount | RW |
 | CustomerNumber* | String | Customer unique number| RW |
 | CustomerName | String | Customer name | RW |
-| IsMultipleInvoice* | Boolean | Specifies that the PayLink document is for multiple invoice numbers, `true | false` | RW |
+| IsMultipleInvoice* | Boolean | Specifies that the PayLink document is for multiple invoice numbers, `true` or `false` | RW |
 | DocumentNumber | String | Document/invoice unique number | RW |
 | TransactionType* | String | Credit card transaction type, such as `Sale` or `Book` | RW |
 | DocDate* | DateTime | Document/invoice date | RW |
@@ -33,7 +33,7 @@ This object represents the PayLink record that customers will pay through their 
 | PaymentTerm | String | Document payment term, such as `NET40` | RW |
 | SourceOfDocument | Integer | Source of document. **Dynamics GP Only**, available values `1 = Sales Entry, 3 = Invoice Entry, 4 = RM_Sales, 5 = RM_Cash`| RW |
 | BatchSource | Integer | Batch source. **Dynamics GP Only**, available values `SalesEntry, InvoiceEntry, RM_Cash, RM_Sales` | RW |
-| BatchNo | String | Batch number. This field will be required after ERP connection's EPR Provider set as Microsoft Dynamics GP or Microsoft Dynamics SL in [Settings](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Settings.md#configure-erp-connection) | RW |
+| BatchNo | String | Batch number. This field will be required after ERP connection's ERP Provider set as Microsoft Dynamics GP or Microsoft Dynamics SL in [Settings](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Settings.md#configure-erp-connection) | RW |
 | MerchantEmail | String | Email From | RW |
 | ReturnUrl | String | User defined return URL, overwrites PayLink confirmation page | RW |
 | Status | Integer | Document status, available values `0 = draft, 1 = waiting for payment, 2 = cancelled, 3 = paid`, Note: When [Create a PayLink](./PayLinks.md#create-a-paylink), the value could be `0` or `1`; when [Update a PayLink](./PayLinks.md#update-a-paylink), the value will be updated from `0` to `1` rather than `1` to `0`; when [Cancel a PayLink](./PayLinks.md#cancel-a-paylink), the value will be updated from `1` to `2`. | RO |
