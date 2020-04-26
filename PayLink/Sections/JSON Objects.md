@@ -24,7 +24,7 @@ This object represents the PayLink record that customers will pay through their 
 | MiscAmount | Decimal  | Misc amount | RW |
 | CustomerNumber* | String | Customer unique number| RW |
 | CustomerName | String | Customer name | RW |
-| IsMultipleInvoice* | Boolean | Specifies that the PayLink document is for multiple invoice numbers, `true` or `false` | RW |
+| IsMultipleInvoice* | Boolean | Specifies that the PayLink document is for multiple invoice numbers, available values `true` or `false` | RW |
 | DocumentNumber | String | Document/invoice unique number | RW |
 | TransactionType* | String | Credit card transaction type, such as `Sale` or `Book` | RW |
 | DocDate* | DateTime | Document/invoice date | RW |
