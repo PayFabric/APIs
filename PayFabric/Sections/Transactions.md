@@ -18,7 +18,12 @@ Create a Transaction
   "Document": {
     "Head": [],
     "Lines": [],
-    "UserDefined": []
+    "UserDefined": [
+            {
+                "Name": "DisableEmailReceipt", 
+                "Value": "true"
+            }
+    ]
   },
   "PayDate": "",
   "ReferenceKey": null,
@@ -168,6 +173,13 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
 * [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 * [Which Transaction Type to Use](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md)
 * [Create and Process an eCheck Transaction](Process%20eCheck%20Transaction.md#create-and-process-a-echeck-transaction)
+* [How to Disable Email Receipt] Provide 3rd party calling application the ability to disable PayFabric's email receipt to go out automatically for the corresponding transaction using the Document's UserDefined field (see the name-value pair option below). 
+Name: DisableEmailReceipt 
+Value: True/False, default option is False.
+
+If True, this will disable the email receipt to go out for the corresponding transaction*.
+If False, this will enable the email receipt to go out for the corresponding transaction*.
+* This still depends on the prerequisite that email receipt is enabled on PayFabric service portal.
 
 ###### Response
 <pre>
