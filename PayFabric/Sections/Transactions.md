@@ -18,12 +18,7 @@ Create a Transaction
   "Document": {
     "Head": [],
     "Lines": [],
-    "UserDefined": [
-            {
-                "Name": "DisableEmailReceipt", 
-                "Value": "true"
-            }
-    ]
+    "UserDefined": []
   },
   "PayDate": "",
   "ReferenceKey": null,
