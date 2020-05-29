@@ -49,18 +49,7 @@ If the HTTP Status Code is 200 - OK, you will receive the following **string** r
 ##### Step 3: Direct the User to the Customer Portal
 Replace the `{PayFabric URL}` and `{PortalName}`, and `{AuthCode}` values in the below URL with the respective values. 
 
-`https://{PayFabric URL}/customerportal/{PortalName}/passthrough?accesscode={authCode}`  
-
-##### Options
-
-This request accepts the below query string parameters to add additional options to passthrough. You can add them to your request URL by adding a '?' before the first parameter and connecting additional ones with a '&'.
-
-| QueryString | Description |
-| :------------- | :------------- |
-| OriginatingPortalName | Name of the portal originating from |
-| OriginatingPortalUrl | Url of the portal originating from |
-| LogoutUrl | Url to be redirected to upon logout |
-| Page | Page to be directed to upon loading |
+`https://{PayFabric URL}/customerportal/{PortalName}/passthrough?accesscode={authCode}`
 
 Example:  
 ```
