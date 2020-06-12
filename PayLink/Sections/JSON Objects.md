@@ -16,7 +16,7 @@ This object represents the PayLink record that customers will pay through their 
 | Payment* | [Payment Object](#payment) | Specify payment gateway account profile names and accepted payment types, **required if** `SetupId` is blank | RW |
 | Currency* | String | Currency code, such as `USD`, `CAD` | RW |
 | Amount* | Decimal | Transaction amount | RW |
-| DocumentAmount* | Decimal | Document/invoice amount | RW |
+| DocumentAmount* | Decimal | Document/invoice applied amount | RW |
 | TaxAmount | Decimal | Tax amount | RW |
 | Tax | [Tax Object](#tax) | Tax detail information | RW |
 | TradeDiscount | Decimal | Trade discount amount | RW |
