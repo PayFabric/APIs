@@ -102,9 +102,9 @@ Create a PayLink
         }
     ], 
     "Payment": {
-        "CreditCardGateway": null, 
-        "ECheckGateway": null, 
-        "AcceptType": null
+        "CreditCardGateway": "EVO", 
+        "ECheckGateway": "USASOAPECheck“, 
+        "AcceptType": 0
     },    
     "CustomeMessage": "CustomeMessage"
 }
@@ -179,10 +179,10 @@ Below is the PayLink Confirmation page
     "Message": "",
     "CustomeMessage": null,
     "Payment": {
-        "CreditCardGateway": "PFP",
-        "ECheckGateway": "",
-        "AcceptType": 1
-    },
+        "CreditCardGateway": "EVO", 
+        "ECheckGateway": "USASOAPECheck“, 
+        "AcceptType": 0
+    },  
     "NotificationEmail": "John.Doe@payfabric.com",
     "NotificationPhone": "123456789",
     "OriginalTender": null,
@@ -370,10 +370,10 @@ Create a Multiple Invoice PayLink
         }
     ],  
     "Payment": {
-        "CreditCardGateway": null, 
-        "ECheckGateway": null, 
-        "AcceptType": null
-    }, 
+        "CreditCardGateway": "EVO", 
+        "ECheckGateway": "USASOAPECheck“, 
+        "AcceptType": 0
+    },  
     "Tax": {
         "Name": "Tax name", 
         "percent": "11", 
@@ -595,10 +595,10 @@ Below is the PayLink Confirmation page
     "Message": "",
     "CustomeMessage": "CustomeMessage",
     "Payment": {
-        "CreditCardGateway": "PayFlowProCredit",
-        "ECheckGateway": "USASOAPECheck",
+        "CreditCardGateway": "EVO", 
+        "ECheckGateway": "USASOAPECheck“, 
         "AcceptType": 0
-    },
+    },  
     "NotificationEmail": "rena.wu@nodus.com",
     "NotificationPhone": "18915400883",
     "OriginalTender": null,
