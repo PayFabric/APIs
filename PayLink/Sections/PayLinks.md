@@ -60,9 +60,7 @@ Create a PayLink
     "Notification": {
         <b>"Type": "All", </b>
         "SMSTemplate": null, 
-        "EmailTemplate": null, 
-        "ResponseStatus": null, 
-        "ResponseMessage": null
+        "EmailTemplate": null,        
     }, 
     <b>"NotificationEmail": "qa-receive@payfabric.com",</b> 
     <b>"NotificationPhone": "15151472869",  </b>
@@ -103,11 +101,11 @@ Create a PayLink
             ]
         }
     ], 
-    <b>"Payment": {
+    "Payment": {
         "CreditCardGateway": null, 
         "ECheckGateway": null, 
         "AcceptType": null
-    }, </b>   
+    },    
     "CustomeMessage": "CustomeMessage"
 }
 </pre>
@@ -251,9 +249,7 @@ Create a Multiple Invoice PayLink
     "Notification": {
         "Type": "All", 
         "SMSTemplate": "c81b5a0a-23a5-4bcc-b5fe-a8d6002db28d", 
-        "EmailTemplate": "9613cf11-fe5a-4c30-b1d6-a8d6002d1b39", 
-        "ResponseStatus": null, 
-        "ResponseMessage": null
+        "EmailTemplate": "9613cf11-fe5a-4c30-b1d6-a8d6002d1b39",      
     }, 
     "NotificationEmail": "rena.wu@nodus.com", 
     "NotificationPhone": "18915400883", 
@@ -373,11 +369,11 @@ Create a Multiple Invoice PayLink
             ]
         }
     ],  
-    <b>"Payment": {
+    "Payment": {
         "CreditCardGateway": null, 
         "ECheckGateway": null, 
         "AcceptType": null
-    }, </b>
+    }, 
     "Tax": {
         "Name": "Tax name", 
         "percent": "11", 
