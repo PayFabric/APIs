@@ -136,65 +136,188 @@ Create a Multiple Invoice PayLink
 
 ###### Request
 <pre>
-{
-  <b>"Currency": "USD"</b>,
-  <b>"Amount": 49.99</b>,
-  <b>"DocumentAmount": 49.99</b>,
-  "TaxAmount": 0,
-  "TradeDiscount": 0,
-  "Freight": 0,
-  "MiscAmount": 0,
-  <b>"CustomerNumber": "JOHNDOE0001"</b>,
-  "CustomerName": null,
-  <b>"IsMultipleInvoice": true</b>,
-  "DocumentNumber": "test01",
-  "TransactionType": "Sale",
-  <b>"DocDate": "2015-10-28T00:00:00"</b>,
-  "DueDate": "2015-10-31T00:00:00",
-  "DocType": 3,
-  "PaymentTerm": null,
-  "SourceOfDocument": 0,
-  "BatchSource": 0,
-  "BatchNo": "B2018",
-  "MerchantEmail": null,
-  "ReturnUrl": null,
-  "Tax": {
-      "Name": "All Details",
-      "percent": 0.5,
-      "amount": 0.2
-    },
-  "ShippingAddress": null,
-  "BillingAddress": null,
-  "Items": [
-    {
-      "ItemCode": "INV0001",
-      "AppliedAmount": 20.00,
-      "DueDate": "2015-10-31"
-    },
-    {
-      "ItemCode": "INV0002",
-      "AppliedAmount": 20.00,
-      "DueDate": "2015-10-31"
-    }
-  ],
-  "UserDefinedFields": [
-    {
-      "Key": "Surcharge",
-      "Value": "9.99"
-    }
-  ],
-  "PostDataType": "CashReceipt",
-  "Status": 0,
-  <b>"Payment": {
-    "CreditCardGateway": "PFP",
-    "ECheckGateway": "",
-    <b>"AcceptType": 1</b>
-  }</b>,
-  <b>"Notification": {
-    <b>"Type": "All"</b>
-  }</b>,
-  <b>"NotificationEmail": "John.Doe@payfabric.com"</b>,
-  <b>"NotificationPhone": "123456789"</b>
+{     
+    <b>"Currency": "USD", </b>
+    <b>"Amount": "80", </b>
+    <b>"DocumentAmount": "70", </b>    
+    <b>"CustomerNumber": "aaronfit0001", </b>
+    "CustomerName": "AARONFIT0001", 
+    <b>"IsMultipleInvoice": true, </b>
+    "DocumentNumber": "", 
+    <b>"TransactionType": "Sale", </b>
+    <b>"DocDate": "6/15/2020 2:27:04 PM", </b>
+    "DueDate": "6/15/2020 2:27:04 PM", 
+    <b>"DocType": "3", </b>
+    "PaymentTerm": "Retail", 
+    "SourceOfDocument": "1", 
+    "BatchSource": "1", 
+    <b>"BatchNo": "Test paylink", </b>
+    "MerchantEmail": "merchant@nodus.com", 
+    "ReturnUrl": null, 
+    <b>"Status": "1", </b>
+    "IntegrationStatus": null, 
+    "ShippingAddress": {
+        "Address1": "123 Test Street", 
+        "Address2": "12 Test Street", 
+        "Address3": "1 Test Street", 
+        "Email": "qa-receive@payfabric.com", 
+        "City": "CA", 
+        "State": "CA", 
+        "Country": "USA", 
+        "Zip": "90201", 
+        "Phone1": "1523691233", 
+        "Phone2": "4525616636", 
+        "Phone3": "4515845632"
+    }, 
+    "BillingAddress": {
+        "Address1": "line 12", 
+        "Address2": "liner r3", 
+        "Address3": "~!@!$@#%# gfywefyeasg", 
+        "Email": "qa-receive@payfabric.com", 
+        "City": "CA", 
+        "State": "CA", 
+        "Country": "US", 
+        "Zip": "90201", 
+        "Phone1": "1523691233", 
+        "Phone2": "4525616636", 
+        "Phone3": "4515845632"
+    }, 
+    "Notification": {
+        "Type": "All", 
+        "SMSTemplate": "c81b5a0a-23a5-4bcc-b5fe-a8d6002db28d", 
+        "EmailTemplate": "9613cf11-fe5a-4c30-b1d6-a8d6002d1b39", 
+        "ResponseStatus": null, 
+        "ResponseMessage": null
+    }, 
+    "NotificationEmail": "rena.wu@nodus.com", 
+    "NotificationPhone": "18915400883", 
+    "PostDataType": "CashReceipt", 
+    "UserDefinedFields": null, 
+    "Items": [
+        {
+            <b>"ItemCode": "STDINV2403", </b>
+            <b>"AppliedAmount": "30", </b>
+            "DueDate": "6/15/2020 2:27:04 PM", 
+            "TaxAmount": "4",   
+            "UserDefinedFields": [
+                {
+                    "Key": "SubTotal", 
+                    "Value": "44"
+                }, 
+                {
+                    "Key": "Miscellaneous", 
+                    "Value": "1.00"
+                }, 
+                {
+                    "Key": "Freight", 
+                    "Value": "2.00"
+                },				
+                {
+                    "Key": "TradeDiscount",
+                    "Value": "3.00"
+                }
+            ], 
+            "Items": [
+                {
+                    <b>"ItemCode": "A100", </b>
+                    "ItemCommodityCode": "A100", 
+                    "ItemProdCode": "A100", 
+                    "ItemUOM": "Each", 
+                    "ItemDiscount": "0", 
+                    "Description": "A100 item", 
+                    "ItemDesc": "A100", 
+                    "ItemUPC": "A100", 
+                    "ItemFreightAmount": "1.23", 
+                    "ItemHandlingAmount": "2.36", 
+                    "ItemTaxRate": "2.00", 
+                    "ItemCost": "2.3", 
+                    "ItemTaxAmount": "1.02", 
+                    <b>"UnitPrice": "20",</b> 
+                    "ItemAmount": "40", 
+                    <b>"Quantity": "2", </b>
+                    "PriceLevel": "Retail", 
+                    "UnitOfMeasure": "Each", 
+                    "SiteCode": "WAREHOUSE", 
+                    "MarkDown": "0", 
+                    "TaxAmount": "0",                     
+                    "MiscAmount": "0", 
+                    "UserDefinedFields": [                        
+                        {
+                            "Key": "ExtPrice", 
+                            "Value": "40"
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            <b>"ItemCode": "STDINV2402", </b>
+            <b>"AppliedAmount": "40", </b>
+            "DueDate": "6/15/2020 2:27:04 PM", 
+            "TaxAmount": "6",            
+            "UserDefinedFields": [
+                {
+                    "Key": "SubTotal", 
+                    "Value": "99.00"
+                }, 
+                {
+                    "Key": "Miscellaneous", 
+                    "Value": "4.00"
+                }, 
+                {
+                    "Key": "Freight", 
+                    "Value": "2.00"
+                },
+                {
+                    "Key": "TradeDiscount",
+                    "Value": "3"
+                }
+            ], 
+            "Items": [
+                {
+                    "ItemCode": "B100", 
+                    "ItemCommodityCode": "A100", 
+                    "ItemProdCode": "A100", 
+                    "ItemUOM": "Each", 
+                    "ItemDiscount": "0", 
+                    "Description": "A100 item", 
+                    "ItemDesc": "A100", 
+                    "ItemUPC": "A100", 
+                    "ItemFreightAmount": "1.23", 
+                    "ItemHandlingAmount": "2.36", 
+                    "ItemTaxRate": "2.00", 
+                    "ItemCost": "2.3", 
+                    "ItemTaxAmount": "1.02", 
+                    <b>"UnitPrice": "30.00", </b>
+                    "ItemAmount": "90.00", 
+                    <b>"Quantity": "3", </b>
+                    "PriceLevel": "Retail", 
+                    "UnitOfMeasure": "Each", 
+                    "SiteCode": "WAREHOUSE", 
+                    "MarkDown": "0", 
+                    "TaxAmount": "0",                    
+                    "MiscAmount": "0", 
+                    "UserDefinedFields": [                        
+                        {
+                            "Key": "ExtPrice", 
+                            "Value": "90"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],  
+    "Payment": {
+        "CreditCardGateway": null, 
+        "ECheckGateway": null, 
+        "AcceptType": null
+    }, 
+    "Tax": {
+        "Name": "Tax name", 
+        "percent": "11", 
+        "amount": "1.11"
+    }, 
+    "CustomeMessage": "CustomeMessage"
 }
 </pre>
 
@@ -206,104 +329,210 @@ Please note that **bold** fields are required fields, the **Payment** object *or
 ###### Response
 <pre>
 {
-    "Id": "hF5LOdXrC0amj0KliEUwxDE",
-    "InstID": "cd76620f-28a2-43d1-b3be-6cb1e70301f5",
-    "Device": "a284c1d0-a6fc-4938-98b4-0000b8cf4210",
+    "Id": "r6OwE3phSEOZR3Kg52ygpTE",
+    "InstID": "11a2c6f2-33f6-48b3-a5ab-697db2519ec7",
+    "Device": "23c6b04e-cd06-4185-801a-8614508f065f",
     "SetupId": null,
     "Currency": "USD",
-    "Amount": 49.99,
-    "DocumentAmount": 49.99,
-    "TaxAmount": 0,
-    "TradeDiscount": 0,
-    "Freight": 0,
-    "MiscAmount": 0,
-    "CustomerNumber": "JOHNDOE0001",
-    "CustomerName": null,
+    "Amount": 80.0,
+    "DocumentAmount": 70.0,
+    "TaxAmount": 0.0,
+    "TradeDiscount": 0.0,
+    "Freight": 0.0,
+    "MiscAmount": 0.0,
+    "CustomerNumber": "aaronfit0001",
+    "CustomerName": "AARONFIT0001",
     "IsMultipleInvoice": true,
-    "DocumentNumber": "MINV0000000622",
+    "DocumentNumber": "MINV0000010077",
     "TransactionType": "Sale",
-    "CreatedOn": "2018-07-19T19:02:40.3761203-07:00",
-    "DocDate": "2015-10-28T00:00:00",
-    "DueDate": "2015-10-31T00:00:00",
+    "CreatedOn": "2020-06-15T00:19:34.7744464-07:00",
+    "ModifiedOn": "0001-01-01T00:00:00",
+    "DocDate": "2020-06-15T14:27:04",
+    "DueDate": "2020-06-15T14:27:04",
     "DocType": 3,
-    "PaymentTerm": null,
-    "SourceOfDocument": 0,
-    "BatchSource": 0,
-    "BatchNo": "B2018",
-    "MerchantEmail": null,
+    "PaymentTerm": "Retail",
+    "SourceOfDocument": 1,
+    "BatchSource": 1,
+    "BatchNo": "Test paylink",
+    "MerchantEmail": "merchant@nodus.com",
     "ReturnUrl": null,
-    "Status": 0,
+    "Status": 1,
     "IntegrationStatus": 0,
     "Tax": {
-            "Name": "All Details",
-            "percent": 0.5,
-            "amount": 0.2
+        "Name": "Tax name",
+        "percent": 11.0,
+        "amount": 1.11
     },
-    "ShippingAddress": null,
-    "BillingAddress": null,
+    "ShippingAddress": {
+        "Email": "qa-receive@payfabric.com",
+        "Address1": "123 Test Street",
+        "Address2": "12 Test Street",
+        "Address3": "1 Test Street",
+        "City": "CA",
+        "State": "CA",
+        "Zip": "90201",
+        "Country": "USA",
+        "Phone1": "1523691233",
+        "Phone2": "4525616636",
+        "Phone3": "4515845632"
+    },
+    "BillingAddress": {
+        "Email": "qa-receive@payfabric.com",
+        "Address1": "line 12",
+        "Address2": "liner r3",
+        "Address3": "~!@!$@#%# gfywefyeasg",
+        "City": "CA",
+        "State": "CA",
+        "Zip": "90201",
+        "Country": "US",
+        "Phone1": "1523691233",
+        "Phone2": "4525616636",
+        "Phone3": "4515845632"
+    },
     "Items": [
         {
-            "ItemCode": "INV0001",
-            "AppliedAmount": 20,
-            "DueDate": "2015-10-31T00:00:00",
+            "ItemCode": "STDINV2403",
+            "AppliedAmount": 30.0,
+            "DueDate": "2020-06-15T14:27:04",
             "Description": null,
-            "UnitPrice": 0,
+            "UnitPrice": "0",
             "Quantity": null,
             "PriceLevel": null,
             "UnitOfMeasure": null,
             "SiteCode": null,
-            "MarkDown": 0,
-            "TaxAmount": 0,
-            "MiscAmount": 0,
-            "UserDefinedFields": null,
-            "Items": null
+            "MarkDown": 0.0,
+            "TaxAmount": 4.0,
+            "MiscAmount": 0.0,
+            "UserDefinedFields": [
+                {
+                    "Key": "SubTotal",
+                    "Value": "44"
+                },
+                {
+                    "Key": "Miscellaneous",
+                    "Value": "1.00"
+                },
+                {
+                    "Key": "Freight",
+                    "Value": "2.00"
+                },
+                {
+                    "Key": "TradeDiscount",
+                    "Value": "3.00"
+                }
+            ],
+            "Items": [
+                {
+                    "ItemCode": "A100",
+                    "AppliedAmount": 0.0,
+                    "DueDate": null,
+                    "Description": "A100 item",
+                    "UnitPrice": "20",
+                    "Quantity": "2",
+                    "PriceLevel": "Retail",
+                    "UnitOfMeasure": "Each",
+                    "SiteCode": "WAREHOUSE",
+                    "MarkDown": 0.0,
+                    "TaxAmount": 0.0,
+                    "MiscAmount": 0.0,
+                    "UserDefinedFields": [
+                        {
+                            "Key": "ExtPrice",
+                            "Value": "40"
+                        }
+                    ],
+                    "Items": null,
+                    "ShippingAddress": null,
+                    "BillingAddress": null
+                }
+            ],
+            "ShippingAddress": null,
+            "BillingAddress": null
         },
         {
-            "ItemCode": "INV0002",
-            "AppliedAmount": 20,
-            "DueDate": "2015-10-31T00:00:00",
+            "ItemCode": "STDINV2402",
+            "AppliedAmount": 40.0,
+            "DueDate": "2020-06-15T14:27:04",
             "Description": null,
-            "UnitPrice": 0,
+            "UnitPrice": "0",
             "Quantity": null,
             "PriceLevel": null,
             "UnitOfMeasure": null,
             "SiteCode": null,
-            "MarkDown": 0,
-            "TaxAmount": 0,
-            "MiscAmount": 0,
-            "UserDefinedFields": null,
-            "Items": null
+            "MarkDown": 0.0,
+            "TaxAmount": 6.0,
+            "MiscAmount": 0.0,
+            "UserDefinedFields": [
+                {
+                    "Key": "SubTotal",
+                    "Value": "99.00"
+                },
+                {
+                    "Key": "Miscellaneous",
+                    "Value": "4.00"
+                },
+                {
+                    "Key": "Freight",
+                    "Value": "2.00"
+                },
+                {
+                    "Key": "TradeDiscount",
+                    "Value": "3"
+                }
+            ],
+            "Items": [
+                {
+                    "ItemCode": "B100",
+                    "AppliedAmount": 0.0,
+                    "DueDate": null,
+                    "Description": "A100 item",
+                    "UnitPrice": "30.00",
+                    "Quantity": "3",
+                    "PriceLevel": "Retail",
+                    "UnitOfMeasure": "Each",
+                    "SiteCode": "WAREHOUSE",
+                    "MarkDown": 0.0,
+                    "TaxAmount": 0.0,
+                    "MiscAmount": 0.0,
+                    "UserDefinedFields": [
+                        {
+                            "Key": "ExtPrice",
+                            "Value": "90"
+                        }
+                    ],
+                    "Items": null,
+                    "ShippingAddress": null,
+                    "BillingAddress": null
+                }
+            ],
+            "ShippingAddress": null,
+            "BillingAddress": null
         }
     ],
-    "UserDefinedFields": [
-        {
-            "Key": "Surcharge",
-            "Value": "9.99"
-        }
-    ],
+    "UserDefinedFields": null,
     "Notification": {
         "Type": "All",
-        "SMSTemplate": null,
-        "EmailTemplate": null,
-        "ResponseStatus": "",
-        "ResponseMessage": ""
+        "SMSTemplate": "c81b5a0a-23a5-4bcc-b5fe-a8d6002db28d",
+        "EmailTemplate": "9613cf11-fe5a-4c30-b1d6-a8d6002d1b39",
+        "ResponseStatus": "2",
+        "ResponseMessage": "2"
     },
     "PostDataType": "CashReceipt",
-    "TransactionKey": "180719177570",
+    "TransactionKey": "20061500015812",
     "PaidOn": null,
     "LastProcessDate": null,
     "Message": "",
-    "CustomeMessage": null,
+    "CustomeMessage": "CustomeMessage",
     "Payment": {
-        "CreditCardGateway": "PFP",
-        "ECheckGateway": "",
-        "AcceptType": 1
+        "CreditCardGateway": "PayFlowProCredit",
+        "ECheckGateway": "USASOAPECheck",
+        "AcceptType": 0
     },
-    "NotificationEmail": "John.Doe@payfabric.com",
-    "NotificationPhone": "123456789",
+    "NotificationEmail": "rena.wu@nodus.com",
+    "NotificationPhone": "18915400883",
     "OriginalTender": null,
     "PayFabricTransactionData": null,
-    "Link": "https://sandbox.payfabric.com/PayLink/Web/hF5LOdXrC0amj0KliEUwxDE"
+    "Link": "https://dev-us2.payfabric.com/PayLink/Web/r6OwE3phSEOZR3Kg52ygpTE"
 }
 </pre>
 
