@@ -337,7 +337,7 @@ Create a Multiple Invoice PayLink
             ], 
             "Items": [
                 {
-                    "ItemCode": "B100", 
+                    <b>"ItemCode": "B100", </b>
                     "ItemCommodityCode": "A100", 
                     "ItemProdCode": "A100", 
                     "ItemUOM": "Each", 
