@@ -247,12 +247,12 @@ Create a Multiple Invoice PayLink
         "Phone3": "4515845632"
     }, 
     "Notification": {
-        "Type": "All", 
+        <b>"Type": "All", </b>
         "SMSTemplate": "c81b5a0a-23a5-4bcc-b5fe-a8d6002db28d", 
         "EmailTemplate": "9613cf11-fe5a-4c30-b1d6-a8d6002d1b39"   
     }, 
-    "NotificationEmail": "rena.wu@nodus.com", 
-    "NotificationPhone": "18915400883", 
+    <b>"NotificationEmail": "rena.wu@nodus.com",</b> 
+    <b>"NotificationPhone": "18915400883", </b>
     "PostDataType": "CashReceipt", 
     "UserDefinedFields": null, 
     "Items": [
