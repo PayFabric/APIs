@@ -60,7 +60,7 @@ Create a PayLink
     "Notification": {
         <b>"Type": "All", </b>
         "SMSTemplate": null, 
-        "EmailTemplate": null,        
+        "EmailTemplate": null     
     }, 
     <b>"NotificationEmail": "qa-receive@payfabric.com",</b> 
     <b>"NotificationPhone": "15151472869",  </b>
@@ -249,7 +249,7 @@ Create a Multiple Invoice PayLink
     "Notification": {
         "Type": "All", 
         "SMSTemplate": "c81b5a0a-23a5-4bcc-b5fe-a8d6002db28d", 
-        "EmailTemplate": "9613cf11-fe5a-4c30-b1d6-a8d6002d1b39",      
+        "EmailTemplate": "9613cf11-fe5a-4c30-b1d6-a8d6002d1b39"   
     }, 
     "NotificationEmail": "rena.wu@nodus.com", 
     "NotificationPhone": "18915400883", 
