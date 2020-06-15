@@ -11,48 +11,104 @@ Create a PayLink
 ###### Request
 <pre>
 {
-  <b>"Currency": "USD"</b>,
-  <b>"Amount": 49.99</b>,
-  <b>"DocumentAmount": 49.99</b>,
-  "TaxAmount": 0,
-  "TradeDiscount": 0,
-  "Freight": 0,
-  "MiscAmount": 0,
-  <b>"CustomerNumber": "JOHNDOE0001"</b>,
-  "CustomerName": null,
-  <b>"IsMultipleInvoice": false</b>,
-  "DocumentNumber": null,
-  "TransactionType": "Sale",
-  <b>"DocDate": "2015-10-28T00:00:00"</b>,
-  "DueDate": "2015-10-31T00:00:00",
-  "DocType": 3,
-  "PaymentTerm": null,
-  "SourceOfDocument": 0,
-  "BatchSource": 0,
-  "BatchNo": "B2018",
-  "MerchantEmail": null,
-  "ReturnUrl": null,
-  "Tax": {
-    "Name": "All Details",
-     "percent": 0.5,
-     "amount": 0.2
-    },
-  "ShippingAddress": null,
-  "BillingAddress": null,
-  "Items": null,
-  "UserDefinedFields": null,
-  "PostDataType": "CashReceipt",
-  "Status": 0,
-  <b>"Payment": {
-    "CreditCardGateway": "PFP",
-    "ECheckGateway": "",
-    <b>"AcceptType": 1</b>
-  }</b>,
-  <b>"Notification": {
-    <b>"Type": "All"</b>
-  }</b>,
-  <b>"NotificationEmail": "John.Doe@payfabric.com"</b>,
-  <b>"NotificationPhone": "123456789"</b>
+   <b>"Currency": "USD"</b>,
+   <b>"Amount": 20</b>,
+   <b>"DocumentAmount": 20</b>,
+   "TaxAmount": "1.5", 
+    "TradeDiscount": "3", 
+    "Freight": "1", 
+    "MiscAmount": "2.5", 
+    "CustomerNumber": "AARONFIT0001", 
+    "CustomerName": "AARON Fit 001", 
+    <b>"IsMultipleInvoice": false, </b>
+    "DocumentNumber": "STDINV2267", 
+    <b>"TransactionType": "Sale", </b>
+    <b>"DocDate": "4/3/2020 5:21:09 PM", </b>
+    "DueDate": "4/3/2020 5:21:09 PM", 
+    "DocType": 3,
+    "PaymentTerm": "Retail", 
+    "PostDataType": "PaymentLine",
+    "BatchNo":"Test",
+    "Status": "1", 
+    "IntegrationStatus": null, 
+    "ShippingAddress": {
+        "Address1": "123 Test Street", 
+        "Address2": "12 Test Street", 
+        "Address3": "1 Test Street", 
+        "Email": "qa-receive@payfabric.com", 
+        "City": "CA", 
+        "State": "CA", 
+        "Country": "USA", 
+        "Zip": "90201", 
+        "Phone1": "1523691233", 
+        "Phone2": "4525616636", 
+        "Phone3": "4515845632"
+    }, 
+    "BillingAddress": {
+        "Address1": "line 12", 
+        "Address2": "liner r3", 
+        "Address3": "line 3", 
+        "Email": "qa-receive@payfabric.com", 
+        "City": "CA", 
+        "State": "CA", 
+        "Country": "US", 
+        "Zip": "90201", 
+        "Phone1": "1523691233", 
+        "Phone2": "4525616636", 
+        "Phone3": "4515845632"
+    }, 
+    "Notification": {
+        <b>"Type": "All", </b>
+        "SMSTemplate": null, 
+        "EmailTemplate": null, 
+        "ResponseStatus": null, 
+        "ResponseMessage": null
+    }, 
+    <b>"NotificationEmail": "qa-receive@payfabric.com",</b> 
+    <b>"NotificationPhone": "15151472869",  </b>
+     "UserDefinedFields": [
+                 {
+                    "Key": "SubTotal", 
+                    "Value": "20"
+                }
+            ],
+    "Items": [
+        {
+            <b>"ItemCode": "A100", </b>
+            "ItemCommodityCode": "A100", 
+            "ItemProdCode": "A100", 
+            "ItemUOM": "Each", 
+            "ItemDiscount": "0", 
+            "Description": "A100 item", 
+            "ItemDesc": "A100", 
+            "ItemUPC": "A100", 
+            "ItemFreightAmount": "1.23", 
+            "ItemHandlingAmount": "2.36", 
+            "ItemTaxRate": "2.00", 
+            "ItemCost": "2.3", 
+            "ItemTaxAmount": "1.02", 
+            <b>"UnitPrice":"6",</b>
+            "ItemAmount": "39.95", 
+            <b>"Quantity":"3",</b>
+            "PriceLevel": "Retail", 
+            "UnitOfMeasure": "Each", 
+            "SiteCode": "WAREHOUSE", 
+            "MarkDown": "0", 
+            "TaxAmount": "0",               
+            "UserDefinedFields": [
+                {
+                    "Key": "ExtPrice", 
+                    "Value": "18.00"
+                }
+            ]
+        }
+    ], 
+    <b>"Payment": {
+        "CreditCardGateway": null, 
+        "ECheckGateway": null, 
+        "AcceptType": null
+    }, </b>   
+    "CustomeMessage": "CustomeMessage"
 }
 </pre>
 
@@ -307,11 +363,11 @@ Create a Multiple Invoice PayLink
             ]
         }
     ],  
-    "Payment": {
+    <b>"Payment": {
         "CreditCardGateway": null, 
         "ECheckGateway": null, 
         "AcceptType": null
-    }, 
+    }, </b>
     "Tax": {
         "Name": "Tax name", 
         "percent": "11", 
