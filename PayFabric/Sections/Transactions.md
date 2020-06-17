@@ -169,6 +169,7 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
 * [Which Transaction Type to Use](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md)
 * [Create and Process an eCheck Transaction](Process%20eCheck%20Transaction.md#create-and-process-a-echeck-transaction)
 
+
 ###### Response
 <pre>
 {
