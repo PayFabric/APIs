@@ -569,21 +569,21 @@ This request accepts the below query string parameters to add options. You can u
 </pre>
 
 
-Referenced Transaction(s): Capture (Ship), Void or Credit
+Referenced Transaction(s): Capture (Ship), Void or Credit (Refund)
 ---------------------------------------------------------
 
-Referenced transaction uses the original transaction Key as the referenced factor to subsequently process a new transaction. There’re 3 types of referenced transactions: Void, Capture (Ship) and Credit. They all use the transaction Key from the original transaction to process the new transaction.
+Referenced transaction uses the original transaction Key as the referenced factor to subsequently process a new transaction. There’re 3 types of referenced transactions: Void, Capture (Ship) and Credit (Refund). They all use the transaction Key from the original transaction to process the new transaction.
 
 #### Capture (Ship)
 
-* `GET /reference/151013003792?trxtype=SHIP` will attempt to execute and finalize (capture) an authorization transaction, also known as Book transactions.
+* `GET /reference/151013003792?trxtype=Capture` will attempt to execute and finalize (capture) an authorization transaction, also known as Book transactions.
 * `POST /transaction/process` will attempt to execute and finalize (capture) a pre-authorized transaction with specific amount, if `Amount` is not provided in request body, it will capture with authorized amount. if `Amount` is provoided in request body, it could be able to capture an authorization transaction multiple times, which depends on what gateway been used. (Note: Following gateways support multiple captures, Authorize.Net, USAePay & Payeezy(aka First Data GGE4).)
 
 ###### Request
 <pre>
 {
   "Amount": "1",
-  "Type": "Ship",
+  "Type": "Capture",
   "ReferenceKey": "151013003792"
 }
 </pre>
@@ -598,12 +598,12 @@ Referenced transaction uses the original transaction Key as the referenced facto
 }
 </pre>
 
-* `GET /reference/151013003792?trxtype=CREDIT` or `POST /transaction/process` with following request will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
+* `GET /reference/151013003792?trxtype=Refund` or `POST /transaction/process` with following request will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
 
 ###### Request
 <pre>
 {
-  "Type": "Credit",
+  "Type": "Refund",
   "ReferenceKey": "151013003792"
 }
 </pre>
@@ -630,12 +630,12 @@ Note: `ReferenceKey` is the initial processed transaction's `TrxKey`.
 }
 </pre>
 
-If `Amount` is not provided in request body for Credit/Refund transaction, it will processed with original transaction amount.
+If `Amount` is not provided in request body for Refund transaction, it will processed with original transaction amount.
 
 Refund a Customer
 -----------------
 
-To refund a customer, you just submit a credit to the customer that is owed the refund. The amount of the transaction should match the amount that is due to the customer. To perform a credit transaction, you just create a transaction object, set the `Type` field to `Credit`, and then use [Create and Process a Transaction](#create-and-process-a-transaction) to execute the transaction.
+To refund a customer, you just submit a credit to the customer that is owed the refund. The amount of the transaction should match the amount that is due to the customer. To perform a Refund transaction, you just create a transaction object, set the `Type` field to `Refund`, and then use [Create and Process a Transaction](#create-and-process-a-transaction) to execute the transaction.
 
 * `POST /transaction/process?cvc=111`
 
@@ -643,7 +643,7 @@ To refund a customer, you just submit a credit to the customer that is owed the 
 <pre>
 {
     "SetupId": "PFP",
-    <b>"Type": "Credit"</b>,
+    <b>"Type": "Refund"</b>,
     "Customer": "JOHNDOE0001",
     "Amount": 19.99,
     "Currency": "USD",
