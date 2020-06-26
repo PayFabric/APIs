@@ -12,6 +12,6 @@ The autopay template object represents an AutoPay template that has been already
 | FixedAmountOption | String | The fixed amount option used for the AutoPay. Can be either ``Preselected`` or ``UserChoice`` | varchar(100) |
 | Frequency | String | Frequency of the AutoPay. Can be either ``Daily``, ``Monthly``, ``Quarterly``, or ``Annually`` | varchar(100) |
 | Name | String | Title name of the Autopay template | nvarchar(50) |
-| Start | String | Start option when the AutoPay should begin. Can be either ``NumberOfCycles``, ``UserChoice``, or ``NoEndDate`` | varchar(100) |
+| Start | String | Start option when the AutoPay should begin. Can be either ``DayOfTheMonth``, ``UserChoice``, or ``NextDay`` | varchar(100) |
 | StartDay | Int | Day of the month or week when the AutoPay should begin | int |
 
