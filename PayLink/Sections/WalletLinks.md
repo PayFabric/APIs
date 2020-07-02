@@ -111,6 +111,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/wallet?$filter=CustomerNumber eq
 | :------------- | ------------- | 
 | CustomerNumber | Customer number specified at the time of creating a wallet link. |
 | CreatedOn | The date the wallet link was created on. |
+| ModifiedOn | The date the wallet link was modified on. |
 | NotificationEmail | Email specified at the time of creating a wallet link. |
 | NotificationPhone | Phone number specified at the time of creating a wallet link. |
 | Status | `0=incomplete, 1=complete, 2=cancelled` |
