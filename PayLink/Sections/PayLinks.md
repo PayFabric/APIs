@@ -734,6 +734,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
 | DocDate | The document date specified during PayLink creation. |
 | DueDate | The payment due date specified during PayLink creation. |
 | CreatedOn | The date the PayLink was created. |
+| ModifiedOn | The date the PayLink was modified. |
 | PaidOn | The date the PayLink was paid. |
 | Amount | The amount of the PayLink. |
 | NotificationEmail | The notification email assigned to the PayLink. |
