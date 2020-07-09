@@ -59,11 +59,11 @@ For more information and descriptions on response fields please see our [object 
 Retrieve invoice html to be displayed by invoiceId
 --------------------
 
-* `GET /invoices/display/{InvoiceId}` will get the invoice html associated to the InvoiceId on the PayFabric Receivables website based on the JSON request payload.
+* `GET /invoices/display?invoiceId={InvoiceId}` will get the invoice html associated to the InvoiceId on the PayFabric Receivables website based on the JSON request payload.
 
 ###### Request
 <pre>
-	GET /invoices/display/STDINV2006
+	GET /invoices/display?invoiceId=STDINV2006
 </pre>
 
 ###### Response
