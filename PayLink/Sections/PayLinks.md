@@ -614,6 +614,7 @@ Update a PayLink
 ----------------
 
 * `PATCH /api/document/gwx9q6fqcEuagAJLA27CIA` will update the specified PayLink document with new information based on the request JSON payload
+Note: NotificationEmail and NotificationPhone are not able to update.
 
 ###### Request
 A JSON object using only the fields that need updating should be included, see the [Create a PayLink](#create-a-paylink) endpoint for more information.  To release a draft PayLink document and make it active and ready to accept payments all you must do is supply the following JSON payload:
