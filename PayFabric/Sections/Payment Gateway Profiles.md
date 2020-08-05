@@ -18,6 +18,7 @@ Retrieve a Payment Gateway Profile
   "Name": "PFP",
   "Processor": "TSYS(Vital/VisaNet)",
   "ProcessorID": "18"
+  "SurchargeRate": "0"
 }
 </pre>
 
@@ -30,22 +31,24 @@ Retrieve Payment Gateway Profiles
 <pre>
 [
   {
-    "CardClass": "ECheck",
-    "CardClassID": "2",
-    "Connector": "AuthorizeNet",
-    "ID": "B0AB461C-114C-48C5-A9AE-A52300ACC36E",
-    "Name": "AuthorizeNet ECheck",
-    "Processor": "Authorize.net",
-    "ProcessorID": "1"
-  },
-  {
-    "CardClass": "Credit",
-    "CardClassID": "1",
-    "Connector": "PayflowPro",
-    "ID": "079C5DA2-DF91-4AD6-9BA2-A52300FEF06A",
-    "Name": "PFP",
-    "Processor": "TSYS(Vital/VisaNet)",
-    "ProcessorID": "18"
-  }
+        "CardClass": "Credit",
+        "CardClassID": "1",
+        "Connector": "EVO",
+        "ID": "bb373958-aa49-40d5-b515-8e4d96836c88",
+        "Name": "EVO",
+        "Processor": "Evo US",
+        "ProcessorID": "1",
+        "SurchargeRate": "4"
+    },
+    {
+        "CardClass": "Credit",
+        "CardClassID": "1",
+        "Connector": "EVO",
+        "ID": "d75c0619-db8d-41c9-9322-85e25d2b0a99",
+        "Name": "EVO0623",
+        "Processor": "Evo US",
+        "ProcessorID": "1",
+        "SurchargeRate": "0"
+    }
 ]
 </pre>
