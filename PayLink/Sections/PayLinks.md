@@ -638,90 +638,148 @@ A failed `PATCH` will result in a HTTP 400 Bad Request Response with the message
 Retrieve a PayLink
 ------------------
 
-* `GET /api/document/AdFXqnNNf0GDNwiO5UE_fw` will return the specified PayLink document
+* `GET /api/document/azBmusnzAUOzo4KVu30nczE` will return the specified PayLink document
 
 ###### Response
 <pre>
 {
-  "Id": "gwx9q6fqcEuagAJLA27CIA",
-  "Device": "33665f05-8346-4809-e0f1-01050545236f",
-  "SetupId": null,
-  "Currency": "USD",
-  "Amount": 49.99,
-  "DocumentAmount": 49.99,
-  "TaxAmount": 0,
-  "TradeDiscount": 0,
-  "Freight": 0,
-  "MiscAmount": 0,
-  "CustomerNumber": "JOHNDOE0001",
-  "CustomerName": null,
-  "IsMultipleInvoice": false,
-  "DocumentNumber": "STDINV0001",
-  "TransactionType": "Sale",
-  "DocDate": "2015-11-04T09:20:58.337",
-  "DueDate": "1900-01-01T00:00:00",
-  "DocType": 0,
-  "PaymentTerm": "Net 30",
-  "SourceOfDocument": 0,
-  "BatchSource": 0,
-  "BatchNo": null,
-  "MerchantEmail": null,
-  "ReturnUrl": null,
-  "Status": 1,
-  "Tax": {
-    "Name": "All Details",
-    "percent": 0.5,
-    "amount": 0.2
-  },
-  "ShippingAddress": null,
-  "BillingAddress": {
-    "Email": null,
-    "Address1": null,
-    "Address2": null,
-    "Address3": null,
-    "City": null,
-    "State": null,
-    "Zip": null,
-    "Country": null,
-    "Phone1": null,
-    "Phone2": null,
-    "Phone3": null
-  },
-  "Items": null,
-  "UserDefinedFields": [
-    {
-      "Key": "SubTotal",
-      "Value": "49.99"
+    "Id": "azBmusnzAUOzo4KVu30nczE",
+    "InstID": "11a2c6f2-33f6-48b3-a5ab-697db2519ec7",
+    "Device": "23c6b04e-cd06-4185-801a-8614508f065f",
+    "SetupId": null,
+    "Currency": "USD",
+    "Amount": 20.80,
+    "DocumentAmount": 20.0,
+    "TaxAmount": 1.5,
+    "TradeDiscount": 3.0,
+    "Freight": 1.0,
+    "MiscAmount": 2.5,
+    "CustomerNumber": "AARONFIT0001",
+    "CustomerName": "AARON Fit 001",
+    "IsMultipleInvoice": false,
+    "DocumentNumber": "STDINV2267",
+    "DocumentNumberDisplay": "STDINV2267",
+    "TransactionType": "Sale",
+    "CreatedOn": "2020-08-05T00:30:49.42",
+    "ModifiedOn": "2020-08-05T00:35:55.117",
+    "DocDate": "2020-04-03T17:21:09",
+    "DueDate": "2020-04-03T17:21:09",
+    "DocType": 3,
+    "PaymentTerm": "Retail",
+    "SourceOfDocument": 1,
+    "BatchSource": 0,
+    "BatchNo": "Test",
+    "MerchantEmail": null,
+    "ReturnUrl": null,
+    "Status": 3,
+    "IntegrationStatus": 2,
+    "Tax": null,
+    "ShippingAddress": {
+        "Email": "qa-receive@payfabric.com",
+        "Address1": "123 Test Street",
+        "Address2": "12 Test Street",
+        "Address3": "1 Test Street",
+        "City": "CA",
+        "State": "CA",
+        "Zip": "90201",
+        "Country": "USA",
+        "Phone1": "1523691233",
+        "Phone2": "4525616636",
+        "Phone3": "4515845632"
     },
-    {
-      "Key": "InvoiceNumber",
-      "Value": "STDINV0001"
+    "BillingAddress": {
+        "Email": "qa-receive@payfabric.com",
+        "Address1": "line 12",
+        "Address2": "liner r3",
+        "Address3": "line 3",
+        "City": "CA",
+        "State": "CA",
+        "Zip": "90201",
+        "Country": "US",
+        "Phone1": "1523691233",
+        "Phone2": "4525616636",
+        "Phone3": "4515845632"
     },
-    {
-      "Key": "CustomerName",
-      "Value": "JOHNDOE0001"
-    }
-  ],
-  "PostDataType": "PaymentLine",
-  "TransactionKey": "151104003878",
-  "PaidOn": "1900-01-01T00:00:00",
-  "LastProcessDate": "1900-01-01T00:00:00",
-  "Message": "",
-  "CustomeMessage": null,
-  "Payment": {
-    "CreditCardGateway": "PFP",
-    "ECheckGateway": "",
-    "AcceptType": 1
-  },
-  "Notification": {
-    "Type": "Email",
-    "SMSTemplate": null,
-    "ResponseStatus": null,
-    "ResponseMessage": null
-  },
-  "NotificationEmail": "John.Doe@PayFabric.com",
-  "NotificationPhone": "",
-  "OriginalTender": null
+    "Items": [
+        {
+            "ItemCode": "A100",
+            "AppliedAmount": 0.0,
+            "DueDate": null,
+            "Description": "A100 item",
+            "UnitPrice": "6",
+            "Quantity": "3",
+            "PriceLevel": "Retail",
+            "UnitOfMeasure": "Each",
+            "SiteCode": "WAREHOUSE",
+            "MarkDown": 0.0,
+            "TaxAmount": 0.0,
+            "MiscAmount": 0.0,
+            "UserDefinedFields": [
+                {
+                    "Key": "ExtPrice",
+                    "Value": "18.00"
+                }
+            ],
+            "Items": null,
+            "ShippingAddress": null,
+            "BillingAddress": null
+        }
+    ],
+    "UserDefinedFields": [
+        {
+            "Key": "SubTotal",
+            "Value": "20"
+        },
+        {
+            "Key": "Surcharge",
+            "Value": "0.80"
+        },
+        {
+            "Key": "SurchargePercentage",
+            "Value": "4.00"
+        },
+        {
+            "Key": "TrxAmount",
+            "Value": "20.80"
+        },
+        {
+            "Key": "OrigTrxAmount",
+            "Value": "20.00"
+        },
+        {
+            "Key": "FinalAmount",
+            "Value": "20.80"
+        },
+        {
+            "Key": "CardType",
+            "Value": "Credit"
+        }
+    ],
+    "Notification": {
+        "Type": "All",
+        "SMSTemplate": null,
+        "EmailTemplate": null,
+        "ResponseStatus": "",
+        "ResponseMessage": ""
+    },
+    "PostDataType": "PaymentLine",
+    "TransactionKey": "20080500046622",
+    "PaidOn": "2020-08-05T00:35:50.81",
+    "LastProcessDate": "2020-08-05T00:35:55.1166403-07:00",
+    "Message": "",
+    "CustomeMessage": "CustomeMessage",
+    "Payment": {
+        "CreditCardGateway": "EVOsnap",
+        "ECheckGateway": "USASOAPECheck",
+        "AcceptType": 0
+    },
+    "NotificationEmail": "qa-receive@payfabric.com",
+    "NotificationEmailDisplay": "qa-receive@payfabric.com",
+    "NotificationPhone": "15151472869",
+    "NotificationPhoneDisplay": "15151472869",
+    "OriginalTender": null,
+    "PayFabricTransactionData": null,
+    "Link": "https://dev-us2.payfabric.com/PayLink/Web/azBmusnzAUOzo4KVu30nczE"
 }
 </pre>
 
@@ -754,164 +812,256 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
 ###### Response
 <pre>
 [
-  {
-    "Id": "gwx9q6fqcEuagAJLA27CIA",
-    "Device": "33665f05-8346-4809-e0f1-01050545236f",
-    "SetupId": null,
-    "Currency": "USD",
-    "Amount": 49.99,
-    "DocumentAmount": 49.99,
-    "TaxAmount": 0,
-    "TradeDiscount": 0,
-    "Freight": 0,
-    "MiscAmount": 0,
-    "CustomerNumber": "JOHNDOE0001",
-    "CustomerName": null,
-    "IsMultipleInvoice": false,
-    "DocumentNumber": "STDINV0001",
-    "TransactionType": "Sale",
-    "DocDate": "2015-11-04T09:20:58.337",
-    "DueDate": "1900-01-01T00:00:00",
-    "DocType": 0,
-    "PaymentTerm": "Net 30",
-    "SourceOfDocument": 0,
-    "BatchSource": 0,
-    "BatchNo": null,
-    "MerchantEmail": null,
-    "ReturnUrl": null,
-    "Status": 1,
-    "Tax": {
-      "Name": "All Details",
-      "percent": 0.5,
-      "amount": 0.2
-  },
-    "ShippingAddress": null,
-    "BillingAddress": {
-      "Email": null,
-      "Address1": null,
-      "Address2": null,
-      "Address3": null,
-      "City": null,
-      "State": null,
-      "Zip": null,
-      "Country": null,
-      "Phone1": null,
-      "Phone2": null,
-      "Phone3": null
+    {
+        "Id": "jxDX9d7fX0OWwDBCznYD9jE",
+        "InstID": "11a2c6f2-33f6-48b3-a5ab-697db2519ec7",
+        "Device": "23c6b04e-cd06-4185-801a-8614508f065f",
+        "SetupId": null,
+        "Currency": "USD",
+        "Amount": 40.75,
+        "DocumentAmount": 39.95,
+        "TaxAmount": 1.36,
+        "TradeDiscount": 2.0,
+        "Freight": 0.0,
+        "MiscAmount": 0.0,
+        "CustomerNumber": "aaronfit0001",
+        "CustomerName": "~!@!@$#^%&^*&(*)*)(_test",
+        "IsMultipleInvoice": false,
+        "DocumentNumber": "STDINV2267",
+        "DocumentNumberDisplay": "STDINV2267",
+        "TransactionType": "Book",
+        "CreatedOn": "2020-08-04T23:34:47.443",
+        "ModifiedOn": "2020-08-04T23:37:14.017",
+        "DocDate": "2018-05-29T16:54:37",
+        "DueDate": "2018-05-29T16:54:37",
+        "DocType": 3,
+        "PaymentTerm": "Retail",
+        "SourceOfDocument": 1,
+        "BatchSource": 1,
+        "BatchNo": "Test paylink",
+        "MerchantEmail": "merchant@nodus.com",
+        "ReturnUrl": null,
+        "Status": 3,
+        "IntegrationStatus": 2,
+        "Tax": null,
+        "ShippingAddress": {
+            "Email": "sophia.shi@nodus.com",
+            "Address1": "123 Test Street",
+            "Address2": "12 Test Street",
+            "Address3": "1 Test Street",
+            "City": "CA",
+            "State": "CA",
+            "Zip": "90201",
+            "Country": "USA",
+            "Phone1": "1523691233",
+            "Phone2": "4525616636",
+            "Phone3": "4515845632"
+        },
+        "BillingAddress": {
+            "Email": "sophia.shi@nodus.com",
+            "Address1": "line 12",
+            "Address2": "liner r3",
+            "Address3": "",
+            "City": "CA",
+            "State": "CA",
+            "Zip": "90201",
+            "Country": "US",
+            "Phone1": "1523691233",
+            "Phone2": "4525616636",
+            "Phone3": "4515845632"
+        },
+        "Items": null,
+        "UserDefinedFields": [
+            {
+                "Key": "Surcharge",
+                "Value": "0.80"
+            },
+            {
+                "Key": "SurchargePercentage",
+                "Value": "2.00"
+            },
+            {
+                "Key": "TrxAmount",
+                "Value": "40.75"
+            },
+            {
+                "Key": "OrigTrxAmount",
+                "Value": "39.95"
+            },
+            {
+                "Key": "FinalAmount",
+                "Value": "40.75"
+            },
+            {
+                "Key": "CardType",
+                "Value": "Credit"
+            }
+        ],
+        "Notification": {
+            "Type": "All",
+            "SMSTemplate": "C81B5A0A-23A5-4BCC-B5FE-A8D6002DB28C",
+            "EmailTemplate": "9613CF11-FE5A-4C30-B1D6-A8D6002D1B39",
+            "ResponseStatus": "",
+            "ResponseMessage": ""
+        },
+        "PostDataType": "PaymentLine",
+        "TransactionKey": "20080400045891",
+        "PaidOn": "2020-08-04T23:37:10.85",
+        "LastProcessDate": "2020-08-04T23:37:14.0044198-07:00",
+        "Message": "",
+        "CustomeMessage": null,
+        "Payment": {
+            "CreditCardGateway": "EVOSNAP",
+            "ECheckGateway": "USASOAPECheck",
+            "AcceptType": 0
+        },
+        "NotificationEmail": "sophia.shi@nodus.com",
+        "NotificationEmailDisplay": "sophia.shi@nodus.com",
+        "NotificationPhone": "17145484360",
+        "NotificationPhoneDisplay": "17145484360",
+        "OriginalTender": null,
+        "PayFabricTransactionData": null,
+        "Link": "https://dev-us2.payfabric.com/PayLink/Web/jxDX9d7fX0OWwDBCznYD9jE"
     },
-    "Items": null,
-    "UserDefinedFields": [
-      {
-        "Key": "SubTotal",
-        "Value": "49.99"
-      },
-      {
-        "Key": "InvoiceNumber",
-        "Value": "STDINV0001"
-      },
-      {
-        "Key": "CustomerName",
-        "Value": "JOHNDOE0001"
-      }
-    ],
-    "PostDataType": "PaymentLine",
-    "TransactionKey": "151104003878",
-    "PaidOn": "1900-01-01T00:00:00",
-    "LastProcessDate": "1900-01-01T00:00:00",
-    "Message": "",
-    "CustomeMessage": null,
-    "Payment": {
-      "CreditCardGateway": "PFP",
-      "ECheckGateway": "",
-      "AcceptType": 1
-    },
-    "Notification": {
-      "Type": "Email",
-      "SMSTemplate": null,
-      "ResponseStatus": null,
-      "ResponseMessage": null
-    },
-    "NotificationEmail": "John.Doe@PayFabric.com",
-    "NotificationPhone": "",
-    "OriginalTender": null
-  },
-  {
-    "Id": "gwx9q6fqcEuagAJLA27CIB",
-    "Device": "33665f05-8346-4809-e0f1-01050545236f",
-    "SetupId": null,
-    "Currency": "USD",
-    "Amount": 49.99,
-    "DocumentAmount": 49.99,
-    "TaxAmount": 0,
-    "TradeDiscount": 0,
-    "Freight": 0,
-    "MiscAmount": 0,
-    "CustomerNumber": "JOHNDOE0001",
-    "CustomerName": null,
-    "IsMultipleInvoice": false,
-    "DocumentNumber": "STDINV0002",
-    "TransactionType": "Sale",
-    "DocDate": "2015-11-04T09:20:58.337",
-    "DueDate": "1900-01-01T00:00:00",
-    "DocType": 0,
-    "PaymentTerm": "Net 30",
-    "SourceOfDocument": 0,
-    "BatchSource": 0,
-    "BatchNo": null,
-    "MerchantEmail": null,
-    "ReturnUrl": null,
-    "Status": 1,
-    "Tax": null,
-    "ShippingAddress": null,
-    "BillingAddress": {
-      "Email": null,
-      "Address1": null,
-      "Address2": null,
-      "Address3": null,
-      "City": null,
-      "State": null,
-      "Zip": null,
-      "Country": null,
-      "Phone1": null,
-      "Phone2": null,
-      "Phone3": null
-    },
-    "Items": null,
-    "UserDefinedFields": [
-      {
-        "Key": "SubTotal",
-        "Value": "49.99"
-      },
-      {
-        "Key": "InvoiceNumber",
-        "Value": "STDINV0002"
-      },
-      {
-        "Key": "CustomerName",
-        "Value": "JOHNDOE0001"
-      }
-    ],
-    "PostDataType": "PaymentLine",
-    "TransactionKey": "151104003879",
-    "PaidOn": "1900-01-01T00:00:00",
-    "LastProcessDate": "1900-01-01T00:00:00",
-    "Message": "",
-    "CustomeMessage": null,
-    "Payment": {
-      "CreditCardGateway": "PFP",
-      "ECheckGateway": "",
-      "AcceptType": 1
-    },
-    "Notification": {
-      "Type": "Email",
-      "SMSTemplate": null,
-      "ResponseStatus": null,
-      "ResponseMessage": null
-    },
-    "NotificationEmail": "John.Doe@PayFabric.com",
-    "NotificationPhone": "",
-    "OriginalTender": null
-  }
+    {
+        "Id": "azBmusnzAUOzo4KVu30nczE",
+        "InstID": "11a2c6f2-33f6-48b3-a5ab-697db2519ec7",
+        "Device": "23c6b04e-cd06-4185-801a-8614508f065f",
+        "SetupId": null,
+        "Currency": "USD",
+        "Amount": 20.80,
+        "DocumentAmount": 20.0,
+        "TaxAmount": 1.5,
+        "TradeDiscount": 3.0,
+        "Freight": 1.0,
+        "MiscAmount": 2.5,
+        "CustomerNumber": "AARONFIT0001",
+        "CustomerName": "AARON Fit 001",
+        "IsMultipleInvoice": false,
+        "DocumentNumber": "STDINV2267",
+        "DocumentNumberDisplay": "STDINV2267",
+        "TransactionType": "Sale",
+        "CreatedOn": "2020-08-05T00:30:49.42",
+        "ModifiedOn": "2020-08-05T00:35:55.117",
+        "DocDate": "2020-04-03T17:21:09",
+        "DueDate": "2020-04-03T17:21:09",
+        "DocType": 3,
+        "PaymentTerm": "Retail",
+        "SourceOfDocument": 1,
+        "BatchSource": 0,
+        "BatchNo": "Test",
+        "MerchantEmail": null,
+        "ReturnUrl": null,
+        "Status": 3,
+        "IntegrationStatus": 2,
+        "Tax": null,
+        "ShippingAddress": {
+            "Email": "qa-receive@payfabric.com",
+            "Address1": "123 Test Street",
+            "Address2": "12 Test Street",
+            "Address3": "1 Test Street",
+            "City": "CA",
+            "State": "CA",
+            "Zip": "90201",
+            "Country": "USA",
+            "Phone1": "1523691233",
+            "Phone2": "4525616636",
+            "Phone3": "4515845632"
+        },
+        "BillingAddress": {
+            "Email": "qa-receive@payfabric.com",
+            "Address1": "line 12",
+            "Address2": "liner r3",
+            "Address3": "line 3",
+            "City": "CA",
+            "State": "CA",
+            "Zip": "90201",
+            "Country": "US",
+            "Phone1": "1523691233",
+            "Phone2": "4525616636",
+            "Phone3": "4515845632"
+        },
+        "Items": [
+            {
+                "ItemCode": "A100",
+                "AppliedAmount": 0.0,
+                "DueDate": null,
+                "Description": "A100 item",
+                "UnitPrice": "6",
+                "Quantity": "3",
+                "PriceLevel": "Retail",
+                "UnitOfMeasure": "Each",
+                "SiteCode": "WAREHOUSE",
+                "MarkDown": 0.0,
+                "TaxAmount": 0.0,
+                "MiscAmount": 0.0,
+                "UserDefinedFields": [
+                    {
+                        "Key": "ExtPrice",
+                        "Value": "18.00"
+                    }
+                ],
+                "Items": null,
+                "ShippingAddress": null,
+                "BillingAddress": null
+            }
+        ],
+        "UserDefinedFields": [
+            {
+                "Key": "SubTotal",
+                "Value": "20"
+            },
+            {
+                "Key": "Surcharge",
+                "Value": "0.80"
+            },
+            {
+                "Key": "SurchargePercentage",
+                "Value": "4.00"
+            },
+            {
+                "Key": "TrxAmount",
+                "Value": "20.80"
+            },
+            {
+                "Key": "OrigTrxAmount",
+                "Value": "20.00"
+            },
+            {
+                "Key": "FinalAmount",
+                "Value": "20.80"
+            },
+            {
+                "Key": "CardType",
+                "Value": "Credit"
+            }
+        ],
+        "Notification": {
+            "Type": "All",
+            "SMSTemplate": null,
+            "EmailTemplate": null,
+            "ResponseStatus": "",
+            "ResponseMessage": ""
+        },
+        "PostDataType": "PaymentLine",
+        "TransactionKey": "20080500046622",
+        "PaidOn": "2020-08-05T00:35:50.81",
+        "LastProcessDate": "2020-08-05T00:35:55.1166403-07:00",
+        "Message": "",
+        "CustomeMessage": "CustomeMessage",
+        "Payment": {
+            "CreditCardGateway": "EVOsnap",
+            "ECheckGateway": "USASOAPECheck",
+            "AcceptType": 0
+        },
+        "NotificationEmail": "qa-receive@payfabric.com",
+        "NotificationEmailDisplay": "qa-receive@payfabric.com",
+        "NotificationPhone": "15151472869",
+        "NotificationPhoneDisplay": "15151472869",
+        "OriginalTender": null,
+        "PayFabricTransactionData": null,
+        "Link": "https://dev-us2.payfabric.com/PayLink/Web/azBmusnzAUOzo4KVu30nczE"
+    }
 ]
 </pre>
 
