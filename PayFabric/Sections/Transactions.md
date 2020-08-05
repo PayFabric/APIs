@@ -59,6 +59,10 @@ Please note that **bold** fields are required fields, and all others are optiona
 }
 </pre>
 
+###### Response Header
+If create transaction with the gateway whose SurchargeRate greater than 0, and populated a credit card on this transaction, then PayFabric will return the surcharge fields in Response Header like below screenshot.
+
+![CreateUpdateTrxWithSurchargeResponseHeader](https://raw.githubusercontent.com/PayFabric/Portal/master/PayFabric/Sections/Screenshots/CreateUpdateTrxWithSurchargeResponseHeader.png "CreateUpdateTrxWithSurchargeResponseHeader") 
 
 Update a Transaction
 --------------------
@@ -84,6 +88,11 @@ Please note that the **Key** field is the only required field for an update. Onl
 }
 </pre>
 
+###### Response Header
+If update transaction with the gateway whose SurchargeRate greater than 0, and populated a credit card on this transaction, then PayFabric will return the surcharge fields in Response Header like below screenshot.
+
+![CreateUpdateTrxWithSurchargeResponseHeader](https://raw.githubusercontent.com/PayFabric/Portal/master/PayFabric/Sections/Screenshots/CreateUpdateTrxWithSurchargeResponseHeader.png "CreateUpdateTrxWithSurchargeResponseHeader") 
+
 ###### Related Reading
 * [Update an eCheck Transaction](Process%20eCheck%20Transaction.md#update-a-echeck-transaction)
 
@@ -95,20 +104,28 @@ Process a Transaction
 ###### Response
 <pre>
 {
-  "AVSAddressResponse": null,
-  "AVSZipResponse": null,
-  "AuthCode": "010101",
-  "CVV2Response": "Y",
-  "IAVSAddressResponse": "N",
-  "Message": "Approved",
-  "OriginationID": "A70E7F9644C2",
-  "PayFabricErrorCode": null,
-  "RespTrxTag": null,
-  "ResultCode": "0",
-  "Status": "Approved",
-  "TAXml": "",
-  "TrxDate": "10/13/2015 8:41:44 AM",
-  "TrxKey": "151007010914"
+    "AVSAddressResponse": null,
+    "AVSZipResponse": null,
+    "AuthCode": "S39FGQ",
+    "CVV2Response": "NotSet",
+    "CardType": "Credit",
+    "FinalAmount": "104.00",
+    "IAVSAddressResponse": null,
+    "Message": "APPROVED",
+    "OrigTrxAmount": "100.00",
+    "OriginationID": "F6D5C44B7460414AB0954742A16E4FD5",
+    "PayFabricErrorCode": null,
+    "RespTrxTag": "8/5/2020 4:43:47 AM",
+    "ResultCode": "1",
+    "Status": "Approved",
+    "SurchargeAmount": "4.00",
+    "SurchargePercentage": "4.0",
+    "TAXml":"",
+    "TerminalID": null,
+    "TerminalResultCode": null,
+    "TrxAmount": "104.00",
+    "TrxDate": "8/4/2020 10:43:47 PM",
+    "TrxKey": "20080400045853"
 }
 </pre>
 
@@ -173,20 +190,28 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
 ###### Response
 <pre>
 {
-  "AVSAddressResponse": null,
-  "AVSZipResponse": null,
-  "AuthCode": "010101",
-  "CVV2Response": "Y",
-  "IAVSAddressResponse": "N",
-  "Message": "Approved",
-  "OriginationID": "A70E7F9644C1",
-  "PayFabricErrorCode": null,
-  "RespTrxTag": null,
-  "ResultCode": "0",
-  "Status": "Approved",
-  "TAXml": "",
-  "TrxDate": "10/13/2015 8:41:44 AM",
-  "TrxKey": "151013003795"
+    "AVSAddressResponse": null,
+    "AVSZipResponse": null,
+    "AuthCode": "S39FGQ",
+    "CVV2Response": "NotSet",
+    "CardType": "Credit",
+    "FinalAmount": "104.00",
+    "IAVSAddressResponse": null,
+    "Message": "APPROVED",
+    "OrigTrxAmount": "100.00",
+    "OriginationID": "F6D5C44B7460414AB0954742A16E4FD5",
+    "PayFabricErrorCode": null,
+    "RespTrxTag": "8/5/2020 4:43:47 AM",
+    "ResultCode": "1",
+    "Status": "Approved",
+    "SurchargeAmount": "4.00",
+    "SurchargePercentage": "4.0",
+    "TAXml":"",
+    "TerminalID": null,
+    "TerminalResultCode": null,
+    "TrxAmount": "104.00",
+    "TrxDate": "8/4/2020 10:43:47 PM",
+    "TrxKey": "20080400045853"
 }
 </pre>
 
@@ -199,115 +224,242 @@ Retrieve a Transaction
 ###### Response
 <pre>
 {
-  "Amount": "29.99",
-  "BatchNumber": "20151013",
-  "Card": {
-    "Aba": "",
-    "Account": "XXXXXXXXXXXX1111",
-    "AccountType": "",
-    "Billto": {
-      "City": "Aneheim",
-      "Country": "USA",
-      "Customer": "",
-      "Email": "John.Doe@payfabric.com",
-      "ID": "8b4a9102-8207-4e8f-99fa-01c6f623ddb8",
-      "Line1": "123 PayFabric way",
-      "Line2": "",
-      "Line3": "",
-      "ModifiedOn": "1/1/0001 12:00:00 AM",
-      "Phone": "(123)456-7890",
-      "State": "CA",
-      "Zip": "92806"
+    "Amount": "104.00",
+    "AuthorizationType": "NotSet",
+    "BatchNumber": "",
+    "CCEntryIndicator": "Entered",
+    "Card": {
+        "Aba": "",
+        "Account": "XXXXXXXXXXXX1111",
+        "AccountType": "",
+        "Billto": {
+            "City": "1",
+            "Country": "1",
+            "Customer": "",
+            "Email": "",
+            "ID": "00000000-0000-0000-0000-000000000000",
+            "Line1": "1",
+            "Line2": "",
+            "Line3": "",
+            "ModifiedOn": "1/1/0001 12:00:00 AM",
+            "Phone": "1",
+            "State": "1",
+            "Zip": "50000"
+        },
+        "CardHolder": {
+            "DriverLicense": "",
+            "FirstName": "1",
+            "LastName": "1",
+            "MiddleName": "",
+            "SSN": ""
+        },
+        "CardName": "Visa",
+        "CardType": "Credit",
+        "CheckNumber": "",
+        "Connector": "EVO",
+        "Customer": "Testtimeouts",
+        "ExpDate": "1122",
+        "GPAddressCode": "",
+        "GatewayToken": "",
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Identifier": "",
+        "IsDefaultCard": false,
+        "IsLocked": false,
+        "IsSaveCard": false,
+        "IssueNumber": "",
+        "LastUsedDate": "1/1/0001 12:00:00 AM",
+        "ModifiedOn": "1/1/0001 12:00:00 AM",
+        "NewCustomerNumber": null,
+        "StartDate": "",
+        "Tender": "CreditCard",
+        "UserDefine1": "",
+        "UserDefine2": "",
+        "UserDefine3": "",
+        "UserDefine4": ""
     },
-    "CardHolder": {
-      "DriverLicense": "",
-      "FirstName": "John",
-      "LastName": "Doe",
-      "MiddleName": "",
-      "SSN": ""
+    "CardType": "Credit",
+    "Currency": "USD",
+    "Customer": "Testtimeouts",
+    "Document": {
+        "DefaultBillTo": null,
+        "Head": [
+            {
+                "Name": "PONumber",
+                "Value": "0"
+            },
+            {
+                "Name": "ShipToZip",
+                "Value": "0"
+            },
+            {
+                "Name": "TaxAmount",
+                "Value": "0"
+            },
+            {
+                "Name": "DutyAmount",
+                "Value": "0"
+            },
+            {
+                "Name": "FreightAmount",
+                "Value": "0"
+            },
+            {
+                "Name": "CustomerCode",
+                "Value": ""
+            },
+            {
+                "Name": "DiscountAmount",
+                "Value": "0"
+            },
+            {
+                "Name": "ShipFromZip",
+                "Value": "0"
+            },
+            {
+                "Name": "CompanyName",
+                "Value": "0"
+            },
+            {
+                "Name": "ShipToCountry",
+                "Value": "0"
+            },
+            {
+                "Name": "HandlingAmount",
+                "Value": "0"
+            },
+            {
+                "Name": "TaxRate",
+                "Value": "0"
+            },
+            {
+                "Name": "TaxExemptNumber",
+                "Value": "0"
+            },
+            {
+                "Name": "InvoiceNumber",
+                "Value": ""
+            }
+        ],
+        "Lines": [
+            {
+                "Columns": [
+                    {
+                        "Name": "ItemQuantity",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ItemUPC",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ItemDesc",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ItemUOM",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ItemCost",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ItemProdCode",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ItemDiscount",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ItemTaxAmount",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ItemCommodityCode",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ItemTaxRate",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ItemInvoiceNumber",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ItemAmount",
+                        "Value": "0"
+                    }
+                ],
+                "UserDefined": []
+            }
+        ],
+        "UserDefined": [
+            {
+                "Name": null,
+                "Value": null
+            }
+        ]
     },
-    "CardName": "Visa",
-    "CheckNumber": "",
-    "Connector": "PayflowPro",
-    "Customer": "JOHNDOE0001",
-    "ExpDate": "0918",
-    "GPAddressCode": "",
-    "GatewayToken": "",
-    "ID": "ccfbf703-0fff-4e28-845e-3c5c5092f857",
-    "Identifier": "",
-    "IsDefaultCard": false,
-    "IsLocked": false,
-    "IsSaveCard": false,
-    "IssueNumber": "",
-    "ModifiedOn": "1/1/0001 12:00:00 AM",
-    "StartDate": "",
+    "EntryClass": null,
+    "Key": "20080400045853",
+    "MSO_EngineGUID": "bb373958-aa49-40d5-b515-8e4d96836c88",
+    "ModifiedOn": "8/4/2020 10:43:47 PM",
+    "OrigTrxAmount": "100.00",
+    "PayDate": "",
+    "ReferenceKey": null,
+    "ReferenceTrxs": [],
+    "ReqAuthCode": "",
+    "SetupId": "EVO",
+    "Shipto": {
+        "City": "",
+        "Country": "",
+        "Customer": "",
+        "Email": "",
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Line1": "",
+        "Line2": "",
+        "Line3": "",
+        "ModifiedOn": "1/1/0001 12:00:00 AM",
+        "Phone": "",
+        "State": "",
+        "Zip": ""
+    },
+    "SurchargeAmount": "4.00",
+    "SurchargePercentage": "4.0",
     "Tender": "CreditCard",
-    "UserDefine1": "",
-    "UserDefine2": "",
-    "UserDefine3": "",
-    "UserDefine4": ""
-  },
-  "Currency": "USD",
-  "Customer": "JOHNDOE0001",
-  "Document": {
-    "Head": [
-      {
-        "Name": "Invoice Number",
-        "Value": null
-      }
-    ],
-    "Lines": [],
-    "UserDefined": [
-      {
-        "Name": "ThirdPartyBatch",
-        "Value": null
-      }
-    ]
-  },
-  "Key": "151013003792",
-  "MSO_EngineGUID": "079c5da2-df91-4ad6-9ba2-a52300fef06a",
-  "ModifiedOn": "10/13/2015 8:31:02 AM",
-  "PayDate": "",
-  "ReferenceKey": null,
-  "ReferenceTrxs": [],
-  "ReqAuthCode": "",
-  "SetupId": "PFP",
-  "Shipto": {
-    "City": "",
-    "Country": "",
-    "Customer": "",
-    "Email": "",
-    "ID": "00000000-0000-0000-0000-000000000000",
-    "Line1": "",
-    "Line2": "",
-    "Line3": "",
-    "ModifiedOn": "1/1/0001 12:00:00 AM",
-    "Phone": "",
-    "State": "",
-    "Zip": ""
-  },
-  "Tender": "CreditCard",
-  "TrxResponse": {
-    "AVSAddressResponse": "",
-    "AVSZipResponse": "",
-    "AuthCode": "",
-    "CVV2Response": "",
-    "IAVSAddressResponse": "",
-    "Message": "",
-    "OriginationID": "",
-    "PayFabricErrorCode": null,
-    "RespTrxTag": "",
-    "ResultCode": "",
-    "Status": "UnProcess",
-    "TAXml": "",
-    "TrxDate": null,
-    "TrxKey": "151013003792"
-  },
-  "TrxUserDefine1": "",
-  "TrxUserDefine2": "",
-  "TrxUserDefine3": "",
-  "TrxUserDefine4": "",
-  "Type": "Sale"
+    "TrxInitiation": "Customer",
+    "TrxResponse": {
+        "AVSAddressResponse": "",
+        "AVSZipResponse": "",
+        "AuthCode": "S39FGQ",
+        "CVV2Response": "NotSet",
+        "CardType": "Credit",
+        "FinalAmount": "104.00",
+        "IAVSAddressResponse": "",
+        "Message": "APPROVED",
+        "OrigTrxAmount": "100.00",
+        "OriginationID": "F6D5C44B7460414AB0954742A16E4FD5",
+        "PayFabricErrorCode": null,
+        "RespTrxTag": "8/5/2020 4:43:47 AM",
+        "ResultCode": "1",
+        "Status": "Approved",
+        "SurchargeAmount": "4.00",
+        "SurchargePercentage": "4.00",  
+        "TAXml":"",
+        "TerminalID": "",
+        "TerminalResultCode": "",
+        "TrxAmount": "104.00",
+        "TrxDate": "8/4/2020 10:43:47 PM",
+        "TrxKey": "20080400045853"
+    },
+    "TrxSchedule": "Unscheduled",
+    "TrxUserDefine1": "",
+    "TrxUserDefine2": "",
+    "TrxUserDefine3": "",
+    "TrxUserDefine4": "",
+    "Type": "Sale"
 }
 </pre>
 
@@ -335,236 +487,252 @@ This request accepts the below query string parameters to add options. You can u
 ###### Response
 <pre>
 {
-  "Paging": {
-    "Current": "1",
-    "Size": "15",
-    "TotalPages": "1",
-    "TotalRecords": "2"
-  },
-  "Records": [
-    {
-      "Amount": "29.99",
-      "BatchNumber": "20151013",
-      "Card": {
-        "Aba": null,
-        "Account": "XXXXXXXXXXXX1111",
-        "AccountType": "",
-        "Billto": {
-          "City": "Aneheim",
-          "Country": "USA",
-          "Customer": "",
-          "Email": "John.Doe@payfabric.com",
-          "ID": "00000000-0000-0000-0000-000000000000",
-          "Line1": "123 PayFabric way",
-          "Line2": "",
-          "Line3": "",
-          "ModifiedOn": "1/1/0001 12:00:00 AM",
-          "Phone": "(123)456-7890",
-          "State": "CA",
-          "Zip": "92806"
-        },
-        "CardHolder": {
-          "DriverLicense": "",
-          "FirstName": "John",
-          "LastName": "Doe",
-          "MiddleName": "",
-          "SSN": ""
-        },
-        "CardName": "Visa",
-        "CheckNumber": "",
-        "Connector": null,
-        "Customer": "",
-        "ExpDate": "0918",
-        "GPAddressCode": null,
-        "GatewayToken": null,
-        "ID": "00000000-0000-0000-0000-000000000000",
-        "Identifier": null,
-        "IsDefaultCard": false,
-        "IsLocked": false,
-        "IsSaveCard": false,
-        "IssueNumber": null,
-        "ModifiedOn": "1/1/0001 12:00:00 AM",
-        "StartDate": null,
-        "Tender": null,
-        "UserDefine1": null,
-        "UserDefine2": null,
-        "UserDefine3": null,
-        "UserDefine4": null
-      },
-      "Currency": "USD",
-      "Customer": "JOHNDOE0001",
-      "Document": {
-        "Head": [
-          {
-            "Name": "Invoice Number",
-            "Value": null
-          }
-        ],
-        "Lines": [],
-        "UserDefined": [
-          {
-            "Name": "ThirdPartyBatch",
-            "Value": null
-          }
-        ]
-      },
-      "Key": "151013003792",
-      "MSO_EngineGUID": "079c5da2-df91-4ad6-9ba2-a52300fef06a",
-      "ModifiedOn": "10/13/2015 8:31:02 AM",
-      "PayDate": "",
-      "ReferenceKey": null,
-      "ReferenceTrxs": null,
-      "ReqAuthCode": "",
-      "SetupId": null,
-      "Shipto": {
-        "City": "",
-        "Country": "",
-        "Customer": "",
-        "Email": "",
-        "ID": "00000000-0000-0000-0000-000000000000",
-        "Line1": "",
-        "Line2": "",
-        "Line3": "",
-        "ModifiedOn": "1/1/0001 12:00:00 AM",
-        "Phone": "",
-        "State": "",
-        "Zip": ""
-      },
-      "Tender": "CreditCard",
-      "TrxResponse": {
-        "AVSAddressResponse": "",
-        "AVSZipResponse": "",
-        "AuthCode": "",
-        "CVV2Response": "",
-        "IAVSAddressResponse": "",
-        "Message": "",
-        "OriginationID": "",
-        "PayFabricErrorCode": null,
-        "RespTrxTag": null,
-        "ResultCode": "",
-        "Status": "UnProcess",
-        "TAXml": null,
-        "TrxDate": null,
-        "TrxKey": "151013003792"
-      },
-      "TrxUserDefine1": null,
-      "TrxUserDefine2": null,
-      "TrxUserDefine3": null,
-      "TrxUserDefine4": null,
-      "Type": "Sale"
+    "Paging": {
+        "Current": "1",
+        "Size": "15",
+        "TotalPages": "1",
+        "TotalRecords": "1"
     },
-    {
-      "Amount": "19.99",
-      "BatchNumber": "20151013",
-      "Card": {
-        "Aba": null,
-        "Account": "XXXXXXXXXXXX1111",
-        "AccountType": "",
-        "Billto": {
-          "City": "Aneheim",
-          "Country": "USA",
-          "Customer": "",
-          "Email": "John.Doe@payfabric.com",
-          "ID": "00000000-0000-0000-0000-000000000000",
-          "Line1": "123 PayFabric way",
-          "Line2": "",
-          "Line3": "",
-          "ModifiedOn": "1/1/0001 12:00:00 AM",
-          "Phone": "(123)456-7890",
-          "State": "CA",
-          "Zip": "92806"
-        },
-        "CardHolder": {
-          "DriverLicense": "",
-          "FirstName": "John",
-          "LastName": "Doe",
-          "MiddleName": "",
-          "SSN": ""
-        },
-        "CardName": "Visa",
-        "CheckNumber": "",
-        "Connector": null,
-        "Customer": "",
-        "ExpDate": "0918",
-        "GPAddressCode": null,
-        "GatewayToken": null,
-        "ID": "00000000-0000-0000-0000-000000000000",
-        "Identifier": null,
-        "IsDefaultCard": false,
-        "IsLocked": false,
-        "IsSaveCard": false,
-        "IssueNumber": null,
-        "ModifiedOn": "1/1/0001 12:00:00 AM",
-        "StartDate": null,
-        "Tender": null,
-        "UserDefine1": null,
-        "UserDefine2": null,
-        "UserDefine3": null,
-        "UserDefine4": null
-      },
-      "Currency": "USD",
-      "Customer": "JOHNDOE0001",
-      "Document": {
-        "Head": [
-          {
-            "Name": "Invoice Number",
-            "Value": null
-          }
-        ],
-        "Lines": [],
-        "UserDefined": [
-          {
-            "Name": "ThirdPartyBatch",
-            "Value": null
-          }
-        ]
-      },
-      "Key": "151013003793",
-      "MSO_EngineGUID": "079c5da2-df91-4ad6-9ba2-a52300fef06a",
-      "ModifiedOn": "10/13/2015 8:31:46 AM",
-      "PayDate": "",
-      "ReferenceKey": null,
-      "ReferenceTrxs": null,
-      "ReqAuthCode": "",
-      "SetupId": null,
-      "Shipto": {
-        "City": "",
-        "Country": "",
-        "Customer": "",
-        "Email": "",
-        "ID": "00000000-0000-0000-0000-000000000000",
-        "Line1": "",
-        "Line2": "",
-        "Line3": "",
-        "ModifiedOn": "1/1/0001 12:00:00 AM",
-        "Phone": "",
-        "State": "",
-        "Zip": ""
-      },
-      "Tender": "CreditCard",
-      "TrxResponse": {
-        "AVSAddressResponse": "",
-        "AVSZipResponse": "",
-        "AuthCode": "",
-        "CVV2Response": "",
-        "IAVSAddressResponse": "",
-        "Message": "",
-        "OriginationID": "",
-        "PayFabricErrorCode": null,
-        "RespTrxTag": null,
-        "ResultCode": "",
-        "Status": "UnProcess",
-        "TAXml": null,
-        "TrxDate": null,
-        "TrxKey": "151013003793"
-      },
-      "TrxUserDefine1": null,
-      "TrxUserDefine2": null,
-      "TrxUserDefine3": null,
-      "TrxUserDefine4": null,
-      "Type": "Sale"
-    }
-  ]
+    "Records": [
+        {
+            "Amount": "104.00",
+            "AuthorizationType": "NotSet",
+            "BatchNumber": "",
+            "CCEntryIndicator": "Entered",
+            "Card": {
+                "Aba": "",
+                "Account": "XXXXXXXXXXXX1111",
+                "AccountType": "",
+                "Billto": {
+                    "City": "1",
+                    "Country": "1",
+                    "Customer": "",
+                    "Email": "",
+                    "ID": "00000000-0000-0000-0000-000000000000",
+                    "Line1": "1",
+                    "Line2": "",
+                    "Line3": "",
+                    "ModifiedOn": "1/1/0001 12:00:00 AM",
+                    "Phone": "1",
+                    "State": "1",
+                    "Zip": "50000"
+                },
+                "CardHolder": {
+                    "DriverLicense": "",
+                    "FirstName": "1",
+                    "LastName": "1",
+                    "MiddleName": "",
+                    "SSN": ""
+                },
+                "CardName": "Visa",
+                "CardType": "Credit",
+                "CheckNumber": "",
+                "Connector": null,
+                "Customer": "",
+                "ExpDate": "1122",
+                "GPAddressCode": null,
+                "GatewayToken": null,
+                "ID": "00000000-0000-0000-0000-000000000000",
+                "Identifier": null,
+                "IsDefaultCard": false,
+                "IsLocked": false,
+                "IsSaveCard": false,
+                "IssueNumber": null,
+                "LastUsedDate": "1/1/0001 12:00:00 AM",
+                "ModifiedOn": "1/1/0001 12:00:00 AM",
+                "NewCustomerNumber": null,
+                "StartDate": null,
+                "Tender": null,
+                "UserDefine1": null,
+                "UserDefine2": null,
+                "UserDefine3": null,
+                "UserDefine4": null
+            },
+            "CardType": "Credit",
+            "Currency": "USD",
+            "Customer": "Testtimeouts",
+            "Document": {
+                "DefaultBillTo": null,
+                "Head": [
+                    {
+                        "Name": "PONumber",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ShipToZip",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "TaxAmount",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "DutyAmount",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "FreightAmount",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "CustomerCode",
+                        "Value": ""
+                    },
+                    {
+                        "Name": "DiscountAmount",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ShipFromZip",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "CompanyName",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "ShipToCountry",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "HandlingAmount",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "TaxRate",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "TaxExemptNumber",
+                        "Value": "0"
+                    },
+                    {
+                        "Name": "InvoiceNumber",
+                        "Value": ""
+                    }
+                ],
+                "Lines": [
+                    {
+                        "Columns": [
+                            {
+                                "Name": "ItemQuantity",
+                                "Value": "0"
+                            },
+                            {
+                                "Name": "ItemUPC",
+                                "Value": "0"
+                            },
+                            {
+                                "Name": "ItemDesc",
+                                "Value": "0"
+                            },
+                            {
+                                "Name": "ItemUOM",
+                                "Value": "0"
+                            },
+                            {
+                                "Name": "ItemCost",
+                                "Value": "0"
+                            },
+                            {
+                                "Name": "ItemProdCode",
+                                "Value": "0"
+                            },
+                            {
+                                "Name": "ItemDiscount",
+                                "Value": "0"
+                            },
+                            {
+                                "Name": "ItemTaxAmount",
+                                "Value": "0"
+                            },
+                            {
+                                "Name": "ItemCommodityCode",
+                                "Value": "0"
+                            },
+                            {
+                                "Name": "ItemTaxRate",
+                                "Value": "0"
+                            },
+                            {
+                                "Name": "ItemInvoiceNumber",
+                                "Value": "0"
+                            },
+                            {
+                                "Name": "ItemAmount",
+                                "Value": "0"
+                            }
+                        ],
+                        "UserDefined": []
+                    }
+                ],
+                "UserDefined": [
+                    {
+                        "Name": null,
+                        "Value": null
+                    }
+                ]
+            },
+            "EntryClass": null,
+            "Key": "20080400045853",
+            "MSO_EngineGUID": "bb373958-aa49-40d5-b515-8e4d96836c88",
+            "ModifiedOn": "8/4/2020 10:43:47 PM",
+            "OrigTrxAmount": "100.00",
+            "PayDate": "",
+            "ReferenceKey": null,
+            "ReferenceTrxs": null,
+            "ReqAuthCode": "",
+            "SetupId": null,
+            "Shipto": {
+                "City": "",
+                "Country": "",
+                "Customer": "",
+                "Email": "",
+                "ID": "00000000-0000-0000-0000-000000000000",
+                "Line1": "",
+                "Line2": "",
+                "Line3": "",
+                "ModifiedOn": "1/1/0001 12:00:00 AM",
+                "Phone": "",
+                "State": "",
+                "Zip": ""
+            },
+            "SurchargeAmount": "4.00",
+            "SurchargePercentage": "4.0",
+            "Tender": "CreditCard",
+            "TrxInitiation": "Customer",
+            "TrxResponse": {
+                "AVSAddressResponse": "",
+                "AVSZipResponse": "",
+                "AuthCode": "S39FGQ",
+                "CVV2Response": "NotSet",
+                "CardType": "Credit",
+                "FinalAmount": "104.00",
+                "IAVSAddressResponse": "",
+                "Message": "APPROVED",
+                "OrigTrxAmount": "100.00",
+                "OriginationID": "F6D5C44B7460414AB0954742A16E4FD5",
+                "PayFabricErrorCode": null,
+                "RespTrxTag": null,
+                "ResultCode": "1",
+                "Status": "Approved",
+                "SurchargeAmount": "4.00",
+                "SurchargePercentage": "4.00",
+                "TAXml": null,
+                "TerminalID": "",
+                "TerminalResultCode": "",
+                "TrxAmount": "104.00",
+                "TrxDate": "8/4/2020 10:43:47 PM",
+                "TrxKey": "20080400045853"
+            },
+            "TrxSchedule": "Unscheduled",
+            "TrxUserDefine1": null,
+            "TrxUserDefine2": null,
+            "TrxUserDefine3": null,
+            "TrxUserDefine4": null,
+            "Type": "Sale"
+        }
+    ]
 }
 </pre>
 
@@ -613,20 +781,28 @@ Note: `ReferenceKey` is the initial processed transaction's `TrxKey`.
 ###### Response
 <pre>
 {
-  "AVSAddressResponse": null,
-  "AVSZipResponse": null,
-  "AuthCode": "010101",
-  "CVV2Response": "Y",
-  "IAVSAddressResponse": "N",
-  "Message": "Approved",
-  "OriginationID": "A70E7F9644C2",
-  "PayFabricErrorCode": null,
-  "RespTrxTag": null,
-  "ResultCode": "0",
-  "Status": "Approved",
-  "TAXml": "",
-  "TrxDate": "10/13/2015 8:41:44 AM",
-  "TrxKey": "151007010914"
+    "AVSAddressResponse": null,
+    "AVSZipResponse": null,
+    "AuthCode": null,
+    "CVV2Response": null,
+    "CardType": "Credit",
+    "FinalAmount": "104.00",
+    "IAVSAddressResponse": null,
+    "Message": "APPROVED",
+    "OrigTrxAmount": "100.00",
+    "OriginationID": "AD0D53935734451D86011AF6D0BDF46C",
+    "PayFabricErrorCode": null,
+    "RespTrxTag": "8/5/2020 5:00:23 AM",
+    "ResultCode": "1",
+    "Status": "Approved",
+    "SurchargeAmount": "4.00",
+    "SurchargePercentage": "4.0",
+    "TAXml":"",
+    "TerminalID": null,
+    "TerminalResultCode": null,
+    "TrxAmount": "104.00",
+    "TrxDate": "8/4/2020 11:00:23 PM",
+    "TrxKey": "20080400045866"
 }
 </pre>
 
@@ -657,17 +833,27 @@ To refund a customer, you just submit a credit to the customer that is owed the 
 ###### Response
 <pre>
 {
-  "AVSAddressResponse": null,
-  "AVSZipResponse": null,
-  "AuthCode": null,
-  "CVV2Response": null,
-  "IAVSAddressResponse": null,
-  "Message": "Approved",
-  "OriginationID": "A70E6C184BA5",
-  "RespTrxTag": null,
-  "ResultCode": "0",
-  "Status": "Approved",
-  "TrxDate": "5/31/2014 3:17:27 PM",
-  "TrxKey": "140531067716"
+    "AVSAddressResponse": null,
+    "AVSZipResponse": null,
+    "AuthCode": null,
+    "CVV2Response": null,
+    "CardType": "Credit",
+    "FinalAmount": "104.00",
+    "IAVSAddressResponse": null,
+    "Message": "APPROVED",
+    "OrigTrxAmount": "100.00",
+    "OriginationID": "AD0D53935734451D86011AF6D0BDF46C",
+    "PayFabricErrorCode": null,
+    "RespTrxTag": "8/5/2020 5:00:23 AM",
+    "ResultCode": "1",
+    "Status": "Approved",
+    "SurchargeAmount": "4.00",
+    "SurchargePercentage": "4.0",
+    "TAXml":"",
+    "TerminalID": null,
+    "TerminalResultCode": null,
+    "TrxAmount": "104.00",
+    "TrxDate": "8/4/2020 11:00:23 PM",
+    "TrxKey": "20080400045866"
 }
 </pre>
