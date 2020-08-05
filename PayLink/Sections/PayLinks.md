@@ -115,12 +115,19 @@ Please note that **bold** fields are required fields, the **Payment** object *or
 Below is the payment page for the single invoice paylink created with above body
 ![PL_SI_PMTPage](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Screenshot/PL_SI_PMTPage.png)
 
+If this paylink using the gateway whose SurchargeRate greater than 0, then the PayLink hosted payment page will show the Surcharge to end user
+
+![SIPLHostedPMTPageWithSurcharge](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Screenshot/SIPLHostedPMTPageWithSurcharge.png)
+
 Below is the Invoice Details page, can be opened by clicking the Invoice Number on paylink payment page
 ![PL_SI_InvDetailsPage](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Screenshot/PL_SI_InvDetailsPage.png)
 
 Below is the PayLink Confirmation page
 ![PL_SI_CFMPage](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Screenshot/PL_SI_CFMPage.png)
 
+Below is the PayLink Confirmation page with Surcharge
+
+![SIPLCMFPageWithSurcharge](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Screenshot/SIPLCMFPageWithSurcharge.png)
 
 ###### Related Reading
 * [Which Transaction Type to Use](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Transaction%20Types.md)
@@ -383,7 +390,7 @@ Create a Multiple Invoice PayLink
 }
 </pre>
 
-Please note that **bold** fields are required fields, the **Payment** object *or* **SetupId** field must be supplied, and all others are optional.  If you wish to apply a surcharge fee for multiple invoice payment, please use the **UserDefinedFields** field as shown in the example above. The **Status** field can be used to set the PayLink document status; specify 0 to save the document as a draft, specify 1 to save the document as an active document ready for payment. For more information and descriptions on available fields please see our [JSON Objects](JSON%20Objects.md#paylink-document).
+Please note that **bold** fields are required fields, the **Payment** object *or* **SetupId** field must be supplied, and all others are optional.  If you wish to apply a surcharge fee for paylink, then please configure SurchargeRate for the gateway the paylink use. The **Status** field can be used to set the PayLink document status; specify 0 to save the document as a draft, specify 1 to save the document as an active document ready for payment. For more information and descriptions on available fields please see our [JSON Objects](JSON%20Objects.md#paylink-document).
 
 Below is the payment page for the multi-Invoices paylink created with above body
 ![PL_MI_PMTPage](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Screenshot/PL_MI_PMTPage.png)
