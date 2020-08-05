@@ -19,12 +19,54 @@ This api requires authentication
 {
 	"UserName": "Nodus0001",
 	"Email": "Nodus0001@nodus.com",
-	"FirstName": "Nodus",
-	"LastName": "Technologies"
+	"Name": "Nodus Technologies"
 }
 </pre>
 
 For more information and descriptions on available fields please see our [object reference](../../Objects/AccountUser.md#AccountUserResponse).
+
+
+Get all customer users
+--------------------
+
+* `GET /users` will get a customer user for the currently logged in customer.
+
+Criteria Options
+-------
+
+This request accepts the below query string parameters to add additional options to search via the criteria filtering. You can add them to your request URL by adding a '?' before the first parameter and connecting additional ones with a '&'.
+
+| QueryString | Description | Type |
+| :------------- | :------------- | :------------- | 
+| UserName | Username of the user | String |
+| Status | Status of the users | User status. Valid options are ``Active``, ``Inactive``, ``Pending``, and ``Locked`` |
+
+###### Request
+<pre>
+	GET /users
+</pre>
+
+###### Response
+<pre>
+	[
+	  {
+		"Status": "Active",
+		"LastLogin": "2020-06-01T22:52:49.7370000Z",
+		"RegisterDate": "2020-05-28T18:17:32.9200000Z",
+		"LastPasswordChangedDate": null,
+		"FailedLoginAttempts": 0,
+		"AccessCode": null,
+		"ModifiedOn": null,
+		"CustomerId": "Nodus0001",
+		"Name": null,
+		"Permission": "FullAccess",
+		"UserName": "Nodus0001",
+		"Email": "Nodus0001@nodus.com"
+	  }
+	]
+</pre>
+
+For more information and descriptions on available fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserResponse).
 
 
 Create a customer user
@@ -37,7 +79,9 @@ Create a customer user
 {
 	<b>"CustomerId": "Nodus0001"</b>,
 	<b>"Email": "Nodus0001@nodus.com"</b>,
+	"Name": "Nodus Technologies",
 	<b>"Password": "password1"</b>,
+	<b>"Permission": "Full Access"</b>,
 	<b>"RegistrationKey":"6F25DF7B-8B48-4041-91F4-9E84EF723A8A"</b>,
 	"Status": "Active",
 	<b>"UserName": "Nodus0001"</b>
@@ -63,7 +107,9 @@ This api requires authentication
 {
 	"CustomerId": "Nodus0001",
 	"Email": "Nodus0001@nodus.com",
+	"Name": "Nodus Technologies",
 	"Password": "password1",
+	"Permission": "Full Access",
 	"RegistrationKey":"6F25DF7B-8B48-4041-91F4-9E84EF723A8A",
 	"Status": "Active",
 	<b>"UserName": "Nodus0001"</b>
@@ -163,16 +209,44 @@ Please note that **bold** fields are required fields, and all others are optiona
 </pre>
 
 
-Retrieve Registration Key
+Retrieve Self Registration Key
 --------------------
 
-* `POST /users/registration` will register a customer on the PayFabric Receivables website based on the JSON request payload. If user has authentication, it will display Registration Key on the page, otherwise it will only send email when "SendEmail" is true.
+* `POST /users/registration` will register a customer on the PayFabric Receivables website based on the JSON request payload.
 
 ###### Request
 <pre>
 {
+	<b>"CustomerId": "Nodus0001"</b>
+}
+</pre>
+
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserSelfRegister).
+
+###### Response
+<pre>
+{
+    "Message": "",
+    "RegistrationKey": "6dede74f-4eae-4c26-a210-6a7418c8988b"
+}
+</pre>
+
+For more information and descriptions on response fields please see our [object reference](../../Objects/AccessCode.md#AccessCodeRegisterResponse).
+
+
+Invite Customer User
+--------------------
+
+* `POST /users/invite` will send the registeration email to the customer user based on the JSON request payload. If user has authentication, it will display Registration Key on the page, otherwise it will only send email when "SendEmail" is true.
+
+###### Request
+<pre>
+{
+	"AccessCode": null,
 	<b>"CustomerId": "Nodus0001"</b>,
 	<b>"Email": "Nodus0001@nodus.com"</b>,
+	"Name": "Nodus Technologies",
+	<b>"Permission": "Full Access"</b>,
 	"SendEmail": false
 }
 </pre>

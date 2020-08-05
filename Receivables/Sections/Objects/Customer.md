@@ -22,6 +22,7 @@ This object is used when creating a customer on the PayFabric Receivables websit
 | ShippingMethod | String | Shipping method associated to the customer | nvarchar(50) |
 | Status | String | Status of the customer. Valid options are ``Active``, ``Inactive``, and ``Deleted`` | nvarchar(50) |
 | StatementName | String | Statement name | nvarchar(100) |
+| TaxExemptNumber | Integer | Tax exempt number | int |
 \*Required
 
 ## CustomerResponse
@@ -47,3 +48,4 @@ This object is used when getting a customer on the PayFabric Receivables website
 | ShippingMethod | String | Shipping method associated to the customer | nvarchar(50) |
 | Status | String | Status of the customer. Valid options are ``Active``, ``Inactive``, and ``Deleted`` | nvarchar(50) |
 | StatementName | String | Statement name | nvarchar(100) |
+| TaxExemptNumber | Integer | Tax exempt number | int |

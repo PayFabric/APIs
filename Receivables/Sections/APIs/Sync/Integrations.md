@@ -140,6 +140,7 @@ This request accepts the below query string parameters to add additional options
             "LastAttempt": "0001-01-01T00:00:00",
             "LastMessage": null,
             "MasterType": "Regular",
+			"ModifiedOn": "2020-01-01T00:00:00",
             "Name": "Nodus Technologies ",
             "Status": "Processed",
             "WalletEntryGuid": "4bc44ebe-118a-46d1-a526-882a0e5c2aac",
@@ -191,18 +192,18 @@ This request accepts the below query string parameters to add additional options
             "Currency": "Z-US$",
             "CustomerId": "Nodus0001",
             "Identity": "",
-            "InvoiceApply": [
+            "PaymentApplies": [
                 {
                     "InvoiceId": "STDINV2006",
                     "Identity": "",
                     "PayAmount": 1,
-                    "InvoiceType": "STDINV"
+                    "RowVersion": ""
                 }
             ],
-            "IsVoid": false,
             "PaymentId": "WEBPMT0000000020",
             "PaymentType": "Payment",
-            "Notes": null
+            "Status": "Processed",
+			"User": "Nodus0001"
         }
     ]
 }

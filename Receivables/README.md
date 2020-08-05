@@ -29,7 +29,9 @@ Authentication
 All PayFabric Receivables API calls need a header containing the authorization token. Both api endpoints use similar methods of getting the authorization token, however, they can be used slightly differently.
 
 Website API: We have a [detailed guide](Sections/APIs/API/Token.md) for authenticating with the PayFabric Receivables API.  
-Sync API: We have a [detailed guide](Sections/APIs/Sync/Token.md) for authenticating with the PayFabric Receivables Sync API.
+Sync API: We have a [detailed guide](Sections/APIs/Sync/Token.md) for authenticating with the PayFabric Receivables Sync API.  
+
+If the need to impersonate a user is necessary to call the website API, here is the [detailed guide](Sections/APIs/API/TokenImpersonate.md).
 
 
 Handling Exceptions
@@ -136,7 +138,8 @@ as child elements of other objects.
 
 Pass-Through Authentication
 -----------------
-* [Instructions](../Receivables/PassThroughAuthentication.md)
+* [Instructions](../Receivables/PassThroughAuthentication.md)  
+
 
 Help us make it better
 ----------------------

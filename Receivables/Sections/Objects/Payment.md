@@ -69,6 +69,7 @@ This object is used when getting a payment on the PayFabric Receivables website.
 | LastAttempt | String | Timestamp indicating when the last time this document attempted to submit to the back office | datetime |
 | LastMessage | String | Message for the payment when it last attempted to submit to the back office | nvarchar(max) |
 | MasterType | String | Master type of the payment | nvarchar(20) |
+| ModifiedOn | DateTime | Last date the payment was modified | datetime |
 | Name | String | Customer name | nvarchar(100) |
 | PaymentId | String | Payment number | nvarchar(25) |
 | PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | nvarchar(25) |

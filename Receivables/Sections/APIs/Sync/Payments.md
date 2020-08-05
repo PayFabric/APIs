@@ -29,10 +29,12 @@ This request accepts the below query string parameters to add additional options
 | Currency | Payment currency code | [String](../QueryFilter.md#string) |
 | CustomerId | Customer number | [String Filter](../QueryFilter.md#string-filter) |
 | DateDue | Search by the date due within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
+| ModifiedOn | Search by the last modified on date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
 | PaymentId | Payment number | [String Filter](../QueryFilter.md#string-filter) |
 | SortBy | Sort direction and sort field | [SortBy Filter](../QueryFilter.md#sortby-filter) |
 | Status | Payment status. Valid options are ``All``, ``Scheduled``, ``Processed``, ``Failed``, and ``Voided`` | [String](../QueryFilter.md#string) |
 | Type | Payment type. Valid options are ``FinanceCharge``, ``CreditMemo``, ``Return``, and ``Payment`` | [String](../QueryFilter.md#string) |
+| User | Search by the user who made the payment | [String Filter](../QueryFilter.md#string-filter) |
 
 ###### Request
 <pre>
@@ -55,6 +57,7 @@ This request accepts the below query string parameters to add additional options
             "LastAttempt": "0001-01-01T00:00:00",
             "LastMessage": null,
             "MasterType": "Regular",
+			"ModifiedOn": "2020-01-01T00:00:00",
             "Name": "Nodus Technologies ",
             "Status": "Processed",
             "WalletEntryGuid": "4bc44ebe-118a-46d1-a526-882a0e5c2aac",
@@ -107,19 +110,18 @@ This request accepts the below query string parameters to add additional options
             "CustomerId": "Nodus0001",
             "Identity": "",
             "PaymentApplies": [
-		{
-		  "AppliedToInvoice": false,
-		  "InvoiceId": "string",
-		  "Identity": "string",
-		  "PayAmount": 0,
-		  "DocumentType": 0,
-		  "RowVersion": "string"
-		}
+				{
+				  "InvoiceId": "string",
+				  "Identity": "string",
+				  "PayAmount": 0,
+				  "DocumentType": 0,
+				  "RowVersion": "string"
+				}
             ],
             "PaymentId": "WEBPMT0000000020",
             "PaymentType": "Payment",
-	    "Status": "Processed",
-	    "User": "Nodus0001"
+			"Status": "Processed",
+			"User": "Nodus0001"
         }
     ]
 }
@@ -147,7 +149,6 @@ Create or Update a Payment
 	"Identity": "",
 	"PaymentApplies": [
 		{
-		  "AppliedToInvoice": false,
 		  "InvoiceId": "string",
 		  "Identity": "string",
 		  "PayAmount": 0,
@@ -155,8 +156,6 @@ Create or Update a Payment
 		  "RowVersion": "string"
 		}
 	],
-	"IsVoid": false,
-	"Notes": "",
 	<b>"PaymentId": "APIPMT000000001"</b>,
 	"PaymentMethod": "CreditCard",
 	"PaymentType": "Payment",
@@ -195,6 +194,7 @@ Retrieve a Payment
     "LastAttempt": "0001-01-01T00:00:00",
     "LastMessage": null,
     "MasterType": "Back Office",
+	"ModifiedOn": "2020-01-01T00:00:00",
     "Name": "Nodus Technologies ",
     "Status": "Processed",
     "WalletEntryGuid": "00000000-0000-0000-0000-000000000000",
@@ -209,9 +209,8 @@ Retrieve a Payment
     "Currency": "USD",
     "CustomerId": "Nodus0001",
     "Identity": "",
-     "PaymentApplies": [
+    "PaymentApplies": [
         {
-          "AppliedToInvoice": false,
           "InvoiceId": "string",
           "Identity": "string",
           "PayAmount": 0,

@@ -88,7 +88,8 @@ Retrieve a Customer by customer identifier
     "PaymentTerms": null,
     "StatementName": "Nodus Technologies ",
     "Currency": "USD",
-    "ShippingMethod": "GROUND"
+    "ShippingMethod": "GROUND",
+	"TaxExemptNumber": 1234
 }
 </pre>
 
@@ -159,7 +160,8 @@ Create or Update a Customer
 	"PaymentTerms": null,
 	"StatementName": "Nodus Technologies",
 	"Currency": "USD",
-	"ShippingMethod": "GROUND"
+	"ShippingMethod": "GROUND",
+	"TaxExemptNumber": 1234
 }
 </pre>
 
