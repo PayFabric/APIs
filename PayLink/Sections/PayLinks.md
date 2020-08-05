@@ -610,7 +610,7 @@ Below is the PayLink Confirmation page
     "NotificationPhone": "18915400883",
     "OriginalTender": null,
     "PayFabricTransactionData": null,
-    "Link": "https://dev-us2.payfabric.com/PayLink/Web/r6OwE3phSEOZR3Kg52ygpTE"
+    "Link": "https://sandbox.payfabric.com/PayLink/Web/r6OwE3phSEOZR3Kg52ygpTE"
 }
 </pre>
 
@@ -779,7 +779,7 @@ Retrieve a PayLink
     "NotificationPhoneDisplay": "15151472869",
     "OriginalTender": null,
     "PayFabricTransactionData": null,
-    "Link": "https://dev-us2.payfabric.com/PayLink/Web/azBmusnzAUOzo4KVu30nczE"
+    "Link": "https://sandbox.payfabric.com/PayLink/Web/azBmusnzAUOzo4KVu30nczE"
 }
 </pre>
 
@@ -921,7 +921,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
         "NotificationPhoneDisplay": "17145484360",
         "OriginalTender": null,
         "PayFabricTransactionData": null,
-        "Link": "https://dev-us2.payfabric.com/PayLink/Web/jxDX9d7fX0OWwDBCznYD9jE"
+        "Link": "https://sandbox.payfabric.com/PayLink/Web/jxDX9d7fX0OWwDBCznYD9jE"
     },
     {
         "Id": "azBmusnzAUOzo4KVu30nczE",
@@ -1060,7 +1060,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
         "NotificationPhoneDisplay": "15151472869",
         "OriginalTender": null,
         "PayFabricTransactionData": null,
-        "Link": "https://dev-us2.payfabric.com/PayLink/Web/azBmusnzAUOzo4KVu30nczE"
+        "Link": "https://sandbox.payfabric.com/PayLink/Web/azBmusnzAUOzo4KVu30nczE"
     }
 ]
 </pre>
