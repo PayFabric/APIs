@@ -1,7 +1,7 @@
-#EVO Fields Mapping
+# EVO Fields Mapping
 
-| EVO Field Name| PayFabric Field Name|Descriptions|
-| :-------------------| :-----------------------| :-----------------------|
+| EVO Field Name| PayFabric Field Name| Descriptions|
+| :-------------------| :-----------------------| :-------|
 |TransactionData.Amount|Amount||
 |TransactionData.CurrencyCode|Currency||
 |TransactionData.Reference|Document.Header.CustRef||
@@ -98,7 +98,7 @@
 |TransactionReportingData.Reference|Document.Header.CustRef||
 |TransactionReportingData.Comment|Document.Header.Comment1, Document.Header.Comment2, Document.Header.Comment3, Document.Header.Comment4, Document.Header.Comment5|TransactionReportingData.Comment = {Comment1} ~ {Comment2} ~ {Comment3} ~ {Comment4} ~ {Comment5}|
 
-## Level 2 Fields Mapping
+## Level 2 Fields
 | EVO Field Name| PayFabric Field Name|Descriptions|
 | :-------------------| :-----------------------| :-----------------------|
 |Level2Data.OrderNumber*|Document.Header.PONumber||
@@ -122,7 +122,9 @@
 |Level2Data.Description|Document.Header.DESC||
 |Level2Data.RequesterName|Document.Header.RequesterName||
 
-## Line Item Fields Mapping
+*required
+
+## Line Item Fields
 | EVO Field Name| PayFabric Field Name|Descriptions|
 | :-------------------| :-----------------------| :-----------------------|
 |LineItemDetail.Quantity*|Document.Lines.Columns.ItemQuantity||
@@ -138,4 +140,4 @@
 |LineItemDetail.Tax.Rate|Document.Lines.Columns.ItemTaxRate||
 |LineItemDetail.Tax.InvoiceNumber|Document.Lines.Columns.ItemInvoiceNumber||
 
-* required.
+*required
