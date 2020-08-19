@@ -74,7 +74,7 @@ as child elements of other objects.
 * [Void a Payment](Sections/APIs/Sync/Payments.md#void-payment)
 
 
-## Receivables API
+## Customer Portal API
 
 ### Accounts
 * [Retrieve the current user](Sections/APIs/API/Accounts.md#retrieve-the-current-user)
