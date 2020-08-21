@@ -56,9 +56,9 @@ as child elements of other objects.
 * [Create and Process a Transaction](Sections/Transactions.md#create-and-process-a-transaction)
 * [Retrieve a Transaction](Sections/Transactions.md#retrieve-a-transaction)
 * [Retrieve Transactions](Sections/Transactions.md#retrieve-transactions)
-* [Cancel (Void) a Transaction](Sections/Transactions.md#referenced-transactions-capture-ship-void-or-credit)
-* [Capture a Pre-Authorized Transaction](Sections/Transactions.md#referenced-transactions-capture-ship-void-or-credit)
-* [Credit a Transaction](Sections/Transactions.md#referenced-transactions-capture-ship-void-or-credit)
+* [Cancel (Void) a Transaction](Sections/Transactions.md#referenced-transactions-capture-ship-void-or-credit-refund)
+* [Capture a Pre-Authorized Transaction](Sections/Transactions.md#referenced-transactions-capture-ship-void-or-credit-refund)
+* [Credit a Transaction](Sections/Transactions.md#referenced-transactions-capture-ship-void-or-credit-refund)
 * [Refund a Customer](Sections/Transactions.md#refund-a-customer)
 * [Process eCheck Transaction](Sections/Process%20eCheck%20Transaction.md)
 
