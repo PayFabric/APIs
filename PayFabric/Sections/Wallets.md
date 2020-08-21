@@ -111,7 +111,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 }
 </pre>
 
-**Note**: We highly recommend using PayFabric hosted wallet page for create/update credit card/eCheck wallet entry. It is a secure page that can be embedded into your application. Please click [here](../../../../Hosted-Pages/blob/master/Sections/Wallet%20Page.md#create-a-credit-card--echeck).
+**Note**: We highly recommend using PayFabric hosted wallet page for create/update credit card/eCheck wallet entry. It is a secure page that can be embedded into your application. Please click [here](https://github.com/PayFabric/Hosted-Pages/blob/master/Sections/Wallet%20Page.md#create-a-credit-card--echeck).
 
 Update a Credit Card / eCheck
 -----------------------------
@@ -138,7 +138,7 @@ To update the Customer ID/Number against an existing credit card/eCheck record, 
 }
 </pre>
 
-**Note**: We highly recommend using PayFabric hosted wallet page for create/update credit card/eCheck wallet entry. It is a secure page that can be embedded into your application. Please click [here](../../../../Hosted-Pages/blob/master/Sections/Wallet%20Page.md#update-a-credit-card--echeck).
+**Note**: We highly recommend using PayFabric hosted wallet page for create/update credit card/eCheck wallet entry. It is a secure page that can be embedded into your application. Please click [here](https://github.com/PayFabric/Hosted-Pages/blob/master/Sections/Wallet%20Page.md#update-a-credit-card--echeck).
 
 Retrieve a Credit Card / eCheck
 -------------------------------
