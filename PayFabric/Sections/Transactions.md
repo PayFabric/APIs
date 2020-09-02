@@ -257,7 +257,7 @@ Retrieve a Transaction
         "CardType": "Credit",
         "CheckNumber": "",
         "Connector": "EVO",
-        "Customer": "Testtimeouts",
+        "Customer": "JOHNDOE0001",
         "ExpDate": "1122",
         "GPAddressCode": "",
         "GatewayToken": "",
@@ -279,7 +279,7 @@ Retrieve a Transaction
     },
     "CardType": "Credit",
     "Currency": "USD",
-    "Customer": "Testtimeouts",
+    "Customer": "JOHNDOE0001",
     "Document": {
         "DefaultBillTo": null,
         "Head": [
@@ -550,7 +550,7 @@ This request accepts the below query string parameters to add options. You can u
             },
             "CardType": "Credit",
             "Currency": "USD",
-            "Customer": "Testtimeouts",
+            "Customer": "JOHNDOE0001",
             "Document": {
                 "DefaultBillTo": null,
                 "Head": [
