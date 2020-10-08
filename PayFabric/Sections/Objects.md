@@ -53,7 +53,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). |  
 | ModifiedOn      | String | Timestamp indicating when this record was last modified. It's format should like "3/23/2015 11:16:19 PM".| datetime, not null| 
 | CardHolder*      | [Object](#cardholder) | Cardholder object. |  
-| Billto          | [Object](#address) | Address object. The required rule of address object will apply once if it is not NULL.| 
+| Billto          | [Object](#address) | Address object. | 
 | Identifier      | String | A client-defined identifier for this card. Developer can send a flag value to identify this card |  nvarchar(32)|
 | UserDefine1    | String | User-defined field 1. Developer can store additional data in this field. |nvarchar(256)|  
 | UserDefine2    | String | User-defined field 2. Developer can store additional data in this field. | nvarchar(256)| 
