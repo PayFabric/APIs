@@ -102,13 +102,13 @@
 | :-------------------| :-----------------------| :-----------------------|
 |Level2Data.OrderNumber*|Document.Header.PONumber||
 |Level2Data.Tax.Amount*|Document.Header.TaxAmount|Total amount of tax applied.|
-|Level2Data.DutyAmount*|Document.Header.DutyAmount ||
+|Level2Data.DutyAmount|Document.Header.DutyAmount ||
 |Level2Data.FreightAmount*|Document.Header.FreightAmount||
 |Level2Data.CustomerCode*|Customer|Code provided by cardholder to appear on invoice.|
-|Level2Data.DiscountAmount*|Document.Header.DiscountAmount||
+|Level2Data.DiscountAmount|Document.Header.DiscountAmount||
 |Level2Data.CompanyName*|Document.Header.CompanyName|Name of company making purchase.|
-|Level2Data.TaxExempt.TaxExemptNumber*|Document.Header.TaxExemptNumber|Indicates the tax exempt number for the transaction.|
-|Level2Data.TaxExempt.IsTaxExempt*|None|Indicates tax exempt status of the transaction. The value is decided based on tax amount|
+|Level2Data.TaxExempt.TaxExemptNumber|Document.Header.TaxExemptNumber|Indicates the tax exempt number for the transaction. Only used if the IsTaxExempt indicator is set to “Exempt”.|
+|Level2Data.TaxExempt.IsTaxExempt|None|Indicates tax exempt status of the transaction. The value is decided based on tax amount,If the customer is tax exempt, set the indicator to “Exempt”. If the customer is not tax exempt and the tax amount is not included in the transaction, set the indicator to “NotExemptTaxInfoNotProvided”. If the customer is not tax exempt and the tax amount is included in the transaction, set the indicator to “NotExemptTaxInfoProvided”. PayFabric will set it.|
 |Level2Data.DestinationPostal|Shipto.Address.Zip|Destination postal code.|
 |Level2Data.OrderDate|Document.Header.OrderDate|Date the order was placed.|
 |Level2Data.ShipFromPostalCode|Document.Header.ShipFromZip|The zip/postal code of the location from which the goods are shipped.|
