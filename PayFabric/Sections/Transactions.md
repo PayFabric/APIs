@@ -483,6 +483,8 @@ This request accepts the below query string parameters to add options. You can u
 |page|This parameter is to set the result's page number, each page will return 15 records.|
 |status|This parameter is used to filter transaction result against processed transaction's status, the possible values are: `approved`, `failure`, `declined`, `none` and `denied`. Returned result will include all transaction status if application does not submit this parameter.|
 |excludeunprocess|When the value is `true`, the result will filter out the unprocess transaction. Default value is `false`. |
+|pagesize|This parameter is to set specific page size, maximum number is 15.|
+|enddate|This parameter is to set a specific 'date to' to filter transactions, The format: mm/dd/yyy. |
 
 ###### Response
 <pre>
