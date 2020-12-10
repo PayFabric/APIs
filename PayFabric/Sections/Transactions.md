@@ -47,6 +47,8 @@ Create a Transaction
 
 Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](Objects.md#transaction).
 
+`SetupId` is a per-account setting which can be found in the PayFabric website by clicking "Settings" in the left navigation, "Gateway Account Configuration", and finally "Gateway Profile" under the gateway you wish to use.  The value from the "Name/Setup ID" field, should replace "PFP" in the transaction request example.
+
 ###### Related Reading
 * [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 * [Which Transaction Type to Use](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md)
