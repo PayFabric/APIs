@@ -64,7 +64,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | IssueNumber     | String | This field is required for UK debit cards|nvarchar(64)|
 | StartDate       | String | This field is required for UK debit cards, format is MMYY.|varchar(4)|
 | NewCustomerNumber | String | This field is used to submit new customer number for updating this record's customer field. | nvarchar(128)|  
-| CardType | String | It's a response field, it's can be the value 'Credit', 'Debit' and 'Prepaid' for credit card, and it is blank for ECheck. | varchar(20)| 
+| CardType | String | It's a response field, it can be the value 'Credit', 'Debit' and 'Prepaid' for credit card, and it is blank for ECheck. | varchar(20)| 
 *Required 
 
 ## Transaction Response
