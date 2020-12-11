@@ -143,57 +143,60 @@ To update the Customer ID/Number against an existing credit card/eCheck record, 
 Retrieve a Credit Card / eCheck
 -------------------------------
 
-* `GET /wallet/get/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will return the specified credit card or eCheck
+* `GET /wallet/get/ccb4edfd-c9b3-4964-9ecc-5b143a60650d` will return the specified credit card or eCheck
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
 ###### Response
 <pre>
 {
-  "Aba": "",
-  "Account": "XXXXXXXXXXXX1115",
-  "AccountType": "",
-  "Billto": {
-    "City": "Anaheim",
-    "Country": "USA",
-    "Customer": "",
-    "Email": "",
-    "ID": "4ca94c49-9724-492e-b20e-b11d53a8166b",
-    "Line1": "123 PayFabric Way",
-    "Line2": "",
-    "Line3": "",
-    "ModifiedOn": "1/1/0001 12:00:00 AM",
-    "Phone": "(123)456-7890",
-    "State": "CA",
-    "Zip": "92806"
-  },
-  "CardHolder": {
-    "DriverLicense": "",
-    "FirstName": "John",
-    "LastName": "Doe",
-    "MiddleName": "",
-    "SSN": ""
-  },
-  "CardName": "Visa",
-  "CheckNumber": null,
-  "Connector": "",
-  "Customer": "JOHNDOE0001",
-  "ExpDate": "0918",
-  "GPAddressCode": "",
-  "GatewayToken": "",
-  "ID": "cbb571ea-e834-41c4-8a20-7d55bb7ae190",
-  "Identifier": "",
-  "IsDefaultCard": false,
-  "IsLocked": false,
-  "IsSaveCard": false,
-  "IssueNumber": "",
-  "ModifiedOn": "10/2/2015 3:40:41 PM",
-  "StartDate": "",
-  "Tender": "CreditCard",
-  "UserDefine1": "",
-  "UserDefine2": "",
-  "UserDefine3": "",
-  "UserDefine4": ""
+    "Aba": "",
+    "Account": "XXXXXXXXXXXX5454",
+    "AccountType": "",
+    "Billto": {
+        "City": "Anaheim",
+        "Country": "United States",
+        "Customer": "",
+        "Email": "test@nodus.com",
+        "ID": "65180c26-8e7c-4004-a535-699572ad1d6b",
+        "Line1": "2099 S State College Blvd",
+        "Line2": "test",
+        "Line3": "",
+        "ModifiedOn": "1/1/0001 12:00:00 AM",
+        "Phone": "",
+        "State": "CA",
+        "Zip": "92806"
+    },
+    "CardHolder": {
+        "DriverLicense": "",
+        "FirstName": "abc",
+        "LastName": "test",
+        "MiddleName": "",
+        "SSN": ""
+    },
+    "CardName": "MasterCard",
+    "CardType": "Debit",
+    "CheckNumber": null,
+    "Connector": "Moneris",
+    "Customer": "TEST",
+    "ExpDate": "1123",
+    "GPAddressCode": "",
+    "GatewayToken": "",
+    "ID": "ccb4edfd-c9b3-4964-9ecc-5b143a60650d",
+    "Identifier": "",
+    "IsDefaultCard": false,
+    "IsLocked": false,
+    "IsSaveCard": false,
+    "IssueNumber": "",
+    "LastUsedDate": "10/15/2020 11:09:03 PM",
+    "ModifiedOn": "10/15/2020 11:08:00 PM",
+    "NewCustomerNumber": null,
+    "StartDate": "",
+    "Tender": "CreditCard",
+    "UserDefine1": "",
+    "UserDefine2": "",
+    "UserDefine3": "",
+    "UserDefine4": ""
 }
 </pre>
 
@@ -201,105 +204,111 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 Retrieve Credit Cards / eChecks
 -------------------------------
 
-* `GET /wallet/getByCustomer?customer=JOHNDOE0001&tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_), which also supports special characters under Customer ID/Number. 
+* `GET /wallet/getByCustomer?customer=test&tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_), which also supports special characters under Customer ID/Number. 
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
 ###### Response
 <pre>
 [
-  {
-    "Aba": "",
-    "Account": "XXXXXXXXXXXX1115",
-    "AccountType": "",
-    "Billto": {
-      "City": "Anaheim",
-      "Country": "USA",
-      "Customer": "",
-      "Email": "",
-      "ID": "4ca94c49-9724-492e-b20e-b11d53a8166b",
-      "Line1": "123 PayFabric Way",
-      "Line2": "",
-      "Line3": "",
-      "ModifiedOn": "1/1/0001 12:00:00 AM",
-      "Phone": "(123)456-7890",
-      "State": "CA",
-      "Zip": "92806"
+    {
+        "Aba": "",
+        "Account": "XXXXXXXXXXXX5454",
+        "AccountType": "",
+        "Billto": {
+            "City": "Anaheim",
+            "Country": "United States",
+            "Customer": "",
+            "Email": "test@nodus.com",
+            "ID": "65180c26-8e7c-4004-a535-699572ad1d6b",
+            "Line1": "2099 S State College Blvd",
+            "Line2": "test",
+            "Line3": "",
+            "ModifiedOn": "1/1/0001 12:00:00 AM",
+            "Phone": "",
+            "State": "CA",
+            "Zip": "92806"
+        },
+        "CardHolder": {
+            "DriverLicense": "",
+            "FirstName": "abc",
+            "LastName": "test",
+            "MiddleName": "",
+            "SSN": ""
+        },
+        "CardName": "MasterCard",
+        "CardType": "Debit",
+        "CheckNumber": null,
+        "Connector": "Moneris",
+        "Customer": "TEST",
+        "ExpDate": "1123",
+        "GPAddressCode": "",
+        "GatewayToken": "",
+        "ID": "ccb4edfd-c9b3-4964-9ecc-5b143a60650d",
+        "Identifier": "",
+        "IsDefaultCard": false,
+        "IsLocked": false,
+        "IsSaveCard": false,
+        "IssueNumber": "",
+        "LastUsedDate": "10/15/2020 11:09:03 PM",
+        "ModifiedOn": "10/15/2020 11:08:00 PM",
+        "NewCustomerNumber": null,
+        "StartDate": "",
+        "Tender": "CreditCard",
+        "UserDefine1": "",
+        "UserDefine2": "",
+        "UserDefine3": "",
+        "UserDefine4": ""
     },
-    "CardHolder": {
-      "DriverLicense": "",
-      "FirstName": "John",
-      "LastName": "Doe",
-      "MiddleName": "",
-      "SSN": ""
-    },
-    "CardName": "Visa",
-    "CheckNumber": null,
-    "Connector": "",
-    "Customer": "JOHNDOE0001",
-    "ExpDate": "0918",
-    "GPAddressCode": "",
-    "GatewayToken": "",
-    "ID": "cbb571ea-e834-41c4-8a20-7d55bb7ae190",
-    "Identifier": "",
-    "IsDefaultCard": false,
-    "IsLocked": false,
-    "IsSaveCard": false,
-    "IssueNumber": "",
-    "ModifiedOn": "10/2/2015 3:40:41 PM",
-    "StartDate": "",
-    "Tender": "CreditCard",
-    "UserDefine1": "",
-    "UserDefine2": "",
-    "UserDefine3": "",
-    "UserDefine4": ""
-  },
-  {
-    "Aba": "",
-    "Account": "XXXXXXXXXXXX1115",
-    "AccountType": "",
-    "Billto": {
-      "City": "Anaheim",
-      "Country": "USA",
-      "Customer": "",
-      "Email": "",
-      "ID": "4ca94c49-9724-492e-b20e-b11d53a1111b",
-      "Line1": "123 PayFabric Way",
-      "Line2": "",
-      "Line3": "",
-      "ModifiedOn": "1/1/0001 12:00:00 AM",
-      "Phone": "(123)456-7890",
-      "State": "CA",
-      "Zip": "92806"
-    },
-    "CardHolder": {
-      "DriverLicense": "",
-      "FirstName": "John",
-      "LastName": "Doe",
-      "MiddleName": "",
-      "SSN": ""
-    },
-    "CardName": "Visa",
-    "CheckNumber": null,
-    "Connector": "",
-    "Customer": "JOHNDOE0001",
-    "ExpDate": "0918",
-    "GPAddressCode": "",
-    "GatewayToken": "",
-    "ID": "cbb571ea-e834-41c4-8a20-7d55bb711111",
-    "Identifier": "",
-    "IsDefaultCard": false,
-    "IsLocked": false,
-    "IsSaveCard": false,
-    "IssueNumber": "",
-    "ModifiedOn": "10/2/2015 3:40:41 PM",
-    "StartDate": "",
-    "Tender": "CreditCard",
-    "UserDefine1": "",
-    "UserDefine2": "",
-    "UserDefine3": "",
-    "UserDefine4": ""
-  }
+    {
+        "Aba": "",
+        "Account": "XXXXXXXXXXXX1111",
+        "AccountType": "",
+        "Billto": {
+            "City": "Anaheim",
+            "Country": "United States",
+            "Customer": "",
+            "Email": "test@nodus.com",
+            "ID": "55714fd0-a9bf-486b-8584-0412694346ef",
+            "Line1": "2099 S State College Blvd",
+            "Line2": "test",
+            "Line3": "test",
+            "ModifiedOn": "1/1/0001 12:00:00 AM",
+            "Phone": "",
+            "State": "CA",
+            "Zip": "92806"
+        },
+        "CardHolder": {
+            "DriverLicense": "",
+            "FirstName": "as12",
+            "LastName": "as12",
+            "MiddleName": "",
+            "SSN": ""
+        },
+        "CardName": "Visa",
+        "CardType": "Credit",
+        "CheckNumber": null,
+        "Connector": "",
+        "Customer": "TEST",
+        "ExpDate": "0122",
+        "GPAddressCode": "",
+        "GatewayToken": "",
+        "ID": "ab5fa671-4968-45ee-af54-66d4aa17f5f0",
+        "Identifier": "",
+        "IsDefaultCard": false,
+        "IsLocked": false,
+        "IsSaveCard": false,
+        "IssueNumber": "",
+        "LastUsedDate": "9/20/2020 10:33:50 PM",
+        "ModifiedOn": "10/20/2020 10:02:27 PM",
+        "NewCustomerNumber": null,
+        "StartDate": "",
+        "Tender": "CreditCard",
+        "UserDefine1": "",
+        "UserDefine2": "",
+        "UserDefine3": "",
+        "UserDefine4": ""
+    }
 ]
 </pre>
 
@@ -313,107 +322,112 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 ###### Response
 <pre>
 {
-  "Paging": {
-    "Current": "1",
-    "Size": "15",
-    "TotalPages": "1",
-    "TotalRecords": "2"
-  },
-  "Records": 
-  [
-    {
-      "Aba": "",
-      "Account": "XXXXXXXXXXXX1115",
-      "AccountType": "",
-      "Billto": {
-        "City": "Anaheim",
-        "Country": "USA",
-        "Customer": "",
-        "Email": "",
-        "ID": "4ca94c49-9724-492e-b20e-b11d53a8166b",
-        "Line1": "123 PayFabric Way",
-        "Line2": "",
-        "Line3": "",
-        "ModifiedOn": "1/1/0001 12:00:00 AM",
-        "Phone": "(123)456-7890",
-        "State": "CA",
-        "Zip": "92806"
-      },
-      "CardHolder": {
-        "DriverLicense": "",
-        "FirstName": "John",
-        "LastName": "Doe",
-        "MiddleName": "",
-        "SSN": ""
-      },
-      "CardName": "Visa",
-      "CheckNumber": null,
-      "Connector": "",
-      "Customer": "JOHNDOE0001",
-      "ExpDate": "0918",
-      "GPAddressCode": "",
-      "GatewayToken": "",
-      "ID": "cbb571ea-e834-41c4-8a20-7d55bb7ae190",
-      "Identifier": "",
-      "IsDefaultCard": false,
-      "IsLocked": false,
-      "IsSaveCard": false,
-      "IssueNumber": "",
-      "ModifiedOn": "10/2/2015 3:40:41 PM",
-      "StartDate": "",
-      "Tender": "CreditCard",
-      "UserDefine1": "",
-      "UserDefine2": "",
-      "UserDefine3": "",
-      "UserDefine4": ""
+    "Paging": {
+        "Current": "1",
+        "Size": "15",
+        "TotalPages": "1",
+        "TotalRecords": "2"
     },
-    {
-      "Aba": "",
-      "Account": "XXXXXXXXXXXX1115",
-      "AccountType": "",
-      "Billto": {
-        "City": "Anaheim",
-        "Country": "USA",
-        "Customer": "",
-        "Email": "",
-        "ID": "4ca94c49-9724-492e-b20e-b11d53a1111b",
-        "Line1": "123 PayFabric Way",
-        "Line2": "",
-        "Line3": "",
-        "ModifiedOn": "1/1/0001 12:00:00 AM",
-        "Phone": "(123)456-7890",
-        "State": "CA",
-        "Zip": "92806"
-      },
-      "CardHolder": {
-        "DriverLicense": "",
-        "FirstName": "John",
-        "LastName": "Doe",
-        "MiddleName": "",
-        "SSN": ""
-      },
-      "CardName": "Visa",
-      "CheckNumber": null,
-      "Connector": "",
-      "Customer": "JOHNDOE0001",
-      "ExpDate": "0918",
-      "GPAddressCode": "",
-      "GatewayToken": "",
-      "ID": "cbb571ea-e834-41c4-8a20-7d55bb711111",
-      "Identifier": "",
-      "IsDefaultCard": false,
-      "IsLocked": false,
-      "IsSaveCard": false,
-      "IssueNumber": "",
-      "ModifiedOn": "10/2/2015 3:40:41 PM",
-      "StartDate": "",
-      "Tender": "CreditCard",
-      "UserDefine1": "",
-      "UserDefine2": "",
-      "UserDefine3": "",
-      "UserDefine4": ""
-    }
-  ]
+    "Records": [
+        {
+            "Aba": "",
+            "Account": "XXXXXXXXXXXX5454",
+            "AccountType": "",
+            "Billto": {
+                "City": "Anaheim",
+                "Country": "United States",
+                "Customer": "",
+                "Email": "test@nodus.com",
+                "ID": "65180c26-8e7c-4004-a535-699572ad1d6b",
+                "Line1": "2099 S State College Blvd",
+                "Line2": "test",
+                "Line3": "",
+                "ModifiedOn": "1/1/0001 12:00:00 AM",
+                "Phone": "",
+                "State": "CA",
+                "Zip": "92806"
+            },
+            "CardHolder": {
+                "DriverLicense": "",
+                "FirstName": "abc",
+                "LastName": "test",
+                "MiddleName": "",
+                "SSN": ""
+            },
+            "CardName": "MasterCard",
+            "CardType": "Debit",
+            "CheckNumber": null,
+            "Connector": "Moneris",
+            "Customer": "TEST",
+            "ExpDate": "1123",
+            "GPAddressCode": "",
+            "GatewayToken": "",
+            "ID": "ccb4edfd-c9b3-4964-9ecc-5b143a60650d",
+            "Identifier": "",
+            "IsDefaultCard": false,
+            "IsLocked": false,
+            "IsSaveCard": false,
+            "IssueNumber": "",
+            "LastUsedDate": "10/15/2020 11:09:03 PM",
+            "ModifiedOn": "10/15/2020 11:08:00 PM",
+            "NewCustomerNumber": null,
+            "StartDate": "",
+            "Tender": "CreditCard",
+            "UserDefine1": "",
+            "UserDefine2": "",
+            "UserDefine3": "",
+            "UserDefine4": ""
+        },
+        {
+            "Aba": "",
+            "Account": "XXXXXXXXXXXX1111",
+            "AccountType": "",
+            "Billto": {
+                "City": "Anaheim",
+                "Country": "United States",
+                "Customer": "",
+                "Email": "test@nodus.com",
+                "ID": "55714fd0-a9bf-486b-8584-0412694346ef",
+                "Line1": "2099 S State College Blvd",
+                "Line2": "test",
+                "Line3": "test",
+                "ModifiedOn": "1/1/0001 12:00:00 AM",
+                "Phone": "",
+                "State": "CA",
+                "Zip": "92806"
+            },
+            "CardHolder": {
+                "DriverLicense": "",
+                "FirstName": "as12",
+                "LastName": "as12",
+                "MiddleName": "",
+                "SSN": ""
+            },
+            "CardName": "Visa",
+            "CardType": "Credit",
+            "CheckNumber": null,
+            "Connector": "",
+            "Customer": "TEST",
+            "ExpDate": "0122",
+            "GPAddressCode": "",
+            "GatewayToken": "",
+            "ID": "ab5fa671-4968-45ee-af54-66d4aa17f5f0",
+            "Identifier": "",
+            "IsDefaultCard": false,
+            "IsLocked": false,
+            "IsSaveCard": false,
+            "IssueNumber": "",
+            "LastUsedDate": "9/20/2020 10:33:50 PM",
+            "ModifiedOn": "10/20/2020 10:02:27 PM",
+            "NewCustomerNumber": null,
+            "StartDate": "",
+            "Tender": "CreditCard",
+            "UserDefine1": "",
+            "UserDefine2": "",
+            "UserDefine3": "",
+            "UserDefine4": ""
+        }
+    ]
 }
 </pre>
 
