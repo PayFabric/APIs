@@ -51,7 +51,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | IsDefaultCard   | Boolean | Indicates whether this is the primary card of the customer. Default value is ``False``. | bit, not null| 
 | IsLocked        | Boolean | Indicates whether the card is locked. Default value is ``False``.| bit, null |
 | IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). |  
-| ModifiedOn      | String | It's a response field. Timestamp indicating when this record was last modified. It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
+| ModifiedOn      | String | This is a response field. Timestamp indicating when this record was last modified. It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
 | CardHolder*      | [Object](#cardholder) | Cardholder object. |  
 | Billto          | [Object](#address) | Address object. | 
 | Identifier      | String | A client-defined identifier for this card. Developer can send a flag value to identify this card |  nvarchar(32)|
@@ -64,7 +64,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | IssueNumber     | String | This field is required for UK debit cards|nvarchar(64)|
 | StartDate       | String | This field is required for UK debit cards, format is MMYY.|varchar(4)|
 | NewCustomerNumber | String | This field is used to submit new customer number for updating this record's customer field. | nvarchar(128)|  
-| CardType | String | It's a response field, it can be the value 'Credit', 'Debit' and 'Prepaid' for credit card, and it is blank for ECheck. | varchar(20)| 
+| CardType | String | This is a response field, the possible value is 'Credit', 'Debit' or 'Prepaid' for credit card, and it is blank for eCheck. | varchar(20)| 
 *Required 
 
 ## Transaction Response
