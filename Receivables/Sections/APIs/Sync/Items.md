@@ -13,7 +13,7 @@ Create or Update an Item
 {
 	"CommodityCode": "TEST",
 	"Description": "TEST Item",
-	<b>"ID": "TEST"<b>,
+	<b>"ID": "TEST"</b>,
 	"UnitOfMeasure": "EACH",
 	"UnitPrice": "30.00"
 }
