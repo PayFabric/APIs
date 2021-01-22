@@ -3,6 +3,7 @@ The invoice item object represents a line item to be associated to an invoice. T
 
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
+| Comment | String | Additional comment for the item | nvarchar(500) |
 | CommodityCode | String | Commodity code of the item | nvarchar(255) |
 | Description | String | Description of the item | nvarchar(101) |
 | ExtendedPrice | Decimal | Total extended price | decimal(19,2) |

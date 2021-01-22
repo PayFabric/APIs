@@ -310,6 +310,8 @@ This request accepts the below query string parameters to add additional options
             "Status": "PastDue",
             "DocumentType": "Invoice",
             "InvoiceType": "SERVICE & REPAIR",
+			"CopyEmail": "Nodus0002@nodus.com; Nodus0003@nodus.com",
+			"Email": "Nodus0001@nodus.com",
             "Currency": {
                 "Name": "USD",
                 "CurrencyCode": "Z-US$",
@@ -339,6 +341,8 @@ This request accepts the below query string parameters to add additional options
             "Status": "PastDue",
             "DocumentType": "Invoice",
             "InvoiceType": "STDINV",
+			"CopyEmail": "Nodus0002@nodus.com; Nodus0003@nodus.com",
+			"Email": "Nodus0001@nodus.com",
             "Currency": {
                 "Name": "USD",
                 "CurrencyCode": "Z-US$",
@@ -507,6 +511,8 @@ This request accepts the below query string parameters to add additional options
             "Status": "Paid",
             "DocumentType": "Invoice",
             "InvoiceType": "STDINV",
+			"CopyEmail": "Nodus0002@nodus.com; Nodus0003@nodus.com",
+			"Email": "Nodus0001@nodus.com",
             "Currency": {
                 "Name": "USD",
                 "CurrencyCode": "Z-US$",
@@ -589,6 +595,8 @@ This request accepts the below query string parameters to add additional options
             "Status": "PastDue",
             "DocumentType": "Invoice",
             "InvoiceType": "SERVICE & REPAIR",
+			"CopyEmail": "Nodus0002@nodus.com; Nodus0003@nodus.com",
+			"Email": "Nodus0001@nodus.com",
             "Currency": {
                 "Name": "USD",
                 "CurrencyCode": "Z-US$",

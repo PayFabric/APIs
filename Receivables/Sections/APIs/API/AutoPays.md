@@ -23,6 +23,7 @@ Retrieve all AutoPay templates
     "FixedAmountOption": "None",
     "FixedAmount": 0.0,
     "Frequency": "Monthly",
+	"InvoiceTypes": [ "STDINV" ],
     "Start": "UserChoice",
     "StartDay": null,
     "CurrencyOption": "CustomerCurrency",
@@ -54,6 +55,7 @@ Retrieve a specific AutoPay template
   "FixedAmountOption": "None",
   "FixedAmount": 0.0,
   "Frequency": "Monthly",
+  "InvoiceTypes": [ "STDINV" ],
   "Start": "UserChoice",
   "StartDay": null,
   "CurrencyOption": "CustomerCurrency",
@@ -83,6 +85,7 @@ Retrieve the current customer's AutoPay
   "Currency": "Z-US$",
   "Description": "Pay outstanding balance on a monthly basis",
   "FixedAmount": 0.0,
+  "InvoiceTypes": [ "STDINV" ],
   "PaymentDay": 0,
   "Frequency": "Daily",
   "NextPaymentDate": "2020-01-04T18:01:38.8100000Z",
@@ -111,6 +114,7 @@ Save an AutoPay
     "Description": "Pay any outstanding invoices each week beginning on the 15th",
     "FixedAmount": 0,
     "Frequency": "Monthly",
+	"InvoiceTypes": [ "STDINV" ],
     "NextPaymentDate": "2019-07-15T21:17:37.0300000Z",
     "PaymentMethod": "015eb504-46c3-4574-907c-e9f30589c90d"
 }
@@ -142,6 +146,7 @@ Update an AutoPay
     "Description": "Pay any outstanding invoices each week beginning on the 15th",
     "FixedAmount": 0,
     "Frequency": "Monthly",
+	"InvoiceTypes": [ "STDINV" ],
     "NextPaymentDate": "2019-07-15T21:17:37.0300000Z",
     "PaymentMethod": "015eb504-46c3-4574-907c-e9f30589c90d"
 }
