@@ -19,7 +19,7 @@ Create or Update an Item
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/Item.md#Item).
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/Item.md#Item).  
 
 ###### Response
 <pre>
