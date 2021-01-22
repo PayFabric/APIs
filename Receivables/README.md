@@ -67,6 +67,10 @@ as child elements of other objects.
 ### Invoices
 * [Create or Update an Invoice](Sections/APIs/Sync/Invoices.md#create-or-update-an-invoice)
 
+### Items
+* [Create or Update an Item](Sections/APIs/Sync/Items.md#create-or-update-an-item)
+* [Get an Item](Sections/APIs/Sync/Items.md#get-an-item)
+
 ### Payments
 * [Create or Update a Payment](Sections/APIs/Sync/Payments.md#create-or-update-a-payment)
 * [Retrieve Payments](Sections/APIs/Sync/Payments.md#retrieve-payments)
