@@ -50,7 +50,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | CardName        | String | Type of credit card: ``Visa``, ``Mastercard``, ``Discover``,``JCB``,``AmericanExpress``,``DinersClub``. Only valid for credit cards. | nvarchar(16)|
 | IsDefaultCard   | Boolean | Indicates whether this is the primary card of the customer. Default value is ``False``. | bit, not null| 
 | IsLocked        | Boolean | Indicates whether the card is locked. Default value is ``False``.| bit, null |
-| IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. Please note: If the transaction type is _Verify_, then this indicator is always false. This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction).  |  
+| IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. **If the transaction type is _Verify_, then this indicator is always false**. This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). |  
 | ModifiedOn      | String | This is a response field. Timestamp indicating when this record was last modified. It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
 | CardHolder*      | [Object](#cardholder) | Cardholder object. |  
 | Billto          | [Object](#address) | Address object. | 
@@ -122,7 +122,7 @@ The Transaction object represents a single transaction that will pass through Pa
 | SetupId*        | String | Gateway account profile name. This name is configurable and is defined by the client on the PayFabric web portal. |nvarchar(64)|  
 | Tender*         | String | Tender type. Valid values are ``CreditCard``, ``ECheck``. |nvarchar(64)|  
 | Type*           | String | Transaction type. Valid values are ``Sale``,``Book``,``Ship``,``Void``,``Credit``, ``Force``.  For more information on PayFabric Transaction Types, click [here](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md). |  nvarchar(64)|
-| BatchNumber     | String | Batch number name. For saving this transaction into a PayFabric batch. Merchant can process the batch on PayFabric portal. Please note: For _Verify_ transaction type, if users set 'BatchNumber', remove it automatically. | varchar(64)| 
+| BatchNumber     | String | Batch number name. For saving this transaction into a PayFabric batch. Merchant can process the batch on PayFabric portal. **For _Verify_ transaction type, if users set 'BatchNumber', remove it automatically**. | varchar(64)| 
 | ModifiedOn      | String | Timestamp indicating when this transaction was last modified. It's format should like "3/23/2015 11:16:19 PM". | datetime| 
 | Shipto   | [Object](#address)| Address object. |  
 | ReqAuthCode          | String | Required for ``Force`` transactions. |varchar(64)|
@@ -136,7 +136,7 @@ The Transaction object represents a single transaction that will pass through Pa
 | TrxUserDefine3       | String | User Defined field 3 |nvarchar(256)|
 | TrxUserDefine4       | String | User Defined field 4 |nvarchar(256)|
 | MSO_EngineGUID       | GUID | GUID of gateway account profile for this transaction. Developer can utilize this field|
-| PayDate              | String | A future date to process this transaction. In another word, this transaction won't be processed right away by setting this field. It's format should like "3/23/2015". Please note: For _Verify_ transaction type, if users set 'PayDate', remove it automatically.|datetime|
+| PayDate              | String | A future date to process this transaction. In another word, this transaction won't be processed right away by setting this field. It's format should like "3/23/2015". **For _Verify_ transaction type, if users set 'PayDate', remove it automatically**.|datetime|
 | ReferenceKey         | String| The original transaction key if this transaction is a reference transaction |varchar(64)|
 | AuthorizationType| String| The authorization type of the transaction, valid values are ``Reauthorization``, ``Resubmission``, ``Incremental`` or ``NotSet`` |varchar(25)|
 | TrxSchedule | String| The type authorization of transaction to be processed, valid values are ``Unscheduled``, ``ScheduledInstallment``, ``ScheduledRecurring`` or ``NotSet`` |varchar(25)|
