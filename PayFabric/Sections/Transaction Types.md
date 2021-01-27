@@ -52,4 +52,4 @@ A _Force_ transaction can be reversed by issuing a _Refund_ or a _Void_.
 A _Void_ is issued for an unsettled approved transaction. When a _Void_ is successfully issued, neither the Void nor the original transaction will appear on the customer’s statement. A _Void_ can only be issued against an unsettled transaction. When a _Void_ is sent, if the original transaction has already been settled, the _Void_ will be denied and a warning will be displayed. A Credit Card settled _Sale_ transaction must be reversed with a _Refund_.
 
 #### Verify
-A_Verify_ is used to verify the card number, it's not a payment. For now, only EVO gateway supports verify credit card. When the transaction type is Verify, PF will update the amount to 0 automatically.
+A _Verify_ is used to verify the card number, it's not a payment. For now, only EVO gateway supports verify credit card. When the transaction type is Verify, PF will update the amount to 0 automatically.
