@@ -1,7 +1,7 @@
 # Level 2 and 3 Fields
 Business, corporate, and purchasing cards are used just like personal credit and debit cards. However, these cards carry higher interchange rates because they offer employers high value (and costly) features such as enhanced reporting and statements. Many merchants can qualify for lower commercial rates  by collecting the more in‑depth Level 2 and Level 3 data with each commercial card transaction.
 
-**Note**: Level 2/3 data will be dropped and will be not be sent to EVO connector if passed through for Verify transaction.
+**Note**: Level 2/3 data will be dropped and will NOT be sent to EVO gateway if passed through for _Verify_ transaction.
 
 ## Example
 When submitting a [Transaction](Objects.md#transaction) developers can incorporate Level 2 and Level 3 fields into the ``Document`` field of the Transaction object. Below is an example JSON transaction object that includes Level 2 and 3 fields.
