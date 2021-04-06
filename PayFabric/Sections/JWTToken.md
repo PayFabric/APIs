@@ -2,9 +2,9 @@
 JSON Web Tokens
 ===============
 
-The PayFabric JSON Web Tokens API is used for Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+The PayFabric JSON Web Tokens API is used to authentication for the new mobile hosted payment page. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
-Create JWT
+Create JSON Web Tokens
 ---------------------------
 
 * `POST /jwt/create` will create the jwt token
