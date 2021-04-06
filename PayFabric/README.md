@@ -80,6 +80,10 @@ as child elements of other objects.
 * [Retrieve a Shipping Address](Sections/Addresses.md#retrieve-a-shipping-address)
 * [Retrieve Shipping Addresses](Sections/Addresses.md#retrieve-shipping-addresses)
 
+### JWT Token
+* [Create JWT Token](Sections/JWTToken.md#create-JWT-Token)
+* [Validate JWT Token](Sections/JWTToken.md#Validate-JWT-Token)
+
 
 Help us make it better
 ----------------------
