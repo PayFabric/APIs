@@ -55,7 +55,7 @@ Create JSON Web Tokens
 }
 </pre>
 
-Please note that **bold** fields are required fields, in this API, the two fields are all required. For more information and descriptions on available fields please see our [object reference](Objects.md#JSON Web Tokens).
+Please note that **bold** fields are required fields, in this API, the two fields are all required. For more information and descriptions on available fields please see our [object reference](Objects.md#json-web-tokens).
 
 Validate JSON Web Tokens
 ---------------------------
