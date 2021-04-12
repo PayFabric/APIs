@@ -60,7 +60,7 @@ Please note that **bold** fields are required fields, in this API, the two field
 Validate JSON Web Tokens
 ---------------------------
 
-* `POST /jwt/validate` can validate the JWT
+* `POST /jwt/validate` can check the JWT valid or not.
 
 ###### Request
 <pre>
