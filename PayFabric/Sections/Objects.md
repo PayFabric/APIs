@@ -165,7 +165,7 @@ A Gateway Account Profile is the account information of a single Payment Gateway
 | Attribute       | DataType| Definition|
 | :-----------    |:---------| :---------| 
 | Audience              | string   | Only accept 'PaymentPage' for now.  | 
-| Subject            | String | should put the unprocessed transaction here. |
+| Subject            | String | should put the unprocessed transaction key here. |
 
 
 
