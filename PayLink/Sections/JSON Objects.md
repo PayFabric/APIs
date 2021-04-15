@@ -36,7 +36,7 @@ This object represents the PayLink record that customers will pay through their 
 | BatchNo | String | Batch number. This field will be required after ERP connection's ERP Provider set as Microsoft Dynamics GP or Microsoft Dynamics SL in [Settings](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Settings.md#configure-erp-connection) | RW |
 | MerchantEmail | String | Email From | RW |
 | ReturnUrl | String | User defined return URL, overwrites PayLink confirmation page | RW |
-| Status | Integer | Document status, available values `0 = draft, 1 = waiting for payment, 2 = cancelled, 3 = paid`, Note: When [Create a PayLink](./PayLinks.md#create-a-paylink), the value could be `0` or `1`; when [Update a PayLink](./PayLinks.md#update-a-paylink), the value will be updated from `0` to `1` rather than `1` to `0`; when [Cancel a PayLink](./PayLinks.md#cancel-a-paylink), the value will be updated from `1` to `2`. | RO |
+| Status | Integer | Document status, available values `0 = draft, 1 = waiting for payment, 2 = cancelled, 3 = paid`, Note: When [Create a PayLink](./PayLinks.md#create-a-paylink), the value could be `0` or `1`; when [Update a PayLink](./PayLinks.md#update-a-paylink), the value will be updated from `0` to `1` rather than `1` to `0`; when [Cancel a PayLink](./PayLinks.md#cancel-a-paylink), the value will be updated from `1` to `2` or from `0` to `2`. | RW |
 | IntegrationStatus | Integer | Document integration status, available values `0 = Pending, 1 = Failed, 2 = Successful`, Note: IntegrationStatus could be updated from `Pending` to `Sucessful` or `Failed` via API| RW |
 | ShippingAddress | [Address Object](#address) | Shipping address | RW |
 | BillingAddress | [Address Object](#address) | Billing address | RW |
