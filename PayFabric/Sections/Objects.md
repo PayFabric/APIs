@@ -158,3 +158,15 @@ A Gateway Account Profile is the account information of a single Payment Gateway
 | ProcessorID     | String | Bank processor ID. | tinyint|
 | CardClass       | String | ``Credit`` or ``ECheck``  | nvarchar(64) |
 | CardClassID| String| ID of CardClass|tinyint|
+
+
+## JSON Web Tokens
+
+| Attribute       | DataType| Definition|
+| :-----------    |:---------| :---------| 
+| Audience              | string   | Only accept 'PaymentPage' for now.  | 
+| Subject            | String | should put the unprocessed transaction key here. |
+
+
+
+
