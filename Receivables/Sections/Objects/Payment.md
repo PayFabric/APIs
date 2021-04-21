@@ -42,7 +42,7 @@ This object is used when updating an existing payment on the PayFabric Receivabl
 | Notes | String | Additional notes for the payment | nvarchar(500) |
 | PaymentId\* | String | Payment number | nvarchar(25) |
 | PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | nvarchar(25) |
-| PaymentType | String | Payment type of the transaction. Valid options are ``Unknown``, ``FinanceCharge``, ``CreditMemo``, ``Return``, and ``Payment`` | nvarchar(25) |
+| PaymentType | String | Payment type of the transaction. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | nvarchar(25) |
 | User | String | User who made the payment | nvarchar(50) |
 
 ## PaymentResponse
