@@ -147,7 +147,7 @@ The Transaction object represents a single transaction that will pass through Pa
 > The Required fields above only apply to transactions that will be submitted to Payment Gateways. If the transaction is only being saved on the PayFabric server (and not being submitted to a Payment Gateway) then none of the fields are required.
 
 ## Gateway Account Profile
-A Gateway Account Profile is the account information of a single Payment Gateway. This is created by the merchant on the PayFabric server via the PayFabric web portal. See [How to Setup Gateway Account](https://github.com/PayFabric/Portal/blob/master/Sections/Configure%20Portal.md#gateway-profile) for more details.
+A Gateway Account Profile is the account information of a single Payment Gateway. This is created by the merchant on the PayFabric server via the PayFabric web portal. See [How to Setup Gateway Account](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Gateway%20Configuration.md) for more details.
 
 | Attribute       | DataType| Definition|Max Length|
 | :-----------    |:---------| :---------| :---------| 
