@@ -73,7 +73,7 @@ This object is used when getting a payment on the PayFabric Receivables website.
 | Name | String | Customer name | nvarchar(100) |
 | PaymentId | String | Payment number | nvarchar(25) |
 | PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | nvarchar(25) |
-| PaymentType | String | Payment type of the transaction. Valid options are ``Unknown``, ``FinanceCharge``, ``CreditMemo``, ``Return``, and ``Payment`` | nvarchar(25) |
+| PaymentType | String | Payment type of the transaction. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | nvarchar(25) |
 | Status | String | Status of the payment. Valid options are ``Scheduled``, ``Processed``, ``Failed``, and ``Voided`` | nvarchar(10) |
 | User | String | User who made the payment | nvarchar(50) |
 | WalletEntryGuid | Guid | Unique identifier of the wallet associated to the payment | uniqueidentifier |
