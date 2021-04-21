@@ -33,7 +33,7 @@ This request accepts the below query string parameters to add additional options
 | PaymentId | Payment number | [String Filter](../QueryFilter.md#string-filter) |
 | SortBy | Sort direction and sort field | [SortBy Filter](../QueryFilter.md#sortby-filter) |
 | Status | Payment status. Valid options are ``All``, ``Scheduled``, ``Processed``, ``Failed``, and ``Voided`` | [String](../QueryFilter.md#string) |
-| Type | Payment type. Valid options are ``FinanceCharge``, ``CreditMemo``, ``Return``, and ``Payment`` | [String](../QueryFilter.md#string) |
+| Type | Payment type. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | [String](../QueryFilter.md#string) |
 | User | Search by the user who made the payment | [String Filter](../QueryFilter.md#string-filter) |
 
 ###### Request
