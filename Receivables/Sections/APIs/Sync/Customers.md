@@ -89,7 +89,7 @@ Retrieve a Customer by customer identifier
     "StatementName": "Nodus Technologies ",
     "Currency": "USD",
     "ShippingMethod": "GROUND",
-	"TaxExemptNumber": 1234
+    "TaxExemptNumber": 1234
 }
 </pre>
 
