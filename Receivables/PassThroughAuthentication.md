@@ -8,11 +8,11 @@ The PayFabric Receivables Pass-Through Authentication feature allows for users t
 ### Usage  
 
 ##### Step 1: Obtain Credentials for the API Calls
-From the PayFabric Receivables Management portal, navigate to the `Integration` section of the `General Settings` tab of the `Settings` page and take note the following values. These credentials will be used to authenticate with the API and should not be exposed within the integrating application. 
+From the PayFabric Receivables Management portal, navigate to the `Settings` page to get the below values. These credentials will be used to authenticate with the API and should not be exposed within the integrating application. 
 
-* `Portal Name`
-* `Integration Key`
-* `Integration Key Password`
+* `Portal Name` - `Company` section > `Information` tab
+* `Integration Key` - `Integration` section > `Security` tab
+* `Integration Key Password` - `Integration` section > `Security` tab
 
 ##### Step 2: Generate the Authorization Code
 The Authorization Code is the value the user will need in order to access the PayFabric Receivables Customer Portal. To generate the Authorization Code, use the following procedure:
