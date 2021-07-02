@@ -62,6 +62,9 @@ as child elements of other objects.
 * [Refund a Customer](Sections/Transactions.md#refund-a-customer)
 * [Process eCheck Transaction](Sections/Process%20eCheck%20Transaction.md)
 
+### Batch Close
+* [Manual Batch Close](Sections/BatchClose.md#manual-batch-close)
+
 ### Wallets / Credit Cards / eChecks
 * [Create a Credit Card / eCheck](Sections/Wallets.md#create-a-credit-card)
 * [Update a Credit Card / eCheck](Sections/Wallets.md#update-a-credit-card--echeck)
