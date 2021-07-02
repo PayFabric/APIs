@@ -62,9 +62,6 @@ as child elements of other objects.
 * [Refund a Customer](Sections/Transactions.md#refund-a-customer)
 * [Process eCheck Transaction](Sections/Process%20eCheck%20Transaction.md)
 
-### Batch Close
-* [Manual Batch Close](Sections/BatchClose.md#manually-batch-close-transactions)
-
 ### Wallets / Credit Cards / eChecks
 * [Create a Credit Card / eCheck](Sections/Wallets.md#create-a-credit-card)
 * [Update a Credit Card / eCheck](Sections/Wallets.md#update-a-credit-card--echeck)
@@ -78,6 +75,7 @@ as child elements of other objects.
 ### Payment Gateway Profiles
 * [Retrieve a Payment Gateway Profile](Sections/Payment%20Gateway%20Profiles.md#retrieve-a-payment-gateway-profile)
 * [Retrieve Payment Gateway Profiles](Sections/Payment%20Gateway%20Profiles.md#retrieve-payment-gateway-profiles)
+* [Manual Batch Close](Sections/Payment%20Gateway%20Profiles.md#manually-batch-close-transactions)
 
 ### Addresses
 * [Retrieve a Shipping Address](Sections/Addresses.md#retrieve-a-shipping-address)
