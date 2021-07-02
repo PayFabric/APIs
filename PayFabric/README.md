@@ -63,7 +63,7 @@ as child elements of other objects.
 * [Process eCheck Transaction](Sections/Process%20eCheck%20Transaction.md)
 
 ### Batch Close
-* [Manual Batch Close](Sections/BatchClose.md#manual-batch-close)
+* [Manual Batch Close](Sections/BatchClose.md#manually-batch-close-transactions)
 
 ### Wallets / Credit Cards / eChecks
 * [Create a Credit Card / eCheck](Sections/Wallets.md#create-a-credit-card)
