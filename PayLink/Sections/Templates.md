@@ -201,20 +201,20 @@ Create Template for specific template type
 ###### Create WalletLink SMS Template Request
 <pre>
 {
-    "Subject": "WalletLink Email",
+    "Subject": "WalletLink SMS",
     "Message": "[[[Document.WalletLinkURL]]]",
-    "Name": "WalletLink Email"
+    "Name": "WalletLink SMS"
 }
 </pre>
 ###### Create WalletLink SMS Template Response
 <pre>
 {
     "ID": "ee2f96b1-c837-430c-b722-ad5b0179f399",
-    "Subject": "WalletLink Email",
+    "Subject": "WalletLink SMS",
     "Message": "[[[Document.WalletLinkURL]]]",
     "CSS": null,
     "JS": null,
-    "Name": "WalletLink Email"
+    "Name": "WalletLink SMS"
 }
 </pre>
 
@@ -263,6 +263,25 @@ Copy Template
 
 * `POST /api/template/{TemplateID}/copy` will copy the specific template
 
+###### Copy PayLink Tempalte Request
+<pre>
+{
+    "Name": "COPY Template"
+}
+</pre>
+
+###### Copy PayLink Tempalte Response
+<pre>
+{
+    "ID": "42c2ce0c-523f-4ee6-95f3-ad5c001488c1",
+    "Subject": "[[[Profile.CompanyName]]] Requests Your Payment Information",
+    "Message": "<span style=\"font-family: 'Verdana', sans-serif;\">\r\n\t<p>Dear [[[Document.CustomerName]]],</p>\r\n\t<p>[[[Profile.CompanyName]]] invites you to use our secure digital wallet.  By entering and saving your payment information you will be able to pay our invoices faster and easier in the future.  Click the link below to get started or copy and paste the link in your web browser.</p>\r\n\t<p><a href=\"[[[Document.WalletLinkURL]]]\">[[[Document.WalletLinkURL]]]</a></p>\r\n\t<p>&nbsp;</p>\r\n\t<p>Sincerely,</p>\r\n\t<p>[[[Profile.CompanyName]]] Team</p>\r\n</span>",
+    "CSS": null,
+    "JS": null,
+    "Name": "COPY Template"
+}
+</pre>
+
 Update Template
 ------------------------------
 
@@ -273,7 +292,12 @@ Delete Template
 
 * `DELETE /api/template/{TemplateID}` will delete the specific template
 
+No request body required, and will return '204 No Content' when delete template successfully.
+
 Set specific Template as default template
 ------------------------------
 
-* `DELETE /api/template/{TemplateID}` will delete the specific template
+* `POST /api/template/{type}/default` will set specific template as default template for specific template type.
+
+
+
