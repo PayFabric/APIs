@@ -3,30 +3,10 @@ Templates
 
 The Template API is used for create, update, copy, delete, get and set default template. Please note that all requests require API authentication by PayFabric *Device ID* and *Device Password*, see our [guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md) for more details.
 
-Create Templates by template type
+Get Templates by template type
 ------------------------------
 
-* `POST /api/template/{type}` will create template for a specific type
-
-
-Create Templates by template type
-------------------------------
-
-* `POST /api/template/{type}` will create template for a specific type
-
-
-
-Update Templates by template type
-------------------------------
-
-* `PATCH /api/template/{TemplateID}` will update the specific template
-
-Delete Templates by template type
-------------------------------
-
-* `DELETE /api/template/{TemplateID}` will delete the specific template
-
-
+* `GET /api/template/{type}` will get templates for a specific type
 
 ###### Accepted value for 'type' field
 >
@@ -153,3 +133,27 @@ Delete Templates by template type
     }
 </pre>
 
+Create Template by template type
+------------------------------
+
+* `POST /api/template/{type}` will create template for a specific type
+
+Copy Template
+------------------------------
+
+* `POST /api/template/{TemplateID}/copy` will copy the specific template
+
+Update Template
+------------------------------
+
+* `PATCH /api/template/{TemplateID}` will update the specific template
+
+Delete Templates
+------------------------------
+
+* `DELETE /api/template/{TemplateID}` will delete the specific template
+
+Set specific Template as default template
+------------------------------
+
+* `DELETE /api/template/{TemplateID}` will delete the specific template
