@@ -19,7 +19,7 @@ Get Templates by template type
 | PaymentPageTemplate | By passing this value can get all the Payment page Templates. |
 | ConfirmationPageTemplate | By passing this value can get all the PayLink Confirmation page Templates. |
 
-###### PayLink Email Template
+###### PayLink Email Template Response
 <pre>
 [
     {
@@ -39,7 +39,7 @@ Get Templates by template type
 ]
 </pre>
 
-###### PayLink SMS Template
+###### PayLink SMS Template Response
 <pre>
 [
     {
@@ -57,7 +57,7 @@ Get Templates by template type
 ]
 </pre>
 
-###### WalletLink Email Template
+###### WalletLink Email Template Response
 <pre>
 [
     {
@@ -77,7 +77,7 @@ Get Templates by template type
 ]
 </pre>
 
-###### WalletLink SMS Template
+###### WalletLink SMS Template Response
 <pre>
 [
     {
@@ -95,7 +95,7 @@ Get Templates by template type
 ]
 </pre>
 
-###### PayLink Payment page Template
+###### PayLink Payment page Template Response
 <pre>
 [
     {
@@ -133,10 +133,130 @@ Get Templates by template type
     }
 </pre>
 
-Create Template by template type
-------------------------------
+Create Template for specific template type
+--------------------------------
 
 * `POST /api/template/{type}` will create template for a specific type
+
+###### Create PayLink Email Template Request
+<pre>
+{
+    "Subject": "PL Email Template",
+    "Message": "[[[Document.PayLinkURL]]]",
+    "Name": "PL Email Template"
+}
+</pre>
+###### Create PayLink Email Template Response
+<pre>
+{
+    "ID": "73b3d7ca-a2d7-493f-8d13-ad5c0012b437",
+    "Subject": "PL Email Template",
+    "Message": "[[[Document.PayLinkURL]]]",
+    "CSS": null,
+    "JS": null,
+    "Name": "PL Email Template"
+}
+</pre>
+
+###### Create PayLink SMS Template Request
+<pre>
+{
+    "Subject": "PayLink SMS Template",
+    "Message": "[[[Document.PayLinkURL]]]",
+    "Name": "PayLink SMS Template"
+}
+</pre>
+###### Create PayLink SMS Template Response
+<pre>
+{
+    "ID": "f0473844-3769-448d-a7e0-ad5c001163d1",
+    "Subject": "PayLink SMS Template",
+    "Message": "[[[Document.PayLinkURL]]]",
+    "CSS": null,
+    "JS": null,
+    "Name": "PayLink SMS Template"
+}
+</pre>
+
+###### Create WalletLink Email Template Request
+<pre>
+{
+    "Subject": "WalletLink Email",
+    "Message": "[[[Document.WalletLinkURL]]]",
+    "Name": "WalletLink Email"
+}
+</pre>
+###### Create WalletLink Email Template Response
+<pre>
+{
+    "ID": "ee2f96b1-c837-430c-b722-ad5b0179f399",
+    "Subject": "WalletLink Email",
+    "Message": "[[[Document.WalletLinkURL]]]",
+    "CSS": null,
+    "JS": null,
+    "Name": "WalletLink Email"
+}
+</pre>
+
+###### Create WalletLink SMS Template Request
+<pre>
+{
+    "Subject": "WalletLink Email",
+    "Message": "[[[Document.WalletLinkURL]]]",
+    "Name": "WalletLink Email"
+}
+</pre>
+###### Create WalletLink SMS Template Response
+<pre>
+{
+    "ID": "ee2f96b1-c837-430c-b722-ad5b0179f399",
+    "Subject": "WalletLink Email",
+    "Message": "[[[Document.WalletLinkURL]]]",
+    "CSS": null,
+    "JS": null,
+    "Name": "WalletLink Email"
+}
+</pre>
+
+###### Create PayLink Payment Page Template Request
+<pre>
+{
+    "CSS": "body{background-color:lightblue;}",
+    "JS": "alert(2)",
+    "Name": "Payment Page Template"
+}
+</pre>
+###### Create PayLink Payment Page Template Response
+<pre>
+{
+    "ID": "96a7a7d9-88bd-41ce-86f1-ad5c00105f35",
+    "Subject": null,
+    "Message": null,
+    "CSS": "body{background-color:lightblue;}",
+    "JS": "alert(2)",
+    "Name": "Payment Page Template"
+}
+</pre>
+
+###### Create PayLink Confirmation Page Template Request
+<pre>
+{
+    "CSS": "body{background-color:lightblue;}",
+    "JS": "alert(1)",
+    "Name": "PL Confirm Page"
+}
+</pre>
+###### Create PayLink Confirmation Page Template Response
+<pre>
+{
+    "ID": "1dc50bb7-d1d3-4afd-b2d5-ad5b0176ad59",
+    "Subject": null,
+    "Message": null,
+    "CSS": "body{background-color:lightblue;}",
+    "JS": "alert(1)",
+    "Name": "PL Confirm Page"
+}
+</pre>
 
 Copy Template
 ------------------------------
@@ -148,7 +268,7 @@ Update Template
 
 * `PATCH /api/template/{TemplateID}` will update the specific template
 
-Delete Templates
+Delete Template
 ------------------------------
 
 * `DELETE /api/template/{TemplateID}` will delete the specific template
