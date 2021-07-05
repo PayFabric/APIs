@@ -286,6 +286,11 @@ Update Template
 ------------------------------
 
 * `PATCH /api/template/{TemplateID}` will update the specific template
+###### Update Template Request
+Please refer the create template request for each template type.
+
+###### Update Template Response
+Respond with 204 No Content without message
 
 Delete Template
 ------------------------------
@@ -298,6 +303,11 @@ Set specific Template as default template
 ------------------------------
 
 * `POST /api/template/{type}/default` will set specific template as default template for specific template type.
-
+###### Set default template request
+{
+    "Id" : "a9394e22-999e-46ef-8105-29e9d210770d"
+}
+###### Set default template response
+Status return 200 without message.
 
 
