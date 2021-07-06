@@ -162,7 +162,7 @@ Please the available 'type' value [Available 'type' Value](https://github.com/Pa
 </pre>
 
 ###### Create PayLink SMS Template Request
-* Please refer the available [parameters](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Parameters.md#paylink-emailsms-template-parameters) for PayLink Email Template 
+* Please refer the available [parameters](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Parameters.md#paylink-emailsms-template-parameters) for PayLink SMS Template 
 <pre>
 {
     <b>"Subject": "PayLink SMS Template",</b>
