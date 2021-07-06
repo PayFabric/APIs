@@ -138,12 +138,14 @@ Create Template for specific template type
 
 * `POST /api/template/{type}` will create template for a specific type
 
+Please the available 'type' value [Available 'type' Value](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#accepted-value-for-type-field)
+
 ###### Create PayLink Email Template Request
 <pre>
 {
-    "Subject": "PL Email Template",
-    "Message": "[[[Document.PayLinkURL]]]",
-    "Name": "PL Email Template"
+    <b>"Subject": "PL Email Template",</b>
+    <b>"Message": "[[[Document.PayLinkURL]]]",</b>
+    <b>"Name": "PL Email Template"</b>
 }
 </pre>
 ###### Create PayLink Email Template Response
@@ -161,9 +163,9 @@ Create Template for specific template type
 ###### Create PayLink SMS Template Request
 <pre>
 {
-    "Subject": "PayLink SMS Template",
-    "Message": "[[[Document.PayLinkURL]]]",
-    "Name": "PayLink SMS Template"
+    <b>"Subject": "PayLink SMS Template",</b>
+    <b>"Message": "[[[Document.PayLinkURL]]]",</b>
+    <b>"Name": "PayLink SMS Template"</b>
 }
 </pre>
 ###### Create PayLink SMS Template Response
@@ -181,9 +183,9 @@ Create Template for specific template type
 ###### Create WalletLink Email Template Request
 <pre>
 {
-    "Subject": "WalletLink Email",
-    "Message": "[[[Document.WalletLinkURL]]]",
-    "Name": "WalletLink Email"
+    <b>"Subject": "WalletLink Email",</b>
+    <b>"Message": "[[[Document.WalletLinkURL]]]",</b>
+    <b>"Name": "WalletLink Email"</b>
 }
 </pre>
 ###### Create WalletLink Email Template Response
@@ -201,9 +203,9 @@ Create Template for specific template type
 ###### Create WalletLink SMS Template Request
 <pre>
 {
-    "Subject": "WalletLink SMS",
-    "Message": "[[[Document.WalletLinkURL]]]",
-    "Name": "WalletLink SMS"
+    <b>"Subject": "WalletLink SMS",</b>
+    <b>"Message": "[[[Document.WalletLinkURL]]]",</b>
+    <b>"Name": "WalletLink SMS"</b>
 }
 </pre>
 ###### Create WalletLink SMS Template Response
@@ -223,7 +225,7 @@ Create Template for specific template type
 {
     "CSS": "body{background-color:lightblue;}",
     "JS": "alert(2)",
-    "Name": "Payment Page Template"
+    <b>"Name": "Payment Page Template"</b>
 }
 </pre>
 ###### Create PayLink Payment Page Template Response
@@ -243,7 +245,7 @@ Create Template for specific template type
 {
     "CSS": "body{background-color:lightblue;}",
     "JS": "alert(1)",
-    "Name": "PL Confirm Page"
+    <b>"Name": "PL Confirm Page"</b>
 }
 </pre>
 ###### Create PayLink Confirmation Page Template Response
@@ -265,12 +267,12 @@ Please note that **bold** fields are required fields, and all others are optiona
 | Field | Description | 
 | :------------- | ------------- | 
 | ID | Template ID |
-| Name  | Template name  |
-| CSS | CSS for Payment page and confirmation page templates. |
-| JS |  Java script for Payment page and confirmation page templates. |
-| Subject | Email subject for PayLink email template and WalletLink email template |
+| Name  | Template name, this is a required field.  |
+| CSS | CSS for Payment page and confirmation page templates. This is optional. |
+| JS |  Java script for Payment page and confirmation page templates. This is optional. |
+| Subject | Email subject for PayLink email template and WalletLink email template. |
 | Message | Email body for PayLink email template and WalletLink email template. Please refer [PayLink parameters]() for all available parameters.|
-| IsDefault | This is a response parameter. |
+| IsDefault | This is a response parameter, if it is true, then means this template is the default template for specific type. |
 
 
 Copy Template
