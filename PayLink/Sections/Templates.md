@@ -258,6 +258,21 @@ Create Template for specific template type
 }
 </pre>
 
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see [Template Object]()
+
+###### Template Object
+>
+| Field | Description | 
+| :------------- | ------------- | 
+| ID | Template ID |
+| Name  | Template name  |
+| CSS | CSS for Payment page and confirmation page templates. |
+| JS |  Java script for Payment page and confirmation page templates. |
+| Subject | Email subject for PayLink email template and WalletLink email template |
+| Message | Email body for PayLink email template and WalletLink email template. Please refer [PayLink parameters]() for all available parameters.|
+| IsDefault | This is a response parameter. |
+
+
 Copy Template
 ------------------------------
 
