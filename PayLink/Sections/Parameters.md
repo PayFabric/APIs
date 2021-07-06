@@ -32,3 +32,24 @@ PayLink Templates Parameters
 |[[[Profile.State]]]|Your company's state. |
 |[[[Profile.Zip]]]|Your company's zip/post code. |
 |[[[Profile.Country]]]|Your company's country. |
+
+
+#### WalletLink Email/SMS Template Parameters
+>
+| Name | Description | 
+| :------------- | ------------- |
+|[[[Document.WalletLinkURL]]]|The unique URL to the WalletLink.|
+|[[[Document.DocumentDate]]]|The date the WalletLink was created. |
+|[[[Document.Message]]]|The document message supplied during WalletLink creation. |
+|[[[Document.CustomerNumber]]]|Your customer's unique ID.|
+|[[[Document.CustomerName]]]|Your customer's name. |
+|[[[Profile.CompanyName]]]|Your company's name. |
+|[[[Profile.Email]]]|Your company's email address.|
+|[[[Profile.Phone]]]|Your company's phone number. |
+|[[[Profile.Address1]]]|Your company's address line1. |
+|[[[Profile.Address2]]]|Your company's address line2. |
+|[[[Profile.Address3]]]|Your company's address line3. |
+|[[[Profile.City]]]|Your company's city. |
+|[[[Profile.State]]]|Your company's state. |
+|[[[Profile.Zip]]]|Your company's zip/post code. |
+|[[[Profile.Country]]]|Your company's country. |
