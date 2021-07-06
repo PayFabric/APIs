@@ -271,7 +271,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 | Field | Description | 
 | :------------- | ------------- | 
 | ID | Template ID |
-| Name  | Template name, this is a required field.  |
+| Name  | Template name, this is a required field and should be unique.  |
 | CSS | CSS for Payment page and confirmation page templates. This is optional. |
 | JS |  Java script for Payment page and confirmation page templates. This is optional. |
 | Subject | Email subject for PayLink email template and WalletLink email template. |
