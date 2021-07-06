@@ -260,7 +260,7 @@ Please the available 'type' value [Available 'type' Value](https://github.com/Pa
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see [Template Object]()
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see [Template Object](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#template-object)
 
 ###### Template Object
 >
