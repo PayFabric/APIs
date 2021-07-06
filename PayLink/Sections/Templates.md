@@ -141,6 +141,7 @@ Create Template for specific template type
 Please the available 'type' value [Available 'type' Value](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#accepted-value-for-type-field)
 
 ###### Create PayLink Email Template Request
+* Please refer the available [parameters](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Parameters.md#paylink-emailsms-template-parameters) for PayLink Email Template 
 <pre>
 {
     <b>"Subject": "PL Email Template",</b>
@@ -161,6 +162,7 @@ Please the available 'type' value [Available 'type' Value](https://github.com/Pa
 </pre>
 
 ###### Create PayLink SMS Template Request
+* Please refer the available [parameters](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Parameters.md#paylink-emailsms-template-parameters) for PayLink Email Template 
 <pre>
 {
     <b>"Subject": "PayLink SMS Template",</b>
@@ -181,6 +183,7 @@ Please the available 'type' value [Available 'type' Value](https://github.com/Pa
 </pre>
 
 ###### Create WalletLink Email Template Request
+* Please refer the available [parameters](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Parameters.md#walletlink-emailsms-template-parameters) for WalletLink Email Template 
 <pre>
 {
     <b>"Subject": "WalletLink Email",</b>
@@ -201,6 +204,7 @@ Please the available 'type' value [Available 'type' Value](https://github.com/Pa
 </pre>
 
 ###### Create WalletLink SMS Template Request
+* Please refer the available [parameters](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Parameters.md#walletlink-emailsms-template-parameters) for WalletLink SMS Template 
 <pre>
 {
     <b>"Subject": "WalletLink SMS",</b>
