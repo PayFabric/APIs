@@ -45,6 +45,9 @@ as child elements of other objects.
 * [Retrieve a PayLink URL](/PayLink/Sections/PayLinks.md#retrieve-a-paylink-url)
 * [Remove a PayLink](/PayLink/Sections/PayLinks.md#remove-a-paylink)
 * [Cancel a PayLink](/PayLink/Sections/PayLinks.md#cancel-a-paylink)
+* [Get Post Data](/PayLink/Sections/PayLinks.md#get-post-data)
+* [Update Post Data](/PayLink/Sections/PayLinks.md#update-post-data)
+* [Resubmit Post Data](/PayLink/Sections/PayLinks.md#resubmit-post-data)
 
 ### WalletLinks
 * [Create a WalletLink](/PayLink/Sections/WalletLinks.md#create-a-walletlink)
