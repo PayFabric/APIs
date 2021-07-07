@@ -51,5 +51,7 @@ Delete Shipping Address
 
 ###### Response
 A successful `DELETE` will result in a HTTP 204 No Content Response.
-A failed `DELETE` may result in a HTTP 400 Bad Request Response if the specified address does not exist or the Device ID used for the Security Token does not match or post failed
-A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authorization is wrong
+
+A failed `DELETE` may result in a HTTP 400 Bad Request Response if the specified address does not exist or the Device ID used for the Security Token does not match or post failed.
+
+A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
