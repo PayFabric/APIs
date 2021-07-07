@@ -14,4 +14,6 @@ The autopay template object represents an AutoPay template that has been already
 | Name | String | Title name of the Autopay template | nvarchar(50) |
 | Start | String | Start option when the AutoPay should begin. Can be either ``DayOfTheMonth``, ``UserChoice``, or ``NextDay`` | varchar(100) |
 | StartDay | Int | Day of the month or week when the AutoPay should begin | int |
-
+| InvoiceTypeOption | String | The invoice type option used. Can be either ``AllInvoices``, or ``SelectedInvoices`` | nvarchar(25) |
+| InvoiceTypes | Array of Strings | List of invoice types to be paid via AutoPay | varchar(4000) |
+| ApplyCredits | Boolean | Option to allow the autopay to apply credits before making a payment | boolean |

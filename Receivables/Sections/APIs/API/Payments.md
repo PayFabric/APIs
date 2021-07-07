@@ -77,7 +77,17 @@ Update an Existing InProgress Payment
   	"CurrencyCode": "USD",
   	"Prepayment": 10,
   	"Comment": "my notes",
-  	"WalletEntryGuid": "2b9a5a48-f83a-e911-80d5-00155d000a89"
+  	"WalletEntryGuid": "2b9a5a48-f83a-e911-80d5-00155d000a89",
+	"CreditDistributions": [
+		{
+			"CreditGuid": "2b9a5a48-f83a-e911-80d5-00155d000a90",
+			"ApplyAmount": 1,
+			"CreditBalance": 0,
+			"CreatedOn": "2021-01-21"
+			"CreditIdentity": "RTN0001",
+			"PaymentType": "Return"
+		}
+	]
 }
 </pre>
 

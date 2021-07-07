@@ -111,10 +111,11 @@ This request accepts the below query string parameters to add additional options
             "Identity": "",
             "PaymentApplies": [
 				{
-				  "InvoiceId": "string",
-				  "Identity": "string",
-				  "PayAmount": 0,
-				  "DocumentType": 0,
+				  "InvoiceId": "STDINV999999",
+				  "Identity": "STDINV999999",
+				  "PayAmount": 1.00,
+				  "InvoiceType": "STDINV",
+                  "DiscountAmount": 0.00,
 				  "RowVersion": "string"
 				}
             ],
@@ -149,10 +150,11 @@ Create or Update a Payment
 	"Identity": "",
 	"PaymentApplies": [
 		{
-		  "InvoiceId": "string",
-		  "Identity": "string",
-		  "PayAmount": 0,
-		  "DocumentType": 0,
+		  "InvoiceId": "STDINV999999",
+		  "Identity": "STDINV999999",
+		  "PayAmount": 1.00,
+		  "InvoiceType": "STDINV",
+		  "DiscountAmount": 0.00,
 		  "RowVersion": "string"
 		}
 	],
@@ -175,11 +177,11 @@ Please note that **bold** fields are required fields, and all others are optiona
 Retrieve a Payment
 --------------------
 
-* `GET /payments/{id}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+* `GET /payments/byId?id={id}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
 
 ###### Request
 <pre>
-	GET /payments/APIPMT000000001
+	GET /payments/byId?id=APIPMT000000001
 </pre>
 
 ###### Response
@@ -211,10 +213,11 @@ Retrieve a Payment
     "Identity": "",
     "PaymentApplies": [
         {
-          "InvoiceId": "string",
-          "Identity": "string",
-          "PayAmount": 0,
-          "DocumentType": 0,
+          "InvoiceId": "STDINV999999",
+          "Identity": "STDINV999999",
+          "PayAmount": 1.00,
+          "InvoiceType": "STDINV",
+		  "DiscountAmount": 0.00,
           "RowVersion": "string"
         }
     ],
@@ -228,14 +231,14 @@ Retrieve a Payment
 For more information and descriptions on response fields please see our [object reference](../../Objects/Payment.md#PaymentResponse).
 
 
-Update an existing payment and void it
+Void a Payment
 --------------------
 
-* `PATCH /payments/{id}/void` will update the payment and void it
+* `PATCH /payments/void?id={id}` will void the payment
 
 ###### Request
 <pre>
-	PATCH /payments/APIPMT000000001/void
+	PATCH /payments/void?id=APIPMT000000001
 </pre>
 
 ###### Response

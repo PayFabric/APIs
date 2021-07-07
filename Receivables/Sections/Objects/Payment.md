@@ -23,6 +23,7 @@ This object is used when creating a payment on the PayFabric Receivables website
 | PaymentType | String | Payment type of the transaction. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | nvarchar(25) |
 | Status | String | Payment status. Valid options are ``Processed``, ``Voided``, and ``InProgress`` | varchar(10) |
 | User | String | User who made the payment | nvarchar(50) |
+| Reference | String | Payment reference | nvarchar(100) |
 \*Required
 
 ## PaymentPatch
@@ -44,6 +45,7 @@ This object is used when updating an existing payment on the PayFabric Receivabl
 | PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | nvarchar(25) |
 | PaymentType | String | Payment type of the transaction. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | nvarchar(25) |
 | User | String | User who made the payment | nvarchar(50) |
+| Reference | String | Payment reference | nvarchar(100) |
 
 ## PaymentResponse
 This object is used when getting a payment on the PayFabric Receivables website.
@@ -77,6 +79,7 @@ This object is used when getting a payment on the PayFabric Receivables website.
 | Status | String | Status of the payment. Valid options are ``Scheduled``, ``Processed``, ``Failed``, and ``Voided`` | nvarchar(10) |
 | User | String | User who made the payment | nvarchar(50) |
 | WalletEntryGuid | Guid | Unique identifier of the wallet associated to the payment | uniqueidentifier |
+| Reference | String | Payment reference | nvarchar(100) |
 | Transaction | [Object](Transaction.md) | Transaction details associated to the payment | 
 
 ## PaymentPagingResponse

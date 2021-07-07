@@ -13,3 +13,4 @@ The autopay object represents an AutoPay to be saved or updated in the PayFabric
 | NextPaymentDate | DateTime | Next process day of the AutoPay | DateTime |
 | PaymentDay | Int | Day of the month or week when the AutoPay should begin | int |
 | PaymentMethod | Guid | Customer's payment method identifier to be used during processing | unqiueidentifier |
+| ApplyCredits | Boolean | Option to allow the autopay to apply credits before making a payment | boolean |

@@ -23,9 +23,11 @@ Retrieve all AutoPay templates
     "FixedAmountOption": "None",
     "FixedAmount": 0.0,
     "Frequency": "Monthly",
+	"InvoiceTypeOption": "SelectedInvoices",
 	"InvoiceTypes": [ "STDINV" ],
     "Start": "UserChoice",
     "StartDay": null,
+	"ApplyCredits": true,
     "CurrencyOption": "CustomerCurrency",
     "AutoPayTemplateGuid": "5edab5e7-892d-ea11-a2b7-b0c09018d6d4",
     "Name": "Monthly AutoPay"
@@ -55,9 +57,11 @@ Retrieve a specific AutoPay template
   "FixedAmountOption": "None",
   "FixedAmount": 0.0,
   "Frequency": "Monthly",
+  "InvoiceTypeOption": "SelectedInvoices",
   "InvoiceTypes": [ "STDINV" ],
   "Start": "UserChoice",
   "StartDay": null,
+  "ApplyCredits": true,
   "CurrencyOption": "CustomerCurrency",
   "AutoPayTemplateGuid": "5edab5e7-892d-ea11-a2b7-b0c09018d6d4",
   "Name": "Monthly AutoPay"
@@ -88,6 +92,7 @@ Retrieve the current customer's AutoPay
   "InvoiceTypes": [ "STDINV" ],
   "PaymentDay": 0,
   "Frequency": "Daily",
+  "ApplyCredits": true,
   "NextPaymentDate": "2020-01-04T18:01:38.8100000Z",
   "PaymentMethod": "4098a646-b0d1-47b7-98c8-ccd7ce15e901"
 }
@@ -115,6 +120,7 @@ Save an AutoPay
     "FixedAmount": 0,
     "Frequency": "Monthly",
 	"InvoiceTypes": [ "STDINV" ],
+	"ApplyCredits": true,
     "NextPaymentDate": "2019-07-15T21:17:37.0300000Z",
     "PaymentMethod": "015eb504-46c3-4574-907c-e9f30589c90d"
 }
@@ -147,6 +153,7 @@ Update an AutoPay
     "FixedAmount": 0,
     "Frequency": "Monthly",
 	"InvoiceTypes": [ "STDINV" ],
+	"ApplyCredits": true,
     "NextPaymentDate": "2019-07-15T21:17:37.0300000Z",
     "PaymentMethod": "015eb504-46c3-4574-907c-e9f30589c90d"
 }

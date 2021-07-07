@@ -14,7 +14,8 @@ Update the Integration Document
 	"Documents": [{
 		<b>"DocumentId": "APIPMT000000001"</b>,
 		<b>"Status": "Success"</b>,
-		"ErrorMessage": ""
+		"ErrorMessage": "",
+		"DocumentType": "Payment"
 	}]
 }
 </pre>
@@ -75,7 +76,8 @@ This request accepts the below query string parameters to add additional options
             "Type": "Payment",
             "ErrorMessage": null,
             "FailedAttempts": 0,
-            "LastAttempt": "0001-01-01T00:00:00"
+            "LastAttempt": "0001-01-01T00:00:00",
+			"CreatedBy": "Nodus0001"
         },
         {
             "IntegrationId": "00000000-0000-0000-0000-000000000000",
@@ -85,7 +87,8 @@ This request accepts the below query string parameters to add additional options
             "Type": "Payment",
             "ErrorMessage": null,
             "FailedAttempts": 0,
-            "LastAttempt": "0001-01-01T00:00:00"
+            "LastAttempt": "0001-01-01T00:00:00",
+			"CreatedBy": "Nodus0001"
         }
     ]
 }

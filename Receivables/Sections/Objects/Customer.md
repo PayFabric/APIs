@@ -15,7 +15,6 @@ This object is used when creating a customer on the PayFabric Receivables websit
 | Email | String | Email address | nvarchar(255) |
 | ExtensionData | String | Additional information | nvarchar(max) |
 | Name | String | Customer name | nvarchar(100) |
-| ParentCustomerId | String | Parent customer number | nvarchar(25) |
 | PaymentTerms | String | Payment term | nvarchar(50) |
 | PrimaryAddress | [Object](Address.md#AddressPost) | Address object |
 | ShippingAddress | [Object](Address.md#AddressPost) | Address object |
@@ -40,7 +39,6 @@ This object is used when getting a customer on the PayFabric Receivables website
 | ExtensionData | String | Additional information | nvarchar(max) |
 | InvoiceBalance | Decimal | Total invoice balance | decimal(19,2) |
 | Name | String | Customer name | nvarchar(100) |
-| ParentCustomerId | String | Parent customer number | nvarchar(25) |
 | PastDueBalance | Decimal | Total past due balance | decimal(19,2) |
 | PaymentTerms | String | Payment term | nvarchar(50) |
 | PrimaryAddress | [Object](Address.md#AddressResponse) | Address object |

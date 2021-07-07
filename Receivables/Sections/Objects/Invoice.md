@@ -28,6 +28,7 @@ This object is used when creating a payment on the PayFabric Receivables website
 | InvoiceItems | [Object](InvoiceItem.md) | Invoice line item object |
 | InvoiceType | String | Invoice type | nvarchar(50) |
 | MiscCost | Decimal | Total miscellaneous amount | decimal(19,5) |
+| PaymentDiscountApplied | Decimal | Applied payment terms discount amount | decimal(19,5) |
 | PaymentTerms | String | Payment terms | nvarchar(50) |
 | PONumber | String | Purchase order number | nvarchar(50) |
 | PostingDate | DateTime | Date that the invoice was posted. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" | datetime |

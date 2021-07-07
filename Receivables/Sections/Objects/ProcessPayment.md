@@ -25,10 +25,11 @@ This object is used when getting a payment on the PayFabric Receivables website.
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
 | AdditionalFee | decimal | Additional fee amount | decimal(19,2) |
-| ApplyCredit | [Object](ApplyCredit.md) | Credit(s) the invoice(s) are applied to |
+| CreditDistributions | [Object](ApplyCredit.md) | Credit(s) the invoice(s) are applied to |
 | Comment | String | Comment of the payment | nvarchar(500) |
-| Currency | String | Currency code | nvarchar(10) |
+| CurrencyCode | String | Currency code | nvarchar(10) |
 | PaymentIdentity | String | Payment identifier | nvarchar(50) |
 | Prepayment | decimal | Additional prepayment amount | decimal(19,2) |
 | ScheduledDate | Datetime | Indicates when the payment should process |
 | WalletEntryGuid | Guid | Unique identifier of the wallet to be used to process | uniqueidentifier |
+| Reference | String | Payment reference | nvarchar(100) |

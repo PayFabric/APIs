@@ -10,6 +10,7 @@ This object is used when updating the integration information on the PayFabric R
 | DocumentId\* | String | Document number | nvarchar(50) |
 | Status\* | String | Indicates the status of the document. Can be either ``Pending``, ``Success``, or ``Failed`` | varchar(25) |
 | ErrorMessage | String | Error message if it failed to submit | nvarchar(max) |
+| DocumentType | String | Indicates the type of the document. Can be either ``Customer``, ``Invoice``, ``Payment``, or ``Application`` | varchar(25) |
 \*Required
 
 ## IntegrationResponse
