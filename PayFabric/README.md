@@ -93,5 +93,5 @@ Versions
 ------------
 For our other supported versions of the APIs please see the below:
 
-* [Version 1.0](https://github.com/PayFabric/APIs/tree/v1)
+* [Version 3.1](https://github.com/PayFabric/APIs/tree/V3.1)
 * [Version 2.0](https://github.com/PayFabric/APIs/tree/v2)
