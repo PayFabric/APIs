@@ -66,6 +66,9 @@ as child elements of other objects.
 
 ### Invoices
 * [Create or Update an Invoice](Sections/APIs/Sync/Invoices.md#create-or-update-an-invoice)
+* [Create or Update an Invoice with an Attachment](Sections/APIs/Sync/Invoices.md#create-or-update-an-invoice-with-an-attachment)
+* [Update an Invoice](Sections/APIs/Sync/Invoices.md#update-an-invoice)
+* [Retrieve an Invoice](Sections/APIs/Sync/Invoices.md#retrieve-an-invoice)
 
 ### Items
 * [Create or Update an Item](Sections/APIs/Sync/Items.md#create-or-update-an-item)
@@ -82,6 +85,7 @@ as child elements of other objects.
 
 ### Accounts
 * [Retrieve the current user](Sections/APIs/API/Accounts.md#retrieve-the-current-user)
+* [Retrieve customer Users](Sections/APIs/API/Accounts.md#get-all-customer-users)
 * [Create a customer User](Sections/APIs/API/Accounts.md#create-a-customer-User)
 * [Update a customer User](Sections/APIs/API/Accounts.md#update-a-customer-User)
 * [Send Forgot Password Email](Sections/APIs/API/Accounts.md#send-forgot-password-email)
