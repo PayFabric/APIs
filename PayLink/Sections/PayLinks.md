@@ -1120,15 +1120,15 @@ Update post data
 }
 </pre>
 ###### Response
-A successful POST will result in a HTTP 204 No Content Response.
-A failed POST may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed
-A failed POST may result in a HTTP 401 Unauthorized Response if the authorization is wrong
+A successful `POST` will result in a HTTP 204 No Content Response.
+A failed `POST` may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed
+A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is wrong
 
 Resubmit post data
 ------------------
 * `POST api/document/{PayLinkId}/PostData/Resubmit` Will resubmit the payment to configured ERP
 
 ###### Response
-A successful POST will result in a HTTP 204 No Content Response.
-A failed POST may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed
-A failed POST may result in a HTTP 401 Unauthorized Response if the authorization is wrong
+A successful `POST` will result in a HTTP 204 No Content Response.
+A failed `POST` may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed
+A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is wrong
