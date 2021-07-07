@@ -5,6 +5,7 @@ PayLink uses HTTP response codes to indicate the completion status of requests. 
 | Code        | Description | 
 | ------------- | :------------- | 
 | 200 OK | Request Successful | 
+| 204 No Content | Request Successful | 
 | 400 Bad Request | The request is missing required information. Verify that you are accessing the correct URL (including all query string parameters). If sending a JSON payload, check that you have provided all required elements, and make sure that there are no typos in your element names (JSON elements are case-sensitive!) |
 | 401 Unauthorized | The PayFabric *Security Token* provided in the authorization header is invalid or revoked |  
 | 404 Not Found | The request endpoint is not correct, or the Id specified does not exist. |  
