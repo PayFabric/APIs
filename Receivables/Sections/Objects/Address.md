@@ -13,7 +13,7 @@ This object is used when creating an address on the PayFabric Receivables websit
 | AddressID\* | String | The address identifier | nvarchar(50) |
 | City | String | City name | nvarchar(50) |
 | Country\* | String | Country name | nvarchar(50) |
-| EMailAddress\* | String | Email address | nvarchar(255) |
+| EMailAddress\* | String | Email address, must be a single valid email address | nvarchar(255) |
 | Fax\* | String | Fax number | nvarchar(50) |
 | Name\* | String | Customer name | nvarchar(100) |
 | Phone | String | Phone number line 1 | nvarchar(50) |
@@ -32,7 +32,7 @@ This object is used when getting an address from the PayFabric Receivables websi
 | Address3 | String | The third line of a street address | nvarchar(100) |
 | City | String | City name | nvarchar(50) |
 | Country | String | Country name | nvarchar(50) |
-| EMailAddress | String | Email address | nvarchar(255) |
+| EMailAddress | String | Email address, must be a single valid email address | nvarchar(255) |
 | Fax | String | Fax number | nvarchar(50) |
 | Name | String | Customer name | nvarchar(50) |
 | Phone | String | Phone number line 1 | nvarchar(50) |
