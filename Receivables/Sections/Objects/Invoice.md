@@ -18,7 +18,7 @@ This object is used when creating a payment on the PayFabric Receivables website
 | CustomerName | String | Customer name specified by the client | nvarchar(100) |
 | Discount | Decimal | Total discount in the functional currency | decimal(19,5) |
 | DocumentType | String | Document type identifier | nvarchar(50) |
-| Email | String | Recipients to be used in e-mail notifications regarding an individual invoice | nvarchar(255) |
+| Email | String | Recipient to be used in e-mail notifications regarding an individual invoice, must be a single valid email address | nvarchar(255) |
 | DueDate | DateTime | Timestamp indicating when this document is due. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" | datetime |
 | ExtensionData | String | Additional invoice information | nvarchar(max) |
 | Freight | Decimal | Total freight amount | decimal(19,5) |
