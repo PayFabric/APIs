@@ -12,7 +12,7 @@ This object is used when creating a customer on the PayFabric Receivables websit
 | Class | String | Class associated to a customer | varchar(50) |
 | Currency | String | Currency code | nvarchar(10) |
 | CustomerId\* | String | Customer ID specified by the client | nvarchar(50) |
-| Email | String | Email address | nvarchar(255) |
+| Email | String | Email address, must be a single valid email address | nvarchar(255) |
 | ExtensionData | String | Additional information | nvarchar(max) |
 | Name | String | Customer name | nvarchar(100) |
 | PaymentTerms | String | Payment term | nvarchar(50) |
@@ -35,7 +35,7 @@ This object is used when getting a customer on the PayFabric Receivables website
 | CreditBalance | Decimal | Credit balance | decimal(19,2) |
 | Currency | String | Currency code | nvarchar(10) |
 | CustomerId | String | Customer ID specified by the client | nvarchar(50) |
-| Email | String | Email address | nvarchar(255) |
+| Email | String | Email address, must be a single valid email address | nvarchar(255) |
 | ExtensionData | String | Additional information | nvarchar(max) |
 | InvoiceBalance | Decimal | Total invoice balance | decimal(19,2) |
 | Name | String | Customer name | nvarchar(100) |
