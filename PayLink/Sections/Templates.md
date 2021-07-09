@@ -264,20 +264,7 @@ Please the available 'type' value [Available 'type' Value](https://github.com/Pa
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see [Template Object](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#template-object)
-
-###### Template Object
->
-| Field | Description | 
-| :------------- | ------------- | 
-| ID | Template ID |
-| Name  | Template name, this is a required field and should be unique.  |
-| CSS | CSS for Payment page and confirmation page templates. This is optional. |
-| JS |  Java script for Payment page and confirmation page templates. This is optional. |
-| Subject | Email subject for PayLink email template and WalletLink email template. |
-| Message | Email body for PayLink email template and WalletLink email template. Please refer [PayLink parameters]() for all available parameters.|
-| IsDefault | This is a response parameter, if it is true, then means this template is the default template for specific type. |
-
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see [Template Object](https://github.com/PayFabric/APIs/blob/Release-16/PayFabric/Sections/3.1JSONObjects.md#template)
 
 Copy Template
 ------------------------------
