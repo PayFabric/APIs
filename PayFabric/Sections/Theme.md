@@ -1,7 +1,7 @@
 Theme
 =================
 
-The PayFabric theme APIs are used for managing PayFabric themes.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+The PayFabric theme APIs are used for managing PayFabric themes.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate. Please refer the [Theme Object](/PayFabric/Sections/3.1JSONObjects.md#theme) for details.
 
 Get Themes
 ----------
