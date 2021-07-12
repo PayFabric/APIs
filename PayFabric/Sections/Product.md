@@ -1,7 +1,7 @@
 Product
 =================
 
-The PayFabric Product APIs are used for managing products.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+The PayFabric Product APIs are used for managing products.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate. Please refer the [Product Related Objects](/PayFabric/Sections/3.1JSONObjects.md#product) for details.
 
 Get products
 ------------
