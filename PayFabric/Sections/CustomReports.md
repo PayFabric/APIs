@@ -178,6 +178,7 @@ Manual Execute Custom Report
   }
   
 }
+</pre>
 ###### Response
 A successful `POST` will result in a HTTP 204 No Content Response.
 
