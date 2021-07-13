@@ -31,7 +31,7 @@ Update Email Receipt Template
 <pre>
 {
     "Enabled": true,
-    "BCC": ["haiyan.zhang@nodus.com"],
+    "BCC": ["success+test@simulator.amazonses.com"],
     "Subject": "Payment notification from PayFabric",
     "Content": "Email Receipt Template Content"
 }
@@ -47,11 +47,11 @@ A successful `PATCH` will result in a HTTP 204 No Content Response.
 
 A failed `PATCH` may result in a HTTP 400 Bad Request Response if the tender and transaction type are not match or the Device ID used for the Security Token does not match or post failed.
 
-A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
 
-Send a transaction receipt
+Send a Transaction Receipt
 ---------------------------
-* `POST /Transaction/21052350000948/EmailReceipt` will send the email receipt for specified transaction to specified email addresses.
+* `POST /Transaction/{TransactionKey}/EmailReceipt` will send the email receipt for specified transaction to specified email addresses.
 
 ###### Request
 <pre>
@@ -71,4 +71,4 @@ A successful `POST` will result in a HTTP 204 No Content Response.
 
 A failed `POST` may result in a HTTP 400 Bad Request Response if the specified transaction is not approved or the Device ID used for the Security Token does not match or post failed.
 
-A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
