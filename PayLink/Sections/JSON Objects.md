@@ -181,3 +181,26 @@ The Email Template object is used to return information on created notification 
 | Name | String | Unique name of the template | RO |
 | Subject | String | Subject line of the email | RO |
 | Contents | String | Body contents of the email | RO |
+
+
+## Template
+| Attribute  | Data Type| Definition|Max Length|
+| :-----------|:---------| :---------| :---------|
+|TemplateId|	GUID|	The unique internal id of the template.||
+|Name|	String|	The name of the template, default templates have the reserved name ‘Standard’|nvarchar(100)|
+|Subject|	String	|The subject of the template if the template type is an Email.|nvarchar(200)|
+|Message|	String|	The content of the template if the template type is an Email or SMS. Please refer [PayLink parameters](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Parameters.md) for all available parameters.|nvarchar(max)|
+|CSS|	String|	The CSS (style sheet) applied to the template, if the template type is a Page.|nvarchar(64)|
+|JS|	String|	The JS (javascript) applied to the template, if the template type is a Page.|nvarchar(64)|
+| IsDefault | Bool |This is a response parameter, if it is true, then means this template is the default template for specific type. ||
+
+## Set Default Template
+| Attribute  | Data Type| Definition|
+| :-----------|:---------| :---------| 
+|TemplateId|	GUID|	The unique internal id of the template.|
+
+
+## Copy Template
+| Attribute  | Data Type| Definition|Max Length|
+| :-----------|:---------| :---------| :---------|
+|Name	|String|	The name of the new template.|nvarchar(100)|
