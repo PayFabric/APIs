@@ -1,7 +1,7 @@
 Templates
 =========
 
-The Template API is used for create, update, copy, delete, get and set default template. Please note that all requests require API authentication by PayFabric *Device ID* and *Device Password*, see our [guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md) for more details.
+The Template API is used for create, update, copy, delete, get and set default template. Please note that all requests require API authentication by PayFabric *Device ID* and *Device Password*, see our [guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md) for more details. Please refer [Template Object](/PayFabric/Sections/3.1JSONObjects.md#template) for details.
 
 Get Templates by template type
 ------------------------------
