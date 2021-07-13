@@ -33,7 +33,7 @@ Get Templates by template type
         "ID": "c2d0105f-fcca-4738-bdc3-abc20007c454",
         "IsDefault": false,
         "Subject": "svg",
-        "Message": "<span style=\"font-family: 'Verdana', sans-serif;\"><p>[[[Document.PayLinkURL]]]</p>\r\n<p></p>\r\n<p><img src=\"https://www.securian.com/content/dam/securian/web-assets/brand/sf-logo-rgb-bk-wordmark.svg\" width=\"500\" height=\"115\" alt=\"\" /></p></span>",
+        "Message": "[[[Document.PayLinkURL]]]",
         "Name": "svg"
     }
 ]
@@ -64,14 +64,14 @@ Get Templates by template type
         "ID": "cecdff81-3a2b-4fe1-9829-abad000ebc7b",
         "IsDefault": false,
         "Subject": "[[[Profile.CompanyName]]] Requests Your Payment Information",
-        "Message": "<span style=\"font-family: 'Verdana', sans-serif;\"><p>Dear [[[Document.CustomerName]]],</p>\r\n<p>[[[Profile.CompanyName]]] invites you to use our secure digital wallet. By entering and saving your payment information you will be able to pay our invoices faster and easier in the future. Click the link below to get started or copy and paste the link in your web browser.</p>\r\n<p><a href=\"[[[Document.WalletLinkURL]]]\">[[[Document.WalletLinkURL]]]</a></p>\r\n<p>&nbsp;</p>\r\n<p>Sincerely,</p>\r\n<p>[[[Profile.CompanyName]]] Team</p></span>",
+        "Message": "[[[Document.WalletLinkURL]]]",
         "Name": "asdfasdfadf"
     },
     {
         "ID": "e7d88cd6-cff0-41af-b92d-abad00080e0c",
         "IsDefault": true,
         "Subject": "All Parameters",
-        "Message": "<span style=\"font-family: 'Verdana', sans-serif;\"><p>WalletLinkURL: [[[Document.WalletLinkURL]]]</p>\r\n<p>CustomerNumber: [[[Document.CustomerNumber]]]</p>\r\n<p>CustomerName: [[[Document.CustomerName]]]</p>\r\n<p>DocumentDate: [[[Document.DocumentDate]]]</p>\r\n<p>Message: [[[Document.Message]]]</p>\r\n<p>CompanyName: [[[Profile.CompanyName]]]</p>\r\n<p>Email: [[[Profile.Email]]]</p>\r\n<p>Phone: [[[Profile.Phone]]]</p>\r\n<p>Address1: [[[Profile.Address1]]]</p>\r\n<p>Address2: [[[Profile.Address2]]]</p>\r\n<p>Address3: [[[Profile.Address3]]]</p>\r\n<p>City: [[[Profile.City]]]</p>\r\n<p>State: [[[Profile.State]]]</p>\r\n<p>Zip: [[[Profile.Zip]]]</p>\r\n<p>Country: [[[Profile.Country]]]</p></span>",
+        "Message": "WalletLinkURL: [[[Document.WalletLinkURL]]]",
         "Name": "All Parameters"
     }
 ]
@@ -283,7 +283,7 @@ Copy Template
 {
     "ID": "42c2ce0c-523f-4ee6-95f3-ad5c001488c1",
     "Subject": "[[[Profile.CompanyName]]] Requests Your Payment Information",
-    "Message": "<span style=\"font-family: 'Verdana', sans-serif;\">\r\n\t<p>Dear [[[Document.CustomerName]]],</p>\r\n\t<p>[[[Profile.CompanyName]]] invites you to use our secure digital wallet.  By entering and saving your payment information you will be able to pay our invoices faster and easier in the future.  Click the link below to get started or copy and paste the link in your web browser.</p>\r\n\t<p><a href=\"[[[Document.WalletLinkURL]]]\">[[[Document.WalletLinkURL]]]</a></p>\r\n\t<p>&nbsp;</p>\r\n\t<p>Sincerely,</p>\r\n\t<p>[[[Profile.CompanyName]]] Team</p>\r\n</span>",
+    "Message": "[[[Document.WalletLinkURL]]]",
     "CSS": null,
     "JS": null,
     "Name": "COPY Template"
