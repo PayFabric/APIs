@@ -55,7 +55,7 @@ Create new Registered Terminal
 
 Update Registered Terminal
 ------------------------------
-* `PATCH \Terminal\{TerminalID}` will update specific registered terminal.
+* `PATCH /Terminal/{TerminalID}` will update specific registered terminal.
 ###### Request
 <pre>
 {  
