@@ -73,7 +73,7 @@ A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authoriza
 
 Remove Registered Terminal
 ------------------------------
-* `DELETE \Terminal\{TerminalID}` will delete specific registered terminal.
+* `DELETE /Terminal/{TerminalID}` will delete specific registered terminal.
 
 ###### Response
 A successful `DELETE` will result in a HTTP 204 No Content Response.
