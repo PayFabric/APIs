@@ -292,20 +292,30 @@ Copy Template
 
 Update Template
 ------------------------------
-
 * `PATCH /api/template/{TemplateID}` will update the specific template
+* 
 ###### Update Template Request
 Please refer the [create template request](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#create-template-for-specific-template-type) for each template type.
 
 ###### Update Template Response
-Respond with 204 No Content without message
+A successful `PATCH` will result in a HTTP 204 No Content Response.
+
+A failed `PATCH` may result in a HTTP 400 Bad Request Response if the specified template ID is not match with the template type or the Device ID used for the Security Token does not match or post failed.
+
+A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
 
 Delete Template
 ------------------------------
 
 * `DELETE /api/template/{TemplateID}` will delete the specific template
 
-No request body required, and will return '204 No Content' when delete template successfully.
+###### Response
+A successful `DELETE` will result in a HTTP 204 No Content Response.
+
+A failed `DELETE` may result in a HTTP 400 Bad Request Response if the specified template ID is not match with the template type or the Device ID used for the Security Token does not match or post failed.
+
+A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+
 
 Set specific Template as default template
 ------------------------------
@@ -316,6 +326,10 @@ Set specific Template as default template
     "Id" : "a9394e22-999e-46ef-8105-29e9d210770d"
 }
 ###### Set default template response
-Status return 200 without message.
+A successful `POST` will result in a HTTP 200 OK Response.
+
+A failed `POST` may result in a HTTP 400 Bad Request Response if the specified template ID is not match with the template type or the Device ID used for the Security Token does not match or post failed.
+
+A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
 
 
