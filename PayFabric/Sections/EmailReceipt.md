@@ -25,7 +25,7 @@ Get Email Receipt Templates
 
 Update Email Receipt Template
 -----------------------------
-* `Patch /Transaction/EmailTemplate?transactionType=Sale&tender=Credit&updateAll=false` will update the transaction email receipt template for specified tender and transaction type.
+* `Patch /Transaction/EmailTemplate?transactionType=Sale&tender=Credit&updateAll=false` will update the transaction email receipt template for specified tender and transaction type. <b>Note:</b>Use comma to separate the multiple email addresses.
 
 ###### Request
 <pre>
