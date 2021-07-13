@@ -3,7 +3,7 @@ Shipping Address
 
 The PayFabric shipping addresses API is used for managing customer shipping addresses.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
-Create a Shipping Address
+Create Shipping Address
 ---------------------------
 
 * `Post /address/` will return the specified address
@@ -14,15 +14,15 @@ Create a Shipping Address
     "Customer": "Test Shipping",
     "City": "CA",
     "Country": "US",
-    "Email": "Rena.wu@nodus.com",
+    "Email": "success+test@simulator.amazonses.com",
     "Line1": "test address line 1",
     "Line2": "test address line 2",
     "Line3": "test address line 3",
     "Phone": "1234567890",
     "State": "CA",
     "Zip": "12345",
-    "FirstName": "Rena",
-    "LastName": "Wu"
+    "FirstName": "Testfirst",
+    "LastName": "Testlast"
 }
 </pre>
 
@@ -38,7 +38,7 @@ Create a Shipping Address
     "City": "CA",
     "Country": "US",
     "Zip": "12345",
-    "Email": "Rena.wu@nodus.com",
+    "Email": "success+test@simulator.amazonses.com",
     "Phone": "1234567890",
     "FirstName": "Rena",
     "LastName": "Wu"
