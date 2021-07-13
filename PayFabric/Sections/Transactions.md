@@ -102,7 +102,7 @@ If update transaction with the gateway whose SurchargeRate greater than 0, and p
 Process a Transaction
 ---------------------
 
-* `GET /transaction/process/151007010914?cvc=111` will attempt to process the transaction with the payment gateway. `cvc` is optional.
+* `GET /transaction/process/{TransactionKey}?cvc={CVCValue}` will attempt to process the transaction with the payment gateway. `cvc` is optional.
 
 ###### Response
 <pre>
@@ -141,7 +141,7 @@ Process a Transaction
 Create and Process a Transaction
 --------------------------------
 
-* `POST /transaction/process?cvc=111` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload. `cvc` is optional.
+* `POST /transaction/process?cvc={CVCValue}` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload. `cvc` is optional.
 
 ###### Request
 <pre>
@@ -245,7 +245,7 @@ Retrieve a Transaction
             "City": "WEST POINT",
             "Country": "United States of America",
             "Customer": "",
-            "Email": "southeast@winncom.com; rluke@point-broadband.com",
+            "Email": "success+test1@simulator.amazonses.com; success+test2@simulator.amazonses.com",
             "ID": "00000000-0000-0000-0000-000000000000",
             "Line1": "1791 OG SKINNER DR STE D",
             "Line2": "db",
@@ -452,7 +452,7 @@ Retrieve a Transaction
         "City": "WEST POINT",
         "Country": "United States of America",
         "Customer": "",
-        "Email": "southeast@winncom.com; rluke@point-broadband.com",
+        "Email": "success+test1@simulator.amazonses.com; success+test2@simulator.amazonses.com",
         "ID": "65145e9f-0b35-4c52-b800-920277ee7cd2",
         "Line1": "1791 OG SKINNER DR STE D",
         "Line2": "",
@@ -678,7 +678,7 @@ This request accepts the below query string parameters to add options. You can u
                     "City": "CA",
                     "Country": "US",
                     "Customer": "",
-                    "Email": "rena.wu@nodus.com",
+                    "Email": "success+test@simulator.amazonses.com",
                     "ID": "00000000-0000-0000-0000-000000000000",
                     "Line1": "LINE1",
                     "Line2": "LINE12",
@@ -890,7 +890,7 @@ Referenced transaction uses the original transaction Key as the referenced facto
 
 #### Capture (Ship)
 
-* `GET /reference/151013003792?trxtype=Capture` will attempt to execute and finalize (capture) an authorization transaction, also known as Book transactions.
+* `GET /reference/{TransactionKey}?trxtype=Capture` will attempt to execute and finalize (capture) an authorization transaction, also known as Book transactions.
 * `POST /transaction/process` will attempt to execute and finalize (capture) a pre-authorized transaction with specific amount, if `Amount` is not provided in request body, it will capture with authorized amount. if `Amount` is provoided in request body, it could be able to capture an authorization transaction multiple times, which depends on what gateway been used. (Note: Following gateways support multiple captures, Authorize.Net, USAePay & Payeezy(aka First Data GGE4).)
 
 ###### Request
@@ -902,7 +902,7 @@ Referenced transaction uses the original transaction Key as the referenced facto
 }
 </pre>
 
-* `GET /reference/151013003792?trxtype=VOID` or `POST /transaction/process` with following request will attempt to cancel a transaction that has already been processed successfully with a payment gateway. PayFabric attempts to reverse the transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund (credit) must be performed.
+* `GET /reference/{TransactionKey}?trxtype=VOID` or `POST /transaction/process` with following request will attempt to cancel a transaction that has already been processed successfully with a payment gateway. PayFabric attempts to reverse the transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund (credit) must be performed.
 
 ###### Request
 <pre>
@@ -912,7 +912,7 @@ Referenced transaction uses the original transaction Key as the referenced facto
 }
 </pre>
 
-* `GET /reference/151013003792?trxtype=Refund` or `POST /transaction/process` with following request will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
+* `GET /reference/{TransactionKey}?trxtype=Refund` or `POST /transaction/process` with following request will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
 
 ###### Request
 <pre>
@@ -962,7 +962,7 @@ Refund a Customer
 
 To refund a customer, you just submit a credit to the customer that is owed the refund. The amount of the transaction should match the amount that is due to the customer. To perform a Refund transaction, you just create a transaction object, set the `Type` field to `Refund`, and then use [Create and Process a Transaction](#create-and-process-a-transaction) to execute the transaction.
 
-* `POST /transaction/process?cvc=111`
+* `POST /transaction/process?cvc={CVCValue}`
 
 ###### Request
 <pre>
