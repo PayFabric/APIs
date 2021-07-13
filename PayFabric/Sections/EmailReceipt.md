@@ -6,7 +6,7 @@ The PayFabric Email Receipt APIs are used for configure the email receipt templa
 Get Email Receipt Templates
 ---------------------------
 
-* `GET /Transaction/EmailTemplate?transactionType=Capture&tender=Credit` will return the transaction email receipt template for specified tender and transaction type.
+* `GET /payment/3.1/api/Transaction/EmailTemplate?transactionType=Capture&tender=Credit` will return the transaction email receipt template for specified tender and transaction type.
 
 | Parameter  | Description|
 | :-----------|:---------| 
@@ -25,7 +25,7 @@ Get Email Receipt Templates
 
 Update Email Receipt Template
 -----------------------------
-* `Patch /Transaction/EmailTemplate?transactionType=Sale&tender=Credit&updateAll=false` will update the transaction email receipt template for specified tender and transaction type. <b>Note:</b>Use comma to separate the multiple email addresses.
+* `Patch /payment/3.1/api/Transaction/EmailTemplate?transactionType=Sale&tender=Credit&updateAll=false` will update the transaction email receipt template for specified tender and transaction type. <b>Note:</b>Use comma to separate the multiple email addresses.
 
 ###### Request
 <pre>
@@ -51,7 +51,7 @@ A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authoriza
 
 Send a Transaction Receipt
 ---------------------------
-* `POST /Transaction/{TransactionKey}/EmailReceipt` will send the email receipt for specified transaction to specified email addresses.
+* `POST /payment/3.1/api/Transaction/{TransactionKey}/EmailReceipt` will send the email receipt for specified transaction to specified email addresses.
 
 ###### Request
 <pre>
