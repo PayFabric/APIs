@@ -1082,7 +1082,9 @@ Remove a PayLink
 
 ###### Response
 A successful `DELETE` will result in a HTTP 200 OK Response.  
+
 A failed `DELETE` may result in a HTTP 404 Not Found Response if the specified document does not exist or the Device ID used for the *Security Token* does not match.  
+
 A failed `DELETE` may result in a HTTP 405 Method Not Allowed Response if the specified document has already been cancelled or paid.  
 
 
@@ -1092,8 +1094,10 @@ Cancel a PayLink
 * `POST /api/document/AdFXqnNNf0GDNwiO5UE_fw/cancel` will cancel a PayLink document
 
 ###### Response
-A successful `POST` will result in a HTTP 200 OK Response.  
+A successful `POST` will result in a HTTP 200 OK Response. 
+
 A failed `POST` may result in a HTTP 404 Not Found Response if the specified document does not exist or the Device ID used for the *Security Token* does not match.  
+
 A failed `POST` may result in a HTTP 405 Method Not Allowed Response if the specified document has already been cancelled or paid.  
 
 Get post data
@@ -1121,7 +1125,9 @@ Update post data
 </pre>
 ###### Response
 A successful `POST` will result in a HTTP 204 No Content Response.
+
 A failed `POST` may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed
+
 A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is wrong
 
 Resubmit post data
@@ -1130,5 +1136,7 @@ Resubmit post data
 
 ###### Response
 A successful `POST` will result in a HTTP 204 No Content Response.
+
 A failed `POST` may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed
+
 A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is wrong
