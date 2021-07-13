@@ -5,7 +5,7 @@ The PayFabric Custom Report APIs are used for managing Custom Report.  Please no
 
 Get Custom Reports
 ------------------
-* `GET \Report` will get list of configured custom reports for a Merchant.
+* `GET /Report` will get list of configured custom reports for a Merchant.
 
 ###### Response
 <pre>
@@ -38,7 +38,7 @@ Get Custom Reports
         ],
         "Recipients": {
             "To": [
-                "rena.wu@nodus.com"
+                "success+test@simulator.amazonses.com"
             ],
             "BCC": []
         }
@@ -71,7 +71,7 @@ Get Custom Reports
         ],
         "Recipients": {
             "To": [
-                "rena.wu@nodus.com"
+                "success+test@simulator.amazonses.com"
             ],
             "BCC": []
         }
@@ -104,7 +104,7 @@ Create Custom Report
     "Recipients": {
         "To": [],
         "BCC": [
-            "candice.chen@nodus.cm"
+            "success+test@simulator.amazonses.com"
         ]
     }
 }
@@ -132,8 +132,8 @@ Edit Custom Report
   "TransactionStatus":  ["Approved","Approved"],
  
  "Recipients": {
-    "To":["rena.wu@nodus.com","candice.chen@nodus.com"],
-    "BCC": ["sophia.shi@nodus.com","xiaoyan.liu@nodus.com"]
+    "To":["success+test1@simulator.amazonses.com","success+test2@simulator.amazonses.com"],
+    "BCC": ["success+test3@simulator.amazonses.com","success+test4@simulator.amazonses.com"]
   }
   
 }
@@ -144,7 +144,7 @@ A successful `PATCH` will result in a HTTP 204 No Content Response.
 
 A failed `PATCH` may result in a HTTP 400 Bad Request Response if has invalid value in request body or the Device ID used for the Security Token does not match or post failed.
 
-A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
 
 Delete Custom Report
 ------------------
@@ -155,7 +155,7 @@ A successful `DELETE` will result in a HTTP 204 No Content Response.
 
 A failed `DELETE` may result in a HTTP 400 Bad Request Response if the specified custom report does not exist or the Device ID used for the Security Token does not match or post failed.
 
-A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
 
 Manual Execute Custom Report
 ------------------
@@ -173,8 +173,8 @@ Manual Execute Custom Report
   "TransactionStatus":  ["Approved","Approved"],
  
  "Recipients": {
-    "To":["rena.wu@nodus.com","candice.chen@nodus.com"],
-    "BCC": ["sophia.shi@nodus.com","xiaoyan.liu@nodus.com"]
+    "To":["success+test1@simulator.amazonses.com","success+test2@simulator.amazonses.com"],
+    "BCC": ["success+test3@simulator.amazonses.com","success+test4@simulator.amazonses.com"]
   }
   
 }
@@ -184,6 +184,6 @@ A successful `POST` will result in a HTTP 204 No Content Response.
 
 A failed `POST` may result in a HTTP 400 Bad Request Response if the specified custom report does not exist or the Device ID used for the Security Token does not match or post failed.
 
-A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
 
 
