@@ -10,8 +10,8 @@ Get Email Receipt Templates
 
 | Parameter  | Description|
 | :-----------|:---------| 
-| Tender | Accept value is 'Credit' and 'ECheck'. |
-| TransactionType | When `Tender` is CreditCard, `TransactionType` can be 'Sale','Book','Capture','Refund','Force' or 'Void'. When `Tender` is ECheck, `TransactionType` can be 'Sale', 'Refund' or 'Void'|
+| Tender | Accept value is 'Credit' and 'Check'. |
+| TransactionType | When `Tender` is Credit, `TransactionType` can be 'Sale','Book','Capture','Refund','Force' or 'Void'. When `Tender` is Check, `TransactionType` can be 'Sale', 'Refund' or 'Void'|
 
 ###### Response
 <pre>
@@ -38,8 +38,8 @@ Update Email Receipt Template
 </pre>
 | Parameter  | Description|
 | :-----------|:---------| 
-| Tender | Accept value is 'Credit' and 'ECheck'. |
-| TransactionType | When `Tender` is CreditCard, `TransactionType` can be 'Sale','Book','Capture','Refund','Force' or 'Void'. When `Tender` is ECheck, `TransactionType` can be 'Sale', 'Refund' or 'Void'|
+| Tender | Accept value is 'Credit' and 'Check'. |
+| TransactionType | When `Tender` is Credit, `TransactionType` can be 'Sale','Book','Capture','Refund','Force' or 'Void'. When `Tender` is Check, `TransactionType` can be 'Sale', 'Refund' or 'Void'|
 | UpdateAll|Bool, Indicates whether this update will apply to all email receipt templates.  |
 
 ###### Response
