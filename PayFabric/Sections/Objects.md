@@ -88,8 +88,10 @@ PayFabric returns the Transaction Response object as the result of most operatio
 |OrigTrxAmount|String| Transaction amount without surcharge amount.||
 |SurchargeAmount|string|Transaction surcharge amount, surcharge amount = OrigTrxAmount x SurchargePercentage ||
 |SurchargePercentage|string|Surcharge percentage configured for the gateway which the transaction processed with.||
-|FinalAmount|string|This the amount current transaction really captured, FinalAmount = OrigTrxAmount + SurchargeAmount.|
+|FinalAmount|string|This the amount current transaction really captured, FinalAmount = OrigTrxAmount + SurchargeAmount.||
 |WalletID|GUID|The wallet ID for the processed transaction.||
+|ExpectedSettledTime|Date time| This field indicates the expected settled time. ||
+|SettledTime|Date time| This field indicates the current transaction's settled time. ||
 
 ## STO
 Simple Transaction Object. This is a lightweight object that only includes the required fields for retrieving a transaction object. 
