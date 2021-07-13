@@ -152,8 +152,8 @@ Upload products
 }
 </pre>
 
-###### Failed Response
-<b>Note:</b>Even it failed, the valid products are still uploaded to PayFabric, only the invalid records are skipped.
+###### Paritally Success Response
+<b>Note:</b>The valid products are still uploaded to PayFabric, only the invalid records are skipped.
 <pre>
 {
     "Message": "Some products were unable to be imported due to: [Row] 3: [UOM] value cannot be empty; [Cost] value is invalid;",
