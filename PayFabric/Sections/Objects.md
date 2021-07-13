@@ -167,7 +167,9 @@ A Gateway Account Profile is the account information of a single Payment Gateway
 | ProcessorID     | String | Bank processor ID. | tinyint|
 | CardClass       | String | ``Credit`` or ``ECheck``  | nvarchar(64) |
 | CardClassID| String| ID of CardClass|tinyint|
-
+|SurchargeRate|Decimal| Surcharge percentage, maximum is 4. ||
+|SettledTime|Date time|This field is the last cut off time.||
+|DailyBatchCloseTime|Date time|This field is the auto batch close time every day.||
 
 ## JSON Web Tokens
 
