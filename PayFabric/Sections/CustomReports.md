@@ -162,7 +162,7 @@ Manual Execute Custom Report
 * `POST /Report/{CustomReportID}/Execute` Will manually tells a custom report to run immediately, outside of the normal frequency window.
 
 ###### Request
-<b>NOTE:</b> For this API, the request body is optional, if passing a custom report object when call this API, then PF will use the new custom report info when executing custom report, but the specific custom report will still keep the orginal data. If call this API without passing request body, then PayFabric will execute the custom report with the specific custom report data.
+<b>NOTE:</b> For this API, the request body is optional, if passing a custom report object when call this API, then PF will use the new custom report info when executing custom report, but the specific custom report will still keep the original data. If call this API without passing request body, then PayFabric will execute the custom report with the specific custom report data.
 <pre>
 {
   "Name":"test2",
