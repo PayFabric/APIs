@@ -2,8 +2,8 @@ PayLink APIs
 ==============
 PayLink APIs are organized around Representational State Transfer (**REST**) architecture and are designed to have predictable, resource-oriented URLs and use HTTP response codes to indicate API errors. Below are the API endpoints:
 
-1. Live Server:    ``https://www.payfabric.com/PayLink``
-1. Sandbox Server: ``https://sandbox.payfabric.com/PayLink``
+1. Live Server:    ``https://www.payfabric.com``
+1. Sandbox Server: ``https://sandbox.payfabric.com``
 
 Where do I start?
 -----------------
