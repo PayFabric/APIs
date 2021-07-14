@@ -4,7 +4,7 @@ The PayFabric Payment Terminal APIs are used for managing EMV terminal device an
 
 Get Registered Terminals
 ---------------------
-* `GET /Terminal`  will get all terminals. 
+* `GET /payment/3.1/api/Terminal`  will get all terminals. 
 
 ###### Response
 <pre>
@@ -32,7 +32,7 @@ Get Registered Terminals
 
 Create new Registered Terminal
 ---------------------
-* `POST /Terminal` will create a new registered terminal.
+* `POST /payment/3.1/api/Terminal` will create a new registered terminal.
 
 ###### Request
 <pre>
@@ -55,7 +55,7 @@ Create new Registered Terminal
 
 Update Registered Terminal
 ------------------------------
-* `PATCH /Terminal/{TerminalID}` will update specific registered terminal.
+* `PATCH /payment/3.1/api/Terminal/{TerminalID}` will update specific registered terminal.
 ###### Request
 <pre>
 {  
@@ -73,7 +73,7 @@ A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authoriza
 
 Remove Registered Terminal
 ------------------------------
-* `DELETE /Terminal/{TerminalID}` will delete specific registered terminal.
+* `DELETE /payment/3.1/api/Terminal/{TerminalID}` will delete specific registered terminal.
 
 ###### Response
 A successful `DELETE` will result in a HTTP 204 No Content Response.
@@ -84,7 +84,7 @@ A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authoriz
 
 Get Terminal Settings
 ---------------------
-* `GET /Terminal/Settings/{DeviceId}` will return the terminal settings for specific device.
+* `GET /payment/3.1/api/Terminal/Settings/{DeviceId}` will return the terminal settings for specific device.
 
 {
     "Terminals": [
@@ -100,7 +100,7 @@ Get Terminal Settings
 
 Update Terminal Settings
 ----------------------
-* `PATCH /Terminal/Settings/{DeviceId}` will update the terminal settings for specific device.
+* `PATCH /payment/3.1/api/Terminal/Settings/{DeviceId}` will update the terminal settings for specific device.
 ###### Request
 <pre>
 {    
