@@ -6,7 +6,7 @@ The PayFabric Payment Gateway Profiles API is used for returning the gateway pro
 Retrieve a Payment Gateway Profile
 ----------------------------------
 
-* `GET /api/setupid/6f417308-c26f-499b-acc4-d6080ad0551f` will return the specified payment gateway profile 
+* `GET /payment/api/setupid/6f417308-c26f-499b-acc4-d6080ad0551f` will return the specified payment gateway profile 
  
 ###### Response
 <pre>
@@ -27,7 +27,7 @@ Retrieve a Payment Gateway Profile
 Retrieve Payment Gateway Profiles
 ---------------------------------
 
-* `GET /api/setupid` will return all payment gateway profiles configured for the PayFabric user
+* `GET /payment/api/setupid` will return all payment gateway profiles configured for the PayFabric user
  
 ###### Response
 <pre>
@@ -63,7 +63,7 @@ Retrieve Payment Gateway Profiles
 Manually Batch Close Transactions
 ----------------------------------
 
-* `POST /api/setupid/079C5DA2-DF91-4AD6-9BA2-A52300FEF06A/batchclose` will settle the transactions processed via the specified gateway. This API provides more flexibility to control the batch cutoff/close time instead of relying on the batch close defaults. 
+* `POST /payment/api/setupid/079C5DA2-DF91-4AD6-9BA2-A52300FEF06A/batchclose` will settle the transactions processed via the specified gateway. This API provides more flexibility to control the batch cutoff/close time instead of relying on the batch close defaults. 
 
 ###### Response
 {
