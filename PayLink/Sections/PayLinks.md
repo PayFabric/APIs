@@ -6,7 +6,7 @@ The PayLinks API is used for creating, updating and retrieving PayLinks. Please 
 Create a PayLink
 ----------------
 
-* `POST /api/document` will create and save a PayLink document to the PayLink server based on the request JSON payload
+* `POST /paylink/api/document` will create and save a PayLink document to the PayLink server based on the request JSON payload
 
 ###### Request
 <pre>
@@ -203,7 +203,7 @@ The response will include the full document object, see the [Retrieve a PayLink]
 Create a Multiple Invoice PayLink
 ---------------------------------
 
-* `POST /api/document` will create and save a PayLink document to the PayLink server based on the request JSON payload, the trick to creating a PayLink as a multiple invoice, is using the **IsMultipleInvoice** and **Items** fields
+* `POST /paylink/api/document` will create and save a PayLink document to the PayLink server based on the request JSON payload, the trick to creating a PayLink as a multiple invoice, is using the **IsMultipleInvoice** and **Items** fields
 
 ###### Request
 <pre>
@@ -620,7 +620,7 @@ The response will include the full document object, see the [Retrieve a PayLink]
 Update a PayLink
 ----------------
 
-* `PATCH /api/document/gwx9q6fqcEuagAJLA27CIA` will update the specified PayLink document with new information based on the request JSON payload
+* `PATCH /paylink/api/document/gwx9q6fqcEuagAJLA27CIA` will update the specified PayLink document with new information based on the request JSON payload
 Note: NotificationEmail and NotificationPhone are not able to update.
 
 ###### Request
@@ -638,7 +638,7 @@ A failed `PATCH` will result in a HTTP 400 Bad Request Response with the message
 Retrieve a PayLink
 ------------------
 
-* `GET /api/document/azBmusnzAUOzo4KVu30nczE` will return the specified PayLink document
+* `GET /paylink/api/document/azBmusnzAUOzo4KVu30nczE` will return the specified PayLink document
 
 ###### Response
 <pre>
@@ -786,8 +786,8 @@ Retrieve a PayLink
 Retrieve PayLinks
 -----------------
 
-* `GET /api/document` will return all PayLink documents created
-* `GET /api/document?$filter` will return all PayLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query
+* `GET /paylink/api/document` will return all PayLink documents created
+* `GET /paylink/api/document?$filter` will return all PayLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query
 
 e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber eq 'AARONFIT0001' and Device eq GUID'a284c1d0-a6fc-4938-98b4-0000b8cf4210' and DocumentNumber eq 'ORDER001' and DocDate lt datetime'2018-09-25' and DueDate eq null and PaidOn gt datetime'2017-02-02' and Amount gt 8 and NotificationEmail eq 'test@nodus.com' and Status eq '3' and IntegrationStatus eq '2' and TransactionKey eq '180227157886' & $orderby CreatedOn desc`
 
@@ -1068,7 +1068,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
 Retrieve a PayLink URL
 ----------------------
 
-* `GET /api/document/retrieve/gwx9q6fqcEuagAJLA27CIA/link` will return the specified PayLink documents' unique URL
+* `GET /paylink/api/document/retrieve/gwx9q6fqcEuagAJLA27CIA/link` will return the specified PayLink documents' unique URL
 
 ###### Response
 <pre>
@@ -1078,7 +1078,7 @@ Retrieve a PayLink URL
 Remove a PayLink
 ----------------
 
-* `DELETE /api/document/AdFXqnNNf0GDNwiO5UE_fw` will remove the specified PayLink document permanently
+* `DELETE /paylink/api/document/AdFXqnNNf0GDNwiO5UE_fw` will remove the specified PayLink document permanently
 
 ###### Response
 A successful `DELETE` will result in a HTTP 200 OK Response.  
@@ -1091,7 +1091,7 @@ A failed `DELETE` may result in a HTTP 405 Method Not Allowed Response if the sp
 Cancel a PayLink
 ----------------
 
-* `POST /api/document/AdFXqnNNf0GDNwiO5UE_fw/cancel` will cancel a PayLink document
+* `POST /paylink/api/document/AdFXqnNNf0GDNwiO5UE_fw/cancel` will cancel a PayLink document
 
 ###### Response
 A successful `POST` will result in a HTTP 200 OK Response. 
