@@ -5,7 +5,7 @@ The PayFabric Product APIs are used for managing products.  Please note that all
 
 Get products
 ------------
-* `GET /Product/` will return first 50 products by default.
+* `GET /payment/3.1/api/Product/` will return first 50 products by default.
 
 ###### Response
 <pre>
@@ -28,7 +28,7 @@ Get products
 
 Get products in page
 --------------------
-* `GET /Product?page=2&pagesize=5` will return the products based on the specific page and pagesize, the max pagesize is 500.
+* `GET /payment/3.1/api/Product?page=2&pagesize=5` will return the products based on the specific page and pagesize, the max pagesize is 500.
 
 ###### Response
 <pre>
@@ -83,7 +83,7 @@ Get products in page
 
 Create product
 ---------------------------
-* `POST /Product/` will create product.
+* `POST /payment/3.1/api/Product/` will create product.
 
 ###### Request
 <pre>
@@ -110,7 +110,7 @@ Create product
 
 Update product
 ---------------------------
-* `PATCH /Product/{ProductID}` will update the specific product.
+* `PATCH /payment/3.1/api/Product/{ProductID}` will update the specific product.
 ###### Request
 <pre>
  {
@@ -130,7 +130,7 @@ A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authoriza
 
 Delete product
 ---------------------------
-* `DELETE /Product/{ProductID}` will delete the specific product.
+* `DELETE /payment/3.1/api/Product/{ProductID}` will delete the specific product.
 
 ###### Response
 A successful `PATCH` will result in a HTTP 204 No Content Response.
@@ -142,7 +142,7 @@ A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authoriza
 
 Upload products
 ---------------------------
-* `POST /Product/Upload`  will upload products in a file.
+* `POST /payment/3.1/api/Product/Upload`  will upload products in a file.
 
 ###### Success Response
 <pre>
