@@ -5,7 +5,7 @@ The PayFabric Custom Report APIs are used for managing Custom Report.  Please no
 
 Get Custom Reports
 ------------------
-* `GET /Report` will get list of configured custom reports for a Merchant.
+* `GET /payment/3.1/api/Report` will get list of configured custom reports for a Merchant.
 
 ###### Response
 <pre>
@@ -81,7 +81,7 @@ Get Custom Reports
 
 Create Custom Report
 ------------------
-* `POST /Report/` Will create a new custom report with all configured filters, columns, sorting and frequency.
+* `POST /payment/3.1/api/Report/` Will create a new custom report with all configured filters, columns, sorting and frequency.
 
 ###### Request
 <pre>
@@ -120,7 +120,7 @@ Create Custom Report
 
 Edit Custom Report
 ------------------
-* `PATCH /Report/{CustomReportID} ` will updates an existing report with new filters, columns, sorting and frequency.
+* `PATCH /payment/3.1/api/Report/{CustomReportID} ` will updates an existing report with new filters, columns, sorting and frequency.
 ###### Request
 <pre>
 {
@@ -148,7 +148,7 @@ A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authoriza
 
 Delete Custom Report
 ------------------
-* `DELETE /Report/{CustomReportID}` will delete the specific custom report.
+* `DELETE /payment/3.1/api/Report/{CustomReportID}` will delete the specific custom report.
 
 ###### Response
 A successful `DELETE` will result in a HTTP 204 No Content Response.
@@ -159,7 +159,7 @@ A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authoriz
 
 Manual Execute Custom Report
 ------------------
-* `POST /Report/{CustomReportID}/Execute` Will manually tells a custom report to run immediately, outside of the normal frequency window.
+* `POST /payment/3.1/api/Report/{CustomReportID}/Execute` Will manually tells a custom report to run immediately, outside of the normal frequency window.
 
 ###### Request
 <b>NOTE:</b> For this API, the request body is optional, if passing a custom report object when call this API, then PF will use the new custom report info when executing custom report, but the specific custom report will still keep the original data. If call this API without passing request body, then PayFabric will execute the custom report with the specific custom report data.
