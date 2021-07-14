@@ -6,7 +6,7 @@ The PayFabric Transactions API is used for creating, and processing payment tran
 Create a Transaction
 --------------------
 
-* `POST /transaction/create` will create and save a transaction to the PayFabric server based on the request JSON payload
+* `POST /api/transaction/create` will create and save a transaction to the PayFabric server based on the request JSON payload
 
 ###### Request
 <pre>
@@ -70,7 +70,7 @@ If create transaction with the gateway whose SurchargeRate greater than 0, and p
 Update a Transaction
 --------------------
 
-* `POST /transaction/update` will update a transaction with new information based on the request JSON payload
+* `POST /api/transaction/update` will update a transaction with new information based on the request JSON payload
 
 ###### Request
 <pre>
@@ -102,7 +102,7 @@ If update transaction with the gateway whose SurchargeRate greater than 0, and p
 Process a Transaction
 ---------------------
 
-* `GET /transaction/process/{TransactionKey}?cvc={CVCValue}` will attempt to process the transaction with the payment gateway. `cvc` is optional.
+* `GET /api/transaction/process/{TransactionKey}?cvc={CVCValue}` will attempt to process the transaction with the payment gateway. `cvc` is optional.
 
 ###### Response
 <pre>
@@ -141,7 +141,7 @@ Process a Transaction
 Create and Process a Transaction
 --------------------------------
 
-* `POST /transaction/process?cvc={CVCValue}` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload. `cvc` is optional.
+* `POST /api/transaction/process?cvc={CVCValue}` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload. `cvc` is optional.
 
 ###### Request
 <pre>
@@ -228,7 +228,7 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
 Retrieve a Transaction
 ----------------------
 
-* `GET /transaction/{TransactionKey}` will return the specified transaction
+* `GET /api/transaction/{TransactionKey}` will return the specified transaction
 
 ###### Response
 <pre>
@@ -507,7 +507,7 @@ Retrieve a Transaction
 Retrieve Transactions
 ---------------------
 
-* `GET /transaction/get?fromdate=10-13-2015` will return the transactions created after the specified date.
+* `GET /api/transaction/get?fromdate=10-13-2015` will return the transactions created after the specified date.
 
 Options
 -------
@@ -890,8 +890,8 @@ Referenced transaction uses the original transaction Key as the referenced facto
 
 #### Capture (Ship)
 
-* `GET /reference/{TransactionKey}?trxtype=Capture` will attempt to execute and finalize (capture) an authorization transaction, also known as Book transactions.
-* `POST /transaction/process` will attempt to execute and finalize (capture) a pre-authorized transaction with specific amount, if `Amount` is not provided in request body, it will capture with authorized amount. if `Amount` is provoided in request body, it could be able to capture an authorization transaction multiple times, which depends on what gateway been used. (Note: Following gateways support multiple captures, Authorize.Net, USAePay & Payeezy(aka First Data GGE4).)
+* `GET /api/reference/{TransactionKey}?trxtype=Capture` will attempt to execute and finalize (capture) an authorization transaction, also known as Book transactions.
+* `POST /api/transaction/process` will attempt to execute and finalize (capture) a pre-authorized transaction with specific amount, if `Amount` is not provided in request body, it will capture with authorized amount. if `Amount` is provoided in request body, it could be able to capture an authorization transaction multiple times, which depends on what gateway been used. (Note: Following gateways support multiple captures, Authorize.Net, USAePay & Payeezy(aka First Data GGE4).)
 
 ###### Request
 <pre>
@@ -902,7 +902,7 @@ Referenced transaction uses the original transaction Key as the referenced facto
 }
 </pre>
 
-* `GET /reference/{TransactionKey}?trxtype=VOID` or `POST /transaction/process` with following request will attempt to cancel a transaction that has already been processed successfully with a payment gateway. PayFabric attempts to reverse the transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund (credit) must be performed.
+* `GET /api/reference/{TransactionKey}?trxtype=VOID` or `POST /transaction/process` with following request will attempt to cancel a transaction that has already been processed successfully with a payment gateway. PayFabric attempts to reverse the transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund (credit) must be performed.
 
 ###### Request
 <pre>
@@ -912,7 +912,7 @@ Referenced transaction uses the original transaction Key as the referenced facto
 }
 </pre>
 
-* `GET /reference/{TransactionKey}?trxtype=Refund` or `POST /transaction/process` with following request will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
+* `GET /api/reference/{TransactionKey}?trxtype=Refund` or `POST /transaction/process` with following request will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
 
 ###### Request
 <pre>
@@ -962,7 +962,7 @@ Refund a Customer
 
 To refund a customer, you just submit a credit to the customer that is owed the refund. The amount of the transaction should match the amount that is due to the customer. To perform a Refund transaction, you just create a transaction object, set the `Type` field to `Refund`, and then use [Create and Process a Transaction](#create-and-process-a-transaction) to execute the transaction.
 
-* `POST /transaction/process?cvc={CVCValue}`
+* `POST /api/transaction/process?cvc={CVCValue}`
 
 ###### Request
 <pre>
