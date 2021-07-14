@@ -5,7 +5,7 @@ The PayFabric theme APIs are used for managing PayFabric themes.  Please note th
 
 Get Themes
 ----------
-* `GET /Theme`  will get all themes. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+* `GET /payment/3.1/api/Theme`  will get all themes. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 ###### Response
 <pre>
@@ -43,7 +43,7 @@ Get Themes
 
 Create Theme
 -------------
-* `POST /Theme` will create a theme. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+* `POST /payment/3.1/api/Theme` will create a theme. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 ###### Request
 <pre>
@@ -82,7 +82,7 @@ Create Theme
 
 Update Theme
 -------------
-* `PATCH /Theme/{ThemeId}` will update a theme.Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+* `PATCH /payment/3.1/api/Theme/{ThemeId}` will update a theme.Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 ###### Request
 <pre>
@@ -110,7 +110,7 @@ A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authoriza
 
 Delete Theme
 -------------
-* `DELETE /Theme/{ThemeId}` will delete a theme.Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+* `DELETE /payment/3.1/api/Theme/{ThemeId}` will delete a theme.Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 ###### Response
 A successful `DELETE` will result in a HTTP 204 No Content Response.
