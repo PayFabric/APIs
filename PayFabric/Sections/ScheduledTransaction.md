@@ -5,7 +5,7 @@ The PayFabric scheduled transaction APIs are used for managing PayFabric schedul
 
 Search for Future Dated Transactions
 -------------------------------------
-* `GET /Transaction/Scheduled?page=1&pagesize=5&fromDate=6-27-2021&toDate=7-1-2021` Get a list of transactions that are scheduled between 2 dates. The max fromdate and todate range is 90 days.
+* `GET /payment/3.1/api/Transaction/Scheduled?page=1&pagesize=5&fromDate=6-27-2021&toDate=7-1-2021` Get a list of transactions that are scheduled between 2 dates. The max fromdate and todate range is 90 days.
 
 ###### Response
 <pre>
