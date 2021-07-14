@@ -7,7 +7,7 @@ The PayFabric Wallet API is used for returning customer created wallet records, 
 Create a Credit Card
 --------------------
 
-* `POST /api/wallet/create` will create a new credit card with the following JSON payload:
+* `POST /payment/api/wallet/create` will create a new credit card with the following JSON payload:
 
 ###### Request
 <pre>
@@ -61,7 +61,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 Create an eCheck
 ----------------
 
-* `POST /api/wallet/create` will create a new eCheck with the following JSON payload:
+* `POST /payment/api/wallet/create` will create a new eCheck with the following JSON payload:
 
 ###### Request
 <pre>
@@ -116,7 +116,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 Update a Credit Card / eCheck
 -----------------------------
 
-* `POST /api/wallet/update` will update a credit card or eCheck with new information based on the request JSON payload
+* `POST /payment/api/wallet/update` will update a credit card or eCheck with new information based on the request JSON payload
 
 ###### Request
 <pre>
@@ -143,7 +143,7 @@ To update the Customer ID/Number against an existing credit card/eCheck record, 
 Retrieve a Credit Card / eCheck
 -------------------------------
 
-* `GET /api/wallet/get/ccb4edfd-c9b3-4964-9ecc-5b143a60650d` will return the specified credit card or eCheck
+* `GET /payment/api/wallet/get/ccb4edfd-c9b3-4964-9ecc-5b143a60650d` will return the specified credit card or eCheck
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
@@ -204,7 +204,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 Retrieve Credit Cards / eChecks
 -------------------------------
 
-* `GET /api/wallet/getByCustomer?customer=test&tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_), which also supports special characters under Customer ID/Number. 
+* `GET /payment/api/wallet/getByCustomer?customer=test&tender=CreditCard` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_), which also supports special characters under Customer ID/Number. 
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
@@ -315,7 +315,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 Retrieve Credit Cards / eChecks (Query with Paging)
 -----------------------------------------------
 
-* `GET /api/wallet/get?customer={CUSTOMER_NO}&tender={TENDER_TYPE}&fromdate={FROMDATE}&fromLastUsedDate={FROMLASTUSEDDATE}&toLastUsedDate={TOLASTUSEDDATE}&pageSize={PAGESIZE}&page={PAGE}` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_), which were modified after the specified date, and display records depending on the page number.
+* `GET /payment/api/wallet/get?customer={CUSTOMER_NO}&tender={TENDER_TYPE}&fromdate={FROMDATE}&fromLastUsedDate={FROMLASTUSEDDATE}&toLastUsedDate={TOLASTUSEDDATE}&pageSize={PAGESIZE}&page={PAGE}` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_), which were modified after the specified date, and display records depending on the page number.
 
 Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
 
@@ -435,7 +435,7 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 Lock Credit Card / eCheck
 -------------------------
 
-* `GET /api/wallet/lock/cbb571ea-e834-41c4-8a20-7d55bb7ae190?lockreason=Customer+being+audited` will lock the credit card or eCheck from being used with a specified reason
+* `GET /payment/api/wallet/lock/cbb571ea-e834-41c4-8a20-7d55bb7ae190?lockreason=Customer+being+audited` will lock the credit card or eCheck from being used with a specified reason
 
 ###### Response
 <pre>{
@@ -446,7 +446,7 @@ Lock Credit Card / eCheck
 Unlock Credit Card / eCheck
 ---------------------------
 
-* `GET /api/wallet/unlock/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will unlock the credit card or eCheck from being used
+* `GET /payment/api/wallet/unlock/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will unlock the credit card or eCheck from being used
 
 ###### Response
 <pre>{
@@ -457,7 +457,7 @@ Unlock Credit Card / eCheck
 Remove Credit Card / eCheck
 ---------------------------
 
-* `GET /api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will remove the credit card or eCheck
+* `GET /payment/api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will remove the credit card or eCheck
 
 ###### Response
 <pre>{
@@ -467,7 +467,7 @@ Remove Credit Card / eCheck
 Retrieve expired wallet
 -------------------------
 
-* `GET /api/expiredwallet/get?customer={CUSTOMER_NO}&startDate={STARTDATE}&endDate={ENDDATE}&pageSize={PAGESIZE}&page={PAGE}` will return the expired credit cards for a customer, whose Expiration date is in the specified date, and display records depending on the page number, each page size is 15 records.
+* `GET /payment/api/expiredwallet/get?customer={CUSTOMER_NO}&startDate={STARTDATE}&endDate={ENDDATE}&pageSize={PAGESIZE}&page={PAGE}` will return the expired credit cards for a customer, whose Expiration date is in the specified date, and display records depending on the page number, each page size is 15 records.
 
 ###### Response
 <pre>
