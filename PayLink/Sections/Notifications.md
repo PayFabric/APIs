@@ -6,7 +6,7 @@ The Notifications API is used for resending PayLink notifications, and retrieve 
 Resend PayLink Notification Email
 ---------------------------------
 
-* `POST api/notification/email/gwx9q6fqcEuagAJLA27CIA` will resend the specified documents' email notification
+* `POST /paylink/api/notification/email/gwx9q6fqcEuagAJLA27CIA` will resend the specified documents' email notification
 
 ###### Response
 A successful `POST` will result in a HTTP 200 OK Response.  
@@ -17,7 +17,7 @@ A failed `POST` may result in a HTTP 405 Method Not Allowed Response if the spec
 Resend PayLink Notification SMS
 -------------------------------
 
-* `POST api/notification/sms/gwx9q6fqcEuagAJLA27CIA` will resend the specified documents' sms notification
+* `POST /paylink/api/notification/sms/gwx9q6fqcEuagAJLA27CIA` will resend the specified documents' sms notification
 
 ###### Response
 A successful `POST` will result in a HTTP 200 OK Response.  
@@ -28,7 +28,7 @@ A failed `POST` may result in a HTTP 405 Method Not Allowed Response if the spec
 Retrieve SMS Notification Templates
 -----------------------------------
 
-* `GET api/notification/sms/templates` will return all SMS notification templates configured in the PayLink portal
+* `GET /paylink/api/notification/sms/templates` will return all SMS notification templates configured in the PayLink portal
 
 ###### Related Reading
 * [How to Create Notification Templates](../../../../Portal/blob/master/Sections/Features.md#templates)
