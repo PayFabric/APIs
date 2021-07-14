@@ -6,7 +6,7 @@ The PayFabric shipping addresses API is used for managing customer shipping addr
 Create Shipping Address
 ---------------------------
 
-* `Post /address/` will return the specified address
+* `Post /payment/3.1/api/address/` will return the specified address
 
 ###### Response
 <pre>
@@ -47,7 +47,7 @@ Create Shipping Address
 
 Delete Shipping Address
 -----------------------
-* `DELETE /{AddressId}` will return the specified address
+* `DELETE /payment/3.1/api/{AddressId}` will return the specified address
 
 ###### Response
 A successful `DELETE` will result in a HTTP 204 No Content Response.
