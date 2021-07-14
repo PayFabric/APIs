@@ -75,6 +75,7 @@ as child elements of other objects.
 ### Payment Gateway Profiles
 * [Retrieve a Payment Gateway Profile](Sections/Payment%20Gateway%20Profiles.md#retrieve-a-payment-gateway-profile)
 * [Retrieve Payment Gateway Profiles](Sections/Payment%20Gateway%20Profiles.md#retrieve-payment-gateway-profiles)
+* [Manual Batch Close](Sections/Payment%20Gateway%20Profiles.md#manually-batch-close-transactions)
 
 ### Addresses
 * [Retrieve a Shipping Address](Sections/Addresses.md#retrieve-a-shipping-address)
@@ -92,5 +93,5 @@ Versions
 ------------
 For our other supported versions of the APIs please see the below:
 
-* [Version 1.0](https://github.com/PayFabric/APIs/tree/v1)
+* [Version 3.1](https://github.com/PayFabric/APIs/tree/V3.1)
 * [Version 2.0](https://github.com/PayFabric/APIs/tree/v2)
