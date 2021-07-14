@@ -5,7 +5,7 @@ The PayFabric Batch APIs are used for managing PayFabric batch transactions.  Pl
 
 Get Current Batches
 -------------------
-* `GET /Transaction/Batch` Get the current active batches that have pending transactions.
+* `GET /payment/3.1/api/Transaction/Batch` Get the current active batches that have pending transactions.
 ###### Response 
 <pre>
 [
@@ -363,7 +363,7 @@ Get Current Batches
 </pre>
 Process Batch
 -------------------
-* `POST /Transaction/Batch/Process` Start processing a collection of batches, telling all transactions within the batch to start submitting for authorizations or captures. But for processing the ready for capture transactions, then you have to call this API again.
+* `POST /payment/3.1/api/Transaction/Batch/Process` Start processing a collection of batches, telling all transactions within the batch to start submitting for authorizations or captures. But for processing the ready for capture transactions, then you have to call this API again.
 ###### Request
 {
     "BatchId": ["20210704"]
@@ -378,7 +378,7 @@ A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorizat
 
 Delete Batch
 -------------------
-* `DELETE /Transaction/Batch` Delete the specific open batch.
+* `DELETE /payment/3.1/api/Transaction/Batch` Delete the specific open batch.
 ###### Request
 <pre>
 {
@@ -394,7 +394,7 @@ A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authoriz
 
 Search by Batch Number
 -------------------
-* `GET /Transaction/Batch/{BatchID}` Get transactions for a particular batch id.
+* `GET /payment/3.1/api/Transaction/Batch/{BatchID}` Get transactions for a particular batch id.
 
 ###### Response
 <pre>
