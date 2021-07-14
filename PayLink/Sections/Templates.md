@@ -6,7 +6,7 @@ The Template API is used for create, update, copy, delete, get and set default t
 Get Templates by template type
 ------------------------------
 
-* `GET /api/template/{type}` will get templates for a specific type
+* `GET /paylink/api/template/{type}` will get templates for a specific type
 
 ###### Accepted value for 'type' field
 >
@@ -136,7 +136,7 @@ Get Templates by template type
 Create Template for specific template type
 --------------------------------
 
-* `POST /api/template/{type}` will create template for a specific type
+* `POST /paylink/api/template/{type}` will create template for a specific type
 
 Please the available 'type' value [Available 'type' Value](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#accepted-value-for-type-field)
 
@@ -269,7 +269,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 Copy Template
 ------------------------------
 
-* `POST /api/template/{TemplateID}/copy` will copy the specific template
+* `POST /paylink/api/template/{TemplateID}/copy` will copy the specific template
 
 ###### Copy PayLink Tempalte Request
 <pre>
@@ -292,7 +292,7 @@ Copy Template
 
 Update Template
 ------------------------------
-* `PATCH /api/template/{TemplateID}` will update the specific template
+* `PATCH /paylink/api/template/{TemplateID}` will update the specific template
 * 
 ###### Update Template Request
 Please refer the [create template request](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#create-template-for-specific-template-type) for each template type.
@@ -307,7 +307,7 @@ A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authoriza
 Delete Template
 ------------------------------
 
-* `DELETE /api/template/{TemplateID}` will delete the specific template
+* `DELETE /paylink/api/template/{TemplateID}` will delete the specific template
 
 ###### Response
 A successful `DELETE` will result in a HTTP 204 No Content Response.
@@ -320,7 +320,7 @@ A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authoriz
 Set specific Template as default template
 ------------------------------
 
-* `POST /api/template/{type}/default` will set specific template as default template for specific template type.
+* `POST /paylink/api/template/{type}/default` will set specific template as default template for specific template type.
 ###### Set default template request
 {
     "Id" : "a9394e22-999e-46ef-8105-29e9d210770d"
