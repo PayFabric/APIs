@@ -6,7 +6,7 @@ The WalletLinks API is used for creating and retrieving WalletLinks. Please note
 Create a WalletLink
 ----------------
 
-* `POST /api/wallet` will create and save a WalletLink document to the PayLink server based on the request JSON payload
+* `POST /paylink/api/wallet` will create and save a WalletLink document to the PayLink server based on the request JSON payload
 
 ###### Request
 <pre>
@@ -56,7 +56,7 @@ Please note that **bold** fields are required fields and all others are optional
 Retrieve a WalletLink URL
 -------------------------
 
-* `GET /api/wallet/retrieve/h3GSpCZKsEWNxFv6T_y_Gw/link` will return the specified WalletLink document's unique URL
+* `GET /paylink/api/wallet/retrieve/h3GSpCZKsEWNxFv6T_y_Gw/link` will return the specified WalletLink document's unique URL
 
 ###### Response
 <pre>
@@ -66,7 +66,7 @@ Retrieve a WalletLink URL
 Retrieve a WalletLink
 -------------------------
 
-* `GET /api/wallet/YjBOQLdsgUudHEDpxg0T5zE` will return the specified WalletLink document
+* `GET /paylink/api/wallet/YjBOQLdsgUudHEDpxg0T5zE` will return the specified WalletLink document
 
 ###### Response
 <pre>
@@ -100,8 +100,8 @@ Retrieve a WalletLink
 Retrieve WalletLinks
 -------------------------
 
-* `GET /api/wallet` will return all WalletLink documents created.
-* `GET /api/wallet?$filter` will return all WalletLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query. 
+* `GET /paylink/api/wallet` will return all WalletLink documents created.
+* `GET /paylink/api/wallet?$filter` will return all WalletLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query. 
 
 e.g. `https://sandbox.payfabric.com/paylink/api/wallet?$filter=CustomerNumber eq 'test' and Device eq GUID'a284c1d0-a6fc-4938-98b4-0000b8cf4210' and Status eq '0' and NotificationEmail eq 'test@nodus.com' and NotificationPhone eq '1234567890' and CreatedOn gt datetime'2018-06-16' & $orderby CompletedOn desc`
 
@@ -177,7 +177,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/wallet?$filter=CustomerNumber eq
 Cancel a WalletLink
 -------------------
 
-* `POST /api/wallet/h3GSpCZKsEWNxFv6T_y_Gw/cancel` will cancel the specified WalletLink document
+* `POST /paylink/api/wallet/h3GSpCZKsEWNxFv6T_y_Gw/cancel` will cancel the specified WalletLink document
 
 ###### Response
 A successful `POST` will result in a HTTP 200 OK Response.  
