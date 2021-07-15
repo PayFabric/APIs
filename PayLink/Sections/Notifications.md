@@ -21,7 +21,7 @@ Resend PayLink Notification SMS
 
 ###### Response
 A successful `POST` will result in a HTTP 200 OK Response.  
-A failed `POST` may result in a HTTP 400 Bad Request Response if the notification fails.  
+A failed `POST` may result in a HTTP 400 Bad Request Response if the notification is failed.  
 A failed `POST` may result in a HTTP 404 Not Found Response if the specified document does not exist or the Device ID used for the *Security Token* does not match.  
 A failed `POST` may result in a HTTP 405 Method Not Allowed Response if the specified document status is not 1.  
 
