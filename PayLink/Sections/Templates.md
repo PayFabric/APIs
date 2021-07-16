@@ -293,7 +293,7 @@ Copy Template
 Update Template
 ------------------------------
 * `PATCH /paylink/api/template/{TemplateID}` will update the specific template
-* 
+
 ###### Update Template Request
 Please refer the [create template request](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#create-template-for-specific-template-type) for each template type.
 
