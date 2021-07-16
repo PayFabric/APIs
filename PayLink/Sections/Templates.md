@@ -3,7 +3,7 @@ Templates
 
 The Template API is used for create, update, copy, delete, get and set default template. Please note that all requests require API authentication by PayFabric *Device ID* and *Device Password*, see our [guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md) for more details. Please refer [Template Object](/PayFabric/Sections/3.1JSONObjects.md#template) for details.
 
-Get Templates by template type
+Get Templates by Template Type
 ------------------------------
 
 * `GET /paylink/api/template/{type}` will get templates for a specific type
@@ -95,7 +95,7 @@ Get Templates by template type
 ]
 </pre>
 
-###### PayLink Payment page Template Response
+###### PayLink Payment Page Template Response
 <pre>
 [
     {
@@ -133,7 +133,7 @@ Get Templates by template type
     }
 </pre>
 
-Create Template for specific template type
+Create Template for Specific Template Type
 --------------------------------
 
 * `POST /paylink/api/template/{type}` will create template for a specific type
@@ -302,7 +302,7 @@ A successful `PATCH` will result in a HTTP 204 No Content Response.
 
 A failed `PATCH` may result in a HTTP 400 Bad Request Response if the specified template ID is not match with the template type or the Device ID used for the Security Token does not match or post failed.
 
-A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
 
 Delete Template
 ------------------------------
@@ -314,22 +314,22 @@ A successful `DELETE` will result in a HTTP 204 No Content Response.
 
 A failed `DELETE` may result in a HTTP 400 Bad Request Response if the specified template ID is not match with the template type or the Device ID used for the Security Token does not match or post failed.
 
-A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
 
 
-Set specific Template as default template
+Set Specific Template as Default Template
 ------------------------------
 
 * `POST /paylink/api/template/{type}/default` will set specific template as default template for specific template type.
-###### Set default template request
+###### Set Default Template Request
 {
     "Id" : "a9394e22-999e-46ef-8105-29e9d210770d"
 }
-###### Set default template response
+###### Set Default Template Response
 A successful `POST` will result in a HTTP 200 OK Response.
 
 A failed `POST` may result in a HTTP 400 Bad Request Response if the specified template ID is not match with the template type or the Device ID used for the Security Token does not match or post failed.
 
-A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
 
 
