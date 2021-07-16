@@ -606,7 +606,7 @@ Below is the PayLink Confirmation page
         "ECheckGateway": "USASOAPECheck“, 
         "AcceptType": 0
     },  
-    "NotificationEmail": "rena.wu@nodus.com",
+    "NotificationEmail": "qa-receive@payfabric.com",
     "NotificationPhone": "18915400883",
     "OriginalTender": null,
     "PayFabricTransactionData": null,
@@ -845,7 +845,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
         "IntegrationStatus": 2,
         "Tax": null,
         "ShippingAddress": {
-            "Email": "sophia.shi@nodus.com",
+            "Email": "qa-receive@payfabric.com",
             "Address1": "123 Test Street",
             "Address2": "12 Test Street",
             "Address3": "1 Test Street",
@@ -858,7 +858,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
             "Phone3": "4515845632"
         },
         "BillingAddress": {
-            "Email": "sophia.shi@nodus.com",
+            "Email": "qa-receive@payfabric.com",
             "Address1": "line 12",
             "Address2": "liner r3",
             "Address3": "",
@@ -915,8 +915,8 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
             "ECheckGateway": "USASOAPECheck",
             "AcceptType": 0
         },
-        "NotificationEmail": "sophia.shi@nodus.com",
-        "NotificationEmailDisplay": "sophia.shi@nodus.com",
+        "NotificationEmail": "qa-receive@payfabric.com",
+        "NotificationEmailDisplay": "qa-receive@payfabric.com",
         "NotificationPhone": "17145484360",
         "NotificationPhoneDisplay": "17145484360",
         "OriginalTender": null,
@@ -1126,9 +1126,9 @@ Update post data
 ###### Response
 A successful `POST` will result in a HTTP 204 No Content Response.
 
-A failed `POST` may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed
+A failed `POST` may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed.
 
-A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is wrong
+A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
 
 Resubmit post data
 ------------------
@@ -1137,6 +1137,6 @@ Resubmit post data
 ###### Response
 A successful `POST` will result in a HTTP 204 No Content Response.
 
-A failed `POST` may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed
+A failed `POST` may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed.
 
-A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is wrong
+A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
