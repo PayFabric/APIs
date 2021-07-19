@@ -1,4 +1,4 @@
-PayFabric APIs - Version 3.0
+PayFabric APIs
 ==============
 PayFabric APIs are organized around Representational State Transfer (**REST**) architecture and are designed to have predictable, resource-oriented URLs and use HTTP response codes to indicate API errors. Below are the server URL:
 
@@ -45,9 +45,11 @@ We have a [guide](Sections/Errors.md) detailing the meanings of the most common 
 
 API Documentation
 -----------------
-PayFabric sends and receives payloads as structured [JSON Objects](Sections/Objects.md). 
+PayFabric sends and receives payloads as structured [JSON Objects](Sections/Objects.md) or [JSON Objects for 3.1](Sections/3.1JSONObjects.md) . 
 Many of these objects are used in both requests and responses. Some of the objects (like Address or Cardholder) are embedded
 as child elements of other objects.
+
+## Version 3.0
 
 ### Transactions
 * [Create a Transaction](Sections/Transactions.md#create-a-transaction)
@@ -85,6 +87,56 @@ as child elements of other objects.
 * [Create JWT Token](Sections/JWTToken.md#create-json-web-tokens)
 * [Validate JWT Token](Sections/JWTToken.md#validate-json-web-tokens)
 
+## Version 3.1
+
+### Email Transaction Receipt
+* [Send a Transaction Receipt](/PayFabric/Sections/EmailReceipt.md#send-a-transaction-receipt)
+
+### Email Transaction Receipt Template
+* [Get Email Receipt Templates](/PayFabric/Sections/EmailReceipt.md#get-email-receipt-templates)
+* [Update Email Receipt Template](/PayFabric/Sections/EmailReceipt.md#update-email-receipt-template)
+
+### Batched Transactions
+* [Get Current Batches](/PayFabric/Sections/Batches.md#get-current-batches)
+* [Process Batch](/PayFabric/Sections/Batches.md#process-batch)
+* [Delete Batch](/PayFabric/Sections/Batches.md#delete-batch)
+* [Search by Batch Number](/PayFabric/Sections/Batches.md#search-by-batch-number)
+
+### Scheduled Transactions
+* [Search for Future Dated Transactions](/PayFabric/Sections/ScheduledTransaction.md#search-for-future-dated-transactions)
+
+### Custom Reports
+* [Get Custom Reports](/PayFabric/Sections/CustomReports.md#get-custom-reports)
+* [Create Custom Report](/PayFabric/Sections/CustomReports.md#create-custom-report/PayFabric/Sections/CustomReports.md#create-custom-report)
+* [Edit Custom Report](/PayFabric/Sections/CustomReports.md#edit-custom-report)
+* [Delete Custom Report](/PayFabric/Sections/CustomReports.md#delete-custom-report)
+* [Manaual Execute Custom Report](/PayFabric/Sections/CustomReports.md#manual-execute-custom-report)
+
+### Shipping Addresses
+* [Create Shipping Address](/PayFabric/Sections/ShippingAddress.md#create-shipping-address)
+* [Delete Shipping Address](/PayFabric/Sections/ShippingAddress.md#delete-shipping-address)
+
+### Payment Terminal
+* [Get Registered Terminals](/PayFabric/Sections/Payment%20Terminal.md#get-registered-terminals)
+* [Create new Registered Terminal](/PayFabric/Sections/Payment%20Terminal.md#create-new-registered-terminal)
+* [Update Registered Terminal](/PayFabric/Sections/Payment%20Terminal.md#update-registered-terminal)
+* [Remove Registered Terminal](/PayFabric/Sections/Payment%20Terminal.md#remove-registered-terminal)
+* [Get Terminal Settings](/PayFabric/Sections/Payment%20Terminal.md#get-terminal-settings)
+* [Update Terminal Settings](/PayFabric/Sections/Payment%20Terminal.md#update-terminal-settings)
+
+### Products
+* [Get Products](/PayFabric/Sections/Product.md#get-products)
+* [Create Product](/PayFabric/Sections/Product.md#create-product)
+* [Edit Product](/PayFabric/Sections/Product.md#update-product)
+* [Delete Product](/PayFabric/Sections/Product.md#delete-product)
+* [Upload Products](/PayFabric/Sections/Product.md#upload-products)
+
+### Theme
+* [Get Themes](/PayFabric/Sections/Theme.md#get-themes)
+* [Create Theme](/PayFabric/Sections/Theme.md#create-theme)
+* [Update Theme](/PayFabric/Sections/Theme.md#update-theme)
+* [Delete Theme](/PayFabric/Sections/Theme.md#delete-theme)
+
 Help us make it better
 ----------------------
 Please tell us how we can make the APIs better. If you have a specific feature request or if you found a bug, please contact <support@payfabric.com>. Also, feel free to branch these documents and send a pull request with improvements!
@@ -93,5 +145,4 @@ Versions
 ------------
 For our other supported versions of the APIs please see the below:
 
-* [Version 3.1](/PayFabric/3.1README.md)
 * [Version 2.0](https://github.com/PayFabric/APIs/tree/v2)
