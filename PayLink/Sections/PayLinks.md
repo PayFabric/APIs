@@ -1104,7 +1104,7 @@ Get Post Data
 ----------------
 * `GET api/document/{PayLinkId}/PostData` will get the post data xml for the specific document
 
-<b>Note:</b> Only can get post data for Paid document
+<b>Note:</b> Only can get post data for Paid document.
 
 ###### Response
 ```xml
