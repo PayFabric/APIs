@@ -69,7 +69,7 @@ A successful `PATCH` will result in a HTTP 204 No Content Response.
 
 A failed `PATCH` may result in a HTTP 400 Bad Request Response if the specified terminal does not exist or the Device ID used for the Security Token does not match or post failed.
 
-A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
 
 Remove Registered Terminal
 ------------------------------
@@ -80,7 +80,7 @@ A successful `DELETE` will result in a HTTP 204 No Content Response.
 
 A failed `DELETE` may result in a HTTP 400 Bad Request Response if the specified theme does not exist or the Device ID used for the Security Token does not match or post failed.
 
-A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
 
 Get Terminal Settings
 ---------------------
@@ -117,4 +117,4 @@ A successful `PATCH` will result in a HTTP 204 No Content Response.
 
 A failed `PATCH` may result in a HTTP 400 Bad Request Response if the request body has invalid value or unexists value or the Device ID used for the Security Token does not match or post failed.
 
-A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authorization is wrong.
+A failed `PATCH` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
