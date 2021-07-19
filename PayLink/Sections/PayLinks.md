@@ -1115,7 +1115,7 @@ Update Post Data
 -----------------
 * `POST api/document/{PayLinkId}/PostData` will update the post data xml for the specific document
 
-<b>Note:</b> Only can update post data for `Integration Failed` document. The post data xml is auto generated, please don't add/remove any node(s), just update the value, otherwise will cause failed to integrate to ERP.
+<b>Note:</b> Only can update post data for `Integration Failed` document. The post data xml is auto generated, please don't add/remove any node(s), just update the value, otherwise will cause failure to integrate to ERP.
 
 ###### Request
 ```xml
