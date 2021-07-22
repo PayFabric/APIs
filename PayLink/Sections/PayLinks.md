@@ -6,7 +6,7 @@ The PayLinks API is used for creating, updating and retrieving PayLinks. Please 
 Create a PayLink
 ----------------
 
-* `POST /api/document` will create and save a PayLink document to the PayLink server based on the request JSON payload
+* `POST /paylink/api/document` will create and save a PayLink document to the PayLink server based on the request JSON payload
 
 ###### Request
 <pre>
@@ -203,7 +203,7 @@ The response will include the full document object, see the [Retrieve a PayLink]
 Create a Multiple Invoice PayLink
 ---------------------------------
 
-* `POST /api/document` will create and save a PayLink document to the PayLink server based on the request JSON payload, the trick to creating a PayLink as a multiple invoice, is using the **IsMultipleInvoice** and **Items** fields
+* `POST /paylink/api/document` will create and save a PayLink document to the PayLink server based on the request JSON payload, the trick to creating a PayLink as a multiple invoice, is using the **IsMultipleInvoice** and **Items** fields
 
 ###### Request
 <pre>
@@ -606,7 +606,7 @@ Below is the PayLink Confirmation page
         "ECheckGateway": "USASOAPECheck“, 
         "AcceptType": 0
     },  
-    "NotificationEmail": "rena.wu@nodus.com",
+    "NotificationEmail": "qa-receive@payfabric.com",
     "NotificationPhone": "18915400883",
     "OriginalTender": null,
     "PayFabricTransactionData": null,
@@ -620,7 +620,7 @@ The response will include the full document object, see the [Retrieve a PayLink]
 Update a PayLink
 ----------------
 
-* `PATCH /api/document/gwx9q6fqcEuagAJLA27CIA` will update the specified PayLink document with new information based on the request JSON payload
+* `PATCH /paylink/api/document/gwx9q6fqcEuagAJLA27CIA` will update the specified PayLink document with new information based on the request JSON payload
 Note: NotificationEmail and NotificationPhone are not able to update.
 
 ###### Request
@@ -638,7 +638,7 @@ A failed `PATCH` will result in a HTTP 400 Bad Request Response with the message
 Retrieve a PayLink
 ------------------
 
-* `GET /api/document/azBmusnzAUOzo4KVu30nczE` will return the specified PayLink document
+* `GET /paylink/api/document/azBmusnzAUOzo4KVu30nczE` will return the specified PayLink document
 
 ###### Response
 <pre>
@@ -786,8 +786,8 @@ Retrieve a PayLink
 Retrieve PayLinks
 -----------------
 
-* `GET /api/document` will return all PayLink documents created
-* `GET /api/document?$filter` will return all PayLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query
+* `GET /paylink/api/document` will return all PayLink documents created
+* `GET /paylink/api/document?$filter` will return all PayLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query
 
 e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber eq 'AARONFIT0001' and Device eq GUID'a284c1d0-a6fc-4938-98b4-0000b8cf4210' and DocumentNumber eq 'ORDER001' and DocDate lt datetime'2018-09-25' and DueDate eq null and PaidOn gt datetime'2017-02-02' and Amount gt 8 and NotificationEmail eq 'test@nodus.com' and Status eq '3' and IntegrationStatus eq '2' and TransactionKey eq '180227157886' & $orderby CreatedOn desc`
 
@@ -845,7 +845,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
         "IntegrationStatus": 2,
         "Tax": null,
         "ShippingAddress": {
-            "Email": "sophia.shi@nodus.com",
+            "Email": "qa-receive@payfabric.com",
             "Address1": "123 Test Street",
             "Address2": "12 Test Street",
             "Address3": "1 Test Street",
@@ -858,7 +858,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
             "Phone3": "4515845632"
         },
         "BillingAddress": {
-            "Email": "sophia.shi@nodus.com",
+            "Email": "qa-receive@payfabric.com",
             "Address1": "line 12",
             "Address2": "liner r3",
             "Address3": "",
@@ -915,8 +915,8 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
             "ECheckGateway": "USASOAPECheck",
             "AcceptType": 0
         },
-        "NotificationEmail": "sophia.shi@nodus.com",
-        "NotificationEmailDisplay": "sophia.shi@nodus.com",
+        "NotificationEmail": "qa-receive@payfabric.com",
+        "NotificationEmailDisplay": "qa-receive@payfabric.com",
         "NotificationPhone": "17145484360",
         "NotificationPhoneDisplay": "17145484360",
         "OriginalTender": null,
@@ -1068,7 +1068,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
 Retrieve a PayLink URL
 ----------------------
 
-* `GET /api/document/retrieve/gwx9q6fqcEuagAJLA27CIA/link` will return the specified PayLink documents' unique URL
+* `GET /paylink/api/document/retrieve/gwx9q6fqcEuagAJLA27CIA/link` will return the specified PayLink documents' unique URL
 
 ###### Response
 <pre>
@@ -1078,20 +1078,64 @@ Retrieve a PayLink URL
 Remove a PayLink
 ----------------
 
-* `DELETE /api/document/AdFXqnNNf0GDNwiO5UE_fw` will remove the specified PayLink document permanently
+* `DELETE /paylink/api/document/AdFXqnNNf0GDNwiO5UE_fw` will remove the specified PayLink document permanently
 
 ###### Response
 A successful `DELETE` will result in a HTTP 200 OK Response.  
+
 A failed `DELETE` may result in a HTTP 404 Not Found Response if the specified document does not exist or the Device ID used for the *Security Token* does not match.  
+
 A failed `DELETE` may result in a HTTP 405 Method Not Allowed Response if the specified document has already been cancelled or paid.  
 
 
 Cancel a PayLink
 ----------------
 
-* `POST /api/document/AdFXqnNNf0GDNwiO5UE_fw/cancel` will cancel a PayLink document
+* `POST /paylink/api/document/AdFXqnNNf0GDNwiO5UE_fw/cancel` will cancel a PayLink document
 
 ###### Response
-A successful `POST` will result in a HTTP 200 OK Response.  
+A successful `POST` will result in a HTTP 200 OK Response. 
+
 A failed `POST` may result in a HTTP 404 Not Found Response if the specified document does not exist or the Device ID used for the *Security Token* does not match.  
+
 A failed `POST` may result in a HTTP 405 Method Not Allowed Response if the specified document has already been cancelled or paid.  
+
+Get Post Data
+----------------
+* `GET api/document/{PayLinkId}/PostData` will get the post data xml for the specific document
+
+<b>Note:</b> Only can get post data for Paid document.
+
+###### Response
+```xml
+<TokenTransactions><TokenTransaction><PaymentLines><PaymentLine><CCNumber>XXXXXXXXXXXX1111</CCNumber><CCType>V1ffff</CCType><CCExpDate>3/1/2022 12:00:00 AM</CCExpDate><PaymentType>3</PaymentType><GenericName></GenericName><TrxAmount>8.16</TrxAmount><AuthCode>P66QP5</AuthCode><TransactionData><Connection name=\"EvoSnapWithSurcharge\" connector=\"EVO\" /><Transaction post=\"False\" type=\"1\" status=\"1\"><NeededData><Transaction><Type>1</Type><Status>Approved</Status><Category>NeededData</Category><Fields /></Transaction></NeededData><FailureData><Transaction><Type>1</Type><Status>Approved</Status><Category>FailureData</Category><Fields /></Transaction></FailureData><ResponseData><Transaction><Type>1</Type><Status>Approved</Status><Category>ResponseData</Category><Fields><Field id=\"TrxField_D83\"><Name>CVV2ResponseCode</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D24\"><Name>AuthCode</Name><Desc>P66QP5</Desc><Value>P66QP5</Value></Field><Field id=\"TrxField_D545\"><Name>ResponseBatchID</Name><Desc>2108</Desc><Value>2108</Value></Field><Field id=\"TrxField_D573\"><Name>ProcessedAs3D</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D16\"><Name>OriginationID</Name><Desc>D6394745207D471E96E57AF85EE87B7F</Desc><Value>D6394745207D471E96E57AF85EE87B7F</Value></Field><Field id=\"TrxField_D462\"><Name>GatewayOriginationID</Name><Desc>77315199</Desc><Value>77315199</Value></Field><Field id=\"TrxField_D463\"><Name>ProcessorOriginationID</Name><Desc>461295</Desc><Value>461295</Value></Field><Field id=\"TrxField_D31\"><Name>ResponseMsg</Name><Desc>APPROVED</Desc><Value>APPROVED</Value></Field><Field id=\"TrxField_D17\"><Name>ResultCode</Name><Desc>1</Desc><Value>1</Value></Field><Field id=\"TrxField_D464\"><Name>TransactionState</Name><Desc>Captured</Desc><Value>Captured</Value></Field><Field id=\"TrxField_D465\"><Name>CaptureState</Name><Desc>Captured</Desc><Value>Captured</Value></Field><Field id=\"TrxField_D76\"><Name>TrxDate</Name><Desc>7/8/2021 5:42:53 AM</Desc><Value>7/8/2021 5:42:53 AM</Value></Field><Field id=\"TrxField_D288\"><Name>TransactionID</Name><Desc>D6394745207D471E96E57AF85EE87B7F</Desc><Value>D6394745207D471E96E57AF85EE87B7F</Value></Field></Fields></Transaction></ResponseData><RequestData><Transaction><Type>1</Type><Status>1</Status><Category>RequestData</Category><Fields><Field id=\"TrxField_D1\"><Name>CCNumber</Name><Desc>Credit Card Number</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TrxField_D3\"><Name>CCExpDate</Name><Desc>Expiration Date MMYY</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>0322</Value></Field><Field id=\"TrxField_D5\"><Name>FirstName</Name><Desc>First Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>as12</Value></Field><Field id=\"TrxField_D7\"><Name>LastName</Name><Desc>Last Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>as12</Value></Field><Field id=\"TrxField_D8\"><Name>Address1</Name><Desc>Address 1</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>123 TEST</Value></Field><Field id=\"TrxField_D11\"><Name>City</Name><Desc>City</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>CA</Value></Field><Field id=\"TrxField_D12\"><Name>State</Name><Desc>State</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>CA</Value></Field><Field id=\"TrxField_D13\"><Name>Zip</Name><Desc>Zip</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>12345</Value></Field><Field id=\"TrxField_D15\"><Name>TrxAmount</Name><Desc>Transaction Amount</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>3</Type><Value>8.16</Value></Field><Field id=\"TrxField_D18\"><Name>CCType</Name><Desc>Card Type</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>V1ffff</Value></Field><Field id=\"TrxField_D34\"><Name>PONumber</Name><Desc>PO Number</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>PO0001</Value></Field><Field id=\"TrxField_D40\"><Name>InvoiceNumber</Name><Desc>Invoice Number</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>STDINV0001</Value></Field><Field id=\"TrxField_D41\"><Name>ShipToZip</Name><Desc>Ship to Zip</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>8098529922</Value></Field><Field id=\"TrxField_D48\"><Name>CustomerCode</Name><Desc>Customer Code</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>AARONFIT0001</Value></Field><Field id=\"TrxField_D74\"><Name>CurrencyCode</Name><Desc>Currency Code</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>10</Type><Value>USD</Value></Field><Field id=\"TrxField_D99\"><Name>ShipToCity</Name><Desc>Shipping City</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>ANAHEIM</Value></Field><Field id=\"TrxField_D103\"><Name>ShipToState</Name><Desc>Shipping State</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>CA</Value></Field><Field id=\"TrxField_D104\"><Name>ShipToStreet</Name><Desc>Shipping Street</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>1099 S State College Blvd </Value></Field><Field id=\"TrxField_D111\"><Name>ShipToCountry</Name><Desc>Shipping Country</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>US</Value></Field><Field id=\"TrxField_D155\"><Name>ShipToPhone</Name><Desc>Shipping Phone</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>1888888888</Value></Field><Field id=\"TrxField_D321\"><Name>SurchargeAmount</Name><Desc>The surcharge amount is included in the total transaction amount but is passed in a separate field to the issuer and acquirer for tracking</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>3</Type><Value>0.16</Value></Field><Field id=\"TrxField_D539\"><Name>TransactionInitiation</Name><Desc>Transaction Initiation indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Customer</Value></Field><Field id=\"TrxField_D542\"><Name>CCEntryIndicator</Name><Desc>Credit card entry indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Stored</Value></Field><Field id=\"TrxField_D543\"><Name>POSEntryMode</Name><Desc>POS Entry Mode</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>10</Value></Field><Field id=\"TrxField_D544\"><Name>CCFirstTransactionId</Name><Desc>The transaction Id that was first used to validate the credit card before use or storage</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>C4DAA4C0803B4601AA67375563DF735E</Value></Field><Field id=\"TrxField_D550\"><Name>PayFabricTransactionKey</Name><Desc>The PayFabric Transaction Key associated to this Payment Request.</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>21070700735575</Value></Field><Field id=\"TRXFIELD_D19\"><Name>PaymentType</Name><Value>1</Value></Field><Field id=\"TRXFIELD_D117\" index=\"1\"><Name>ItemCommodityCode</Name><Value>A100</Value></Field><Field id=\"TRXFIELD_D67\" index=\"1\"><Name>ItemProdCode</Name><Value>A100</Value></Field><Field id=\"TRXFIELD_D65\" index=\"1\"><Name>ItemUOM</Name><Value>Each</Value></Field><Field id=\"TRXFIELD_D69\" index=\"1\"><Name>ItemAmount</Name><Value>8.0</Value></Field><Field id=\"TRXFIELD_D68\" index=\"1\"><Name>ItemDiscount</Name><Value>0.0</Value></Field><Field id=\"TRXFIELD_D62\" index=\"1\"><Name>ItemQuantity</Name><Value>1</Value></Field><Field id=\"TRXFIELD_D70\" index=\"1\"><Name>ItemTaxAmount</Name><Value>0.0</Value></Field><Field id=\"TRXFIELD_D64\" index=\"1\"><Name>ItemDesc</Name><Value>A unique online payment system</Value></Field><Field id=\"TRXFIELD_D547\"><Name>SubsequentAuthOriginalAmount</Name><Value>40.75</Value></Field><Field id=\"TRXFIELD_D2\"><Name>TRXFIELD_D2</Name><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TRXFIELD_D54\"><Name>AccountName</Name><Value>as12 as12 </Value></Field><Field id=\"TRXFIELD_D55\"><Name>AccountStreet</Name><Value>123 TEST </Value></Field><Field id=\"TRXFIELD_D47\"><Name>CountryCode</Name><Value>United States</Value></Field><Field id=\"SaveCreditCard\"><Name>SaveCreditCard</Name><Value>0</Value></Field><Field id=\"MSO_PFTrxKey\"><Name>MSO_PFTrxKey</Name><Value>21070700735575</Value></Field><Field id=\"MSO_WalletID\"><Name>MSO_WalletID</Name><Value>0b9cbe13-3c29-4a5f-a5dd-33b1f0f802ab</Value></Field><Field id=\"MSO_EngineGUID\"><Name>MSO_EngineGUID</Name><Value>488599af-321c-4d0e-b882-6876fb61c57b</Value></Field><Field id=\"TRXFIELD_D540\"><Name>TransactionSchedule</Name><Value>Unscheduled</Value></Field><Field id=\"TRXFIELD_D541\"><Name>AuthorizationType</Name><Value>NotSet</Value></Field><Field id=\"MSO_Last_Xmit_Date\"><Name>MSO_Last_Xmit_Date</Name><Value>2021-07-07 00:00:00</Value></Field><Field id=\"MSO_Last_Xmit_Time\"><Name>MSO_Last_Xmit_Time</Name><Value>1900-01-01 11:42:54 PM</Value></Field><Field id=\"MSO_Last_Settled_Date\"><Name>MSO_Last_Settled_Date</Name><Value>1900-01-01</Value></Field><Field id=\"MSO_Last_Settled_Time\"><Name>MSO_Last_Settled_Time</Name><Value>1900-01-01 00:00:00</Value></Field><Field id=\"MSO_Doc_Number\"><Name>MSO_Doc_Number</Name><Value>STDINV0001</Value></Field><Field id=\"MSO_Doc_Type\"><Name>MSO_Doc_Type</Name><Value>3</Value></Field><Field id=\"MSO_Source_Of_Document\"><Name>MSO_Source_Of_Document</Name><Value>1</Value></Field><Field id=\"BACHNUMB\"><Name>BACHNUMB</Name><Value>TEST</Value></Field><Field id=\"MSO_IsBatched\"><Name>MSO_IsBatched</Name><Value>0</Value></Field><Field id=\"CUSTNMBR\"><Name>CUSTNMBR</Name><Value>AARONFIT0001</Value></Field><Field id=\"MSO_FirstName\"><Name>MSO_FirstName</Name><Value>as12</Value></Field><Field id=\"MSO_LastName\"><Name>MSO_LastName</Name><Value>as12</Value></Field><Field id=\"MSO_CardExpDate\"><Name>MSO_CardExpDate</Name><Value>0322</Value></Field><Field id=\"MSO_CardName\"><Name>MSO_CardName</Name><Value>V1ffff</Value></Field><Field id=\"MSO_Default\"><Name>MSO_Default</Name><Value>0</Value></Field><Field id=\"Status\"><Name>Status</Name><Value>1</Value></Field><Field id=\"SEQNUMBR\"><Name>SEQNUMBR</Name><Value>16384</Value></Field><Field id=\"CRCRDAMT\"><Name>CRCRDAMT</Name><Value>8.16</Value></Field><Field id=\"CCode\"><Name>CCode</Name><Value>United States</Value></Field><Field id=\"PHONNAME\"><Name>PHONNAME</Name><Value></Value></Field><Field id=\"MSO_COMMENT3\"><Name>MSO_COMMENT3</Name><Value>8.16</Value></Field><Field id=\"MSO_COMMENT4\"><Name>MSO_COMMENT4</Name><Value>PayLink</Value></Field><Field id=\"MSO_IsCardValid\"><Name>MSO_IsCardValid</Name><Value>1</Value></Field><Field id=\"MSO_TrxStatus\"><Name>MSO_TrxStatus</Name><Value>1</Value></Field><Field id=\"MSO_TrxType\"><Name>MSO_TrxType</Name><Value>1</Value></Field><Field id=\"MSO_Auth_Amount\"><Name>MSO_Auth_Amount</Name><Value>8.16</Value></Field><Field id=\"MSO_Capture_Amount\"><Name>MSO_Capture_Amount</Name><Value>8.16</Value></Field><Field id=\"BCHSOURC\"><Name>BCHSOURC</Name><Value>Sales Entry</Value></Field></Fields></Transaction></RequestData></Transaction></TransactionData></PaymentLine></PaymentLines><DocumentID>STDINV0001</DocumentID><BatchID>TEST</BatchID><CustomerID>AARONFIT0001</CustomerID><Date>7/7/2021 11:41:26 PM</Date><SOPTYPE>3</SOPTYPE><AmountsReceived>8.16</AmountsReceived><DocTypeID>3</DocTypeID><TradeDiscount>0.0</TradeDiscount><FreightAmount>0.0</FreightAmount><MiscAmount>0.0</MiscAmount><TransactionType>1</TransactionType><CurrencyID>Z-US$</CurrencyID></TokenTransaction></TokenTransactions>
+```
+
+Update Post Data
+-----------------
+* `POST api/document/{PayLinkId}/PostData` will update the post data xml for the specific document
+
+<b>Note:</b> Only can update post data for `Integration Failed` document. The post data xml is auto generated, please don't add/remove any node(s), just update the value, otherwise will cause failure to integrate to ERP.
+
+###### Request
+```xml
+{"PostData":"<TokenTransactions><TokenTransaction><PaymentLines><PaymentLine><CCNumber>XXXXXXXXXXXX1111</CCNumber><CCType>V1ffff</CCType><CCExpDate>3/1/2022 12:00:00 AM</CCExpDate><PaymentType>3</PaymentType><GenericName></GenericName><TrxAmount>8.16</TrxAmount><AuthCode>P66QP5</AuthCode><TransactionData><Connection name=\"EvoSnapWithSurcharge\" connector=\"EVO\" /><Transaction post=\"False\" type=\"1\" status=\"1\"><NeededData><Transaction><Type>1</Type><Status>Approved</Status><Category>NeededData</Category><Fields /></Transaction></NeededData><FailureData><Transaction><Type>1</Type><Status>Approved</Status><Category>FailureData</Category><Fields /></Transaction></FailureData><ResponseData><Transaction><Type>1</Type><Status>Approved</Status><Category>ResponseData</Category><Fields><Field id=\"TrxField_D83\"><Name>CVV2ResponseCode</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D24\"><Name>AuthCode</Name><Desc>P66QP5</Desc><Value>P66QP5</Value></Field><Field id=\"TrxField_D545\"><Name>ResponseBatchID</Name><Desc>2108</Desc><Value>2108</Value></Field><Field id=\"TrxField_D573\"><Name>ProcessedAs3D</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D16\"><Name>OriginationID</Name><Desc>D6394745207D471E96E57AF85EE87B7F</Desc><Value>D6394745207D471E96E57AF85EE87B7F</Value></Field><Field id=\"TrxField_D462\"><Name>GatewayOriginationID</Name><Desc>77315199</Desc><Value>77315199</Value></Field><Field id=\"TrxField_D463\"><Name>ProcessorOriginationID</Name><Desc>461295</Desc><Value>461295</Value></Field><Field id=\"TrxField_D31\"><Name>ResponseMsg</Name><Desc>APPROVED</Desc><Value>APPROVED</Value></Field><Field id=\"TrxField_D17\"><Name>ResultCode</Name><Desc>1</Desc><Value>1</Value></Field><Field id=\"TrxField_D464\"><Name>TransactionState</Name><Desc>Captured</Desc><Value>Captured</Value></Field><Field id=\"TrxField_D465\"><Name>CaptureState</Name><Desc>Captured</Desc><Value>Captured</Value></Field><Field id=\"TrxField_D76\"><Name>TrxDate</Name><Desc>7/8/2021 5:42:53 AM</Desc><Value>7/8/2021 5:42:53 AM</Value></Field><Field id=\"TrxField_D288\"><Name>TransactionID</Name><Desc>D6394745207D471E96E57AF85EE87B7F</Desc><Value>D6394745207D471E96E57AF85EE87B7F</Value></Field></Fields></Transaction></ResponseData><RequestData><Transaction><Type>1</Type><Status>1</Status><Category>RequestData</Category><Fields><Field id=\"TrxField_D1\"><Name>CCNumber</Name><Desc>Credit Card Number</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TrxField_D3\"><Name>CCExpDate</Name><Desc>Expiration Date MMYY</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>0322</Value></Field><Field id=\"TrxField_D5\"><Name>FirstName</Name><Desc>First Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>as12</Value></Field><Field id=\"TrxField_D7\"><Name>LastName</Name><Desc>Last Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>as12</Value></Field><Field id=\"TrxField_D8\"><Name>Address1</Name><Desc>Address 1</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>123 TEST</Value></Field><Field id=\"TrxField_D11\"><Name>City</Name><Desc>City</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>CA</Value></Field><Field id=\"TrxField_D12\"><Name>State</Name><Desc>State</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>CA</Value></Field><Field id=\"TrxField_D13\"><Name>Zip</Name><Desc>Zip</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>12345</Value></Field><Field id=\"TrxField_D15\"><Name>TrxAmount</Name><Desc>Transaction Amount</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>3</Type><Value>8.16</Value></Field><Field id=\"TrxField_D18\"><Name>CCType</Name><Desc>Card Type</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>V1ffff</Value></Field><Field id=\"TrxField_D34\"><Name>PONumber</Name><Desc>PO Number</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>PO0001</Value></Field><Field id=\"TrxField_D40\"><Name>InvoiceNumber</Name><Desc>Invoice Number</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>STDINV0001</Value></Field><Field id=\"TrxField_D41\"><Name>ShipToZip</Name><Desc>Ship to Zip</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>8098529922</Value></Field><Field id=\"TrxField_D48\"><Name>CustomerCode</Name><Desc>Customer Code</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>AARONFIT0001</Value></Field><Field id=\"TrxField_D74\"><Name>CurrencyCode</Name><Desc>Currency Code</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>10</Type><Value>USD</Value></Field><Field id=\"TrxField_D99\"><Name>ShipToCity</Name><Desc>Shipping City</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>ANAHEIM</Value></Field><Field id=\"TrxField_D103\"><Name>ShipToState</Name><Desc>Shipping State</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>CA</Value></Field><Field id=\"TrxField_D104\"><Name>ShipToStreet</Name><Desc>Shipping Street</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>1099 S State College Blvd </Value></Field><Field id=\"TrxField_D111\"><Name>ShipToCountry</Name><Desc>Shipping Country</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>US</Value></Field><Field id=\"TrxField_D155\"><Name>ShipToPhone</Name><Desc>Shipping Phone</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>1888888888</Value></Field><Field id=\"TrxField_D321\"><Name>SurchargeAmount</Name><Desc>The surcharge amount is included in the total transaction amount but is passed in a separate field to the issuer and acquirer for tracking</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>3</Type><Value>0.16</Value></Field><Field id=\"TrxField_D539\"><Name>TransactionInitiation</Name><Desc>Transaction Initiation indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Customer</Value></Field><Field id=\"TrxField_D542\"><Name>CCEntryIndicator</Name><Desc>Credit card entry indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Stored</Value></Field><Field id=\"TrxField_D543\"><Name>POSEntryMode</Name><Desc>POS Entry Mode</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>10</Value></Field><Field id=\"TrxField_D544\"><Name>CCFirstTransactionId</Name><Desc>The transaction Id that was first used to validate the credit card before use or storage</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>C4DAA4C0803B4601AA67375563DF735E</Value></Field><Field id=\"TrxField_D550\"><Name>PayFabricTransactionKey</Name><Desc>The PayFabric Transaction Key associated to this Payment Request.</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>21070700735575</Value></Field><Field id=\"TRXFIELD_D19\"><Name>PaymentType</Name><Value>1</Value></Field><Field id=\"TRXFIELD_D117\" index=\"1\"><Name>ItemCommodityCode</Name><Value>A100</Value></Field><Field id=\"TRXFIELD_D67\" index=\"1\"><Name>ItemProdCode</Name><Value>A100</Value></Field><Field id=\"TRXFIELD_D65\" index=\"1\"><Name>ItemUOM</Name><Value>Each</Value></Field><Field id=\"TRXFIELD_D69\" index=\"1\"><Name>ItemAmount</Name><Value>8.0</Value></Field><Field id=\"TRXFIELD_D68\" index=\"1\"><Name>ItemDiscount</Name><Value>0.0</Value></Field><Field id=\"TRXFIELD_D62\" index=\"1\"><Name>ItemQuantity</Name><Value>1</Value></Field><Field id=\"TRXFIELD_D70\" index=\"1\"><Name>ItemTaxAmount</Name><Value>0.0</Value></Field><Field id=\"TRXFIELD_D64\" index=\"1\"><Name>ItemDesc</Name><Value>A unique online payment system</Value></Field><Field id=\"TRXFIELD_D547\"><Name>SubsequentAuthOriginalAmount</Name><Value>40.75</Value></Field><Field id=\"TRXFIELD_D2\"><Name>TRXFIELD_D2</Name><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TRXFIELD_D54\"><Name>AccountName</Name><Value>as12 as12 </Value></Field><Field id=\"TRXFIELD_D55\"><Name>AccountStreet</Name><Value>123 TEST </Value></Field><Field id=\"TRXFIELD_D47\"><Name>CountryCode</Name><Value>United States</Value></Field><Field id=\"SaveCreditCard\"><Name>SaveCreditCard</Name><Value>0</Value></Field><Field id=\"MSO_PFTrxKey\"><Name>MSO_PFTrxKey</Name><Value>21070700735575</Value></Field><Field id=\"MSO_WalletID\"><Name>MSO_WalletID</Name><Value>0b9cbe13-3c29-4a5f-a5dd-33b1f0f802ab</Value></Field><Field id=\"MSO_EngineGUID\"><Name>MSO_EngineGUID</Name><Value>488599af-321c-4d0e-b882-6876fb61c57b</Value></Field><Field id=\"TRXFIELD_D540\"><Name>TransactionSchedule</Name><Value>Unscheduled</Value></Field><Field id=\"TRXFIELD_D541\"><Name>AuthorizationType</Name><Value>NotSet</Value></Field><Field id=\"MSO_Last_Xmit_Date\"><Name>MSO_Last_Xmit_Date</Name><Value>2021-07-07 00:00:00</Value></Field><Field id=\"MSO_Last_Xmit_Time\"><Name>MSO_Last_Xmit_Time</Name><Value>1900-01-01 11:42:54 PM</Value></Field><Field id=\"MSO_Last_Settled_Date\"><Name>MSO_Last_Settled_Date</Name><Value>1900-01-01</Value></Field><Field id=\"MSO_Last_Settled_Time\"><Name>MSO_Last_Settled_Time</Name><Value>1900-01-01 00:00:00</Value></Field><Field id=\"MSO_Doc_Number\"><Name>MSO_Doc_Number</Name><Value>STDINV0001</Value></Field><Field id=\"MSO_Doc_Type\"><Name>MSO_Doc_Type</Name><Value>3</Value></Field><Field id=\"MSO_Source_Of_Document\"><Name>MSO_Source_Of_Document</Name><Value>1</Value></Field><Field id=\"BACHNUMB\"><Name>BACHNUMB</Name><Value>TEST</Value></Field><Field id=\"MSO_IsBatched\"><Name>MSO_IsBatched</Name><Value>0</Value></Field><Field id=\"CUSTNMBR\"><Name>CUSTNMBR</Name><Value>AARONFIT0001</Value></Field><Field id=\"MSO_FirstName\"><Name>MSO_FirstName</Name><Value>as12</Value></Field><Field id=\"MSO_LastName\"><Name>MSO_LastName</Name><Value>as12</Value></Field><Field id=\"MSO_CardExpDate\"><Name>MSO_CardExpDate</Name><Value>0322</Value></Field><Field id=\"MSO_CardName\"><Name>MSO_CardName</Name><Value>V1ffff</Value></Field><Field id=\"MSO_Default\"><Name>MSO_Default</Name><Value>0</Value></Field><Field id=\"Status\"><Name>Status</Name><Value>1</Value></Field><Field id=\"SEQNUMBR\"><Name>SEQNUMBR</Name><Value>16384</Value></Field><Field id=\"CRCRDAMT\"><Name>CRCRDAMT</Name><Value>8.16</Value></Field><Field id=\"CCode\"><Name>CCode</Name><Value>United States</Value></Field><Field id=\"PHONNAME\"><Name>PHONNAME</Name><Value></Value></Field><Field id=\"MSO_COMMENT3\"><Name>MSO_COMMENT3</Name><Value>8.16</Value></Field><Field id=\"MSO_COMMENT4\"><Name>MSO_COMMENT4</Name><Value>PayLink</Value></Field><Field id=\"MSO_IsCardValid\"><Name>MSO_IsCardValid</Name><Value>1</Value></Field><Field id=\"MSO_TrxStatus\"><Name>MSO_TrxStatus</Name><Value>1</Value></Field><Field id=\"MSO_TrxType\"><Name>MSO_TrxType</Name><Value>1</Value></Field><Field id=\"MSO_Auth_Amount\"><Name>MSO_Auth_Amount</Name><Value>8.16</Value></Field><Field id=\"MSO_Capture_Amount\"><Name>MSO_Capture_Amount</Name><Value>8.16</Value></Field><Field id=\"BCHSOURC\"><Name>BCHSOURC</Name><Value>Sales Entry</Value></Field></Fields></Transaction></RequestData></Transaction></TransactionData></PaymentLine></PaymentLines><DocumentID>STDINV0001</DocumentID><BatchID>TEST</BatchID><CustomerID>AARONFIT0001</CustomerID><Date>7/7/2021 11:41:26 PM</Date><SOPTYPE>3</SOPTYPE><AmountsReceived>8.16</AmountsReceived><DocTypeID>3</DocTypeID><TradeDiscount>0.0</TradeDiscount><FreightAmount>0.0</FreightAmount><MiscAmount>0.0</MiscAmount><TransactionType>1</TransactionType><CurrencyID>Z-US$</CurrencyID></TokenTransaction></TokenTransactions>"}
+```
+
+###### Response
+A successful `POST` will result in a HTTP 204 No Content Response.
+
+A failed `POST` may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed.
+
+A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is failed.
+
+Resubmit Post Data
+------------------
+* `POST api/document/{PayLinkId}/PostData/Resubmit` will resubmit the payment to configured ERP
+
+###### Response
+A successful `POST` will result in a HTTP 204 No Content Response.
+
+A failed `POST` may result in a HTTP 400 Bad Request Response if the specified document does not exist or the Device ID used for the Security Token does not match or post failed.
+
+A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorization is failed.

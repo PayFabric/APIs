@@ -9,7 +9,7 @@ These JWT's are intended to be used to indicate your `Payment Intent`.
 Create JSON Web Tokens
 ---------------------------
 
-* `POST /jwt/create` will create the jwt token
+* `POST /payment/api/jwt/create` will create the jwt token
 ###### Request
 <pre>
 {
@@ -62,7 +62,7 @@ Please note that **bold** fields are required fields, in this API, the two field
 Validate JSON Web Tokens
 ---------------------------
 
-* `POST /jwt/validate` can check the JWT valid or not.
+* `POST /payment/api/jwt/validate` can check the JWT valid or not.
 
 ###### Request
 <pre>
