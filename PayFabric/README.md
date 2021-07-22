@@ -45,7 +45,7 @@ We have a [guide](Sections/Errors.md) detailing the meanings of the most common 
 
 API Documentation
 -----------------
-PayFabric sends and receives payloads as structured [JSON Objects](Sections/Objects.md) or [JSON Objects for 3.1](Sections/3.1JSONObjects.md) . 
+PayFabric sends and receives payloads as structured [JSON Objects for 3.0](Sections/Objects.md) or [JSON Objects for 3.1](Sections/3.1JSONObjects.md) . 
 Many of these objects are used in both requests and responses. Some of the objects (like Address or Cardholder) are embedded
 as child elements of other objects.
 
