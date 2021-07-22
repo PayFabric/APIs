@@ -5,7 +5,7 @@ The PayFabric Product APIs are used for managing products.  Please note that all
 
 Get products
 ------------
-* `GET /payment/3.1/api/Product/` will return first 50 products by default.
+* `GET /payment/3.1/api/Product` will return first 50 products by default.
 
 ###### Response
 <pre>
@@ -83,7 +83,7 @@ Get products in page
 
 Create product
 ---------------------------
-* `POST /payment/3.1/api/Product/` will create product.
+* `POST /payment/3.1/api/Product` will create product.
 
 ###### Request
 <pre>
