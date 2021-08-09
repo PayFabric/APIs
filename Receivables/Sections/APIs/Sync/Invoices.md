@@ -78,7 +78,7 @@ Create or Update an Invoice
 		"UnitOfMeasure": "EACH",
 		"UnitPrice": "30.00"
 	}],
-	"InvoiceType": "3",
+	"InvoiceType": "STDINV",
 	"MiscCost": "0.00",
 	"PaymentDiscountApplied": "0.00",
 	"PaymentTerms": null,
@@ -193,7 +193,7 @@ Create or Update an Invoice with an Attachment
 		"UnitOfMeasure": "EACH",
 		"UnitPrice": "30.00"
 	}],
-	"InvoiceType": "3",
+	"InvoiceType": "STDINV",
 	"MiscCost": "0.00",
 	"PaymentTerms": null,
 	"PONumber": null,
@@ -335,7 +335,7 @@ Retrieve an Invoice
 		"UnitOfMeasure": "EACH",
 		"UnitPrice": "30.00"
 	}],
-	"InvoiceType": "3",
+	"InvoiceType": "STDINV",
 	"MiscCost": "0.00",
 	"PaymentDiscountApplied": "0.00",
 	"PaymentTerms": null,
