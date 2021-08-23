@@ -134,7 +134,7 @@ The Transaction object represents a single transaction that will pass through Pa
 | ModifiedOn      | String | Timestamp indicating when this transaction was last modified. It's format should like "3/23/2015 11:16:19 PM". | datetime| 
 | Shipto   | [Object](#address)| Address object. |  
 | ReqAuthCode          | String | Required for ``Force`` transactions. |varchar(64)|
-| ReferenceKey          | String | The transaction key of initial processed transaction, Required for ``Void``, ``Credit`` and ``Ship`` transactions. |varchar(64)|
+| ReferenceKey          | String | The transaction key of initial processed transaction, Required for ``Void``, ``Refund`` and ``Capture`` transactions. |varchar(64)|
 | ReqTrxTag            | String | Required by FirstData for ``Void``,``Ship`` and reference ``Credit`` transactions. |varchar(64)|
 | TrxResponse          | [Object](#transaction-response) | Transaction response from Payment Gateway. |
 | Document | [Object](#document) | Level 2/3 transaction fields, as well as User Defined fields. |nvarchar(max)|
@@ -145,7 +145,6 @@ The Transaction object represents a single transaction that will pass through Pa
 | TrxUserDefine4       | String | User Defined field 4 |nvarchar(256)|
 | MSO_EngineGUID       | GUID | GUID of gateway account profile for this transaction. Developer can utilize this field|
 | PayDate              | String | A future date to process this transaction. In another word, this transaction won't be processed right away by setting this field. It's format should like "3/23/2015". For _Verify_ transaction type, the value in this attribute will be removed automatically.|datetime|
-| ReferenceKey         | String| The original transaction key if this transaction is a reference transaction |varchar(64)|
 | AuthorizationType| String| The authorization type of the transaction, valid values are ``Reauthorization``, ``Resubmission``, ``Incremental`` or ``NotSet`` |varchar(25)|
 | TrxSchedule | String| The type authorization of transaction to be processed, valid values are ``Unscheduled``, ``ScheduledInstallment``, ``ScheduledRecurring`` or ``NotSet`` |varchar(25)|
 |TrxInitiation| String| The entity that initiated the transaction, valid values are ``Merchant``, ``Customer`` or ``NotSet`` |varchar(25)|
