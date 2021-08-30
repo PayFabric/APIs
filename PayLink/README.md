@@ -60,12 +60,12 @@ as child elements of other objects.
 * [Retrieve SMS Notification Templates](/PayLink/Sections/Notifications.md#retrieve-sms-notification-templates)
 
 ### Templates
-* [Create Template](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#create-template-for-specific-template-type)
-* [Update Template](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#update-template)
-* [Copy Template](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#copy-template)
-* [Delete Template](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#delete-template)
-* [Set Default template](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#set-specific-template-as-default-template)
-* [Get Templates](https://github.com/PayFabric/APIs/blob/Release-16/PayLink/Sections/Templates.md#get-templates-by-template-type)
+* [Create Template](https://github.com/PayFabric/APIs/blob/master/PayLink/Sections/Templates.md#create-template-for-specific-template-type)
+* [Update Template](https://github.com/PayFabric/APIs/blob/master/PayLink/Sections/Templates.md#update-template)
+* [Copy Template](https://github.com/PayFabric/APIs/blob/master/PayLink/Sections/Templates.md#copy-template)
+* [Delete Template](https://github.com/PayFabric/APIs/blob/master/PayLink/Sections/Templates.md#delete-template)
+* [Set Default template](https://github.com/PayFabric/APIs/blob/master/PayLink/Sections/Templates.md#set-specific-template-as-default-template)
+* [Get Templates](https://github.com/PayFabric/APIs/blob/master/PayLink/Sections/Templates.md#get-templates-by-template-type)
 
 Help us make it better
 ----------------------
