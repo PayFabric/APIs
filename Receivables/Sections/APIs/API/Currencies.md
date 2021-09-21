@@ -6,11 +6,11 @@ The Currency API is used for viewing the information of a currency housed on the
 Retrieve a Currency
 --------------------
 
-* `GET /currency/{CurrencyCode}` will get the details for a currency on the PayFabric Receivables website based on the URL parameter
+* `GET /currencies/{CurrencyCode}` will get the details for a currency on the PayFabric Receivables website based on the URL parameter
 
 ###### Request
 <pre>
-	GET /currency/USD
+	GET /currencies/USD
 </pre>
 
 ###### Response
