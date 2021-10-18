@@ -898,9 +898,18 @@ Referenced transaction uses the original transaction Key as the referenced facto
 {
   "Amount": "1",
   "Type": "Capture",
-  "ReferenceKey": "151013003792"
+  "ReferenceKey": "151013003792",
+   "Document": {
+    "Head": [ 
+        {
+                <b>"Name":"CaptureComplete",</b>
+               <b> "Value":false</b>
+        }
+     ],   
+  }
 }
 </pre>
+<b>Note:</b> CaptureComplete = true means this is the last capture transaction, no capture allowed for the original authorization transaction; CaptureComplete = false means this is not the last capture transaction, it allows to do multiple capture for the original authorization transaction. CaptureComplete will be set to true if pass invalid value or don't pass when capture. If over capture or transactions includes tip amount or increment the original authorization, then CaptureComplete will be set to true. 
 
 * `GET /payment/api/reference/{TransactionKey}?trxtype=VOID` or `POST /transaction/process` with following request will attempt to cancel a transaction that has already been processed successfully with a payment gateway. PayFabric attempts to reverse the transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund (credit) must be performed.
 
