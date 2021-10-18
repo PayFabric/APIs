@@ -45,7 +45,7 @@ Increment Authorization
 ---------------------------
 <b>Incremental Authorization</b> represent additions to previously authorized amounts and do not replace the original authorization. The sum of all linked estimated and incremental authorizations represents the total amount authorized for a given transaction.
 
-Set *Action* = *IncrementAuthorization*, then *AdjustAmount* means the increase amount to the specified approved transaction, the final amount will update with fomular: New Final Amount = Original Final Amount + Adjust Amount; Increment authorization is available for Approved Sale and book transactions. But Increment authorization call will be failed if followed on a transaction which already adjusted tip or a book transaciton which has been captured.
+Set *Action* = *IncrementAuthorization*, then *AdjustAmount* means the increase amount to the specified approved transaction, the final amount will update with fomular: New Final Amount = Original Final Amount + Adjust Amount; Increment authorization is available for Approved Sale and book transactions. But Increment authorization call will be failed if followed on a transaction which already adjusted tip or a book transaciton which has been captured/partially captured.
 
 * `PATCH /payment/3.1/api/Transaction/Adjust` allows to adjust tip amount, increment authorization and partial reversal for approved EVO Snap transactions
 
@@ -72,7 +72,7 @@ Correct authorization
 ---------------------------
 <b>Correct Authorization</b> transactions are used to assist issuing banks with managing a cardholder’s open-to-buy balance, allowing optimal use of their funds.  This processing is especially important for prepaid cards and debit cardholders where the balance represents a checking or savings account balance.  
 
-Set *Action* = *CorrectAuthorization*, then *AdjustAmount* means the new final amount, it will correct the final amount for the specified transaction; Correct authorization is available for Approved Sale and book transactions. Correct authorization call will be failed if follows a book transaciton which has been captured.
+Set *Action* = *CorrectAuthorization*, then *AdjustAmount* means the new final amount, it will correct the final amount for the specified transaction; Correct authorization is available for Approved Sale and book transactions. Correct authorization call will be failed if follows a book transaciton which has been captured/partially captured.
 
 * `PATCH /payment/3.1/api/Transaction/Adjust` allows to adjust tip amount, increment authorization and partial reversal for approved EVO Snap transactions
 
