@@ -29,7 +29,7 @@ Adjust Tip call will be failed if followed on a transaction which already increm
     "AdjustAmount": "30"
 }
 </pre>
-###### Request
+###### Response
 <pre>
 {
     "Result": true,
@@ -57,7 +57,7 @@ Set *Action* = *IncrementAuthorization*, then *AdjustAmount* means the increase 
     "AdjustAmount": "30"
 }
 </pre>
-###### Request
+###### Response
 <pre>
 {
     "Result": true,
@@ -84,7 +84,7 @@ Set *Action* = *CorrectAuthorization*, then *AdjustAmount* means the new final a
     "AdjustAmount": "100"
 }
 </pre>
-###### Request
+###### Response
 <pre>
 {
     "Result": true,
