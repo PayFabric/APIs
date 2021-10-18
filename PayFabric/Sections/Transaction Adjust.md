@@ -12,9 +12,7 @@ Transaction adjustment API provide ability to adjust tip, increment authorizatio
 | :-----------|:---------| 
 | Action | Accept value is 'TipAdjustment', 'IncrementAuthorization' and 'CorrectAuthorization'. |
 | TrxKey | PayFabric transaction key.|
-| AdjustAmount| If the *Action* is *TipAdjustment*, then *AdjustAmount* means the new tip amount, it will replace the existing tip amount on this transaction and update the Final transaction amount with fomular: New Final Amount = Original Final Amount - Original Tip Amount + Adjust Amount;
-If the *Action* is *IncrementAuthorization*, then *AdjustAmount* means the increase amount to the specified approved transaction, the final amount will update with fomular: New Final Amount = Original Final Amount + Adjust Amount;
-If the *Action* is *CorrectAuthorization*, then *AdjustAmount* means the new final amount, it will correct the final amount for the specified transaction;|
+| AdjustAmount| If the *Action* is *TipAdjustment*, then *AdjustAmount* means the new tip amount, it will replace the existing tip amount on this transaction and update the Final transaction amount with fomular: New Final Amount = Original Final Amount - Original Tip Amount + Adjust Amount;If the *Action* is *IncrementAuthorization*, then *AdjustAmount* means the increase amount to the specified approved transaction, the final amount will update with fomular: New Final Amount = Original Final Amount + Adjust Amount;If the *Action* is *CorrectAuthorization*, then *AdjustAmount* means the new final amount, it will correct the final amount for the specified transaction;|
 
 Adjust Tip
 ---------------------------
@@ -28,8 +26,8 @@ Adjust Tip
     "TrxKey": "21100900761487",
     "AdjustAmount": "30"
 }
-
-###### Response
+</pre>
+###### Request
 <pre>
 {
     "Result": true,
