@@ -1,7 +1,7 @@
-Transaction Adjustment
+Transaction Adjustments
 =================
 
-Transaction adjustment API provide ability to adjust tip, increment authorization and correct authorization for approved EVO Snap* transactions.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+Transaction adjustments API provide ability to adjust tip, increment authorization and correct authorization for approved EVO Snap* transactions.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 This adjust API is only available for unsettled EVO Snap transactions.
 
