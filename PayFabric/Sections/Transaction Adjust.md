@@ -8,38 +8,9 @@ This adjust API is only available for unsettled EVO Snap transactions.
 
 | Parameter  | Description|
 | :-----------|:---------| 
-| Action | Accept value is 'TipAdjustment', 'IncrementAuthorization' and 'CorrectAuthorization'. |
+| Action | Accept value is 'IncrementAuthorization' and 'CorrectAuthorization'. |
 | TrxKey | PayFabric transaction key.|
 | AdjustAmount| Adjust amount for each action.|
-
-Adjust Tip
----------------------------
-<b>Tip Adjustment</b> may be used to add or adjust a tip amount after the AuthorizeAndCapture transaction has been approved. 
-
-Set *Action* = *TipAdjustment*, then *AdjustAmount* means the new tip amount, it will replace the existing tip amount on this transaction and update the Final transaction amount with fomular: New Final Amount = Original Final Amount - Original Tip Amount + Adjust Amount; Adjust Tip is only available for *Sale* transactions.
-Adjust Tip call will be failed if followed on a transaction which already incremented authorization.
-
-* `PATCH /payment/3.1/api/Transaction/Adjust` allows to adjust tip amount, increment authorization and partial reversal for approved EVO Snap transactions
-
-###### Request
-<pre>
-{
-    "Action": "TipAdjustment",
-    "TrxKey": "21100900761487",
-    "AdjustAmount": "30"
-}
-</pre>
-###### Response
-<pre>
-{
-    "Result": true,
-    "Message": "APPROVED",
-    "AdjustAmount": "30",
-    "TrxAmount": "120.00",
-    "OriginationID": "A677B1F59D85414BAB8D5E677A79BE11"
-}
-</pre>
-
 
 Increment Authorization
 ---------------------------
