@@ -137,8 +137,8 @@ as child elements of other objects.
 * [Update Theme](/PayFabric/Sections/Theme.md#update-theme)
 * [Delete Theme](/PayFabric/Sections/Theme.md#delete-theme)
 
-### Transaction Adjust API
-* [Transaction Adjust API](/PayFabric/Sections/Transaction%20Adjust.md)
+### Transaction Adjustments
+* [Transaction Adjustments](/PayFabric/Sections/Transaction%20Adjustments.md)
 
 Help us make it better
 ----------------------
