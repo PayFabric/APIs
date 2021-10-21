@@ -1,9 +1,11 @@
 Transaction Adjustments
 =================
 
-Transaction adjustments API provide ability to adjust tip, increment authorization and correct authorization for approved EVO Snap* transactions.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+Transaction adjustments API provide ability to adjust tip, increment authorization and correct authorization for approved EVO Snap* transactions. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
-This adjust API is only available for unsettled EVO Snap transactions.
+* `PATCH /payment/3.1/api/Transaction/Adjust` allows to adjust tip amount, increment authorization and partial reversal for approved EVO Snap transactions.
+
+This API is only available for unsettled EVO Snap transactions.
 
 
 | Parameter  | Description|
@@ -12,13 +14,12 @@ This adjust API is only available for unsettled EVO Snap transactions.
 | TrxKey | PayFabric transaction key.|
 | AdjustAmount| Adjust amount for each action.|
 
-Increment Authorization
+Incremental Authorization
 ---------------------------
 <b>Incremental Authorization</b> represent additions to previously authorized amounts and do not replace the original authorization. The sum of all linked estimated and incremental authorizations represents the total amount authorized for a given transaction.
 
-Set *Action* = *IncrementAuthorization*, then *AdjustAmount* means the increase amount to the specified approved transaction, the final amount will update with fomular: New Final Amount = Original Final Amount + Adjust Amount; Increment authorization is available for Approved Sale and book transactions. But Increment authorization call will be failed if followed on a transaction which already adjusted tip or a book transaciton which has been captured/partially captured.
+Set *Action* = *IncrementAuthorization*, then *AdjustAmount* means increasing *AdjustAmount* on the specified approved transaction, the final amount will be updated with equation: New Final Amount = Original Final Amount + Adjustment Amount; Incremental authorization is available for Approved Sale and Authorization transactions. But Incremental authorization request will be failed if the transaction had adjustment tip or the Authorization transaciton has been captured/partially captured.
 
-* `PATCH /payment/3.1/api/Transaction/Adjust` allows to adjust tip amount, increment authorization and partial reversal for approved EVO Snap transactions
 
 ###### Request
 <pre>
@@ -39,13 +40,11 @@ Set *Action* = *IncrementAuthorization*, then *AdjustAmount* means the increase 
 }
 </pre>
 
-Correct authorization
+Correct Authorization
 ---------------------------
-<b>Correct Authorization</b> transactions are used to assist issuing banks with managing a cardholder’s open-to-buy balance, allowing optimal use of their funds.  This processing is especially important for prepaid cards and debit cardholders where the balance represents a checking or savings account balance.  
+<b>Correct Authorization</b> transactions are used to assist issuing banks with managing a cardholder’s open-to-buy balance, allowing optimal use of their funds. This processing is especially important for prepaid cards and debit cardholders where the balance represents a checking or savings account balance.  
 
-Set *Action* = *CorrectAuthorization*, then *AdjustAmount* means the new final amount, it will correct the final amount for the specified transaction; Correct authorization is available for Approved Sale and book transactions. Correct authorization call will be failed if follows a book transaciton which has been captured/partially captured.
-
-* `PATCH /payment/3.1/api/Transaction/Adjust` allows to adjust tip amount, increment authorization and partial reversal for approved EVO Snap transactions
+Set *Action* = *CorrectAuthorization*, then *AdjustAmount* means the new final amount, it will update the final amount for the specified transaction; Correct Authorization is available for Approved Sale and Authorization transactions. Correct Authorization request will be failed if the Authorization transaciton has been captured/partially captured.
 
 ###### Request
 <pre>
