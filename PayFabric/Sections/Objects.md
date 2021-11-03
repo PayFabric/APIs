@@ -51,7 +51,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | CardName        | String | Type of credit card: ``Visa``, ``Mastercard``, ``Discover``,``JCB``,``AmericanExpress``,``DinersClub``. Only valid for credit cards. | nvarchar(16)|
 | IsDefaultCard   | Boolean | Indicates whether this is the primary card of the customer. Default value is ``False``. | bit, not null| 
 | IsLocked        | Boolean | Indicates whether the card is locked. Default value is ``False``.| bit, null |
-| IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet.  This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). And it will be set to false automatically for _Verify_ transaction.|  
+| IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet.  This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). And it will be set to false automatically for _Verify_ transactions or transactions with Tender set to `ApplePay` or `GooglePay`.|  
 | ModifiedOn      | String | This is a response field. Timestamp indicating when this record was last modified. It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
 | CardHolder*      | [Object](#cardholder) | Cardholder object. |  
 | Billto          | [Object](#address) | Address object. | 
