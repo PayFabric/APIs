@@ -1,12 +1,12 @@
-WalletLinks
+Wallet Links
 ===========
 
-The WalletLinks API is used for creating and retrieving WalletLinks. Please note that all requests require API authentication by PayFabric *Device ID* and *Device Password*, see our [guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md) for more details.
+The Wallet Links API is used for creating and retrieving Wallet Links. Please note that all requests require API authentication by PayFabric *Device ID* and *Device Password*, see our [guide](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Authentication.md) for more details.
 
-Create a WalletLink
+Create a Wallet Link
 ----------------
 
-* `POST /paylink/api/wallet` will create and save a WalletLink document to the PayLink server based on the request JSON payload
+* `POST /paylink/api/wallet` will create and save a Wallet Link document to the PayLink server based on the request JSON payload
 
 ###### Request
 <pre>
@@ -53,20 +53,20 @@ Please note that **bold** fields are required fields and all others are optional
 </pre>
 
 
-Retrieve a WalletLink URL
+Retrieve a Wallet Link URL
 -------------------------
 
-* `GET /paylink/api/wallet/retrieve/h3GSpCZKsEWNxFv6T_y_Gw/link` will return the specified WalletLink document's unique URL
+* `GET /paylink/api/wallet/retrieve/h3GSpCZKsEWNxFv6T_y_Gw/link` will return the specified Wallet Link document's unique URL
 
 ###### Response
 <pre>
 "https://sandbox.payfabric.com/paylink/web/walletlink/h3GSpCZKsEWNxFv6T_y_Gw"
 </pre>
 
-Retrieve a WalletLink
+Retrieve a Wallet Link
 -------------------------
 
-* `GET /paylink/api/wallet/YjBOQLdsgUudHEDpxg0T5zE` will return the specified WalletLink document
+* `GET /paylink/api/wallet/YjBOQLdsgUudHEDpxg0T5zE` will return the specified Wallet Link document
 
 ###### Response
 <pre>
@@ -97,11 +97,11 @@ Retrieve a WalletLink
 }
 </pre>
 
-Retrieve WalletLinks
+Retrieve Wallet Links
 -------------------------
 
-* `GET /paylink/api/wallet` will return all WalletLink documents created.
-* `GET /paylink/api/wallet?$filter` will return all WalletLink documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query. 
+* `GET /paylink/api/wallet` will return all Wallet Link documents created.
+* `GET /paylink/api/wallet?$filter` will return all Wallet Link documents based on an OData ([What is OData?](http://www.odata.org/documentation/odata-version-3-0/url-conventions/)) query. 
 
 e.g. `https://sandbox.payfabric.com/paylink/api/wallet?$filter=CustomerNumber eq 'test' and Device eq GUID'a284c1d0-a6fc-4938-98b4-0000b8cf4210' and Status eq '0' and NotificationEmail eq 'test@nodus.com' and NotificationPhone eq '1234567890' and CreatedOn gt datetime'2018-06-16' & $orderby CompletedOn desc`
 
@@ -174,10 +174,10 @@ e.g. `https://sandbox.payfabric.com/paylink/api/wallet?$filter=CustomerNumber eq
 ]
 </pre>
 
-Cancel a WalletLink
+Cancel a Wallet Link
 -------------------
 
-* `POST /paylink/api/wallet/h3GSpCZKsEWNxFv6T_y_Gw/cancel` will cancel the specified WalletLink document
+* `POST /paylink/api/wallet/h3GSpCZKsEWNxFv6T_y_Gw/cancel` will cancel the specified Wallet Link document
 
 ###### Response
 A successful `POST` will result in a HTTP 200 OK Response.  

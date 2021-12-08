@@ -14,8 +14,8 @@ Get Templates by Template Type
 | :------------- | ------------- | 
 | PayLinkEmailTemplate | By passing this value can get all the PayLink Notification Email Templates. |
 | PayLinkSMSTemplate | By passing this value can get all the PayLink Notification SMS Templates.  |
-| WalletLinkEmailTemplate | By passing this value can get all the WalletLink Notification Email Templates. |
-| WalletLinkSMSTemplate | By passing this value can get all the WalletLink Notification SMS Templates. |
+| WalletLinkEmailTemplate | By passing this value can get all the Wallet Link Notification Email Templates. |
+| WalletLinkSMSTemplate | By passing this value can get all the Wallet Link Notification SMS Templates. |
 | PaymentPageTemplate | By passing this value can get all the Payment page Templates. |
 | ConfirmationPageTemplate | By passing this value can get all the PayLink Confirmation page Templates. |
 
@@ -57,7 +57,7 @@ Get Templates by Template Type
 ]
 </pre>
 
-###### WalletLink Email Template Response
+###### Wallet Link Email Template Response
 <pre>
 [
     {
@@ -77,7 +77,7 @@ Get Templates by Template Type
 ]
 </pre>
 
-###### WalletLink SMS Template Response
+###### Wallet Link SMS Template Response
 <pre>
 [
     {
@@ -182,45 +182,45 @@ Please the available 'type' value [Available 'type' Value](https://github.com/Pa
 }
 </pre>
 
-###### Create WalletLink Email Template Request
+###### Create Wallet Link Email Template Request
 * Please refer the available [parameters](https://github.com/PayFabric/APIs/blob/master/PayLink/Sections/Parameters.md#walletlink-emailsms-template-parameters) for WalletLink Email Template 
 <pre>
 {
-    <b>"Subject": "WalletLink Email",</b>
+    <b>"Subject": "Wallet Link Email",</b>
     <b>"Message": "[[[Document.WalletLinkURL]]]",</b>
-    <b>"Name": "WalletLink Email"</b>
+    <b>"Name": "Wallet Link Email"</b>
 }
 </pre>
-###### Create WalletLink Email Template Response
+###### Create Wallet Link Email Template Response
 <pre>
 {
     "ID": "ee2f96b1-c837-430c-b722-ad5b0179f399",
-    "Subject": "WalletLink Email",
+    "Subject": "Wallet Link Email",
     "Message": "[[[Document.WalletLinkURL]]]",
     "CSS": null,
     "JS": null,
-    "Name": "WalletLink Email"
+    "Name": "Wallet Link Email"
 }
 </pre>
 
-###### Create WalletLink SMS Template Request
+###### Create Wallet Link SMS Template Request
 * Please refer the available [parameters](https://github.com/PayFabric/APIs/blob/master/PayLink/Sections/Parameters.md#walletlink-emailsms-template-parameters) for WalletLink SMS Template 
 <pre>
 {
-    <b>"Subject": "WalletLink SMS",</b>
+    <b>"Subject": "Wallet Link SMS",</b>
     <b>"Message": "[[[Document.WalletLinkURL]]]",</b>
-    <b>"Name": "WalletLink SMS"</b>
+    <b>"Name": "Wallet Link SMS"</b>
 }
 </pre>
-###### Create WalletLink SMS Template Response
+###### Create Wallet Link SMS Template Response
 <pre>
 {
     "ID": "ee2f96b1-c837-430c-b722-ad5b0179f399",
-    "Subject": "WalletLink SMS",
+    "Subject": "Wallet Link SMS",
     "Message": "[[[Document.WalletLinkURL]]]",
     "CSS": null,
     "JS": null,
-    "Name": "WalletLink SMS"
+    "Name": "Wallet Link SMS"
 }
 </pre>
 

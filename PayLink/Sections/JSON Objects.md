@@ -55,21 +55,21 @@ This object represents the PayLink record that customers will pay through their 
 \* Required
 
 
-## WalletLink Document
-This object represents the WalletLink record that customers will be able to save their credit card or eCheck details through their unique URL. Below is the explanation about this JSON object.
+## Wallet Link Document
+This object represents the Wallet Link record that customers will be able to save their credit card or eCheck details through their unique URL. Below is the explanation about this JSON object.
 
 | Attribute | Data Type | Definition | Access |
 | :----------- | :--------- | :--------- | :--------- |
-| Id | GUID | Unique Id GUID for the WalletLink document | RO |
+| Id | GUID | Unique Id GUID for the Wallet Link document | RO |
 | Device | GUID | Unique PayFabric Device that was used to create the authentication token | RO |
 | CustomerNumber* | String | Customer unique number| RW |
 | CustomerName | String | Customer name | RW |
-| TenderType | Integer | The tender type the customer used to complete the WalletLink, available values `0 = unknown, 1 = credit card, 2 = ECheck, 3 = ACH` | RO |
+| TenderType | Integer | The tender type the customer used to complete the Wallet Link, available values `0 = unknown, 1 = credit card, 2 = ECheck, 3 = ACH` | RO |
 | WalletID | GUID | Unique Id of created Wallet record, see [PayFabric Wallet](../../PayFabric/Sections/Wallets.md) documentation for info | RW |
-| ReturnUrl | String | User defined return URL, overwrites WalletLink confirmation page | RW |
+| ReturnUrl | String | User defined return URL, overwrites Wallet Link confirmation page | RW |
 | Status | Integer | Document status, available values `0 = incomplete, 1 = complete, 2 = cancelled` | RO |
-| CreatedOn | DateTime | Date and time WalletLink was created | RO |
-| CompleteOn | DateTime | Date and time WalletLink was completed | RO |
+| CreatedOn | DateTime | Date and time Wallet Link was created | RO |
+| CompleteOn | DateTime | Date and time Wallet Link was completed | RO |
 | Message | String | Document status update messages | RO |
 | CustomeMessage | String | User defined message | RW |
 | Notification* | [Notification Object](#notification) | Specify notification method and SMS template | RW |

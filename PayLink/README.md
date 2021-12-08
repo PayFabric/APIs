@@ -49,10 +49,10 @@ as child elements of other objects.
 * [Update Post Data](/PayLink/Sections/PayLinks.md#update-post-data)
 * [Resubmit Post Data](/PayLink/Sections/PayLinks.md#resubmit-post-data)
 
-### WalletLinks
-* [Create a WalletLink](/PayLink/Sections/WalletLinks.md#create-a-walletlink)
-* [Retrieve a WalletLink URL](/PayLink/Sections/WalletLinks.md#retrieve-a-walletlink-url)
-* [Cancel a WalletLink](/PayLink/Sections/WalletLinks.md#cancel-a-walletlink)
+### Wallet Links
+* [Create a Wallet Link](/PayLink/Sections/WalletLinks.md#create-a-walletlink)
+* [Retrieve a Wallet Link URL](/PayLink/Sections/WalletLinks.md#retrieve-a-walletlink-url)
+* [Cancel a Wallet Link](/PayLink/Sections/WalletLinks.md#cancel-a-walletlink)
 
 ### Notifications
 * [Resend PayLink Notification Email](/PayLink/Sections/Notifications.md#resend-paylink-notifiation-email)

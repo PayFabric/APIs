@@ -34,13 +34,13 @@ PayLink Templates Parameters
 |[[[Profile.Country]]]|Your company's country. |
 
 
-#### WalletLink Email/SMS Template Parameters
+#### Wallet Link Email/SMS Template Parameters
 >
 | Name | Description | 
 | :------------- | ------------- |
-|[[[Document.WalletLinkURL]]]|The unique URL to the WalletLink.|
-|[[[Document.DocumentDate]]]|The date the WalletLink was created. |
-|[[[Document.Message]]]|The document message supplied during WalletLink creation. |
+|[[[Document.WalletLinkURL]]]|The unique URL to the Wallet Link.|
+|[[[Document.DocumentDate]]]|The date the Wallet Link was created. |
+|[[[Document.Message]]]|The document message supplied during Wallet Link creation. |
 |[[[Document.CustomerNumber]]]|Your customer's unique ID.|
 |[[[Document.CustomerName]]]|Your customer's name. |
 |[[[Profile.CompanyName]]]|Your company's name. |
