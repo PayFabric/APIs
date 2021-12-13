@@ -60,8 +60,8 @@ as child elements of other objects.
 * [Retrieve Transactions](Sections/Transactions.md#retrieve-transactions)
 * [Cancel (Void) a Transaction](Sections/Transactions.md#referenced-transactions-capture-ship-void-or-credit-refund)
 * [Capture a Pre-Authorized Transaction](Sections/Transactions.md#referenced-transactions-capture-ship-void-or-credit-refund)
-* [Credit a Transaction](Sections/Transactions.md#referenced-transactions-capture-ship-void-or-credit-refund)
-* [Refund a Customer](Sections/Transactions.md#refund-a-customer)
+* [Refund Reference](Sections/Transactions.md#referenced-transactions-capture-ship-void-or-refund-credit)
+* [Refund Non-Reference](Sections/Transactions.md#refund-non-reference)
 * [Process eCheck Transaction](Sections/Process%20eCheck%20Transaction.md)
 
 ### Wallets / Credit Cards / eChecks
