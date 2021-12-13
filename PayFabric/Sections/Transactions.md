@@ -921,7 +921,7 @@ Referenced transaction uses the original transaction Key as the referenced facto
 }
 </pre>
 
-* `GET /payment/api/reference/{TransactionKey}?trxtype=Refund` or `POST /transaction/process` with following request will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a CREDIT transaction for the same exact amount as the original SALE transaction.
+* `GET /payment/api/reference/{TransactionKey}?trxtype=Refund` or `POST /transaction/process` with following request will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a Refund transaction for a previous Sale/Caputre transaction.
 
 ###### Request
 <pre>
@@ -952,10 +952,10 @@ Note: `ReferenceKey` is the initial processed transaction's `TrxKey`. If `Amount
     "CVV2Response": null,
     "CardType": "Credit",
     "ExpectedSettledTime": "2021-07-03T02:00:00.0000000Z",
-    "FinalAmount": "21.00",
+    "FinalAmount": "1.00",
     "IAVSAddressResponse": "N",
     "Message": "Approved",
-    "OrigTrxAmount": "21.00",
+    "OrigTrxAmount": "1.00",
     "OriginationID": "A41E0E04DA9E",
     "PayFabricErrorCode": null,
     "RespTrxTag": null,
@@ -967,17 +967,17 @@ Note: `ReferenceKey` is the initial processed transaction's `TrxKey`. If `Amount
     "TAXml": "",
     "TerminalID": null,
     "TerminalResultCode": null,
-    "TrxAmount": "21.00",
+    "TrxAmount": "1.00",
     "TrxDate": "7/1/2021 10:52:15 PM",
     "TrxKey": "21070100732374",
     "WalletID": "00000000-0000-0000-0000-000000000000"
 }
 </pre>
 
-Refund a Customer
+Refund (Non-Reference)
 -----------------
 
-To refund a customer, you just submit a credit to the customer that is owed the refund. The amount of the transaction should match the amount that is due to the customer. To perform a Refund transaction, you just create a transaction object, set the `Type` field to `Refund`, and then use [Create and Process a Transaction](#create-and-process-a-transaction) to execute the transaction.
+To perform a Refund transaction without reference transacton, you just need to create a transaction object, set the `Type` field to `Refund`, and then use [Create and Process a Transaction](#create-and-process-a-transaction) to submit the transaction.
 
 * `POST /payment/api/transaction/process?cvc={CVCValue}`
 
