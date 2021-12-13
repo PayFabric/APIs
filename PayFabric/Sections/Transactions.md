@@ -883,10 +883,10 @@ This request accepts the below query string parameters to add options. You can u
 </pre>
 
 
-Referenced Transaction(s): Capture (Ship), Void or Credit (Refund)
+Referenced Transaction(s): Capture (Ship), Void or Refund (Credit)
 ---------------------------------------------------------
 
-Referenced transaction uses the original transaction Key as the referenced factor to subsequently process a new transaction. There’re 3 types of referenced transactions: Void, Capture (Ship) and Credit (Refund). They all use the transaction Key from the original transaction to process the new transaction.
+Referenced transaction uses the original transaction Key as the referenced factor to subsequently process a new transaction. There’re 3 types of referenced transactions: Void, Capture (Ship) and Refund (Credit). They all use the transaction Key from the original transaction to process the new transaction.
 
 #### Capture (Ship)
 
@@ -931,7 +931,17 @@ Referenced transaction uses the original transaction Key as the referenced facto
 }
 </pre>
 
-Note: `ReferenceKey` is the initial processed transaction's `TrxKey`.
+or 
+
+<pre>
+{
+  "Amount":"1",
+  "Type": "Refund",
+  "ReferenceKey": "151013003792"
+}
+</pre>
+
+Note: `ReferenceKey` is the initial processed transaction's `TrxKey`. If `Amount` is not provided in request body for Refund transaction, it will processed with original transaction amount. If `Amount` is provided, it will process partial refund with the specific amount.
 
 ###### Response
 <pre>
@@ -964,8 +974,6 @@ Note: `ReferenceKey` is the initial processed transaction's `TrxKey`.
 }
 </pre>
 
-If `Amount` is not provided in request body for Refund transaction, it will processed with original transaction amount.
-
 Refund a Customer
 -----------------
 
@@ -976,7 +984,7 @@ To refund a customer, you just submit a credit to the customer that is owed the 
 ###### Request
 <pre>
 {
-    "SetupId": "PFP",
+    "SetupId": "EVO",
     <b>"Type": "Refund"</b>,
     "Customer": "JOHNDOE0001",
     "Amount": 19.99,
