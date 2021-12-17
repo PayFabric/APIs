@@ -1,7 +1,7 @@
 Integrations
 ============
 
-The Integration API is used for updating, and viewing integration information on the PayFabric Receivables website. Please note that all requests require API authentication, see our [guide](../Token.md) on how to authenticate.
+The Integration API is used for updating, and viewing integration information on the PayFabric Receivables website. Please note that all requests require API authentication, see our [guide](../Sync/Token.md) on how to authenticate.
 
 Update the Integration Document
 --------------------
