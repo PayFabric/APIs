@@ -22,8 +22,6 @@ This request accepts the below query string parameters to add additional options
 | FeeDebitMemoEnabled | Search by if the invoice has a fee | [Boolean](../QueryFilter.md#boolean) |
 | FeeDebitMemoPrefix | Search by the fee pre fix | [String](../QueryFilter.md#string) |
 | InvoiceId | Invoice number | [String Filter](../QueryFilter.md#string-filter) |
-| IsParentAccount | Search by if it is a parent account | [Boolean](../QueryFilter.md#boolean) |
-| ParentCustomerId | Parent customer number | [String](../QueryFilter.md#string) |
 | PONumber | Purchase order number | [String Filter](../QueryFilter.md#string-filter) |
 | PostingDate | Search by the posting date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
 | RBPFeeDebitMemoEnabled | Search by if the the invoice has a fee for AutoPay | [Boolean](../QueryFilter.md#boolean) |
@@ -281,8 +279,6 @@ This request accepts the below query string parameters to add additional options
 | FeeDebitMemoEnabled | Search by if the invoice has a fee | [Boolean](../QueryFilter.md#boolean) |
 | FeeDebitMemoPrefix | Search by the fee pre fix | [String](../QueryFilter.md#string) |
 | InvoiceId | Invoice number | [String Filter](../QueryFilter.md#string-filter) |
-| IsParentAccount | Search by if it is a parent account | [Boolean](../QueryFilter.md#boolean) |
-| ParentCustomerId | Parent customer number | [String](../QueryFilter.md#string) |
 | PONumber | Purchase order number | [String Filter](../QueryFilter.md#string-filter) |
 | PostingDate | Search by the posting date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
 | RBPFeeDebitMemoEnabled | Search by if the the invoice has a fee for AutoPay | [Boolean](../QueryFilter.md#boolean) |
@@ -321,8 +317,6 @@ This request accepts the below query string parameters to add additional options
             },
             "CustomerName": "Nodus Technologies",
             "CustomerId": "Nodus0001",
-            "ParentCustomerName": null,
-            "ParentCustomerId": "Nodus0001",
             "Identity": "",
             "ExtensionData": "",
             "BatchNumber": "BEG BAL",
@@ -352,8 +346,6 @@ This request accepts the below query string parameters to add additional options
             },
             "CustomerName": "Nodus Technologies",
             "CustomerId": "Nodus0001",
-            "ParentCustomerName": null,
-            "ParentCustomerId": "Nodus0001",
             "Identity": "",
             "ExtensionData": "<ExtData><Ext_USERDEF1></Ext_USERDEF1><Ext_USERDEF2></Ext_USERDEF2><Ext_USRDEF03></Ext_USRDEF03><Ext_USRDEF04></Ext_USRDEF04><Ext_USRDEF05></Ext_USRDEF05><Ext_USRDAT01>1/1/1900</Ext_USRDAT01><Ext_USRDAT02>1/1/1900</Ext_USRDAT02><Ext_USRTAB01></Ext_USRTAB01><Ext_USRTAB09></Ext_USRTAB09><Ext_USRTAB03></Ext_USRTAB03></ExtData>",
             "BatchNumber": "INV & PAYMENT",
@@ -387,8 +379,6 @@ This request accepts the below query string parameters to add additional options
 | FeeDebitMemoEnabled | Search by if the invoice has a fee | [Boolean](../QueryFilter.md#boolean) |
 | FeeDebitMemoPrefix | Search by the fee pre fix | [String](../QueryFilter.md#string) |
 | InvoiceId | Invoice number | [String Filter](../QueryFilter.md#string-filter) |
-| IsParentAccount | Search by if it is a parent account | [Boolean](../QueryFilter.md#boolean) |
-| ParentCustomerId | Parent customer number | [String](../QueryFilter.md#string) |
 | PONumber | Purchase order number | [String Filter](../QueryFilter.md#string-filter) |
 | PostingDate | Search by the posting date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
 | RBPFeeDebitMemoEnabled | Search by if the the invoice has a fee for AutoPay | [Boolean](../QueryFilter.md#boolean) |
@@ -437,8 +427,6 @@ This request accepts the below query string parameters to add additional options
 | FeeDebitMemoEnabled | Search by if the invoice has a fee | [Boolean](../QueryFilter.md#boolean) |
 | FeeDebitMemoPrefix | Search by the fee pre fix | [String](../QueryFilter.md#string) |
 | InvoiceId | Invoice number | [String Filter](../QueryFilter.md#string-filter) |
-| IsParentAccount | Search by if it is a parent account | [Boolean](../QueryFilter.md#boolean) |
-| ParentCustomerId | Parent customer number | [String](../QueryFilter.md#string) |
 | PONumber | Purchase order number | [String Filter](../QueryFilter.md#string-filter) |
 | PostingDate | Search by the posting date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
 | RBPFeeDebitMemoEnabled | Search by if the the invoice has a fee for AutoPay | [Boolean](../QueryFilter.md#boolean) |
@@ -482,8 +470,6 @@ This request accepts the below query string parameters to add additional options
 | FeeDebitMemoEnabled | Search by if the invoice has a fee | [Boolean](../QueryFilter.md#boolean) |
 | FeeDebitMemoPrefix | Search by the fee pre fix | [String](../QueryFilter.md#string) |
 | InvoiceId | Invoice number | [String Filter](../QueryFilter.md#string-filter) |
-| IsParentAccount | Search by if it is a parent account | [Boolean](../QueryFilter.md#boolean) |
-| ParentCustomerId | Parent customer number | [String](../QueryFilter.md#string) |
 | PONumber | Purchase order number | [String Filter](../QueryFilter.md#string-filter) |
 | PostingDate | Search by the posting date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
 | RBPFeeDebitMemoEnabled | Search by if the the invoice has a fee for AutoPay | [Boolean](../QueryFilter.md#boolean) |
@@ -522,8 +508,6 @@ This request accepts the below query string parameters to add additional options
             },
             "CustomerName": "Aaron Fitz Electrical",
             "CustomerId": "AARONFIT0001",
-            "ParentCustomerName": null,
-            "ParentCustomerId": "AARONFIT0001",
             "Identity": "",
             "ExtensionData": "<ExtData/>",
             "BatchNumber": "MAYORD",
@@ -566,8 +550,6 @@ This request accepts the below query string parameters to add additional options
 | FeeDebitMemoEnabled | Search by if the invoice has a fee | [Boolean](../QueryFilter.md#boolean) |
 | FeeDebitMemoPrefix | Search by the fee pre fix | [String](../QueryFilter.md#string) |
 | InvoiceId | Invoice number | [String Filter](../QueryFilter.md#string-filter) |
-| IsParentAccount | Search by if it is a parent account | [Boolean](../QueryFilter.md#boolean) |
-| ParentCustomerId | Parent customer number | [String](../QueryFilter.md#string) |
 | PONumber | Purchase order number | [String Filter](../QueryFilter.md#string-filter) |
 | PostingDate | Search by the posting date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
 | RBPFeeDebitMemoEnabled | Search by if the the invoice has a fee for AutoPay | [Boolean](../QueryFilter.md#boolean) |
@@ -606,8 +588,6 @@ This request accepts the below query string parameters to add additional options
             },
             "CustomerName": "Aaron Fitz Electrical",
             "CustomerId": "AARONFIT0001",
-            "ParentCustomerName": null,
-            "ParentCustomerId": "AARONFIT0001",
             "Identity": "",
             "ExtensionData": "",
             "BatchNumber": "BEG BAL",

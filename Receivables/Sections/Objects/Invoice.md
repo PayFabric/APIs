@@ -62,8 +62,6 @@ This object is used when getting an invoice on the PayFabric Receivables website
 | InvoiceGuid | Guid | Unique identifer of the invoice | uniqueidentifier | 
 | InvoiceId | String | Invoice number | nvarchar(50) |
 | InvoiceType | String | Invoice type | nvarchar(50) |
-| ParentCustomerId | String | Parent customer number | nvarchar(25) |
-| ParentCustomerName | String | Parent customer name | nvarchar(25) |
 | PONumber | String | Purchase order number | nvarchar(50) |
 | PostingDate | DateTime | Date that the invoice was posted. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" | datetime |
 | Status | String | Status of the invoice. Valid options are ``Outstanding``, ``PastDue``, and ``Paid`` | nvarchar(50) |

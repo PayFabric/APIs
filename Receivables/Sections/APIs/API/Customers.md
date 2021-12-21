@@ -90,7 +90,6 @@ Retrieve the current customer
     "Email": "nodus0001@nodus.com",
     "ExtensionData": "",
     "Name": "Nodus Technologies",
-    "ParentCustomerId": "Nodus0001",
     "PaymentTerms": null,
     "StatementName": "Nodus Technologies",
     "Currency": "Z-US$"

@@ -244,7 +244,6 @@ Retrieve Payment Receipt
         "Email": "nodus0001@nodus.com",
         "ExtensionData": "",
         "Name": "Nodus Technologies",
-        "ParentCustomerId": "",
         "PaymentTerms": "2% 10/Net 30",
         "StatementName": "Nodus Technologies",
         "Currency": "System.Data.Entity.DynamicProxies.Currency_30F089ECC07A0C4D8ED6F4DCCECCB9F0BB430A3CFCDA4043EF8D27F0A890BC94",
