@@ -56,7 +56,7 @@ as child elements of other objects.
 
 ### Customers
 * [Delete a Customer](Sections/APIs/Sync/Customers.md#delete-a-customer)
-* [Retrieve a Customer](Sections/APIs/Sync/Customers.md#retrieve-customers)
+* [Retrieve a Customer](Sections/APIs/Sync/Customers.md#retrieve-a-customer-by-customer-identifier)
 * [Create or Update a Customer](Sections/APIs/Sync/Customers.md#create-or-update-a-customer)
 
 ### Integrations
