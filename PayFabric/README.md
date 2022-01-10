@@ -1,6 +1,6 @@
 PayFabric APIs
 ==============
-PayFabric APIs are organized around Representational State Transfer (**REST**) architecture and are designed to have predictable, resource-oriented URLs and use HTTP response codes to indicate API errors. Below are the PayFabric endpoint URLs:
+PayFabric APIs are organized around Representational State Transfer (**REST**) architecture and are designed to have predictable, resource-oriented URLs and use HTTP response codes to indicate API errors. Below are the PayFabric's API endpoint URLs:
 
 1. Production: ``https://www.payfabric.com/payment/api``
 2. Sandbox: ``https://sandbox.payfabric.com/payment/api``
