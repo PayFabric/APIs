@@ -2,8 +2,8 @@ PayFabric APIs
 ==============
 PayFabric APIs are organized around Representational State Transfer (**REST**) architecture and are designed to have predictable, resource-oriented URLs and use HTTP response codes to indicate API errors. Below are the server URL:
 
-1. Live Server:    ``https://www.payfabric.com``
-1. Sandbox Server: ``https://sandbox.payfabric.com``
+1. Live Server:    ``https://www.payfabric.com``; Endpoint URL: ``https://www.payfabric.com/payment/api``
+2. Sandbox Server: ``https://sandbox.payfabric.com``; Endpoint URL: ``https://sandbox.payfabric.com/payment/api``
 
 Where do I start?
 -----------------
