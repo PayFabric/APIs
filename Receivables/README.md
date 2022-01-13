@@ -76,8 +76,8 @@ as child elements of other objects.
 
 ### Payments
 * [Create or Update a Payment](Sections/APIs/Sync/Payments.md#create-or-update-a-payment)
-* [Retrieve Payments](Sections/APIs/Sync/Payments.md#retrieve-payments)
-* [Retrieve a Payment](Sections/APIs/Sync/Payments.md#retrieve-payments)
+* [Retrieve Payments](Sections/APIs/Sync/Payments.md#retrieve-payments-by-query-parameters)
+* [Retrieve a Payment](Sections/APIs/Sync/Payments.md#retrieve-a-payment)
 * [Void a Payment](Sections/APIs/Sync/Payments.md#void-payment)
 
 
