@@ -12,7 +12,7 @@ This object represents the PayLink record that customers will pay through their 
 | Attribute | Data Type | Definition | Access |
 | :----------- | :--------- | :--------- | :--------- |
 | Id | GUID | Unique Id GUID for the PayLink document | RO |
-| Device | GUID | Unique PayFabric Device that was used to create the authentication token | RO |
+| Device | GUID | Unique PayFabric Device that was used to create the authentication token, ***Note*** only the device bind with PayLink Service can call PayLink APIs. | RO |
 | Payment* | [Payment Object](#payment) | Specify payment gateway account profile names and accepted payment types, **required if** `SetupId` is blank | RW |
 | Currency* | String | Currency code, such as `USD`, `CAD` | RW |
 | Amount* | Decimal | Transaction amount | RW |
@@ -29,12 +29,12 @@ This object represents the PayLink record that customers will pay through their 
 | TransactionType* | String | Credit card transaction type, such as `Sale` or `Book` | RW |
 | DocDate* | DateTime | Document/invoice date | RW |
 | DueDate | DateTime | Document/invoice due date | RW |
-| DocType | Integer | Document type. **Dynamics GP Only**, availalble values `2 = Order, 3 = Invoice, 4 = CashReceipt, 5 = RM_Invoice, 6 = IVC_Invoice, 7 = Payment, 8 = CCATranx` | RW |
+| DocType | Integer | Document type. **Dynamics GP Only**, availalble values `2 = Order, 3 = Invoice`. ****Note**** DocType only accepts 3 when the PostDataType is CashReceipt  | RW |
 | PaymentTerm | String | Document payment term, such as `NET40` | RW |
 | SourceOfDocument | Integer | Source of document. **Dynamics GP Only**, available values `1 = Sales Entry, 3 = Invoice Entry, 4 = RM_Sales, 5 = RM_Cash`| RW |
 | BatchSource | Integer | Batch source. **Dynamics GP Only**, available values `SalesEntry, InvoiceEntry, RM_Cash, RM_Sales` | RW |
 | BatchNo | String | Batch number. This field will be required after ERP connection's ERP Provider set as Microsoft Dynamics GP or Microsoft Dynamics SL in [Settings](https://github.com/PayFabric/Portal/blob/master/PayLink/Sections/Settings.md#configure-erp-connection) | RW |
-| MerchantEmail | String | Email From | RW |
+| MerchantEmail | String | Merchant's Email | RW |
 | ReturnUrl | String | User defined return URL, overwrites PayLink confirmation page | RW |
 | Status | Integer | Document status, available values `0 = draft, 1 = waiting for payment, 2 = cancelled, 3 = paid`, Note: When [Create a PayLink](./PayLinks.md#create-a-paylink), the value could be `0` or `1`; when [Update a PayLink](./PayLinks.md#update-a-paylink), the value should be updated from `0` to `1` rather than `1` to `0`; when [Cancel a PayLink](./PayLinks.md#cancel-a-paylink), the value should be updated from `1` to `2` or from `0` to `2`. | RW |
 | IntegrationStatus | Integer | Document integration status, available values `0 = Pending, 1 = Failed, 2 = Successful`, Note: IntegrationStatus could be updated from `Pending` to `Sucessful` or `Failed` via API| RW |
@@ -42,7 +42,7 @@ This object represents the PayLink record that customers will pay through their 
 | BillingAddress | [Address Object](#address) | Billing address | RW |
 | Items | Array of [Item Object](#item) | Collection of line items | RW |
 | UserDefinedFields | Array of [Field Object](#field) | Collection of user defined values | RW |
-| PostDataType | String | ERP posting data type | RW |
+| PostDataType | String | ERP posting data type; For Dynamics GP, available values are 'PaymentLine' and 'CashReceipt' | RW |
 | TransactionKey | String | PayFabric transaction key | RO |
 | PaidOn | DateTime | Date and time payment was made | RO |
 | LastProcessDate | DateTime | Date and time document was last processed, such as updates or ERP posting | RO |
@@ -61,7 +61,7 @@ This object represents the Wallet Link record that customers will be able to sav
 | Attribute | Data Type | Definition | Access |
 | :----------- | :--------- | :--------- | :--------- |
 | Id | GUID | Unique Id GUID for the Wallet Link document | RO |
-| Device | GUID | Unique PayFabric Device that was used to create the authentication token | RO |
+| Device | GUID | Unique PayFabric Device that was used to create the authentication token, ***Note*** only the device bind with PayLink Service can call PayLink APIs. | RO |
 | CustomerNumber* | String | Customer unique number| RW |
 | CustomerName | String | Customer name | RW |
 | TenderType | Integer | The tender type the customer used to complete the Wallet Link, available values `0 = unknown, 1 = credit card, 2 = ECheck, 3 = ACH` | RO |
