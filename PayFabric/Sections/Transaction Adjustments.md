@@ -44,7 +44,7 @@ Correct Authorization
 ---------------------------
 <b>Correct Authorization</b> transactions are used to assist issuing banks with managing a cardholder’s open-to-buy balance, allowing optimal use of their funds. This processing is especially important for prepaid cards and debit cardholders where the balance represents a checking or savings account balance.  
 
-Set *Action* = *CorrectAuthorization*, then *AdjustAmount* means the new final amount, it will update the final amount for the specified transaction; Correct Authorization is available for Approved Sale and Authorization transactions. Correct Authorization request will be failed if the Authorization transaciton has been captured/partially captured.
+Set *Action* = *CorrectAuthorization*, then *AdjustAmount* means the new final amount, it will update the final amount for the specified transaction; Correct Authorization is available to reduce the amount of the Approved Sale and Authorization transactions. Correct Authorization request will be failed if the Authorization transaciton has been captured/partially captured.
 
 ###### Request
 <pre>
