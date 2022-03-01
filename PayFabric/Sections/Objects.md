@@ -66,7 +66,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | StartDate       | String | This field is required for UK debit cards, format is MMYY.|varchar(4)|
 | NewCustomerNumber | String | This field is used to submit new customer number for updating this record's customer field. | nvarchar(128)|  
 | CardType | String | This is a response field, the possible value is 'Credit', 'Debit' or 'Prepaid' for credit card, and it is blank for eCheck. | varchar(20)| 
-| Token    | String | The Apple Pay or Google Pay payment token, as provided by the provider.  Conditionally required if Tender is `ApplePay` or `GooglePay`. | nvarchar(MAX)|
+| EncryptedToken    | String | The Apple Pay or Google Pay payment token, as provided by the provider.  Conditionally required if Tender is `ApplePay` or `GooglePay`. | nvarchar(MAX)|
 
 \* Required
 
