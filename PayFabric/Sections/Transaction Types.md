@@ -12,6 +12,8 @@ The transaction types available in PayFabric are:
 * Force
 * Void
 * Verify
+* Activate (For gift card only)
+* Reload (For gift card only)
 
 You can find what each of these transaction types mean below.
 
@@ -56,5 +58,9 @@ A _Verify_ is used to validate credit card number. It's not a payment, PayFabric
 _Verify_ transaction only supports in Create Transaction/Update Transaction/Process Transaction APIs, it is not available in portal and hosted payment page.
 Only EVO gateway supports _Verify_ transaction with Credit Card payment method. PayFabric will set tranaction's Amount to 0.00 if anything other than 0.00 is passed through for _Verify_ transaction. 
 
+#### Activate
+An _Activate_ is used to activate a new gift card with an initial currency value. Gift card accounts must be activated as their first transaction.  PayFabric only supports Gift card in USD currency.
 
+#### Reload
+A _Reload_ is used to add additional currency value to an existing gift card. PayFabric only supports Gift card in USD currency.
 
