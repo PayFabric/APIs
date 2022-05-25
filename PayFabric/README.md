@@ -64,6 +64,12 @@ as child elements of other objects.
 * [Refund Non-Reference](Sections/Transactions.md#refund-non-reference)
 * [Process eCheck Transaction](Sections/Process%20eCheck%20Transaction.md)
 
+### Gift Card
+* [Inquiry Balance]()
+* [Create a Gift Card transaction]()
+* [Process a Gift Card transaction]()
+* [Void Gift Card transaction]()
+
 ### Wallets / Credit Cards / eChecks
 * [Create a Credit Card / eCheck](Sections/Wallets.md#create-a-credit-card)
 * [Update a Credit Card / eCheck](Sections/Wallets.md#update-a-credit-card--echeck)
