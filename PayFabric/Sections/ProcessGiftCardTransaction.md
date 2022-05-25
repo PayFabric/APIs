@@ -1,7 +1,7 @@
 ﻿Process a Gift Card Transaction
 ============
 
-The PayFabric Transactions API support Gift Card gateway, click [here](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Gateway%20Configuration.md) for supported gateways. Please make sure an eCheck [Gateway Profile](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Configure%20Portal.md#gateway-profile) must be created before process an eCheck/ACH transaction. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+The PayFabric Transactions API support Gift Card gateway, click [here](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Gateway%20Configuration.md) for supported gateways. Please make sure an EVO Gift [Gateway Profile](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Configure%20Portal.md#gateway-profile) must be created before process an EVO Gift transaction. Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 Create a Gift Card Transaction
 --------------------
@@ -43,7 +43,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 </pre>
 
 
-Update an eCheck Transaction
+Update a Gift Card Transaction
 --------------------
 
 * `POST /transaction/update` will update a transaction with new information based on the request JSON payload
