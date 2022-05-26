@@ -8,7 +8,7 @@ Create a Gift Card Transaction
 
 * `POST /transaction/create` will create and save a transaction with Gift Card to the PayFabric server based on the request JSON payload
 
-###### Request
+###### Request for sale
 <pre>
 {
   <b>"Amount": "29.99"</b>,  
@@ -30,6 +30,34 @@ Create a Gift Card Transaction
     "Zip": "12345"
   }, 
   <b>"Type": "Sale"</b>
+}
+</pre>
+
+###### Request for Activate
+<pre>
+{
+  <b>"Amount": "29.99"</b>,  
+  "Card": {
+    "Account": "41111111111"    
+    },    
+  "Currency": "USD",
+  "Customer": "JOHNDOE0001", 
+  <b>"SetupId": "Evo Gift"</b>, 
+  <b>"Type": "Activate"</b>
+}
+</pre>
+
+###### Request for Reload
+<pre>
+{
+  <b>"Amount": "100"</b>,  
+  "Card": {
+    "Account": "41111111111"    
+    },    
+  "Currency": "USD",
+  "Customer": "JOHNDOE0001", 
+  <b>"SetupId": "Evo Gift"</b>, 
+  <b>"Type": "Reload"</b>
 }
 </pre>
 
@@ -108,7 +136,7 @@ Process a Gift Card Transaction
 Create and Process a Sale Gift Card Transaction
 --------------------------------
 
-* `POST /transaction/process?CVC=123` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload
+* `POST /transaction/process?CVC=123` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload, Please refer the [Request]() for 'Activate' Transaction and [Request] for 'Reload' Transaction.
 
 ###### Request
 <pre>
