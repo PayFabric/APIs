@@ -1,7 +1,7 @@
 Scheduled Transaction
 =================
 
-The PayFabric scheduled transaction APIs are used for managing PayFabric scheduled transactions.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate. Please refer the [Transaction Object](/PayFabric/Sections/3.1JSONObjects.md#transaction) for details.
+The PayFabric scheduled transaction APIs are used for managing PayFabric scheduled transactions.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate. Please refer the [Transaction Object](/PayFabric/Sections/Objects.md#transaction) for details.
 
 Search for Future Dated Transactions
 -------------------------------------
