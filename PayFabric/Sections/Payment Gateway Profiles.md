@@ -11,15 +11,16 @@ Retrieve a Payment Gateway Profile
 ###### Response
 <pre>
 {
-    "CardClass": "Credit",
-    "CardClassID": "1",
-    "Connector": "PayflowPro",
-    "DailyBatchCloseTime": "19:00",
-    "ID": "6f417308-c26f-499b-acc4-d6080ad0551f",
-    "Name": "db back up",
-    "Processor": "TSYS(Vital/VisaNet)",
-    "ProcessorID": "18",
-    "SettledTime": "2021-07-02T02:00:00.0000000Z",
+    "CardClass": "ECheck",
+    "CardClassID": "2",
+    "Connector": "AuthorizeNet",
+    "DailyBatchCloseTime": "19:30",
+    "ID": "df2001bf-72a5-4784-b089-8720d3085938",
+    "Name": "AuthECheck",
+    "Processor": "Authorize.net",
+    "ProcessorID": "1",
+    "SettledTime": "5/25/2022 7:30:00 PM",
+    "SettledTimeUTC": "2022-05-26T02:30:00.000Z",
     "SurchargeRate": "0"
 }
 </pre>
@@ -41,7 +42,8 @@ Retrieve Payment Gateway Profiles
         "Name": "AuthECheck",
         "Processor": "Authorize.net",
         "ProcessorID": "1",
-        "SettledTime": "2021-07-02T02:30:00.0000000Z",
+        "SettledTime": "5/25/2022 7:30:00 PM",
+        "SettledTimeUTC": "2022-05-26T02:30:00.000Z",
         "SurchargeRate": "0"
     },
     {
@@ -53,7 +55,8 @@ Retrieve Payment Gateway Profiles
         "Name": "AuthorizeCredit",
         "Processor": "Authorize.net",
         "ProcessorID": "1",
-        "SettledTime": "2021-07-01T08:30:00.0000000Z",
+        "SettledTime": "5/26/2022 1:30:00 AM",
+        "SettledTimeUTC": "2022-05-26T08:30:00.000Z",
         "SurchargeRate": "0"
     }
 ]
