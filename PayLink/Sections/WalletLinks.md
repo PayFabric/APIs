@@ -18,7 +18,7 @@ Create a Wallet Link
   <b>"Notification":</b> {
     <b>"Type": "All"</b>
   },  
-  <b>"NotificationEmail": "John.Doe@nodus.com"</b>,
+  <b>"NotificationEmail": "sample@email.com"</b>,
   <b>"NotificationPhone": "123456789"</b>,
 }
 </pre>
@@ -34,8 +34,8 @@ Please note that **bold** fields are required fields and all others are optional
     "TenderType": 0,
     "CustomerNumber": "CUST0001",
     "CustomerName": "JOHNDOE0001",
-    "NotificationEmail": "John.Doe@nodus.com",
-    "NotificationEmailDisplay": "John.Doe@nodus.com",
+    "NotificationEmail": "sample@email.com",
+    "NotificationEmailDisplay": "sample@email.com",
     "NotificationPhone": "123456789",
     "NotificationPhoneDisplay": "123456789",
     "CustomeMessage": "",
@@ -74,34 +74,40 @@ Retrieve a Wallet Link URL
 Retrieve a Wallet Link
 -------------------------
 
-* `GET /paylink/api/wallet/YjBOQLdsgUudHEDpxg0T5zE` will return the specified Wallet Link document
+* `GET /paylink/api/wallet/PQM1UzV3xEC_YMs1hGxTdjE` will return the specified Wallet Link document
 
 ###### Response
 <pre>
 {
-    "Id": "YjBOQLdsgUudHEDpxg0T5zE",
-    "InstID": "cd76620f-28a2-43d1-b3be-6cb1e70301f5",
-    "Device": "a284c1d0-a6fc-4938-98b4-0000b8cf4210",
-    "TenderType": 0,
-    "CustomerNumber": "test",
-    "CustomerName": null,
-    "NotificationEmail": "test@nodus.com",
-    "NotificationPhone": null,
-    "Message": "",
-    "CustomeMessage": null,
-    "Status": 0,
+    "Id": "PQM1UzV3xEC_YMs1hGxTdjE",
+    "InstID": "11a2c6f2-33f6-48b3-a5ab-697db2519ec7",
+    "Device": "23c6b04e-cd06-4185-801a-8614508f065f",
+    "TenderType": 1,
+    "CustomerNumber": "CUST0001",
+    "CustomerName": "JOHNDOE0001",
+    "NotificationEmail": "sample@email.com",
+    "NotificationEmailDisplay": "sample@email.com",
+    "NotificationPhone": "123456789",
+    "NotificationPhoneDisplay": "123456789",
+    "CustomeMessage": "",
+    "Status": 1,
     "Notification": {
-        "Type": "Email",
+        "Type": "All",
         "SMSTemplate": null,
         "EmailTemplate": null,
-        "ResponseStatus": null,
-        "ResponseMessage": null
+        "ResponseStatus": "",
+        "ResponseMessage": ""
     },
-    "WalletID": "00000000-0000-0000-0000-000000000000",
-    "ReturnUrl": null,
-    "CompletedOn": null,
-    "CreatedOn": "2018-07-17T00:44:38.267",
-    "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/YjBOQLdsgUudHEDpxg0T5zE"
+    "WalletID": "dd290509-cdcc-47e4-bad0-e39f8b633a7e",
+    "ReturnUrl": "",
+    "CompletedOn": "2022-05-26T06:03:24.073",
+    "CreatedOn": "2022-05-26T05:59:00.66",
+    "ModifiedOn": "2022-05-26T06:03:24.09",
+    "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/PQM1UzV3xEC_YMs1hGxTdjE",
+    "AcceptType": "0",
+    "CompleteOnUTC": "2022-05-26T13:03:24.073Z",
+    "CreatedOnUTC": "2022-05-26T12:59:00.66Z",
+    "ModifiedOnUTC": "2022-05-26T13:03:24.09Z"
 }
 </pre>
 
@@ -136,8 +142,8 @@ e.g. `https://sandbox.payfabric.com/paylink/api/wallet?$filter=CustomerNumber eq
         "TenderType": 0,
         "CustomerNumber": "CUST0001",
         "CustomerName": "JOHNDOE0001",
-        "NotificationEmail": "John.Doe@nodus.com",
-        "NotificationEmailDisplay": "John.Doe@nodus.com",
+        "NotificationEmail": "sample@email.com",
+        "NotificationEmailDisplay": "sample@email.com",
         "NotificationPhone": "123456789",
         "NotificationPhoneDisplay": "123456789",
         "CustomeMessage": "",
