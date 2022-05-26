@@ -16,8 +16,9 @@ Address objects represent the shipping or billing address of a customer. This ob
 | Line3      | String | Street line 3 |nvarchar(128)|
 | Email      | String | Email address|nvarchar(128)|
 | Phone      | String | Phone number |varchar(16)|
-| ModifiedOn | String | Timestamp indicating when this record was last modified. It's format should like "3/23/2015 11:16:19 PM".|datetime,not null|
 | Zip        | String | Zip code |varchar(16)|
+| ModifiedOn | String | This field indicates the current address last modified date time in merchant timezone. It's format should like "3/23/2015 11:16:19 PM".|datetime,not null|
+| ModifiedOnUTC | String | This field indicates the current address last modified date time in UTC. It's format should like "2021-10-19T05:12:13.000Z".|datetime,not null|
 
 
 ## CardHolder
@@ -52,8 +53,8 @@ The Card object represents a Credit Card or eCheck of a customer.
 | IsDefaultCard   | Boolean | Indicates whether this is the primary card of the customer. Default value is ``False``. | bit, not null| 
 | IsLocked        | Boolean | Indicates whether the card is locked. Default value is ``False``.| bit, null |
 | IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet.  This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). And it will be set to false automatically for _Verify_ transactions or transactions with Tender set to `ApplePay` or `GooglePay`.|  
-| ModifiedOn      | string | This is a response field. It indicates the current wallet was last modified date time in merchant timezone. It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
-|ModifiedOnUTC|String|This is a response field. It indicates the current wallet was last modified date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
+| ModifiedOn      | string | This is a response field. It indicates the current wallet last modified date time in merchant timezone. It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
+|ModifiedOnUTC|String|This is a response field. It indicates the current wallet last modified date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
 | CardHolder*      | [Object](#cardholder) | Cardholder object. |  
 | Billto          | [Object](#address) | Address object. | 
 | Identifier      | String | A client-defined identifier for this card. Developer can send a flag value to identify this card |  nvarchar(32)|
@@ -68,8 +69,8 @@ The Card object represents a Credit Card or eCheck of a customer.
 | NewCustomerNumber | String | This field is used to submit new customer number for updating this record's customer field. | nvarchar(128)|  
 | CardType | String | This is a response field, the possible value is 'Credit', 'Debit' or 'Prepaid' for credit card, and it is blank for eCheck. | varchar(20)| 
 | EncryptedToken    | String | The Apple Pay or Google Pay payment token, as provided by the provider.  Conditionally required if Tender is `ApplePay` or `GooglePay`. | nvarchar(MAX)|
-| LastUsedDate      | string | This is a response field. It indicates the current wallet was last used date time in merchant timezone. It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
-|LastUsedDateUTC|String|This is a response field. It indicates the current wallet was last used date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
+| LastUsedDate      | string | This is a response field. It indicates the current wallet last used date time in merchant timezone. It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
+|LastUsedDateUTC|String|This is a response field. It indicates the current wallet last used date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
 
 \* Required
 
