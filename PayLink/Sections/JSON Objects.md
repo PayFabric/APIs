@@ -12,6 +12,7 @@ This object represents the PayLink record that customers will pay through their 
 | Attribute | Data Type | Definition | Access |
 | :----------- | :--------- | :--------- | :--------- |
 | Id | GUID | Unique Id GUID for the PayLink document | RO |
+| InstID | GUID | Unique Id GUID for the PayLink service instance ID | RO |
 | Device | GUID | Unique PayFabric Device that was used to create the authentication token, ***Note*** only the device bind with PayLink Service can call PayLink APIs. | RO |
 | Payment* | [Payment Object](#payment) | Specify payment gateway account profile names and accepted payment types, **required if** `SetupId` is blank | RW |
 | Currency* | String | Currency code, such as `USD`, `CAD` | RW |
@@ -26,6 +27,7 @@ This object represents the PayLink record that customers will pay through their 
 | CustomerName | String | Customer name | RW |
 | IsMultipleInvoice* | Boolean | Specifies that the PayLink document is for multiple invoice numbers, available values `true` or `false` | RW |
 | DocumentNumber | String | Document/invoice unique number | RW |
+|DocumentNumberDisplay|String| Multiple Invoice PayLink has display document number|RO|
 | TransactionType* | String | Credit card transaction type, such as `Sale` or `Book` | RW |
 | DocDate* | DateTime | Document/invoice date | RW |
 | DueDate | DateTime | Document/invoice due date | RW |
@@ -44,14 +46,20 @@ This object represents the PayLink record that customers will pay through their 
 | UserDefinedFields | Array of [Field Object](#field) | Collection of user defined values | RW |
 | PostDataType | String | ERP posting data type; For Dynamics GP, available values are 'PaymentLine' and 'CashReceipt' | RW |
 | TransactionKey | String | PayFabric transaction key | RO |
-| PaidOn | DateTime | Date and time payment was made | RO |
-| LastProcessDate | DateTime | Date and time document was last processed, such as updates or ERP posting | RO |
+| PaidOn | DateTime | This field indicats the datetime paylink paid in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) | RO |
+| LastProcessDate | DateTime | This field indicats the datetime paylink last processed（such as updates or ERP posting） in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md)  | RO |
 | Message | String | Document status update messages | RO |
 | CustomeMessage | String | User defined message | RW |
 | Notification* | [Notification Object](#notification) | Specify notification method and SMS template, Note: if the `Type` = `All`, then `NotificationEmail` and `NotificationPhone` are required; if the `Type` = `SMS`, then `NotificationPhone` is required; if the `Type` = `Email`, then `NotificationEmail` is required | RW |
 | NotificationEmail | String | Email where notification is sent, **required if** notification type is `All` *or* `Email` | RW |
 | NotificationPhone | String | Mobile phone number where notification is sent, **required if** notification type is `All` *or* `SMS` | RW |
 | Link | String | Return of the PayLink URL in the response | RO |
+| CreatedOn | DateTime | This field indicats the datetime paylink created in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) | RO |
+| ModifiedOn | DateTime | This field indicats the datetime paylink modified in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) | RO |
+| CreatedOnUTC | DateTime | This field indicats the datetime paylink created in UTC | RO |
+| ModifiedOnUTC | DateTime | This field indicats the datetime paylink modified in UTC | RO |
+| PaidOnUTC | DateTime | This field indicats the datetime paylink paid in UTC | RO |
+| LastProcessDateUTC | DateTime | This field indicats the datetime paylink last processed（such as updates or ERP posting）in UTC | RO |
 \* Required
 
 
@@ -61,6 +69,7 @@ This object represents the Wallet Link record that customers will be able to sav
 | Attribute | Data Type | Definition | Access |
 | :----------- | :--------- | :--------- | :--------- |
 | Id | GUID | Unique Id GUID for the Wallet Link document | RO |
+| InstID | GUID | Unique Id GUID for the PayLink service instance ID | RO |
 | Device | GUID | Unique PayFabric Device that was used to create the authentication token, ***Note*** only the device bind with PayLink Service can call PayLink APIs. | RO |
 | CustomerNumber* | String | Customer unique number| RW |
 | CustomerName | String | Customer name | RW |
@@ -68,8 +77,9 @@ This object represents the Wallet Link record that customers will be able to sav
 | WalletID | GUID | Unique Id of created Wallet record, see [PayFabric Wallet](../../PayFabric/Sections/Wallets.md) documentation for info | RW |
 | ReturnUrl | String | User defined return URL, overwrites Wallet Link confirmation page | RW |
 | Status | Integer | Document status, available values `0 = incomplete, 1 = complete, 2 = cancelled` | RO |
-| CreatedOn | DateTime | Date and time Wallet Link was created | RO |
-| CompleteOn | DateTime | Date and time Wallet Link was completed | RO |
+| CreatedOn | DateTime | Date and time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) Wallet Link was created | RO |
+| ModifiedOn | DateTime | Date and time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) Wallet Link was modified  | RO |
+| CompleteOn | DateTime | Date and time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) Wallet Link was completed | RO |
 | Message | String | Document status update messages | RO |
 | CustomeMessage | String | User defined message | RW |
 | Notification* | [Notification Object](#notification) | Specify notification method and SMS template | RW |
@@ -77,6 +87,10 @@ This object represents the Wallet Link record that customers will be able to sav
 | NotificationPhone | String | Mobile phone number where notification is sent, **required if** notification type is `All` *or* `SMS` | RW |
 | Link | String | Return of the PayLink URL in the response | RO |
 | AcceptType| String | Set the accepted tender type during create wallet link, available values `0` *or* null *or* any other values = Accept both credit card and eCheck, `1` = Only accept credit card, `2` = Only accept eCheck | RW |
+| CreatedOnUTC | DateTime | Date and time in UTC Wallet Link was created | RO |
+| ModifiedOnUTC | DateTime | Date and time in UTC Wallet Link was modified  | RO |
+| CompleteOnUTC | DateTime | Date and time in UTC Wallet Link was completed | RO |
+
 \* Required
 
 
