@@ -408,7 +408,7 @@ This request accepts the below query string parameters to add options. You can u
 |status|This parameter is used to filter transaction result against processed transaction's status, the possible values are: `approved`, `failure`, and `denied`. Returned result will include all transaction status if application does not submit this parameter.|
 |excludeunprocess|When the value is `true`, the result will filter out the unprocess transaction. Default value is `false`. |
 |pagesize|This parameter is to set specific page size, maximum value is 15.|
-|enddate|This parameter is to set a specific 'date to' to filter transactions, The format: mm/dd/yyyy and in merchant timezone. For example, merchant set the time zone as EST, and call this API by passing the enddate = 05/20/2022, then API will return the transactions processed earlier than 2022-5-20 00:00:00 in EST. |
+|enddate|This parameter is to set a specific 'date to' to filter transactions, The format: mm/dd/yyyy and in merchant timezone. For example, merchant set the time zone as EST, and call this API by passing the enddate = 05/20/2022, then API will return the transactions processed earlier than 2022-5-20 23:59:59 in EST. |
 
 ###### Response
 <pre>
