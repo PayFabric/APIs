@@ -17,7 +17,7 @@ Address objects represent the shipping or billing address of a customer. This ob
 | Email      | String | Email address|nvarchar(128)|
 | Phone      | String | Phone number |varchar(16)|
 | Zip        | String | Zip code |varchar(16)|
-| ModifiedOn | String | This field indicates the current address last modified date time in merchant timezone. It's format should like "3/23/2015 11:16:19 PM".|datetime,not null|
+| ModifiedOn | String | This field indicates the current address last modified date time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). It's format should like "3/23/2015 11:16:19 PM".|datetime,not null|
 | ModifiedOnUTC | String | This field indicates the current address last modified date time in UTC. It's format should like "2021-10-19T05:12:13.000Z".|datetime,not null|
 
 
@@ -53,7 +53,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | IsDefaultCard   | Boolean | Indicates whether this is the primary card of the customer. Default value is ``False``. | bit, not null| 
 | IsLocked        | Boolean | Indicates whether the card is locked. Default value is ``False``.| bit, null |
 | IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet.  This attribute is only valid and should only be included in the object when using [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). And it will be set to false automatically for _Verify_ transactions or transactions with Tender set to `ApplePay` or `GooglePay`.|  
-| ModifiedOn      | string | This is a response field. It indicates the current wallet last modified date time in merchant timezone. It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
+| ModifiedOn      | string | This is a response field. It indicates the current wallet last modified date time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
 |ModifiedOnUTC|String|This is a response field. It indicates the current wallet last modified date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
 | CardHolder*      | [Object](#cardholder) | Cardholder object. |  
 | Billto          | [Object](#address) | Address object. | 
@@ -69,7 +69,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | NewCustomerNumber | String | This field is used to submit new customer number for updating this record's customer field. | nvarchar(128)|  
 | CardType | String | This is a response field, the possible value is 'Credit', 'Debit' or 'Prepaid' for credit card, and it is blank for eCheck. | varchar(20)| 
 | EncryptedToken    | String | The Apple Pay or Google Pay payment token, as provided by the provider.  Conditionally required if Tender is `ApplePay` or `GooglePay`. | nvarchar(MAX)|
-| LastUsedDate      | string | This is a response field. It indicates the current wallet last used date time in merchant timezone. It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
+| LastUsedDate      | string | This is a response field. It indicates the current wallet last used date time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
 |LastUsedDateUTC|String|This is a response field. It indicates the current wallet last used date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
 
 \* Required
@@ -97,9 +97,9 @@ PayFabric returns the Transaction Response object as the result of most operatio
 |SurchargePercentage|string|Surcharge percentage configured for the gateway which the transaction processed with.||
 |FinalAmount|string|This the amount current transaction really captured, FinalAmount = OrigTrxAmount + SurchargeAmount.||
 |WalletID|GUID|The wallet ID for the processed transaction.||
-|ExpectedSettledTime|Date time| This field indicates the expected settled time in merchant timezone. ||
+|ExpectedSettledTime|Date time| This field indicates the expected settled time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). ||
 |ExpectedSettledTimeUTC|Date time| This field indicates the expected settled time in UTC. ||
-|SettledTime|Date time| This field indicates the current transaction's settled time in merchant timezone. ||
+|SettledTime|Date time| This field indicates the current transaction's settled time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). ||
 |SettledTimeUTC|Date time| This field indicates the current transaction's settled time in UTC. ||
 
 ## STO
@@ -153,7 +153,7 @@ The Transaction object represents a single transaction that will pass through Pa
 | TrxUserDefine3       | String | User Defined field 3 |nvarchar(256)|
 | TrxUserDefine4       | String | User Defined field 4 |nvarchar(256)|
 | MSO_EngineGUID       | GUID | GUID of gateway account profile for this transaction. Developer can utilize this field|
-| PayDate              | String | A future date to process this transaction. In another word, this transaction won't be processed right away by setting this field. It's format should like "3/23/2015", PayFabric will treat the passed in date in merchant timezone. For _Verify_ transaction type, the value in this attribute will be removed automatically.|datetime|
+| PayDate              | String | A future date to process this transaction. In another word, this transaction won't be processed right away by setting this field. It's format should like "3/23/2015", PayFabric will treat the passed in date in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). For _Verify_ transaction type, the value in this attribute will be removed automatically.|datetime|
 | AuthorizationType| String| The authorization type of the transaction, valid values are ``Reauthorization``, ``Resubmission``, ``Incremental`` or ``NotSet`` |varchar(25)|
 | TrxSchedule | String| The type authorization of transaction to be processed, valid values are ``Unscheduled``, ``ScheduledInstallment``, ``ScheduledRecurring`` or ``NotSet`` |varchar(25)|
 |TrxInitiation| String| The entity that initiated the transaction, valid values are ``Merchant``, ``Customer`` or ``NotSet`` |varchar(25)|
@@ -176,9 +176,9 @@ A Gateway Account Profile is the account information of a single Payment Gateway
 | CardClass       | String | ``Credit`` or ``ECheck``  | nvarchar(64) |
 | CardClassID| String| ID of CardClass|tinyint|
 |SurchargeRate|Decimal| Surcharge percentage, maximum is 4. ||
-|SettledTime|Date time|This field is the last cut off time in merchant timezone.||
+|SettledTime|Date time|This field is the last cut off time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md).||
 |SettledTimeUTC|Date time|This field is the last cut off time in UTC.||
-|DailyBatchCloseTime|Date time|This field is the auto batch close time every day in merchant timezone.||
+|DailyBatchCloseTime|Date time|This field is the auto batch close time every day in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md).||
 
 ## JSON Web Tokens
 
