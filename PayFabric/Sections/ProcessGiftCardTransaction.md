@@ -136,7 +136,7 @@ Process a Gift Card Transaction
 Create and Process a Sale Gift Card Transaction
 --------------------------------
 
-* `POST /transaction/process?CVC=123` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload, Please refer the [Request]() for 'Activate' Transaction and [Request] for 'Reload' Transaction.
+* `POST /transaction/process?CVC=123` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload, Please refer the [Request](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/ProcessGiftCardTransaction.md#request-for-activate) for 'Activate' Transaction and [Request]（https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/ProcessGiftCardTransaction.md#request-for-reload） for 'Reload' Transaction.
 
 ###### Request
 <pre>
