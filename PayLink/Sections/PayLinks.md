@@ -35,7 +35,7 @@ Create a PayLink
         "Address1": "123 Test Street", 
         "Address2": "12 Test Street", 
         "Address3": "1 Test Street", 
-        "Email": "qa-receive@payfabric.com", 
+        "Email": "sample@email.com", 
         "City": "CA", 
         "State": "CA", 
         "Country": "USA", 
@@ -48,7 +48,7 @@ Create a PayLink
         "Address1": "line 12", 
         "Address2": "liner r3", 
         "Address3": "line 3", 
-        "Email": "qa-receive@payfabric.com", 
+        "Email": "sample@email.com", 
         "City": "CA", 
         "State": "CA", 
         "Country": "US", 
@@ -62,7 +62,7 @@ Create a PayLink
         "SMSTemplate": null, 
         "EmailTemplate": null     
     }, 
-    <b>"NotificationEmail": "qa-receive@payfabric.com",</b> 
+    <b>"NotificationEmail": "sample@email.com",</b> 
     <b>"NotificationPhone": "15151472869",  </b>
      "UserDefinedFields": [
                  {
@@ -135,66 +135,125 @@ Below is the PayLink Confirmation page with Surcharge
 ###### Response
 <pre>
 {
-    "Id": "xFNH3msjakqS2PNbRFCQ9TE",
-    "InstID": "cd76620f-28a2-43d1-b3be-6cb1e70301f5",
-    "Device": "a284c1d0-a6fc-4938-98b4-0000b8cf4210",
+    "Id": "Fs8Fd9OULU6cQicrHPXC9TE",
+    "InstID": "8b5dce02-346e-490e-a07a-8b56294b3a58",
+    "Device": "28c54462-f769-2a35-2114-0f5fd3ca1241",
     "SetupId": null,
     "Currency": "USD",
-    "Amount": 49.99,
-    "DocumentAmount": 49.99,
-    "TaxAmount": 0,
-    "TradeDiscount": 0,
-    "Freight": 0,
-    "MiscAmount": 0,
-    "CustomerNumber": "JOHNDOE0001",
-    "CustomerName": null,
+    "Amount": 20.0,
+    "DocumentAmount": 20.0,
+    "TaxAmount": 1.5,
+    "TradeDiscount": 3.0,
+    "Freight": 1.0,
+    "MiscAmount": 2.5,
+    "CustomerNumber": "AARONFIT0001",
+    "CustomerName": "AARON Fit 001",
     "IsMultipleInvoice": false,
-    "DocumentNumber": null,
+    "DocumentNumber": "STDINV2267",
+    "DocumentNumberDisplay": "STDINV2267",
     "TransactionType": "Sale",
-    "CreatedOn": "2018-07-19T19:00:52.2094728-07:00",
-    "DocDate": "2015-10-28T00:00:00",
-    "DueDate": "2015-10-31T00:00:00",
+    "CreatedOn": "2022-05-26T14:32:12.412",
+    "ModifiedOn": "2022-05-26T14:32:12.412",
+    "DocDate": "2020-04-03T17:21:09",
+    "DueDate": "2020-04-03T17:21:09",
     "DocType": 3,
-    "PaymentTerm": null,
+    "PaymentTerm": "Retail",
     "SourceOfDocument": 0,
     "BatchSource": 0,
-    "BatchNo": "B2018",
+    "BatchNo": "Test",
     "MerchantEmail": null,
     "ReturnUrl": null,
-    "Status": 0,
+    "Status": 1,
     "IntegrationStatus": 0,
-    "Tax": {
-        "Name": "All Details",
-        "percent": 0.5,
-        "amount": 0.2
+    "Tax": null,
+    "ShippingAddress": {
+        "Email": "sample@email.com",
+        "Address1": "123 Test Street",
+        "Address2": "12 Test Street",
+        "Address3": "1 Test Street",
+        "City": "CA",
+        "State": "CA",
+        "Zip": "90201",
+        "Country": "USA",
+        "Phone1": "1523691233",
+        "Phone2": "4525616636",
+        "Phone3": "4515845632"
     },
-    "ShippingAddress": null,
-    "BillingAddress": null,
-    "Items": null,
-    "UserDefinedFields": null,
+    "BillingAddress": {
+        "Email": "sample@email.com",
+        "Address1": "line 12",
+        "Address2": "liner r3",
+        "Address3": "line 3",
+        "City": "CA",
+        "State": "CA",
+        "Zip": "90201",
+        "Country": "US",
+        "Phone1": "1523691233",
+        "Phone2": "4525616636",
+        "Phone3": "4515845632"
+    },
+    "Items": [
+        {
+            "ItemCode": "A100",
+            "AppliedAmount": 0.0,
+            "DueDate": null,
+            "Description": "A100 item",
+            "UnitPrice": "6",
+            "ItemAmount": "39.95",
+            "Quantity": "3",
+            "PriceLevel": "Retail",
+            "UnitOfMeasure": "Each",
+            "SiteCode": "WAREHOUSE",
+            "MarkDown": 0.0,
+            "TaxAmount": 0.0,
+            "MiscAmount": 0.0,
+            "UserDefinedFields": [
+                {
+                    "Key": "ExtPrice",
+                    "Value": "18.00"
+                }
+            ],
+            "Items": null,
+            "ShippingAddress": null,
+            "BillingAddress": null
+        }
+    ],
+    "UserDefinedFields": [
+        {
+            "Key": "SubTotal",
+            "Value": "20"
+        }
+    ],
     "Notification": {
         "Type": "All",
         "SMSTemplate": null,
         "EmailTemplate": null,
-        "ResponseStatus": "",
-        "ResponseMessage": ""
+        "ResponseStatus": "2",
+        "ResponseMessage": "Invalid SMS template."
     },
-    "PostDataType": "CashReceipt",
-    "TransactionKey": "180719177546",
+    "PostDataType": "PaymentLine",
+    "TransactionKey": "22052601049295",
     "PaidOn": null,
     "LastProcessDate": null,
     "Message": "",
-    "CustomeMessage": null,
+    "CustomeMessage": "CustomeMessage",
     "Payment": {
-        "CreditCardGateway": "EVO", 
-        "ECheckGateway": "USASOAPECheck“, 
+        "CreditCardGateway": "EVO",
+        "ECheckGateway": "EVOACH",
         "AcceptType": 0
-    },  
-    "NotificationEmail": "John.Doe@payfabric.com",
-    "NotificationPhone": "123456789",
+    },
+    "NotificationEmail": "sample@email.com",
+    "NotificationEmailDisplay": "sample@email.com",
+    "NotificationPhone": "15151472869",
+    "NotificationPhoneDisplay": "15151472869",
     "OriginalTender": null,
     "PayFabricTransactionData": null,
-    "Link": "https://sandbox.payfabric.com/PayLink/Web/xFNH3msjakqS2PNbRFCQ9TE"
+    "Link": "https://sandbox.payfabric.com/PayLink/Web/Fs8Fd9OULU6cQicrHPXC9TE",
+    "EntryClass": null,
+    "CreatedOnUTC": "2022-05-26T11:32:12.412Z",
+    "ModifiedOnUTC": "2022-05-26T11:32:12.412Z",
+    "PaidOnUTC": null,
+    "LastProcessDateUTC": null
 }
 </pre>
 
@@ -231,7 +290,7 @@ Create a Multiple Invoice PayLink
         "Address1": "123 Test Street", 
         "Address2": "12 Test Street", 
         "Address3": "1 Test Street", 
-        "Email": "qa-receive@payfabric.com", 
+        "Email": "sample@email.com", 
         "City": "CA", 
         "State": "CA", 
         "Country": "USA", 
@@ -244,7 +303,7 @@ Create a Multiple Invoice PayLink
         "Address1": "line 12", 
         "Address2": "liner r3", 
         "Address3": "~!@!$@#%# gfywefyeasg", 
-        "Email": "qa-receive@payfabric.com", 
+        "Email": "sample@email.com", 
         "City": "CA", 
         "State": "CA", 
         "Country": "US", 
@@ -442,7 +501,7 @@ Below is the PayLink Confirmation page
         "amount": 1.11
     },
     "ShippingAddress": {
-        "Email": "qa-receive@payfabric.com",
+        "Email": "sample@email.com",
         "Address1": "123 Test Street",
         "Address2": "12 Test Street",
         "Address3": "1 Test Street",
@@ -455,7 +514,7 @@ Below is the PayLink Confirmation page
         "Phone3": "4515845632"
     },
     "BillingAddress": {
-        "Email": "qa-receive@payfabric.com",
+        "Email": "sample@email.com",
         "Address1": "line 12",
         "Address2": "liner r3",
         "Address3": "~!@!$@#%# gfywefyeasg",
@@ -606,7 +665,7 @@ Below is the PayLink Confirmation page
         "ECheckGateway": "USASOAPECheck“, 
         "AcceptType": 0
     },  
-    "NotificationEmail": "qa-receive@payfabric.com",
+    "NotificationEmail": "sample@email.com",
     "NotificationPhone": "18915400883",
     "OriginalTender": null,
     "PayFabricTransactionData": null,
@@ -675,7 +734,7 @@ Retrieve a PayLink
     "IntegrationStatus": 2,
     "Tax": null,
     "ShippingAddress": {
-        "Email": "qa-receive@payfabric.com",
+        "Email": "sample@email.com",
         "Address1": "123 Test Street",
         "Address2": "12 Test Street",
         "Address3": "1 Test Street",
@@ -688,7 +747,7 @@ Retrieve a PayLink
         "Phone3": "4515845632"
     },
     "BillingAddress": {
-        "Email": "qa-receive@payfabric.com",
+        "Email": "sample@email.com",
         "Address1": "line 12",
         "Address2": "liner r3",
         "Address3": "line 3",
@@ -773,8 +832,8 @@ Retrieve a PayLink
         "ECheckGateway": "USASOAPECheck",
         "AcceptType": 0
     },
-    "NotificationEmail": "qa-receive@payfabric.com",
-    "NotificationEmailDisplay": "qa-receive@payfabric.com",
+    "NotificationEmail": "sample@email.com",
+    "NotificationEmailDisplay": "sample@email.com",
     "NotificationPhone": "15151472869",
     "NotificationPhoneDisplay": "15151472869",
     "OriginalTender": null,
@@ -845,7 +904,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
         "IntegrationStatus": 2,
         "Tax": null,
         "ShippingAddress": {
-            "Email": "qa-receive@payfabric.com",
+            "Email": "sample@email.com",
             "Address1": "123 Test Street",
             "Address2": "12 Test Street",
             "Address3": "1 Test Street",
@@ -858,7 +917,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
             "Phone3": "4515845632"
         },
         "BillingAddress": {
-            "Email": "qa-receive@payfabric.com",
+            "Email": "sample@email.com",
             "Address1": "line 12",
             "Address2": "liner r3",
             "Address3": "",
@@ -915,8 +974,8 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
             "ECheckGateway": "USASOAPECheck",
             "AcceptType": 0
         },
-        "NotificationEmail": "qa-receive@payfabric.com",
-        "NotificationEmailDisplay": "qa-receive@payfabric.com",
+        "NotificationEmail": "sample@email.com",
+        "NotificationEmailDisplay": "sample@email.com",
         "NotificationPhone": "17145484360",
         "NotificationPhoneDisplay": "17145484360",
         "OriginalTender": null,
@@ -956,7 +1015,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
         "IntegrationStatus": 2,
         "Tax": null,
         "ShippingAddress": {
-            "Email": "qa-receive@payfabric.com",
+            "Email": "sample@email.com",
             "Address1": "123 Test Street",
             "Address2": "12 Test Street",
             "Address3": "1 Test Street",
@@ -969,7 +1028,7 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
             "Phone3": "4515845632"
         },
         "BillingAddress": {
-            "Email": "qa-receive@payfabric.com",
+            "Email": "sample@email.com",
             "Address1": "line 12",
             "Address2": "liner r3",
             "Address3": "line 3",
@@ -1054,8 +1113,8 @@ e.g. `https://sandbox.payfabric.com/paylink/api/document?$filter=CustomerNumber 
             "ECheckGateway": "USASOAPECheck",
             "AcceptType": 0
         },
-        "NotificationEmail": "qa-receive@payfabric.com",
-        "NotificationEmailDisplay": "qa-receive@payfabric.com",
+        "NotificationEmail": "sample@email.com",
+        "NotificationEmailDisplay": "sample@email.com",
         "NotificationPhone": "15151472869",
         "NotificationPhoneDisplay": "15151472869",
         "OriginalTender": null,
