@@ -95,7 +95,8 @@ PayFabric returns the Transaction Response object as the result of most operatio
 |OrigTrxAmount|String| Transaction amount without surcharge amount.||
 |SurchargeAmount|string|Transaction surcharge amount, surcharge amount = OrigTrxAmount * SurchargePercentage ||
 |SurchargePercentage|string|Surcharge percentage configured for the gateway which the transaction processed with.||
-|FinalAmount|string|This the amount current transaction really captured, FinalAmount = OrigTrxAmount + SurchargeAmount.||
+|FinalAmount|string|This is the amount current transaction really captured, FinalAmount = OrigTrxAmount + SurchargeAmount.||
+|RemainingBalance|string|This field is only for gift card transctions, indicats the remaining balance of the gift card.||
 |WalletID|GUID|The wallet ID for the processed transaction.||
 |ExpectedSettledTime|Date time| This field indicates the expected settled time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). ||
 |ExpectedSettledTimeUTC|Date time| This field indicates the expected settled time in UTC. ||
