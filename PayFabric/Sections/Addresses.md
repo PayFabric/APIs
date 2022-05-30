@@ -11,17 +11,17 @@ Retrieve a Shipping Address
 ###### Response
 <pre>
 {
-    "City": "CA",
+    "City": "Anaheim",
     "Country": "USA",
     "Customer": "07053835",
-    "Email": "arya.wang@nodus.com",
+    "Email": "sample@email.com",
     "ID": "05b64467-3679-448a-97b1-21c25d88cb90",
     "Line1": "Streetline 1",
     "Line2": "Streetline 2",
     "Line3": "Streetline 3",
     "Phone": "1234567890",
     "State": "CA",
-    "Zip": "12345",
+    "Zip": "92806
     "ModifiedOn": "5/6/2022 10:38:38 PM",
     "ModifiedOnUTC": "2022-05-07T05:38:38.000Z"
 }
@@ -36,32 +36,32 @@ Retrieve Shipping Addresses
 <pre>
 [
     {
-        "City": "1",
-        "Country": "1",
+        "City": "Anaheim",
+        "Country": "USA",
         "Customer": "JOHNDOE0001",
-        "Email": "rena.wu@nodus.com",
+        "Email": "sample@email.com",
         "ID": "cf48cd94-0b50-4fbc-8fa2-b22c27842a26",
-        "Line1": "1",
+        "Line1": "test blvd",
         "Line2": "1",
         "Line3": "1",
         "Phone": "1",
-        "State": "1",
-        "Zip": "1",
+        "State": "CA",
+        "Zip": "92806",
         "ModifiedOn": "1/13/2022 10:00:52 PM",
         "ModifiedOnUTC": "2022-01-14T06:00:52.000Z"
     },
     {
-        "City": "asd",
+        "City": "Anaheim",
         "Country": "United States of America",
         "Customer": "JOHNDOE0001",
-        "Email": "southeast@winncom.com; rluke@point-broadband.com",
+        "Email": "sample@email.com; test@email.com",
         "ID": "e8eeac64-552f-438e-bf8e-51a3ba8e5182",
-        "Line1": "sd",
+        "Line1": "test blvd",
         "Line2": "",
         "Line3": "",
         "Phone": "7067730145",
         "State": "GA",
-        "Zip": "asdf",
+        "Zip": "12345",
         "ModifiedOn": "12/13/2021 10:17:31 PM",
         "ModifiedOnUTC": "2021-12-14T06:17:31.000Z"
     }
@@ -84,32 +84,32 @@ Retrieve Shipping Addresses (Query with Paging)
     },
     "Records": [
         {
-            "City": "asd",
+            "City": "Anaheim",
             "Country": "United States of America",
             "Customer": "JOHNDOE0001",
-            "Email": "southeast@winncom.com; rluke@point-broadband.com",
+            "Email": "sample@email.com; test@email.com",
             "ID": "e8eeac64-552f-438e-bf8e-51a3ba8e5182",
-            "Line1": "sd",
+            "Line1": "test street",
             "Line2": "",
             "Line3": "",
             "Phone": "7067730145",
             "State": "GA",
-            "Zip": "asdf",
+            "Zip": "12345
             "ModifiedOn": "12/13/2021 10:17:31 PM",
             "ModifiedOnUTC": "2021-12-14T06:17:31.000Z"
         },
         {
-            "City": "1",
-            "Country": "1",
+            "City": "Anaheim",
+            "Country": "USA",
             "Customer": "JOHNDOE0001",
-            "Email": "rena.wu@nodus.com",
+            "Email": "sample@email.com",
             "ID": "cf48cd94-0b50-4fbc-8fa2-b22c27842a26",
-            "Line1": "1",
+            "Line1": "test blvd",
             "Line2": "1",
             "Line3": "1",
-            "Phone": "1",
-            "State": "1",
-            "Zip": "1",
+            "Phone": "1234567890",
+            "State": "CA",
+            "Zip": "92806",
             "ModifiedOn": "1/13/2022 10:00:52 PM",
             "ModifiedOnUTC": "2022-01-14T06:00:52.000Z"
         }
