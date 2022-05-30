@@ -163,7 +163,7 @@ Create and Process a Sale Gift Card Transaction
 }
 </pre>
 
-Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* options please see the [Wallet documentation](Wallets.md). For more information and descriptions on available fields please see our [object reference](Objects.md).
+Please note that **bold** fields are required fields, and all others are optional, for more information on available payment *Card* object, please see our [object reference](https://github.com/PayFabric/APIs/blob/R19/PayFabric/Sections/Objects.md#card).
 
 ###### Response
 <pre>
