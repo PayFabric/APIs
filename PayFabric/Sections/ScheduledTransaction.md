@@ -63,10 +63,10 @@ Search for Future Dated Transactions
                 "Line2": "",
                 "Line3": "",
                 "State": "",
-                "City": "ca",
+                "City": "Anaheim",
                 "Country": "",
                 "Zip": "55304-9840",
-                "Email": "rena.wu@nodus.com",
+                "Email": "sample@email.com",
                 "Phone": "13125550102",
                 "ModifiedOn": "1/1/0001 12:00:00 AM"
             },
