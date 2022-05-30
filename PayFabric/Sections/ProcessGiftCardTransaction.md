@@ -6,7 +6,7 @@ The PayFabric Transactions API support Gift Card gateway, click [here](https://g
 Create a Gift Card Transaction
 --------------------
 
-* `POST /transaction/create` will create and save a transaction with Gift Card to the PayFabric server based on the request JSON payload
+* `POST /transaction/create` will create and save a transaction with Gift Card into PayFabric based on the request JSON payload
 
 ###### Request for sale
 <pre>
