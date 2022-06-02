@@ -46,20 +46,20 @@ This object represents the PayLink record that customers will pay through their 
 | UserDefinedFields | Array of [Field Object](#field) | Collection of user defined values | RW |
 | PostDataType | String | ERP posting data type; For Dynamics GP, available values are 'PaymentLine' and 'CashReceipt' | RW |
 | TransactionKey | String | PayFabric transaction key | RO |
-| PaidOn | DateTime | This field indicats the datetime paylink paid in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) | RO |
-| LastProcessDate | DateTime | This field indicats the datetime paylink last processed（such as updates or ERP posting） in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md)  | RO |
+| PaidOn | DateTime | This field indicates the datetime paylink paid in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) | RO |
+| LastProcessDate | DateTime | This field indicates the datetime paylink last processed（such as updates or ERP posting） in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md)  | RO |
 | Message | String | Document status update messages | RO |
 | CustomeMessage | String | User defined message | RW |
 | Notification* | [Notification Object](#notification) | Specify notification method and SMS template, Note: if the `Type` = `All`, then `NotificationEmail` and `NotificationPhone` are required; if the `Type` = `SMS`, then `NotificationPhone` is required; if the `Type` = `Email`, then `NotificationEmail` is required | RW |
 | NotificationEmail | String | Email where notification is sent, **required if** notification type is `All` *or* `Email` | RW |
 | NotificationPhone | String | Mobile phone number where notification is sent, **required if** notification type is `All` *or* `SMS` | RW |
 | Link | String | Return of the PayLink URL in the response | RO |
-| CreatedOn | DateTime | This field indicats the datetime paylink created in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) | RO |
-| ModifiedOn | DateTime | This field indicats the datetime paylink modified in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) | RO |
-| CreatedOnUTC | DateTime | This field indicats the datetime paylink created in UTC | RO |
-| ModifiedOnUTC | DateTime | This field indicats the datetime paylink modified in UTC | RO |
-| PaidOnUTC | DateTime | This field indicats the datetime paylink paid in UTC | RO |
-| LastProcessDateUTC | DateTime | This field indicats the datetime paylink last processed（such as updates or ERP posting）in UTC | RO |
+| CreatedOn | DateTime | This field indicates the datetime paylink created in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) | RO |
+| ModifiedOn | DateTime | This field indicates the datetime paylink modified in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md) | RO |
+| CreatedOnUTC | DateTime | This field indicates the datetime paylink created in UTC | RO |
+| ModifiedOnUTC | DateTime | This field indicates the datetime paylink modified in UTC | RO |
+| PaidOnUTC | DateTime | This field indicates the datetime paylink paid in UTC | RO |
+| LastProcessDateUTC | DateTime | This field indicates the datetime paylink last processed（such as updates or ERP posting）in UTC | RO |
 \* Required
 
 
