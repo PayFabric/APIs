@@ -19,7 +19,7 @@ Create a Gift Card Transaction
   "Customer": "JOHNDOE0001", 
   <b>"SetupId": "Evo Gift"</b>,
   "Shipto": {
-    "City": "CA",
+    "City": "Anaheim",
     "Country": "US",   
     "Email": "email@sample.com",
     "Line1": "123 test",
@@ -149,7 +149,7 @@ Create and Process a Sale Gift Card Transaction
   "Customer": "JOHNDOE0001", 
   <b>"SetupId": "Evo Gift"</b>,
   "Shipto": {
-    "City": "CA",
+    "City": "Anaheim",
     "Country": "US",   
     "Email": "email@sample.com",
     "Line1": "123 test",
