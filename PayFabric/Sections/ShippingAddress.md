@@ -12,9 +12,9 @@ Create Shipping Address
 <pre>
 {
     "Customer": "Test Shipping",
-    "City": "CA",
+    "City": "Ahaheim",
     "Country": "US",
-    "Email": "success+test@simulator.amazonses.com",
+    "Email": "sample@email.com",
     "Line1": "test address line 1",
     "Line2": "test address line 2",
     "Line3": "test address line 3",
@@ -35,10 +35,10 @@ Create Shipping Address
     "Line2": "test address line 2",
     "Line3": "test address line 3",
     "State": "CA",
-    "City": "CA",
+    "City": "Ahaheim",
     "Country": "US",
     "Zip": "12345",
-    "Email": "success+test@simulator.amazonses.com",
+    "Email": "sample@email.com",
     "Phone": "1234567890",
     "FirstName": "Rena",
     "LastName": "Wu"
