@@ -18,7 +18,7 @@ Create a Wallet Link
   <b>"Notification":</b> {
     <b>"Type": "All"</b>
   },  
-  <b>"NotificationEmail": "John.Doe@nodus.com"</b>,
+  <b>"NotificationEmail": "sample@email.com"</b>,
   <b>"NotificationPhone": "123456789"</b>,
 }
 </pre>
@@ -28,27 +28,35 @@ Please note that **bold** fields are required fields and all others are optional
 ###### Response
 <pre>
 {
-  "Id": "h3GSpCZKsEWNxFv6T_y_Gw",
-  "Device": "33665f05-8346-4809-e0f1-01050545236f",
-  "TenderType": 0,
-  "CustomerNumber": "CUST0001",
-  "CustomerName": "JOHNDOE0001",
-  "NotificationEmail": "John.Doe@nodus.com",
-  "NotificationPhone": "123456789",
-  "Message": "",
-  "CustomeMessage": null,
-  "Status": 0,
-  "Notification": {
-    "Type": "All",
-    "SMSTemplate": null,
-    "ResponseStatus": "",
-    "ResponseMessage": ""
-  },
-  "WalletID": "00000000-0000-0000-0000-000000000000",
-  "ReturnUrl": null,
-  "CompleteOn": null,
-  "CreatedOn": "2015-11-09T12:35:19.4571668+13:00"
-  "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/h3GSpCZKsEWNxFv6T_y_Gw"
+    "Id": "x__BqrJ0xU2nEK_aOO7ozDE",
+    "InstID": "11a2c6f2-33f6-48b3-a5ab-697db2519ec7",
+    "Device": "23c6b04e-cd06-4185-801a-8614508f065f",
+    "TenderType": 0,
+    "CustomerNumber": "CUST0001",
+    "CustomerName": "JOHNDOE0001",
+    "NotificationEmail": "sample@email.com",
+    "NotificationEmailDisplay": "sample@email.com",
+    "NotificationPhone": "123456789",
+    "NotificationPhoneDisplay": "123456789",
+    "CustomeMessage": "",
+    "Status": 0,
+    "Notification": {
+        "Type": "All",
+        "SMSTemplate": null,
+        "EmailTemplate": null,
+        "ResponseStatus": "1",
+        "ResponseMessage": "Invalid SMS template.\r\n"
+    },
+    "WalletID": "00000000-0000-0000-0000-000000000000",
+    "ReturnUrl": "",
+    "CompletedOn": null,
+    "CreatedOn": "2022-05-26T05:37:37.63",
+    "ModifiedOn": "2022-05-26T05:37:37.63",
+    "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/x__BqrJ0xU2nEK_aOO7ozDE",
+    "AcceptType": "0",
+    "CompleteOnUTC": null,
+    "CreatedOnUTC": "2022-05-26T12:37:37.63Z",
+    "ModifiedOnUTC": "2022-05-26T12:37:37.63Z"
 }
 </pre>
 
@@ -66,34 +74,40 @@ Retrieve a Wallet Link URL
 Retrieve a Wallet Link
 -------------------------
 
-* `GET /paylink/api/wallet/YjBOQLdsgUudHEDpxg0T5zE` will return the specified Wallet Link document
+* `GET /paylink/api/wallet/PQM1UzV3xEC_YMs1hGxTdjE` will return the specified Wallet Link document
 
 ###### Response
 <pre>
 {
-    "Id": "YjBOQLdsgUudHEDpxg0T5zE",
-    "InstID": "cd76620f-28a2-43d1-b3be-6cb1e70301f5",
-    "Device": "a284c1d0-a6fc-4938-98b4-0000b8cf4210",
-    "TenderType": 0,
-    "CustomerNumber": "test",
-    "CustomerName": null,
-    "NotificationEmail": "test@nodus.com",
-    "NotificationPhone": null,
-    "Message": "",
-    "CustomeMessage": null,
-    "Status": 0,
+    "Id": "PQM1UzV3xEC_YMs1hGxTdjE",
+    "InstID": "11a2c6f2-33f6-48b3-a5ab-697db2519ec7",
+    "Device": "23c6b04e-cd06-4185-801a-8614508f065f",
+    "TenderType": 1,
+    "CustomerNumber": "CUST0001",
+    "CustomerName": "JOHNDOE0001",
+    "NotificationEmail": "sample@email.com",
+    "NotificationEmailDisplay": "sample@email.com",
+    "NotificationPhone": "123456789",
+    "NotificationPhoneDisplay": "123456789",
+    "CustomeMessage": "",
+    "Status": 1,
     "Notification": {
-        "Type": "Email",
+        "Type": "All",
         "SMSTemplate": null,
         "EmailTemplate": null,
-        "ResponseStatus": null,
-        "ResponseMessage": null
+        "ResponseStatus": "",
+        "ResponseMessage": ""
     },
-    "WalletID": "00000000-0000-0000-0000-000000000000",
-    "ReturnUrl": null,
-    "CompletedOn": null,
-    "CreatedOn": "2018-07-17T00:44:38.267",
-    "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/YjBOQLdsgUudHEDpxg0T5zE"
+    "WalletID": "dd290509-cdcc-47e4-bad0-e39f8b633a7e",
+    "ReturnUrl": "",
+    "CompletedOn": "2022-05-26T06:03:24.073",
+    "CreatedOn": "2022-05-26T05:59:00.66",
+    "ModifiedOn": "2022-05-26T06:03:24.09",
+    "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/PQM1UzV3xEC_YMs1hGxTdjE",
+    "AcceptType": "0",
+    "CompleteOnUTC": "2022-05-26T13:03:24.073Z",
+    "CreatedOnUTC": "2022-05-26T12:59:00.66Z",
+    "ModifiedOnUTC": "2022-05-26T13:03:24.09Z"
 }
 </pre>
 
@@ -110,66 +124,47 @@ e.g. `https://sandbox.payfabric.com/paylink/api/wallet?$filter=CustomerNumber eq
 | Field | Description | 
 | :------------- | ------------- | 
 | CustomerNumber | Customer number specified at the time of creating a wallet link. |
-| CreatedOn | The date the wallet link was created on. |
-| ModifiedOn | The date the wallet link was modified on. |
+| CreatedOn | The date the wallet link was created on. The passed in date will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). |
+| ModifiedOn | The date the wallet link was modified on. The passed in date will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md).|
 | NotificationEmail | Email specified at the time of creating a wallet link. |
 | NotificationPhone | Phone number specified at the time of creating a wallet link. |
 | Status | `0=incomplete, 1=complete, 2=cancelled` |
 |Device| Device used at the time of creating a wallet link. |
-| CompletedOn | The date the wallet link was completed on. |
+| CompletedOn | The date the wallet link was completed on. The passed in date will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). |
 
 ###### Response
 <pre>
 [
     {
-        "Id": "YjBOQLdsgUudHEDpxg0T5zE",
-        "InstID": "cd76620f-28a2-43d1-b3be-6cb1e70301f5",
-        "Device": "a284c1d0-a6fc-4938-98b4-0000b8cf4210",
+        "Id": "x__BqrJ0xU2nEK_aOO7ozDE",
+        "InstID": "11a2c6f2-33f6-48b3-a5ab-697db2519ec7",
+        "Device": "23c6b04e-cd06-4185-801a-8614508f065f",
         "TenderType": 0,
-        "CustomerNumber": "test",
-        "CustomerName": null,
-        "NotificationEmail": "test@nodus.com",
-        "NotificationPhone": null,
-        "Message": "",
-        "CustomeMessage": null,
+        "CustomerNumber": "CUST0001",
+        "CustomerName": "JOHNDOE0001",
+        "NotificationEmail": "sample@email.com",
+        "NotificationEmailDisplay": "sample@email.com",
+        "NotificationPhone": "123456789",
+        "NotificationPhoneDisplay": "123456789",
+        "CustomeMessage": "",
         "Status": 0,
         "Notification": {
-            "Type": "Email",
+            "Type": "All",
             "SMSTemplate": null,
             "EmailTemplate": null,
-            "ResponseStatus": null,
-            "ResponseMessage": null
+            "ResponseStatus": "",
+            "ResponseMessage": ""
         },
         "WalletID": "00000000-0000-0000-0000-000000000000",
-        "ReturnUrl": null,
+        "ReturnUrl": "",
         "CompletedOn": null,
-        "CreatedOn": "0001-01-01T00:00:00",
-        "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/YjBOQLdsgUudHEDpxg0T5zE"
-    },
-    {
-        "Id": "bxC_7z8JZ0-KB8_hdhy2JDE",
-        "InstID": "cd76620f-28a2-43d1-b3be-6cb1e70301f5",
-        "Device": "a284c1d0-a6fc-4938-98b4-0000b8cf4210",
-        "TenderType": 1,
-        "CustomerNumber": "Test1",
-        "CustomerName": null,
-        "NotificationEmail": "test@nodus.com",
-        "NotificationPhone": null,
-        "Message": "",
-        "CustomeMessage": null,
-        "Status": 1,
-        "Notification": {
-            "Type": "Email",
-            "SMSTemplate": null,
-            "EmailTemplate": null,
-            "ResponseStatus": null,
-            "ResponseMessage": null
-        },
-        "WalletID": "a4976d58-ea23-4e0e-95ae-7e7e9c2e5d47",
-        "ReturnUrl": null,
-        "CompletedOn": "2018-07-17T01:20:43.61",
-        "CreatedOn": "0001-01-01T00:00:00",
-        "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/bxC_7z8JZ0-KB8_hdhy2JDE"
+        "CreatedOn": "2022-05-26T05:37:37.636",
+        "ModifiedOn": "2022-05-26T05:37:37.636",
+        "Link": "https://sandbox.payfabric.com/PayLink/Web/walletlink/x__BqrJ0xU2nEK_aOO7ozDE",
+        "AcceptType": "0",
+        "CompleteOnUTC": null,
+        "CreatedOnUTC": "2022-05-26T12:37:37.636Z",
+        "ModifiedOnUTC": "2022-05-26T12:37:37.636Z"
     }
 ]
 </pre>

@@ -11,18 +11,19 @@ Retrieve a Shipping Address
 ###### Response
 <pre>
 {
-  "City": "Anaheim",
-  "Country": "USA",
-  "Customer": "JOHNDOE0001",
-  "Email": "email@sample.com",
-  "ID": "75B12D6B-B2C7-409D-89CB-006535D6CD95",
-  "Line1": "123 PayFabric Way",
-  "Line2": "",
-  "Line3": "",
-  "ModifiedOn": "10/2/2015 10:39:32 AM",
-  "Phone": "(123) 456-7890",
-  "State": "CA",
-  "Zip": "92806"
+    "City": "Anaheim",
+    "Country": "USA",
+    "Customer": "07053835",
+    "Email": "sample@email.com",
+    "ID": "05b64467-3679-448a-97b1-21c25d88cb90",
+    "Line1": "Streetline 1",
+    "Line2": "Streetline 2",
+    "Line3": "Streetline 3",
+    "Phone": "1234567890",
+    "State": "CA",
+    "Zip": "92806
+    "ModifiedOn": "5/6/2022 10:38:38 PM",
+    "ModifiedOnUTC": "2022-05-07T05:38:38.000Z"
 }
 </pre>
 
@@ -34,80 +35,85 @@ Retrieve Shipping Addresses
 ###### Response
 <pre>
 [
-  {
-    "City": "Anaheim",
-    "Country": "USA",
-    "Customer": "JOHNDOE0001",
-    "Email": "email@sample.com",
-    "ID": "75B12D6B-B2C7-409D-89CB-006535D6CD95",
-    "Line1": "123 PayFabric Way",
-    "Line2": "",
-    "Line3": "",
-    "ModifiedOn": "10/2/2015 10:39:32 AM",
-    "Phone": "(123) 456-7890",
-    "State": "CA",
-    "Zip": "92806"
-  },
-  {
-    "City": "Anaheim",
-    "Country": "USA",
-    "Customer": "JOHNDOE0001",
-    "Email": "email@sample.com",
-    "ID": "75B12D6B-B2C7-409D-89CB-006535DDDDDD",
-    "Line1": "123 PayFabric Way",
-    "Line2": "",
-    "Line3": "",
-    "ModifiedOn": "10/2/2015 10:39:32 AM",
-    "Phone": "(123) 456-7890",
-    "State": "CA",
-    "Zip": "92806"
-  }
+    {
+        "City": "Anaheim",
+        "Country": "USA",
+        "Customer": "JOHNDOE0001",
+        "Email": "sample@email.com",
+        "ID": "cf48cd94-0b50-4fbc-8fa2-b22c27842a26",
+        "Line1": "test blvd",
+        "Line2": "1",
+        "Line3": "1",
+        "Phone": "1",
+        "State": "CA",
+        "Zip": "92806",
+        "ModifiedOn": "1/13/2022 10:00:52 PM",
+        "ModifiedOnUTC": "2022-01-14T06:00:52.000Z"
+    },
+    {
+        "City": "Anaheim",
+        "Country": "United States of America",
+        "Customer": "JOHNDOE0001",
+        "Email": "sample@email.com; test@email.com",
+        "ID": "e8eeac64-552f-438e-bf8e-51a3ba8e5182",
+        "Line1": "test blvd",
+        "Line2": "",
+        "Line3": "",
+        "Phone": "7067730145",
+        "State": "GA",
+        "Zip": "12345",
+        "ModifiedOn": "12/13/2021 10:17:31 PM",
+        "ModifiedOnUTC": "2021-12-14T06:17:31.000Z"
+    }
 ]
 </pre>
 
 Retrieve Shipping Addresses (Query with Paging)
 -----------------------------------------------
 
-* `GET /payment/api/addresses/get?customer=JOHNDOE0001&fromDate=01-01-2015&page=1` will return shipping addresses for the specified customer after a specified date
+* `GET /payment/api/addresses/get?customer=JOHNDOE0001&fromDate=01-01-2015&page=1` will return shipping addresses for the specified customer after a specified date in merchant timezone.
 
 ###### Response
 <pre>
 {
-  "Paging": {
-    "Current": "1",
-    "Size": "15",
-    "TotalPages": "1",
-    "TotalRecords": "2"
-  },
-  "Records": 
-  [
-    {
-      "City": "Anaheim",
-      "Country": "USA",
-      "Customer": "JOHNDOE0001",
-      "Email": "email@sample.com",
-      "ID": "75B12D6B-B2C7-409D-89CB-006535D6CD95",
-      "Line1": "123 PayFabric Way",
-      "Line2": "",
-      "Line3": "",
-      "ModifiedOn": "10/2/2015 10:39:32 AM",
-      "Phone": "(123) 456-7890",
-      "State": "CA",
-      "Zip": "92806"
+    "Paging": {
+        "Current": "1",
+        "Size": "15",
+        "TotalPages": "1",
+        "TotalRecords": "2"
     },
-    {
-      "City": "Anaheim",
-      "Country": "USA",
-      "Customer": "JOHNDOE0001",
-      "Email": "email@sample.com",
-      "ID": "75B12D6B-B2C7-409D-89CB-006535DDDDDD",
-      "Line1": "123 PayFabric Way",
-      "Line2": "",
-      "Line3": "",
-      "ModifiedOn": "10/2/2015 10:39:32 AM",
-      "Phone": "(123) 456-7890",
-      "State": "CA",
-      "Zip": "92806"
-    }
-  ]
+    "Records": [
+        {
+            "City": "Anaheim",
+            "Country": "United States of America",
+            "Customer": "JOHNDOE0001",
+            "Email": "sample@email.com; test@email.com",
+            "ID": "e8eeac64-552f-438e-bf8e-51a3ba8e5182",
+            "Line1": "test street",
+            "Line2": "",
+            "Line3": "",
+            "Phone": "7067730145",
+            "State": "GA",
+            "Zip": "12345
+            "ModifiedOn": "12/13/2021 10:17:31 PM",
+            "ModifiedOnUTC": "2021-12-14T06:17:31.000Z"
+        },
+        {
+            "City": "Anaheim",
+            "Country": "USA",
+            "Customer": "JOHNDOE0001",
+            "Email": "sample@email.com",
+            "ID": "cf48cd94-0b50-4fbc-8fa2-b22c27842a26",
+            "Line1": "test blvd",
+            "Line2": "1",
+            "Line3": "1",
+            "Phone": "1234567890",
+            "State": "CA",
+            "Zip": "92806",
+            "ModifiedOn": "1/13/2022 10:00:52 PM",
+            "ModifiedOnUTC": "2022-01-14T06:00:52.000Z"
+        }
+    ]
+}
+
 </pre>

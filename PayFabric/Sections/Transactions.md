@@ -106,32 +106,35 @@ Process a Transaction
 
 ###### Response
 <pre>
-{
-    "AVSAddressResponse": "X",
-    "AVSZipResponse": "X",
-    "AuthCode": "010101",
-    "CVV2Response": null,
+"AVSAddressResponse": null,
+    "AVSZipResponse": null,
+    "AuthCode": "378AUE",
+    "CVV2Response": "NotSet",
     "CardType": "Credit",
-    "ExpectedSettledTime": "2021-07-03T02:00:00.0000000Z",
-    "FinalAmount": "21.00",
-    "IAVSAddressResponse": "N",
-    "Message": "Approved",
-    "OrigTrxAmount": "21.00",
-    "OriginationID": "A41E0E04DA61",
+    "ExpectedSettledTime": "5/26/2022 8:00:00 PM",
+    "ExpectedSettledTimeUTC": "2022-05-26T17:00:00.000",
+    "FinalAmount": "100.00",
+    "IAVSAddressResponse": null,
+    "Message": "APPROVED",
+    "OrigTrxAmount": "100.00",
+    "OriginationID": "EE21F1E6B2F94ECF92B83A4807E9D1DD",
     "PayFabricErrorCode": null,
-    "RespTrxTag": null,
-    "ResultCode": "0",
+    "RemainingBalance": null,
+    "RespTrxTag": "5/26/2022 4:53:59 AM",
+    "ResultCode": "1",
     "SettledTime": null,
+    "SettledTimeUTC": null,
     "Status": "Approved",
     "SurchargeAmount": "0.00",
-    "SurchargePercentage": "0",
-    "TAXml": "",
+    "SurchargePercentage": "0.00",
+    "TAXml": "<TransactionData><Connection name=\"EVO\" connector=\"EVO\"><Processor id=\"1\">Evo US</Processor><PaymentType id=\"1\">Credit</PaymentType></Connection><Transaction post=\"False\" type=\"1\" status=\"1\"><NeededData><Transaction><Type>1</Type><Status>Approved</Status><Category>NeededData</Category><Fields /></Transaction></NeededData><FailureData><Transaction><Type>1</Type><Status>Approved</Status><Category>FailureData</Category><Fields /></Transaction></FailureData><ResponseData><Transaction><Type>1</Type><Status>Approved</Status><Category>ResponseData</Category><Fields><Field id=\"TrxField_D625\"><Name>WebRequestExecutionDuration</Name><Desc>2524.9933</Desc><Value>2524.9933</Value></Field><Field id=\"TrxField_D83\"><Name>CVV2ResponseCode</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D24\"><Name>AuthCode</Name><Desc>378AUE</Desc><Value>378AUE</Value></Field><Field id=\"TrxField_D545\"><Name>ResponseBatchID</Name><Desc>2226</Desc><Value>2226</Value></Field><Field id=\"TrxField_D573\"><Name>ProcessedAs3D</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D599\"><Name>ThreeDSInfoRespIsChallengeMandated</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D601\"><Name>ThreeDSInfoRespAuthenticationType</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D604\"><Name>ThreeDSInfoRespMessageCategory</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D606\"><Name>ThreeDSInfoRespTransactionStatus</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D607\"><Name>ThreeDSInfoRespTransactionStatusReason</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D616\"><Name>ThreeDsRespSCARequired</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D617\"><Name>ThreeDsRespExemptionControl</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D619\"><Name>ThreeDsRespAuthenticationMethod</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D621\"><Name>ThreeDsRespProcessedAsDataOnly</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D586\"><Name>ProtocolVersion</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D16\"><Name>OriginationID</Name><Desc>EE21F1E6B2F94ECF92B83A4807E9D1DD</Desc><Value>EE21F1E6B2F94ECF92B83A4807E9D1DD</Value></Field><Field id=\"TrxField_D462\"><Name>GatewayOriginationID</Name><Desc>36047280</Desc><Value>36047280</Value></Field><Field id=\"TrxField_D463\"><Name>ProcessorOriginationID</Name><Desc>987196</Desc><Value>987196</Value></Field><Field id=\"TrxField_D31\"><Name>ResponseMsg</Name><Desc>APPROVED</Desc><Value>APPROVED</Value></Field><Field id=\"TrxField_D17\"><Name>ResultCode</Name><Desc>1</Desc><Value>1</Value></Field><Field id=\"TrxField_D464\"><Name>TransactionState</Name><Desc>Captured</Desc><Value>Captured</Value></Field><Field id=\"TrxField_D465\"><Name>CaptureState</Name><Desc>Captured</Desc><Value>Captured</Value></Field><Field id=\"TrxField_D76\"><Name>TrxDate</Name><Desc>5/26/2022 4:53:59 AM</Desc><Value>5/26/2022 8:54:00 AM</Value></Field><Field id=\"TrxField_D288\"><Name>TransactionID</Name><Desc>EE21F1E6B2F94ECF92B83A4807E9D1DD</Desc><Value>EE21F1E6B2F94ECF92B83A4807E9D1DD</Value></Field></Fields></Transaction></ResponseData><RequestData><Transaction><Type>1</Type><Status>1</Status><Category>RequestData</Category><Fields><Field id=\"TrxField_D1\"><Name>CCNumber</Name><Desc>Credit Card Number, could also be a DPAN/VPAN</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TrxField_D3\"><Name>CCExpDate</Name><Desc>Expiration Date MMYY</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>0123</Value></Field><Field id=\"TrxField_D5\"><Name>FirstName</Name><Desc>First Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>123 tes</Value></Field><Field id=\"TrxField_D7\"><Name>LastName</Name><Desc>Last Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>dd</Value></Field><Field id=\"TrxField_D15\"><Name>TrxAmount</Name><Desc>Transaction Amount</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>3</Type><Value>100.00</Value></Field><Field id=\"TrxField_D18\"><Name>CCType</Name><Desc>Card Type</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Visa</Value></Field><Field id=\"TrxField_D49\"><Name>CVV2</Name><Desc>CVV2</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value></Value></Field><Field id=\"TrxField_D74\"><Name>CurrencyCode</Name><Desc>Currency Code</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>10</Type><Value>USD</Value></Field><Field id=\"TrxField_D141\"><Name>ClientIP</Name><Desc>IP Address</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>63.117.2.51</Value></Field><Field id=\"TrxField_D168\"><Name>CardHolderAttendance</Name><Desc>Card holder attendance</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>ECommerce</Value></Field><Field id=\"TrxField_D539\"><Name>TransactionInitiation</Name><Desc>Transaction Initiation indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Merchant</Value></Field><Field id=\"TrxField_D542\"><Name>CCEntryIndicator</Name><Desc>Credit card entry indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Entered</Value></Field><Field id=\"TrxField_D543\"><Name>POSEntryMode</Name><Desc>POS Entry Mode</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>01</Value></Field><Field id=\"TrxField_D550\"><Name>PayFabricTransactionKey</Name><Desc>The PayFabric Transaction Key associated to this Payment Request.</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>22052501048782</Value></Field><Field id=\"TRXFIELD_D19\"><Name>PaymentType</Name><Value>1</Value></Field><Field id=\"TRXFIELD_D2\"><Name>TRXFIELD_D2</Name><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TRXFIELD_D54\"><Name>AccountName</Name><Value>123 tes dd </Value></Field><Field id=\"SaveCreditCard\"><Name>SaveCreditCard</Name><Value>0</Value></Field><Field id=\"MSO_PFTrxKey\"><Name>MSO_PFTrxKey</Name><Value>22052501048782</Value></Field><Field id=\"MSO_WalletID\"><Name>MSO_WalletID</Name><Value>00000000-0000-0000-0000-000000000000</Value></Field><Field id=\"MSO_EngineGUID\"><Name>MSO_EngineGUID</Name><Value>4f76bfce-6d2d-4a20-a7b8-5ba0f363e090</Value></Field><Field id=\"TRXFIELD_D540\"><Name>TransactionSchedule</Name><Value>Unscheduled</Value></Field><Field id=\"TRXFIELD_D541\"><Name>AuthorizationType</Name><Value>NotSet</Value></Field><Field id=\"MSO_Last_Xmit_Date\"><Name>MSO_Last_Xmit_Date</Name><Value>2022-05-25 00:00:00</Value></Field><Field id=\"MSO_Last_Xmit_Time\"><Name>MSO_Last_Xmit_Time</Name><Value>1900-01-01 10:54:00 PM</Value></Field><Field id=\"MSO_Last_Settled_Date\"><Name>MSO_Last_Settled_Date</Name><Value>1900-01-01</Value></Field><Field id=\"MSO_Last_Settled_Time\"><Name>MSO_Last_Settled_Time</Name><Value>1900-01-01 00:00:00</Value></Field></Fields></Transaction></RequestData></Transaction></TransactionData>",
     "TerminalID": null,
     "TerminalResultCode": null,
-    "TrxAmount": "21.00",
-    "TrxDate": "7/1/2021 10:48:05 PM",
-    "TrxKey": "21070100732372",
-    "WalletID": "a37150f5-c863-4ff4-aa19-033406cfa8b0"
+    "TrxAmount": "100.00",
+    "TrxDate": "5/26/2022 8:54:00 AM",
+    "TrxDateUTC": "2022-05-26T05:54:00.530Z",
+    "TrxKey": "22052501048782",
+    "WalletID": "00000000-0000-0000-0000-000000000000"
 }
 </pre>
 
@@ -196,31 +199,35 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
 ###### Response
 <pre>
 {
-    "AVSAddressResponse": "X",
-    "AVSZipResponse": "X",
-    "AuthCode": "010101",
-    "CVV2Response": null,
+    "AVSAddressResponse": null,
+    "AVSZipResponse": null,
+    "AuthCode": "7KASMC",
+    "CVV2Response": "NotSet",
     "CardType": "Credit",
-    "ExpectedSettledTime": "2021-07-03T02:00:00.0000000Z",
-    "FinalAmount": "21.00",
-    "IAVSAddressResponse": "N",
-    "Message": "Approved",
-    "OrigTrxAmount": "21.00",
-    "OriginationID": "A41E0E04DA61",
+    "ExpectedSettledTime": "5/26/2022 8:00:00 PM",
+    "ExpectedSettledTimeUTC": "2022-05-26T17:00:00.000",
+    "FinalAmount": "100.00",
+    "IAVSAddressResponse": null,
+    "Message": "APPROVED",
+    "OrigTrxAmount": "100.00",
+    "OriginationID": "B41325DBCF4A411F91861AECEBEF6E17",
     "PayFabricErrorCode": null,
-    "RespTrxTag": null,
-    "ResultCode": "0",
+    "RemainingBalance": null,
+    "RespTrxTag": "5/26/2022 5:11:16 AM",
+    "ResultCode": "1",
     "SettledTime": null,
+    "SettledTimeUTC": null,
     "Status": "Approved",
     "SurchargeAmount": "0.00",
-    "SurchargePercentage": "0",
-    "TAXml": "",
+    "SurchargePercentage": "0.00",
+    "TAXml": "<TransactionData><Connection name=\"EVO\" connector=\"EVO\"><Processor id=\"1\">Evo US</Processor><PaymentType id=\"1\">Credit</PaymentType></Connection><Transaction post=\"False\" type=\"1\" status=\"1\"><NeededData><Transaction><Type>1</Type><Status>Approved</Status><Category>NeededData</Category><Fields /></Transaction></NeededData><FailureData><Transaction><Type>1</Type><Status>Approved</Status><Category>FailureData</Category><Fields /></Transaction></FailureData><ResponseData><Transaction><Type>1</Type><Status>Approved</Status><Category>ResponseData</Category><Fields><Field id=\"TrxField_D625\"><Name>WebRequestExecutionDuration</Name><Desc>1296.8765</Desc><Value>1296.8765</Value></Field><Field id=\"TrxField_D83\"><Name>CVV2ResponseCode</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D24\"><Name>AuthCode</Name><Desc>7KASMC</Desc><Value>7KASMC</Value></Field><Field id=\"TrxField_D545\"><Name>ResponseBatchID</Name><Desc>2226</Desc><Value>2226</Value></Field><Field id=\"TrxField_D573\"><Name>ProcessedAs3D</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D599\"><Name>ThreeDSInfoRespIsChallengeMandated</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D601\"><Name>ThreeDSInfoRespAuthenticationType</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D604\"><Name>ThreeDSInfoRespMessageCategory</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D606\"><Name>ThreeDSInfoRespTransactionStatus</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D607\"><Name>ThreeDSInfoRespTransactionStatusReason</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D616\"><Name>ThreeDsRespSCARequired</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D617\"><Name>ThreeDsRespExemptionControl</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D619\"><Name>ThreeDsRespAuthenticationMethod</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D621\"><Name>ThreeDsRespProcessedAsDataOnly</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D586\"><Name>ProtocolVersion</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D16\"><Name>OriginationID</Name><Desc>B41325DBCF4A411F91861AECEBEF6E17</Desc><Value>B41325DBCF4A411F91861AECEBEF6E17</Value></Field><Field id=\"TrxField_D462\"><Name>GatewayOriginationID</Name><Desc>23846746</Desc><Value>23846746</Value></Field><Field id=\"TrxField_D463\"><Name>ProcessorOriginationID</Name><Desc>987222</Desc><Value>987222</Value></Field><Field id=\"TrxField_D31\"><Name>ResponseMsg</Name><Desc>APPROVED</Desc><Value>APPROVED</Value></Field><Field id=\"TrxField_D17\"><Name>ResultCode</Name><Desc>1</Desc><Value>1</Value></Field><Field id=\"TrxField_D464\"><Name>TransactionState</Name><Desc>Captured</Desc><Value>Captured</Value></Field><Field id=\"TrxField_D465\"><Name>CaptureState</Name><Desc>Captured</Desc><Value>Captured</Value></Field><Field id=\"TrxField_D76\"><Name>TrxDate</Name><Desc>5/26/2022 5:11:16 AM</Desc><Value>5/26/2022 9:11:17 AM</Value></Field><Field id=\"TrxField_D288\"><Name>TransactionID</Name><Desc>B41325DBCF4A411F91861AECEBEF6E17</Desc><Value>B41325DBCF4A411F91861AECEBEF6E17</Value></Field></Fields></Transaction></ResponseData><RequestData><Transaction><Type>1</Type><Status>1</Status><Category>RequestData</Category><Fields><Field id=\"TrxField_D1\"><Name>CCNumber</Name><Desc>Credit Card Number, could also be a DPAN/VPAN</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TrxField_D3\"><Name>CCExpDate</Name><Desc>Expiration Date MMYY</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>0123</Value></Field><Field id=\"TrxField_D5\"><Name>FirstName</Name><Desc>First Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>123 tes</Value></Field><Field id=\"TrxField_D7\"><Name>LastName</Name><Desc>Last Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>dd</Value></Field><Field id=\"TrxField_D15\"><Name>TrxAmount</Name><Desc>Transaction Amount</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>3</Type><Value>100.00</Value></Field><Field id=\"TrxField_D18\"><Name>CCType</Name><Desc>Card Type</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Visa</Value></Field><Field id=\"TrxField_D49\"><Name>CVV2</Name><Desc>CVV2</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value></Value></Field><Field id=\"TrxField_D74\"><Name>CurrencyCode</Name><Desc>Currency Code</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>10</Type><Value>USD</Value></Field><Field id=\"TrxField_D141\"><Name>ClientIP</Name><Desc>IP Address</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>63.117.2.51</Value></Field><Field id=\"TrxField_D168\"><Name>CardHolderAttendance</Name><Desc>Card holder attendance</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>ECommerce</Value></Field><Field id=\"TrxField_D539\"><Name>TransactionInitiation</Name><Desc>Transaction Initiation indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Merchant</Value></Field><Field id=\"TrxField_D542\"><Name>CCEntryIndicator</Name><Desc>Credit card entry indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Entered</Value></Field><Field id=\"TrxField_D543\"><Name>POSEntryMode</Name><Desc>POS Entry Mode</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>01</Value></Field><Field id=\"TrxField_D550\"><Name>PayFabricTransactionKey</Name><Desc>The PayFabric Transaction Key associated to this Payment Request.</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>22052501048797</Value></Field><Field id=\"TRXFIELD_D19\"><Name>PaymentType</Name><Value>1</Value></Field><Field id=\"TRXFIELD_D2\"><Name>TRXFIELD_D2</Name><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TRXFIELD_D54\"><Name>AccountName</Name><Value>123 tes dd </Value></Field><Field id=\"SaveCreditCard\"><Name>SaveCreditCard</Name><Value>0</Value></Field><Field id=\"MSO_PFTrxKey\"><Name>MSO_PFTrxKey</Name><Value>22052501048797</Value></Field><Field id=\"MSO_WalletID\"><Name>MSO_WalletID</Name><Value>00000000-0000-0000-0000-000000000000</Value></Field><Field id=\"MSO_EngineGUID\"><Name>MSO_EngineGUID</Name><Value>4f76bfce-6d2d-4a20-a7b8-5ba0f363e090</Value></Field><Field id=\"TRXFIELD_D540\"><Name>TransactionSchedule</Name><Value>Unscheduled</Value></Field><Field id=\"TRXFIELD_D541\"><Name>AuthorizationType</Name><Value>NotSet</Value></Field><Field id=\"MSO_Last_Xmit_Date\"><Name>MSO_Last_Xmit_Date</Name><Value>2022-05-25 00:00:00</Value></Field><Field id=\"MSO_Last_Xmit_Time\"><Name>MSO_Last_Xmit_Time</Name><Value>1900-01-01 11:11:17 PM</Value></Field><Field id=\"MSO_Last_Settled_Date\"><Name>MSO_Last_Settled_Date</Name><Value>1900-01-01</Value></Field><Field id=\"MSO_Last_Settled_Time\"><Name>MSO_Last_Settled_Time</Name><Value>1900-01-01 00:00:00</Value></Field></Fields></Transaction></RequestData></Transaction></TransactionData>",
     "TerminalID": null,
     "TerminalResultCode": null,
-    "TrxAmount": "21.00",
-    "TrxDate": "7/1/2021 10:48:05 PM",
-    "TrxKey": "21070100732372",
-    "WalletID": "a37150f5-c863-4ff4-aa19-033406cfa8b0"
+    "TrxAmount": "100.00",
+    "TrxDate": "5/26/2022 9:11:17 AM",
+    "TrxDateUTC": "2022-05-26T06:11:17.505Z",
+    "TrxKey": "22052501048797",
+    "WalletID": "00000000-0000-0000-0000-000000000000"
 }
 </pre>
 
@@ -233,75 +240,17 @@ Retrieve a Transaction
 ###### Response
 <pre>
 {
-    "Amount": "20.00",
+    "Amount": "100.00",
     "AuthorizationType": "NotSet",
     "BatchNumber": "",
-    "CCEntryIndicator": "Stored",
-    "Card": {
-        "Aba": "",
-        "Account": "XXXXXXXXXXXX1111",
-        "AccountType": "",
-        "Billto": {
-            "City": "anaheim",
-            "Country": "USA",
-            "Customer": "",
-            "Email": "",
-            "ID": "c4b32008-871d-4b2c-9c92-e261ced46456",
-            "Line1": "2099 State College",
-            "Line2": "",
-            "Line3": "",
-            "ModifiedOn": "1/1/0001 12:00:00 AM",
-            "ModifiedOnUTC": null,
-            "Phone": "",
-            "State": "",
-            "Zip": "92906"
-        },
-        "CardHolder": {
-            "DriverLicense": "",
-            "FirstName": "11",
-            "LastName": "1",
-            "MiddleName": "1",
-            "SSN": ""
-        },
-        "CardName": "Visa",
-        "CardType": "Credit",
-        "CheckNumber": "",
-        "Connector": "EVO",
-        "Customer": "AARONFIT0001",
-        "EncryptedToken": null,
-        "ExpDate": "1222",
-        "GPAddressCode": "",
-        "GatewayToken": "",
-        "ID": "b90eaf6a-70d6-4ebb-9aa4-a839033223f1",
-        "Identifier": "",
-        "IsDefaultCard": false,
-        "IsLocked": false,
-        "IsSaveCard": false,
-        "IssueNumber": "",
-        "LastUsedDate": "1/1/0001 12:00:00 AM",
-        "LastUsedDateUTC": null,
-        "ModifiedOn": "1/1/0001 12:00:00 AM",
-        "ModifiedOnUTC": null,
-        "NewCustomerNumber": null,
-        "StartDate": "",
-        "Tender": "CreditCard",
-        "UserDefine1": "",
-        "UserDefine2": "",
-        "UserDefine3": "",
-        "UserDefine4": ""
-    },
-    "CardHolderAttendance": "NotSet",
+    "CCEntryIndicator": "Entered",
+    "CardHolderAttendance": "ECommerce",
     "CardType": "Credit",
     "Currency": "USD",
-    "Customer": "AARONFIT0001",
+    "Customer": "",
     "Document": {
         "DefaultBillTo": null,
-        "Head": [
-            {
-                "Name": "InvoiceNumber",
-                "Value": null
-            }
-        ],
+        "Head": [],
         "Lines": [
             {
                 "Columns": [],
@@ -312,92 +261,129 @@ Retrieve a Transaction
     },
     "ECheckSetupId": "",
     "EntryClass": "",
-    "EntryMode": "LegacyVT",
-    "Key": "21122900961579",
+    "EntryMode": "API",
+    "GiftCardSetupId": "",
+    "Key": "22052501048797",
     "MSO_EngineGUID": "4f76bfce-6d2d-4a20-a7b8-5ba0f363e090",
-    "ModifiedOn": "12/29/2021 1:46:52 AM",
-    "ModifiedOnUTC": "12/29/2021 9:46:52 AM",
-    "OrigTrxAmount": "20.00",
+    "ModifiedOn": "5/26/2022 9:11:17 AM",
+    "ModifiedOnUTC": "2022-05-26T06:11:17.530Z",
+    "OrigTrxAmount": "100.00",
     "PayDate": "",
     "PayDateUTC": "",
     "ReferenceKey": null,
-    "ReferenceTrxs": [
-        {
-            "Key": "21122900961581",
-            "OriginationID": "D961D17F1F194F46BC0187AEE90FDA70",
-            "Status": "Approved",
-            "TrxDate": "12/29/2021 1:46:52 AM",
-            "Type": "Ship"
-        }
-    ],
+    "ReferenceTrxs": [],
     "ReqAuthCode": "",
     "SetupId": "EVO",
-    "Shipto": {
-        "City": "FARMINGTON HILLS",
-        "Country": "United States",
-        "Customer": "",
-        "Email": "",
-        "ID": "759bfacb-4b49-4118-b9c5-9dc8a9b1212c",
-        "Line1": "28595 ORCHARD LAKE RD",
-        "Line2": "STE 200",
-        "Line3": "",
-        "ModifiedOn": "1/1/0001 12:00:00 AM",
-        "ModifiedOnUTC": null,
-        "Phone": "2485530010",
-        "State": "MI",
-        "Zip": "48334-2979"
-    },
     "SurchargeAmount": "0.00",
     "SurchargePercentage": "0.0",
     "Tender": "CreditCard",
-    "TransactionState": "Partially Captured",
+    "TransactionState": "Pending Settlement",
     "TransationStateHistory": [
         {
-            "Amount": "20.00",
-            "CommittedStateTime": "12/29/2021 9:46:34 AM",
-            "TransactionState": "Pending Capture"
-        },
-        {
-            "Amount": "10.00",
-            "CommittedStateTime": "12/29/2021 9:46:52 AM",
-            "TransactionState": "Partially Captured"
+            "Amount": "100.00",
+            "CommittedStateTime": "5/26/2022 9:11:18 AM",
+            "CommittedStateTimeUTC": "2022-05-26T06:11:18.000Z",
+            "TransactionState": "Pending Settlement"
         }
     ],
-    "TrxInitiation": "Customer",
+    "TrxInitiation": "Merchant",
     "TrxResponse": {
         "AVSAddressResponse": "",
         "AVSZipResponse": "",
-        "AuthCode": "S300PJ",
+        "AuthCode": "7KASMC",
         "CVV2Response": "NotSet",
         "CardType": "Credit",
-        "ExpectedSettledTime": null,
-        "FinalAmount": "20.00",
+        "ExpectedSettledTime": "5/26/2022 8:00:00 PM",
+        "ExpectedSettledTimeUTC": "2022-05-26T17:00:00.000",
+        "FinalAmount": "100.00",
         "IAVSAddressResponse": "",
         "Message": "APPROVED",
-        "OrigTrxAmount": "20.00",
-        "OriginationID": "E9F6B60A145740B2BD3C28C7A6628574",
+        "OrigTrxAmount": "100.00",
+        "OriginationID": "B41325DBCF4A411F91861AECEBEF6E17",
         "PayFabricErrorCode": null,
-        "RespTrxTag": "12/29/2021 7:46:34 AM",
+        "RemainingBalance": null,
+        "RespTrxTag": "5/26/2022 5:11:16 AM",
         "ResultCode": "1",
         "SettledTime": null,
+        "SettledTimeUTC": null,
         "Status": "Approved",
         "SurchargeAmount": "0.00",
         "SurchargePercentage": "0.00",
-        "TAXml": "<TransactionData><Connection name=\"EVO\" connector=\"EVO\"><Processor id=\"1\">Evo US</Processor><PaymentType id=\"1\">Credit</PaymentType></Connection><Transaction post=\"False\" type=\"2\" status=\"1\"><NeededData><Transaction><Type>2</Type><Status>Approved</Status><Category>NeededData</Category><Fields /></Transaction></NeededData><FailureData><Transaction><Type>2</Type><Status>Approved</Status><Category>FailureData</Category><Fields /></Transaction></FailureData><ResponseData><Transaction><Type>7</Type><Status>Approved</Status><Category>ResponseData</Category><Fields><Field id=\"TrxField_D83\"><Name>CVV2ResponseCode</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D24\"><Name>AuthCode</Name><Desc>S300PJ</Desc><Value>S300PJ</Value></Field><Field id=\"TrxField_D545\"><Name>ResponseBatchID</Name><Desc>2129</Desc><Value>2129</Value></Field><Field id=\"TrxField_D573\"><Name>ProcessedAs3D</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D599\"><Name>ThreeDSInfoRespIsChallengeMandated</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D601\"><Name>ThreeDSInfoRespAuthenticationType</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D604\"><Name>ThreeDSInfoRespMessageCategory</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D606\"><Name>ThreeDSInfoRespTransactionStatus</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D607\"><Name>ThreeDSInfoRespTransactionStatusReason</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D616\"><Name>ThreeDsRespSCARequired</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D617\"><Name>ThreeDsRespExemptionControl</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D619\"><Name>ThreeDsRespAuthenticationMethod</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D621\"><Name>ThreeDsRespProcessedAsDataOnly</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D586\"><Name>ProtocolVersion</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D16\"><Name>OriginationID</Name><Desc>E9F6B60A145740B2BD3C28C7A6628574</Desc><Value>E9F6B60A145740B2BD3C28C7A6628574</Value></Field><Field id=\"TrxField_D462\"><Name>GatewayOriginationID</Name><Desc>05715317</Desc><Value>05715317</Value></Field><Field id=\"TrxField_D463\"><Name>ProcessorOriginationID</Name><Desc>691723</Desc><Value>691723</Value></Field><Field id=\"TrxField_D31\"><Name>ResponseMsg</Name><Desc>APPROVED</Desc><Value>APPROVED</Value></Field><Field id=\"TrxField_D17\"><Name>ResultCode</Name><Desc>1</Desc><Value>1</Value></Field><Field id=\"TrxField_D464\"><Name>TransactionState</Name><Desc>Authorized</Desc><Value>Authorized</Value></Field><Field id=\"TrxField_D465\"><Name>CaptureState</Name><Desc>ReadyForCapture</Desc><Value>ReadyForCapture</Value></Field><Field id=\"TrxField_D76\"><Name>TrxDate</Name><Desc>12/29/2021 7:46:34 AM</Desc><Value>12/29/2021 7:46:34 AM</Value></Field><Field id=\"TrxField_D288\"><Name>TransactionID</Name><Desc>E9F6B60A145740B2BD3C28C7A6628574</Desc><Value>E9F6B60A145740B2BD3C28C7A6628574</Value></Field></Fields></Transaction></ResponseData><RequestData><Transaction><Type>2</Type><Status>1</Status><Category>RequestData</Category><Fields><Field id=\"TrxField_D1\"><Name>CCNumber</Name><Desc>Credit Card Number, could also be a DPAN/VPAN</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TrxField_D3\"><Name>CCExpDate</Name><Desc>Expiration Date MMYY</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>1222</Value></Field><Field id=\"TrxField_D5\"><Name>FirstName</Name><Desc>First Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>11</Value></Field><Field id=\"TrxField_D6\"><Name>MiddleName</Name><Desc>Middle Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>1</Value></Field><Field id=\"TrxField_D7\"><Name>LastName</Name><Desc>Last Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>1</Value></Field><Field id=\"TrxField_D8\"><Name>Address1</Name><Desc>Address 1</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>2099 State College</Value></Field><Field id=\"TrxField_D11\"><Name>City</Name><Desc>City</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>anaheim</Value></Field><Field id=\"TrxField_D13\"><Name>Zip</Name><Desc>Zip</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>92906</Value></Field><Field id=\"TrxField_D15\"><Name>TrxAmount</Name><Desc>Transaction Amount</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>3</Type><Value>20.00</Value></Field><Field id=\"TrxField_D18\"><Name>CCType</Name><Desc>Card Type</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Visa</Value></Field><Field id=\"TrxField_D41\"><Name>ShipToZip</Name><Desc>Ship to Zip</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>48334-2979</Value></Field><Field id=\"TrxField_D48\"><Name>CustomerCode</Name><Desc>Customer Code</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>AARONFIT0001</Value></Field><Field id=\"TrxField_D74\"><Name>CurrencyCode</Name><Desc>Currency Code</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>10</Type><Value>USD</Value></Field><Field id=\"TrxField_D99\"><Name>ShipToCity</Name><Desc>Shipping City</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>FARMINGTON HILLS</Value></Field><Field id=\"TrxField_D103\"><Name>ShipToState</Name><Desc>Shipping State</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>MI</Value></Field><Field id=\"TrxField_D104\"><Name>ShipToStreet</Name><Desc>Shipping Street</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>28595 ORCHARD LAKE RD STE 200 </Value></Field><Field id=\"TrxField_D111\"><Name>ShipToCountry</Name><Desc>Shipping Country</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>United States</Value></Field><Field id=\"TrxField_D141\"><Name>ClientIP</Name><Desc>IP Address</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>122.97.16.122</Value></Field><Field id=\"TrxField_D155\"><Name>ShipToPhone</Name><Desc>Shipping Phone</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>2485530010</Value></Field><Field id=\"TrxField_D539\"><Name>TransactionInitiation</Name><Desc>Transaction Initiation indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Customer</Value></Field><Field id=\"TrxField_D542\"><Name>CCEntryIndicator</Name><Desc>Credit card entry indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Stored</Value></Field><Field id=\"TrxField_D543\"><Name>POSEntryMode</Name><Desc>POS Entry Mode</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>10</Value></Field><Field id=\"TrxField_D544\"><Name>CCFirstTransactionId</Name><Desc>The transaction Id that was first used to validate the credit card before use or storage</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>2B4182E0E116467291C553CCAB5A23B1</Value></Field><Field id=\"TrxField_D550\"><Name>PayFabricTransactionKey</Name><Desc>The PayFabric Transaction Key associated to this Payment Request.</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>21122900961579</Value></Field><Field id=\"TRXFIELD_D19\"><Name>PaymentType</Name><Value>1</Value></Field><Field id=\"TRXFIELD_D547\"><Name>SubsequentAuthOriginalAmount</Name><Value>3.00</Value></Field><Field id=\"TRXFIELD_D2\"><Name>TRXFIELD_D2</Name><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TRXFIELD_D54\"><Name>AccountName</Name><Value>11 1 1 </Value></Field><Field id=\"TRXFIELD_D55\"><Name>AccountStreet</Name><Value>2099 State College </Value></Field><Field id=\"TRXFIELD_D47\"><Name>CountryCode</Name><Value>USA</Value></Field><Field id=\"SaveCreditCard\"><Name>SaveCreditCard</Name><Value>0</Value></Field><Field id=\"MSO_PFTrxKey\"><Name>MSO_PFTrxKey</Name><Value>21122900961579</Value></Field><Field id=\"MSO_WalletID\"><Name>MSO_WalletID</Name><Value>b90eaf6a-70d6-4ebb-9aa4-a839033223f1</Value></Field><Field id=\"MSO_EngineGUID\"><Name>MSO_EngineGUID</Name><Value>4f76bfce-6d2d-4a20-a7b8-5ba0f363e090</Value></Field><Field id=\"TRXFIELD_D540\"><Name>TransactionSchedule</Name><Value>Unscheduled</Value></Field><Field id=\"TRXFIELD_D541\"><Name>AuthorizationType</Name><Value>NotSet</Value></Field><Field id=\"MSO_Last_Xmit_Date\"><Name>MSO_Last_Xmit_Date</Name><Value>2021-12-29 00:00:00</Value></Field><Field id=\"MSO_Last_Xmit_Time\"><Name>MSO_Last_Xmit_Time</Name><Value>1900-01-01 1:46:34 AM</Value></Field><Field id=\"MSO_Last_Settled_Date\"><Name>MSO_Last_Settled_Date</Name><Value>1900-01-01</Value></Field><Field id=\"MSO_Last_Settled_Time\"><Name>MSO_Last_Settled_Time</Name><Value>1900-01-01 00:00:00</Value></Field><Field id=\"MSO_TrxType\"><Name>MSO_TrxType</Name><Value>7</Value></Field><Field id=\"MSO_TrxStatus\"><Name>MSO_TrxStatus</Name><Value>0</Value></Field><Field id=\"MSO_IsCardValid\"><Name>MSO_IsCardValid</Name><Value>1</Value></Field><Field id=\"MSO_Auth_Amount\"><Name>MSO_Auth_Amount</Name><Value>20.00</Value></Field></Fields></Transaction></RequestData></Transaction></TransactionData>",
+        "TAXml": "<TransactionData><Connection name=\"EVO\" connector=\"EVO\"><Processor id=\"1\">Evo US</Processor><PaymentType id=\"1\">Credit</PaymentType></Connection><Transaction post=\"False\" type=\"1\" status=\"1\"><NeededData><Transaction><Type>1</Type><Status>Approved</Status><Category>NeededData</Category><Fields /></Transaction></NeededData><FailureData><Transaction><Type>1</Type><Status>Approved</Status><Category>FailureData</Category><Fields /></Transaction></FailureData><ResponseData><Transaction><Type>1</Type><Status>Approved</Status><Category>ResponseData</Category><Fields><Field id=\"TrxField_D625\"><Name>WebRequestExecutionDuration</Name><Desc>1296.8765</Desc><Value>1296.8765</Value></Field><Field id=\"TrxField_D83\"><Name>CVV2ResponseCode</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D24\"><Name>AuthCode</Name><Desc>7KASMC</Desc><Value>7KASMC</Value></Field><Field id=\"TrxField_D545\"><Name>ResponseBatchID</Name><Desc>2226</Desc><Value>2226</Value></Field><Field id=\"TrxField_D573\"><Name>ProcessedAs3D</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D599\"><Name>ThreeDSInfoRespIsChallengeMandated</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D601\"><Name>ThreeDSInfoRespAuthenticationType</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D604\"><Name>ThreeDSInfoRespMessageCategory</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D606\"><Name>ThreeDSInfoRespTransactionStatus</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D607\"><Name>ThreeDSInfoRespTransactionStatusReason</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D616\"><Name>ThreeDsRespSCARequired</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D617\"><Name>ThreeDsRespExemptionControl</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D619\"><Name>ThreeDsRespAuthenticationMethod</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D621\"><Name>ThreeDsRespProcessedAsDataOnly</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D586\"><Name>ProtocolVersion</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D16\"><Name>OriginationID</Name><Desc>B41325DBCF4A411F91861AECEBEF6E17</Desc><Value>B41325DBCF4A411F91861AECEBEF6E17</Value></Field><Field id=\"TrxField_D462\"><Name>GatewayOriginationID</Name><Desc>23846746</Desc><Value>23846746</Value></Field><Field id=\"TrxField_D463\"><Name>ProcessorOriginationID</Name><Desc>987222</Desc><Value>987222</Value></Field><Field id=\"TrxField_D31\"><Name>ResponseMsg</Name><Desc>APPROVED</Desc><Value>APPROVED</Value></Field><Field id=\"TrxField_D17\"><Name>ResultCode</Name><Desc>1</Desc><Value>1</Value></Field><Field id=\"TrxField_D464\"><Name>TransactionState</Name><Desc>Captured</Desc><Value>Captured</Value></Field><Field id=\"TrxField_D465\"><Name>CaptureState</Name><Desc>Captured</Desc><Value>Captured</Value></Field><Field id=\"TrxField_D76\"><Name>TrxDate</Name><Desc>5/26/2022 5:11:16 AM</Desc><Value>5/26/2022 9:11:17 AM</Value></Field><Field id=\"TrxField_D288\"><Name>TransactionID</Name><Desc>B41325DBCF4A411F91861AECEBEF6E17</Desc><Value>B41325DBCF4A411F91861AECEBEF6E17</Value></Field></Fields></Transaction></ResponseData><RequestData><Transaction><Type>1</Type><Status>1</Status><Category>RequestData</Category><Fields><Field id=\"TrxField_D1\"><Name>CCNumber</Name><Desc>Credit Card Number, could also be a DPAN/VPAN</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TrxField_D3\"><Name>CCExpDate</Name><Desc>Expiration Date MMYY</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>0123</Value></Field><Field id=\"TrxField_D5\"><Name>FirstName</Name><Desc>First Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>123 tes</Value></Field><Field id=\"TrxField_D7\"><Name>LastName</Name><Desc>Last Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>dd</Value></Field><Field id=\"TrxField_D15\"><Name>TrxAmount</Name><Desc>Transaction Amount</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>3</Type><Value>100.00</Value></Field><Field id=\"TrxField_D18\"><Name>CCType</Name><Desc>Card Type</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Visa</Value></Field><Field id=\"TrxField_D49\"><Name>CVV2</Name><Desc>CVV2</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value></Value></Field><Field id=\"TrxField_D74\"><Name>CurrencyCode</Name><Desc>Currency Code</Desc><Required>1</Required><Encrypted>0</Encrypted><Type>10</Type><Value>USD</Value></Field><Field id=\"TrxField_D141\"><Name>ClientIP</Name><Desc>IP Address</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>63.117.2.51</Value></Field><Field id=\"TrxField_D168\"><Name>CardHolderAttendance</Name><Desc>Card holder attendance</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>ECommerce</Value></Field><Field id=\"TrxField_D539\"><Name>TransactionInitiation</Name><Desc>Transaction Initiation indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Merchant</Value></Field><Field id=\"TrxField_D542\"><Name>CCEntryIndicator</Name><Desc>Credit card entry indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Entered</Value></Field><Field id=\"TrxField_D543\"><Name>POSEntryMode</Name><Desc>POS Entry Mode</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>01</Value></Field><Field id=\"TrxField_D550\"><Name>PayFabricTransactionKey</Name><Desc>The PayFabric Transaction Key associated to this Payment Request.</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>22052501048797</Value></Field><Field id=\"TRXFIELD_D19\"><Name>PaymentType</Name><Value>1</Value></Field><Field id=\"TRXFIELD_D2\"><Name>TRXFIELD_D2</Name><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TRXFIELD_D54\"><Name>AccountName</Name><Value>123 tes dd </Value></Field><Field id=\"SaveCreditCard\"><Name>SaveCreditCard</Name><Value>0</Value></Field><Field id=\"MSO_PFTrxKey\"><Name>MSO_PFTrxKey</Name><Value>22052501048797</Value></Field><Field id=\"MSO_WalletID\"><Name>MSO_WalletID</Name><Value>00000000-0000-0000-0000-000000000000</Value></Field><Field id=\"MSO_EngineGUID\"><Name>MSO_EngineGUID</Name><Value>4f76bfce-6d2d-4a20-a7b8-5ba0f363e090</Value></Field><Field id=\"TRXFIELD_D540\"><Name>TransactionSchedule</Name><Value>Unscheduled</Value></Field><Field id=\"TRXFIELD_D541\"><Name>AuthorizationType</Name><Value>NotSet</Value></Field><Field id=\"MSO_Last_Xmit_Date\"><Name>MSO_Last_Xmit_Date</Name><Value>2022-05-25 00:00:00</Value></Field><Field id=\"MSO_Last_Xmit_Time\"><Name>MSO_Last_Xmit_Time</Name><Value>1900-01-01 11:11:17 PM</Value></Field><Field id=\"MSO_Last_Settled_Date\"><Name>MSO_Last_Settled_Date</Name><Value>1900-01-01</Value></Field><Field id=\"MSO_Last_Settled_Time\"><Name>MSO_Last_Settled_Time</Name><Value>1900-01-01 00:00:00</Value></Field></Fields></Transaction></RequestData></Transaction></TransactionData>",
         "TerminalID": "",
         "TerminalResultCode": "",
-        "TrxAmount": "20.00",
-        "TrxDate": "12/29/2021 1:46:34 AM",
-        "TrxDateUTC": "12/29/2021 9:46:34 AM",
-        "TrxKey": "21122900961579",
+        "TrxAmount": "100.00",
+        "TrxDate": "5/26/2022 9:11:17 AM",
+        "TrxDateUTC": "2022-05-26T06:11:17.505Z",
+        "TrxKey": "22052501048797",
         "WalletID": null
     },
     "TrxSchedule": "Unscheduled",
-    "TrxUserDefine1": "Via endpoint: api2.cipcert.goevo.com; takes 2551.3783ms;",
+    "TrxUserDefine1": "Via endpoint: api1.cipcert.goevo.com; takes 1296.8765ms; update takes 0ms",
     "TrxUserDefine2": "",
     "TrxUserDefine3": "",
     "TrxUserDefine4": "",
-    "Type": "Book"
+    "Type": "Sale",
+    "Card": {
+        "Aba": "",
+        "Account": "XXXXXXXXXXXX1111",
+        "AccountType": "",
+        "CardHolder": {
+            "DriverLicense": "",
+            "FirstName": "123 tes",
+            "LastName": "dd",
+            "MiddleName": "",
+            "SSN": ""
+        },
+        "CardName": "Visa",
+        "CardType": "Credit",
+        "CheckNumber": "",
+        "Connector": "EVO",
+        "Customer": "",
+        "EncryptedToken": null,
+        "ExpDate": "0123",
+        "GPAddressCode": "",
+        "GatewayToken": "",
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Identifier": "",
+        "IsDefaultCard": false,
+        "IsLocked": false,
+        "IsSaveCard": false,
+        "IssueNumber": "",
+        "LastUsedDate": "5/26/2022 9:11:17 AM",
+        "LastUsedDateUTC": "2022-05-26T06:11:17.530Z",
+        "Tender": "CreditCard",
+        "UserDefine1": "",
+        "UserDefine2": "",
+        "UserDefine3": "",
+        "UserDefine4": "",
+        "Billto": {
+            "City": "",
+            "Country": "",
+            "Customer": "",
+            "Email": "",
+            "ID": "00000000-0000-0000-0000-000000000000",
+            "Line1": "",
+            "Line2": "",
+            "Line3": "",
+            "Phone": "",
+            "State": "",
+            "Zip": ""
+        }
+    },
+    "Shipto": {
+        "City": "",
+        "Country": "",
+        "Customer": "",
+        "Email": "",
+        "ID": "00000000-0000-0000-0000-000000000000",
+        "Line1": "",
+        "Line2": "",
+        "Line3": "",
+        "Phone": "",
+        "State": "",
+        "Zip": ""
+    }
 }
 </pre>
 
@@ -417,12 +403,12 @@ This request accepts the below query string parameters to add options. You can u
 | :------------- | :------------- | 
 |perdevice |When the value is `true`, the transaction will be filtered by device, which's device ID is used to authorize the request. Default value is `false`.|
 |customer|This parameter is to filter the result by customer number, which is used to create/process transaction.|
-|fromdate|This parameter is to set specific 'date from' to filter transactions. The format: mm/dd/yyyy.|
+|fromdate|This parameter is to set specific 'date from' to filter transactions. The format: mm/dd/yyyy and in merchant timezone. For example, merchant set the time zone as EST, and call this API by passing the fromdate = 05/20/2022, then API will return the transactions later than 2022-5-20 00:00:00 in EST.|
 |page|This parameter is to set the result's page number, each page will return 15 records.|
 |status|This parameter is used to filter transaction result against processed transaction's status, the possible values are: `approved`, `failure`, and `denied`. Returned result will include all transaction status if application does not submit this parameter.|
 |excludeunprocess|When the value is `true`, the result will filter out the unprocess transaction. Default value is `false`. |
 |pagesize|This parameter is to set specific page size, maximum value is 15.|
-|enddate|This parameter is to set a specific 'date to' to filter transactions, The format: mm/dd/yyyy. |
+|enddate|This parameter is to set a specific 'date to' to filter transactions, The format: mm/dd/yyyy and in merchant timezone. For example, merchant set the time zone as EST, and call this API by passing the enddate = 05/20/2022, then API will return the transactions earlier than 2022-5-20 23:59:59 in EST. |
 
 ###### Response
 <pre>
@@ -430,8 +416,8 @@ This request accepts the below query string parameters to add options. You can u
     "Paging": {
         "Current": "1",
         "Size": "15",
-        "TotalPages": "9",
-        "TotalRecords": "134"
+        "TotalPages": "1",
+        "TotalRecords": "1"
     },
     "Records": [
         {
@@ -439,30 +425,95 @@ This request accepts the below query string parameters to add options. You can u
             "AuthorizationType": "NotSet",
             "BatchNumber": "",
             "CCEntryIndicator": "Entered",
+            "CardHolderAttendance": "ECommerce",
+            "CardType": "Credit",
+            "Currency": "USD",
+            "Customer": "",
+            "Document": {
+                "DefaultBillTo": null,
+                "Head": [],
+                "Lines": [
+                    {
+                        "Columns": [],
+                        "UserDefined": []
+                    }
+                ],
+                "UserDefined": []
+            },
+            "ECheckSetupId": "",
+            "EntryClass": "",
+            "EntryMode": "API",
+            "GiftCardSetupId": "",
+            "Key": "22052501048797",
+            "MSO_EngineGUID": "4f76bfce-6d2d-4a20-a7b8-5ba0f363e090",
+            "ModifiedOn": "5/26/2022 9:11:17 AM",
+            "ModifiedOnUTC": "2022-05-26T06:11:17.530Z",
+            "OrigTrxAmount": "100.00",
+            "PayDate": "",
+            "PayDateUTC": "",
+            "ReferenceKey": null,
+            "ReferenceTrxs": [],
+            "ReqAuthCode": "",
+            "SetupId": "EVO",
+            "SurchargeAmount": "0.00",
+            "SurchargePercentage": "0.0",
+            "Tender": "CreditCard",
+            "TransactionState": "Pending Settlement",
+            "TransationStateHistory": [
+                {
+                    "Amount": "100.00",
+                    "CommittedStateTime": "5/26/2022 9:11:18 AM",
+                    "CommittedStateTimeUTC": "2022-05-26T06:11:18.000Z",
+                    "TransactionState": "Pending Settlement"
+                }
+            ],
+            "TrxInitiation": "Merchant",
+            "TrxResponse": {
+                "AVSAddressResponse": "",
+                "AVSZipResponse": "",
+                "AuthCode": "7KASMC",
+                "CVV2Response": "NotSet",
+                "CardType": "Credit",
+                "ExpectedSettledTime": "5/26/2022 8:00:00 PM",
+                "ExpectedSettledTimeUTC": "2022-05-26T17:00:00.000",
+                "FinalAmount": "100.00",
+                "IAVSAddressResponse": "",
+                "Message": "APPROVED",
+                "OrigTrxAmount": "100.00",
+                "OriginationID": "B41325DBCF4A411F91861AECEBEF6E17",
+                "PayFabricErrorCode": null,
+                "RemainingBalance": null,
+                "RespTrxTag": null,
+                "ResultCode": "1",
+                "SettledTime": null,
+                "SettledTimeUTC": null,
+                "Status": "Approved",
+                "SurchargeAmount": "0.00",
+                "SurchargePercentage": "0.00",
+                "TAXml": null,
+                "TerminalID": "",
+                "TerminalResultCode": "",
+                "TrxAmount": "100.00",
+                "TrxDate": "5/26/2022 9:11:17 AM",
+                "TrxDateUTC": "2022-05-26T06:11:17.505Z",
+                "TrxKey": "22052501048797",
+                "WalletID": null
+            },
+            "TrxSchedule": "Unscheduled",
+            "TrxUserDefine1": null,
+            "TrxUserDefine2": null,
+            "TrxUserDefine3": null,
+            "TrxUserDefine4": null,
+            "Type": "Sale",
             "Card": {
                 "Aba": "",
                 "Account": "XXXXXXXXXXXX1111",
                 "AccountType": "",
-                "Billto": {
-                    "City": "Chicago",
-                    "Country": "United States",
-                    "Customer": "",
-                    "Email": "sample@email.com",
-                    "ID": "00000000-0000-0000-0000-000000000000",
-                    "Line1": "11403 45 St. South",
-                    "Line2": "123asdfadf2",
-                    "Line3": "123asdfadf3",
-                    "ModifiedOn": "1/1/0001 12:00:00 AM",
-                    "ModifiedOnUTC": null,
-                    "Phone": "13125550102",
-                    "State": "IL",
-                    "Zip": "60603-0776"
-                },
                 "CardHolder": {
                     "DriverLicense": "",
-                    "FirstName": "1",
-                    "LastName": "1",
-                    "MiddleName": "1",
+                    "FirstName": "123 tes",
+                    "LastName": "dd",
+                    "MiddleName": "",
                     "SSN": ""
                 },
                 "CardName": "Visa",
@@ -471,7 +522,7 @@ This request accepts the below query string parameters to add options. You can u
                 "Connector": null,
                 "Customer": "",
                 "EncryptedToken": null,
-                "ExpDate": "0122",
+                "ExpDate": "0123",
                 "GPAddressCode": null,
                 "GatewayToken": null,
                 "ID": "00000000-0000-0000-0000-000000000000",
@@ -480,112 +531,13 @@ This request accepts the below query string parameters to add options. You can u
                 "IsLocked": false,
                 "IsSaveCard": false,
                 "IssueNumber": null,
-                "LastUsedDate": "1/1/0001 12:00:00 AM",
-                "LastUsedDateUTC": null,
-                "ModifiedOn": "1/1/0001 12:00:00 AM",
-                "ModifiedOnUTC": null,
-                "NewCustomerNumber": null,
-                "StartDate": null,
+                "LastUsedDate": "5/26/2022 9:11:17 AM",
+                "LastUsedDateUTC": "2022-05-26T06:11:17.530Z",
                 "Tender": null,
                 "UserDefine1": null,
                 "UserDefine2": null,
                 "UserDefine3": null,
-                "UserDefine4": null
-            },
-            "CardHolderAttendance": "",
-            "CardType": "Credit",
-            "Currency": "USD",
-            "Customer": "aaronfit0001",
-            "Document": {
-                "DefaultBillTo": null,
-                "Head": [
-                    {
-                        "Name": "InvoiceNumber",
-                        "Value": null
-                    }
-                ],
-                "Lines": [],
-                "UserDefined": []
-            },
-            "ECheckSetupId": "",
-            "EntryClass": "",
-            "EntryMode": "HostedPage",
-            "Key": "21011000521501",
-            "MSO_EngineGUID": "05dd28ac-fb29-4e75-9c2b-ce11325101f7",
-            "ModifiedOn": "1/10/2021 10:56:04 PM",
-            "ModifiedOnUTC": "1/11/2021 6:56:04 AM",
-            "OrigTrxAmount": "100.00",
-            "PayDate": "",
-            "PayDateUTC": "",
-            "ReferenceKey": null,
-            "ReferenceTrxs": null,
-            "ReqAuthCode": "11",
-            "SetupId": "EVOSNAPWITHSURCHARGE",
-            "Shipto": {
-                "City": "Chicago",
-                "Country": "United States",
-                "Customer": "",
-                "Email": "sample@email.com",
-                "ID": "00000000-0000-0000-0000-000000000000",
-                "Line1": "11403 45 St. South",
-                "Line2": "123asdfadf2",
-                "Line3": "123asdfadf3",
-                "ModifiedOn": "1/1/0001 12:00:00 AM",
-                "ModifiedOnUTC": null,
-                "Phone": "13125550102",
-                "State": "IL",
-                "Zip": "60603-0776"
-            },
-            "SurchargeAmount": "0.00",
-            "SurchargePercentage": "0.0",
-            "Tender": "CreditCard",
-            "TransactionState": "Settled",
-            "TransationStateHistory": [],
-            "TrxInitiation": "Customer",
-            "TrxResponse": {
-                "AVSAddressResponse": "",
-                "AVSZipResponse": "",
-                "AuthCode": "11",
-                "CVV2Response": "NotSet",
-                "CardType": "Credit",
-                "ExpectedSettledTime": "2021-01-12T03:00:00.0000000Z",
-                "FinalAmount": "100.00",
-                "IAVSAddressResponse": "",
-                "Message": "APPROVED",
-                "OrigTrxAmount": "100.00",
-                "OriginationID": "444F2C68DE154FAE9D09569F1095CF22",
-                "PayFabricErrorCode": null,
-                "RespTrxTag": null,
-                "ResultCode": "1",
-                "SettledTime": "2021-01-11T07:13:24.0000000Z",
-                "Status": "Approved",
-                "SurchargeAmount": "0.00",
-                "SurchargePercentage": "0.00",
-                "TAXml": null,
-                "TerminalID": "",
-                "TerminalResultCode": "",
-                "TrxAmount": "100.00",
-                "TrxDate": "1/10/2021 10:56:04 PM",
-                "TrxDateUTC": "1/11/2021 6:56:04 AM",
-                "TrxKey": "21011000521501",
-                "WalletID": null
-            },
-            "TrxSchedule": "Unscheduled",
-            "TrxUserDefine1": null,
-            "TrxUserDefine2": null,
-            "TrxUserDefine3": null,
-            "TrxUserDefine4": null,
-            "Type": "Force"
-        },        
-        {
-            "Amount": "200.00",
-            "AuthorizationType": "NotSet",
-            "BatchNumber": "",
-            "CCEntryIndicator": "Entered",
-            "Card": {
-                "Aba": "",
-                "Account": "XXXXXXXXXXXX1111",
-                "AccountType": "",
+                "UserDefine4": null,
                 "Billto": {
                     "City": "",
                     "Country": "",
@@ -595,80 +547,11 @@ This request accepts the below query string parameters to add options. You can u
                     "Line1": "",
                     "Line2": "",
                     "Line3": "",
-                    "ModifiedOn": "1/1/0001 12:00:00 AM",
-                    "ModifiedOnUTC": null,
                     "Phone": "",
                     "State": "",
                     "Zip": ""
-                },
-                "CardHolder": {
-                    "DriverLicense": "",
-                    "FirstName": "asbsd",
-                    "LastName": "1223345",
-                    "MiddleName": "s",
-                    "SSN": ""
-                },
-                "CardName": "Visa",
-                "CardType": "Prepaid",
-                "CheckNumber": "",
-                "Connector": null,
-                "Customer": "",
-                "EncryptedToken": null,
-                "ExpDate": "0122",
-                "GPAddressCode": null,
-                "GatewayToken": null,
-                "ID": "00000000-0000-0000-0000-000000000000",
-                "Identifier": null,
-                "IsDefaultCard": false,
-                "IsLocked": false,
-                "IsSaveCard": false,
-                "IssueNumber": null,
-                "LastUsedDate": "1/1/0001 12:00:00 AM",
-                "LastUsedDateUTC": null,
-                "ModifiedOn": "1/1/0001 12:00:00 AM",
-                "ModifiedOnUTC": null,
-                "NewCustomerNumber": null,
-                "StartDate": null,
-                "Tender": null,
-                "UserDefine1": null,
-                "UserDefine2": null,
-                "UserDefine3": null,
-                "UserDefine4": null
+                }
             },
-            "CardHolderAttendance": "",
-            "CardType": "Prepaid",
-            "Currency": "CAD",
-            "Customer": "AARONFIT0001",
-            "Document": {
-                "DefaultBillTo": null,
-                "Head": [
-                    {
-                        "Name": "InvoiceNumber",
-                        "Value": ""
-                    }
-                ],
-                "Lines": [],
-                "UserDefined": [
-                    {
-                        "Name": "ThirdPartyBatch",
-                        "Value": null
-                    }
-                ]
-            },
-            "ECheckSetupId": "",
-            "EntryClass": "",
-            "EntryMode": "HostedPage",
-            "Key": "21032200596373",
-            "MSO_EngineGUID": "65a9df60-1bc8-43d7-a279-1f4bb620e5a0",
-            "ModifiedOn": "3/22/2021 12:52:53 AM",
-            "ModifiedOnUTC": "3/22/2021 7:52:53 AM",
-            "OrigTrxAmount": "200.00",
-            "PayDate": "",
-            "PayDateUTC": "",
-            "ReferenceKey": null,
-            "ReferenceTrxs": null,
-            "ReqAuthCode": "010101",
-            "SetupId": "EVOSNAPNOSURCHARGE",
             "Shipto": {
                 "City": "",
                 "Country": "",
@@ -678,52 +561,10 @@ This request accepts the below query string parameters to add options. You can u
                 "Line1": "",
                 "Line2": "",
                 "Line3": "",
-                "ModifiedOn": "1/1/0001 12:00:00 AM",
-                "ModifiedOnUTC": null,
                 "Phone": "",
                 "State": "",
                 "Zip": ""
-            },
-            "SurchargeAmount": "0.00",
-            "SurchargePercentage": "0.0",
-            "Tender": "CreditCard",
-            "TransactionState": "Settled",
-            "TransationStateHistory": [],
-            "TrxInitiation": "Customer",
-            "TrxResponse": {
-                "AVSAddressResponse": "",
-                "AVSZipResponse": "",
-                "AuthCode": "010101",
-                "CVV2Response": "NotSet",
-                "CardType": "Prepaid",
-                "ExpectedSettledTime": "2021-03-23T03:00:00.0000000Z",
-                "FinalAmount": "200.00",
-                "IAVSAddressResponse": "",
-                "Message": "APPROVED",
-                "OrigTrxAmount": "200.00",
-                "OriginationID": "4720DB1FAC0D4C32877AC13BAAF61D3E",
-                "PayFabricErrorCode": null,
-                "RespTrxTag": null,
-                "ResultCode": "1",
-                "SettledTime": "2021-03-24T03:00:00.0000000Z",
-                "Status": "Approved",
-                "SurchargeAmount": "0.00",
-                "SurchargePercentage": "0.00",
-                "TAXml": null,
-                "TerminalID": "",
-                "TerminalResultCode": "",
-                "TrxAmount": "200.00",
-                "TrxDate": "3/22/2021 12:52:52 AM",
-                "TrxDateUTC": "3/22/2021 7:52:52 AM",
-                "TrxKey": "21032200596373",
-                "WalletID": null
-            },
-            "TrxSchedule": "Unscheduled",
-            "TrxUserDefine1": null,
-            "TrxUserDefine2": null,
-            "TrxUserDefine3": null,
-            "TrxUserDefine4": null,
-            "Type": "Force"
+            }
         }
     ]
 }
@@ -759,6 +600,7 @@ Referenced transaction uses the original transaction Key as the referenced facto
 <b>Note:</b> CaptureComplete = true means this is the last capture transaction, no capture allowed for the original authorization transaction; CaptureComplete = false means this is not the last capture transaction, it allows to do multiple captures for the original authorization transaction. CaptureComplete will be set to true if pass invalid value or don't pass any value. For **EVO gateway profile**, If over capture or transactions include tip amount or incremental amount, CaptureComplete will be set to true automatically whatever the input value is. This logic is not applied with other gateways' transactions other than EVO.
 
 #### Void
+
 * `GET /payment/api/reference/{TransactionKey}?trxtype=VOID` or `POST /transaction/process` with following request will attempt to cancel a transaction that has already been processed successfully with a payment gateway. PayFabric attempts to reverse the transaction by submitting a VOID transaction before settlement with the bank, if cancellation is not possible a refund (credit) must be performed.
 
 ###### Request
@@ -770,6 +612,7 @@ Referenced transaction uses the original transaction Key as the referenced facto
 </pre>
 
 #### Refund（Reference)
+
 * `GET /payment/api/reference/{TransactionKey}?trxtype=Refund` or `POST /transaction/process` with following request will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a Refund transaction for a previous Sale/Caputre transaction.
 
 ###### Request
@@ -795,30 +638,34 @@ Note: `ReferenceKey` is the initial processed transaction's `TrxKey`. If `Amount
 ###### Response
 <pre>
 {
-    "AVSAddressResponse": "X",
-    "AVSZipResponse": "X",
-    "AuthCode": "010101",
+    "AVSAddressResponse": null,
+    "AVSZipResponse": null,
+    "AuthCode": null,
     "CVV2Response": null,
     "CardType": "Credit",
-    "ExpectedSettledTime": "2021-07-03T02:00:00.0000000Z",
-    "FinalAmount": "1.00",
-    "IAVSAddressResponse": "N",
-    "Message": "Approved",
-    "OrigTrxAmount": "1.00",
-    "OriginationID": "A41E0E04DA9E",
+    "ExpectedSettledTime": "5/26/2022 8:00:00 PM",
+    "ExpectedSettledTimeUTC": "2022-05-26T17:00:00.000",
+    "FinalAmount": "100.00",
+    "IAVSAddressResponse": null,
+    "Message": "APPROVED",
+    "OrigTrxAmount": "100.00",
+    "OriginationID": "13529CF98B794C51A341CED02CE06A2E",
     "PayFabricErrorCode": null,
-    "RespTrxTag": null,
-    "ResultCode": "0",
+    "RemainingBalance": null,
+    "RespTrxTag": "5/26/2022 5:27:50 AM",
+    "ResultCode": "1",
     "SettledTime": null,
+    "SettledTimeUTC": null,
     "Status": "Approved",
     "SurchargeAmount": "0.00",
-    "SurchargePercentage": "0",
-    "TAXml": "",
+    "SurchargePercentage": "0.00",
+    "TAXml": "<TransactionData><Connection name=\"EVO\" connector=\"EVO\"><Processor id=\"1\">Evo US</Processor><PaymentType id=\"1\">Credit</PaymentType></Connection><Transaction post=\"False\" type=\"6\" status=\"1\"><NeededData><Transaction><Type>6</Type><Status>Approved</Status><Category>NeededData</Category><Fields /></Transaction></NeededData><FailureData><Transaction><Type>6</Type><Status>Approved</Status><Category>FailureData</Category><Fields /></Transaction></FailureData><ResponseData><Transaction><Type>6</Type><Status>Approved</Status><Category>ResponseData</Category><Fields><Field id=\"TrxField_D625\"><Name>WebRequestExecutionDuration</Name><Desc>937.5086</Desc><Value>937.5086</Value></Field><Field id=\"TrxField_D16\"><Name>OriginationID</Name><Desc>13529CF98B794C51A341CED02CE06A2E</Desc><Value>13529CF98B794C51A341CED02CE06A2E</Value></Field><Field id=\"TrxField_D462\"><Name>GatewayOriginationID</Name><Desc>96745031</Desc><Value>96745031</Value></Field><Field id=\"TrxField_D463\"><Name>ProcessorOriginationID</Name><Desc>987264</Desc><Value>987264</Value></Field><Field id=\"TrxField_D31\"><Name>ResponseMsg</Name><Desc>APPROVED</Desc><Value>APPROVED</Value></Field><Field id=\"TrxField_D17\"><Name>ResultCode</Name><Desc>1</Desc><Value>1</Value></Field><Field id=\"TrxField_D464\"><Name>TransactionState</Name><Desc>Returned</Desc><Value>Returned</Value></Field><Field id=\"TrxField_D465\"><Name>CaptureState</Name><Desc>CapturedUndoPermitted</Desc><Value>CapturedUndoPermitted</Value></Field><Field id=\"TrxField_D76\"><Name>TrxDate</Name><Desc>5/26/2022 5:27:50 AM</Desc><Value>5/26/2022 9:27:51 AM</Value></Field><Field id=\"TrxField_D288\"><Name>TransactionID</Name><Desc>13529CF98B794C51A341CED02CE06A2E</Desc><Value>13529CF98B794C51A341CED02CE06A2E</Value></Field></Fields></Transaction></ResponseData><RequestData><Transaction><Type>6</Type><Status>1</Status><Category>RequestData</Category><Fields><Field id=\"TrxField_D1\"><Name>CCNumber</Name><Desc>Credit Card Number, could also be a DPAN/VPAN</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TrxField_D3\"><Name>CCExpDate</Name><Desc>Expiration Date MMYY</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>0123</Value></Field><Field id=\"TrxField_D5\"><Name>FirstName</Name><Desc>First Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>123 tes</Value></Field><Field id=\"TrxField_D7\"><Name>LastName</Name><Desc>Last Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>dd</Value></Field><Field id=\"TrxField_D15\"><Name>TrxAmount</Name><Desc>Transaction Amount</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>3</Type><Value>100.00</Value></Field><Field id=\"TrxField_D16\"><Name>OriginationID</Name><Desc>Origination ID</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>B41325DBCF4A411F91861AECEBEF6E17</Value></Field><Field id=\"TrxField_D18\"><Name>CCType</Name><Desc>Card Type</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Visa</Value></Field><Field id=\"TrxField_D74\"><Name>CurrencyCode</Name><Desc>Currency Code</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>USD</Value></Field><Field id=\"TrxField_D141\"><Name>ClientIP</Name><Desc>IP Address</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>63.117.2.51</Value></Field><Field id=\"TrxField_D168\"><Name>CardHolderAttendance</Name><Desc>Card holder attendance</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>ECommerce</Value></Field><Field id=\"TrxField_D539\"><Name>TransactionInitiation</Name><Desc>Transaction Initiation indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Merchant</Value></Field><Field id=\"TrxField_D542\"><Name>CCEntryIndicator</Name><Desc>Credit card entry indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Entered</Value></Field><Field id=\"TrxField_D543\"><Name>POSEntryMode</Name><Desc>POS Entry Mode</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>01</Value></Field><Field id=\"TrxField_D550\"><Name>PayFabricTransactionKey</Name><Desc>The PayFabric Transaction Key associated to this Payment Request.</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>22052501048810</Value></Field><Field id=\"TRXFIELD_D19\"><Name>PaymentType</Name><Value>1</Value></Field><Field id=\"TRXFIELD_D24\"><Name>AuthCode</Name><Value>7KASMC</Value></Field><Field id=\"TRXFIELD_D76\"><Name>TrxDate</Name><Value>5/26/2022 5:11:16 AM</Value></Field><Field id=\"TRXFIELD_D2\"><Name>TRXFIELD_D2</Name><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TRXFIELD_D54\"><Name>AccountName</Name><Value>123 tes dd </Value></Field><Field id=\"SaveCreditCard\"><Name>SaveCreditCard</Name><Value>0</Value></Field><Field id=\"MSO_PFTrxKey\"><Name>MSO_PFTrxKey</Name><Value>22052501048810</Value></Field><Field id=\"MSO_WalletID\"><Name>MSO_WalletID</Name><Value>00000000-0000-0000-0000-000000000000</Value></Field><Field id=\"MSO_EngineGUID\"><Name>MSO_EngineGUID</Name><Value>4f76bfce-6d2d-4a20-a7b8-5ba0f363e090</Value></Field><Field id=\"TRXFIELD_D540\"><Name>TransactionSchedule</Name><Value>Unscheduled</Value></Field><Field id=\"TRXFIELD_D541\"><Name>AuthorizationType</Name><Value>NotSet</Value></Field><Field id=\"MSO_Last_Xmit_Date\"><Name>MSO_Last_Xmit_Date</Name><Value>2022-05-25 00:00:00</Value></Field><Field id=\"MSO_Last_Xmit_Time\"><Name>MSO_Last_Xmit_Time</Name><Value>1900-01-01 11:27:51 PM</Value></Field><Field id=\"MSO_Last_Settled_Date\"><Name>MSO_Last_Settled_Date</Name><Value>1900-01-01</Value></Field><Field id=\"MSO_Last_Settled_Time\"><Name>MSO_Last_Settled_Time</Name><Value>1900-01-01 00:00:00</Value></Field></Fields></Transaction></RequestData></Transaction></TransactionData>",
     "TerminalID": null,
     "TerminalResultCode": null,
-    "TrxAmount": "1.00",
-    "TrxDate": "7/1/2021 10:52:15 PM",
-    "TrxKey": "21070100732374",
+    "TrxAmount": "100.00",
+    "TrxDate": "5/26/2022 9:27:51 AM",
+    "TrxDateUTC": "2022-05-26T06:27:51.332Z",
+    "TrxKey": "22052501048810",
     "WalletID": "00000000-0000-0000-0000-000000000000"
 }
 </pre>
@@ -850,25 +697,32 @@ To perform a Refund transaction without reference transacton, you just need to c
 {
     "AVSAddressResponse": null,
     "AVSZipResponse": null,
-    "AuthCode": null,
-    "CVV2Response": null,
+    "AuthCode": "",
+    "CVV2Response": "NotSet",
     "CardType": "Credit",
-    "FinalAmount": "104.00",
+    "ExpectedSettledTime": "5/26/2022 8:00:00 PM",
+    "ExpectedSettledTimeUTC": "2022-05-26T17:00:00.000",
+    "FinalAmount": "100.00",
     "IAVSAddressResponse": null,
     "Message": "APPROVED",
     "OrigTrxAmount": "100.00",
-    "OriginationID": "AD0D53935734451D86011AF6D0BDF46C",
+    "OriginationID": "FC831CCC776D46DA93739A6D4BFBEE6D",
     "PayFabricErrorCode": null,
-    "RespTrxTag": "8/5/2020 5:00:23 AM",
+    "RemainingBalance": null,
+    "RespTrxTag": "5/26/2022 5:30:43 AM",
     "ResultCode": "1",
+    "SettledTime": null,
+    "SettledTimeUTC": null,
     "Status": "Approved",
-    "SurchargeAmount": "4.00",
-    "SurchargePercentage": "4.0",
-    "TAXml":"",
+    "SurchargeAmount": "0.00",
+    "SurchargePercentage": "0.00",
+    "TAXml": "<TransactionData><Connection name=\"EVO\" connector=\"EVO\"><Processor id=\"1\">Evo US</Processor><PaymentType id=\"1\">Credit</PaymentType></Connection><Transaction post=\"False\" type=\"6\" status=\"1\"><NeededData><Transaction><Type>6</Type><Status>Approved</Status><Category>NeededData</Category><Fields /></Transaction></NeededData><FailureData><Transaction><Type>6</Type><Status>Approved</Status><Category>FailureData</Category><Fields /></Transaction></FailureData><ResponseData><Transaction><Type>6</Type><Status>Approved</Status><Category>ResponseData</Category><Fields><Field id=\"TrxField_D625\"><Name>WebRequestExecutionDuration</Name><Desc>1281.2611</Desc><Value>1281.2611</Value></Field><Field id=\"TrxField_D83\"><Name>CVV2ResponseCode</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D24\"><Name>AuthCode</Name><Desc /><Value></Value></Field><Field id=\"TrxField_D545\"><Name>ResponseBatchID</Name><Desc>2226</Desc><Value>2226</Value></Field><Field id=\"TrxField_D573\"><Name>ProcessedAs3D</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D599\"><Name>ThreeDSInfoRespIsChallengeMandated</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D601\"><Name>ThreeDSInfoRespAuthenticationType</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D604\"><Name>ThreeDSInfoRespMessageCategory</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D606\"><Name>ThreeDSInfoRespTransactionStatus</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D607\"><Name>ThreeDSInfoRespTransactionStatusReason</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D616\"><Name>ThreeDsRespSCARequired</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D617\"><Name>ThreeDsRespExemptionControl</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D619\"><Name>ThreeDsRespAuthenticationMethod</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D621\"><Name>ThreeDsRespProcessedAsDataOnly</Name><Desc>False</Desc><Value>False</Value></Field><Field id=\"TrxField_D586\"><Name>ProtocolVersion</Name><Desc>NotSet</Desc><Value>NotSet</Value></Field><Field id=\"TrxField_D16\"><Name>OriginationID</Name><Desc>FC831CCC776D46DA93739A6D4BFBEE6D</Desc><Value>FC831CCC776D46DA93739A6D4BFBEE6D</Value></Field><Field id=\"TrxField_D462\"><Name>GatewayOriginationID</Name><Desc>41803231</Desc><Value>41803231</Value></Field><Field id=\"TrxField_D463\"><Name>ProcessorOriginationID</Name><Desc>987272</Desc><Value>987272</Value></Field><Field id=\"TrxField_D31\"><Name>ResponseMsg</Name><Desc>APPROVED</Desc><Value>APPROVED</Value></Field><Field id=\"TrxField_D17\"><Name>ResultCode</Name><Desc>1</Desc><Value>1</Value></Field><Field id=\"TrxField_D464\"><Name>TransactionState</Name><Desc>Returned</Desc><Value>Returned</Value></Field><Field id=\"TrxField_D465\"><Name>CaptureState</Name><Desc>Captured</Desc><Value>Captured</Value></Field><Field id=\"TrxField_D76\"><Name>TrxDate</Name><Desc>5/26/2022 5:30:43 AM</Desc><Value>5/26/2022 9:30:44 AM</Value></Field><Field id=\"TrxField_D288\"><Name>TransactionID</Name><Desc>FC831CCC776D46DA93739A6D4BFBEE6D</Desc><Value>FC831CCC776D46DA93739A6D4BFBEE6D</Value></Field></Fields></Transaction></ResponseData><RequestData><Transaction><Type>6</Type><Status>1</Status><Category>RequestData</Category><Fields><Field id=\"TrxField_D1\"><Name>CCNumber</Name><Desc>Credit Card Number, could also be a DPAN/VPAN</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TrxField_D3\"><Name>CCExpDate</Name><Desc>Expiration Date MMYY</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value>0123</Value></Field><Field id=\"TrxField_D5\"><Name>FirstName</Name><Desc>First Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>123 tes</Value></Field><Field id=\"TrxField_D7\"><Name>LastName</Name><Desc>Last Name</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>dd</Value></Field><Field id=\"TrxField_D15\"><Name>TrxAmount</Name><Desc>Transaction Amount</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>3</Type><Value>100.00</Value></Field><Field id=\"TrxField_D18\"><Name>CCType</Name><Desc>Card Type</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Visa</Value></Field><Field id=\"TrxField_D49\"><Name>CVV2</Name><Desc>CVV2</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>1</Type><Value></Value></Field><Field id=\"TrxField_D74\"><Name>CurrencyCode</Name><Desc>Currency Code</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>USD</Value></Field><Field id=\"TrxField_D141\"><Name>ClientIP</Name><Desc>IP Address</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>63.117.2.51</Value></Field><Field id=\"TrxField_D168\"><Name>CardHolderAttendance</Name><Desc>Card holder attendance</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>ECommerce</Value></Field><Field id=\"TrxField_D539\"><Name>TransactionInitiation</Name><Desc>Transaction Initiation indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Merchant</Value></Field><Field id=\"TrxField_D542\"><Name>CCEntryIndicator</Name><Desc>Credit card entry indicator</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>Entered</Value></Field><Field id=\"TrxField_D543\"><Name>POSEntryMode</Name><Desc>POS Entry Mode</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>01</Value></Field><Field id=\"TrxField_D550\"><Name>PayFabricTransactionKey</Name><Desc>The PayFabric Transaction Key associated to this Payment Request.</Desc><Required>0</Required><Encrypted>0</Encrypted><Type>10</Type><Value>22052501048813</Value></Field><Field id=\"TRXFIELD_D19\"><Name>PaymentType</Name><Value>1</Value></Field><Field id=\"TRXFIELD_D2\"><Name>TRXFIELD_D2</Name><Value>XXXXXXXXXXXX1111</Value></Field><Field id=\"TRXFIELD_D54\"><Name>AccountName</Name><Value>123 tes dd </Value></Field><Field id=\"SaveCreditCard\"><Name>SaveCreditCard</Name><Value>0</Value></Field><Field id=\"MSO_PFTrxKey\"><Name>MSO_PFTrxKey</Name><Value>22052501048813</Value></Field><Field id=\"MSO_WalletID\"><Name>MSO_WalletID</Name><Value>00000000-0000-0000-0000-000000000000</Value></Field><Field id=\"MSO_EngineGUID\"><Name>MSO_EngineGUID</Name><Value>4f76bfce-6d2d-4a20-a7b8-5ba0f363e090</Value></Field><Field id=\"TRXFIELD_D540\"><Name>TransactionSchedule</Name><Value>Unscheduled</Value></Field><Field id=\"TRXFIELD_D541\"><Name>AuthorizationType</Name><Value>NotSet</Value></Field><Field id=\"MSO_Last_Xmit_Date\"><Name>MSO_Last_Xmit_Date</Name><Value>2022-05-25 00:00:00</Value></Field><Field id=\"MSO_Last_Xmit_Time\"><Name>MSO_Last_Xmit_Time</Name><Value>1900-01-01 11:30:44 PM</Value></Field><Field id=\"MSO_Last_Settled_Date\"><Name>MSO_Last_Settled_Date</Name><Value>1900-01-01</Value></Field><Field id=\"MSO_Last_Settled_Time\"><Name>MSO_Last_Settled_Time</Name><Value>1900-01-01 00:00:00</Value></Field></Fields></Transaction></RequestData></Transaction></TransactionData>",
     "TerminalID": null,
     "TerminalResultCode": null,
-    "TrxAmount": "104.00",
-    "TrxDate": "8/4/2020 11:00:23 PM",
-    "TrxKey": "20080400045866"
+    "TrxAmount": "100.00",
+    "TrxDate": "5/26/2022 9:30:44 AM",
+    "TrxDateUTC": "2022-05-26T06:30:44.143Z",
+    "TrxKey": "22052501048813",
+    "WalletID": "00000000-0000-0000-0000-000000000000"
 }
 </pre>

@@ -1,7 +1,7 @@
 Scheduled Transaction
 =================
 
-The PayFabric scheduled transaction APIs are used for managing PayFabric scheduled transactions.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate. Please refer the [Transaction Object](/PayFabric/Sections/3.1JSONObjects.md#transaction) for details.
+The PayFabric scheduled transaction APIs are used for managing PayFabric scheduled transactions.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate. Please refer the [Transaction Object](/PayFabric/Sections/Objects.md#transaction) for details.
 
 Search for Future Dated Transactions
 -------------------------------------
@@ -11,31 +11,26 @@ Search for Future Dated Transactions
 <pre>
 [
     {
-        "Key": "21071250001950",
-        "ReferenceKey": null,
-        "Customer": "AARONFIT0001",
-        "BatchNumber": "",
-        "SetupId": "EVO",
-        "ECheckSetupId": "",
-        "MSO_EngineGUID": "f4539566-8f8c-4cc7-a695-7e6491de8bf2",
-        "Tender": "CreditCard",
-        "Type": "Sale",
-        "Currency": "USD",
-        "Amount": "5.00",
-        "ReqAuthCode": "",
-        "PayDate": "07/14/2021",
-        "TrxUserDefine1": "",
-        "TrxUserDefine2": "",
-        "TrxUserDefine3": "",
-        "TrxUserDefine4": "",
         "Card": {
-            "ID": "444a4ce1-b851-4f3f-85a9-87b55116fd63",
-            "Customer": "AARONFIT0001",
-            "NewCustomerNumber": null,
+            "Billto": {
+                "ID": "00000000-0000-0000-0000-000000000000",
+                "Line1": "2099 State college",
+                "Line2": "",
+                "Line3": "",
+                "State": "ca",
+                "City": "Anaheim",
+                "Country": "United States",
+                "Zip": "92806",
+                "Email": "sample@email.com",
+                "Phone": "",
+                "Customer": ""
+            },
+            "ID": "00000000-0000-0000-0000-000000000000",
+            "Customer": "Rena Test MIT1712",
             "Tender": "CreditCard",
             "Account": "XXXXXXXXXXXX1111",
             "CardName": "Visa",
-            "ExpDate": "1222",
+            "ExpDate": "1123",
             "CheckNumber": "",
             "AccountType": "",
             "Aba": "",
@@ -43,42 +38,27 @@ Search for Future Dated Transactions
             "GatewayToken": "",
             "Identifier": "",
             "IssueNumber": "",
-            "StartDate": "",
             "GPAddressCode": "",
             "UserDefine1": "",
             "UserDefine2": "",
             "UserDefine3": "",
             "UserDefine4": "",
             "CardHolder": {
-                "FirstName": "Rena",
+                "FirstName": "1",
                 "MiddleName": "",
-                "LastName": "u",
+                "LastName": "11",
                 "DriverLicense": "",
                 "SSN": ""
-            },
-            "Billto": {
-                "Customer": "",
-                "ID": "11f1cdcf-06ff-431d-b9db-54749a1261ab",
-                "Line1": "d",
-                "Line2": "",
-                "Line3": "",
-                "State": "",
-                "City": "Anaheim",
-                "Country": "",
-                "Zip": "55304-9840",
-                "Email": "sample@email.com",
-                "Phone": "13125550102",
-                "ModifiedOn": "1/1/0001 12:00:00 AM"
             },
             "IsSaveCard": false,
             "IsDefaultCard": false,
             "IsLocked": false,
-            "ModifiedOn": "1/1/0001 12:00:00 AM",
-            "LastUsedDate": "1/1/0001 12:00:00 AM",
-            "CardType": ""
+            "LastUsedDate": "5/25/2022 8:26:10 AM",
+            "CardType": "",
+            "LastUsedDateUTC": "2022-05-25T05:26:10.826Z",
+            "EncryptedToken": null
         },
         "Shipto": {
-            "Customer": "",
             "ID": "00000000-0000-0000-0000-000000000000",
             "Line1": "",
             "Line2": "",
@@ -89,10 +69,29 @@ Search for Future Dated Transactions
             "Zip": "",
             "Email": "",
             "Phone": "",
-            "ModifiedOn": "1/1/0001 12:00:00 AM"
+            "Customer": ""
         },
+        "Key": "22052301042948",
+        "ReferenceKey": null,
+        "Customer": "Rena Test MIT1712",
+        "BatchNumber": "",
+        "SetupId": "EVO",
+        "ECheckSetupId": "EVOACH",
+        "GiftCardSetupId": "",
+        "MSO_EngineGUID": "4f76bfce-6d2d-4a20-a7b8-5ba0f363e090",
+        "Tender": "CreditCard",
+        "Type": "Sale",
+        "Currency": "USD",
+        "Amount": "10.00",
+        "ReqAuthCode": "",
+        "PayDate": "5/31/2022 12:00:00 AM",
+        "PayDateUTC": "2022-05-30T21:00:00.000Z",
+        "TrxUserDefine1": "",
+        "TrxUserDefine2": "",
+        "TrxUserDefine3": "",
+        "TrxUserDefine4": "",
         "TrxResponse": {
-            "TrxKey": "21071250001950",
+            "TrxKey": "22052301042948",
             "Status": "UnProcess",
             "OriginationID": "",
             "RespTrxTag": "",
@@ -105,28 +104,28 @@ Search for Future Dated Transactions
             "IAVSAddressResponse": "",
             "PayFabricErrorCode": null,
             "TrxDate": null,
+            "TrxDateUTC": null,
             "TAXml": "",
             "TerminalID": "",
             "TerminalResultCode": "",
-            "TrxAmount": "5.00",
+            "TrxAmount": "10.00",
             "SurchargeAmount": "0.00",
             "SurchargePercentage": "0.00",
-            "OrigTrxAmount": "5.00",
+            "OrigTrxAmount": "10.00",
             "CardType": "",
-            "FinalAmount": "5.00",
+            "FinalAmount": "10.00",
             "ExpectedSettledTime": null,
+            "ExpectedSettledTimeUTC": null,
             "SettledTime": null,
-            "WalletID": null
+            "SettledTimeUTC": null,
+            "WalletID": null,
+            "RemainingBalance": null
         },
         "Document": {
             "Head": [
                 {
                     "Name": "CustomerCode",
-                    "Value": "AARONFIT0001"
-                },
-                {
-                    "Name": "TaxAmount",
-                    "Value": "3"
+                    "Value": "Rena Test MIT1712"
                 },
                 {
                     "Name": "InvoiceNumber",
@@ -135,48 +134,178 @@ Search for Future Dated Transactions
             ],
             "Lines": [
                 {
-                    "Columns": [
-                        {
-                            "Name": "ItemCost",
-                            "Value": "5.00"
-                        },
-                        {
-                            "Name": "ItemDesc",
-                            "Value": "3"
-                        },
-                        {
-                            "Name": "ItemProdCode",
-                            "Value": "3"
-                        },
-                        {
-                            "Name": "ItemQuantity",
-                            "Value": "3"
-                        },
-                        {
-                            "Name": "ItemAmount",
-                            "Value": "5.00"
-                        }
-                    ],
+                    "Columns": [],
+                    "UserDefined": []
+                }
+            ],
+            "UserDefined": [
+                {
+                    "Name": "ThirdPartyBatch",
+                    "Value": null
+                }
+            ],
+            "DefaultBillTo": null
+        },
+        "ModifiedOn": "5/25/2022 8:26:10 AM",
+        "ModifiedOnUTC": "2022-05-25T05:26:10.826Z",
+        "ReferenceTrxs": [],
+        "TrxInitiation": "Customer",
+        "TrxSchedule": "ScheduledInstallment",
+        "AuthorizationType": "NotSet",
+        "CCEntryIndicator": "Entered",
+        "CardHolderAttendance": "ECommerce",
+        "SurchargePercentage": "0.0",
+        "SurchargeAmount": "0.00",
+        "CardType": "",
+        "OrigTrxAmount": "10.00",
+        "EntryClass": "CCD",
+        "TransactionState": "",
+        "EntryMode": "ModernVT",
+        "TransationStateHistory": []
+    },
+    {
+        "Card": {
+            "Billto": {
+                "ID": "00000000-0000-0000-0000-000000000000",
+                "Line1": "",
+                "Line2": "",
+                "Line3": "",
+                "State": "",
+                "City": "",
+                "Country": "",
+                "Zip": "",
+                "Email": "",
+                "Phone": "",
+                "Customer": ""
+            },
+            "ID": "00000000-0000-0000-0000-000000000000",
+            "Customer": "",
+            "Tender": "CreditCard",
+            "Account": "XXXXXXXXXXXX1111",
+            "CardName": "Visa",
+            "ExpDate": "0123",
+            "CheckNumber": "",
+            "AccountType": "",
+            "Aba": "",
+            "Connector": "EVO",
+            "GatewayToken": "",
+            "Identifier": "",
+            "IssueNumber": "",
+            "GPAddressCode": "",
+            "UserDefine1": "",
+            "UserDefine2": "",
+            "UserDefine3": "",
+            "UserDefine4": "",
+            "CardHolder": {
+                "FirstName": "123 tes",
+                "MiddleName": "",
+                "LastName": "dd",
+                "DriverLicense": "",
+                "SSN": ""
+            },
+            "IsSaveCard": false,
+            "IsDefaultCard": false,
+            "IsLocked": false,
+            "LastUsedDate": "5/26/2022 2:24:22 PM",
+            "CardType": "Credit",
+            "LastUsedDateUTC": "2022-05-26T11:24:22.273Z",
+            "EncryptedToken": null
+        },
+        "Shipto": {
+            "ID": "00000000-0000-0000-0000-000000000000",
+            "Line1": "",
+            "Line2": "",
+            "Line3": "",
+            "State": "",
+            "City": "",
+            "Country": "",
+            "Zip": "",
+            "Email": "",
+            "Phone": "",
+            "Customer": ""
+        },
+        "Key": "22052601049281",
+        "ReferenceKey": null,
+        "Customer": "",
+        "BatchNumber": "",
+        "SetupId": "EVO",
+        "ECheckSetupId": "",
+        "GiftCardSetupId": "",
+        "MSO_EngineGUID": "4f76bfce-6d2d-4a20-a7b8-5ba0f363e090",
+        "Tender": "CreditCard",
+        "Type": "Credit",
+        "Currency": "USD",
+        "Amount": "100.00",
+        "ReqAuthCode": "",
+        "PayDate": "5/30/2022 12:00:00 AM",
+        "PayDateUTC": "2022-05-29T21:00:00.000Z",
+        "TrxUserDefine1": "",
+        "TrxUserDefine2": "",
+        "TrxUserDefine3": "",
+        "TrxUserDefine4": "",
+        "TrxResponse": {
+            "TrxKey": "22052601049281",
+            "Status": "UnProcess",
+            "OriginationID": "",
+            "RespTrxTag": "",
+            "AuthCode": "",
+            "ResultCode": "",
+            "Message": "",
+            "CVV2Response": "",
+            "AVSAddressResponse": "",
+            "AVSZipResponse": "",
+            "IAVSAddressResponse": "",
+            "PayFabricErrorCode": null,
+            "TrxDate": null,
+            "TrxDateUTC": null,
+            "TAXml": "",
+            "TerminalID": "",
+            "TerminalResultCode": "",
+            "TrxAmount": "100.00",
+            "SurchargeAmount": "0.00",
+            "SurchargePercentage": "0.00",
+            "OrigTrxAmount": "100.00",
+            "CardType": "Credit",
+            "FinalAmount": "100.00",
+            "ExpectedSettledTime": null,
+            "ExpectedSettledTimeUTC": null,
+            "SettledTime": null,
+            "SettledTimeUTC": null,
+            "WalletID": null,
+            "RemainingBalance": null
+        },
+        "Document": {
+            "Head": [
+                {
+                    "Name": "InvoiceNumber",
+                    "Value": ""
+                }
+            ],
+            "Lines": [
+                {
+                    "Columns": [],
                     "UserDefined": []
                 }
             ],
             "UserDefined": [],
             "DefaultBillTo": null
         },
-        "ModifiedOn": "7/12/2021 6:21:47 AM",
+        "ModifiedOn": "5/26/2022 2:24:22 PM",
+        "ModifiedOnUTC": "2022-05-26T11:24:22.273Z",
         "ReferenceTrxs": [],
-        "TrxInitiation": "Customer",
-        "TrxSchedule": "Scheduled",
+        "TrxInitiation": "Merchant",
+        "TrxSchedule": "Unscheduled",
         "AuthorizationType": "NotSet",
-        "CCEntryIndicator": "Stored",
-        "CardHolderAttendance": "NotSet",
+        "CCEntryIndicator": "Entered",
+        "CardHolderAttendance": "ECommerce",
         "SurchargePercentage": "0.0",
         "SurchargeAmount": "0.00",
-        "CardType": "",
-        "OrigTrxAmount": "5.00",
+        "CardType": "Credit",
+        "OrigTrxAmount": "100.00",
         "EntryClass": "",
         "TransactionState": "",
-        "EntryMode": "ModernVT"
+        "EntryMode": "",
+        "TransationStateHistory": []
     }
 ]
 </pre>

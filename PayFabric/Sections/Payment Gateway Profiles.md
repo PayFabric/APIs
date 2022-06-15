@@ -11,15 +11,16 @@ Retrieve a Payment Gateway Profile
 ###### Response
 <pre>
 {
-    "CardClass": "Credit",
-    "CardClassID": "1",
-    "Connector": "PayflowPro",
-    "DailyBatchCloseTime": "19:00",
-    "ID": "6f417308-c26f-499b-acc4-d6080ad0551f",
-    "Name": "db back up",
-    "Processor": "TSYS(Vital/VisaNet)",
-    "ProcessorID": "18",
-    "SettledTime": "2021-07-02T02:00:00.0000000Z",
+    "CardClass": "ECheck",
+    "CardClassID": "3",
+    "Connector": "EvoACH",
+    "DailyBatchCloseTime": "20:00",
+    "ID": "d91e5b3a-b10f-4f02-b3b9-32bfbdc1834e",
+    "Name": "EVO ACH",
+    "Processor": "Evo ACH",
+    "ProcessorID": "1",
+    "SettledTime": "5/31/2022 8:00:00 PM",
+    "SettledTimeUTC": "2022-06-01T03:00:00.000Z",
     "SurchargeRate": "0"
 }
 </pre>
@@ -34,26 +35,28 @@ Retrieve Payment Gateway Profiles
 [
     {
         "CardClass": "ECheck",
-        "CardClassID": "2",
-        "Connector": "AuthorizeNet",
-        "DailyBatchCloseTime": "19:30",
-        "ID": "df2001bf-72a5-4784-b089-8720d3085938",
-        "Name": "AuthECheck",
-        "Processor": "Authorize.net",
+        "CardClassID": "3",
+        "Connector": "EvoACH",
+        "DailyBatchCloseTime": "20:00",
+        "ID": "d91e5b3a-b10f-4f02-b3b9-32bfbdc1834e",
+        "Name": "EVO ACH",
+        "Processor": "Evo ACH",
         "ProcessorID": "1",
-        "SettledTime": "2021-07-02T02:30:00.0000000Z",
+        "SettledTime": "5/31/2022 8:00:00 PM",
+        "SettledTimeUTC": "2022-06-01T03:00:00.000Z",
         "SurchargeRate": "0"
     },
     {
-        "CardClass": "Credit Card",
+        "CardClass": "Credit",
         "CardClassID": "1",
-        "Connector": "AuthorizeNet",
-        "DailyBatchCloseTime": "01:30",
-        "ID": "c8204c50-0ade-4d79-a607-2e106a596dc0",
-        "Name": "AuthorizeCredit",
-        "Processor": "Authorize.net",
+        "Connector": "EVO",
+        "DailyBatchCloseTime": "20:00",
+        "ID": "769d99c9-047d-44b3-824b-9a7ccf45eccb",
+        "Name": "EVO",
+        "Processor": "Evo US",
         "ProcessorID": "1",
-        "SettledTime": "2021-07-01T08:30:00.0000000Z",
+        "SettledTime": "3/4/2020 8:00:00 PM",
+        "SettledTimeUTC": "2020-03-05T04:00:00.000Z",
         "SurchargeRate": "0"
     }
 ]
