@@ -56,9 +56,9 @@ Send a Transaction Receipt
 ###### Request
 <pre>
 {
-    "To": ["emailaddress1","emailaddress2"],
-    "Cc": ["emailaddress3","emailaddress4"],
-    "Bcc": ["emailaddress5","emailaddress6"]
+    "To": ["sample1@email.com","sample2@email.com"],
+    "Cc": ["sample3@email.com","sample4@email.com"],
+    "Bcc": ["sample5@email.com","sample6@email.com"]
 }
 </pre>
 
