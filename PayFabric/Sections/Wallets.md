@@ -212,8 +212,8 @@ Credit card and account numbers are returned in a masked format. PayFabric never
 | :-----------    |:---------| :---------| :---------|
 | customer    | String | PayFabric will retrieve  wallets belong to the Customer.  | Required|
 | tender   | String | PayFabric will retrieve  wallets tender type equals the specified tender. |Optional|
-| fromLastUsedDate          | String | PayFabric will retrieve wallets which last used date later than the specified date, you can pass like "2022-05-01", and it is in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). |Optional|  
-| toLastUsedDate         | String | PayFabric will retrieve wallets which last used date earlier than the specified date, you can pass like "2022-05-21", and it is in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). | Optional| 
+| fromLastUsedDate          | String | PayFabric will retrieve wallets which last used date later than the specified date, you can pass like "2022-05-01", and it is in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). |Optional|  
+| toLastUsedDate         | String | PayFabric will retrieve wallets which last used date earlier than the specified date, you can pass like "2022-05-21", and it is in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). | Optional| 
 
 ###### Response
 <pre>
@@ -328,9 +328,9 @@ Retrieve Credit Cards / eChecks (Query with Paging)
 | :-----------    |:---------| :---------| :---------|
 | customer    | String | PayFabric will retrieve  wallets belong to the Customer.  | Optional|
 | tender   | String | PayFabric will retrieve  wallets tender type equals the specified tender. |Optional|
-| fromDate | String | PayFabric will retrieve wallets which modified date later than the specified date, you can pass like "2022-05-01", and it will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). |Required|  
-| fromLastUsedDate          | String | PayFabric will retrieve wallets which last used date later than the specified date, you can pass like "2022-05-01", and it will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). |Optional|  
-| toLastUsedDate         | String | PayFabric will retrieve wallets which last used date earlier than the specified date, you can pass like "2022-05-21", and it will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/R19/PayFabric/Sections/Timezone.md). | Optional| 
+| fromDate | String | PayFabric will retrieve wallets which modified date later than the specified date, you can pass like "2022-05-01", and it will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). |Required|  
+| fromLastUsedDate          | String | PayFabric will retrieve wallets which last used date later than the specified date, you can pass like "2022-05-01", and it will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). |Optional|  
+| toLastUsedDate         | String | PayFabric will retrieve wallets which last used date earlier than the specified date, you can pass like "2022-05-21", and it will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). | Optional| 
 | pagesize    | String | Specify the page size.  | Optional|
 | page   | String | Specify the page you want to get. |Optional|
 
