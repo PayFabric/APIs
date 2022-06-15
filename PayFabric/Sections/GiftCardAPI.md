@@ -8,7 +8,7 @@ Inquiry Gift Card Balance
 ###### Request
 <pre>
 {
-    <b>"Account":"4111111111",</b>
+    <b>"Account":"4111111111111111",</b>
     "CVC":"123"  
 }
 </pre>
@@ -19,6 +19,6 @@ Inquiry Gift Card Balance
     "Status": "Approved",
     "ResponseCode": "1",
     "Message": "APPROVED",
-    "MaskedAccount": "XXXXXX1111"
+    "MaskedAccount": "XXXXXXXXXXXX1111"
 }
 </pre>
