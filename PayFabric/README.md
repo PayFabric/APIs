@@ -60,7 +60,7 @@ as child elements of other objects.
 * [Retrieve Transactions](Sections/Transactions.md#retrieve-transactions)
 * [Cancel (Void) a Transaction](Sections/Transactions.md#void)
 * [Capture a Pre-Authorized Transaction](Sections/Transactions.md#capture-ship)
-* [Refund Reference](Sections/Transactions.md#refund-reference)
+* [Refund Reference](Sections/Transactions.md#refundreference)
 * [Refund Non-Reference](Sections/Transactions.md#refund-non-reference)
 * [Process eCheck Transaction](Sections/Process%20eCheck%20Transaction.md)
 
