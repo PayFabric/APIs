@@ -588,12 +588,12 @@ Referenced transaction uses the original transaction Key as the referenced facto
   "Type": "Capture",
   "ReferenceKey": "151013003792",
    "Document": {
-    "Head": [ 
+       "Head": [ 
         {
-                <b>"Name":"CaptureComplete",</b>
+               <b>"Name":"CaptureComplete",</b>
                <b> "Value":false</b>
         }
-     ],   
+     ] 
   }
 }
 </pre>
