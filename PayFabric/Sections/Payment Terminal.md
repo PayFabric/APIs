@@ -95,7 +95,8 @@ Get Terminal Settings
     "AllowedProcessingMethod": 2,
     "DefaultProcessingMethod": 1,
     "LockTerminalSelection": true,
-    "RequireSignature": true
+    "RequireSignature": true,
+    "AllowGiftCard": false
 }
 
 Update Terminal Settings
@@ -108,7 +109,8 @@ Update Terminal Settings
     "AllowedProcessingMethod": 2,
     "DefaultProcessingMethod": 1,
     "LockTerminalSelection": false,
-    "RequireSignature": false
+    "RequireSignature": false,
+    "AllowGiftCard": false
 }
 </pre>
 
