@@ -85,7 +85,7 @@ A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authoriz
 Get Terminal Settings
 ---------------------
 * `GET /payment/3.1/api/Terminal/Settings/{DeviceId}` will return the terminal settings for specific device.
-
+<pre>
 {
     "Terminals": [
         "9d606d68-445d-4224-95d8-6039a5aa7d23",
@@ -95,9 +95,10 @@ Get Terminal Settings
     "AllowedProcessingMethod": 2,
     "DefaultProcessingMethod": 1,
     "LockTerminalSelection": true,
-    "RequireSignature": true
+    "RequireSignature": true,
+    "AllowGiftCard": false
 }
-
+</pre>
 Update Terminal Settings
 ----------------------
 * `PATCH /payment/3.1/api/Terminal/Settings/{DeviceId}` will update the terminal settings for specific device.
