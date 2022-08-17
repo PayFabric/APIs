@@ -673,7 +673,7 @@ Note: `ReferenceKey` is the initial processed transaction's `TrxKey`. If `Amount
 Refund (Non-Reference)
 -----------------
 
-To perform a Refund transaction without reference transacton, you just need to create a transaction object, set the `Type` field to `Refund`, and then use [Create and Process a Transaction](#create-and-process-a-transaction) to submit the transaction.
+To perform a Refund transaction without reference transaction, you just need to create a transaction object, set the `Type` field to `Refund`, and then use [Create and Process a Transaction](#create-and-process-a-transaction) to submit the transaction.
 
 * `POST /payment/api/transaction/process?cvc={CVCValue}`
 

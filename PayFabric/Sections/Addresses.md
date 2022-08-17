@@ -6,7 +6,7 @@ The PayFabric Addresses API is used for returning customer shipping addresses wh
 Retrieve a Shipping Address
 ---------------------------
 
-* `GET /payment/api/address/75B12D6B-B2C7-409D-89CB-006535D6CD95` will return the specified address
+* `GET /payment/api/address/75B12D6B-B2C7-409D-89CB-006535D6CD95` will return the specified address.
 
 ###### Response
 <pre>
