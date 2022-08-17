@@ -9,23 +9,23 @@ Update a Customer by Id
 * `PATCH /customers?id={CustomerId}` will update a customer to the PayFabric Receivables website based on the JSON request payload. You only need to send what needs to be changed.
 
 ###### Request
-<pre>
-	PATCH /customers?id=Nodus0001
-</pre>
+For more information on available fields please see our [object reference](../../Objects/Customer.md#CustomerPost)
+```http
+PATCH /customers?id=Nodus0001 HTTP/1.1
+```
 
-<pre>
+```json
 {
     "Email": "Nodus0001@nodus.com",
     "Name": "Nodus Technologies"
 }
-</pre>
+```
 
-For more information and descriptions on available fields please see our [object reference](../../Objects/Customer.md#CustomerPost).
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```
 
 
 Retrieve the current customer
@@ -34,66 +34,88 @@ Retrieve the current customer
 * `GET /customers/current` will retrieve the currently used customer information
 
 ###### Request
-<pre>
-	GET /customers/current
-</pre>
+```http
+GET /customers/current HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/Customer.md#CustomerResponse)
+```json
 {
+    "CustomerGuid": "9e2f9b0e-92cc-ec11-a36a-b0c09018d6d4",
     "Status": "Active",
     "BillingAddress": {
-        "Address1": "98765 Crossway Park Dr",
+        "AddressGuid": "862f9b0e-92cc-ec11-a36a-b0c09018d6d4",
+        "AddressId": "PRIMARY5",
+        "isDefaultBilling": true,
+        "IsDefaultShipping": true,
+        "Address1": "1234 Street",
         "Address2": "",
         "Address3": "",
-        "City": "Bloomington",
+        "City": "Los Angeles",
         "Country": "USA",
-        "EMail": "",
+        "Email": "",
         "Fax": "",
-        "Name": "Dennis Swenson",
-        "Phone": null,
-        "State": "MN",
-        "Zip": "55304-9840"
+        "Name": "Nodus Technologies",
+        "Phone": "",
+        "State": "CA",
+        "Zip": "12345"
     },
     "PrimaryAddress": {
-        "Address1": "98765 Crossway Park Dr",
+        "AddressGuid": "862f9b0e-92cc-ec11-a36a-b0c09018d6d4",
+        "AddressId": "PRIMARY5",
+        "isDefaultBilling": false,
+        "IsDefaultShipping": false,
+        "Address1": "1234 Street",
         "Address2": "",
         "Address3": "",
-        "City": "Bloomington",
+        "City": "Los Angeles",
         "Country": "USA",
-        "EMail": "",
+        "Email": "",
         "Fax": "",
-        "Name": "Dennis Swenson",
-        "Phone": null,
-        "State": "MN",
-        "Zip": "55304-9840"
+        "Name": "Nodus Technologies",
+        "Phone": "",
+        "State": "CA",
+        "Zip": "12345"
     },
     "ShippingAddress": {
-        "Address1": "98765 Crossway Park Dr",
+        "AddressGuid": "862f9b0e-92cc-ec11-a36a-b0c09018d6d4",
+        "AddressId": "PRIMARY5",
+        "isDefaultBilling": true,
+        "IsDefaultShipping": true,
+        "Address1": "1234 Street",
         "Address2": "",
         "Address3": "",
-        "City": "Bloomington",
+        "City": "Los Angeles",
         "Country": "USA",
-        "EMail": "",
+        "Email": "",
         "Fax": "",
-        "Name": "Dennis Swenson",
-        "Phone": null,
-        "State": "MN",
-        "Zip": "55304-9840"
+        "Name": "Nodus Technologies",
+        "Phone": "",
+        "State": "CA",
+        "Zip": "12345"
     },
-    "CreditBalance": 0,
-    "InvoiceBalance": 842.1,
-    "PastDueBalance": 247,
-    "Class": "USA-ILMO-T1",
+    "CreditBalance": 100.56,
+    "InvoiceBalance": 500.20,
+    "PastDueBalance": 200.24,
+    "HasAddress": false,
+    "HasOutstandingInvoice": true,
     "CustomerId": "Nodus0001",
-    "CopyEmail": [],
-    "Email": "nodus0001@nodus.com",
-    "ExtensionData": "",
     "Name": "Nodus Technologies",
-    "PaymentTerms": null,
+    "Currency": "USD",
+    "Email": "Nodus0002@nodus.com",
+    "CopyEmail": [
+        "Nodus0003@nodus.com",
+		"Nodus0004@nodus.com"
+    ],
+    "PaymentTerms": "",
+    "Class": "USA-ILMO-T1",
+    "ExtensionData": "",
     "StatementName": "Nodus Technologies",
-    "Currency": "Z-US$"
+    "ShippingMethod": "",
+    "TaxExemptNumber": 121,
+    "TaxExempt": false,
+    "TaxGroup": null
 }
-</pre>
+```
 
-For more information and descriptions on response fields please see our [object reference](../../Objects/Customer.md#CustomerResponse).

@@ -9,18 +9,16 @@ Delete Payments
 * `DELETE /payments` will delete the "Inprogress" payments based on the payment identities based on the JSON request payload.
 
 ###### Request
-<pre>
-DELETE /payments
-	
+```json	
 [ 
-	"WEBPMT0000000020" 
+    "WEBPMT0000000020" 
 ]
-</pre>
+```
 
 ###### Response
-<pre>
+```text
 true
-</pre>
+```
 
 
 Update an Existing Payment
@@ -29,12 +27,22 @@ Update an Existing Payment
 * `PATCH /payments?identity={PaymentIdentity}` will update an existing payment based on the JSON request payload.
 
 ###### Request
-<pre>
-PATCH /payments?identity=WEBPMT00000020
-
+```http
+PATCH /payments?identity=PMT00001 HTTP/1.1
+```
+For more information and descriptions on available fields please see our [object reference](../../Objects/Payment.md#PaymentPatch)
+```json
 {
-	"Amount": 10,
-	"BalanceAmount": 10,
+    "Notes": "",
+    "Reference": "",
+  	"PaymentApplies": [
+        {
+            "InvoiceId": "INV0001",
+            "Identity": "",
+            "PayAmount": 1,
+            "RowVersion": ""
+        }
+  	],
   	"BatchNumber": "PFR2019117",
   	"PaymentMethod": "CreditCard",
   	"CCNumber": "",
@@ -42,27 +50,19 @@ PATCH /payments?identity=WEBPMT00000020
   	"CreatedOn": "2019-01-17T12:54:55.0952444-08:00",
   	"CustomerId": "Nodus0001",
   	"Identity": "",
-  	"PaymentApplies": [
-    		{
-      			"InvoiceId": "INV0001",
-      			"Identity": "",
-      			"PayAmount": 1,
-      			"RowVersion": ""
-    		}
-  	],
   	"PaymentId": "PMT00001",
+	"Amount": 10,
+	"BalanceAmount": 10,
   	"PaymentType": "Payment",
-  	"User": "Nodus0001",
-  	"Notes": ""
+  	"User": "Nodus0001"
 }
-</pre>
+```
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/Payment.md#PaymentPatch).
 
 ###### Response
-<pre>
+```text
 true
-</pre>
+```
 
 
 Update an Existing InProgress Payment
@@ -71,32 +71,33 @@ Update an Existing InProgress Payment
 * `PATCH /payments/inprogress` will update an existing payment based on the JSON request payload.
 
 ###### Request
-<pre>
+For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#InProgressPaymentPatch)
+```json
 {
-	<b>"PaymentIdentity": "WEBPMT000000000000001"</b>,
-  	"CurrencyCode": "USD",
-  	"Prepayment": 10,
-  	"Comment": "my notes",
-  	"WalletEntryGuid": "2b9a5a48-f83a-e911-80d5-00155d000a89",
+	"PaymentIdentity": "WEBPMT000000000000001",
 	"CreditDistributions": [
 		{
 			"CreditGuid": "2b9a5a48-f83a-e911-80d5-00155d000a90",
 			"ApplyAmount": 1,
 			"CreditBalance": 0,
-			"CreatedOn": "2021-01-21"
+			"CreatedOn": "2021-01-21",
 			"CreditIdentity": "RTN0001",
 			"PaymentType": "Return"
 		}
-	]
+	],
+  	"Prepayment": 10,
+  	"CurrencyCode": "USD",
+  	"Comment": "my notes",
+  	"WalletEntryGuid": "2b9a5a48-f83a-e911-80d5-00155d000a89",
+    "Reference": ""
 }
-</pre>
+```
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#InProgressPaymentPatch).
 
 ###### Response
-<pre>
+```text
 true
-</pre>
+```
 
 
 Create an InProgress Payment
@@ -105,31 +106,31 @@ Create an InProgress Payment
 * `POST /payments/inprogress` will create an in-progress payment on the PayFabric Receivables website based on the JSON request payload.
 
 ###### Request
-<pre>
+For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#InProgressPaymentPost)
+```json
 {
+    "CurrencyCode": "USD",
   	"Prepayment": 10,
   	"PaymentApplies": [
-    		{
-      			"Identity": "INV0001",
-      			"InvoiceId": "INV0001",
-      			"PayAmount": 3,
-      			"RowVersion": ""
-    		}
+        {
+            "Identity": "INV0001",
+            "InvoiceId": "INV0001",
+            "PayAmount": 3,
+            "RowVersion": ""
+        }
   	],
-  	"CurrencyCode": "USD"
+    "Comment": ""
 }
-</pre>
-
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#InProgressPaymentPost).
+```
 
 ###### Response
-<pre>
+For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#InProgressPaymentResponse)
+```json
 {
-    "Identity": "WEBPMT000000000000001"
+    "Identity": "WEBPMT000000000000001",
+    "TransactionKey": "12546233498"
 }
-</pre>
-
-For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPayment.md#InProgressPaymentResponse).
+```
 
 
 Process an Existing Payment
@@ -138,28 +139,28 @@ Process an Existing Payment
 * `POST /payments/process?paymentIdentity={PaymentIdentity}&cvv2={CVV2}` will process an inprogress payment on the PayFabric Receivables website based on the JSON request payload. Please note, CVV2 is optional
 
 ###### Request
-<pre>
-	POST /payments/process?paymentIdentity=WEBPMT0000000020&cvv2=123
-</pre>
+```http
+POST /payments/process?paymentIdentity=WEBPMT0000000020&cvv2=123 HTTP/1.1
+```
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```
 
-
-Retrieve Payment Receipt
+Retrieve InProgress Payment
 --------------------
 
-* `GET /payments/receipt?paymentId={paymentId}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+* `GET /payments/inprogress?paymentId={paymentId}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
 
 ###### Request
-<pre>
-	GET /payments/receipt?paymentId=WEBPMT0000000020
-</pre>
+```http
+GET /payments/inprogress?paymentId=WEBPMT0000000020 HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information and descriptions on available fields please see our [object reference](../../Objects/PaymentReceipt.md)
+```json
 {
     "CreditAmount": 0,
     "AdditionalFee": 0,
@@ -181,7 +182,7 @@ Retrieve Payment Receipt
     "Company": {
         "Name": "Nodus Tech",
         "LogoLarge": "",
-        "Logo": "data:image/gif;base64,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",
+        "Logo": "data:image/gif;base64,...",
         "Country": "Nodus Tech",
         "Address": "West First Street",
         "Address2": "-",
@@ -246,19 +247,16 @@ Retrieve Payment Receipt
         "Name": "Nodus Technologies",
         "PaymentTerms": "2% 10/Net 30",
         "StatementName": "Nodus Technologies",
-        "Currency": "System.Data.Entity.DynamicProxies.Currency_30F089ECC07A0C4D8ED6F4DCCECCB9F0BB430A3CFCDA4043EF8D27F0A890BC94",
+        "Currency": "USD",
         "ShippingMethod": ""
     },
     "Transaction": null,
-    "Amount": 200,
-    "BalanceAmount": 12.56,
-    "BatchNumber": "1234",
-    "PaymentMethod": "Cash",
-    "CCNumber": "",
-    "CheckNumber": "",
-    "CreatedOn": "2019-05-21T00:00:00",
-    "CustomerId": "Nodus0001",
-    "Identity": "PYMNT00000000001",
+    "WalletEntryGuid": "12345678-0000-0000-0000-000000000000",
+    "Notes": "",
+    "Reference": "",
+    "CreditDistributions": [],
+    "Surcharges": null,
+    "PaymentGuid": "12345678-0000-0000-0000-000000000000",
     "PaymentApplies": [
         {
             "AppliedToInvoice": true,
@@ -269,11 +267,694 @@ Retrieve Payment Receipt
             "RowVersion": "AAAAAAAAB/k="
         }
     ],
-    "IsVoid": false,
+    "BatchNumber": "1234",
+    "PaymentMethod": "Cash",
+    "CCNumber": "",
+    "CheckNumber": "",
+    "CreatedOn": "2019-05-21T00:00:00",
+    "CustomerId": "Nodus0001",
+    "Identity": "PYMNT00000000001",
     "PaymentId": "PYMNT00000000001",
+    "Amount": 200,
+    "BalanceAmount": 12.56,
     "PaymentType": "Payment",
-    "Notes": ""
+    "User": "Nodus0001"
 }
-</pre>
+```
 
-For more information and descriptions on available fields please see our [object reference](../../Objects/PaymentReceipt.md).
+
+Retrieve Payment Receipt
+--------------------
+
+* `GET /payments/receipt?paymentId={paymentId}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+GET /payments/receipt?paymentId=WEBPMT0000000020 HTTP/1.1
+```
+
+###### Response
+For more information and descriptions on available fields please see our [object reference](../../Objects/PaymentReceipt.md)
+```json
+{
+    "CreditAmount": 0,
+    "AdditionalFee": 0,
+    "PrepaymentAmount": 0,
+    "Currency": {
+        "CurrencyGuid": "1620fcac-35e8-e811-87df-534e57000000",
+        "CCSetupId": "PayFlowProCredit",
+        "ECSetupId": "PaymentechECheck",
+        "IsUsingECheck": true,
+        "IsUsingCreditCard": true,
+        "IsValid": true,
+        "Name": "USD",
+        "CurrencyCode": "Z-US$",
+        "Symbol": "$",
+        "LongName": "US Dollars",
+        "IsFuncCurrency": true
+    },
+    "PaymentStatus": "Processed",
+    "Company": {
+        "Name": "Nodus Tech",
+        "LogoLarge": "",
+        "Logo": "data:image/gif;base64,...",
+        "Country": "Nodus Tech",
+        "Address": "West First Street",
+        "Address2": "-",
+        "City": "Claremont",
+        "State": "CA",
+        "Zip": "Claremont, CA 91711",
+        "Phone": "909 248 6547",
+        "PortalName": "nodus",
+        "PortalUrl": "https://sandbox.payfabric.com/receivables/nodus",
+        "IntegrationKey": null,
+        "IntegrationPassword": null
+    },
+    "Customer": {
+        "Status": "Active",
+        "BillingAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "PrimaryAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "ShippingAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "CreditBalance": 0,
+        "InvoiceBalance": 0,
+        "PastDueBalance": 0,
+        "Class": "USA-ILMO-T1",
+        "CustomerId": "Nodus0001",
+        "CopyEmail": null,
+        "Email": "nodus0001@nodus.com",
+        "ExtensionData": "",
+        "Name": "Nodus Technologies",
+        "PaymentTerms": "2% 10/Net 30",
+        "StatementName": "Nodus Technologies",
+        "Currency": "USD",
+        "ShippingMethod": ""
+    },
+    "Transaction": null,
+    "WalletEntryGuid": "12345678-0000-0000-0000-000000000000",
+    "Notes": "",
+    "Reference": "",
+    "CreditDistributions": [],
+    "Surcharges": null,
+    "PaymentGuid": "12345678-0000-0000-0000-000000000000",
+    "PaymentApplies": [
+        {
+            "AppliedToInvoice": true,
+            "InvoiceId": "ORDST1026",
+            "Identity": null,
+            "PayAmount": 187.44,
+            "DocumentType": 1,
+            "RowVersion": "AAAAAAAAB/k="
+        }
+    ],
+    "BatchNumber": "1234",
+    "PaymentMethod": "Cash",
+    "CCNumber": "",
+    "CheckNumber": "",
+    "CreatedOn": "2019-05-21T00:00:00",
+    "CustomerId": "Nodus0001",
+    "Identity": "PYMNT00000000001",
+    "PaymentId": "PYMNT00000000001",
+    "Amount": 200,
+    "BalanceAmount": 12.56,
+    "PaymentType": "Payment",
+    "User": "Nodus0001"
+}
+```
+
+
+Retrieve Payment Details
+--------------------
+
+* `GET /payments/detail?paymentGuid={paymentGuid}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+GET /payments/detail?paymentGuid=1620fcac-35e8-e811-87df-534e57000000 HTTP/1.1
+```
+
+###### Response
+For more information and descriptions on available fields please see our [object reference](../../Objects/PaymentReceipt.md)
+```json
+{
+    "CreditAmount": 0,
+    "AdditionalFee": 0,
+    "PrepaymentAmount": 0,
+    "Currency": {
+        "CurrencyGuid": "1620fcac-35e8-e811-87df-534e57000000",
+        "CCSetupId": "PayFlowProCredit",
+        "ECSetupId": "PaymentechECheck",
+        "IsUsingECheck": true,
+        "IsUsingCreditCard": true,
+        "IsValid": true,
+        "Name": "USD",
+        "CurrencyCode": "Z-US$",
+        "Symbol": "$",
+        "LongName": "US Dollars",
+        "IsFuncCurrency": true
+    },
+    "PaymentStatus": "Processed",
+    "Company": {
+        "Name": "Nodus Tech",
+        "LogoLarge": "",
+        "Logo": "data:image/gif;base64,...",
+        "Country": "Nodus Tech",
+        "Address": "West First Street",
+        "Address2": "-",
+        "City": "Claremont",
+        "State": "CA",
+        "Zip": "Claremont, CA 91711",
+        "Phone": "909 248 6547",
+        "PortalName": "nodus",
+        "PortalUrl": "https://sandbox.payfabric.com/receivables/nodus",
+        "IntegrationKey": null,
+        "IntegrationPassword": null
+    },
+    "Customer": {
+        "Status": "Active",
+        "BillingAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "PrimaryAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "ShippingAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "CreditBalance": 0,
+        "InvoiceBalance": 0,
+        "PastDueBalance": 0,
+        "Class": "USA-ILMO-T1",
+        "CustomerId": "Nodus0001",
+        "CopyEmail": null,
+        "Email": "nodus0001@nodus.com",
+        "ExtensionData": "",
+        "Name": "Nodus Technologies",
+        "PaymentTerms": "2% 10/Net 30",
+        "StatementName": "Nodus Technologies",
+        "Currency": "USD",
+        "ShippingMethod": ""
+    },
+    "Transaction": null,
+    "WalletEntryGuid": "12345678-0000-0000-0000-000000000000",
+    "Notes": "",
+    "Reference": "",
+    "CreditDistributions": [],
+    "Surcharges": null,
+    "PaymentGuid": "12345678-0000-0000-0000-000000000000",
+    "PaymentApplies": [
+        {
+            "AppliedToInvoice": true,
+            "InvoiceId": "ORDST1026",
+            "Identity": null,
+            "PayAmount": 187.44,
+            "DocumentType": 1,
+            "RowVersion": "AAAAAAAAB/k="
+        }
+    ],
+    "BatchNumber": "1234",
+    "PaymentMethod": "Cash",
+    "CCNumber": "",
+    "CheckNumber": "",
+    "CreatedOn": "2019-05-21T00:00:00",
+    "CustomerId": "Nodus0001",
+    "Identity": "PYMNT00000000001",
+    "PaymentId": "PYMNT00000000001",
+    "Amount": 200,
+    "BalanceAmount": 12.56,
+    "PaymentType": "Payment",
+    "User": "Nodus0001"
+}
+```
+
+
+Retrieve Application Record Receipt
+--------------------
+
+* `GET /applications/receipt?applicationId={applicationId}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+GET /applications/receipt?applicationId=WEBPMT0000000020 HTTP/1.1
+```
+
+###### Response
+For more information and descriptions on available fields please see our [object reference](../../Objects/PaymentReceipt.md)
+```json
+{
+    "CreditAmount": 0,
+    "AdditionalFee": 0,
+    "PrepaymentAmount": 0,
+    "Currency": {
+        "CurrencyGuid": "1620fcac-35e8-e811-87df-534e57000000",
+        "CCSetupId": "PayFlowProCredit",
+        "ECSetupId": "PaymentechECheck",
+        "IsUsingECheck": true,
+        "IsUsingCreditCard": true,
+        "IsValid": true,
+        "Name": "USD",
+        "CurrencyCode": "Z-US$",
+        "Symbol": "$",
+        "LongName": "US Dollars",
+        "IsFuncCurrency": true
+    },
+    "PaymentStatus": "Processed",
+    "Company": {
+        "Name": "Nodus Tech",
+        "LogoLarge": "",
+        "Logo": "data:image/gif;base64,...",
+        "Country": "Nodus Tech",
+        "Address": "West First Street",
+        "Address2": "-",
+        "City": "Claremont",
+        "State": "CA",
+        "Zip": "Claremont, CA 91711",
+        "Phone": "909 248 6547",
+        "PortalName": "nodus",
+        "PortalUrl": "https://sandbox.payfabric.com/receivables/nodus",
+        "IntegrationKey": null,
+        "IntegrationPassword": null
+    },
+    "Customer": {
+        "Status": "Active",
+        "BillingAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "PrimaryAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "ShippingAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "CreditBalance": 0,
+        "InvoiceBalance": 0,
+        "PastDueBalance": 0,
+        "Class": "USA-ILMO-T1",
+        "CustomerId": "Nodus0001",
+        "CopyEmail": null,
+        "Email": "nodus0001@nodus.com",
+        "ExtensionData": "",
+        "Name": "Nodus Technologies",
+        "PaymentTerms": "2% 10/Net 30",
+        "StatementName": "Nodus Technologies",
+        "Currency": "USD",
+        "ShippingMethod": ""
+    },
+    "Transaction": null,
+    "WalletEntryGuid": "12345678-0000-0000-0000-000000000000",
+    "Notes": "",
+    "Reference": "",
+    "CreditDistributions": [],
+    "Surcharges": null,
+    "PaymentGuid": "12345678-0000-0000-0000-000000000000",
+    "PaymentApplies": [
+        {
+            "AppliedToInvoice": true,
+            "InvoiceId": "ORDST1026",
+            "Identity": null,
+            "PayAmount": 187.44,
+            "DocumentType": 1,
+            "RowVersion": "AAAAAAAAB/k="
+        }
+    ],
+    "BatchNumber": "1234",
+    "PaymentMethod": "Cash",
+    "CCNumber": "",
+    "CheckNumber": "",
+    "CreatedOn": "2019-05-21T00:00:00",
+    "CustomerId": "Nodus0001",
+    "Identity": "PYMNT00000000001",
+    "PaymentId": "PYMNT00000000001",
+    "Amount": 200,
+    "BalanceAmount": 12.56,
+    "PaymentType": "Payment",
+    "User": "Nodus0001"
+}
+```
+
+
+Retrieve Application Record Details
+--------------------
+
+* `GET /applications/detail?applicationGuid={applicationGuid}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+GET /applications/detail?applicationGuid=1620fcac-35e8-e811-87df-534e57000000 HTTP/1.1
+```
+
+###### Response
+For more information and descriptions on available fields please see our [object reference](../../Objects/PaymentReceipt.md)
+```json
+{
+    "CreditAmount": 0,
+    "AdditionalFee": 0,
+    "PrepaymentAmount": 0,
+    "Currency": {
+        "CurrencyGuid": "1620fcac-35e8-e811-87df-534e57000000",
+        "CCSetupId": "PayFlowProCredit",
+        "ECSetupId": "PaymentechECheck",
+        "IsUsingECheck": true,
+        "IsUsingCreditCard": true,
+        "IsValid": true,
+        "Name": "USD",
+        "CurrencyCode": "Z-US$",
+        "Symbol": "$",
+        "LongName": "US Dollars",
+        "IsFuncCurrency": true
+    },
+    "PaymentStatus": "Processed",
+    "Company": {
+        "Name": "Nodus Tech",
+        "LogoLarge": "",
+        "Logo": "data:image/gif;base64,...",
+        "Country": "Nodus Tech",
+        "Address": "West First Street",
+        "Address2": "-",
+        "City": "Claremont",
+        "State": "CA",
+        "Zip": "Claremont, CA 91711",
+        "Phone": "909 248 6547",
+        "PortalName": "nodus",
+        "PortalUrl": "https://sandbox.payfabric.com/receivables/nodus",
+        "IntegrationKey": null,
+        "IntegrationPassword": null
+    },
+    "Customer": {
+        "Status": "Active",
+        "BillingAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "PrimaryAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "ShippingAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "CreditBalance": 0,
+        "InvoiceBalance": 0,
+        "PastDueBalance": 0,
+        "Class": "USA-ILMO-T1",
+        "CustomerId": "Nodus0001",
+        "CopyEmail": null,
+        "Email": "nodus0001@nodus.com",
+        "ExtensionData": "",
+        "Name": "Nodus Technologies",
+        "PaymentTerms": "2% 10/Net 30",
+        "StatementName": "Nodus Technologies",
+        "Currency": "USD",
+        "ShippingMethod": ""
+    },
+    "Transaction": null,
+    "WalletEntryGuid": "12345678-0000-0000-0000-000000000000",
+    "Notes": "",
+    "Reference": "",
+    "CreditDistributions": [],
+    "Surcharges": null,
+    "PaymentGuid": "12345678-0000-0000-0000-000000000000",
+    "PaymentApplies": [
+        {
+            "AppliedToInvoice": true,
+            "InvoiceId": "ORDST1026",
+            "Identity": null,
+            "PayAmount": 187.44,
+            "DocumentType": 1,
+            "RowVersion": "AAAAAAAAB/k="
+        }
+    ],
+    "BatchNumber": "1234",
+    "PaymentMethod": "Cash",
+    "CCNumber": "",
+    "CheckNumber": "",
+    "CreatedOn": "2019-05-21T00:00:00",
+    "CustomerId": "Nodus0001",
+    "Identity": "PYMNT00000000001",
+    "PaymentId": "PYMNT00000000001",
+    "Amount": 200,
+    "BalanceAmount": 12.56,
+    "PaymentType": "Payment",
+    "User": "Nodus0001"
+}
+```
+
+
+Download Payment Receipt
+--------------------
+
+* `GET /payments/receipt/download?paymentGuid={paymentGuid}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+GET /payments/receipt/download?paymentGuid=12345678-0000-0000-0000-000000000000 HTTP/1.1
+```
+
+###### Response
+This will return the receipt file related payment
+
+Download Payment Detail
+--------------------
+
+* `GET /payments/detail/download?paymentGuid={paymentGuid}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+GET /payments/detail/download?paymentGuid=12345678-0000-0000-0000-000000000000 HTTP/1.1
+```
+
+###### Response
+This will return the receipt file related payment
+
+Download Application Record Receipt
+--------------------
+
+* `GET /payments/receipt/download?applicationGuid={applicationGuid}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+GET /applications/receipt/download?applicationGuid=12345678-0000-0000-0000-000000000000 HTTP/1.1
+```
+
+###### Response
+This will return the receipt file related payment
+
+Download Application Record Detail
+--------------------
+
+* `GET /applications/detail/download?applicationGuid={applicationGuid}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+GET /payments/detail/download?applicationGuid=12345678-0000-0000-0000-000000000000 HTTP/1.1
+```
+
+###### Response
+This will return the receipt file related payment
+
+
+Create JWT for PayFabric Hosted Checkout Page
+--------------------
+
+* `POST /payments/mrhpp/jwt` will create the token to be used on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+POST /payments/mrhpp/jwt?paymentIdentity=WEBPMT0000000020&setupId=EVO HTTP/1.1
+```
+
+###### Response
+For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPaymentHostedCheckout.md#jwtresponse)
+```json
+{
+    "Message": "",
+    "Payload": {
+        "aud": "PaymentPage",
+        "dcn": "1",
+        "device": "72972a2b-8a71-4e29-aeab-1c418b136869",
+        "exp": "1617688157",
+        "iat": "1617687257",
+        "inst": "f242bd6d-7a23-41d7-a12e-46427ce4eba4",
+        "iss": "PayFabric_V3",
+        "sub": "HPP21040500682801",
+        "supportedPaymentMethods": [
+            {
+                "attributes": null,
+                "src": "URL",
+                "type": "CreditCard"
+            },
+            {
+                "attributes": null,
+                "src": "URL",
+                "type": "ECheck"
+            },
+            {
+                "attributes": [
+                    {
+                        "key": "data-partner-attribution-id",
+                        "value": "Nodus_SP_PPCP"
+                    }
+                ],
+                "src": "https:\/\/www.paypal.com\/sdk\/js?client-id=AfGQA1jQrGwqYSqbrN6M0ZnXwvDZNVKaXlNvI8VYbmb14vFWrF5CQtgw-O6xvz6n7sLtmvWJ0s0A5uW3&merchant-id=Q3E49R5X48QLG&enable-funding=venmo&disable-funding=paylater,card¤cy=USD&integration-date=2021-03-16",
+                "type": "PAYPAL"
+            }
+        ]
+    },
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQYXlGYWJyaWNfVjMiLCJpYXQiOiIxNjE3Njg3MjU3IiwiZXhwIjoiMTYxNzY4ODE1NyIsImF1ZCI6IlBheW1lbnRQYWdlIiwic3ViIjoiSFBQMjEwNDA1MDA2ODI4MDEiLCJpbnN0IjoiZjI0MmJkNmQtN2EyMy00MWQ3LWExMmUtNDY0MjdjZTRlYmE0IiwiZGV2aWNlIjoiNzI5NzJhMmItOGE3MS00ZTI5LWFlYWItMWM0MThiMTM2ODY5IiwiZGNuIjoiMSIsInN1cHBvcnRlZFBheW1lbnRNZXRob2RzIjpbeyJ0eXBlIjoiQ3JlZGl0Q2FyZCIsInNyYyI6IlVSTCIsImF0dHJpYnV0ZXMiOm51bGx9LHsidHlwZSI6IkVDaZZjayIsInNyYyI6IlVSTCIsImF0dHJpYnV0ZXMiOm51bGx9LHsidHlwZSI6IlBBWVBBTCIsInNyYyI6Imh0dHBzOi8vd3d3LnBheXBhbC5jb20vc2RrL2pzP2NsaWVudC1pZD1BZkdRQTFqUXJHd3FZU3Fick42TTBablh3dkRaTlZLYVhsTnZJOFZZYm1iMTR2RldyRjVDUXRndy1PNnh2ejZuN3NMdG12V0owczBBNXVXMyZtZXJjaGFudC1pZD1RM0U0OVI1WDQ4UUxHJmVuYWJsZS1mdW5kaW5nPXZlbm1vJmRpc2FibGUtZnVuZGluZz1wYXlsYXRlcixjYXJkJmN1cnJlbmN5PVVTRCZpbnRlZ3JhdGlvbi1kYXRlPTIwMjEtMDMtMTYiLCJhdHRyaWJ1dGVzIjpbeyJrZXkiOiJkYXRhLXBhcnRuZXItYXR0cmlidXRpb24taWQiLCJ2YWx1ZSI6Ik5vZHVzX1NQX1BQQ1AifV19XX0.grPRlquWaPWiySm6oaOLXTbQnLzM3Dz2JUtYF0pcno4",
+    "Options": {
+        "UseBluefin": false,
+        "UseDefaultWallet": false,
+        "ReturnUrl": null,
+        "TrxKey": "123485920"
+    }
+}
+```
+
+Update Existing Payment Transaction Using Hosted Checkout Page
+--------------------
+
+* `PATCH /payments/transactions/setupid` will update the payment to be processed on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+PATCH /payments/transactions/setupid?paymentIdentity=WEBPMT0000000020&setupId=EVO HTTP/1.1
+```
+
+###### Response
+For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPaymentHostedCheckout.md#updatetransactionresult)
+```json
+{
+    "Options": {
+        "UseBluefin": false,
+        "UseDefaultWallet": false,
+        "ReturnUrl": null,
+        "TrxKey": "123485920"
+    },
+    "Result": true,
+    "Message": null,
+    "HttpStatusCode": 200
+}
+```

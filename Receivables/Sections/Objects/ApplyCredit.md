@@ -3,6 +3,10 @@ The apply credit object represents the application of a credit to an invoice and
 
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
-| CreditApplies | [Object](PaymentApply.md) | Invoice(s) the credit is applied to |
-| Identity | String | Unique identifier for the payment | nvarchar(50) |
-| PaymentId | String | Payment number | nvarchar(25) |
+| CreditGuid | Guid | Unique identifier for the credit |  |
+| ApplyAmount | Decimal | Amount to be applied |  |
+| CreditBalance | Decimal | Available credit balance for the credit |  |
+| CreatedOn | DateTime | Created on date for the credit |  |
+| CreditIdentity | String | Unique identifier for the credit | 50 |
+| CreditId | String | Credit number | 25 |
+| PaymentType | String | Payment type of the transaction. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | 25 |

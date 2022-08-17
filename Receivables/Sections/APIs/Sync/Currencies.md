@@ -9,22 +9,18 @@ Create a Currency
 * `POST /currencies` will create and save a currency to the PayFabric Receivables website based on the JSON request payload
 
 ###### Request
-<pre>
+For more information on the available fields please see our [object reference](../../Objects/Currency.md#CurrencyPost)
+```json
 {
-	<b>"Name": "USD"</b>,
-	<b>"CurrencyCode": "USD"</b>,
-	"LongName": "USD Currency",
-	"IsFuncCurrency": false,
-	"Symbol": "$"
+	"Name": "USD",
+	"CurrencyCode": "USD"
 }
-</pre>
-
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/Currency.md#CurrencyPost).
+```
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```
 
 
 Retrieve a currency by currency code
@@ -33,28 +29,28 @@ Retrieve a currency by currency code
 * `GET /currencies/{CurrencyCode}` will get the details for a currency on the PayFabric Receivables website based on the URL parameter
 
 ###### Request
-<pre>
-	GET /currencies/USD
-</pre>
+```http
+GET /currencies/USD HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/Currency.md#CurrencyResponse)
+```json
 {
-	"CurrencyGuid": "faea05ff-d6e8-4f54-b345-efc8978b2199",
 	"CCSetupId": "PayFlowProCredit",
 	"ECSetupId": "PaymentechECheck",
 	"IsUsingECheck": true,
 	"IsUsingCreditCard": true,
 	"IsValid": true,
+	"SurchargePercentage": 0.0,
+	"CurrencyGuid": "faea05ff-d6e8-4f54-b345-efc8978b2199",
 	"Name": "USD",
 	"CurrencyCode": "USD",
 	"Symbol": "$",
 	"LongName": "US Dollars",
 	"IsFuncCurrency": true
 }
-</pre>
-
-For more information and descriptions on response fields please see our [object reference](../../Objects/Currency.md#CurrencyResponse).
+```
 
 
 Delete a Currency
@@ -63,11 +59,11 @@ Delete a Currency
 * `DELETE /currencies/{CurrencyCode}` will delete a currency on the PayFabric Receivables website based on the URL parameter
 
 ###### Request
-<pre>
-	DELETE /currencies/USD
-</pre>
+```http
+DELETE /currencies/USD HTTP/1.1
+```
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```

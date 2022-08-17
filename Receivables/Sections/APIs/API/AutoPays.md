@@ -9,33 +9,32 @@ Retrieve all AutoPay templates
 * `GET /autopaytemplates` will retrieve all autopay templates.
 
 ###### Request
-<pre>
-	GET /autopaytemplates
-</pre>
+```http 
+GET /autopaytemplates HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/AutoPayTemplate.md)
+```json
 [
-  {
-    "Currency": "",
-    "Description": "Pay outstanding balance on a monthly basis",
-    "AmountOption": "Outstanding",
-    "FixedAmountOption": "None",
-    "FixedAmount": 0.0,
-    "Frequency": "Monthly",
-	"InvoiceTypeOption": "SelectedInvoices",
-	"InvoiceTypes": [ "STDINV" ],
-    "Start": "UserChoice",
-    "StartDay": null,
-	"ApplyCredits": true,
-    "CurrencyOption": "CustomerCurrency",
-    "AutoPayTemplateGuid": "5edab5e7-892d-ea11-a2b7-b0c09018d6d4",
-    "Name": "Monthly AutoPay"
-  }
+    {
+        "Currency": "",
+        "Description": "Pay outstanding balance on a monthly basis",
+        "AmountOption": "Outstanding",
+        "FixedAmountOption": "None",
+        "FixedAmount": 0.0,
+        "Frequency": "Monthly",
+        "Start": "UserChoice",
+        "StartDay": null,
+        "CurrencyOption": "CustomerCurrency",
+        "InvoiceTypeOption": "AllInvoices",
+        "InvoiceTypes": [],
+        "ApplyCredits": true,
+        "AutoPayTemplateGuid": "c5b9d115-92cc-ec11-a36a-b0c09018d6d4",
+        "Name": "Monthly AutoPay"
+    }
 ]
-</pre>
-
-For more information and descriptions on available fields please see our [object reference](../../Objects/AutoPayTemplate.md).
+```
 
 
 Retrieve a specific AutoPay template
@@ -44,31 +43,30 @@ Retrieve a specific AutoPay template
 * `GET /autopaytemplate?id={autopayTemplateGuid}` will retrieve the specific autopay template.
 
 ###### Request
-<pre>
-	GET /autopaytemplate?id=5edab5e7-892d-ea11-a2b7-b0c09018d6d4
-</pre>
+```http
+GET /autopaytemplate?id=5edab5e7-892d-ea11-a2b7-b0c09018d6d4 HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/AutoPayTemplate.md)
+```json
 {
-  "Currency": "",
-  "Description": "Pay outstanding balance on a monthly basis",
-  "AmountOption": "Outstanding",
-  "FixedAmountOption": "None",
-  "FixedAmount": 0.0,
-  "Frequency": "Monthly",
-  "InvoiceTypeOption": "SelectedInvoices",
-  "InvoiceTypes": [ "STDINV" ],
-  "Start": "UserChoice",
-  "StartDay": null,
-  "ApplyCredits": true,
-  "CurrencyOption": "CustomerCurrency",
-  "AutoPayTemplateGuid": "5edab5e7-892d-ea11-a2b7-b0c09018d6d4",
-  "Name": "Monthly AutoPay"
+    "Currency": "",
+    "Description": "Pay outstanding balance on a monthly basis",
+    "AmountOption": "Outstanding",
+    "FixedAmountOption": "None",
+    "FixedAmount": 0.0,
+    "Frequency": "Monthly",
+    "Start": "UserChoice",
+    "StartDay": null,
+    "CurrencyOption": "CustomerCurrency",
+    "InvoiceTypeOption": "SelectedInvoices",
+    "InvoiceTypes": [ "STDINV" ],
+    "ApplyCredits": true,
+    "AutoPayTemplateGuid": "5edab5e7-892d-ea11-a2b7-b0c09018d6d4",
+    "Name": "Monthly AutoPay"
 }
-</pre>
-
-For more information and descriptions on available fields please see our [object reference](../../Objects/AutoPayTemplate.md).
+```
 
 
 Retrieve the current customer's AutoPay
@@ -77,28 +75,27 @@ Retrieve the current customer's AutoPay
 * `GET /autopay` will retrieve the autopay for the currently logged in customer.
 
 ###### Request
-<pre>
-	GET /autopay
-</pre>
+```http
+GET /autopay HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/AutoPay.md#autopayresponse)
+```json
 {
-  "AmountOption": "Outstanding",
-  "CustomerId": "AARONFIT0001",
-  "Currency": "Z-US$",
-  "Description": "Pay outstanding balance on a monthly basis",
-  "FixedAmount": 0.0,
-  "InvoiceTypes": [ "STDINV" ],
-  "PaymentDay": 0,
-  "Frequency": "Daily",
-  "ApplyCredits": true,
-  "NextPaymentDate": "2020-01-04T18:01:38.8100000Z",
-  "PaymentMethod": "4098a646-b0d1-47b7-98c8-ccd7ce15e901"
+    "AmountOption": "Outstanding",
+    "CustomerId": "Nodus0001",
+    "Currency": "USD",
+    "Description": "Pay outstanding balance on a daily basis",
+    "FixedAmount": 0.0,
+    "PaymentDay": 0,
+    "Frequency": "Daily",
+    "NextPaymentDate": "2022-05-04T16:41:01.1700000Z",
+    "PaymentMethod": "9d0c3ace-28b2-4906-a68b-d2831c12048b",
+    "InvoiceTypes": [],
+    "ApplyCredits": null
 }
-</pre>
-
-For more information and descriptions on available fields please see our [object reference](../../Objects/AutoPay.md).
+```
 
 
 Save an AutoPay
@@ -107,31 +104,21 @@ Save an AutoPay
 * `POST /autopay` will save the AutoPay to the PayFabric Receivables website based on the JSON request payload.
 
 ###### Request
-<pre>
-	POST /autopay
-</pre>
-
-<pre>
+For more information on available fields please see our [object reference](../../Objects/AutoPay.md#autopaypost)
+```json
 {
     "AmountOption": "Outstanding",
-    "CustomerID": "AARONFIT0001",
-    "Currency": "Z-US$",
-    "Description": "Pay any outstanding invoices each week beginning on the 15th",
-    "FixedAmount": 0,
+    "CustomerID": "Nodus0001",
     "Frequency": "Monthly",
-	"InvoiceTypes": [ "STDINV" ],
-	"ApplyCredits": true,
     "NextPaymentDate": "2019-07-15T21:17:37.0300000Z",
     "PaymentMethod": "015eb504-46c3-4574-907c-e9f30589c90d"
 }
-</pre>
+```
 
 ###### Response
-<pre>
+```text
 true
-</pre>
-
-For more information and descriptions on available fields please see our [object reference](../../Objects/AutoPay.md).
+```
 
 
 Update an AutoPay
@@ -140,31 +127,17 @@ Update an AutoPay
 * `PATCH /autopay` will update the AutoPay to the PayFabric Receivables website based on the JSON request payload. You only need to send what needs to be changed.
 
 ###### Request
-<pre>
-	PATCH /autopay
-</pre>
-
-<pre>
+For more information on available fields please see our [object reference](../../Objects/AutoPay.md#autopaypost)
+```json
 {
-    "AmountOption": "Outstanding",
-    "CustomerID": "AARONFIT0001",
-    "Currency": "Z-US$",
-    "Description": "Pay any outstanding invoices each week beginning on the 15th",
-    "FixedAmount": 0,
-    "Frequency": "Monthly",
-	"InvoiceTypes": [ "STDINV" ],
-	"ApplyCredits": true,
-    "NextPaymentDate": "2019-07-15T21:17:37.0300000Z",
-    "PaymentMethod": "015eb504-46c3-4574-907c-e9f30589c90d"
+    "CustomerID": "Nodus0001"
 }
-</pre>
+```
 
 ###### Response
-<pre>
+```text
 true
-</pre>
-
-For more information and descriptions on available fields please see our [object reference](../../Objects/AutoPay.md).
+```
 
 
 Delete an AutoPay
@@ -173,11 +146,11 @@ Delete an AutoPay
 * `DELETE /autopay` will delete the AutoPay associated to the currently logged in customer.
 
 ###### Request
-<pre>
-	DELETE /autopay
-</pre>
+```http
+DELETE /autopay HTTP/1.1
+```
 
 ###### Response
-<pre>
+```text
 true
-</pre>
+```

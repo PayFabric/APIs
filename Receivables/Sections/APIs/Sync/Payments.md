@@ -25,6 +25,7 @@ This request accepts the below query string parameters to add additional options
 
 | QueryString | Description | Type |
 | :------------- | :------------- | :------------- | 
+| BalanceAmount | Balance amount | [Numeric Range Filter](../QueryFilter.md#numeric-range-filter) |
 | CreatedOn | Search by the created on date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
 | Currency | Payment currency code | [String](../QueryFilter.md#string) |
 | CustomerId | Customer number | [String Filter](../QueryFilter.md#string-filter) |
@@ -32,103 +33,106 @@ This request accepts the below query string parameters to add additional options
 | ModifiedOn | Search by the last modified on date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
 | PaymentId | Payment number | [String Filter](../QueryFilter.md#string-filter) |
 | SortBy | Sort direction and sort field | [SortBy Filter](../QueryFilter.md#sortby-filter) |
-| Status | Payment status. Valid options are ``All``, ``Scheduled``, ``Processed``, ``Failed``, and ``Voided`` | [String](../QueryFilter.md#string) |
+| Status | Payment status. Valid options are ``Scheduled``, ``Processed``, ``Failed``, ``Voided``, ``InProgress``, and ``Incomplete`` | [String](../QueryFilter.md#string) |
 | Type | Payment type. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | [String](../QueryFilter.md#string) |
 | User | Search by the user who made the payment | [String Filter](../QueryFilter.md#string-filter) |
 
 ###### Request
-<pre>
-	GET /payments?filter.pageSize=10&filter.pageIndex=0&filter.criteria.CustomerId.EqualsTo=Nodus0001
-</pre>
+```http 
+GET /payments?filter.pageSize=10&filter.pageIndex=0&filter.criteria.CustomerId.EqualsTo=Nodus0001 HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/Payment.md#PaymentPagingResponse)
+```json
 {
     "Index": 0,
     "Total": 1,
     "Result": [
         {
-            "AppliedAmount": 0,
-            "Canceled": false,
-            "Comment": "ABC",
-            "Comment2": "",
-            "DateDue": "0001-01-01T00:00:00",
-            "FailedAttempts": 0,
-            "LastAttempt": "0001-01-01T00:00:00",
-            "LastMessage": null,
-            "MasterType": "Regular",
-			"ModifiedOn": "2020-01-01T00:00:00",
-            "Name": "Nodus Technologies ",
+            "PaymentId": "WEBPMT0000000020",
+            "CustomerId": "Nodus0001",
+            "Name": "Nodus Technologies",
+            "PaymentType": "Payment",
+            "PaymentMethod": "CreditCard",
+            "DateDue": "2017-12-12T00:00:00.0000000Z",
+            "Amount": 2.0,
+            "BalanceAmount": 1.0,
+            "CreatedOn": "2017-04-12T00:00:00.0000000Z",
+            "Reference": "",
+            "Comment": "",
             "Status": "Processed",
-            "WalletEntryGuid": "4bc44ebe-118a-46d1-a526-882a0e5c2aac",
+            "PaymentApplies": [
+                {
+                    "DocumentType": 1,
+                    "Identity": "STDINV999999",
+                    "InvoiceId": "SSTDINV999999",
+                    "PayAmount": 1.0,
+                    "RowVersion": "",
+                    "InvoiceType": "STDINV",
+                    "DiscountAmount": 0.0
+                }
+            ],
             "Transaction": {
-                "TransactionKey": "180529171901",
+                "TransactionKey": "18081200180094",
                 "DocumentId": "WEBPMT0000000020",
                 "DocumentType": 9,
                 "CustomerId": null,
-                "Name": "Nodus Technologies ",
-                "ConnectorSetupID": "PayFlowProCredit",
-                "ConnectorSetupIDGuid": "1c21624c-5c95-4ea6-9d40-fb38f7f95893",
+                "Name": "Nodus Technologies",
+                "ConnectorSetupID": "EVO",
+                "ConnectorSetupIDGuid": "e1f70916-c2c1-4b9b-bcfd-d1479a159790",
                 "TrxType": "Sale",
                 "TenderType": "CreditCard",
                 "Status": "Approved",
-                "TrxAmount": 2,
-                "TrxOriginationID": "A90E0AC594E8",
+                "TrxAmount": 2.00,
+                "TrxOriginationID": "A10EABE89CD1",
                 "TrxAuthCode": "010101",
                 "TrxResultCode": "0",
                 "TrxResponseMessage": "Approved",
-                "TrxAVSAddressResponse": "",
-                "TrxAVSZipResponse": "",
-                "TrxCVV2Response": "Y",
-                "CCName": "fw fwef",
-                "CCNumber": "XXXXXXXXXXXX1111",
+                "TrxAVSAddressResponse": "X",
+                "TrxAVSZipResponse": "X",
+                "TrxCVV2Response": "",
+                "CCName": "Test Test",
+                "CCNumber": "1111",
+                "CardType": "",
                 "CCType": "Visa",
-                "CCExpDate": "2018-12-31T00:00:00",
+                "CCExpDate": "2025-01-31T00:00:00.0000000Z",
                 "CCStartDate": null,
                 "CCIssueNumber": "",
                 "ECType": 0,
                 "ECAccountNumber": "",
                 "ECAbaNumber": "",
                 "ECCheckNumber": "",
-                "Address1": "",
+                "Address1": "1234 Street",
                 "Address2": "",
-                "City": "",
-                "State": "",
-                "Zip": "",
-                "Country": "",
-                "CreatedOn": "2018-05-29T10:38:33.977",
-                "Currency": "Z-US$"
+                "City": "Los Angeles",
+                "State": "CA",
+                "Zip": "12345",
+                "Country": "US",
+                "CreatedOn": "2018-05-02T00:00:00.0000000Z",
+                "Currency": "USD",
+                "SurchargeAmount": 0.00,
+                "SurchargePercentage": 0.0
             },
-            "Amount": 2,
-            "BalanceAmount": 0,
+            "Comment2": null,
+            "AppliedAmount": 0.0,
+            "FailedAttempts": 0,
+            "LastAttempt": null,
+            "LastMessage": null,
+            "MasterType": null,
+            "ModifiedOn": "2022-05-05T16:40:51.0400000Z",
+            "WalletEntryGuid": "00000000-0000-0000-0000-000000000000",
+            "Canceled": false,
             "BatchNumber": "EPAY20180529",
-            "PaymentMethod": "CreditCard",
-            "CCNumber": "",
+            "CCNumber": "1111",
             "CheckNumber": "",
-            "CreatedOn": "2018-05-29T00:00:00",
-            "Currency": "Z-US$",
-            "CustomerId": "Nodus0001",
-            "Identity": "",
-            "PaymentApplies": [
-				{
-				  "InvoiceId": "STDINV999999",
-				  "Identity": "STDINV999999",
-				  "PayAmount": 1.00,
-				  "InvoiceType": "STDINV",
-                  "DiscountAmount": 0.00,
-				  "RowVersion": "string"
-				}
-            ],
-            "PaymentId": "WEBPMT0000000020",
-            "PaymentType": "Payment",
-			"Status": "Processed",
-			"User": "Nodus0001"
+            "Identity": "WEBPMT0000000020",
+            "Currency": "USD",
+            "User": "Nodus0001"
         }
     ]
 }
-</pre>
-
-For more information and descriptions on response fields please see our [object reference](../../Objects/Payment.md#PaymentPagingResponse).
+```
 
 
 Create or Update a Payment
@@ -137,41 +141,19 @@ Create or Update a Payment
 * `POST /payments` will create or update a payment on the PayFabric Receivables website based on the JSON request payload. If updating a payment, make sure to send all values again, otherwise, they will be overwritten.
 
 ###### Request
-<pre>
+For more information on available fields please see our [object reference](../../Objects/Payment.md#PaymentPost)
+```json
 {
-	"Amount": "1.00",
-	"BalanceAmount": "1.00",
-	"BatchNumber": "API20171031",
-	"CCNumber": "XXXXXXXXXXXX1111",
-	"CheckNumber": null,
-	"CreatedOn": "10/31/2017 2:33:20 PM",
-	"Currency": "USD",
-	<b>"CustomerId": "Nodus0001"</b>,
-	"Identity": "",
-	"PaymentApplies": [
-		{
-		  "InvoiceId": "STDINV999999",
-		  "Identity": "STDINV999999",
-		  "PayAmount": 1.00,
-		  "InvoiceType": "STDINV",
-		  "DiscountAmount": 0.00,
-		  "RowVersion": "string"
-		}
-	],
-	<b>"PaymentId": "APIPMT000000001"</b>,
-	"PaymentMethod": "CreditCard",
-	"PaymentType": "Payment",
-	"Status": "Processed",
-	"User": "Nodus0001"
+	"CustomerId": "Nodus0001",
+	"PaymentId": "APIPMT000000001"
 }
-</pre>
+```
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/Payment.md#PaymentPost).
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```
 
 
 Retrieve a Payment
@@ -180,55 +162,135 @@ Retrieve a Payment
 * `GET /payments/byId?id={id}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
 
 ###### Request
-<pre>
-	GET /payments/byId?id=APIPMT000000001
-</pre>
+```htpp
+GET /payments/byId?id=WEBPMT0000000020
+```
 
 ###### Response
-<pre>
+For more information and descriptions on response fields please see our [object reference](../../Objects/Payment.md#PaymentResponse)
+```json
 {
-    "AppliedAmount": 0,
-    "Canceled": false,
-    "Comment": "",
-    "Comment2": "",
-    "DateDue": "0001-01-01T00:00:00",
-    "FailedAttempts": 0,
-    "LastAttempt": "0001-01-01T00:00:00",
-    "LastMessage": null,
-    "MasterType": "Back Office",
-	"ModifiedOn": "2020-01-01T00:00:00",
-    "Name": "Nodus Technologies ",
-    "Status": "Processed",
-    "WalletEntryGuid": "00000000-0000-0000-0000-000000000000",
-    "Transaction": null,
-    "Amount": 1,
-    "BalanceAmount": 1,
-    "BatchNumber": "API20171031",
-    "PaymentMethod": "CreditCard",
-    "CCNumber": "XXXXXXXXXXXX1111",
-    "CheckNumber": "",
-    "CreatedOn": "2017-10-31T14:33:20",
-    "Currency": "USD",
+    "PaymentId": "WEBPMT0000000020",
     "CustomerId": "Nodus0001",
-    "Identity": "",
+    "Name": "Nodus Technologies",
+    "PaymentType": "Payment",
+    "PaymentMethod": "CreditCard",
+    "DateDue": "2017-12-12T00:00:00.0000000Z",
+    "Amount": 2.0,
+    "BalanceAmount": 1.0,
+    "CreatedOn": "2017-04-12T00:00:00.0000000Z",
+    "Reference": "",
+    "Comment": "",
+    "Status": "Processed",
     "PaymentApplies": [
         {
-          "InvoiceId": "STDINV999999",
-          "Identity": "STDINV999999",
-          "PayAmount": 1.00,
-          "InvoiceType": "STDINV",
-		  "DiscountAmount": 0.00,
-          "RowVersion": "string"
+            "DocumentType": 1,
+            "Identity": "STDINV999999",
+            "InvoiceId": "SSTDINV999999",
+            "PayAmount": 1.0,
+            "RowVersion": "",
+            "InvoiceType": "STDINV",
+            "DiscountAmount": 0.0
         }
     ],
-    "PaymentId": "APIPMT000000001",
-    "PaymentType": "Payment",
-    "Status": "Processed",
+    "Transaction": {
+        "TransactionKey": "18081200180094",
+        "DocumentId": "WEBPMT0000000020",
+        "DocumentType": 9,
+        "CustomerId": null,
+        "Name": "Nodus Technologies",
+        "ConnectorSetupID": "EVO",
+        "ConnectorSetupIDGuid": "e1f70916-c2c1-4b9b-bcfd-d1479a159790",
+        "TrxType": "Sale",
+        "TenderType": "CreditCard",
+        "Status": "Approved",
+        "TrxAmount": 2.00,
+        "TrxOriginationID": "A10EABE89CD1",
+        "TrxAuthCode": "010101",
+        "TrxResultCode": "0",
+        "TrxResponseMessage": "Approved",
+        "TrxAVSAddressResponse": "X",
+        "TrxAVSZipResponse": "X",
+        "TrxCVV2Response": "",
+        "CCName": "Test Test",
+        "CCNumber": "1111",
+        "CardType": "",
+        "CCType": "Visa",
+        "CCExpDate": "2025-01-31T00:00:00.0000000Z",
+        "CCStartDate": null,
+        "CCIssueNumber": "",
+        "ECType": 0,
+        "ECAccountNumber": "",
+        "ECAbaNumber": "",
+        "ECCheckNumber": "",
+        "Address1": "1234 Street",
+        "Address2": "",
+        "City": "Los Angeles",
+        "State": "CA",
+        "Zip": "12345",
+        "Country": "US",
+        "CreatedOn": "2018-05-02T00:00:00.0000000Z",
+        "Currency": "USD",
+        "SurchargeAmount": 0.00,
+        "SurchargePercentage": 0.0
+    },
+    "Comment2": null,
+    "AppliedAmount": 0.0,
+    "FailedAttempts": 0,
+    "LastAttempt": null,
+    "LastMessage": null,
+    "MasterType": null,
+    "ModifiedOn": "2022-05-05T16:40:51.0400000Z",
+    "WalletEntryGuid": "00000000-0000-0000-0000-000000000000",
+    "Canceled": false,
+    "BatchNumber": "EPAY20180529",
+    "CCNumber": "1111",
+    "CheckNumber": "",
+    "Identity": "WEBPMT0000000020",
+    "Currency": "USD",
     "User": "Nodus0001"
 }
-</pre>
+```
 
-For more information and descriptions on response fields please see our [object reference](../../Objects/Payment.md#PaymentResponse).
+Retrieve an Application Record
+--------------------
+
+* `GET /applications?applicationId={applicationId}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```htpp
+GET /applications?applicationId=WEBPMT0000000020
+```
+
+###### Response
+For more information and descriptions on response fields please see our [object reference](../../Objects/Application.md#ApplicationResponse)
+```json
+{
+    "ApplicationId": "Application002",
+    "CustomerId": "Nodus0001",
+    "Amount": 2.0,
+    "CreatedOn": "2021-05-11T00:00:00.0000000Z",
+    "ModifiedOn": "2021-05-11T00:00:00.0000000Z",
+    "AppliedCredits": [
+        {
+            "Identity": "CRDT00000000006",
+            "PaymentId": "CRDT00000000006",
+            "ApplyAmount": 2.0,
+            "Type": "CreditMemo",
+            "InvoiceApply": [
+                {
+                    "InvoiceId": "STDINV999999",
+                    "Identity": "STDINV999999",
+                    "InvoiceType": "STDINV",
+                    "Amount": 2.0,
+                    "TotalAppliedAmount": 0.0,
+                    "DiscountAmount": 0.0
+                }
+            ]
+        }
+    ]
+}
+```
 
 
 Void a Payment
@@ -237,11 +299,11 @@ Void a Payment
 * `PATCH /payments/void?id={id}` will void the payment
 
 ###### Request
-<pre>
-	PATCH /payments/void?id=APIPMT000000001
-</pre>
+```http
+PATCH /payments/void?id=APIPMT000000001 HTTP/1.1
+```
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```

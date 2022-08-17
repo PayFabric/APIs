@@ -17,3 +17,6 @@ PayFabric Receivables uses JSON objects to send and receive client data. This is
    [Integrations](Sync/Integrations.md) 
    [Invoices](Sync/Invoices.md)  
    [Payments](Sync/Payments.md)  
+   [Subscriptions](Sync/Subscriptions.md)
+   [Taxes](Sync/Taxes.md)
+   

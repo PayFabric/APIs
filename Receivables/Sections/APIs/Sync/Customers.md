@@ -9,14 +9,14 @@ Delete a Customer
 * `DELETE /customers?id={CustomerId}` will delete a currency on the PayFabric Receivables website based on the URL parameter
 
 ###### Request
-<pre>
-	DELETE /customers?id=Nodus0002
-</pre>
+```http
+DELETE /customers?id=Nodus0002 HTTP/1.1
+```
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```
 
 
 Retrieve a Customer by customer identifier
@@ -25,74 +25,89 @@ Retrieve a Customer by customer identifier
 * `GET /customers?id={CustomerId}` will retrieve the customer from PayFabric Receivables website whose Id has been specified in the URL parameter
 
 ###### Request
-<pre>
-	GET /customers?id=Nodus0002
-</pre>
+```http
+GET /customers?id=Nodus0002 HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/Customer.md#CustomerResponse)
+```json
 {
-    "Status": "Active",
-    "BillingAddress": {
-        "Address1": "1234 Street",
-        "Address2": "",
-        "Address3": "",
-        "City": "Los Angeles",
-        "Country": "US",
-        "EMail": "",
-        "Fax": "",
-        "Name": "Nodus Technologies",
-        "Phone": null,
-        "State": "CA",
-        "Zip": "12345"
-    },
-    "PrimaryAddress": {
-        "Address1": "1234 Street",
-        "Address2": "",
-        "Address3": "",
-        "City": "Los Angeles",
-        "Country": "US",
-        "EMail": "",
-        "Fax": "",
-        "Name": "Nodus Technologies",
-        "Phone": null,
-        "State": "CA",
-        "Zip": "12345"
-    },
-    "ShippingAddress": {
-        "Address1": "1234 Street",
-        "Address2": "",
-        "Address3": "",
-        "City": "Los Angeles",
-        "Country": "US",
-        "EMail": "",
-        "Fax": "",
-        "Name": "Nodus Technologies",
-        "Phone": null,
-        "State": "CA",
-        "Zip": "12345"
-    },
-    "CreditBalance": 0,
-    "InvoiceBalance": 0,
-    "PastDueBalance": 0,
-    "Class": "Customer",
     "CustomerId": "Nodus0002",
+    "Name": "Nodus Technologies",
+    "Currency": "Z-US$",
+    "Email": "Nodus0002@nodus.com",
     "CopyEmail": [
         "Nodus0003@nodus.com",
-        "Nodus0004@nodus.com"
+		"Nodus0004@nodus.com"
     ],
-    "Email": "Nodus0002@nodus.com",
+    "PaymentTerms": "",
+    "BillingAddress": {
+        "AddressId": "PRIMARY5",
+        "Address1": "1234 Street",
+        "Address2": "",
+        "Address3": "",
+        "Name": "Nodus Technologies",
+        "City": "Los Angeles",
+        "State": "CA",
+        "Zip": "12345",
+        "Country": "USA",
+        "AddressGuid": "862f9b0e-92cc-ec11-a36a-b0c09018d6d4",
+        "isDefaultBilling": true,
+        "IsDefaultShipping": true,
+        "Email": "",
+        "Fax": "",
+        "Phone": ""
+    },
+    "PrimaryAddress": {
+        "AddressId": "PRIMARY5",
+        "Address1": "1234 Street",
+        "Address2": "",
+        "Address3": "",
+        "Name": "Nodus Technologies",
+        "City": "Los Angeles",
+        "State": "CA",
+        "Zip": "12345",
+        "Country": "USA",
+        "AddressGuid": "862f9b0e-92cc-ec11-a36a-b0c09018d6d4",
+        "isDefaultBilling": false,
+        "IsDefaultShipping": false,
+        "Email": "",
+        "Fax": "",
+        "Phone": ""
+    },
+    "ShippingAddress": {
+        "AddressId": "PRIMARY5",
+        "Address1": "1234 Street",
+        "Address2": "",
+        "Address3": "",
+        "Name": "Nodus Technologies",
+        "City": "Los Angeles",
+        "State": "CA",
+        "Zip": "12345",
+        "Country": "USA",
+        "AddressGuid": "862f9b0e-92cc-ec11-a36a-b0c09018d6d4",
+        "isDefaultBilling": true,
+        "IsDefaultShipping": true,
+        "Email": "",
+        "Fax": "",
+        "Phone": ""
+    },
+    "CustomerGuid": "9e2f9b0e-92cc-ec11-a36a-b0c09018d6d4",
+    "Status": "Active",
+    "CreditBalance": 100.56,
+    "InvoiceBalance": 500.20,
+    "PastDueBalance": 200.24,
+    "HasAddress": false,
+    "Class": "USA-ILMO-T1",
     "ExtensionData": "",
-    "Name": "Nodus Technologies",
-    "PaymentTerms": null,
-    "StatementName": "Nodus Technologies ",
-    "Currency": "USD",
-    "ShippingMethod": "GROUND",
-    "TaxExemptNumber": 1234
+    "StatementName": "Nodus Technologies",
+    "ShippingMethod": "",
+    "TaxExemptNumber": 121,
+    "TaxExempt": false,
+    "TaxGroup": ""
 }
-</pre>
-
-For more information and descriptions on response fields please see our [object reference](../../Objects/Customer.md#CustomerResponse).
+```
 
 
 Create or Update a Customer
@@ -101,71 +116,15 @@ Create or Update a Customer
 * `POST /customers` will create or update a customer to the PayFabric Receivables website based on the JSON request payload. If updating a customer, make sure to send all values again, otherwise, they will be overwritten.
 
 ###### Request
-<pre>
+For more information on available fields please see our [object reference](../../Objects/Customer.md#CustomerPost)
+```json
 {
-	"Status": "Active",
-	"BillingAddress": {
-		"Address1": "1234 Street",
-		"Address2": null,
-		"Address3": null,
-		"AddressID": "PRIMARY",
-		"City": "Los Angeles",
-		"Country": "US",
-		"EMailAddress": "Nodus0002@nodus.com",
-		"Fax": null,
-		"Name": "Nodus Technologies",
-		"Phone": "1234567890",
-		"State": "CA",
-		"Zip": "12345"
-	},
-	"PrimaryAddress": {
-		"Address1": "1234 Street",
-		"Address2": null,
-		"Address3": null,
-		"AddressID": "PRIMARY",
-		"City": "Los Angeles",
-		"Country": "US",
-		"EMailAddress": "Nodus0002@nodus.com",
-		"Fax": null,
-		"Name": "Nodus Technologies",
-		"Phone": "1234567890",
-		"State": "CA",
-		"Zip": "12345"
-	},
-	"ShippingAddress": {
-		"Address1": "1234 Street",
-		"Address2": null,
-		"Address3": null,
-		"AddressID": "PRIMARY",
-		"City": "Los Angeles",
-		"Country": "US",
-		"EMailAddress": "Nodus0002@nodus.com",
-		"Fax": null,
-		"Name": "Nodus Technologies",
-		"Phone": "1234567890",
-		"State": "CA",
-		"Zip": "12345"
-	},
-	"Class": "Customer",
-	<b>"CustomerId": "Nodus0002"</b>,
-	"CopyEmail": [
-		"Nodus0003@nodus.com",
-		"Nodus0004@nodus.com"
-	],	
-	"Email": "Nodus0002@nodus.com",
-	"ExtensionData": "",
-	"Name": "Nodus Technologies",
-	"PaymentTerms": null,
-	"StatementName": "Nodus Technologies",
-	"Currency": "USD",
-	"ShippingMethod": "GROUND",
-	"TaxExemptNumber": 1234
+    "CustomerId": "Nodus0002"
 }
-</pre>
+```
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/Customer.md#CustomerPost).
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```

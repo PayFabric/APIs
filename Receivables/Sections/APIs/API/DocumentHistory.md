@@ -34,12 +34,13 @@ This request accepts the below query string parameters to add additional options
 | SortBy | Sort direction and sort field | [SortBy Filter](../QueryFilter.md#sortby-filter) |
 
 ###### Request
-<pre>
-	GET /document/history?filter.pageSize=10&filter.pageIndex=0&filter.criteria.DocumentDate.Min=2010-01-01
-</pre>
+```http
+GET /document/history?filter.pageSize=10&filter.pageIndex=0&filter.criteria.DocumentDate.Min=2010-01-01 HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/DocumentHistory.md#DocumentHistoryPagingResponse)
+```json
 {
     "Index": 0,
     "Total": 2,
@@ -47,38 +48,38 @@ This request accepts the below query string parameters to add additional options
         {
             "Amount": 5873.79,
             "Currency": {
-		"Name": "USD",
-                "CurrencyCode": "Z-US$",
+                "CurrencyGuid": "8f2f9b0e-92cc-ec11-a36a-b0c09018d6d4",
+                "Name": "USD",
+                "CurrencyCode": "USD",
                 "Symbol": "$",
                 "LongName": "US Dollars",
                 "IsFuncCurrency": true
             },
-	    "DocumentGuid": "00000000-0000-0000-0000-000000000000",
-            "DocumentId": "ORDST1026",
+            "DocumentGuid": "54f5d01c-92cc-ec11-a36a-b0c09018d6d4",
+            "DocumentId": "ORDST3012",
             "DocumentType": "Invoice",
             "PONumber": "4567",
-            "DocumentDate": "2015-05-08T00:00:00"
+            "DocumentDate": "2015-05-08T00:00:00.0000000Z"
         },
         {
-            "Amount": 358.2,
+            "Amount": 1027.15,
             "Currency": {
-		"Name": "USD",
-                "CurrencyCode": "Z-US$",
+                "CurrencyGuid": "8f2f9b0e-92cc-ec11-a36a-b0c09018d6d4",
+                "Name": "USD",
+                "CurrencyCode": "USD",
                 "Symbol": "$",
                 "LongName": "US Dollars",
                 "IsFuncCurrency": true
             },
-	    "DocumentGuid": "00000000-0000-0000-0000-000000000001",
-            "DocumentId": "ORDST2095",
-            "DocumentType": "Invoice",
-            "PONumber": "4567",
-            "DocumentDate": "2016-03-14T00:00:00"
+            "DocumentGuid": "4ff5d01c-92cc-ec11-a36a-b0c09018d6d4",
+            "DocumentId": "ORDST2231",
+            "DocumentType": "Debit",
+            "PONumber": "PO4567",
+            "DocumentDate": "2017-01-05T00:00:00.0000000Z"
         }
     ]
 }
-</pre>
-
-For more information and descriptions on response fields please see our [object reference](../../Objects/DocumentHistory.md#DocumentHistoryPagingResponse).
+```
 
 
 Retrieve Document History Currencies
@@ -87,25 +88,25 @@ Retrieve Document History Currencies
 * `GET /documents/history/currencies` will get the document information from the PayFabric Receivables website based on the JSON request payload
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/Currency.md#CurrencyResponse)
+```json
 [
 	{
-		"CurrencyGuid": "faea05ff-d6e8-4f54-b345-efc8978b2199",
-		"CCSetupId": "PayFlowProCredit",
-		"ECSetupId": "PaymentechECheck",
-		"IsUsingECheck": true,
-		"IsUsingCreditCard": true,
-		"IsValid": true,
-		"Name": "USD",
-		"CurrencyCode": "Z-US$",
-		"Symbol": "$",
-		"LongName": "US Dollars",
-		"IsFuncCurrency": true
-	}
+        "CCSetupId": "PFP",
+        "ECSetupId": "PFP_ECheck",
+        "IsUsingECheck": true,
+        "IsUsingCreditCard": true,
+        "IsValid": true,
+        "SurchargePercentage": null,
+        "CurrencyGuid": "8f2f9b0e-92cc-ec11-a36a-b0c09018d6d4",
+        "Name": "USD",
+        "CurrencyCode": "USD",
+        "Symbol": "$",
+        "LongName": "US Dollars",
+        "IsFuncCurrency": true
+    }
 ]
-</pre>
-
-For more information and descriptions on response fields please see our [object reference](../../Objects/Currency.md#CurrencyResponse).
+```
 
 
 Export Document History
@@ -129,9 +130,9 @@ This request accepts the below query string parameters to add additional options
 | SortBy | Sort direction and sort field | [SortBy Filter](../QueryFilter.md#sortby-filter) |
 
 ###### Request
-<pre>
-	POST /document/history?filter.pageSize=10&filter.pageIndex=0&filter.criteria.DocumentDate.Min=2010-01-01
-</pre>
+```http
+POST /document/history?filter.pageSize=10&filter.pageIndex=0&filter.criteria.DocumentDate.Min=2010-01-01 HTTP/1.1
+```
 
 ###### Response
 This will return a CSV file with the historical documents

@@ -10,20 +10,19 @@ This api requires authentication
 * `GET /currentuser` will retrieve the currently logged in user.
 
 ###### Request
-<pre>
-	GET /currentuser
-</pre>
+```http
+GET /currentuser HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/AccountUser.md#AccountUserResponse)
+```json
 {
 	"UserName": "Nodus0001",
 	"Email": "Nodus0001@nodus.com",
 	"Name": "Nodus Technologies"
 }
-</pre>
-
-For more information and descriptions on available fields please see our [object reference](../../Objects/AccountUser.md#AccountUserResponse).
+```
 
 
 Get all customer users
@@ -42,14 +41,15 @@ This request accepts the below query string parameters to add additional options
 | Status | Status of the users | User status. Valid options are ``Active``, ``Inactive``, ``Pending``, and ``Locked`` |
 
 ###### Request
-<pre>
-	GET /users
-</pre>
+```http
+GET /users HTTP/1.1
+```
 
 ###### Response
-<pre>
-	[
-	  {
+For more information on response fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserResponse)
+```json
+[
+	{
 		"Status": "Active",
 		"LastLogin": "2020-06-01T22:52:49.7370000Z",
 		"RegisterDate": "2020-05-28T18:17:32.9200000Z",
@@ -62,11 +62,9 @@ This request accepts the below query string parameters to add additional options
 		"Permission": "FullAccess",
 		"UserName": "Nodus0001",
 		"Email": "Nodus0001@nodus.com"
-	  }
-	]
-</pre>
-
-For more information and descriptions on available fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserResponse).
+	}
+]
+```
 
 
 Create a customer user
@@ -75,25 +73,23 @@ Create a customer user
 * `POST /users` will create a user on the PayFabric Receivables website based on the JSON request payload.
 
 ###### Request
-<pre>
+For more information on available fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserPost)
+```json
 {
-	<b>"CustomerId": "Nodus0001"</b>,
-	<b>"Email": "Nodus0001@nodus.com"</b>,
-	"Name": "Nodus Technologies",
-	<b>"Password": "password1"</b>,
-	<b>"Permission": "Full Access"</b>,
-	<b>"RegistrationKey":"6F25DF7B-8B48-4041-91F4-9E84EF723A8A"</b>,
-	"Status": "Active",
-	<b>"UserName": "Nodus0001"</b>
+	"CustomerId": "Nodus0001",
+	"Email": "Nodus0001@nodus.com",
+	"Password": "password1",
+	"Permission": "Full Access",
+	"RegistrationKey":"6F25DF7B-8B48-4041-91F4-9E84EF723A8A",
+	"UserName": "Nodus0001"
 }
-</pre>
+```
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserPost).
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```
 
 
 Update a customer user
@@ -103,25 +99,18 @@ This api requires authentication
 * `PUT /users` will update a user on the PayFabric Receivables website based on the JSON request payload.
 
 ###### Request
-<pre>
+For more information on available fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserPost)
+```json
 {
-	"CustomerId": "Nodus0001",
-	"Email": "Nodus0001@nodus.com",
-	"Name": "Nodus Technologies",
-	"Password": "password1",
-	"Permission": "Full Access",
-	"RegistrationKey":"6F25DF7B-8B48-4041-91F4-9E84EF723A8A",
-	"Status": "Active",
-	<b>"UserName": "Nodus0001"</b>
+	"UserName": "Nodus0001"
 }
-</pre>
+```
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserPost).
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```
 
 
 Send Forgot Password Email
@@ -130,14 +119,14 @@ Send Forgot Password Email
 * `POST /users/forgotpassword?username={UserName}` will send a forgot password email from the PayFabric Receivables website.
 
 ###### Request
-<pre>
-	POST /users/forgotpassword?username=Nodus0001
-</pre>
+```http
+POST /users/forgotpassword?username=Nodus0001 HTTP/1.1
+```
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```
 
 
 Send Forgot UserName Email
@@ -146,19 +135,19 @@ Send Forgot UserName Email
 * `POST /users/forgotusername` will send a forgot username email from the PayFabric Receivables website based on the JSON request payload.
 
 ###### Request
-<pre>
+For more information on available fields please see our [object reference](../../Objects/ForgotUsernameEmail.md)
+```json
 {
-	<b>"CustomerId": "Nodus0001"</b>,
-	<b>"Email": "Nodus0001@nodus.com"</b>
+	"CustomerId": "Nodus0001",
+	"Email": "Nodus0001@nodus.com"
 }
-</pre>
+```
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/ForgotUsernameEmail.md).
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```
 
 
 Verify access code
@@ -167,19 +156,18 @@ Verify access code
 * `GET /users/isaccessible?accessCode={AccessCodeGuid}` will verify the access code from the PayFabric Receivables website.
 
 ###### Request
-<pre>
-	GET /users/isaccessible?accessCode=9F13BA90-14DE-4A98-8708-F147CCC1F0DB
-</pre>
+```http
+GET /users/isaccessible?accessCode=9F13BA90-14DE-4A98-8708-F147CCC1F0DB HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/AccessCode.md#AccessCodeResponse)
+```json
 {
     "AccessStatus": "Valid",
     "UserId": "d4c6ed39-6c85-4b01-accc-9d277e9e418f"
 }
-</pre>
-
-For more information and descriptions on available fields please see our [object reference](../../Objects/AccessCode.md#AccessCodeResponse).
+```
 
 
 Update an user's profile
@@ -189,79 +177,66 @@ This api requires authentication
 * `POST /users/profile` will send an update for the customer's profile
 
 ###### Request
-<pre>
+For more information on available fields please see our [object reference](../../Objects/AccountUser.md#AccountUserPost)
+```json
 {
-	"CustomerId": "Nodus0001",
-	"Email": "Nodus0001@nodus.com",
-	"FirstName": "Nodus",
-	"LastName": "Technologies",
-	"OldPassword": null,
-	"Password": null,	
-	<b>"UserName": "Nodus0001"</b>
+	"UserName": "Nodus0001"
 }
-</pre>
+```
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/AccountUser.md#AccountUserPost).
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```
 
 
-Retrieve Self Registration Key
+Retrieve a Registration Key
 --------------------
 
 * `POST /users/registration` will register a customer on the PayFabric Receivables website based on the JSON request payload.
 
 ###### Request
-<pre>
+For more information on available fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserSelfRegister)
+```json
 {
-	<b>"CustomerId": "Nodus0001"</b>
+	"CustomerId": "Nodus0001"
 }
-</pre>
+```
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserSelfRegister).
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/AccessCode.md#AccessCodeRegisterResponse)
+```json
 {
-    "Message": "",
     "RegistrationKey": "6dede74f-4eae-4c26-a210-6a7418c8988b"
 }
-</pre>
-
-For more information and descriptions on response fields please see our [object reference](../../Objects/AccessCode.md#AccessCodeRegisterResponse).
+```
 
 
-Invite Customer User
+Invite a Customer User
 --------------------
 
-* `POST /users/invite` will send the registeration email to the customer user based on the JSON request payload. If user has authentication, it will display Registration Key on the page, otherwise it will only send email when "SendEmail" is true.
+* `POST /users/invite` will send the registration email to the customer user based on the JSON request payload. If user has authentication, it will display the Registration Key on the page, otherwise it will only send an email when "SendEmail" is true.
 
 ###### Request
-<pre>
+For more information on available fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserRegister)
+```json
 {
-	"AccessCode": null,
-	<b>"CustomerId": "Nodus0001"</b>,
-	<b>"Email": "Nodus0001@nodus.com"</b>,
-	"Name": "Nodus Technologies",
-	<b>"Permission": "Full Access"</b>,
-	"SendEmail": false
+	"CustomerId": "Nodus0001",
+	"Email": "Nodus0001@nodus.com",
+	"Permission": "Full Access",
 }
-</pre>
+```
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/CustomerUser.md#CustomerUserRegister).
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/AccessCode.md#AccessCodeRegisterResponse)
+```json
 {
-    "Message": "",
     "RegistrationKey": "6dede74f-4eae-4c26-a210-6a7418c8988b"
 }
-</pre>
-
-For more information and descriptions on response fields please see our [object reference](../../Objects/AccessCode.md#AccessCodeRegisterResponse).
+```
 
 
 Verify registration key
@@ -270,22 +245,22 @@ Verify registration key
 * `GET /users/registration/{RegistrationGuid}` will verify the registration key for the customer on the PayFabric Receivables website based on the JSON request payload.
 
 ###### Request
-<pre>
-	GET /users/registration/6dede74f-4eae-4c26-a210-6a7418c8988b
-</pre>
+```http
+GET /users/registration/6dede74f-4eae-4c26-a210-6a7418c8988b HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/AccessCode.md#AccessCodeVerifyResponse)
+```json
 {
     "CustomerId": "Nodus0001",
     "Email": "Nodus0001@nodus.com",
     "CreatedOn": "2018-05-25T13:55:51.243",
     "RegistrationKey": "6dede74f-4eae-4c26-a210-6a7418c8988b",
-    "Status": "Active"
+    "Status": "Active",
+	"Permission": "Full Access"
 }
-</pre>
-
-For more information and descriptions on response fields please see our [object reference](../../Objects/AccessCode.md#AccessCodeVerifyResponse).
+```
 
 
 Send Reset Password Email
@@ -294,16 +269,16 @@ Send Reset Password Email
 * `POST /users/resetpassword` will send a reset password confirmation email from the PayFabric Receivables website based on the JSON request payload if the email template is enabled.
 
 ###### Request
-<pre>
+For more information on available fields please see our [object reference](../../Objects/ResetPasswordEmail.md)
+```json
 {
-	<b>"AccessCode": "d4c6ed39-6c85-4b01-accc-9d277e9e418f"</b>,
-	<b>"NewPassword": "password1"</b>
+	"AccessCode": "d4c6ed39-6c85-4b01-accc-9d277e9e418f",
+	"NewPassword": "password1"
 }
-</pre>
+```
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](../../Objects/ResetPasswordEmail.md).
 
 ###### Response
-<pre>
-	true
-</pre>
+```text
+true
+```

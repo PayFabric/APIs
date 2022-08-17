@@ -9,25 +9,25 @@ Retrieve a Currency
 * `GET /currencies/{CurrencyCode}` will get the details for a currency on the PayFabric Receivables website based on the URL parameter
 
 ###### Request
-<pre>
-	GET /currencies/USD
-</pre>
+```http
+GET /currencies/USD HTTP/1.1
+```
 
 ###### Response
-<pre>
+For more information on response fields please see our [object reference](../../Objects/Currency.md#CurrencyResponse)
+```json
 {
-	"CurrencyGuid": "faea05ff-d6e8-4f54-b345-efc8978b2199",
-	"CCSetupId": "PayFlowProCredit",
-	"ECSetupId": "PaymentechECheck",
-	"IsUsingECheck": true,
-	"IsUsingCreditCard": true,
-	"IsValid": true,
-	"Name": "USD",
-	"CurrencyCode": "USD",
-	"Symbol": "$",
-	"LongName": "US Dollars",
-	"IsFuncCurrency": true
+    "CCSetupId": "PFP",
+    "ECSetupId": "PFP_ECheck",
+    "IsUsingECheck": true,
+    "IsUsingCreditCard": true,
+    "IsValid": true,
+    "SurchargePercentage": 0.0,
+    "CurrencyGuid": "cbb9d115-92cc-ec11-a36a-b0c09018d6d4",
+    "Name": "USD",
+    "CurrencyCode": "USD",
+    "Symbol": "$",
+    "LongName": "US Dollar",
+    "IsFuncCurrency": true
 }
-</pre>
-
-For more information and descriptions on response fields please see our [object reference](../../Objects/Currency.md#CurrencyResponse).
+```
