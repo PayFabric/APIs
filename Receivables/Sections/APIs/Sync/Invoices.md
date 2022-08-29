@@ -87,7 +87,7 @@ Update an Invoice Attachment
 ```http
 PATCH /invoices/attachments?identity=STDINV999999 HTTP/1.1
 ```
-In the form-data add the following two key values:
+In the form-data add the following key value:
 * `Attachment` - This will contiain the actual pdf attachment to be uploaded
 
 
