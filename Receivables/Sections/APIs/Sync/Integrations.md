@@ -77,7 +77,7 @@ For more information on response fields please see our [object reference](../../
             "ErrorMessage": null,
             "FailedAttempts": 0,
             "LastAttempt": "0001-01-01T00:00:00",
-	        "CreatedBy": "Nodus0001"
+            "CreatedBy": "Nodus0001"
         },
         {
             "IntegrationId": "baf5d01c-92cc-ec11-a36a-b0c09018d6d4",
@@ -88,7 +88,7 @@ For more information on response fields please see our [object reference](../../
             "ErrorMessage": null,
             "FailedAttempts": 0,
             "LastAttempt": "0001-01-01T00:00:00",
-	        "CreatedBy": "Nodus0001"
+            "CreatedBy": "Nodus0001"
         }
     ]
 }
