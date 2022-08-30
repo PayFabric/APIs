@@ -12,11 +12,11 @@ Update the Integration Document
 For more information on available fields please see our [object reference](../../Objects/Integration.md#IntegrationPost)
 ```json
 {
-	"Documents": [{
-		"DocumentId": "APIPMT000000001",
-		"Status": "Success",
-		"DocumentType": "Payment"
-	}]
+    "Documents": [{
+        "DocumentId": "APIPMT000000001",
+        "Status": "Success",
+        "DocumentType": "Payment"
+    }]
 }
 ```
 
@@ -53,12 +53,12 @@ This request accepts the below query string parameters to add additional options
 | FailedAttempts | Number of failed attempts integrating | [Numeric Range Filter](../QueryFilter.md#numeric-range-filter) |
 | LastAttempt | Date of last attempt made integrating | [Date Range Filter](../QueryFilter.md#date-range-filter) |
 | SortBy | Sort direction and sort field | [SortBy Filter](../QueryFilter.md#sortby-filter) |
-| Status | Status of the document integrating | String |
-| Type | Type of the document integrating | String |
+| Status | Status of the document integrating | [String](../QueryFilter.md#string) |
+| Type | Type of the document integrating | [String](../QueryFilter.md#string) |
 
 ###### Request
-```htpp
-GET /integrations?filter.pageSize=10&filter.pageIndex=0&filter.criteria.Status=Pending
+```http
+GET /integrations?filter.pageSize=10&filter.pageIndex=0&filter.criteria.Status=Pending HTTP/1.1
 ```
 
 ###### Response
@@ -77,7 +77,7 @@ For more information on response fields please see our [object reference](../../
             "ErrorMessage": null,
             "FailedAttempts": 0,
             "LastAttempt": "0001-01-01T00:00:00",
-	    "CreatedBy": "Nodus0001"
+	        "CreatedBy": "Nodus0001"
         },
         {
             "IntegrationId": "baf5d01c-92cc-ec11-a36a-b0c09018d6d4",
@@ -88,7 +88,7 @@ For more information on response fields please see our [object reference](../../
             "ErrorMessage": null,
             "FailedAttempts": 0,
             "LastAttempt": "0001-01-01T00:00:00",
-	    "CreatedBy": "Nodus0001"
+	        "CreatedBy": "Nodus0001"
         }
     ]
 }
