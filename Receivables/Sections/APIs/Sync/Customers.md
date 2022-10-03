@@ -6,7 +6,7 @@ The Customer API is used for creating, updating, deleting and viewing customers 
 Delete a Customer
 --------------------
 
-* `DELETE /customers?id={CustomerId}` will delete a currency on the PayFabric Receivables website based on the URL parameter
+* `DELETE /customers?id={CustomerId}` will delete a customer on the PayFabric Receivables website based on the URL parameter
 
 ###### Request
 ```http
