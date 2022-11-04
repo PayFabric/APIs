@@ -1,9 +1,9 @@
 ## Invoice
-There are three Invoice objects that represent an invoice in the PayFabric Receivables website, InvoicePost, InvoiceIntegrationResponse, InvoiceResponse and InvoicePagingResponse. 
+There are four Invoice objects that represent an invoice in the PayFabric Receivables website, InvoicePost, InvoiceIntegrationResponse, InvoiceResponse and InvoicePagingResponse. 
 
 
 ## InvoicePost
-This object is used when creating a payment on the PayFabric Receivables website.
+This object is used when creating or updating an invoice record on the PayFabric Receivables website.
 
 | Attribute | Data Type | Required | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- | :--------- |
@@ -42,7 +42,7 @@ This object is used when creating a payment on the PayFabric Receivables website
 | TrackingNumber | String | N | Tracking number for shipping | 50 |
 
 ## InvoiceIntegrationResponse
-This object is used when getting an invoice on the PayFabric Receivables website.
+This object is used when retrieving an invoice using the PayFabric Receivables Sync APIs.
 
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
@@ -82,7 +82,7 @@ This object is used when getting an invoice on the PayFabric Receivables website
 | TrackingNumber | String | Tracking number for shipping | 50 |
 
 ## InvoiceResponse
-This object is used when getting an invoice on the PayFabric Receivables website.
+This object is used when retrieving an invoice using the PayFabric Receivables Website APIs.
 
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
