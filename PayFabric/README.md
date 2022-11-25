@@ -144,9 +144,9 @@ as child elements of other objects.
 * [Inquiry Balance](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/GfitCardAPI.md)
 
 ### Settlement
-* [Get Batch Summary] (./)	
-* [Get Batch Details] ()	
-* [Export Batch Details] ()
+* [Get Batch Summary](./Sections/Settlement.md#get-batch-summary-report-by-post-date)	
+* [Get Batch Details](./Sections/Settlement.md#get-batch-details)	
+* [Export Batch Details](./Sections/Settlement.md#export-batch-details-for-a-specified-batch-id)
 
 POST Settlement/{batchId}/export
 
