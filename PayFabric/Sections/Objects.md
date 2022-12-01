@@ -71,7 +71,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | EncryptedToken    | String | The Apple Pay or Google Pay payment token, as provided by the provider.  Conditionally required if Tender is `ApplePay` or `GooglePay`. | nvarchar(MAX)|
 | LastUsedDate      | string | This is a response field. It indicates the current wallet last used date time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
 |LastUsedDateUTC|String|This is a response field. It indicates the current wallet last used date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
-|CardHolderAccountInfo|[Object](#CardHolderAccountInfo)|This is an optional object to create wallet, provide ability to merchant to submit additional card holder account info when merchant enables Fraud and enables credit card validation.|
+|CardHolderAccountInfo|[Object](#cardholderaccountinfo)|This is an optional object to create wallet, provide ability to merchant to submit additional card holder account info when merchant enables Fraud and enables credit card validation.|
 
 \* Required
 
@@ -162,7 +162,7 @@ The Transaction object represents a single transaction that will pass through Pa
 |CCEntryIndicator| String| The identifier that specifies whether the card used on the transaction is a stored credential or newly entered, valid values are ``Entered`` or ``Stored`` |varchar(25)|
 |EntryMode|string|This indicate the entry of the transaction processed, like ``API``, ``MRHostedPage``,``Hosted Page`` etc...|
 |EntryClass|string|This specifies the SEC (Standard Entry Class) Code of the ACH transaction processed. Acceptable values are: ``TEL``, ``PPD``, ``CCD``, and ``WEB``. This field is not required. It defaults to the DefaultEntryClass setting on the PayFabric Gateway Profile. See [ACH SEC Codes](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/SECCodes.md) for more details.|
-|CardHolderAccountInfo|[Object](#CardHolderAccountInfo)|This is an optional object to process transaction, provide ability to merchant to submit additional card holder account info when merchant enables Fraud.|
+|CardHolderAccountInfo|[Object](#cardholderaccountinfo)|This is an optional object to process transaction, provide ability to merchant to submit additional card holder account info when merchant enables Fraud.|
  
  > The Required fields above only apply to transactions that will be submitted to Payment Gateways. If the transaction is only being saved on the PayFabric server (and not being submitted to a Payment Gateway) then none of the fields are required.
  
