@@ -71,6 +71,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | EncryptedToken    | String | The Apple Pay or Google Pay payment token, as provided by the provider.  Conditionally required if Tender is `ApplePay` or `GooglePay`. | nvarchar(MAX)|
 | LastUsedDate      | string | This is a response field. It indicates the current wallet last used date time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
 |LastUsedDateUTC|String|This is a response field. It indicates the current wallet last used date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
+|CardHolderAccountInfo|[Object](#CardHolderAccountInfo)|This is an optional object to create wallet, provide ability to merchant to submit additional card holder account info when merchant enables Fraud and enables credit card validation.|
 
 \* Required
 
@@ -165,7 +166,7 @@ The Transaction object represents a single transaction that will pass through Pa
  
  > The Required fields above only apply to transactions that will be submitted to Payment Gateways. If the transaction is only being saved on the PayFabric server (and not being submitted to a Payment Gateway) then none of the fields are required.
  
- ## CardHolder Account Info
+ ## CardHolderAccountInfo
 | Attribute  | DataType| Definition|Max Length|
 | :-----------|:---------| :---------| :---------| 
 |AccountAgeIndicator|string|Indicates the length of time that the cardholder has had the account with the Merchant.||2
