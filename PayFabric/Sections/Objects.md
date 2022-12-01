@@ -166,25 +166,26 @@ The Transaction object represents a single transaction that will pass through Pa
  ## CardHolder Account Info
 | Attribute  | DataType| Definition|Max Length|
 | :-----------|:---------| :---------| :---------| 
-|AccountAgeIndicator||||
-|AccountChangedIndciator||||
-|AccountPasswordChangedIndicator||||
-|BrowserDetail|[Object](#BrowserDetail)|Browser Detail Object, this object is auto collected when process transaction in Hosted payment page or in Portal, only can pass when this transaction is processed by API.||
-|ConsumerIPAddress||||
-|CountOfAddCardAttemptsLast24Hours||||
-|CountOfPurchasesLast6Months||||
-|CountOfTransactionsLast12Months||||
-|CountOfTransactionsLast24Hours||||
-|DateAccountChanged||||
-|DateAccountCreated||||
-|DateAccountPasswordChanged||||
-|DatePaymentAccountCreated||||
-|DateShippingAddressCreated||||
-|DeviceIdentifier||||
-|PaymentAccountAgeIndiciator||||
-|ShippingAddressUsageIndicator||||
-|ShippingNameIndicator||||
-|SuspiciousAccountActivityIndicator||||
+|AccountAgeIndicator|string|Indicates the length of time that the cardholder has had the account with the Merchant.||2
+|AccountChangedIndciator|string|Indicates the length of time since the cardholder’s account information with the Merchant was last changed, including Billing or Shipping address, new payment account, or new user(s) added.|2|
+|AccountPasswordChangedIndicator|string|Indicates the length of time since the cardholder’s account with the Merchant had a password change or account reset.|2|
+|BrowserDetail|[Object](#BrowserDetail)|Browser Detail Object, this object is auto collected when process transaction in Hosted payment page or in Portal, only can pass when this transaction is processed by API.|2|
+|ConsumerIPAddress|string|IP address of the browser as returned by the HTTP headers to the Merchant.|45|
+|CountOfAddCardAttemptsLast24Hours|string|Number of Add Card attempts in the last 24 hours.|3|
+|CountOfPurchasesLast6Months|string|Number of purchases with this cardholder account during the previous six months.|4|
+|CountOfTransactionsLast12Months|string|Number of transactions (successful and abandoned) for this cardholder account with the Merchant across all payment accounts in the previous year.|3|
+|CountOfTransactionsLast24Hours|string|Number of transactions (successful and abandoned) for this cardholder account with the Merchant across all payment accounts in the previous 24 hours.|3|
+|DateAccountChanged|string|Date that the cardholder’s account with the Merchant was last changed, including Billing or Shipping address, new payment account, or new user(s) added. Format is like YYYYMMDD. |8|
+|DateAccountCreated|string|Date that the cardholder opened the account with the Merchant. Format is like YYYYMMDD.|8|
+|DateAccountPasswordChanged|string|Date that cardholder’s account with the Merchant had a password change or account reset. Format is like YYYYMMDD.|8|
+|DatePaymentAccountCreated|string|Date that the payment account was enrolled in the cardholder’s account with the Merchant. Format is like YYYYMMDD. |8|
+|DateShippingAddressCreated|string|Date when the shipping address used for this transaction was first used with the Merchant. Format is like YYYYMMDD.|8|
+|DeviceIdentifier|string|An identifier used to recognize a device uniquely. The content highly depends on availability on the connecting side. Examples could be:
+Advertising ID or IMEI.|255|
+|PaymentAccountAgeIndiciator|string|Indicates the length of time that the payment account was enrolled in the cardholder’s account with the Merchant. |2|
+|ShippingAddressUsageIndicator|string|Indicates when the shipping address used for this transaction was first used with the Merchant.|2|
+|ShippingNameIndicator|string|Indicates if the Cardholder Name on the account is identical to the shipping Name used for this transaction.|2|
+|SuspiciousAccountActivityIndicator|string|Indicates whether the Merchant has experienced suspicious activity (including previous fraud) on the cardholder account.|2|
 
 ## BrowserDetail
 | Attribute  | DataType| Definition|Max Length|
