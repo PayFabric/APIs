@@ -60,7 +60,7 @@ This object represents the PayLink record that customers will pay through their 
 | ModifiedOnUTC | DateTime | This field indicates the datetime paylink modified in UTC | RO |
 | PaidOnUTC | DateTime | This field indicates the datetime paylink paid in UTC | RO |
 | LastProcessDateUTC | DateTime | This field indicates the datetime paylink last processed（such as updates or ERP posting）in UTC | RO |
-|CardHolderAccountInfo|[Object](.../PayFabric/Sections/Objects.md#cardholderaccountinfo)|This is an optional object to send paylink, provide ability to merchant to submit additional card holder account info when merchant enables Fraud for PayLink device.|RW|
+|CardHolderAccountInfo|[Object](https://github.com/PayFabric/APIs/blob/R20/PayFabric/Sections/Objects.md#cardholderaccountinfo)|This is an optional object to send paylink, provide ability to merchant to submit additional card holder account info when merchant enables Fraud for PayLink device.|RW|
 
 \* Required
 
