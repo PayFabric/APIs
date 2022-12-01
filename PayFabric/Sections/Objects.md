@@ -161,7 +161,43 @@ The Transaction object represents a single transaction that will pass through Pa
 |CCEntryIndicator| String| The identifier that specifies whether the card used on the transaction is a stored credential or newly entered, valid values are ``Entered`` or ``Stored`` |varchar(25)|
 |EntryMode|string|This indicate the entry of the transaction processed, like ``API``, ``MRHostedPage``,``Hosted Page`` etc...|
 |EntryClass|string|This specifies the SEC (Standard Entry Class) Code of the ACH transaction processed. Acceptable values are: ``TEL``, ``PPD``, ``CCD``, and ``WEB``. This field is not required. It defaults to the DefaultEntryClass setting on the PayFabric Gateway Profile. See [ACH SEC Codes](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/SECCodes.md) for more details.|
+|CardHolderAccountInfo|[Object](#CardHolderAccountInfo)|This is an optional object to process transaction, provide ability to merchant to submit additional card holder account info when merchant enables Fraud.|
  
+ ## CardHolder Account Info
+| Attribute  | DataType| Definition|Max Length|
+| :-----------|:---------| :---------| :---------| 
+|AccountAgeIndicator||||
+|AccountChangedIndciator||||
+|AccountPasswordChangedIndicator||||
+|BrowserDetail|[Object](#BrowserDetail)|Browser Detail Object, this object is auto collected when process transaction in Hosted payment page or in Portal, only can pass when this transaction is processed by API.||
+|ConsumerIPAddress||||
+|CountOfAddCardAttemptsLast24Hours||||
+|CountOfPurchasesLast6Months||||
+|CountOfTransactionsLast12Months||||
+|CountOfTransactionsLast24Hours||||
+|DateAccountChanged||||
+|DateAccountCreated||||
+|DateAccountPasswordChanged||||
+|DatePaymentAccountCreated||||
+|DateShippingAddressCreated||||
+|DeviceIdentifier||||
+|PaymentAccountAgeIndiciator||||
+|ShippingAddressUsageIndicator||||
+|ShippingNameIndicator||||
+|SuspiciousAccountActivityIndicator||||
+
+## BrowserDetail
+| Attribute  | DataType| Definition|Max Length|
+| :-----------|:---------| :---------| :---------| 
+|BrowserAcceptHeader||||
+|BrowserJavaEnabled||||
+|BrowserJavascriptEnabled||||
+|BrowserLanguage||||
+|BrowserColorDepth||||
+|BrowserScreenHeight||||
+|BrowserScreenWidth||||
+|BrowserTZ||||
+|BrowserUserAgent||||
 
 > The Required fields above only apply to transactions that will be submitted to Payment Gateways. If the transaction is only being saved on the PayFabric server (and not being submitted to a Payment Gateway) then none of the fields are required.
 
