@@ -163,6 +163,8 @@ The Transaction object represents a single transaction that will pass through Pa
 |EntryClass|string|This specifies the SEC (Standard Entry Class) Code of the ACH transaction processed. Acceptable values are: ``TEL``, ``PPD``, ``CCD``, and ``WEB``. This field is not required. It defaults to the DefaultEntryClass setting on the PayFabric Gateway Profile. See [ACH SEC Codes](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/SECCodes.md) for more details.|
 |CardHolderAccountInfo|[Object](#CardHolderAccountInfo)|This is an optional object to process transaction, provide ability to merchant to submit additional card holder account info when merchant enables Fraud.|
  
+ > The Required fields above only apply to transactions that will be submitted to Payment Gateways. If the transaction is only being saved on the PayFabric server (and not being submitted to a Payment Gateway) then none of the fields are required.
+ 
  ## CardHolder Account Info
 | Attribute  | DataType| Definition|Max Length|
 | :-----------|:---------| :---------| :---------| 
@@ -190,17 +192,15 @@ Advertising ID or IMEI.|255|
 ## BrowserDetail
 | Attribute  | DataType| Definition|Max Length|
 | :-----------|:---------| :---------| :---------| 
-|BrowserAcceptHeader||||
-|BrowserJavaEnabled||||
-|BrowserJavascriptEnabled||||
-|BrowserLanguage||||
-|BrowserColorDepth||||
-|BrowserScreenHeight||||
-|BrowserScreenWidth||||
-|BrowserTZ||||
-|BrowserUserAgent||||
-
-> The Required fields above only apply to transactions that will be submitted to Payment Gateways. If the transaction is only being saved on the PayFabric server (and not being submitted to a Payment Gateway) then none of the fields are required.
+|BrowserAcceptHeader|string|Exact content of the HTTP accept headers as sent to the Merchant from the Cardholder’s browser.|2048|
+|BrowserJavaEnabled|Boolean|Boolean that represents the ability of the cardholder browser to execute Java.||
+|BrowserJavascriptEnabled|Boolean|Boolean that represents the ability of the cardholder browser to execute JavaScript.||
+|BrowserLanguage|string|Value representing the browser language as defined in IETF BCP47.|8|
+|BrowserColorDepth|string|Value representing the bit depth of the colour palette for displaying images, in bits per pixel.|2|
+|BrowserScreenHeight|string|Total height of the Cardholder’s screen in pixels.|6|
+|BrowserScreenWidth|string|Total width of the cardholder’s screen in pixels.|6|
+|BrowserTZ|string|Time-zone offset in minutes between UTC and the Cardholder browser local time.|5|
+|BrowserUserAgent|string|Exact content of the HTTP user-agent header.|2048|
 
 ## Gateway Account Profile
 A Gateway Account Profile is the account information of a single Payment Gateway. This is created by the merchant on the PayFabric server via the PayFabric web portal. See [How to Setup Gateway Account](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Gateway%20Configuration.md) for more details.
