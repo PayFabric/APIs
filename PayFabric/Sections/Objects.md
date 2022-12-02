@@ -103,6 +103,11 @@ PayFabric returns the Transaction Response object as the result of most operatio
 |ExpectedSettledTimeUTC|Date time| This field indicates the expected settled time in UTC. ||
 |SettledTime|Date time| This field indicates the current transaction's settled time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). ||
 |SettledTimeUTC|Date time| This field indicates the current transaction's settled time in UTC. ||
+|FraudScore|string| This is the score returned by RiskShield. ||
+|ExoneratingText|string| Exonerating text. ||
+|IncriminatingText|string| Incriminating text. ||
+
+>The field 'FraudScore','ExoneratingText' and 'IncriminatingText' only returned when the transaction was submitted to RiskShield.
 
 ## STO
 Simple Transaction Object. This is a lightweight object that only includes the required fields for retrieving a transaction object. 
