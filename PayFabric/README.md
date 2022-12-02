@@ -148,7 +148,6 @@ as child elements of other objects.
 * [Get Batch Details](./Sections/Settlement.md#get-batch-details)	
 * [Export Batch Details](./Sections/Settlement.md#export-batch-details-for-a-specified-batch-id)
 
-POST Settlement/{batchId}/export
 
 Help us make it better
 ----------------------
