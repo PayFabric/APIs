@@ -71,7 +71,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | EncryptedToken    | String | The Apple Pay or Google Pay payment token, as provided by the provider.  Conditionally required if Tender is `ApplePay` or `GooglePay`. | nvarchar(MAX)|
 | LastUsedDate      | string | This is a response field. It indicates the current wallet last used date time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
 |LastUsedDateUTC|String|This is a response field. It indicates the current wallet last used date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
-|CardHolderAccountInfo|[Object](#cardholderaccountinfo)|This is an optional object to create wallet, provide ability to merchant to submit additional card holder account info when merchant enables Fraud and enables credit card validation.|
+|CardHolderAccountInfo|[Object](#cardholderaccountinfo)|This is an optional object to create wallet, provide ability for merchant to submit additional card holder account info when merchant enables Fraud and enables credit card validation.|
 
 \* Required
 
@@ -167,7 +167,7 @@ The Transaction object represents a single transaction that will pass through Pa
 |CCEntryIndicator| String| The identifier that specifies whether the card used on the transaction is a stored credential or newly entered, valid values are ``Entered`` or ``Stored`` |varchar(25)|
 |EntryMode|string|This indicate the entry of the transaction processed, like ``API``, ``MRHostedPage``,``Hosted Page`` etc...|
 |EntryClass|string|This specifies the SEC (Standard Entry Class) Code of the ACH transaction processed. Acceptable values are: ``TEL``, ``PPD``, ``CCD``, and ``WEB``. This field is not required. It defaults to the DefaultEntryClass setting on the PayFabric Gateway Profile. See [ACH SEC Codes](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/SECCodes.md) for more details.|
-|CardHolderAccountInfo|[Object](#cardholderaccountinfo)|This is an optional object to process transaction, provide ability to merchant to submit additional card holder account info when merchant enables Fraud.|
+|CardHolderAccountInfo|[Object](#cardholderaccountinfo)|This is an optional object to process transaction, provide ability for merchant to submit additional card holder account info when merchant enables Fraud.|
  
  > The Required fields above only apply to transactions that will be submitted to Payment Gateways. If the transaction is only being saved on the PayFabric server (and not being submitted to a Payment Gateway) then none of the fields are required.
  
@@ -177,7 +177,7 @@ The Transaction object represents a single transaction that will pass through Pa
 |AccountAgeIndicator|string|Indicates the length of time that the cardholder has had the account with the Merchant.||2
 |AccountChangedIndciator|string|Indicates the length of time since the cardholder’s account information with the Merchant was last changed, including Billing or Shipping address, new payment account, or new user(s) added.|2|
 |AccountPasswordChangedIndicator|string|Indicates the length of time since the cardholder’s account with the Merchant had a password change or account reset.|2|
-|BrowserDetail|[Object](#BrowserDetail)|Browser Detail Object, this object is auto collected when process transaction in Hosted payment page or in Portal, only can pass when this transaction is processed by API.|2|
+|BrowserDetail|[Object](#BrowserDetail)|Browser Detail Object, this object is auto collected when process transaction in Hosted payment page or in Portal, only accept data when current transaction is processed via API, PayFabric will auto retrieve browser data for those transactions processed in portal, hosted payment page. *Note*: PayLink does not accept this object.|2|
 |ConsumerIPAddress|string|IP address of the browser as returned by the HTTP headers to the Merchant.|45|
 |CountOfAddCardAttemptsLast24Hours|string|Number of Add Card attempts in the last 24 hours.|3|
 |CountOfPurchasesLast6Months|string|Number of purchases with this cardholder account during the previous six months.|4|
@@ -188,8 +188,7 @@ The Transaction object represents a single transaction that will pass through Pa
 |DateAccountPasswordChanged|string|Date that cardholder’s account with the Merchant had a password change or account reset. Format is like YYYYMMDD.|8|
 |DatePaymentAccountCreated|string|Date that the payment account was enrolled in the cardholder’s account with the Merchant. Format is like YYYYMMDD. |8|
 |DateShippingAddressCreated|string|Date when the shipping address used for this transaction was first used with the Merchant. Format is like YYYYMMDD.|8|
-|DeviceIdentifier|string|An identifier used to recognize a device uniquely. The content highly depends on availability on the connecting side. Examples could be:
-Advertising ID or IMEI.|255|
+|DeviceIdentifier|string|An identifier used to recognize a device uniquely. The content highly depends on availability on the connecting side. Examples could be:Advertising ID, IMEI or unique SDK identifier.|255|
 |PaymentAccountAgeIndiciator|string|Indicates the length of time that the payment account was enrolled in the cardholder’s account with the Merchant. |2|
 |ShippingAddressUsageIndicator|string|Indicates when the shipping address used for this transaction was first used with the Merchant.|2|
 |ShippingNameIndicator|string|Indicates if the Cardholder Name on the account is identical to the shipping Name used for this transaction.|2|
