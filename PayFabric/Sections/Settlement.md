@@ -1,7 +1,7 @@
 Settlement
 =========
 
-The PayFabric Settlment API is used for getting batch summary from EVO Snap gateway, merchant can get the batch details and reconciliation report via settlement APIs.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.Please refer the [Settlement Object](/PayFabric/Sections/3.1JSONObjects.md#Settlement) for details.
+The PayFabric Settlment API is used for getting batch summary from EVO Snap gateway, merchant can get the batch details and reconciliation report via settlement APIs.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate. Please refer the [Settlement Object](/PayFabric/Sections/3.1JSONObjects.md#Settlement) for details.
 
 Get Batch Summary report by post date
 ---------------------------
@@ -146,6 +146,6 @@ Export Batch Details for a Specified Batch Id
 ###### Response
 A successful Export will result in a HTTP 204 No Content Response. 
 
-A failed Export may result in a HTTP 400 Bad Request Response if the specified batchID with wront format.
+A failed Export may result in a HTTP 400 Bad Request Response if the specified batchID with incorrect format.
 
 A failed Export may result in a HTTP 401 Unauthorized Response if the authorization is failed.
