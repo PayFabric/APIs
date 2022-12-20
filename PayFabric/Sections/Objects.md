@@ -107,7 +107,7 @@ PayFabric returns the Transaction Response object as the result of most operatio
 |ExoneratingText|string| Exonerating hint text returned by RiskShield. ||
 |IncriminatingText|string| Incriminating hint text returned by RiskShield. ||
 
->The field `FraudScore`, `ExoneratingText1 and `IncriminatingText` only returned when the transaction was submitted for fraud check.
+>The field `FraudScore`, `ExoneratingText` and `IncriminatingText` only returned when the transaction was submitted for fraud check.
 
 ## STO
 Simple Transaction Object. This is a lightweight object that only includes the required fields for retrieving a transaction object. 
