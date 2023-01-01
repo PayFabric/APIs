@@ -48,7 +48,7 @@ Create a Transaction
 Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](Objects.md#transaction).
 
 `SetupId` is the [Gateway Profile](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Configure%20Portal.md#gateway-profile) Name. It is a per-account identifier of a profile containing the credentials for a given credit card processing merchant account. The Gateway Profile Name can also be retrieved through [API call](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Payment%20Gateway%20Profiles.md#retrieve-payment-gateway-profiles).
-`ECheckSetupId` can be used in addition to, or replace `SetupId`, which should contain the Gateway Profile Name for an ACH/eCheck payment method.
+`ECheckSetupId` which should be the Gateway Profile Name for an ACH/eCheck payment method can be used in addition to, or in place of `SetupId`.
 
 ###### Related Reading
 * [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
