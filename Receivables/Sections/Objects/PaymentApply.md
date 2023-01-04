@@ -3,25 +3,25 @@ There are two payment apply objects that represent the application of a payment 
 
 
 ## PaymentApplyPost
-This object is used when creating an application of a payment to an invoice on the ePay website.
+This object is used when creating an application of a payment to an invoice on the Customer Portal.
 
 | Attribute | Data Type | Required | Definition | Max Length |
 | :----------- | :--------- | :---------| :--------- | :--------- |
 | DiscountAmount | Decimal | N | Discount amount applied to the invoice | 19, 5 |
-| Identity | Decimal | Y | Invoice number identifier (Optional if using Invoice number) | 19, 5 |
+| Identity | String | Y | Invoice number identifier (Optional if using Invoice number) | 19, 5 |
 | InvoiceId | String | Y | Invoice number | 30 |
 | InvoiceType | String | N | Invoice type | 50 |
 | PayAmount | Decimal | N | Payment amount applied to the invoice in the functional currency | 19, 5 |
 
 
 ## PaymentApplyResponse
-This object is used when getting the application of a payment to an invoice on the ePay website.
+This object is used when getting the application of a payment to an invoice on the Customer Portal.
 
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
 | DiscountAmount | Decimal | Discount amount applied to the invoice | 19, 5 |
 | DocumentType | int | Document type |  |
-| Identity | Decimal | Invoice number identifier (Optional if using Invoice number) | 19, 5 |
+| Identity | String | Invoice number identifier (Optional if using Invoice number) | 19, 5 |
 | InvoiceId | String | Invoice number | 30 |
 | InvoiceType | String | Invoice type | 50 |
 | PayAmount | Decimal | Payment amount applied to the invoice in the functional currency | 19, 5 |
