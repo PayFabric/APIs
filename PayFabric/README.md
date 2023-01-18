@@ -143,6 +143,12 @@ as child elements of other objects.
 ### Gift Card
 * [Inquiry Balance](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/GfitCardAPI.md)
 
+### Settlement
+* [Get Batch Summary](./Sections/Settlement.md#get-batch-summary-report-by-post-date)	
+* [Get Batch Details](./Sections/Settlement.md#get-batch-details)	
+* [Export Batch Details](./Sections/Settlement.md#export-batch-details-for-a-specified-batch-id)
+
+
 Help us make it better
 ----------------------
 Please tell us how we can make the APIs better. If you have a specific feature request or if you found a bug, please contact <support@payfabric.com>. Also, feel free to branch these documents and send a pull request with improvements!
