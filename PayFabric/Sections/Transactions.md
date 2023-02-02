@@ -614,7 +614,13 @@ Referenced transaction uses the original transaction Key as the referenced facto
 
 #### Refund（Reference)
 
-* `GET /payment/api/reference/{TransactionKey}?trxtype=Refund` or `POST /transaction/process` with following request will attempt to credit a transaction that has already been submitted to a payment gateway and has been settled from the bank. PayFabric attempts to submit a Refund transaction for a previous Sale/Caputre transaction.
+A referenced refund will refund against an original settled payment transaction.
+
+To issue a full refund:
+> `GET /payment/api/reference/{TransactionKey}?trxtype=Refund`
+
+The following API can also be used to issue full or partial refund:
+> `POST /transaction/process`
 
 ###### Request
 <pre>
@@ -624,11 +630,11 @@ Referenced transaction uses the original transaction Key as the referenced facto
 }
 </pre>
 
-or 
+Or
 
 <pre>
 {
-  "Amount":"1",
+  "Amount":"100",
   "Type": "Refund",
   "ReferenceKey": "151013003792"
 }
@@ -674,9 +680,9 @@ Note: `ReferenceKey` is the initial processed transaction's `TrxKey`. If `Amount
 Refund (Non-Reference)
 -----------------
 
-To perform a Refund transaction without reference transaction, you just need to create a transaction object, set the `Type` field to `Refund`, and then use [Create and Process a Transaction](#create-and-process-a-transaction) to submit the transaction.
-
-* `POST /payment/api/transaction/process?cvc={CVCValue}`
+Without referencing an original payment transaction to refund against, a non-referenced refund can processed in the same manner as processing a normal transaction with `Type` set to `Refund`:
+* Invoke [Create and Process a Transaction](#create-and-process-a-transaction) API to submit and process the transaction.
+  > `POST /payment/api/transaction/process?cvc={CVCValue}`
 
 ###### Request
 <pre>
