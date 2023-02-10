@@ -25,10 +25,11 @@ A failed `POST` may result in a HTTP 400 Bad Request Response if the notificatio
 A failed `POST` may result in a HTTP 404 Not Found Response if the specified document does not exist or the Device ID used for the *Security Token* does not match.  
 A failed `POST` may result in a HTTP 405 Method Not Allowed Response if the specified document status is not 1.  
 
-Retrieve SMS Notification Templates
+Retrieve Notification Templates
 -----------------------------------
 
-* `GET /paylink/api/notification/sms/templates` will return all SMS notification templates configured in the PayLink portal
+* `GET /paylink/api/notification/{Notification Type}/templates` will return either all Email or SMS notification templates configured in the PayLink portal.
+* `Notification Type` should be either `email` or `sms`.
 
 ###### Related Reading
 * [How to Create Notification Templates](../../../../Portal/blob/master/Sections/Features.md#templates)
