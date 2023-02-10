@@ -57,7 +57,7 @@ as child elements of other objects.
 ### Notifications
 * [Resend PayLink Notification Email](/PayLink/Sections/Notifications.md#resend-paylink-notifiation-email)
 * [Resend PayLink Notification SMS](/PayLink/Sections/Notifications.md#resend-paylink-notification-sms)
-* [Retrieve SMS Notification Templates](/PayLink/Sections/Notifications.md#retrieve-sms-notification-templates)
+* [Retrieve Notification Templates](/PayLink/Sections/Notifications.md#retrieve-notification-templates)
 
 ### Templates
 * [Create Template](https://github.com/PayFabric/APIs/blob/master/PayLink/Sections/Templates.md#create-template-for-specific-template-type)
