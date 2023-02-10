@@ -20,7 +20,6 @@ The JSON payload sent during the API's exposes a [Notification object](JSON%20Ob
 If no template name is provided the default as defined in the PayLink portal will be used.  If a template name is provided that does not match a template, the Payment Link or Wallet Link will still be created however, a warning message will be included in the Notification ResponseMessage field indication the template did not match.
 
 ## Additional APIs
-There are two additional APIs provided for Email and SMS Templates, you may find them here:
+There is an additional API provided for Email and SMS Templates, you may find it here:
 
-* [Retrieve Email Templates](Notifications.md#retrieve-email-notification-templates)
-* [Retrieve SMS Templates](Notifications.md#retrieve-sms-notification-templates)
+* [Retrieve Notification Templates](Notifications.md#retrieve-notification-templates)
