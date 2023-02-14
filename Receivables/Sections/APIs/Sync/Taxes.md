@@ -6,7 +6,7 @@ The Tax API is used for creating, updating and viewing available taxes. Please n
 Create or Update a Tax
 --------------------
 
-* `POST /tax` will create and save a tax to the PayFabric Receivables website based on the JSON request payload
+* `POST /tax` will create and save a tax to the PayFabric Receivables website based on the JSON request payload. If a tax with the inputted `Name` already exists, the new request will override the existing tax.
 
 ###### Request
 For more information on the available fields please see our [object reference](../../Objects/Tax.md#TaxPost)
