@@ -14,6 +14,7 @@ For more information on the available fields please see our [object reference](.
 {
 	"Name": "StateTax",
 	"Description": "StateTax"
+	"Rate": "0.08"
 }
 ```
 
