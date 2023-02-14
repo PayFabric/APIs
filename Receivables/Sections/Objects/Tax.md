@@ -9,7 +9,7 @@ This object is used when creating a tax on the PayFabric Receivables website.
 | :----------- | :--------- | :--------- | :--------- | :--------- |
 | Description | String | Y | Description of the tax | 100 |
 | Name | String | Y | Name of the tax | 50 |
-| Rate | Decimal | N | Rate for the tax | 1, 8 |
+| Rate | Decimal | Y | Rate for the tax | 1, 8 |
 | TaxGroups | Array of Strings | N | Tax groups associated |  |
 
 
