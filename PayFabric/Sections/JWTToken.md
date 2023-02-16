@@ -10,11 +10,13 @@ Create JSON Web Tokens
 ---------------------------
 
 * `POST /payment/api/jwt/create` will create the jwt token
+* Set `Audience` to "PaymentPage.
+* Set `Subject` to a [PayFabric Transaction Key](Transactions.md#create-a-transaction)
 ###### Request
 <pre>
 {
 	<b>"Audience"</b>:"PaymentPage",
-	<b>"Subject"</b>:"HPP21040500682801"
+	<b>"Subject"</b>:"21040500682801"
 }
 </pre>
 ###### Response
@@ -29,7 +31,7 @@ Create JSON Web Tokens
         "iat": "1617687257",
         "inst": "f242bd6d-7a23-41d7-a12e-46427ce4eba4",
         "iss": "PayFabric_V3",
-        "sub": "HPP21040500682801",
+        "sub": "21040500682801",
         "supportedPaymentMethods": [
             {
                 "attributes": null,
@@ -83,7 +85,7 @@ Validate JSON Web Tokens
         "iat": "1617688898",
         "inst": "f242bd6d-7a23-41d7-a12e-46427ce4eba4",
         "iss": "PayFabric_V3",
-        "sub": "HPP21040500682801",
+        "sub": "21040500682801",
         "supportedPaymentMethods": [
             {
                 "attributes": null,
