@@ -50,7 +50,7 @@ This object represents the PayLink record that customers will pay through their 
 | LastProcessDate | DateTime | This field indicates the datetime paylink last processed（such as updates or ERP posting） in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md)  | RO |
 | Message | String | Document status update messages | RO |
 | CustomeMessage | String | User defined message | RW |
-| Notification* | [Notification Object](#notification) | Specify notification method and SMS template, Note: if the `Type` = `All`, then `NotificationEmail` and `NotificationPhone` are required; if the `Type` = `SMS`, then `NotificationPhone` is required; if the `Type` = `Email`, then `NotificationEmail` is required | RW |
+| Notification* | [Notification Object](#notification) | Specify notification method and SMS template, Note: if the `Type` = `None`, then `NotificationEmail` and `NotificationPhone` are NOT required; if the `Type` = `All`, then `NotificationEmail` and `NotificationPhone` are required; if the `Type` = `SMS`, then `NotificationPhone` is required; if the `Type` = `Email`, then `NotificationEmail` is required | RW |
 | NotificationEmail | String | Email where notification is sent, **required if** notification type is `All` *or* `Email` | RW |
 | NotificationPhone | String | Mobile phone number where notification is sent, **required if** notification type is `All` *or* `SMS` | RW |
 | Link | String | Return of the PayLink URL in the response | RO |
