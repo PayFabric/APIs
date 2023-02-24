@@ -577,6 +577,8 @@ Referenced Transaction(s): Capture (Ship), Void or Refund (Credit)
 
 Referenced transaction uses the original transaction Key as the referenced factor to subsequently process a new transaction. There’re 3 types of referenced transactions: Void, Capture (Ship) and Refund (Credit). They all use the transaction Key from the original transaction to process the new transaction.
 
+When specifying an amount capture or refund, note that over-capture and refunding higher amount than the original transaction is not allowed.
+
 #### Capture (Ship)
 
 * `GET /payment/api/reference/{TransactionKey}?trxtype=Capture` will attempt to execute and finalize (capture) an authorization transaction, also known as Book transactions.
