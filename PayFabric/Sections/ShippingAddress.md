@@ -8,7 +8,7 @@ Create Shipping Address
 
 * `Post /payment/3.1/api/address/` will return the specified address
 
-###### Response
+###### Request
 <pre>
 {
     "Customer": "Test Shipping",
@@ -47,7 +47,7 @@ Create Shipping Address
 
 Delete Shipping Address
 -----------------------
-* `DELETE /payment/3.1/api/{AddressId}` will return the specified address
+* `DELETE /payment/3.1/api/address/{AddressId}` will return the specified address
 
 ###### Response
 A successful `DELETE` will result in a HTTP 204 No Content Response.
