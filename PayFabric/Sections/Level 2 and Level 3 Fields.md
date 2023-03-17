@@ -66,26 +66,28 @@ When submitting a [Transaction](Objects.md#transaction) developers can incorpora
 }
 ```
 ## Usage
+In order to achieve the best interchange rates, all fields should be submitted and cannot be `null`, except as noted.
+
 The table below describes the required fields for Level 2 qualification.
 
 | Fields             | How data must be entered|
 | -------------------| :-----------------------|
 | PONumber           | Must not be all spaces or zero.|
-| TaxAmount          | No comma and must be greater than zero once "TaxExempt" is "N". e.g. "4267.00"|
-| DiscountAmount     | No comma. Must be equal to the sum of all items' discount amount|
-| DutyAmount         | No comma. Must be equal to the sum of all items' duty amount       |
-| FreightAmount      | No comma. Must be equal to the sum of all items' freight amount |
-|CompanyName         |the company name on the card.|
+| TaxAmount          | No comma. Must be greater than zero when "TaxExempt" is "N". e.g. "4267.00".|
+| DiscountAmount     | No comma. Must be equal to the sum of all items' discount amount.|
+| DutyAmount         | No comma. Must be equal to the sum of all items' duty amount.|
+| FreightAmount      | Optional field, however should be provided if applicable.<br>No comma. Must be equal to the sum of all items' freight amount.|
+| CompanyName        | The company name of the customer.|
 
 The table below describes the required fields for Level 3 qualification.
 
 | Fields             | How data must be entered|
 | -------------------| :-----------------------|
 | ItemAmount         | Must not be all spaces or all zeros.  | 
-| ItemCommodityCode  | Must not be all spaces or all zeros. Refer to the following document for your industry’s commodity code. [commodity_codes.pdf](https://github.com/PayFabric/APIs/files/10877909/commodity_codes.pdf)| 
+| ItemCommodityCode  | Must not be all spaces or all zeros. Refer to the following document for your industry’s commodity code: [commodity_codes.pdf](https://github.com/PayFabric/APIs/files/10877909/commodity_codes.pdf)| 
 | ItemProdCode       | Must not be all spaces or all zeros.   | 
 | ItemCost           | Must not be all spaces or all zeros.|
 | ItemDesc           | Must not be all spaces. |
-| ItemDiscount       | Must not be all zeros if a discount amount exists. Must be all zeros if discount amount does not exist|
+| ItemDiscount       | Must not be all zeros if a discount amount exists. Must be all zeros if discount amount does not exist.|
 | ItemQuantity       | Must not be all spaces or all zeros.|
 | ItemUOM            | Must not be all spaces or all zeros.|
