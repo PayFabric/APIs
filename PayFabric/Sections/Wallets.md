@@ -527,8 +527,6 @@ Unlocks a wallet record to allow deletion of the wallet record by other Devices.
 
 <pre><samp>Unable to delete the wallet card. The wallet is locked by other device(s). Device Name: myDevice, Lock Reason: Tied to contract C101.</samp></pre>
 
-The Device that locks the record will always be able to delete the record, and only other Devices are prohibited from deletion.
-
 ### Endpoint
 <kbd><kbd>GET</kbd> /payment/api/wallet/unlock/<kbd>{WALLET_ID}</kbd></kbd>
 
