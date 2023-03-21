@@ -1,18 +1,28 @@
 Credit Card / eCheck Wallet
 ===========================
 
-The PayFabric Wallet API is used for returning customer created wallet records, creating new wallet records, locking, updating, and deleting existing wallet records.  Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
+The PayFabric Wallet API is used to manage customer wallet records. Each credit card or bank account is saved as as wallet record, and its ownership tied to `Customer`.
+
+Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
 
 Create a Credit Card
 --------------------
 
-* `POST /payment/api/wallet/create` will create a new credit card with the following JSON payload:
+Create a new credit card wallet record.
 
+### Endpoint
+<kbd><kbd>POST</kbd> /payment/api/wallet/create</kbd>
+
+
+### Example
 ###### Request
+<kbd><kbd>POST</kbd> /payment/api/wallet/create</kbd>
+
+###### Request Body
 <pre>
 {
-  <b>"Account": "4111111111111111"</b>,
+<b>"Account": "4111111111111111"</b>,
   "Billto": {
     "City": "Anaheim",
     "Country": "USA",
@@ -49,21 +59,29 @@ Create a Credit Card
 Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [object reference](Objects.md#card).
 
 ###### Response
-<pre>
+```JSON
 {
   "Message": null,
   "Result": "ccfbf703-0fff-4e28-845e-3c5c5092f857"
 }
-</pre>
+```
 
 **Note**: We highly recommend using PayFabric hosted wallet page for create/update credit card/eCheck wallet entry. It is a secure page that can be embedded into your application. Please click [here](https://github.com/PayFabric/Hosted-Pages/blob/master/Sections/Wallet%20Page.md).
+
 
 Create an eCheck
 ----------------
 
-* `POST /payment/api/wallet/create` will create a new eCheck with the following JSON payload:
+Create a new eCheck wallet record.
 
+### Endpoint
+<kbd><kbd>POST</kbd> /payment/api/wallet/create</kbd>
+
+### Example
 ###### Request
+<kbd><kbd>POST</kbd> /payment/api/wallet/create</kbd>
+
+###### Request Body
 <pre>
 {
   <b>"Account": "1234567890"</b>,
@@ -104,26 +122,34 @@ Create an eCheck
 Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [object reference](Objects.md#card).
 
 ###### Response
-<pre>
+```JSON
 {
   "Message": null,
   "Result": "6ae8448f-de67-4f71-89f9-07bb77621cc7"
 }
-</pre>
+```
 
 **Note**: We highly recommend using PayFabric hosted wallet page for create/update credit card/eCheck wallet entry. It is a secure page that can be embedded into your application. Please click [here](https://github.com/PayFabric/Hosted-Pages/blob/master/Sections/Wallet%20Page.md#create-a-credit-card--echeck).
+
 
 Update a Credit Card / eCheck
 -----------------------------
 
-* `POST /payment/api/wallet/update` will update a credit card or eCheck with new information based on the request JSON payload
+Update a wallet record with new information based on the request JSON payload.
 
+### Endpoint
+<kbd><kbd>POST</kbd> /payment/api/wallet/update</kbd>
+
+### Example
 ###### Request
-<pre>
+<kbd><kbd>POST</kbd> /payment/api/wallet/update</kbd>
+
+###### Request Body
+```JSON
 {
   "ID" : "4ea31dda-4efb-4ed5-8f35-dbcc6b16017d"
 }
-</pre>
+```
 
 Please note that the **ID** field is the only required field for an update.  Only the fields that need updating should be included, see the **Create Credit Card / eCheck** endpoint for more information.  When updating a Wallet entry, do **not** include the **Account** field.  PayFabric is unable to update the account/card number. To update an account/card number, delete the old Wallet entry and create a new one. 
 
@@ -132,23 +158,31 @@ Please note that the **ID** field is the only required field for an update.  Onl
 To update the Customer ID/Number against an existing credit card/eCheck record, include **NewCustomerNumber** field into the request body and populate it with a new Customer Number/ID. This will replace the existing Customer ID/Number. 
 
 ###### Response
-<pre>
+```JSON
 {
   "Result": "True"
 }
-</pre>
+```
 
 **Note**: We highly recommend using PayFabric hosted wallet page for create/update credit card/eCheck wallet entry. It is a secure page that can be embedded into your application. Please click [here](https://github.com/PayFabric/Hosted-Pages/blob/master/Sections/Wallet%20Page.md#update-a-credit-card--echeck).
+
 
 Retrieve a Credit Card / eCheck
 -------------------------------
 
-* `GET /payment/api/wallet/get/ccb4edfd-c9b3-4964-9ecc-5b143a60650d` will return the specified credit card or eCheck
+Return the detail for a specific credit card or eCheck wallet record.
 
-Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
+Credit card numbers and account numbers are returned in a masked format. PayFabric never returns credit card number or account numbers in plain-text.
+
+### Endpoint
+<kbd><kbd>GET</kbd> /payment/api/wallet/get/<kbd>{WalletID}</kbd></kbd>
+
+### Example
+###### Request
+<kbd><kbd>GET</kbd> /payment/api/wallet/get/ccb4edfd-c9b3-4964-9ecc-5b143a60650d</kbd></kbd>
 
 ###### Response
-<pre>
+```JSON
 {
     "Aba": "",
     "Account": "XXXXXXXXXXXX5100",
@@ -198,25 +232,31 @@ Credit card and account numbers are returned in a masked format. PayFabric never
     "ModifiedOn": "10/20/2020 7:00:29 PM",
     "ModifiedOnUTC": "2020-10-21T02:00:29.946Z"
 }
-</pre>
+```
 
 
 Retrieve Credit Cards / eChecks
 -------------------------------
 
-* `GET /payment/api/wallet/getByCustomer?customer=test&tender=CreditCard&fromLastUsedDate={FROMLASTUSEDDATE}&toLastUsedDate={TOLASTUSEDDATE}` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_), which also supports special characters under Customer ID/Number. 
+Return wallet records by `Customer`.  Supports special characters in `Customer` ID/Number.
 
-Credit card and account numbers are returned in a masked format. PayFabric never returns credit card or account numbers in plaintext.
+Credit card numbers and account numbers are returned in a masked format. PayFabric never returns credit card numbers or account numbers in plain-text.
 
-| Query String       | DataType|Definition| Required?|
-| :-----------    |:---------| :---------| :---------|
-| customer    | String | PayFabric will retrieve  wallets belong to the Customer.  | Required|
-| tender   | String | PayFabric will retrieve  wallets tender type equals the specified tender. |Optional|
-| fromLastUsedDate          | String | PayFabric will retrieve wallets which last used date later than the specified date, you can pass like "2022-05-01", and it is in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). |Optional|  
-| toLastUsedDate         | String | PayFabric will retrieve wallets which last used date earlier than the specified date, you can pass like "2022-05-21", and it is in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). | Optional| 
+### Endpoint
+<kbd><kbd>GET</kbd> /payment/api/wallet/getByCustomer?customer=<kbd>{CUSTOMER_NO}</kbd>&tender=<kbd>{TENDER_TYPE}</kbd>&fromLastUsedDate=<kbd>{FROM_LASTUSEDDATE}</kbd>&toLastUsedDate=<kbd>{TO_LASTUSEDDATE}</kbd></kbd>.
+
+| Query String     | DataType | Definition | Required? |
+| :--------------- | :------- | :--------- | :---------|
+| customer         | String   | Retrieve wallets matching the `Customer`. | Required |
+| tender           | String   | Can be <kbd>CreditCard</kbd> or <kbd>ECheck</kbd>. | Optional |
+| fromLastUsedDate | String   | Retrieve wallets which its `LastUsedDate` is later than the specified date. Date format `YYYY-MM-DD` or `MM-DD-YYYY`, and is based on merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). | Optional |  
+| toLastUsedDate   | String   | Retrieve wallets which its `LastUsedDate` is earlier than the specified date. Date format `YYYY-MM-DD` or `MM-DD-YYYY`, and is based on merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). | Optional | 
+
+### Example
+<kbd><kbd>GET</kbd> /payment/api/wallet/getByCustomer?customer=AARONFIT0001&tender=CreditCard&fromLastUsedDate=2022-05-01&toLastUsedDate=2022-05-31</kbd>.
 
 ###### Response
-<pre>
+```JSON
 [
     {
         "Aba": "",
@@ -317,28 +357,34 @@ Credit card and account numbers are returned in a masked format. PayFabric never
         "ModifiedOnUTC": "2022-05-11T05:50:50.060Z"
     }
 ]
-</pre>
+```
 
 Retrieve Credit Cards / eChecks (Query with Paging)
 -----------------------------------------------
 
-* `GET /payment/api/wallet/get?customer={CUSTOMER_NO}&tender={TENDER_TYPE}&fromdate={FROMDATE}&fromLastUsedDate={FROMLASTUSEDDATE}&toLastUsedDate={TOLASTUSEDDATE}&pageSize={PAGESIZE}&page={PAGE}` will return the credit cards or eChecks for a customer depending on the tender type (_CreditCard_, _ECheck_), which were modified after the specified date, and display records depending on the page number.
-
-| Query String       | DataType|Definition| Required?|
-| :-----------    |:---------| :---------| :---------|
-| customer    | String | PayFabric will retrieve  wallets belong to the Customer.  | Optional|
-| tender   | String | PayFabric will retrieve  wallets tender type equals the specified tender. |Optional|
-| fromDate | String | PayFabric will retrieve wallets which modified date later than the specified date, you can pass like "2022-05-01", and it will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). |Required|  
-| fromLastUsedDate          | String | PayFabric will retrieve wallets which last used date later than the specified date, you can pass like "2022-05-01", and it will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). |Optional|  
-| toLastUsedDate         | String | PayFabric will retrieve wallets which last used date earlier than the specified date, you can pass like "2022-05-21", and it will be treated in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). | Optional| 
-| pagesize    | String | Specify the page size.  | Optional|
-| page   | String | Specify the page you want to get. |Optional|
-
+Return a paged list of wallet records based on wallet's `ModifiedOn` date.
 
 Credit card and ECheck account numbers are returned in a masked format. PayFabric never returns credit card number or ECheck account numbers in plaintext.
 
+### Endpoint
+<kbd><kbd>GET</kbd> /payment/api/wallet/get?customer=<kbd>{CUSTOMER_NO}</kbd>&tender=<kbd>{TENDER_TYPE}</kbd>&fromdate=<kbd>{FROM_DATE}</kbd>&fromLastUsedDate=<kbd>{FROM_LASTUSEDDATE}</kbd>&toLastUsedDate=<kbd>{TO_LASTUSEDDATE}</kbd>&pageSize=<kbd>{PAGE_SIZE}</kbd>&page=<kbd>{PAGE}</kbd></kbd>
+
+| Query String     | DataType | Definition | Required? |
+| :--------------- | :------- | :--------- | :-------- |
+| customer         | String   | Retrieve wallets matching the `Customer`. | Optional|
+| tender           | String   | Can be <kbd>CreditCard</kbd> or <kbd>ECheck</kbd>. | Optional |
+| fromDate         | String   | Retrieve wallets with `ModifiedOn` date later than the specified date. Date format `YYYY-MM-DD` or `MM-DD-YYYY`, and based on merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). | Required |
+| fromLastUsedDate | String   | Retrieve wallets which its `LastUsedDate` is later than the specified date. Date format `YYYY-MM-DD` or `MM-DD-YYYY`, and based on merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). | Optional |  
+| toLastUsedDate   | String   | Retrieve wallets which its `LastUsedDate` is earlier than the specified date. Date format `YYYY-MM-DD` or `MM-DD-YYYY`, and based on 
+| pagesize         | String   | Specify the page size.  | Optional |
+| page             | String   | Specify the page you want to get. | Optional |
+
+### Example
+###### Request
+<kbd><kbd>GET</kbd> /payment/api/wallet/get?customer=AARONFIT0001&fromdate=2022-05-01&pageSize=15&page=1</kbd>
+
 ###### Response
-<pre>
+```JSON
 {
     "Paging": {
         "Current": "1",
@@ -447,48 +493,94 @@ Credit card and ECheck account numbers are returned in a masked format. PayFabri
         }
     ]
 }
-</pre>
+```
 
 
 Lock Credit Card / eCheck
 -------------------------
 
-* `GET /payment/api/wallet/lock/cbb571ea-e834-41c4-8a20-7d55bb7ae190?lockreason=Customer+being+audited` will lock the credit card or eCheck from being used with a specified reason
+Used when there are multiple PayFabric Devices. A Device can lock a wallet record with a lock reason, so that when other Devices attempts to delete the wallet record, the operation will fail and returns error with the lock reason, such as:
+
+<pre><samp>Unable to delete the wallet card. The wallet is locked by other device(s). Device Name: myDevice, Lock Reason: Tied to contract C101.</samp></pre>
+
+The Device that locks the record will always be able to delete the record, and only other Devices are prohibited from deletion.
+
+### Endpoint
+<kbd><kbd>GET</kbd> /payment/api/wallet/lock/<kbd>{WALLET_ID}</kbd>?lockreason=<kbd>{URL_ENCODED_STRING}</kbd></kbd>
+
+### Example
+###### Request
+<kbd><kbd>GET</kbd> /payment/api/wallet/lock/cbb571ea-e834-41c4-8a20-7d55bb7ae190?lockreason=Tied+to+Contract+C101.</kbd> 
 
 ###### Response
-<pre>{
+```JSON
+{
   "Result": "True"
-}</pre>
+}
+```
 
 
 Unlock Credit Card / eCheck
 ---------------------------
 
-* `GET /payment/api/wallet/unlock/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will unlock the credit card or eCheck from being used
+Unlocks a wallet record to allow deletion of the wallet record by other Devices.
+
+<pre><samp>Unable to delete the wallet card. The wallet is locked by other device(s). Device Name: myDevice, Lock Reason: Tied to contract C101.</samp></pre>
+
+The Device that locks the record will always be able to delete the record, and only other Devices are prohibited from deletion.
+
+### Endpoint
+<kbd><kbd>GET</kbd> /payment/api/wallet/unlock/<kbd>{WALLET_ID}</kbd></kbd>
+
+### Example
+###### Request
+<kbd><kbd>GET</kbd> /payment/api/wallet/lock/cbb571ea-e834-41c4-8a20-7d55bb7ae190</kbd> 
 
 ###### Response
-<pre>{
+```JSON
+{
   "Result": "True"
-}</pre>
+}
+```
 
 
 Remove Credit Card / eCheck
 ---------------------------
 
-* `GET /payment/api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190` will remove the credit card or eCheck
+Delete a wallet record.
+
+### Endpoint
+<kbd><kbd>GET</kbd> /payment/api/wallet/delete/<kbd>{WALLET_ID}</kbd></kbd>
+
+### Example
+###### Request
+<kbd><kbd>GET</kbd> /payment/api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190</kbd>
 
 ###### Response
-<pre>{
+```JSON
+{
   "Result": "True"
-}</pre>
+}
+```
+
 
 Retrieve expired wallet
 -------------------------
 
-* `GET /payment/api/expiredwallet/get?customer={CUSTOMER_NO}&startDate={STARTDATE}&endDate={ENDDATE}&pageSize={PAGESIZE}&page={PAGE}` will return the expired credit cards for a customer, whose Expiration date is in the specified date, and display records depending on the page number, each page size is 15 records.
+Return a paged list of credit card wallet records which has its expiration date (`ExpDate`) within a specified date range.
+
+### Endpoint
+<kbd><kbd>GET</kbd> /payment/api/expiredwallet/get?customer=<kbd>{CUSTOMER_NO}</kbd>&startDate=<kbd>{START_DATE}</kbd>&endDate=<kbd>{END_DATE}</kbd>&pageSize=<kbd>{PAGE_SIZE}</kbd>&page=<kbd>{PAGE}</kbd></kbd>
+
+* Date format is `YYYY-MM-DD` or `MM-DD-YYYY`.
+* Default page size is 15 records.
+
+### Example
+###### Request
+<kbd><kbd>GET</kbd> /payment/api/expiredwallet/get?customer=JOHNDOE0001&startDate=2000-01-01&endDate=2018-09-01&page=1</kbd>
 
 ###### Response
-<pre>
+```JSON
 {
   "Paging": {
     "Current": "1",
@@ -527,7 +619,7 @@ Retrieve expired wallet
       "CheckNumber": null,
       "Connector": "",
       "Customer": "JOHNDOE0001",
-      "ExpDate": "0918",
+      "ExpDate": "1018",
       "GPAddressCode": "",
       "GatewayToken": "",
       "ID": "cbb571ea-e834-41c4-8a20-7d55bb7ae190",
@@ -592,4 +684,4 @@ Retrieve expired wallet
     }
   ]
 }
-</pre>
+```
