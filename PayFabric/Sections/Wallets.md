@@ -175,7 +175,7 @@ Return the detail for a specific credit card or eCheck wallet record.
 Credit card numbers and account numbers are returned in a masked format. PayFabric never returns credit card number or account numbers in plain-text.
 
 ### Endpoint
-<kbd><kbd>GET</kbd> /payment/api/wallet/get/<kbd>{WalletID}</kbd></kbd>
+<kbd><kbd>GET</kbd> /payment/api/wallet/get/<kbd>{Wallet_ID}</kbd></kbd>
 
 ### Example
 ###### Request
