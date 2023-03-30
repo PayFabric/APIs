@@ -142,7 +142,7 @@ Process a Transaction
 ###### Related Reading
 * [Process an eCheck Transaction](Process%20eCheck%20Transaction.md#process-a-echeck-transaction)
 
-Create and Process a Transaction
+Create and Process a Transaction via a Gateway
 --------------------------------
 
 * `POST /payment/api/transaction/process?cvc={CVCValue}` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload. `cvc` is optional.
@@ -232,6 +232,49 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
 }
 </pre>
 
+Create and Process a Transaction via a Diamond Cloud Terminal
+-------------------------------------------------------------
+Create and Process a Transaction API also allows to process a transaction via a Diamond Cloud Terminal.
+###### Request
+<pre>
+{
+    "Amount": "11",
+    "Tender": "CreditCard",
+    "Currency": "USD",
+    "Type": "sale",
+    "ProcessingMethod": "CardPresent",
+    "Terminal": "NEXGO N5",
+    "Card":
+    {
+        "Billto": {
+            "City": "LA",
+            "Country": "UK",
+            "Customer": "",
+            "Email": "rena.wu@evopayments.com",
+            "ID": "00000000-0000-0000-0000-000000000000",
+            "Line1": "5000",
+            "Line2": "1",
+            "Line3": "d",
+            "Phone": "1111111111",
+            "State": "LA",
+            "Zip": "12345"
+        }
+    },
+    "Shipto": {
+            "City": "LA",
+            "Country": "UK",
+            "Customer": "",
+            "Email": "rena.wu@evopayments.com",
+            "ID": "00000000-0000-0000-0000-000000000000",
+            "Line1": "5000",
+            "Line2": "1",
+            "Line3": "d",
+            "Phone": "1111111111",
+            "State": "LA",
+            "Zip": "12345"
+        }
+}
+</pre>
 
 Retrieve a Transaction
 ----------------------
