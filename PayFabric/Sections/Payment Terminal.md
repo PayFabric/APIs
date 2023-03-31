@@ -34,12 +34,13 @@ Create new Registered Terminal
 ---------------------
 * `POST /payment/3.1/api/Terminal` will create a new registered terminal.
 
-###### Request
+###### Request for creating PAX Generic terminal
 <pre>
 {
   "Name": "Test123",
   "SerialNumber": "143456789",
-  "Type": "PAX Generic"
+  "Type": "PAX Generic",
+  "POSID":""
 }
 </pre>
 
@@ -50,6 +51,26 @@ Create new Registered Terminal
     "Name": "Test123",
     "SerialNumber": "143456789",
     "Type": "PAX Generic"
+}
+</pre>
+
+###### Request for creating Diamond Cloud terminal
+<pre>
+{
+  "Name": "Test123ddd",
+  "SerialNumber": "",
+  "Type": "Diamond Cloud",
+  "POSID":"1111111111222222"
+}
+</pre>
+
+###### Response
+<pre>
+{
+    "ID": "0e5b3531-cc69-493e-a05a-2b7fcc252c6a",
+    "Name": "Test123ddd",
+    "Type": "Diamond Cloud",
+    "POSID": "1111111111222222"
 }
 </pre>
 
