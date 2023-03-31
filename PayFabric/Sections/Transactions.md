@@ -142,12 +142,12 @@ Process a Transaction
 ###### Related Reading
 * [Process an eCheck Transaction](Process%20eCheck%20Transaction.md#process-a-echeck-transaction)
 
-Create and Process a Transaction via a Gateway
+Create and Process a Transaction
 --------------------------------
 
 * `POST /payment/api/transaction/process?cvc={CVCValue}` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload. `cvc` is optional.
 
-###### Request
+###### Request for create and process transaction via a gateway
 <pre>
 {
   <b>"Amount": "29.99"</b>,
@@ -187,10 +187,7 @@ Create and Process a Transaction via a Gateway
 }
 </pre>
 
-Create and Process a Transaction via a DiamondCloud Terminal
--------------------------------------------------------------
-Create and Process a Transaction API also allows to process a transaction via a DiamondCloud Terminal.
-###### Request
+###### Request for create and process a transaction via a DiamondCloud Terminal
 <pre>
 {
     <b>"Amount": "11",</b>
