@@ -238,12 +238,12 @@ Create and Process a Transaction API also allows to process a transaction via a 
 ###### Request
 <pre>
 {
-    "Amount": "11",
-    "Tender": "CreditCard",
-    "Currency": "USD",
-    "Type": "sale",
-    "ProcessingMethod": "CardPresent",
-    "Terminal": "T1",
+    <b>"Amount": "11",</b>
+    <b>"Tender": "CreditCard",</b>
+    <b>"Currency": "USD",</b>
+    <b>"Type": "sale",</b>
+    <b>"ProcessingMethod": "CardPresent",</b>
+    <b>"Terminal": "T1",</b>
     "Card":
     {
         "Billto": {
@@ -272,7 +272,12 @@ Create and Process a Transaction API also allows to process a transaction via a 
             "Phone": "1111111111",
             "State": "LA",
             "Zip": "12345"
-        }
+    },
+    "Document": {
+    "Head": [],
+    "Lines": [],
+    "UserDefined": []
+  }
 }
 </pre>
 
