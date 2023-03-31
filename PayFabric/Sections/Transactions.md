@@ -232,9 +232,9 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
 }
 </pre>
 
-Create and Process a Transaction via a Diamond Cloud Terminal
+Create and Process a Transaction via a DiamondCloud Terminal
 -------------------------------------------------------------
-Create and Process a Transaction API also allows to process a transaction via a Diamond Cloud Terminal.
+Create and Process a Transaction API also allows to process a transaction via a DiamondCloud Terminal.
 ###### Request
 <pre>
 {
@@ -243,14 +243,14 @@ Create and Process a Transaction API also allows to process a transaction via a 
     "Currency": "USD",
     "Type": "sale",
     "ProcessingMethod": "CardPresent",
-    "Terminal": "NEXGO N5",
+    "Terminal": "T1",
     "Card":
     {
         "Billto": {
             "City": "LA",
             "Country": "UK",
             "Customer": "",
-            "Email": "rena.wu@evopayments.com",
+            "Email": "test@email.com",
             "ID": "00000000-0000-0000-0000-000000000000",
             "Line1": "5000",
             "Line2": "1",
@@ -264,7 +264,7 @@ Create and Process a Transaction API also allows to process a transaction via a 
             "City": "LA",
             "Country": "UK",
             "Customer": "",
-            "Email": "rena.wu@evopayments.com",
+            "Email": "test@email.com",
             "ID": "00000000-0000-0000-0000-000000000000",
             "Line1": "5000",
             "Line2": "1",
