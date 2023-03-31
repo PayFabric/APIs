@@ -22,11 +22,11 @@ Get Registered Terminals
         "Type": "PAX Generic"
     },   
     {
-        "ID": "ccc0fb76-4a75-4ffa-b807-dbad8a4631c3",
-        "Name": "53095196 IP",
-        "SerialNumber": "fdadsfad",
-        "Type": "PAX Generic"
-    }
+        "ID": "63ffba8a-c84b-4210-9e4b-55e9d1ae3e94",
+        "Name": "A920 DC",
+        "Type": "Diamond Cloud",
+        "POSID": "1332401945095861"
+    },
 ]
 </pre>
 
