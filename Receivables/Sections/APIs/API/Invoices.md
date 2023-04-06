@@ -762,7 +762,7 @@ For more information on response fields please see our [object reference](../../
 View Outstanding Invoices All Selected
 --------------------
 
-* `GET /invoices/outstanding/allselected` will get all outstanding invoice on the PayFabric Receivables website based on the JSON request payload.
+* `GET /invoices/outstanding/allselected` will get all outstanding invoices on the PayFabric Receivables website based on the JSON request payload.
 
 Criteria Options
 -------
@@ -811,7 +811,7 @@ For more information and descriptions on response fields please see our [object 
 Export Outstanding Invoices
 --------------------
 
-* `POST /invoices/outstanding/export` will get all outstanding invoice on the PayFabric Receivables website based on the JSON request payload.
+* `POST /invoices/outstanding/export` will get all outstanding invoices on the PayFabric Receivables website based on the JSON request payload.
 
 Criteria Options
 -------
@@ -838,13 +838,13 @@ GET /invoices/outstanding/export?filter.criteria.invoiceId.contains=STDINV HTTP/
 ```
 
 ###### Response
-This will return a CSV file with the related invoices
+This will return a CSV file with the related invoices.
 
 
 View Paid Invoices
 --------------------
 
-* `GET /invoices/paid` will get all outstanding invoice on the PayFabric Receivables website based on the JSON request payload.
+* `GET /invoices/paid` will get all paid invoices on the PayFabric Receivables website based on the JSON request payload.
 
 Options
 -------
@@ -929,7 +929,7 @@ For more information and descriptions on response fields please see our [object 
 View Past Due Invoices
 --------------------
 
-* `GET /invoices/pastdue` will get all outstanding invoice on the PayFabric Receivables website based on the JSON request payload.
+* `GET /invoices/pastdue` will get all past due invoices on the PayFabric Receivables website based on the JSON request payload.
 
 Options
 -------
