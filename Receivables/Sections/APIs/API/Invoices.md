@@ -811,7 +811,7 @@ For more information and descriptions on response fields please see our [object 
 Export Outstanding Invoices
 --------------------
 
-* `GET /invoices/outstanding/export` will get all outstanding invoice on the PayFabric Receivables website based on the JSON request payload.
+* `POST /invoices/outstanding/export` will get all outstanding invoice on the PayFabric Receivables website based on the JSON request payload.
 
 Criteria Options
 -------
