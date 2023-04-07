@@ -233,6 +233,11 @@ Create and Process a Transaction
 }
 </pre>
 
+###### Request for create and process a Sale/Authorization transaction by using an existing approved transaction as a reference
+<pre>
+
+</pre>
+
 Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](Objects.md). 
 
 PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wallet Page](https://github.com/PayFabric/Hosted-Pages/blob/master/Sections/Wallet%20Page.md), we highly recommand use hosted wallet page to create wallet for security, and get the wallet ID through [Wallet Retrieve](Wallets.md#retrieve-credit-cards--echecks) API call.
