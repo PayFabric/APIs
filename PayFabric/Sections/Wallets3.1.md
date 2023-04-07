@@ -22,7 +22,7 @@ Remove Credit Card / eCheck
 Delete a wallet record.
 
 ### Endpoint
-<kbd><kbd>GET</kbd> /payment/api/wallet/delete/<kbd>{WALLET_ID}</kbd></kbd>
+* `GET /payment/3.1/api/wallet/bulkdelet`  will delete the filtered wallets based on the . 
 
 ### Example
 ###### Request
