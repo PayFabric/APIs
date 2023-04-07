@@ -8,7 +8,7 @@ Please note that all requests require API authentication, see our [guide](Authen
 
 Delete Wallets in Bulk
 ---------------------------
-Merchants could use either our [Merchant Portal]() or our Payment API’s to initiate a purge of their stored wallets based on criteria provided.
+Merchants could use either our Merchant Portal or our Payment API’s to initiate a purge of their stored wallets based on criteria provided.
 
 ### Endpoint
 * `POST /payment/3.1/api/wallet/bulkdelet`  will delete the filtered wallets based on the . 
