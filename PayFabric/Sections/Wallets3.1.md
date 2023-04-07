@@ -12,12 +12,25 @@ Delete Wallets in Bulk
 Delete a wallet record.
 
 ### Endpoint
-* `GET /payment/3.1/api/wallet/bulkdelet`  will delete the filtered wallets based on the . 
+* `POST /payment/3.1/api/wallet/bulkdelet`  will delete the filtered wallets based on the . 
 
 ### Example
 ###### Request
-<kbd><kbd>GET</kbd> /payment/api/wallet/delete/cbb571ea-e834-41c4-8a20-7d55bb7ae190</kbd>
-
+```JSON
+{
+    "Customer": "AA",
+    "CustomerOperator": "equals",
+    "Tender": "CreditCard",
+    "FirstName": "a",
+    "FirstNameOperator": "Contains",
+    "CardType": null,
+    "ExpDateStart": null,
+    "ExpDateEnd": null,
+    "Account": "1111",
+    "LastUsedDateStart": "04/06/2023"
+}
+```
+###### Available filters
 | Query String     | DataType |  Required? |
 | :--------------- | :------- | :--------- | 
 | Customer         | String   |  Optional, must be a string value, and not exceed 128 characters.|
@@ -37,6 +50,9 @@ Delete a wallet record.
 ###### Response
 ```JSON
 {
-  "Result": "True"
+    "Result": true,
+    "WalletsToDeleteCount": 5,
+    "TotalWalletCount": 13087,
+    "Message": "Thank you for confirming the deletion. 5 records will be scheduled to be permanently deleted within 24 hours."
 }
 ```
