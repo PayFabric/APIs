@@ -8,8 +8,7 @@ Please note that all requests require API authentication, see our [guide](Authen
 
 Delete Wallets in Bulk
 ---------------------------
-
-Delete a wallet record.
+Merchants could use either our [Merchant Portal]() or our Payment API’s to initiate a purge of their stored wallets based on criteria provided.
 
 ### Endpoint
 * `POST /payment/3.1/api/wallet/bulkdelet`  will delete the filtered wallets based on the . 
@@ -30,8 +29,12 @@ Delete a wallet record.
     "LastUsedDateStart": "04/06/2023"
 }
 ```
+**IMPORTANT!!!**
+
+**Will purge all wallets when call this API without any filters!!!  Reversal/Undo of the deletion is not possible using standard PayFabric processes!!!**
+
 ###### Available filters
-| Query String     | DataType |  Required? |
+| Filter Name     | DataType |  Required? |
 | :--------------- | :------- | :--------- | 
 | Customer         | String   |  Optional, must be a string value, and not exceed 128 characters.|
 | CustomerOperator | Operator | Conditional – Required if Customer is provided. Must be one of: "Contains" or "Equals". |
