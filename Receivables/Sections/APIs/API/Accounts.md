@@ -79,7 +79,7 @@ For more information on available fields please see our [object reference](../..
 	"CustomerId": "Nodus0001",
 	"Email": "Nodus0001@nodus.com",
 	"Password": "password1",
-	"Permission": "Full Access",
+	"Permission": "FullAccess",
 	"RegistrationKey":"6F25DF7B-8B48-4041-91F4-9E84EF723A8A",
 	"UserName": "Nodus0001"
 }
@@ -225,7 +225,7 @@ For more information on available fields please see our [object reference](../..
 {
 	"CustomerId": "Nodus0001",
 	"Email": "Nodus0001@nodus.com",
-	"Permission": "Full Access",
+	"Permission": "FullAccess",
 }
 ```
 
@@ -258,7 +258,7 @@ For more information on response fields please see our [object reference](../../
     "CreatedOn": "2018-05-25T13:55:51.243",
     "RegistrationKey": "6dede74f-4eae-4c26-a210-6a7418c8988b",
     "Status": "Active",
-	"Permission": "Full Access"
+	"Permission": "FullAccess"
 }
 ```
 
