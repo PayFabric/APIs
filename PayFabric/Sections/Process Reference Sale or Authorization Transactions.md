@@ -103,7 +103,10 @@ These fields, which are not able to be modified, will either be copied directly 
 Process Reference Sale or Authorization Transaction via Reference transaction API
 --------------------------------
 Issue a reference Sale by using an existing EVO/EVO ACH transaction:
+
 > `GET /payment/api/reference/{TransactionKey}?trxtype=Sale`
+
 Issue a reference Authorization by using an existing EVO/EVO ACH transaction:
+
 > `GET /payment/api/reference/{TransactionKey}?trxtype=Authorization`
 
