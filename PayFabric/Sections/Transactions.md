@@ -242,8 +242,7 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
 * [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 * [Which Transaction Type to Use](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md)
 * [Create and Process an eCheck Transaction](Process%20eCheck%20Transaction.md#create-and-process-a-echeck-transaction)
-* [Process Reference Sale/Authorization Transaction]([Sections/Process%20Reference%20Sale%20or%20Authorization%20Transactions.md](https://github.com/PayFabric/APIs/blob/R21/PayFabric/Sections/Process%20Reference%20Sale%20or%20Authorization%20Transactions.md#reference-sale-or-authorization-transactions))
-
+* [Process Reference Sale/Authorization Transaction](/PayFabric/Sections/Process%20Reference%20Sale%20or%20Authorization%20Transactions.md#reference-sale-or-authorization-transactions)
 
 ###### Response
 <pre>
