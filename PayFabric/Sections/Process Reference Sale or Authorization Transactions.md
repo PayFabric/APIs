@@ -1,4 +1,4 @@
-Process Reference Sale or Authorization Transactions
+Reference Sale or Authorization Transactions
 ===========================================
 
 The PayFabric provided the ablity to perform referenced 'Sale' or 'Authorization' transaction against previous successful transaction on PayFabric without having to re-enter the credit card information. This is to cater the business use case for eCommerce business where the end-customer did not checkmark 'Save for later use' during the checkout process. Without the card being saved, if the shipment has to be split due to backordered or out-of-stock inventory, the merchant have to reach out back to the end-user to ask for their card information to re-authorization for the remaining backordered goods for later shipment.
