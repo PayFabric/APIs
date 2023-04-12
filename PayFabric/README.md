@@ -149,7 +149,7 @@ as child elements of other objects.
 * [Export Batch Details](./Sections/Settlement.md#export-batch-details-for-a-specified-batch-id)
 
 ### Wallet
-* [Bulk Delete Wallets](./Sections/Wallet.md#bulk-delete-wallets)
+* [Bulk Delete Wallets](./Sections/Wallets3.1.md)
 
 
 Help us make it better
