@@ -1,7 +1,15 @@
 Reference Sale or Authorization Transactions
 ===========================================
 
-The PayFabric provided the ablity to perform referenced 'Sale' or 'Authorization' transaction against previous successful transaction on PayFabric without having to re-enter the credit card information. This is to cater the business use case for eCommerce business where the end-customer did not checkmark 'Save for later use' during the checkout process. Without the card being saved, if the shipment has to be split due to backordered or out-of-stock inventory, the merchant have to reach out back to the end-user to ask for their card information to re-authorization for the remaining backordered goods for later shipment.
+PayFabric provided the ablity to perform referenced 'Sale' or 'Authorization' transaction against previous successful transaction on PayFabric without having to re-enter the credit card information. This is to cater the business use case for eCommerce business where the end-customer did not checkmark 'Save for later use' during the checkout process. Without the card being saved, if the shipment has to be split due to backordered or out-of-stock inventory, the merchant does not have to reach out back to the end-user to ask for their card information to re-authorization for the remaining backordered goods for later shipment.
+
+#### Note
+*	We assume that the Merchant has taken the necessary steps to obtain permissions from the card holder to process a transaction using their existing payment data.
+
+*	Transactions created and processed using this feature via EVO eService processor, will be treated as a card on file request.  
+
+*	Transactions created and processed using this feature will use the Gateway Profile settings at the time of creating/processing the transaction. This also includes Surcharge %, if the original transaction was processed at a time where surcharge % was 0%, but then this was changed to 3%.  The new reference transaction will use the new 3% configured value at this time.
+
 
 Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
