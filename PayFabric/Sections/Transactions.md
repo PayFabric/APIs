@@ -233,10 +233,6 @@ Create and Process a Transaction
 }
 </pre>
 
-###### Request for create and process a Sale/Authorization transaction by using an existing approved transaction as a reference
-<pre>
-
-</pre>
 
 Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](Objects.md). 
 
@@ -246,6 +242,7 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
 * [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 * [Which Transaction Type to Use](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md)
 * [Create and Process an eCheck Transaction](Process%20eCheck%20Transaction.md#create-and-process-a-echeck-transaction)
+* [Create and Process a reference sale/authorization Transaction by Using an Existing Approved Transaction as a Reference]()
 
 
 ###### Response
