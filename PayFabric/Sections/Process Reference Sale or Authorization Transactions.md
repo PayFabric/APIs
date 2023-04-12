@@ -13,7 +13,7 @@ PayFabric provided the ablity to perform referenced 'Sale' or 'Authorization' tr
 
 Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
-Merchants can use this feature to process transactions by calling API `POST /payment/api/transaction/process?cvc={CVCValue}` and `GET /payment/api/reference/{TRX_KEY}?trxtype={TRX_TYPE}`.
+Merchants can use this feature to process transactions by calling API `POST /payment/api/transaction/process` and `GET /payment/api/reference/{TRX_KEY}?trxtype={TRX_TYPE}`.
 
 Process Reference Sale or Authorization Transaction via Create and Process Transaction API
 --------------------------------
