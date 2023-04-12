@@ -13,7 +13,7 @@ PayFabric provided the ablity to perform referenced 'Sale' or 'Authorization' tr
 
 Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
-Merchants can use this feature by calling API `POST /payment/api/transaction/process?cvc={CVCValue}` and `GET /payment/api/reference/{TRX_KEY}?trxtype={TRX_TYPE}`.
+Merchants can use this feature to process transactions by calling API `POST /payment/api/transaction/process?cvc={CVCValue}` and `GET /payment/api/reference/{TRX_KEY}?trxtype={TRX_TYPE}`.
 
 Create and Process a Transaction
 --------------------------------
@@ -49,16 +49,20 @@ Create and Process a Transaction
 </pre>
 
 
-Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](Objects.md). 
+Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](Objects.md). The follow transaction properties/attributes are NOT able to be modified:
 
-PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wallet Page](https://github.com/PayFabric/Hosted-Pages/blob/master/Sections/Wallet%20Page.md), we highly recommand use hosted wallet page to create wallet for security, and get the wallet ID through [Wallet Retrieve](Wallets.md#retrieve-credit-cards--echecks) API call.
+*	Customer
+*	Tender
+*	Currency
+*	EntryClass
+*	SetupId
+*	ECheckSetupId
+*	GiftCardSetupId
+*	Card
+*	Card.Billto
+*	CardHolderAttendance
 
-###### Related Reading
-* [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
-* [Which Transaction Type to Use](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md)
-* [Create and Process an eCheck Transaction](Process%20eCheck%20Transaction.md#create-and-process-a-echeck-transaction)
-* [Create and Process a reference sale/authorization Transaction by Using an Existing Approved Transaction as a Reference]()
-
+These fields, which are not able to be modified, will either be copied directly from the original/referenced transactions, or will be calculated/hard coded， Transactions using this feature will only be used for ‘Merchant Initiated’ transactions.  This is because this feature does not cater to use cases where the customer is initiating a transaction that uses another transaction to process a payment.
 
 ###### Response
 <pre>
@@ -68,8 +72,8 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
     "AuthCode": "7KASMC",
     "CVV2Response": "NotSet",
     "CardType": "Credit",
-    "ExpectedSettledTime": "5/26/2022 8:00:00 PM",
-    "ExpectedSettledTimeUTC": "2022-05-26T17:00:00.000",
+    "ExpectedSettledTime": "4/12/2023 8:00:00 PM",
+    "ExpectedSettledTimeUTC": "2023-04-12T17:00:00.000",
     "FinalAmount": "100.00",
     "IAVSAddressResponse": null,
     "Message": "APPROVED",
