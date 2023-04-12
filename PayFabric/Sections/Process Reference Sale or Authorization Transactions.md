@@ -15,7 +15,7 @@ Please note that all requests require API authentication, see our [guide](Authen
 
 Merchants can use this feature to process transactions by calling API `POST /payment/api/transaction/process?cvc={CVCValue}` and `GET /payment/api/reference/{TRX_KEY}?trxtype={TRX_TYPE}`.
 
-Create and Process a Transaction
+Process Reference Sale or Authorization Transaction via Create and Process Transaction API
 --------------------------------
 
 * `POST /payment/api/transaction/process?cvc={CVCValue}` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload. `cvc` is optional.
@@ -98,4 +98,12 @@ These fields, which are not able to be modified, will either be copied directly 
     "WalletID": "00000000-0000-0000-0000-000000000000"
 }
 </pre>
+
+
+Process Reference Sale or Authorization Transaction via Reference transaction API
+--------------------------------
+Issue a reference Sale by using an existing EVO/EVO ACH transaction:
+> `GET /payment/api/reference/{TransactionKey}?trxtype=Sale`
+Issue a reference Authorization by using an existing EVO/EVO ACH transaction:
+> `GET /payment/api/reference/{TransactionKey}?trxtype=Authorization`
 
