@@ -25,7 +25,7 @@ Process Reference Sale or Authorization Transaction via Create and Process Trans
 {
 
     "<b>ReferenceKey</b>": "<b>Ref23040701258785</b>",
-    "<b>Type</b>": "<b>book</b>",
+    "<b>Type</b>": "<b>Authorization</b>",
     "Amount":"10",
      "Shipto": {
             "City": "LA",
@@ -62,7 +62,7 @@ Please note that **bold** fields are required fields, and all others are optiona
 *	Card.Billto
 *	CardHolderAttendance
 
-These fields, which are not able to be modified, will either be copied directly from the original/referenced transactions, or will be calculated/hard coded， Transactions using this feature will only be used for ‘Merchant Initiated’ transactions.  This is because this feature does not cater to use cases where the customer is initiating a transaction that uses another transaction to process a payment.
+These fields, which are not able to be modified, will either be copied directly from the original/referenced transactions, or will be calculated/hard coded, Transactions using this feature will only be used for ‘Merchant Initiated’ transactions. This is because this feature does not cater to use cases where the customer is initiating a transaction that uses another transaction to process a payment.
 
 Process Reference Sale or Authorization Transaction via Reference transaction API
 --------------------------------
