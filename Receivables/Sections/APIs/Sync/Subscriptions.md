@@ -99,6 +99,7 @@ For more information on response fields please see our [object reference](../../
                 "Description": "Pen",
                 "Comment": "",
                 "Frequency": "Monthly",
+                "FrequencyInterval": 1,
                 "Occurrences": "5",
                 "Sequence": 1,
                 "Taxable": true,

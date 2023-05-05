@@ -836,7 +836,7 @@ GET /payments/receipt/download?paymentGuid=12345678-0000-0000-0000-000000000000 
 ###### Response
 This will return the receipt file related payment
 
-Download Payment Detail
+Download Payment Details
 --------------------
 
 * `GET /payments/detail/download?paymentGuid={paymentGuid}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
@@ -862,7 +862,7 @@ GET /applications/receipt/download?applicationGuid=12345678-0000-0000-0000-00000
 ###### Response
 This will return the receipt file related payment
 
-Download Application Record Detail
+Download Application Record Details
 --------------------
 
 * `GET /applications/detail/download?applicationGuid={applicationGuid}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
@@ -876,8 +876,10 @@ GET /payments/detail/download?applicationGuid=12345678-0000-0000-0000-0000000000
 This will return the receipt file related payment
 
 
-Create JWT for PayFabric Hosted Checkout Page
+Create JWT for PayFabric Hosted Checkout Page (DEPRECATED)
 --------------------
+
+Please use the JWT creation found on the [Payment Methods](PaymentMethods.md#create-jwt-for-payfabric-hosted-checkout-page) page.
 
 * `POST /payments/mrhpp/jwt` will create the token to be used on the PayFabric Receivables website based on the URL parameters.
 
@@ -956,5 +958,139 @@ For more information and descriptions on available fields please see our [object
     "Result": true,
     "Message": null,
     "HttpStatusCode": 200
+}
+```
+
+Create a New Transaction for Hosted Checkout Page After Transaction Failed Once
+--------------------
+
+* `POST /payments/transactions/new` will create a new transaction to be used with the Hosted Checkout Page after the first transaction failed on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+POST /payments/transactions/new?trxKey=123485920 HTTP/1.1
+```
+
+###### Response
+For more information and descriptions on available fields please see our [object reference](../../Objects/PaymentReceipt.md)
+```json
+{
+    "CreditAmount": 0,
+    "AdditionalFee": 0,
+    "PrepaymentAmount": 0,
+    "Currency": {
+        "CurrencyGuid": "1620fcac-35e8-e811-87df-534e57000000",
+        "CCSetupId": "PayFlowProCredit",
+        "ECSetupId": "PaymentechECheck",
+        "IsUsingECheck": true,
+        "IsUsingCreditCard": true,
+        "IsValid": true,
+        "Name": "USD",
+        "CurrencyCode": "Z-US$",
+        "Symbol": "$",
+        "LongName": "US Dollars",
+        "IsFuncCurrency": true
+    },
+    "PaymentStatus": "InProgress",
+    "Company": {
+        "Name": "Nodus Tech",
+        "LogoLarge": "",
+        "Logo": "data:image/gif;base64,...",
+        "Country": "Nodus Tech",
+        "Address": "West First Street",
+        "Address2": "-",
+        "City": "Claremont",
+        "State": "CA",
+        "Zip": "Claremont, CA 91711",
+        "Phone": "909 248 6547",
+        "PortalName": "nodus",
+        "PortalUrl": "https://sandbox.payfabric.com/receivables/nodus",
+        "IntegrationKey": null,
+        "IntegrationPassword": null
+    },
+    "Customer": {
+        "Status": "Active",
+        "BillingAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "PrimaryAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "ShippingAddress": {
+            "Address1": "98765 Crossway Park Dr",
+            "Address2": "",
+            "Address3": "",
+            "City": "Bloomington",
+            "Country": "USA",
+            "Email": "",
+            "Fax": "",
+            "Name": "Dennis Swenson",
+            "Phone": "",
+            "State": "MN",
+            "Zip": "55304-9840"
+        },
+        "CreditBalance": 0,
+        "InvoiceBalance": 0,
+        "PastDueBalance": 0,
+        "Class": "USA-ILMO-T1",
+        "CustomerId": "Nodus0001",
+        "CopyEmail": null,
+        "Email": "nodus0001@nodus.com",
+        "ExtensionData": "",
+        "Name": "Nodus Technologies",
+        "PaymentTerms": "2% 10/Net 30",
+        "StatementName": "Nodus Technologies",
+        "Currency": "USD",
+        "ShippingMethod": ""
+    },
+    "Transaction": null,
+    "WalletEntryGuid": "12345678-0000-0000-0000-000000000000",
+    "Notes": "",
+    "Reference": "",
+    "CreditDistributions": [],
+    "Surcharges": null,
+    "PaymentGuid": "12345678-0000-0000-0000-000000000000",
+    "PaymentApplies": [
+        {
+            "AppliedToInvoice": true,
+            "InvoiceId": "ORDST1026",
+            "Identity": null,
+            "PayAmount": 187.44,
+            "DocumentType": 1,
+            "RowVersion": "AAAAAAAAB/k="
+        }
+    ],
+    "BatchNumber": "1234",
+    "PaymentMethod": "Cash",
+    "CCNumber": "",
+    "CheckNumber": "",
+    "CreatedOn": "2019-05-21T00:00:00",
+    "CustomerId": "Nodus0001",
+    "Identity": "PYMNT00000000001",
+    "PaymentId": "PYMNT00000000001",
+    "Amount": 200,
+    "BalanceAmount": 12.56,
+    "PaymentType": "Payment",
+    "User": "Nodus0001"
 }
 ```

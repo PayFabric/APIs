@@ -35,6 +35,7 @@ This object is used when creating or updating an invoice record on the PayFabric
 | ShippingAddress | [Object](Address.md#AddressPost) | N | Shipping address object |  |
 | ShippingMethod | String | N | Shipping method | 50 |
 | Site | String | N | Site / warehouse items ship from | 4000 |
+| Status | String | N | Status of the invoice. Valid options are ``Incomplete``, ``Pending``, and ``Complete`` |  |
 | SubTotal | Decimal | N | Subtotal of the invoice | 19, 5 |
 | Tax | Decimal | N | Total tax amount | 19, 5 |
 | TaxGroup | String | N | Tax group to be applied | 50 |
@@ -49,7 +50,7 @@ This object is used when retrieving an invoice using the PayFabric Receivables S
 | Amount | Decimal | Total invoice amount in the functional currency  | 19, 5 |
 | BalanceDue | Decimal | Total balance due in the functional currency | 19, 5 |
 | BatchNumber | String | Batch number | 50 |
-| BillingAddress | [Object](Address.md#AddressResponse) | Billing address object | 
+| BillingAddress | [Object](Address.md#AddressResponse) | Billing address object |
 | Comments | String | Additional comments | 500 |
 | CopyEmail | Array of Strings | CC'd recipients to be used in e-mail notifications regarding an individual invoice | 1000 |
 | Currency | String | Currency code | 10 |

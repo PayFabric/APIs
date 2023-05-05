@@ -294,3 +294,60 @@ GET /paymentmethods/9c89c8de-04f1-4db5-87de-b20a28056e62/subscriptions/count HTT
 ```text
 2
 ```
+
+Create JWT for PayFabric Hosted Checkout Page
+--------------------
+
+* `POST /paymentmethods/mrhpp/jwt` will create the token to be used on the PayFabric Receivables website based on the URL parameters.
+
+###### Request
+```http
+POST /paymentmethods/mrhpp/jwt?paymentIdentity=WEBPMT0000000020&setupId=EVO HTTP/1.1
+```
+
+###### Response
+For more information and descriptions on available fields please see our [object reference](../../Objects/ProcessPaymentHostedCheckout.md#jwtresponse)
+```json
+{
+    "Message": "",
+    "Payload": {
+        "aud": "PaymentPage",
+        "dcn": "1",
+        "device": "72972a2b-8a71-4e29-aeab-1c418b136869",
+        "exp": "1617688157",
+        "iat": "1617687257",
+        "inst": "f242bd6d-7a23-41d7-a12e-46427ce4eba4",
+        "iss": "PayFabric_V3",
+        "sub": "HPP21040500682801",
+        "supportedPaymentMethods": [
+            {
+                "attributes": null,
+                "src": "URL",
+                "type": "CreditCard"
+            },
+            {
+                "attributes": null,
+                "src": "URL",
+                "type": "ECheck"
+            },
+            {
+                "attributes": [
+                    {
+                        "key": "data-partner-attribution-id",
+                        "value": "Nodus_SP_PPCP"
+                    }
+                ],
+                "src": "https:\/\/www.paypal.com\/sdk\/js?client-id=AfGQA1jQrGwqYSqbrN6M0ZnXwvDZNVKaXlNvI8VYbmb14vFWrF5CQtgw-O6xvz6n7sLtmvWJ0s0A5uW3&merchant-id=Q3E49R5X48QLG&enable-funding=venmo&disable-funding=paylater,card¤cy=USD&integration-date=2021-03-16",
+                "type": "PAYPAL"
+            }
+        ]
+    },
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQYXlGYWJyaWNfVjMiLCJpYXQiOiIxNjE3Njg3MjU3IiwiZXhwIjoiMTYxNzY4ODE1NyIsImF1ZCI6IlBheW1lbnRQYWdlIiwic3ViIjoiSFBQMjEwNDA1MDA2ODI4MDEiLCJpbnN0IjoiZjI0MmJkNmQtN2EyMy00MWQ3LWExMmUtNDY0MjdjZTRlYmE0IiwiZGV2aWNlIjoiNzI5NzJhMmItOGE3MS00ZTI5LWFlYWItMWM0MThiMTM2ODY5IiwiZGNuIjoiMSIsInN1cHBvcnRlZFBheW1lbnRNZXRob2RzIjpbeyJ0eXBlIjoiQ3JlZGl0Q2FyZCIsInNyYyI6IlVSTCIsImF0dHJpYnV0ZXMiOm51bGx9LHsidHlwZSI6IkVDaZZjayIsInNyYyI6IlVSTCIsImF0dHJpYnV0ZXMiOm51bGx9LHsidHlwZSI6IlBBWVBBTCIsInNyYyI6Imh0dHBzOi8vd3d3LnBheXBhbC5jb20vc2RrL2pzP2NsaWVudC1pZD1BZkdRQTFqUXJHd3FZU3Fick42TTBablh3dkRaTlZLYVhsTnZJOFZZYm1iMTR2RldyRjVDUXRndy1PNnh2ejZuN3NMdG12V0owczBBNXVXMyZtZXJjaGFudC1pZD1RM0U0OVI1WDQ4UUxHJmVuYWJsZS1mdW5kaW5nPXZlbm1vJmRpc2FibGUtZnVuZGluZz1wYXlsYXRlcixjYXJkJmN1cnJlbmN5PVVTRCZpbnRlZ3JhdGlvbi1kYXRlPTIwMjEtMDMtMTYiLCJhdHRyaWJ1dGVzIjpbeyJrZXkiOiJkYXRhLXBhcnRuZXItYXR0cmlidXRpb24taWQiLCJ2YWx1ZSI6Ik5vZHVzX1NQX1BQQ1AifV19XX0.grPRlquWaPWiySm6oaOLXTbQnLzM3Dz2JUtYF0pcno4",
+    "Options": {
+        "UseBluefin": false,
+        "UseDefaultWallet": false,
+        "ReturnUrl": null,
+        "TrxKey": "123485920"
+    }
+}
+```

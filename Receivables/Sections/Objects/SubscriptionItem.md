@@ -8,6 +8,7 @@ The Subscription item object represents a line item to be associated to a subscr
 | CommodityCode | String | N | Commodity code of the item | 255 |
 | Description | String | N | Description of the item | 100 |
 | Frequency | String | Y | Frequency this item should be purchased. Valid options are ``Monthly``, ``Quarterly``, and ``Annually`` | 20 |
+| FrequencyInterval | Int | N | Interval between frequency |  |
 | Id | String | Y | Subscription item identifier | 50 |
 | ItemCode | String | Y | Item code | 50 |
 | Markdown | Decimal | N | Total markdown amount | 19, 5 |
@@ -29,6 +30,7 @@ The Subscription item object represents a line item to be associated to a subscr
 | CommodityCode | String | Commodity code of the item | 255 |
 | Description | String | Description of the item | 100 |
 | Frequency | String | Frequency this item should be purchased. Valid options are ``Monthly``, ``Quarterly``, and ``Annually`` | 20 |
+| FrequencyInterval | Int | N | Interval between frequency |  |
 | Id | String | Subscription item identifier | 50 |
 | ItemCode | String | Item code | 50 |
 | Markdown | Decimal | Total markdown amount | 19, 5 |

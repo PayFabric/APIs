@@ -13,6 +13,7 @@ This object is used when saving or updating an autopay in the PayFabric Receivab
 | Description | String | N | Description of the AutoPay | 255 |
 | FixedAmount | Decimal | Y, if AmountOption is ``FixedAmount`` | The amount to be charged if AmountOption is ``FixedAmount`` | 19, 5 |
 | Frequency | String | Y (Create Only) | Frequency of the AutoPay. Can be either ``Daily``, ``Monthly``, ``Quarterly``, or ``Annually`` | 100 |
+| FrequencyInterval | Int | N | Interval between frequency |  |
 | InvoiceTypes | Array of Strings | N | List of invoice types to be paid via AutoPay | 4000 |
 | NextPaymentDate | DateTime | Y (Create Only) | Next process day of the AutoPay |  |
 | PaymentDay | Int | N | Day of the month or week when the AutoPay should begin |  |
@@ -28,6 +29,7 @@ This object is used when saving or updating an autopay in the PayFabric Receivab
 | Description | String | Description of the AutoPay | 255 |
 | FixedAmount | Decimal | The amount to be charged if AmountOption is ``FixedAmount`` | 19, 5 |
 | Frequency | String | Frequency of the AutoPay. Can be either ``Daily``, ``Monthly``, ``Quarterly``, or ``Annually`` | 100 |
+| FrequencyInterval | Int | N | Interval between frequency |  |
 | InvoiceTypeOption | String | Invoice type option (Read-only) Valid values are ``AllInvoices``, or ``SelectedInvoices`` |  |
 | InvoiceTypes | Array of Strings | List of invoice types to be paid via AutoPay | 4000 |
 | NextPaymentDate | DateTime | Next process day of the AutoPay |  |

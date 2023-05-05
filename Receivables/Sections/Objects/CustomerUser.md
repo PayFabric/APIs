@@ -9,7 +9,7 @@ There are two customer user objects that represent a customer that has been set 
 | Email | String | Y (Create Only) | The account's email, must be a single valid email address | 255 |
 | Name | String | N| The account's name | 255 |
 | Password | String | Y (Create Only) | The account's password | 100 |
-| Permission | String | Y (Create Only) | The account's permission. Valid options are ``Full Access``, ``View & Pay``, or ``View Only`` | 20 |
+| Permission | String | Y (Create Only) | The account's permission. Valid options are ``FullAccess``, ``ViewAndPay``, or ``ViewOnly`` | 20 |
 | RegistrationKey | Guid | Y (Create Only) | Guid of the registration key so that the customer may register |  |
 | Status | String | N | The account's status | 25 |
 | UserName | String | Y | The account's username | 255 |
@@ -26,7 +26,7 @@ There are two customer user objects that represent a customer that has been set 
 | CustomerId | String | Y | The account's customer number | 50 |
 | Email | String | Y | The account's email, must be a single valid email address | 255 |
 | Name | String | N | The account's name | 255 |
-| Permission | String | Y | The account's permission. Valid options are ``Full Access``, ``View & Pay``, or ``View Only`` | 20 |
+| Permission | String | Y | The account's permission. Valid options are ``FullAccess``, ``ViewAndPay``, or ``ViewOnly`` | 20 |
 | SendEmail | Boolean | N | Indicates if a registration email should be sent to the customer |  |
 
 ## CustomerUserResponse

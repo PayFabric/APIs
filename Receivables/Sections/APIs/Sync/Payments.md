@@ -307,3 +307,29 @@ PATCH /payments/void?id=APIPMT000000001 HTTP/1.1
 ```text
 true
 ```
+
+Create/Send a Payment Request
+--------------------
+
+* `POST /payments/request` will create or send a payment request to the specified customer and emails for the listed invoices based on the information provided in the body.
+
+###### Request
+For more information on available fields please see our [object reference](../../Objects/PaymentRequest.md#PaymentRequestDto)
+```json
+{
+	"CustomerId": "Nodus0001",
+	"Invoices": [
+        "INV00001"
+    ]
+}
+```
+
+###### Response
+```json
+{
+    "Message": null,
+    "Result": true,
+    "PaymentRequestURL": "https://sandbox.payfabric.com/customerportal/nodus/ExpressPay?accessCode=fcbd6fa32a9b437aaa4dc9cb31ca48dc",
+    "AccessCode": "fcbd6fa32a9b437aaa4dc9cb31ca48dc"
+}
+```

@@ -36,15 +36,14 @@ If the need to call the customer portal API as an impersonated customer user, he
 
 Handling Exceptions
 -------------------
-PayFabric Receivables uses HTTP response codes to indicate the status of requests. 
+PayFabric Receivables uses HTTP response codes to indicate the status of requests.
 
-We have a [guide](Sections/Errors.md) detailing the meanings of the most common response codes that you will encounter. 
+We have a [guide](Sections/Errors.md) detailing the meanings of the most common response codes that you will encounter.
 
 
 API Documentation
 -----------------
-PayFabric Receivables sends and receives payloads as structured [JSON Objects](Sections/Objects). 
-Many of these objects are used in both requests and responses. Some of the objects (like Address) are embedded
+PayFabric Receivables sends and receives payloads as structured [JSON Objects](Sections/Objects). Many of these objects are used in both requests and responses. Some of the objects (like Address) are embedded
 as child elements of other objects.
 
 ## Sync API
@@ -80,6 +79,22 @@ as child elements of other objects.
 * [`GET` Retrieve a Payment](Sections/APIs/Sync/Payments.md#retrieve-a-payment)
 * [`GET` Retrieve an Application Record](Sections/APIs/Sync/Payments.md#retrieve-an-application-record)
 * [`PATCH` Void a Payment](Sections/APIs/Sync/Payments.md#void-a-payment)
+* [`POST` Create/Send a Payment Request](Sections/APIs/Sync/Payments.md#createsend-a-payment-request)
+
+### Settings
+* [`PATCH` Update Company Information](Sections/APIs/Sync/Settings.md#update-company-information)
+* [`POST` Upload Company Logo](Sections/APIs/Sync/Settings.md#upload-company-logo)
+* [`PATCH` Update Customer Setup](Sections/APIs/Sync/Settings.md#update-customer-setup)
+* [`PATCH` Update Invoice Setup](Sections/APIs/Sync/Settings.md#update-invoice-setup)
+* [`POST` Create or Update Invoice Types](Sections/APIs/Sync/Settings.md#create-or-update-invoice-types)
+* [`POST` Create or Update Invoice Templates](Sections/APIs/Sync/Settings.md#create-or-update-invoice-templates)
+* [`POST` Create or Update Invoice Payment Terms](Sections/APIs/Sync/Settings.md#create-or-update-invoice-payment-terms)
+* [`PATCH` Update Invoice Table Display](Sections/APIs/Sync/Settings.md#update-invoice-table-display)
+* [`POST` Create or Update Payment Transaction Processing](Sections/APIs/Sync/Settings.md#create-or-update-payment-transaction-processing)
+* [`PATCH` Update Payment Preferences](Sections/APIs/Sync/Settings.md#update-payment-preferences)
+* [`POST` Create or Update an Autopay Template](Sections/APIs/Sync/Settings.md#create-or-update-an-autopay-template)
+* [`PATCH` Update Integration](Sections/APIs/Sync/Settings.md#update-integration)
+* [`POST` Create or Update Email Templates](Sections/APIs/Sync/Settings.md#create-or-update-email-templates)
 
 ### Subscription
 * [`POST` Create or Update a Subscription](Sections/APIs/Sync/Subscriptions.md#create-or-update-a-subscription)
@@ -151,6 +166,7 @@ as child elements of other objects.
 * [`GET` Retrieve TenderType Enabling on Wallet Page](Sections/APIs/API/PaymentMethods.md#retrieve-tendertype-enabling-on-wallet-page)
 * [`GET` Retrieve the View Wallet URL for PayFabric Hosted Page](Sections/APIs/API/PaymentMethods.md#retrieve-the-view-wallet-url-for-payfabric-hosted-page)
 * [`GET` Retrieve the Number of Subscriptions Associated to the Wallet](Sections/APIs/API/PaymentMethods.md#retrieve-the-number-of-subscriptions-associated-to-the-wallet)
+* [`POST` Create JWT for PayFabric Hosted Checkout Page](Sections/APIs/API/PaymentMethods.md#create-jwt-for-payfabric-hosted-checkout-page)
 
 ### Payments
 * [`DELETE` Delete Payments](Sections/APIs/API/Payments.md#delete-payments)
@@ -167,8 +183,9 @@ as child elements of other objects.
 * [`GET` Download Payment Details](Sections/APIs/API/Payments.md#download-payment-details)
 * [`GET` Download Application Record Receipt](Sections/APIs/API/Payments.md#download-application-record-receipt)
 * [`GET` Download Application Record Details](Sections/APIs/API/Payments.md#download-application-record-details)
-* [`POST` Create JWT for PayFabric Hosted Checkout Page](Sections/APIs/API/Payments.md#create-jwt-for-payfabric-hosted-checkout-page)
+* ~~[`POST` Create JWT for PayFabric Hosted Checkout Page](Sections/APIs/API/Payments.md#create-jwt-for-payfabric-hosted-checkout-page)~~ (Deprecated)
 * [`PATCH` Update existing payment transaction using hosted checkout page](Sections/APIs/API/Payments.md#update-existing-payment-transaction-using-hosted-checkout-page)
+* [`POST` Create a New Transaction for Hosted Checkout Page After Transaction Failed Once](Sections/APIs/API/Payments.md#create-a-new-transaction-for-hosted-checkout-page-after-transaction-failed-once)
 
 
 

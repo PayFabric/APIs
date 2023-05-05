@@ -11,6 +11,7 @@ The autopay template object represents an AutoPay template that has been already
 | FixedAmount | Decimal | The amount to be charged if AmountOption is ``FixedAmount`` | 19, 5 |
 | FixedAmountOption | String | The fixed amount option used for the AutoPay. Can be either ``Preselected`` or ``UserChoice`` | 100 |
 | Frequency | String | Frequency of the AutoPay. Can be either ``Daily``, ``Monthly``, ``Quarterly``, or ``Annually`` | 100 |
+| FrequencyInterval | Int | N | Interval between frequency |  |
 | Name | String | Title name of the Autopay template | 50 |
 | Start | String | Start option when the AutoPay should begin. Can be either ``DayOfTheMonth``, ``UserChoice``, or ``NextDay`` | 100 |
 | StartDay | Int | Day of the month or week when the AutoPay should begin |  |
