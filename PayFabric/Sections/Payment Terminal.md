@@ -24,7 +24,7 @@ Get Registered Terminals
     {
         "ID": "63ffba8a-c84b-4210-9e4b-55e9d1ae3e94",
         "Name": "A920 DC",
-        "Type": "Diamond Cloud",
+        "Type": "DiamondCloud",
         "POSID": "1332401945095861"
     },
 ]
@@ -54,12 +54,12 @@ Create new Registered Terminal
 }
 </pre>
 
-###### Request for creating Diamond Cloud terminal
+###### Request for creating DiamondCloud terminal
 <pre>
 {
   "Name": "Test123ddd",
   "SerialNumber": "",
-  "Type": "Diamond Cloud",
+  "Type": "DiamondCloud",
   "POSID":"1111111111222222"
 }
 </pre>
@@ -69,7 +69,7 @@ Create new Registered Terminal
 {
     "ID": "0e5b3531-cc69-493e-a05a-2b7fcc252c6a",
     "Name": "Test123ddd",
-    "Type": "Diamond Cloud",
+    "Type": "DiamondCloud",
     "POSID": "1111111111222222"
 }
 </pre>
