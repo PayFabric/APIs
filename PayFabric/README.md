@@ -141,7 +141,7 @@ as child elements of other objects.
 * [Transaction Adjustments](/PayFabric/Sections/Transaction%20Adjustments.md)
 
 ### Gift Card
-* [Inquiry Balance](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/GfitCardAPI.md)
+* [Inquiry Balance](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/GiftCardAPI.md)
 
 ### Settlement
 * [Get Batch Summary](./Sections/Settlement.md#get-batch-summary-report-by-post-date)	
