@@ -147,7 +147,7 @@ Create and Process a Transaction
 
 * `POST /payment/api/transaction/process?cvc={CVCValue}` will create a transaction on the PayFabric server and attempt to process with the payment gateway based on the request JSON payload. `cvc` is optional.
 
-###### Request
+###### Request for create and process transaction via a gateway
 <pre>
 {
   <b>"Amount": "29.99"</b>,
@@ -187,6 +187,53 @@ Create and Process a Transaction
 }
 </pre>
 
+###### Request for create and process a transaction via a DiamondCloud Terminal
+<pre>
+{
+    <b>"Amount": "11",</b>
+    <b>"Tender": "CreditCard",</b>
+    <b>"Currency": "USD",</b>
+    <b>"Type": "sale",</b>
+    <b>"ProcessingMethod": "CardPresent",</b>
+    <b>"Terminal": "T1",</b>
+    "Card":
+    {
+        "Billto": {
+            "City": "LA",
+            "Country": "UK",
+            "Customer": "",
+            "Email": "test@email.com",
+            "ID": "00000000-0000-0000-0000-000000000000",
+            "Line1": "5000",
+            "Line2": "1",
+            "Line3": "d",
+            "Phone": "1111111111",
+            "State": "LA",
+            "Zip": "12345"
+        }
+    },
+    "Shipto": {
+            "City": "LA",
+            "Country": "UK",
+            "Customer": "",
+            "Email": "test@email.com",
+            "ID": "00000000-0000-0000-0000-000000000000",
+            "Line1": "5000",
+            "Line2": "1",
+            "Line3": "d",
+            "Phone": "1111111111",
+            "State": "LA",
+            "Zip": "12345"
+    },
+    "Document": {
+    "Head": [],
+    "Lines": [],
+    "UserDefined": []
+  }
+}
+</pre>
+
+
 Please note that **bold** fields are required fields, and all others are optional. For more information and descriptions on available fields please see our [object reference](Objects.md). 
 
 PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wallet Page](https://github.com/PayFabric/Hosted-Pages/blob/master/Sections/Wallet%20Page.md), we highly recommand use hosted wallet page to create wallet for security, and get the wallet ID through [Wallet Retrieve](Wallets.md#retrieve-credit-cards--echecks) API call.
@@ -195,7 +242,7 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
 * [How to Submit Level 2 and 3 Fields](Level%202%20and%20Level%203%20Fields.md)
 * [Which Transaction Type to Use](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Transaction%20Types.md)
 * [Create and Process an eCheck Transaction](Process%20eCheck%20Transaction.md#create-and-process-a-echeck-transaction)
-
+* [Process Reference Sale/Authorization Transaction](/PayFabric/Sections/Process%20Reference%20Sale%20or%20Authorization%20Transactions.md#reference-sale-or-authorization-transactions)
 
 ###### Response
 <pre>
@@ -231,7 +278,6 @@ PayFabric support to create wallet either from [API](Wallets.md) or [Hosted Wall
     "WalletID": "00000000-0000-0000-0000-000000000000"
 }
 </pre>
-
 
 Retrieve a Transaction
 ----------------------

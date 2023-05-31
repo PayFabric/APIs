@@ -5,7 +5,6 @@ The PayFabric Wallet API is used to manage customer wallet records. Each credit 
 
 Please note that all requests require API authentication, see our [guide](Authentication.md) on how to authenticate.
 
-
 Create a Credit Card
 --------------------
 
@@ -68,7 +67,6 @@ Please note that **bold** fields are required fields, and all others are optiona
 
 **Note**: We highly recommend using PayFabric hosted wallet page for create/update credit card/eCheck wallet entry. It is a secure page that can be embedded into your application. Please click [here](https://github.com/PayFabric/Hosted-Pages/blob/master/Sections/Wallet%20Page.md).
 
-
 Create an eCheck
 ----------------
 
@@ -120,6 +118,8 @@ Create a new eCheck wallet record.
 </pre>
 
 Please note that **bold** fields are required fields, and all others are optional.  For more information and descriptions on available fields please see our [object reference](Objects.md#card).
+
+Insted of returning validation failed error message while wallet is duplicated, PayFabric removed the credit card/eCheck duplicate validation for wallet creation, PayFabric will check the existence for the new wallet, if existing, return the existing wallet ID, assign it the new wallet object, then do the update wallet workflow. 
 
 ###### Response
 ```JSON

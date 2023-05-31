@@ -22,11 +22,11 @@ Get Registered Terminals
         "Type": "PAX Generic"
     },   
     {
-        "ID": "ccc0fb76-4a75-4ffa-b807-dbad8a4631c3",
-        "Name": "53095196 IP",
-        "SerialNumber": "fdadsfad",
-        "Type": "PAX Generic"
-    }
+        "ID": "63ffba8a-c84b-4210-9e4b-55e9d1ae3e94",
+        "Name": "A920 DC",
+        "Type": "DiamondCloud",
+        "POSID": "1332401945095861"
+    },
 ]
 </pre>
 
@@ -34,12 +34,13 @@ Create new Registered Terminal
 ---------------------
 * `POST /payment/3.1/api/Terminal` will create a new registered terminal.
 
-###### Request
+###### Request for creating PAX Generic terminal
 <pre>
 {
   "Name": "Test123",
   "SerialNumber": "143456789",
-  "Type": "PAX Generic"
+  "Type": "PAX Generic",
+  "POSID":""
 }
 </pre>
 
@@ -50,6 +51,26 @@ Create new Registered Terminal
     "Name": "Test123",
     "SerialNumber": "143456789",
     "Type": "PAX Generic"
+}
+</pre>
+
+###### Request for creating DiamondCloud terminal
+<pre>
+{
+  "Name": "Test123ddd",
+  "SerialNumber": "",
+  "Type": "DiamondCloud",
+  "POSID":"1111111111222222"
+}
+</pre>
+
+###### Response
+<pre>
+{
+    "ID": "0e5b3531-cc69-493e-a05a-2b7fcc252c6a",
+    "Name": "Test123ddd",
+    "Type": "DiamondCloud",
+    "POSID": "1111111111222222"
 }
 </pre>
 
@@ -85,7 +106,7 @@ A failed `DELETE` may result in a HTTP 401 Unauthorized Response if the authoriz
 Get Terminal Settings
 ---------------------
 * `GET /payment/3.1/api/Terminal/Settings/{DeviceId}` will return the terminal settings for specific device.
-
+<pre>
 {
     "Terminals": [
         "9d606d68-445d-4224-95d8-6039a5aa7d23",
@@ -98,6 +119,7 @@ Get Terminal Settings
     "RequireSignature": true,
     "AllowGiftCard": false
 }
+</pre>
 
 Update Terminal Settings
 ----------------------
