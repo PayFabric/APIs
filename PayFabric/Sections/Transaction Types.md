@@ -1,9 +1,9 @@
 Transaction Types
 =================
 
-This section explains each of the transaction types in PayFabric. The names chosen for PayFabric are among the more common but not universal. Though the names may vary, the processing details do not.  
+This section explains each of the transaction types in PayFabric. Names chosen for the transaction types are more common among the payment industry but not universal. Other known names used for each transaction type is provided in the details below.  Though the names may vary, the processing details do not.
 
-The transaction types available in PayFabric are:
+Transaction types available in PayFabric are:
 
 * Sale
 * Authorization (Book)
@@ -15,61 +15,72 @@ The transaction types available in PayFabric are:
 * Activate
 * Reload
 
-You can find what each of these transaction types mean below.
+Definitions of the transaction types are as follows.  Note that certain details may be different between payment cards (credit cards, debit cards, gift cards) and ACH (aka eCheck) as described below.
 
-#### Sale
-A _Sale_ at one processor may be called _Capture_ at another. An approved _Sale_ is an immediate charge to the customer’s credit card or account.  Money will not be moved until settlement has occurred.  A _Sale_ can only be reversed with a _Void_ or a _Refund_.   A _Sale_ transaction does the same thing regardless of it being a credit card transaction, an eCheck transaction, or an ACH transaction.
+### Sale
+**Other Known Name(s):** _Capture_, _Auth Capture_, _Authorization_.  Not the same as a _Capture (Ship)_ and _Authorization_ transactions defined by PayFabric below.</li>
 
-A Credit Card _Sale_ transaction can be reversed by issuing a _Refund_ or _Void_.
+**Definition:** _Sale_ is a payment transaction type which is to immediately charge the payment card or bank account.
 
-A Gift Card or ACH _Sale_ transaction can be reversed by issuing a _Void_.
+**Settlement:** Money will not be moved until settlement has occurred.
 
-#### Authorization (Book)
-A _Authorization_ may also be known as a _Pre-Authorize_, _Pre-Authorization_ or _Authorization_. When dealing with credit card transactions a _Authorization_ is the reserve of a specified amount on the customer’s credit card or account. A _Authorization_ prevents the customer from using that portion of their credit / funds, but does not actually charge the card nor transfer any money. A _Authorization_ is useful for companies that ship merchandise one or more days after receiving an order. By issuing a _Authorization_, a company reserves the necessary amount on the customer’s card at order placement time.  As long as the _Authorization_ transaction remains open an approved _Capture_ transaction is guaranteed. A _Capture_ transaction is necessary to complete the _Authorization_. 
+**Reversal:** A credit/debit card _Sale_ transactions can be reversed by a _Void_ transaction before settlement or by a _Refund_ transaction after settlement.  A gift card or ACH _Sale_ transaction can only be reversed by issuing a _Void_.
 
-The number of days a _Authorization_ will stay open is determined by each cardholder’s issuing bank. The most common number is seven to ten days, but some banks may hold _Authorization_ for as long as four weeks and little as three days.
+### Authorization (Book)
+**Other Known Name(s):** _Book_, _Pre-Authorize_, _Pre-Authorization_.
 
-A _Authorization_ transaction cannot be reversed.  Issuing a _Void_ for a _Authorization_ transaction will not free up any money on the customer’s credit card.  To free up the reserved money you would need to issue a _Capture_ transaction and then _Void_ that captured amount.
+**Definition:** _Authorization_ is a transaction type that reserves a specified amount against a payment card account (except gift cards). An _Authorization_ prevents the cardholder from using that portion of their credit or fund on the payment card account, but does not actually charge the card nor transfer any money.
+The number of days an _Authorization_ will stay open is determined by each payment card’s issuing bank. The most common number is seven to ten days, but some banks may hold _Authorization_ for as long as four weeks and little as three days.  _Authorization_ is not supported on ACH and gift cards.
 
-When dealing with ACH or Gift Card, a _Authorization_ is not supported.
+**Use Case(s):** An _Authorization_ is useful for merchants that fulfills goods or services one or more days after receiving an order. By processing an _Authorization_, the merchant reserves the necessary amount on the payment card at order placement time.  As long as the _Authorization_ transaction remains open, an approved _Capture_ transaction is guaranteed for the authorized amount.
 
-#### Capture (Ship)
-A _Capture_ may also be known as _Capture_ or _Delayed Capture_. A _Capture_ can only be issued for a transaction that previously has been a _Authorization_. Under ordinary circumstances, a _Capture_ is assured approval as long as the amount is equal to or less than the original _Authorization_ amount and the _Capture_ transaction is sent before the _Authorization_ has expired. A _Capture_ results in an immediate charge to the customer’s credit card or account. If the _Capture_ is for less than the original _Authorization_ amount, the remainder of the original _Authorization_ amount is released back to the customer’s credit line or account.
+**Settlement:** Money will not be moved until the Authorization is captured by a _Capture_ transaction and the _Capture_ transaction is settled.  The _Authorization_ transaction itself will not go through settlement process.
 
-A _Capture_ transaction can be reversed by issuing a _Refund_ or _Void_.
+**Reversal:** An _Authorization_ transaction cannot be reversed as processing a _Void_ transaction against the _Authorization_ transaction will not free up the reserved fund on the payment card.  To free up the reserved fund you would need to process a _Capture_ transaction and then _Void_ the captured amount.
 
-**NOTE:** Some gateways do not allow _Capture_ transactions with amounts greater than the original _Authorization_ amount. Please check with your gateway to see if that feature is available.
+### Capture (Ship)
+**Other Known Name(s):** _Delayed Capture_, _Ship_.
 
-#### Refund (Credit)
-A _Refund_ is issued to transfer money from the company’s account to the customer’s account or credit card. There are two types of _Refund_ transactions that you can issue: referenced _Refund_ and non-referenced _Refund_. A referenced _Refund_ occurs when you remove the payment line, or delete a sales document.  To create a non-referenced _Refund_ you need to create a brand new return document.  Some payment gateways allow for the reversal of a _Refund_ by issuing a _Void_ if that transaction has not yet been settled.  If the transaction has settled you will need to issue a _Sale_ to reverse the _Refund_.
+**Definition:** _Capture_ is a payment transaction type used to capture funds reserved by an approved _Authorization_ transaction. Under ordinary circumstances, a _Capture_ is assured approval as long as the amount is equal to or less than the original _Authorization_ amount and the _Capture_ transaction is sent before the _Authorization_ has expired. A _Capture_ results in an immediate charge to the customer’s credit card or account. If the _Capture_ is for less than the original _Authorization_ amount, the remainder reservation of the original authorized amount is released.
 
-When dealing with Gift Card, a _Refund_ is not supported.
+**Settlement:** Money will not be moved until settlement has occurred.
 
-**NOTE:** Some gateways do not allow non-referenced _Refund_ transactions to be processed.  Please check with your gateway to see if that feature is available.
+**Reversal:** A _Capture_ transaction can be reversed by a _Void_ transaction before settlement or by _Refund_ transaction after settlement.
 
-#### Force
-A _Force_ is used to enter an already approved authorization/transaction. A _Force_ is typically used for capturing a phone or voice authorization. When entering a _Force_ you will be required to enter the authorization code.  
+ > **Note:** Some gateways, processors, and card issuing banks do not allow _Capture_ transactions with amounts greater than the original _Authorization_ amount.
 
-A _Force_ transaction can be reversed by issuing a _Refund_ or a _Void_.
+### Refund (Credit)
+**Other Known Name(s):** _Credit_.
 
-When dealing with ACH or Gift Card, a _Force_ is not supported.
+**Definition:** _Refund_ is a payment transaction type to transfer money from merchant’s account back to its customer’s payment card (except gift cards) or bank account.  There are two types of _Refund_ transactions, referenced _Refund_ and non-referenced _Refund_. A referenced _Refund_ requires referencing an existing _Sale_ or _Capture_ transaction and issues the refund against the original payment method.  A non-referenced _Refund_ requires the transaction to specify the payment card or bank account that the refund should be issued to.   _Refund_ is not supported on gift cards.
 
-**NOTE:** Authorization code from the payment gateway is required to process _Force_ transactions. Cybersource gateway currently does not support _Force_ transaction type.
+**Reversal:** Some payment gateways allow for the reversal of a _Refund_ by a _Void_ transaction before settlement.  After settlement, you will need to charge for the fund again.
 
-#### Void
-A _Void_ is issued for an unsettled approved transaction. When a _Void_ is successfully issued, neither the Void nor the original transaction will appear on the customer’s statement. A _Void_ can only be issued against an unsettled transaction. When a _Void_ is sent, if the original transaction has already been settled, the _Void_ will be denied and a warning will be displayed. A Credit Card settled _Sale_ transaction must be reversed with a _Refund_.
+ > **Note:** Some gateways and processors do not allow non-referenced _Refund_ transactions.
 
-#### Verify
-A _Verify_ is used to validate credit card number. It's not a payment, PayFabric won't settle _Verify_ transactions, and unable to reverse _Verify_ transactions. 
-_Verify_ transaction only supports in Create Transaction/Update Transaction/Process Transaction APIs, it is not available in portal and hosted payment page.
-Only EVO gateway supports _Verify_ transaction with Credit Card payment method. PayFabric will set tranaction's Amount to 0.00 if anything other than 0.00 is passed through for _Verify_ transaction. 
+### Force
+**Other Known Name(s):** _Voice Authorization_.
 
-#### Activate
-An _Activate_ is used to activate a new Gift Card with an initial currency value. Gift Card accounts must be activated as their first transaction.  PayFabric only supports Gift Card in USD currency.
+**Definition:** A credit card _Sale_ transaction may fail with response message instructing the merchant to perform a voice authorization to process the transaction over the phone.  Once the voice authorization approves the _Sale_ transaction, an Authorization Code is issued over the phone, and a _Force_ transaction is used to enter the approved _Sale_ transaction into PayFabric.  When entering a _Force_ transaction, Authorization Code must be provided (`ReqAuthCode` node on the [Transaction object](https://github.com/PayFabric/APIs/blob/master/PayFabric/Sections/Objects.md#transaction)).  _Force_ transaction is not applicable and not support for ACH or gift cards.
 
-A Gift Card _Activate_ transaction can be reversed by issuing a _Void_.
+**Reversal:** Just as _Sale_ transactions, a _Force_ transaction can be reversed by a _Void_ transaction before settlement or by _Refund_ transaction after settlement.
 
-#### Reload
-A _Reload_ is used to add additional currency value to an existing Gift Card. PayFabric only supports Gift Card in USD currency.
+**Settlement:** Money will not be moved until settlement has occurred.
 
-A Gift Card _Reload_ transaction can be reversed by issuing a _Void_.
+### Void
+**Definition:** A _Void_ transaction is an action to reverse an approved payment transaction before it's settled.  When a _Void_ transaction is approved, neither the Void nor the original transaction will appear on the account-holder’s statement.  _Void_ transactions will be denied if processed against settled transactions.
+
+**Reversal:** You cannot reverse a _Void_ transaction.
+
+### Verify
+**Definition:** A _Verify_ transaction is an action to validate credit card number.  It is not a payment transaction, not applicable to settlements and transaction reversals.  Only EVO gateway supports the _Verify_ transaction type.  Any declared transaction amount will be ignored and all _Verify_ transactions will result with $0.00 transaction amount. 
+
+### Activate
+**Definition:** An _Activate_ transaction is an action to activate a new gift card with an initial fund. Gift card accounts must be activated as their first transaction.  PayFabric only supports gift cards in the USD currency.
+
+**Reversal:** An _Activate_ transaction can be reversed by a _Void_ transaction.
+
+### Reload
+**Definition:** A _Reload_ transaction is an action to add additional fund to an active gift card. PayFabric only supports gift cards in the USD currency.
+
+**Reversal:** A _Reload_ transaction can be reversed by a _Void_ transaction.
