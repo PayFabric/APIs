@@ -26,7 +26,7 @@ When submitting a [Transaction](Objects.md#transaction) developers can incorpora
       { "Name": "TaxAmount", "Value": "400.00" },
       { "Name": "ShipFromZip", "Value": "92806" },
       { "Name": "ShipToZip", "Value": "92806" },
-      { "Name": "OrderDate", "Value": "01/01/2014" },
+      { "Name": "OrderDate", "Value": "080423" }, //supports date formates like MMddyy and yyyy-MM-dd HH:mm:ss
       { "Name": "VATTaxAmount", "Value": "" },
       { "Name": "VATTaxRate", "Value": "" }
     ],
