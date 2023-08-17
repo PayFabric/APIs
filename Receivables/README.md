@@ -11,7 +11,7 @@ Where do I start?
 Want to get started with PayFabric Receivables API integration? Here's a quick check list:
 
 1. Sign-up and configure your own PayFabric Receivables site to be used with the APIs.
-    - For more information on using PayFabric Receivables please view the [User Guide](http://www.nodus.com/documentation/PayFabric-Receivables-User-Guide.pdf)
+    - For more information on using PayFabric Receivables please view the [User Guide](https://www.nodus.com/payfabric-receivables-user-guide/)
 2. Read up on which [API endpoint](#API-endpoints) to use. 
 3. Read up on how to [authenticate](#authentication) with the APIs. 
 4. Read up on how to [handle errors](#handling-exceptions) with the APIs.
