@@ -161,7 +161,7 @@ as child elements of other objects.
 * [`GET` Retrieve the Edit Wallet URL for PayFabric Hosted Page](Sections/APIs/API/PaymentMethods.md#retrieve-the-edit-wallet-url-for-payfabric-hosted-page)
 * [`GET` Retrieve the Create Wallet URL for PayFabric Hosted Page](Sections/APIs/API/PaymentMethods.md#retrieve-the-create-wallet-url-for-payfabric-hosted-page)
 * [`GET` Retrieve the Default Payment Method](Sections/APIs/API/PaymentMethods.md#retrieve-the-default-payment-method)
-* ~~[`GET` Retrieve Payment Checkout Page URL](Sections/APIs/API/PaymentMethods.md#retrieve-payment-checkout-page-url)~~ (Deprecated)
+* ~~[`GET` Retrieve Payment Checkout Page URL](Sections/APIs/API/PaymentMethods.md#retrieve-payment-checkout-page-url-deprecated)~~ (Deprecated)
 * [`GET` Retrieve Payment Methods Paging](Sections/APIs/API/PaymentMethods.md#retrieve-payment-methods-paging)
 * [`GET` Retrieve TenderType Enabling on Wallet Page](Sections/APIs/API/PaymentMethods.md#retrieve-tendertype-enabling-on-wallet-page)
 * [`GET` Retrieve the View Wallet URL for PayFabric Hosted Page](Sections/APIs/API/PaymentMethods.md#retrieve-the-view-wallet-url-for-payfabric-hosted-page)
