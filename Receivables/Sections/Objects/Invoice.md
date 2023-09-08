@@ -30,7 +30,7 @@ This object is used when creating or updating an invoice record on the PayFabric
 | PaymentTerms | String | N | Payment terms | 50 |
 | PONumber | String | N | Purchase order number | 50 |
 | PostingDate | DateTime | N | Date that the invoice was posted. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" |  |
-| SalesPerson | String | N | Associated salesperson | 4000 |
+| SalesPerson | String | N | Associated salesperson | 50 |
 | SendNewInvoiceEmail | String | N | Indicates if the new invoice email should be sent. Valid options are ``Yes`` and ``No`` | 3 |
 | ShippingAddress | [Object](Address.md#AddressPost) | N | Shipping address object |  |
 | ShippingMethod | String | N | Shipping method | 50 |
