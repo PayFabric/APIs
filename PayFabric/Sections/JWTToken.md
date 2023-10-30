@@ -61,7 +61,7 @@ Create JSON Web Tokens for [Mobile Hosted Payment Page](MRHPP.md)
 
 Please note that **bold** fields are required fields, in this API, the two fields are all required. For more information and descriptions on available fields please see our [object reference](Objects.md#json-web-tokens).
 
-Create JSON Web Tokens for [Mobile Hosted Create Wallet Page](MRHPP.md#create-a-credit-card--echeck)
+Create JSON Web Tokens for [Mobile Hosted Create Wallet Page](MRHWP.md#create-a-credit-card--echeck)
 ---------------------------
 
 * `POST /payment/api/jwt/create` will create the jwt token
@@ -97,7 +97,7 @@ Create JSON Web Tokens for [Mobile Hosted Create Wallet Page](MRHPP.md#create-a-
 }	
 </pre>
 
-Create JSON Web Tokens for [Mobile Hosted Edit Wallet Page](MRHPP.md#edit-a-credit-card--echeck)
+Create JSON Web Tokens for [Mobile Hosted Edit Wallet Page](MRHWP.md#edit-a-credit-card--echeck)
 ---------------------------
 
 * `POST /payment/api/jwt/create` will create the jwt token
