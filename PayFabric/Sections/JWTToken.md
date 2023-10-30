@@ -6,7 +6,7 @@ The PayFabric JSON Web Tokens API is used to authentication for the new mobile h
 
 These JWT's are intended to be used to indicate your `Payment Intent`.
 
-Create JSON Web Tokens for [Mobile Hosted Payment Page](MRHPP.md)
+Create JSON Web Tokens for Mobile Hosted Payment Page
 ---------------------------
 
 * `POST /payment/api/jwt/create` will create the jwt token
@@ -61,7 +61,7 @@ Create JSON Web Tokens for [Mobile Hosted Payment Page](MRHPP.md)
 
 Please note that **bold** fields are required fields, in this API, the two fields are all required. For more information and descriptions on available fields please see our [object reference](Objects.md#json-web-tokens).
 
-Create JSON Web Tokens for [Mobile Hosted Create Wallet Page](MRHWP.md#create-a-credit-card--echeck)
+Create JSON Web Tokens for Mobile Hosted Create Wallet Page
 ---------------------------
 
 * `POST /payment/api/jwt/create` will create the jwt token
@@ -97,7 +97,7 @@ Create JSON Web Tokens for [Mobile Hosted Create Wallet Page](MRHWP.md#create-a-
 }	
 </pre>
 
-Create JSON Web Tokens for [Mobile Hosted Edit Wallet Page](MRHWP.md#edit-a-credit-card--echeck)
+Create JSON Web Tokens for Mobile Hosted Edit Wallet Page
 ---------------------------
 
 * `POST /payment/api/jwt/create` will create the jwt token
