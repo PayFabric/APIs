@@ -59,8 +59,6 @@ Create JSON Web Tokens for Mobile Hosted Payment Page
 }
 </pre>
 
-Please note that **bold** fields are required fields, in this API, the two fields are all required. For more information and descriptions on available fields please see our [object reference](Objects.md#json-web-tokens).
-
 Create JSON Web Tokens for Mobile Hosted Create Wallet Page
 ---------------------------
 
@@ -106,8 +104,8 @@ Create JSON Web Tokens for Mobile Hosted Edit Wallet Page
 ###### Request
 <pre>
 {
-    "Audience":"EditWalletPage",
-    "Subject":"81d824cb-4032-4532-bd18-0a2ef5ddcafc"
+   <b>"Audience"</b>:"EditWalletPage",
+   <b>"Subject"</b>:"81d824cb-4032-4532-bd18-0a2ef5ddcafc"
 }
 </pre>
 ###### Response
@@ -131,6 +129,8 @@ Create JSON Web Tokens for Mobile Hosted Edit Wallet Page
     "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQYXlGYWJyaWNfVjMiLCJpYXQiOiIxNjk4NjU0NjE1IiwiZXhwIjoiMTY5ODY1NTUxNSIsImF1ZCI6IkVkaXRXYWxsZXRQYWdlIiwic3ViIjoiODFkODI0Y2ItNDAzMi00NTMyLWJkMTgtMGEyZWY1ZGRjYWZjIiwiaW5zdCI6ImYyNDJiZDZkLTdhMjMtNDFkNy1hMTJlLTQ2NDI3Y2U0ZWJhNCIsImRldmljZSI6IjcyOTcyYTJiLThhNzEtNGUyOS1hZWFiLTFjNDE4YjEzNjg2OSIsImRjbiI6IjEiLCJzdXBwb3J0ZWRQYXltZW50TWV0aG9kcyI6W10sInN1cHBvcnRlZFdhbGxldFRlbmRlclR5cGVzIjpbIkVDaGVjayJdfQ.erOSepdA7aqKd9oUBctVpmIxj3g9GXqzQqD3lcCgErE"
 }
 </pre>
+
+Please note that **bold** fields are required fields, in this API, the two fields are all required. For more information and descriptions on available fields please see our [object reference](Objects.md#json-web-tokens).
 
 Validate JSON Web Tokens
 ---------------------------
