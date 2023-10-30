@@ -6,7 +6,7 @@ The PayFabric JSON Web Tokens API is used to authentication for the new mobile h
 
 These JWT's are intended to be used to indicate your `Payment Intent`.
 
-Create JSON Web Tokens
+Create JSON Web Tokens for [Mobile Hosted Payment Page](MRHPP.md)
 ---------------------------
 
 * `POST /payment/api/jwt/create` will create the jwt token
@@ -60,6 +60,77 @@ Create JSON Web Tokens
 </pre>
 
 Please note that **bold** fields are required fields, in this API, the two fields are all required. For more information and descriptions on available fields please see our [object reference](Objects.md#json-web-tokens).
+
+Create JSON Web Tokens for [Mobile Hosted Create Wallet Page](MRHPP.md#create-a-credit-card--echeck)
+---------------------------
+
+* `POST /payment/api/jwt/create` will create the jwt token
+* Set `Audience` to "CreateWalletPage.
+* Set `Subject` to a Customer name
+###### Request
+<pre>
+{
+	<b>"Audience"</b>:"CreateWalletPage",
+	<b>"Subject"</b>:"Sample Customer Name"
+}
+</pre>
+###### Response
+<pre>
+{
+    "Message": "",
+    "Payload": {
+        "aud": "CreateWalletPage",
+        "dcn": "1",
+        "device": "8d36dae9-312d-48fa-ad5c-fb1f6e9ad3e0",
+        "exp": "1698655330",
+        "iat": "1698654430",
+        "inst": "530fdb82-7309-40e1-a85c-531f6f8b1a6a",
+        "iss": "PayFabric_V3",
+        "sub": "Sample Customer Name",
+        "supportedPaymentMethods": [],
+        "supportedWalletTenderTypes": [
+            "CreditCard",
+            "ECheck"
+        ]
+    },
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQYXlGYWJyaWNfVjMiLCJpYXQiOiIxNjk4NjU0NDMwIiwiZXhwIjoiMTY5ODY1NTMzMCIsImF1ZCI6IkNyZWF0ZVdhbGxldFBhZ2UiLCJzdWIiOiJhYmMiLCJpbnN0IjoiNTMwZmRiODItNzMwOS00MGUxLWE4NWMtNTMxZjZmOGIxYTZhIiwiZGV2aWNlIjoiOGQzNmRhZTktMzEyZC00OGZhLWFkNWMtZmIxZjZlOWFkM2UwIiwiZGNuIjoiMSIsInN1cHBvcnRlZFBheW1lbnRNZXRob2RzIjpbXSwic3VwcG9ydGVkV2FsbGV0VGVuZGVyVHlwZXMiOlsiQ3JlZGl0Q2FyZCIsIkVDaGVjayJdfQ.VrAdF2ehspqJiAq_mpyihAmYHgCjobHObc51YCk4NkM"
+}	
+</pre>
+
+Create JSON Web Tokens for [Mobile Hosted Edit Wallet Page](MRHPP.md#edit-a-credit-card--echeck)
+---------------------------
+
+* `POST /payment/api/jwt/create` will create the jwt token
+* Set `Audience` to "EditWalletPage.
+* Set `Subject` to a [Wallet ID](Wallets.md#create-a-credit-card)
+###### Request
+<pre>
+{
+    "Audience":"EditWalletPage",
+    "Subject":"81d824cb-4032-4532-bd18-0a2ef5ddcafc"
+}
+</pre>
+###### Response
+<pre>
+	{
+    "Message": "",
+    "Payload": {
+        "aud": "EditWalletPage",
+        "dcn": "1",
+        "device": "72972a2b-8a71-4e29-aeab-1c418b136869",
+        "exp": "1698655515",
+        "iat": "1698654615",
+        "inst": "f242bd6d-7a23-41d7-a12e-46427ce4eba4",
+        "iss": "PayFabric_V3",
+        "sub": "81d824cb-4032-4532-bd18-0a2ef5ddcafc",
+        "supportedPaymentMethods": [],
+        "supportedWalletTenderTypes": [
+            "ECheck"
+        ]
+    },
+    "Token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQYXlGYWJyaWNfVjMiLCJpYXQiOiIxNjk4NjU0NjE1IiwiZXhwIjoiMTY5ODY1NTUxNSIsImF1ZCI6IkVkaXRXYWxsZXRQYWdlIiwic3ViIjoiODFkODI0Y2ItNDAzMi00NTMyLWJkMTgtMGEyZWY1ZGRjYWZjIiwiaW5zdCI6ImYyNDJiZDZkLTdhMjMtNDFkNy1hMTJlLTQ2NDI3Y2U0ZWJhNCIsImRldmljZSI6IjcyOTcyYTJiLThhNzEtNGUyOS1hZWFiLTFjNDE4YjEzNjg2OSIsImRjbiI6IjEiLCJzdXBwb3J0ZWRQYXltZW50TWV0aG9kcyI6W10sInN1cHBvcnRlZFdhbGxldFRlbmRlclR5cGVzIjpbIkVDaGVjayJdfQ.erOSepdA7aqKd9oUBctVpmIxj3g9GXqzQqD3lcCgErE"
+}
+</pre>
 
 Validate JSON Web Tokens
 ---------------------------
