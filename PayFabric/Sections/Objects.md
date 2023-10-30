@@ -230,8 +230,8 @@ A Gateway Account Profile is the account information of a single Payment Gateway
 
 | Attribute       | DataType| Definition|
 | :-----------    |:---------| :---------| 
-| Audience              | string   | The `Intent` that this JWT will be used for.  As of initial release of this feature, we only accept 'PaymentPage' for now. | 
-| Subject            | String | The record or entity that the `Intent` will be targeting.<br/><br/>**PaymentPage** expects a Transaction Key created by the Create a Transaction API. |
+| Audience              | string   | The `Intent` that this JWT will be used for.  The available values are 'PaymentPage', 'CreateWalletPage', and 'EditWalletPage'. | 
+| Subject            | String | The record or entity that the `Intent` will be targeting.<br/><br/>**PaymentPage** expects a Transaction Key created by the Create a Transaction API. <br/><br/>**CreateWalletPage** expects a Customer Name. <br/><br/>**EditWalletPage** expects a Wallet ID. |
 
 
 
