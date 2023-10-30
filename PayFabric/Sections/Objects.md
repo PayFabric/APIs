@@ -29,8 +29,8 @@ PayFabric encrypts the attributes "DriverLicense" and "SSN" before storing them.
 | Attribute  | Data Type| Definition|Max Length|
 | :-----------|:---------| :---------|:---------|
 | DriverLicense   | String | Driver license  | varchar(32)|
-| FirstName*      | String | First name |nvarchar(64)|
-| LastName*       | String | Last name| nvarchar(64)| 
+| FirstName      | String | First name |nvarchar(64)|
+| LastName       | String | Last name| nvarchar(64)| 
 | MiddleName      | String | Middle name|nvarchar(64)|  
 | SSN             | String | Social security number| varchar(16)| 
 
