@@ -313,7 +313,7 @@ Search for Future Dated Transactions
 
 Search Transactions with filters
 -------------------------------------
-* `GET /payment/3.1/api/transaction/Transactions?pageSize=13&pageidx=1&fromAmount=0&toAmount=2&CustomerNo=24023905&EntryMode=API&Status=Approved&Tender=CreditCard&fromDate=2023-9-7&toDate=2023-10-24&TransactionState=Settled&Type=Sale&gatewayname=EvoSnapNoSurcharge&firstname=defaultfn&lastname=defaultln&AccountNo=8456` Get a list of transactions based on the specified filters. The max from-date and to-date range is 6 months.
+* `GET /payment/3.1/api/transaction/Transactions?pageSize=13&pageidx=1` Get a list of transactions based on the specified filters. The max from-date and to-date range is 6 months.
 
 ###### Response
 <pre>
@@ -570,3 +570,19 @@ Search Transactions with filters
     }
 }
 </pre>
+
+Available Query Strings
+--------------------
+|QueryString|Description|
+|pageSize||
+|pageidx||
+|fromAmount||
+|toAmount||
+|CardValidationType||
+|DeviceName||
+|Status||
+|Tender||
+|fromDate||
+|toDate||
+|TransactionState||
+|TransactionKey||
