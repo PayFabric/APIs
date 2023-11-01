@@ -55,7 +55,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | IsSaveCard      | Boolean | Indicates whether to save this card in the customer's wallet. If set this field as true, PayFabric will check the existence for the new wallet, if existing, return the existing wallet ID, assign it the new wallet object, then do the update wallet workflow if the transaction approved. This attribute is only valid and should only be included in the object when using [Create a Transaction](Transactions.md#create-a-transaction) and [Create and Process a Transaction](Transactions.md#create-and-process-a-transaction). And it will be set to false automatically for _Verify_ transactions or transactions with Tender set to `ApplePay` or `GooglePay`.|  
 | ModifiedOn      | string | This is a response field. It indicates the current wallet last modified date time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
 |ModifiedOnUTC|String|This is a response field. It indicates the current wallet last modified date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
-| CardHolder*      | [Object](#cardholder) | Cardholder object. |  
+| CardHolder      | [Object](#cardholder) | Cardholder object. |  
 | Billto          | [Object](#address) | Address object. | 
 | Identifier      | String | A client-defined identifier for this card. Developer can send a flag value to identify this card |  nvarchar(32)|
 | UserDefine1    | String | User-defined field 1. Developer can store additional data in this field. |nvarchar(256)|  
@@ -72,6 +72,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | LastUsedDate      | string | This is a response field. It indicates the current wallet last used date time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
 |LastUsedDateUTC|String|This is a response field. It indicates the current wallet last used date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
 |CardHolderAccountInfo|[Object](#cardholderaccountinfo)|This is an optional object to create wallet, provide ability for merchant to submit additional card holder account info when merchant enables Fraud and enables credit card validation.|
+|TrxInitiation|Array of string|This field specifies who initiates the wallet creation/updating, available values are 'Merchant' and 'Customer'. |nvarchar(10)|
 
 \* Required
 
