@@ -273,7 +273,7 @@ Search for Future Dated Transactions
 |AccountNo |Int| This filter is to retrieve transactions that the last 4 digits of the card number equal to the value specified in AccountNo.|
 |CustomerNo |string| This filter is to retrieve the transactions that belong to the specified customer.|
 |DeviceName |string| This filter is to retrieve the transactions that are processed by the specified device name.|
-|EntryMode |Array of string| This filter is to retrieve the transactions whose EntryMode is equal to the value specified in EntryMode. Available Values are ‘HostedPage’, ‘LegacyVT’, ‘ModernVT’, ‘MRHPP’, ‘API’, ‘TerminalMSR’, ‘TerminalContactless’, ‘TerminalScanner’, ‘TerminalChip’, ‘TerminalChipfallbackMSR’, ‘TerminalManual’ and ‘TerminalFailure’|
+|EntryMode |Array of string| This filter is to retrieve the transactions whose EntryMode is equal to the value specified in EntryMode. Available Values are ‘HostedPage’, ‘LegacyVT’, ‘ModernVT’, ‘MRHostedPage’, ‘API’, ‘TerminalMSR’, ‘TerminalContactless’, ‘TerminalScanner’, ‘TerminalChip’, ‘TerminalChipfallbackMSR’, ‘TerminalManual’ and ‘TerminalFailure’|
 |gatewayname |string| This filter is to retrieve the transactions that are processed via the specified gateway.|
 |Type |Array of string| This filter is to retrieve the transactions whose transaction type is equal to the value specified in Type. Available Values are ‘Sale’, ‘Authorization’, ‘Refund’, ‘Capture’, ‘Void’, ‘Reload’, ‘Activate’, ‘Force’, and ‘Verify’. |
 |firstname |string| This filter is to retrieve the transactions whose linked cardholder's first name is equal to the value specified in firstname.|
