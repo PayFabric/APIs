@@ -264,7 +264,7 @@ Search for Future Dated Transactions
 |fromAmount |Decimal| This filter is to retrieve the transactions that amount greater than or equal to the value specified in fromAmount.|
 |toAmount |Decimal| This filter is to retrieve the transactions whose amount is less than the value specified in toAmount.|
 |fromDate |Date| This filter is to retrieve the transactions that the processed date is after or equal to the date specified in fromDate.|
-|toDate |Date| This filter is to retrieve the transactions whose processed-date is before or equal to the date specified in toDate.|
+|toDate |Date| This filter is to retrieve the transactions whose processed date is before or equal to the date specified in toDate.|
 |CardValidationType |Array of string| This filter is to retrieve the transactions that CardValidationType is equal to the value specified in CardValidationType. Available Values are ‘CreditCard’, ‘PrepaidCard’, ‘DebitCard’. |
 |Status |Array of string| This filter is to retrieve the transactions whose Status is equal to the value specified in Status. Available Values are ‘Approved’, ‘Denied’, ‘MoreInfo’, ‘Failure’, ‘AVSFailure’, ‘ThreeDSChallenge’ and ‘FraudReject’. |
 |TransactionState |Array of string| This filter is to retrieve the transactions whose TransactionState is equal to the value specified in TransactionState. Available Values are ‘Pending Settlement’, ‘Pending Capture’, ‘Settled’, ‘Captured’, ‘Returned’, ‘Voided’ and ‘Partially Captured’. |
@@ -273,7 +273,7 @@ Search for Future Dated Transactions
 |AccountNo |Int| This filter is to retrieve transactions that the last 4 digits of the card number equal to the value specified in AccountNo.|
 |CustomerNo |string| This filter is to retrieve the transactions that belong to the specified customer.|
 |DeviceName |string| This filter is to retrieve the transactions that are processed by the specified device name.|
-|EntryMode |Array of string| This filter is to retrieve the transactions whose EntryMode is equal to the value specified in EntryMode. Available Values are ‘Hosted Page’, ‘Legacy VT’, ‘Modern VT’, ‘MRHPP’, ‘API’, ‘Terminal MSR’, ‘Terminal Contactless’, ‘Terminal Scanner’, ‘Terminal Chip’, ‘Terminal Chip fall back MSR’, ‘Terminal Manual’ and ‘Terminal Failure’|
+|EntryMode |Array of string| This filter is to retrieve the transactions whose EntryMode is equal to the value specified in EntryMode. Available Values are ‘HostedPage’, ‘LegacyVT’, ‘ModernVT’, ‘MRHPP’, ‘API’, ‘TerminalMSR’, ‘TerminalContactless’, ‘TerminalScanner’, ‘TerminalChip’, ‘TerminalChipfallbackMSR’, ‘TerminalManual’ and ‘TerminalFailure’|
 |gatewayname |string| This filter is to retrieve the transactions that are processed via the specified gateway.|
 |Type |Array of string| This filter is to retrieve the transactions whose transaction type is equal to the value specified in Type. Available Values are ‘Sale’, ‘Authorization’, ‘Refund’, ‘Capture’, ‘Void’, ‘Reload’, ‘Activate’, ‘Force’, and ‘Verify’. |
 |firstname |string| This filter is to retrieve the transactions whose linked cardholder's first name is equal to the value specified in firstname.|
