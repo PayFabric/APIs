@@ -277,7 +277,7 @@ Search for Future Dated Transactions
 |gatewayname |string| This filter is to retrieve the transactions that are processed via the specified gateway.|
 |Type |Array of string| This filter is to retrieve the transactions whose transaction type is equal to the value specified in Type. Available Values are ‘Sale’, ‘Authorization’, ‘Refund’, ‘Capture’, ‘Void’, ‘Reload’, ‘Activate’, ‘Force’, and ‘Verify’. |
 |firstname |string| This filter is to retrieve the transactions whose linked cardholder's first name is equal to the value specified in firstname.|
-|lastname |string| This filter is to retrieve the transactions whose linked cardholder's first name is equal to the value specified in lastname.|
+|lastname |string| This filter is to retrieve the transactions whose linked cardholder's last name is equal to the value specified in lastname.|
 
 
 
