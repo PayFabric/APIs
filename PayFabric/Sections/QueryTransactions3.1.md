@@ -260,7 +260,24 @@ Search for Future Dated Transactions
 | :-----------|:---------| :---------| 
 | pageSize         | Int | Specifies the returned page size. The default and Maximum is 15. |
 |pageIdx|Int|Specifies the returned page index. Default to 1.|
-|fromAmount|Decimal||
+|fromAmount|Decimal|If add this query, then will search the transactions that amount greater than or equal to the value specified in fromAmount.|
+|toAmount|Decimal|If add this query, then will search the transactions that amount less than the value specified in toAmount.|
+|fromDate|Date|If add this query, then will search the transactions that the processed date is after or equal to the date specified in fromDate.|
+|toDate|Date|If add this query, then will search the transactions that processed-date is before or equal to the date specified in toDate.|
+|CardValidationType|Array of string|If add this query, then will search the transactions that CardValidationType is equal to the value specified in CardValidationType.|
+|Status|Array of string|If add this query, then will search the transactions whose Status is equal to the value specified in Status.|
+|TransactionState|Array of string|If add this query, then will search the transactions whose TransactionState is equal to the value specified in TransactionState.|
+|TransactionKey|string|If add this query, then will search a single transaction by transaction key.|
+|AccountNo|Int|If add this query, then will search transactions that the last 4 digits of the card number equal to the value specified in AccountNo.|
+|CustomerNo|string|If add this query, then will search the transactions that belong to the specified customer.|
+|DeviceName|string|If add this query, then will search the transactions that are processed by the specified device name.|
+|EntryMode|Array of string|If add this query, then will search the transactions whose EntryMode is equal to the value specified in EntryMode.|
+|gatewayname|string|If add this query, then will search the transactions that are processed via the specified gateway.|
+|Type|Array of string|If add this query, then will search the transactions whose transaction type is equal to the value specified in Type.|
+|firstname|string|If add this query, then will search the transactions whose linked cardholder's first name is equal to the value specified in firstname.|
+|lastname|string|If add this query, then will search the transactions whose linked cardholder's first name is equal to the value specified in lastname.|
+
+
 
 
 
