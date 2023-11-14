@@ -104,7 +104,7 @@ as child elements of other objects.
 
 ### Query Transactions
 * [Search for Future Dated Transactions](/PayFabric/Sections/ScheduledTransaction.md#search-for-future-dated-transactions)
-* [Search Transactions](/PayFabric/Sections/SearchTransaction.md#search-transactions)
+* [Search Transactions With Filters](/PayFabric/Sections/QueryTransactions3.1.md#query-transactions-with-filters)
 
 ### Custom Reports
 * [Get Custom Reports](/PayFabric/Sections/CustomReports.md#get-custom-reports)
