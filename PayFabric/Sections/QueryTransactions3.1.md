@@ -270,7 +270,6 @@ Search for Future Dated Transactions
 |TransactionState |Array of string| This filter is to retrieve the transactions whose TransactionState is equal to the value specified in TransactionState. Available Values are ‘Pending Settlement’, ‘Pending Capture’, ‘Settled’, ‘Captured’, ‘Returned’, ‘Voided’ and ‘Partially Captured’. |
 |Tender |Array of string| This filter is to retrieve the transactions whose tender is equal to the value specified in Tender. Available Values are ‘CreditCard’, ‘ECheck’, ‘DebitCard’, ‘PayPal’, ‘ApplePay’, ‘GooglePay’, and ‘GiftCard’. |
 |TransactionKey |string| This filter is to retrieve a single transaction by transaction key.|
-|AccountNo |Int| This filter is to retrieve transactions that the last 4 digits of the card number equal to the value specified in AccountNo.|
 |CustomerNo |string| This filter is to retrieve the transactions that belong to the specified customer.|
 |DeviceName |string| This filter is to retrieve the transactions that are processed by the specified device name.|
 |EntryMode |Array of string| This filter is to retrieve the transactions whose EntryMode is equal to the value specified in EntryMode. Available Values are ‘HostedPage’, ‘LegacyVT’, ‘ModernVT’, ‘MRHostedPage’, ‘API’, ‘TerminalMSR’, ‘TerminalContactless’, ‘TerminalScanner’, ‘TerminalChip’, ‘TerminalChipfallbackMSR’, ‘TerminalManual’ and ‘TerminalFailure’|
