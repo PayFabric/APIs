@@ -72,7 +72,7 @@ The Card object represents a Credit Card or eCheck of a customer.
 | LastUsedDate      | string | This is a response field. It indicates the current wallet last used date time in merchant [Timezone](https://github.com/PayFabric/Portal/blob/master/PayFabric/Sections/Timezone.md). It's format should like "3/23/2015 11:16:19 PM". | datetime, not null| 
 |LastUsedDateUTC|String|This is a response field. It indicates the current wallet last used date time in UTC. It's format should like "2021-03-30T07:22:28.206Z". | datetime, not null|
 |CardHolderAccountInfo|[Object](#cardholderaccountinfo)|This is an optional object to create wallet, provide ability for merchant to submit additional card holder account info when merchant enables Fraud and enables credit card validation.|
-|TrxInitiation|Array of string|This field specifies who initiates the wallet creation/updating, available values are 'Merchant' and 'Customer'. |nvarchar(10)|
+|TrxInitiation|string|This field specifies who initiates the wallet creation/updating, available values are 'Merchant' and 'Customer'. |nvarchar(10)|
 
 \* Required
 
