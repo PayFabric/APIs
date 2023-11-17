@@ -102,8 +102,9 @@ as child elements of other objects.
 * [Delete Batch](/PayFabric/Sections/Batches.md#delete-batch)
 * [Search by Batch Number](/PayFabric/Sections/Batches.md#search-by-batch-number)
 
-### Scheduled Transactions
+### Query Transactions
 * [Search for Future Dated Transactions](/PayFabric/Sections/ScheduledTransaction.md#search-for-future-dated-transactions)
+* [Search Transactions With Filters](/PayFabric/Sections/QueryTransactions3.1.md#query-transactions-with-filters)
 
 ### Custom Reports
 * [Get Custom Reports](/PayFabric/Sections/CustomReports.md#get-custom-reports)

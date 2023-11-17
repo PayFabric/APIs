@@ -42,6 +42,7 @@ Create a new credit card wallet record.
   },
   <b>"Customer": "JOHNDOE0001"</b>,
   <b>"ExpDate": "0918"</b>,
+  "TrxInitiation": "Merchant",
   "GPAddressCode": "",
   "GatewayToken": "",
   "Identifier": "",
