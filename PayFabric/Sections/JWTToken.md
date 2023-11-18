@@ -64,12 +64,12 @@ Create JSON Web Tokens for Mobile Hosted Create Wallet Page
 
 * `POST /payment/api/jwt/create` will create the jwt token
 * Set `Audience` to "CreateWalletPage.
-* Set `Subject` to a Customer name
+* Set `Subject` to a Customer Number
 ###### Request
 <pre>
 {
 	<b>"Audience"</b>:"CreateWalletPage",
-	<b>"Subject"</b>:"Sample Customer Name"
+	<b>"Subject"</b>:"Sample Customer Number"
 }
 </pre>
 ###### Response
