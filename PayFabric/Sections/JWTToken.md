@@ -69,7 +69,7 @@ Create JSON Web Tokens for Mobile Hosted Create Wallet Page
 <pre>
 {
 	<b>"Audience"</b>:"CreateWalletPage",
-	<b>"Subject"</b>:"Sample Customer Number"
+	<b>"Subject"</b>:"CUST0001"
 }
 </pre>
 ###### Response
@@ -84,7 +84,7 @@ Create JSON Web Tokens for Mobile Hosted Create Wallet Page
         "iat": "1698654430",
         "inst": "530fdb82-7309-40e1-a85c-531f6f8b1a6a",
         "iss": "PayFabric_V3",
-        "sub": "Sample Customer Number",
+        "sub": "CUST0001",
         "supportedPaymentMethods": [],
         "supportedWalletTenderTypes": [
             "CreditCard",
