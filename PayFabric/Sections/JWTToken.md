@@ -64,12 +64,12 @@ Create JSON Web Tokens for Mobile Hosted Create Wallet Page
 
 * `POST /payment/api/jwt/create` will create the jwt token
 * Set `Audience` to "CreateWalletPage.
-* Set `Subject` to a Customer name
+* Set `Subject` to a Customer Number
 ###### Request
 <pre>
 {
 	<b>"Audience"</b>:"CreateWalletPage",
-	<b>"Subject"</b>:"Sample Customer Name"
+	<b>"Subject"</b>:"CUST0001"
 }
 </pre>
 ###### Response
@@ -84,7 +84,7 @@ Create JSON Web Tokens for Mobile Hosted Create Wallet Page
         "iat": "1698654430",
         "inst": "530fdb82-7309-40e1-a85c-531f6f8b1a6a",
         "iss": "PayFabric_V3",
-        "sub": "Sample Customer Name",
+        "sub": "CUST0001",
         "supportedPaymentMethods": [],
         "supportedWalletTenderTypes": [
             "CreditCard",
