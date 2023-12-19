@@ -7,15 +7,15 @@ This object is used when creating or updating an invoice record on the PayFabric
 
 | Attribute | Data Type | Required | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- | :--------- |
-| Amount | Decimal | Y | Total invoice amount in the functional currency  | 19, 5 |
-| BalanceDue | Decimal | Y | Total balance due in the functional currency | 19, 5 |
+| Amount | Decimal | Y | Total invoice amount  | 19, 5 |
+| BalanceDue | Decimal | Y | Total balance due | 19, 5 |
 | BatchNumber | String | N | Batch number | 50 |
 | BillingAddress | [Object](Address.md#AddressPost) | N | Billing address object | 
 | Comments | String | N | Additional comments | 500 |
 | CopyEmail | Array of Strings | N | CC'd recipients to be used in e-mail notifications regarding an individual invoice | 1000 |
 | Currency | String | N | Currency code | 10 |
 | CustomerId | String | Y | Customer ID specified by the client | 50 |
-| Discount | Decimal | N | Total discount in the functional currency | 19, 5 |
+| Discount | Decimal | N | Total discount | 19, 5 |
 | DocumentType | String | N | Document type identifier | 50 |
 | Email | String | N | Recipient to be used in e-mail notifications regarding an individual invoice, must be a single valid email address | 255 |
 | DueDate | DateTime | N | Timestamp indicating when this document is due. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" |  |
@@ -47,8 +47,8 @@ This object is used when retrieving an invoice using the PayFabric Receivables S
 
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
-| Amount | Decimal | Total invoice amount in the functional currency  | 19, 5 |
-| BalanceDue | Decimal | Total balance due in the functional currency | 19, 5 |
+| Amount | Decimal | Total invoice amount  | 19, 5 |
+| BalanceDue | Decimal | Total balance due | 19, 5 |
 | BatchNumber | String | Batch number | 50 |
 | BillingAddress | [Object](Address.md#AddressResponse) | Billing address object |
 | Comments | String | Additional comments | 500 |
@@ -57,7 +57,7 @@ This object is used when retrieving an invoice using the PayFabric Receivables S
 | CustomerBillingAddressId | String | Billing Address ID | 50 |
 | CustomerId | String | Customer ID specified by the client | 50 |
 | CustomerShippingAddressId | String | Shipping Address ID | 50 |
-| Discount | Decimal | Total discount in the functional currency | 19, 5 |
+| Discount | Decimal | Total discount | 19, 5 |
 | DocumentType | String | Document type identifier | 50 |
 | Email | String | Recipient to be used in e-mail notifications regarding an individual invoice, must be a single valid email address | 255 |
 | DueDate | DateTime | Timestamp indicating when this document is due. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" |  |
@@ -87,13 +87,13 @@ This object is used when retrieving an invoice using the PayFabric Receivables W
 
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
-| Amount | Decimal | Total invoice amount in the functional currency  | 19, 5 |
-| BalanceDue | Decimal | Total balance due in the functional currency | 19, 5 |
+| Amount | Decimal | Total invoice amount  | 19, 5 |
+| BalanceDue | Decimal | Total balance due | 19, 5 |
 | BatchNumber | String | Batch number | 50 |
 | CopyEmail | Array of Strings | CC'd recipients to be used in e-mail notifications regarding an individual invoice | 1000 |
 | Currency | [Object](Currency.md#currencyresponse) | Currency object |  |
 | CustomerId | String | Customer ID specified by the client | 50 |
-| DiscountAmount | Decimal | Total discount in the functional currency | 19, 5 |
+| DiscountAmount | Decimal | Total discount | 19, 5 |
 | DiscountDate | DateTime | Discount date |  |
 | DocumentType | String | Document type identifier | 50 |
 | Email | String | Recipient to be used in e-mail notifications regarding an individual invoice, must be a single valid email address | 255 |

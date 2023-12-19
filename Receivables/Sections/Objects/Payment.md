@@ -7,8 +7,8 @@ This object is used when creating a payment on the PayFabric Receivables website
 
 | Attribute | Data Type | Required | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- | :--------- |
-| Amount | Decimal | N | Total payment amount in the functional currency  | 19, 5 |
-| BalanceAmount | Decimal | N | Total balance amount in the functional currency | 19, 5 |
+| Amount | Decimal | N | Total payment amount  | 19, 5 |
+| BalanceAmount | Decimal | N | Total balance amount | 19, 5 |
 | BatchNumber | String | N | Batch number | 50 |
 | CCNumber | String | N | Credit card number | 25 |
 | CheckNumber | String | N | Check number used | 25 |
@@ -29,8 +29,8 @@ This object is used when updating an existing payment on the PayFabric Receivabl
 
 | Attribute | Data Type | Required | Definition | Max Length |
 | :----------- | :--------- | :---------  | :--------- | :--------- |
-| Amount | Decimal | N | Total payment amount in the functional currency  | 19, 5 |
-| BalanceAmount | Decimal | N | Total balance amount in the functional currency | 19, 5 |
+| Amount | Decimal | N | Total payment amount  | 19, 5 |
+| BalanceAmount | Decimal | N | Total balance amount | 19, 5 |
 | BatchNumber | String | N | Batch number | 50 |
 | CCNumber | String | N | Credit card number | 25 |
 | CheckNumber | String | N | Check number used | 25 |
@@ -50,9 +50,9 @@ This object is used when getting a payment on the PayFabric Receivables website.
 
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
-| Amount | Decimal | Total payment amount in the functional currency  | 19, 5 |
+| Amount | Decimal | Total payment amount  | 19, 5 |
 | AppliedAmount | Decimal | Payment amount applied to invoices | 19, 5 |
-| BalanceAmount | Decimal | Total balance amount in the functional currency | 19, 5 |
+| BalanceAmount | Decimal | Total balance amount | 19, 5 |
 | BatchNumber | String | Batch number | 50 |
 | Canceled | Boolean | Indicates if the payment is canceled |  |
 | CCNumber | String | Credit card number | 25 |

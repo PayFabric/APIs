@@ -10,7 +10,7 @@ The item object represents an item to be used when creating invoices on the PayF
 | Description | String | N | Description of the item | 100 |
 | ID | String | Y | Item code | 50 |
 | UnitOfMeasure | String | N | Unit of measure | 25 |
-| UnitPrice | Decimal | N | Unit price in the functional currency | 19, 5 |
+| UnitPrice | Decimal | N | Unit price | 19, 5 |
 
 ## ItemResponse
 The item object represents an item to be used when creating invoices on the PayFabric Receivables Management Portal.
@@ -23,4 +23,4 @@ The item object represents an item to be used when creating invoices on the PayF
 | ID | String | Item code | 50 |
 | ModifiedOn | DateTime | Timestamp indicating when this item was modified |  |
 | UnitOfMeasure | String | Unit of measure | 25 |
-| UnitPrice | Decimal | Unit price in the functional currency | 19, 5 |
+| UnitPrice | Decimal | Unit price | 19, 5 |

@@ -22,10 +22,10 @@ The invoice item object represents a line item to be associated to an invoice. T
 | ShippingToAddress | [Object](Address.md#AddressPost) | N | Address object |
 | Site | String | N | Site or warehouse | 50 |
 | Taxable | Boolean | N | Indicates if the item is taxable |  |
-| TaxAmount | Deciaml |  N |Tax amount in the functional currency | 19, 5 |
+| TaxAmount | Deciaml |  N |Tax amount | 19, 5 |
 | Taxes | [Array of Objects](InvoiceItemTax.md) | N | Invoice line item taxes |  |
 | UnitOfMeasure | String | N | Unit of measure | 25 |
-| UnitPrice | Decimal | N | Unit price in the functional currency | 19, 5 |
+| UnitPrice | Decimal | N | Unit price | 19, 5 |
 
 
 ## InvoiceItemResponse
@@ -51,7 +51,7 @@ The invoice item object represents a line item to be associated to an invoice. T
 | ShippingToAddress | [Object](Address.md#AddressResponse) | Address object |
 | Site | String | N | Site or warehouse | 50 |
 | Taxable | Boolean | Indicates if the item is taxable |  |
-| TaxAmount | Deciaml | Tax amount in the functional currency | 19, 5 |
+| TaxAmount | Deciaml | Tax amount
 | Taxes | [Array of Objects](InvoiceItemTax.md) | N | Invoice line item taxes |  |
 | UnitOfMeasure | String | Unit of measure | 25 |
-| UnitPrice | Decimal | Unit price in the functional currency | 19, 5 |
+| UnitPrice | Decimal | Unit price | 19, 5 |

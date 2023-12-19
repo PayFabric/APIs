@@ -20,7 +20,7 @@ The Subscription item object represents a line item to be associated to a subscr
 | Taxable | Boolean | N | Indicates if the item is taxable |  |
 | Taxes | [Array of Objects](SubscriptionItemTax.md) | N | Subscrition line item taxes |  |
 | UnitOfMeasure | String | N | Unit of measure | 25 |
-| UnitPrice | Decimal | N | Unit price in the functional currency | 19, 5 |
+| UnitPrice | Decimal | N | Unit price | 19, 5 |
 
 
 ## SubscriptionItemResponse
@@ -43,4 +43,4 @@ The Subscription item object represents a line item to be associated to a subscr
 | Taxable | Boolean | Indicates if the item is taxable |  |
 | Taxes | [Array of Objects](SubscriptionItemTax.md) | Subscrition line item taxes |  |
 | UnitOfMeasure | String | Unit of measure | 25 |
-| UnitPrice | Decimal | Unit price in the functional currency | 19, 5 |
+| UnitPrice | Decimal | Unit price | 19, 5 |

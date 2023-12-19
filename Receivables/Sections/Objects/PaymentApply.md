@@ -11,7 +11,7 @@ This object is used when creating an application of a payment to an invoice on t
 | Identity | String | Y | Invoice number identifier (Optional if using Invoice number) | 50 |
 | InvoiceId | String | Y | Invoice number | 50 |
 | InvoiceType | String | N | Invoice type | 50 |
-| PayAmount | Decimal | N | Payment amount applied to the invoice in the functional currency | 19, 5 |
+| PayAmount | Decimal | N | Payment amount applied to the invoice | 19, 5 |
 
 
 ## PaymentApplyResponse
@@ -24,5 +24,5 @@ This object is used when getting the application of a payment to an invoice on t
 | Identity | String | Invoice number identifier (Optional if using Invoice number) | 50 |
 | InvoiceId | String | Invoice number | 50 |
 | InvoiceType | String | Invoice type | 50 |
-| PayAmount | Decimal | Payment amount applied to the invoice in the functional currency | 19, 5 |
+| PayAmount | Decimal | Payment amount applied to the invoice | 19, 5 |
 | RowVersion | String | Version number of the invoice |  |
