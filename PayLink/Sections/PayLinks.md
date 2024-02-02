@@ -1256,7 +1256,7 @@ A failed `POST` may result in a HTTP 405 Method Not Allowed Response if the spec
 
 Get Post Data
 ----------------
-* `GET api/document/{PayLinkId}/PostData` will get the post data xml for the specific document
+* `GET /paylink/api/document/{PayLinkId}/PostData` will get the post data xml for the specific document
 
 <b>Note:</b> Only can get post data for Paid document.
 
@@ -1267,7 +1267,7 @@ Get Post Data
 
 Update Post Data
 -----------------
-* `POST api/document/{PayLinkId}/PostData` will update the post data xml for the specific document
+* `POST /paylink/api/document/{PayLinkId}/PostData` will update the post data xml for the specific document
 
 <b>Note:</b> Only can update post data for `Integration Failed` document. The post data xml is auto generated, please don't add/remove any node(s), just update the value, otherwise will cause failure to integrate to ERP.
 
@@ -1285,7 +1285,7 @@ A failed `POST` may result in a HTTP 401 Unauthorized Response if the authorizat
 
 Resubmit Post Data
 ------------------
-* `POST api/document/{PayLinkId}/PostData/Resubmit` will resubmit the payment to configured ERP
+* `POST /paylink/api/document/{PayLinkId}/PostData/Resubmit` will resubmit the payment to configured ERP
 
 ###### Response
 A successful `POST` will result in a HTTP 204 No Content Response.

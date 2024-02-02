@@ -852,7 +852,7 @@ This will return the receipt file related payment
 Download Application Record Receipt
 --------------------
 
-* `GET /payments/receipt/download?applicationGuid={applicationGuid}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+* `GET /applications/receipt/download?applicationGuid={applicationGuid}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
 
 ###### Request
 ```http
@@ -869,7 +869,7 @@ Download Application Record Details
 
 ###### Request
 ```http
-GET /payments/detail/download?applicationGuid=12345678-0000-0000-0000-000000000000 HTTP/1.1
+GET /applications/detail/download?applicationGuid=12345678-0000-0000-0000-000000000000 HTTP/1.1
 ```
 
 ###### Response

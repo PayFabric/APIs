@@ -30,7 +30,7 @@ Retrieve a Shipping Address
 Retrieve Shipping Addresses
 ---------------------------
 
-* `GET /addressesByCustomer?customer=JOHNDOE0001` will return all shipping addresses for the specified customer, the latter support special characters.
+* `GET payment/api/addressesByCustomer?customer=JOHNDOE0001` will return all shipping addresses for the specified customer, the latter support special characters.
  
 ###### Response
 <pre>

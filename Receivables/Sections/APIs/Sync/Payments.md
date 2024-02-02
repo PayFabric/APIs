@@ -255,7 +255,7 @@ For more information and descriptions on response fields please see our [object 
 Retrieve an Application Record
 --------------------
 
-* `GET /applications?applicationId={applicationId}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
+* `GET /applications?applicationId={applicationId}` will get the payment application information on the PayFabric Receivables website based on the URL parameters.
 
 ###### Request
 ```htpp
