@@ -16,7 +16,7 @@ The Subscription item object represents a line item to be associated to a subscr
 | NextBillDay | int | N | The next bill day of the item |  |
 | Occurrences | String | N | Number of occurrences the item should create. Valid options are ``Unlimited``, or a number between 1 and 24 |  |
 | Quantity | Decimal | N | Number of quantity | 19, 5 |
-| Sequence | Int | N | Line item number identifier |  |
+| Sequence | Int | Y | Line item number identifier |  |
 | Taxable | Boolean | N | Indicates if the item is taxable |  |
 | Taxes | [Array of Objects](SubscriptionItemTax.md) | N | Subscrition line item taxes |  |
 | UnitOfMeasure | String | N | Unit of measure | 25 |
