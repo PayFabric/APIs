@@ -89,6 +89,9 @@ Create Custom Report
     "Name": "test6",
     "Frequency": "Monthly",
     "Message": "fg",
+    "PaymentMethods": [
+        "*"
+    ],
     "AdditionalFields": [
         "*"
     ],
@@ -171,6 +174,8 @@ Manual Execute Custom Report
   "AdditionalFields": ["Email","Currency"],
   "TransactionTypes":  ["Sale","Capture"],
   "TransactionStatus":  ["Approved","Approved"],
+  "DateRangeFrom": "MM-dd-yyyy",
+  "DateRangeTo": "MM-dd-yyyy",
  
  "Recipients": {
     "To":["success+test1@simulator.amazonses.com","success+test2@simulator.amazonses.com"],
