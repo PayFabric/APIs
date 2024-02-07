@@ -13,7 +13,9 @@ For more information on the available fields please see our [object reference](.
 ```json
 {
 	"Name": "USD",
-	"CurrencyCode": "USD"
+	"CurrencyCode": "USD",
+	"Longname": "US Dollar",
+	"Symbol": "$"
 }
 ```
 
