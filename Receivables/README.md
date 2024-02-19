@@ -48,6 +48,9 @@ as child elements of other objects.
 
 ## Sync API
 
+### AutoPay
+* [`POST` Create AutoPay Request](Sections/APIs/Sync/AutoPay.md#create-autopay-request)
+
 ### Currencies
 * [`POST` Create a Currency](Sections/APIs/Sync/Currencies.md#create-a-currency)
 * [`DELETE` Delete a Currency](Sections/APIs/Sync/Currencies.md#delete-a-currency)
@@ -81,9 +84,13 @@ as child elements of other objects.
 * [`PATCH` Void a Payment](Sections/APIs/Sync/Payments.md#void-a-payment)
 * [`POST` Create/Send a Payment Request](Sections/APIs/Sync/Payments.md#createsend-a-payment-request)
 
+### Payment Methods
+* [`POST` Create Payment Method Request](Sections/APIs/Sync/PaymentMethod.md#create-payment-method-request)
+
 ### Settings
 * [`PATCH` Update Company Information](Sections/APIs/Sync/Settings.md#update-company-information)
 * [`POST` Upload Company Logo](Sections/APIs/Sync/Settings.md#upload-company-logo)
+* [`POST` Upload Company Style](Sections/APIs/Sync/Settings.md#upload-company-style)
 * [`PATCH` Update Customer Setup](Sections/APIs/Sync/Settings.md#update-customer-setup)
 * [`PATCH` Update Invoice Setup](Sections/APIs/Sync/Settings.md#update-invoice-setup)
 * [`POST` Create or Update Invoice Types](Sections/APIs/Sync/Settings.md#create-or-update-invoice-types)
