@@ -20,7 +20,7 @@ This object is used when creating a payment on the PayFabric Receivables website
 | PaymentId | String | Y | Payment number | 25 |
 | PaymentMethod | String | N | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | 25 |
 | PaymentType | String | N | Payment type of the transaction. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | 25 |
-| Status | String | N | Payment status. Valid options are ``Processed``, ``Voided``, and ``InProgress`` | 10 |
+| Status | String | N | Payment status. Valid options are ``Processed``, ``Voided``, ``Incomplete``, and ``Authorized`` | 10 |
 | User | String | N | User who made the payment | 50 |
 
 

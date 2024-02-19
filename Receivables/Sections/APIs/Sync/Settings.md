@@ -22,10 +22,33 @@ true
 ```
 
 
+Update Company Style
+--------------------
+
+* `PATCH /settings/company/style` will update the company style settings on the PayFabric Receivables website based on the JSON request payload
+
+###### Request
+For more information on the available fields please see our [object reference](../../Objects/Setting.md#CompanyStyleRequest)
+```json
+{
+    "BannerAlignment": "Left",
+    "MaxBannerHeight": 50,
+    "MainColor": "#197CBD",
+    "FocusArea": "#F0F8FE",
+    "BannerBackground": "#FFFFFF"
+}
+```
+
+###### Response
+```text
+true
+```
+
+
 Upload Company Logo
 --------------------
 
-* `POST /settings/company/style/image?type={Logo Type}` will update the company information settings on the PayFabric Receivables website based on the JSON request payload
+* `POST /settings/company/style/image?type={Logo Type}` will update the company logo settings on the PayFabric Receivables website based on the JSON request payload
 * `Content-Type: multipart/form-data` is required to send the logo
 
 ###### Request

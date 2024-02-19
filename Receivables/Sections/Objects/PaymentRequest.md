@@ -1,7 +1,6 @@
 ## Payment Request
 There are two payment request objects that represent the payment being requested to be paid.
 
-
 ## PaymentRequestDto
 This object is used when creating a payment request to be sent to the customer.
 
@@ -12,7 +11,9 @@ This object is used when creating a payment request to be sent to the customer.
 | Email | String | N | Recipient to be used in the e-mail notification, must be a single valid email address. Required if the EmailTemplate is populated | 255 |
 | EmailTemplate | String | N | Email template to be used when sending the request | 255 |
 | Invoices | Array of Strings | Y | List of invoice identities to be paid |  |
-
+| PrepaymentAmount | Decimal | N | Amount of a prepayment to include | 16,2 |
+| PrepaymentEdit | Boolean | N | Allow the Prepayment amount to be modified by the recipient |  |
+| TransactionType | String | N | Type of transaction to be associated. Valid values are `Sale`, or `Authorization` | 15 |
 
 ## PaymentRequestResponse
 This object is used when in the response data after creating a payment request to be sent to the customer.

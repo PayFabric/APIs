@@ -41,3 +41,21 @@ This object is used when retrieving the enabled tender types
 | :----------- | :--------- | :--------- |
 | CreditCardEnabled | Boolean | Credit card is enabled  |
 | ECheckEnabled | Boolean | ECheck is enabled  |
+
+## SendPaymentMethodRequestEmailRequest
+This object is used when creating a new payment method request
+
+| Attribute | Data Type | Required | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- | :--------- |
+| CopyEmail | String Array | N | List of emails to be CC'd for emails | 1000 |
+| CustomerID | String | Y | Customer number  | 50 |
+| Email | String | N | Email address, must be a single valid email address | 255 |
+| PaymentMethods | String Array | N | Array of allowed Payment Methods. Valid options are `CreditCard` or `eCheck`  | 25 |
+
+## SendPaymentMethodRequestEmailResponse
+This object is used when creating a new payment method request
+
+| Attribute | Data Type | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- |
+| PaymentMethodRequestURL  | String | Payment Method Request URL with the access code | 1000 |
+| AccessCode | String | The access code to allow the recipient access to the AutoPay page  | 40 |

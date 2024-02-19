@@ -33,7 +33,7 @@ This request accepts the below query string parameters to add additional options
 | ModifiedOn | Search by the last modified on date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
 | PaymentId | Payment number | [String Filter](../QueryFilter.md#string-filter) |
 | SortBy | Sort direction and sort field | [SortBy Filter](../QueryFilter.md#sortby-filter) |
-| Status | Payment status. Valid options are ``Scheduled``, ``Processed``, ``Failed``, ``Voided``, ``InProgress``, and ``Incomplete`` | [String](../QueryFilter.md#string) |
+| Status | Payment status. Valid options are ``Scheduled``, ``Processed``, ``Failed``, ``Voided``, ``InProgress``, ``Incomplete``, and ``Authorized`` | [String](../QueryFilter.md#string) |
 | Type | Payment type. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | [String](../QueryFilter.md#string) |
 | User | Search by the user who made the payment | [String Filter](../QueryFilter.md#string-filter) |
 

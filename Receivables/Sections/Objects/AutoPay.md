@@ -35,3 +35,21 @@ This object is used when saving or updating an autopay in the PayFabric Receivab
 | NextPaymentDate | DateTime | Next process day of the AutoPay |  |
 | PaymentDay | Int | Day of the month or week when the AutoPay should begin |  |
 | PaymentMethod | Guid | Customer's payment method identifier to be used during processing |  |
+
+## SendAutoPayRequestEmailRequest
+This object is used when creating a new autopay request
+
+| Attribute | Data Type | Required | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- | :--------- |
+| AutoPayTemplate | String | N | Name of the Autopay template to be used  | 50 |
+| CopyEmail | String Array | N | List of emails to be CC'd for emails | 1000 |
+| CustomerID | String | Y | Customer number  | 50 |
+| Email | String | N | Email address, must be a single valid email address | 255 |
+
+## SendAutoPayRequestEmailResponse
+This object is used when creating a new autopay request
+
+| Attribute | Data Type | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- |
+| AutoPayRequestURL | String | AutoPay Request URL with the access code | 1000 |
+| AccessCode | String | The access code to allow the recipient access to the AutoPay page  | 40 |

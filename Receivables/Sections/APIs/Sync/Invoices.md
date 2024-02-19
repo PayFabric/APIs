@@ -182,6 +182,7 @@ For more information on response fields please see our [object reference](../../
     "PaymentDiscountApplied": 0.0,
     "CustomerShippingAddressId": "PRIMARY5",
     "CustomerBillingAddressId": "PRIMARY5",
+    "Status": "Outstanding",
     "BatchNumber": "API20180525",
     "ExtensionData": "",
     "Identity": "STDINV999999",

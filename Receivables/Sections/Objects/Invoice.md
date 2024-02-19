@@ -76,6 +76,7 @@ This object is used when retrieving an invoice using the PayFabric Receivables S
 | ShippingAddress | [Object](Address.md#AddressResponse) | Shipping address object |  |
 | ShippingMethod | String | Shipping method | 50 |
 | Site | String | Site / warehouse items ship from | 4000 |
+| Status | String | N | Status of the invoice. Valid options are ``Incomplete``, ``Pending``, ``Outstanding``, ``Paid``, and ``Complete`` |  |
 | SubTotal | Decimal | Subtotal of the invoice | 19, 5 |
 | Tax | Decimal | Total tax amount | 19, 5 |
 | TaxGroup | String | Tax group to be applied | 50 |

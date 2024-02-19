@@ -8,7 +8,7 @@ This object is used when updating the integration information on the PayFabric R
 | Attribute | Data Type | Required |Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- | :--------- |
 | DocumentId | String | Y | Document number | 50 |
-| DocumentType | String | Y | Indicates the type of the document. Valid values are ``Customer``, ``Invoice``, ``Payment``, and ``Application`` | 25 |
+| DocumentType | String | Y | Indicates the type of the document. Valid values are ``Customer``, ``Invoice``, ``Payment``, ``Application``, and ``PaymentMethod`` | 25 |
 | ErrorMessage | String | N | Error message if it failed to submit | 4000 |
 | Status | String | Y | Indicates the status of the document. Valid values are ``Pending``, ``Success``, and ``Failed`` | 25 |
 
