@@ -90,7 +90,7 @@ as child elements of other objects.
 ### Settings
 * [`PATCH` Update Company Information](Sections/APIs/Sync/Settings.md#update-company-information)
 * [`POST` Upload Company Logo](Sections/APIs/Sync/Settings.md#upload-company-logo)
-* [`POST` Upload Company Style](Sections/APIs/Sync/Settings.md#upload-company-style)
+* [`POST` Update Company Style](Sections/APIs/Sync/Settings.md#upload-company-style)
 * [`PATCH` Update Customer Setup](Sections/APIs/Sync/Settings.md#update-customer-setup)
 * [`PATCH` Update Invoice Setup](Sections/APIs/Sync/Settings.md#update-invoice-setup)
 * [`POST` Create or Update Invoice Types](Sections/APIs/Sync/Settings.md#create-or-update-invoice-types)
