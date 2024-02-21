@@ -27,6 +27,8 @@ API Endpoint: `https://{PayFabric URL}/customerportal/api/{PortalName}/api/autho
   * `{PortalName}` -  Use the `Portal Name` obtained from Step 1.  
   * `{User Name}` - Name of the user being passed 
   * `{CustomerID}` - Customer ID of the customer account the user should be viewing
+  * `{Permission}` - The permission assigned to the user user. Valid values are `ViewAndPay`, `ViewOnly`, or `Internal`. Defaults to `ViewAndPay`
+  * `{HideMenu}` - Option to hide the side menu. Valid values are `True`, or `False`. Defaults to `False`
 
 2. Once the API Endpoint is prepared, make a POST API call to the API EndPoint with the Integration Key and Integration Key Password.
 
@@ -60,8 +62,6 @@ This request accepts the below query string parameters to add additional options
 | OriginatingPortalUrl | Url of the portal originating from |
 | LogoutUrl | Url to be redirected to upon logout |
 | Page | Page to be directed to upon loading, valid values are `Summary`, `Pay Invoices`, `Prepayment`, `History`, `Autopay`, `Wallet` or `Users` |
-| Permission | The permission assigned to the user user. Valid values are `ViewAndPay`, `ViewOnly`, or `Internal`. Defaults to `ViewAndPay` |
-| HideMenu | Option to hide the side menu. Valid values are `True`, or `False`. Defaults to `False` |
 
 Example:  
 ```text
