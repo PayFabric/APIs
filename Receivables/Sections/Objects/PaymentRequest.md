@@ -10,9 +10,9 @@ This object is used when creating a payment request to be sent to the customer.
 | CustomerId | String | Y | Customer ID specified by the client | 50 |
 | Email | String | N | Recipient to be used in the e-mail notification, must be a single valid email address. Required if the EmailTemplate is populated | 255 |
 | EmailTemplate | String | N | Email template to be used when sending the request | 255 |
-| Invoices | Array of Strings | N | List of invoice identities to be paid. Required if PrepaymentAmount is zero |  |
-| PrepaymentAmount | Decimal | N | Amount of a prepayment to include. Required if Invoices is empty | 16,2 |
-| PrepaymentEdit | Boolean | N | Allow the Prepayment amount to be modified by the recipient |  |
+| Invoices | Array of Strings | N | List of invoice identities to be paid. Required if PrepaymentAmount is zero and PrepaymentEdit is false |  |
+| PrepaymentAmount | Decimal | N | Amount of a prepayment to include.  Required if no invoices are provided in Invoices and PrepaymentEdit is false | 16,2 |
+| PrepaymentEdit | Boolean | N | Allow the Prepayment amount to be modified by the recipient. Required if no invoices are provided in Invoices and PrepaymentAmount is zero |  |
 | TransactionType | String | N | Type of transaction to be associated. Valid values are `Sale`, or `Authorization` | 15 |
 
 ## PaymentRequestResponse
