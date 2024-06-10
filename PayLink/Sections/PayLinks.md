@@ -103,7 +103,7 @@ Create a PayLink
     ], 
     "Payment": {
         "CreditCardGateway": "EVO", 
-        "ECheckGateway": "USASOAPECheck“, 
+        "ECheckGateway": "USASOAPECheck", 
         "AcceptType": 0
     },    
     "CustomeMessage": "CustomeMessage"
@@ -437,7 +437,7 @@ Create a Multiple Invoice PayLink
     ],  
     "Payment": {
         "CreditCardGateway": "EVO", 
-        "ECheckGateway": "USASOAPECheck“, 
+        "ECheckGateway": "USASOAPECheck", 
         "AcceptType": 0
     },  
     "Tax": {
