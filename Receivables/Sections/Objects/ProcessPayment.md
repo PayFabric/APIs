@@ -9,7 +9,7 @@ This object is used when creating a request to create an in-progress payment on 
 | :----------- | :--------- | :--------- | :--------- | :--------- |
 | Comment | String | N | Comment of the payment | 500 |
 | CurrencyCode | String | Y | Currency code | 10 |
-| PaymentApplies | [Object](PaymentApply.md) | Y | Invoice(s) the payment is applied to | |
+| PaymentApplies | [Object](PaymentApply.md) | N | Invoice(s) the payment is applied to | |
 | Prepayment | decimal | Y | Additional prepayment amount | 19, 2 |
 
 ## InProgressPaymentResponse
