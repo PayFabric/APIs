@@ -18,7 +18,7 @@ This object is used when creating a payment on the PayFabric Receivables website
 | Identity | String | N | Unique identifier for the payment | 50 |
 | PaymentApplies | [Array of Objects](PaymentApply.md#PaymentApplyPost) | N | Application of the payment to invoices |
 | PaymentId | String | Y | Payment number | 25 |
-| PaymentMethod | String | N | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | 25 |
+| PaymentMethod | String | N | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, ``Cash``, and ``Record`` | 25 |
 | PaymentType | String | N | Payment type of the transaction. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | 25 |
 | Status | String | N | Payment status. Valid options are ``Processed``, ``Voided``, ``Incomplete``, and ``Authorized`` | 10 |
 | User | String | N | User who made the payment | 50 |
@@ -40,7 +40,7 @@ This object is used when updating an existing payment on the PayFabric Receivabl
 | PaymentApplies | [Array of Objects](PaymentApply.md#paymentapplypost) | N | Application of the payment to invoices |
 | Notes | String | N | Additional notes for the payment | 500 |
 | PaymentId | String | Y | Payment number | 25 |
-| PaymentMethod | String | N | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | 25 |
+| PaymentMethod | String | N | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, ``Cash``, and ``Record`` | 25 |
 | PaymentType | String | N | Payment type of the transaction. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | 25 |
 | User | String | N | User who made the payment | 50 |
 | Reference | String | N | Payment reference | 100 |
@@ -72,7 +72,7 @@ This object is used when getting a payment on the PayFabric Receivables website.
 | ModifiedOn |  | Last date the payment was modified |  |
 | Name | String | Customer name | 100 |
 | PaymentId | String | Payment number | 25 |
-| PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, and ``Cash`` | 25 |
+| PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, ``Cash``, and ``Record`` | 25 |
 | PaymentType | String | Payment type of the transaction. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | 25 |
 | Reference | String | Payment reference | 100 |
 | Status | String | Status of the payment. Valid options are ``Scheduled``, ``Processed``, ``Failed``, and ``Voided`` | 10 |
