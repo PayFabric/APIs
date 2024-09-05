@@ -60,6 +60,11 @@ as child elements of other objects.
 * [`DELETE` Delete a Customer](Sections/APIs/Sync/Customers.md#delete-a-customer)
 * [`GET` Retrieve a Customer](Sections/APIs/Sync/Customers.md#retrieve-a-customer-by-customer-identifier)
 * [`POST` Create or Update a Customer](Sections/APIs/Sync/Customers.md#create-or-update-a-customer)
+* [`PATCH` Update a Customer ID](Sections/APIs/Sync/Customers.md#update-a-customer-id)
+* [`GET` Retrieve Customers Report](Sections/APIs/Sync/Customers.md#retrieve-customers-report)
+
+### Email
+* [`GET` Retrieve Email Report](Sections/APIs/Sync/Email.md#retrieve-email-report)
 
 ### Integrations
 * [`PATCH` Update the Integration Document](Sections/APIs/Sync/Integrations.md#update-the-integration-document)
@@ -71,6 +76,7 @@ as child elements of other objects.
 * [`PATCH` Update an Invoice](Sections/APIs/Sync/Invoices.md#update-an-invoice)
 * [`PATCH` Update an Invoice Attachment](Sections/APIs/Sync/Invoices.md#update-an-invoice-attachment)
 * [`GET` Retrieve an Invoice](Sections/APIs/Sync/Invoices.md#retrieve-an-invoice)
+* [`GET` Retrieve Invoices Report](Sections/APIs/Sync/Invoices.md#retrieve-invoices-report)
 
 ### Items
 * [`POST` Create or Update an Item](Sections/APIs/Sync/Items.md#create-or-update-an-item)
@@ -83,6 +89,7 @@ as child elements of other objects.
 * [`GET` Retrieve an Application Record](Sections/APIs/Sync/Payments.md#retrieve-an-application-record)
 * [`PATCH` Void a Payment](Sections/APIs/Sync/Payments.md#void-a-payment)
 * [`POST` Create/Send a Payment Request](Sections/APIs/Sync/Payments.md#createsend-a-payment-request)
+* [`GET` Retrieve Payments Report](Sections/APIs/Sync/Payments.md#retrieve-payments-report)
 
 ### Payment Methods
 * [`POST` Create Payment Method Request](Sections/APIs/Sync/PaymentMethod.md#create-payment-method-request)
@@ -102,10 +109,13 @@ as child elements of other objects.
 * [`POST` Create or Update an Autopay Template](Sections/APIs/Sync/Settings.md#create-or-update-an-autopay-template)
 * [`PATCH` Update Integration](Sections/APIs/Sync/Settings.md#update-integration)
 * [`POST` Create or Update Email Templates](Sections/APIs/Sync/Settings.md#create-or-update-email-templates)
+* [`GET` Retrieve Email Templates](Sections/APIs/Sync/Settings.md#retrieve-email-templates)
+* [`GET` Retrieve Invoice Types](Sections/APIs/Sync/Settings.md#retrieve-invoice-types)
 
 ### Subscription
 * [`POST` Create or Update a Subscription](Sections/APIs/Sync/Subscriptions.md#create-or-update-a-subscription)
 * [`GET` Retrieve a Subscription](Sections/APIs/Sync/Subscriptions.md#retrieve-a-subscription)
+* [`GET` Retrieve Sbuscription Report](Sections/APIs/Sync/Subscriptions.md#retrieve-subscription-report)
 
 ### Tax
 * [`POST` Create or Update a Tax](Sections/APIs/Sync/Taxes.md#create-or-update-a-tax)

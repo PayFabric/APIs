@@ -50,3 +50,17 @@ This object is used when getting subscriptions on the PayFabric Receivables webs
 | Status | String | Status of the subscription. Valid options are ``Open``, and ``Closed`` | 10 |
 | SubscriptionItems | [Array of Objects](SubscriptionItem.md#SubscriptionItemResponse) | Subscription line item object |  |
 | TaxGroup | String | Tax group to be applied | 50 |
+
+## SubscriptionReportResponse
+This object is used when getting subscriptions on the PayFabric Receivables website.
+
+| Attribute | Data Type | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- |
+| CreatedOn | String | Timestamp indicating when this document was created. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" |  |
+| CustomerId | String | Customer ID | 50 |
+| CustomerName | String | Customer name | 50 |
+| Id | String | Subscription identifier | 50 |
+| LastBillDate | String | Timestamp indicating when the last bill date was. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" |  |
+| NextBillDate | String | Timestamp indicating when the next bill date is. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" |  |
+| SubscriptionGuid | Guid | Subscription unique identifier |  |
+| Status | String | Status of the subscription. Valid options are ``Open``, and ``Closed`` | 10 |

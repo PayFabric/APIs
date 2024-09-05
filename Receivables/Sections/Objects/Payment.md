@@ -88,3 +88,36 @@ This object is used when getting payment information through paging on the PayFa
 | Index | Int | Page number of results  |  |
 | Total | Int | Total number of results |  |
 | Result | [Array of Objects](Payment.md#PaymentResponse) | Payment response details |
+
+## PaymentReportPagingResponse
+This object is used when getting payment information through paging on the PayFabric Receivables website.
+
+| Attribute | Data Type | Definition |
+| :----------- | :--------- | :--------- |
+| Index | Int | Page number of results  |  |
+| Total | Int | Total number of results |  |
+| Result | [Array of Objects](Payment.md#PaymentReportResponse) | Payment response details |
+
+## PaymentReportResponse
+This object is used when getting a payment on the PayFabric Receivables website.
+
+| Attribute | Data Type | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- |
+| Amount | Decimal | Total payment amount  | 19, 5 |
+| AppliedAmount | Decimal | Payment amount applied to invoices | 19, 5 |
+| BalanceAmount | Decimal | Total balance amount | 19, 5 |
+| BatchNumber | String | Batch number | 50 |
+| CCNumber | String | Credit card number | 25 |
+| CheckNumber | String | Check number used | 25 |
+| CreatedOn | String | Timestamp indicating when this document was created. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" |  |
+| Currency | String | Currency code | 10 |
+| CustomerId | String | Customer ID specified by the client | 50 |
+| CustomerName | String | Customer name specified by the client | 50 |
+| Identity | String | Unique identifier for the payment | 50 |
+| PaymentApplies | [Array of Objects](PaymentApply.md#PaymentApplyReportResponse) | Application of the payment to invoices |
+| Name | String | Customer name | 100 |
+| PaymentId | String | Payment number | 25 |
+| PaymentMethod | String | Payment method used with the payment. Valid options are ``Unknown``, ``CreditCard``, ``ECheck``, ``Check``, ``Cash``, and ``Record`` | 25 |
+| PaymentType | String | Payment type of the transaction. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | 25 |
+| Status | String | Status of the payment. Valid options are ``Scheduled``, ``Processed``, ``Failed``, and ``Voided`` | 10 |
+| User | String | User who made the payment | 50 |

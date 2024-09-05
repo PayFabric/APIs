@@ -189,3 +189,86 @@ For more information on response fields please see our [object reference](../../
     "DocumentType": "Invoice"
 }
 ```
+
+
+Retrieve Invoices Report
+--------------------
+
+* `GET /reports/invoices` will retrieve the invoices report from PayFabric Receivables website based on the URL parameters
+
+Options
+-------
+
+This request accepts the below query string parameters to add additional options to search. You can add them to your request URL by adding a '?' before the first parameter and connecting additional ones with a '&'.
+
+| QueryString | Description |
+| :------------- | :------------- |
+| PageSize | Number of results to return in a single page |
+| PageIndex | Page number of results |
+
+Criteria Options
+-------
+
+This request accepts the below query string parameters to add additional options to search via the criteria filtering. You can add them to your request URL by adding a '?' before the first parameter and connecting additional ones with a '&'.
+
+| QueryString | Description | Type |
+| :------------- | :------------- | :------------- |
+| CreatedOn | Search by the created on date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
+| Amount | Invoice amount | [Numeric Range Filter](../QueryFilter.md#numeric-range-filter) |
+| BalanceDue | Balance due | [Numeric Range Filter](../QueryFilter.md#numeric-range-filter) |
+| CurrencyCode | Customer's currency code | [String](../QueryFilter.md#string-filter) |
+| CustomerId | Customer number | [String Filter](../QueryFilter.md#string-filter) |
+| DueDate | Search by the due date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
+| Email | Customer's email address | [String](../QueryFilter.md#string-filter) |
+| InvoicedToCustomerID | Invoice to customer number | [String](../QueryFilter.md#string-filter) |
+| InvoiceId | InvoiceId | [String](../QueryFilter.md#string-filter) |
+| InvoiceStatus | Invoice status | [String](../QueryFilter.md#string-filter) |
+| InvoiceType | Invoice type | [String](../QueryFilter.md#string-filter) |
+| PONumber | Invoice purchase order number | [String](../QueryFilter.md#string-filter) |
+| PostingDate | Search by the posting date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
+
+###### Request
+```http
+GET /reports/invoices?filter.pageSize=10&filter.pageIndex=0&filter.criteria.CustomerId.EqualsTo=Nodus0001 HTTP/1.1
+```
+
+###### Response
+For more information on response fields please see our [object reference](../../Objects/Invoice.md#InvoiceReportPagingResponse)
+```json
+{
+    "Index": 0,
+    "Total": 1,
+    "Result": [
+        {
+            "Amount": 45.00,
+            "AuthorizedPaymentAmount": 0.00,
+            "BalanceDue": 45.00,
+            "CopyEmail": [],
+            "CurrencySymbol": "$",
+            "Currency": "USD",
+            "CustomerEmail": "Nodus0001@nodus.com",
+            "CustomerGuid": "95ea82b1-5f02-ef11-a2f5-0050568f9b1b",
+            "CustomerId": "Nodus0001",
+            "CustomerName": "Nodus User 1",
+            "CustomerTaxExempt": false,
+            "DiscountDate": "1900-01-01T00:00:00.0000000",
+            "DiscountAmount": 0.00,
+            "DueDate": "2024-07-04T07:00:00.0000000Z",
+            "Email": "Nodus0001@nodus.com",
+            "ExtensionData": "",
+            "Identity": "STDINV012038",
+            "IncompletedPaymentAmount": 0.00,
+            "InvoiceGuid": "f5208495-c422-ef11-a2f6-0050568f9b1b",
+            "InvoiceId": "STDINV012038",
+            "InvoiceStatus": "Outstanding",
+            "InvoicedToCustomerID": "",
+            "InvoicedToCustomerName": "",
+            "InvoiceType": "Invoice",
+            "PaymentTerms": "30D",
+            "PONumber": "",
+            "PostingDate": "2024-06-04T07:00:00.0000000Z",
+            "ProcessedPaymentAmount": 0.00
+        }
+    ]
+}
+```

@@ -26,3 +26,13 @@ This object is used when getting the application of a payment to an invoice on t
 | InvoiceType | String | Invoice type | 50 |
 | PayAmount | Decimal | Payment amount applied to the invoice | 19, 5 |
 | RowVersion | String | Version number of the invoice |  |
+
+## PaymentApplyReportResponse
+This object is used when getting the application of a payment to an invoice on the Customer Portal.
+
+| Attribute | Data Type | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- |
+| Identity | String | Invoice number identifier (Optional if using Invoice number) | 50 |
+| InvoiceId | String | Invoice number | 50 |
+| PayAmount | Decimal | Payment amount applied to the invoice | 19, 5 |
+| RowVersion | String | Version number of the invoice |  |

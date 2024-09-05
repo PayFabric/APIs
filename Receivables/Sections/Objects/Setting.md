@@ -76,6 +76,7 @@ This object is used when creating or updating email templates in the PayFabric R
 | ScheduleOptions | Array of Strings | N | The schedule options of when this email template should send. Valid options for ScheduleType of ``Weekly`` are ``Sunday`` through ``Saturday``. Valid options for ScheduleType of ``Monthly`` are 1-31. Only applies when Type is: <ul><li>``InvoiceReminderMultipleInvoice``</li></ul> |  |
 | ScheduleType | String | N | The schedule of when this email template should send. Valid options are ``AfterPostingDate``, ``BeforePastDueDate``, ``OnPastDueDate``, ``AfterPastDueDate``, ``Monthly``, ``Weekly``, ``ByAutoPayAmount``, and ``Always``. </br>Only applies when Type is: <ul><li>``InvoiceReminder``</li><li>``InvoiceReminderMultipleInvoice``</li><li>``AutoPayUpcoming``</li></ul> | 50 |
 | Subject | String | Y | The subject of the email | 100 |
+| To | String | N | The email addresses to send the email to. </br>Only applies when Type is: <ul><li>``IntegrationStatusNotification``</li><li></ul> | 1000 |
 | Type | String | Y | The type of the email template. Valid options are <ul><li>``UserRegistration``</li><li>``UserRegistrationComplete``</li><li>``UserNameRequest``</li><li>``ResetPasswordRequest``</li><li>``ResetPasswordConfirmation``</li><li>``NewInvoiceNotificationOutstanding``</li><li>``NewInvoiceNotificationPartiallyPaid``</li><li>``NewInvoiceNotificationPaid``</li><li>``InvoiceReminder``</li><li>``InvoiceReminderMultipleInvoice``</li><li>``ManualPaymentConfirmation``</li><li>``AutoPayPaymentConfirmation``</li><li>``AutoPayPaymentDeclined``</li><li>``SubscriptionPaymentDeclined``</li><li>``PaymentRequestSingleInvoice``</li><li>``PaymentRequestMultipleInvoice``</li><li>``PaymentRequestPrepayment``</li><li>``AutoPayRequest``</li><li>``PaymentMethodRequest``</li><li>``AutoPayActivated``</li><li>``AutoPayUpdated``</li><li>``AutoPayDeactivated``</li><li>``AutoPayUpcoming``</li></ul>  | 10 |
 
 ## IntegrationSettingsPatchRequest
@@ -191,3 +192,33 @@ This object is used with the [TransactionProcessingRequest](#transactionprocessi
 | BatchPrefix | String | N | Batch prefix | 20 |
 | BatchCutoffTime | String | N | Time when a new batch should be created | 6 |
 | BackOfficeID | String | N | Back office tender type name | 25 |
+
+## EmailTemplatesResponse
+This object is used when retrieving email templates from the PayFabric Receivables website.
+
+| Attribute | Data Type | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- | :--------- |
+| Attachment | Boolean | Option to attach the invoice to the email as a pdf. </br>Only applies when Type is: <ul><li>``InvoiceReminder``</li><li>``NewInvoiceNotificationOutstanding``</li><li>``NewInvoiceNotificationPartiallyPaid``</li><li>``NewInvoiceNotificationPaid``</li><li>``PaymentRequestSingleInvoice``</li></ul> |  |
+| BCC | String | The email addresses to be blind copied | 1000 |
+| Body | String | The body of the email | 4000 |
+| Default | String | Option to specify if this is the default email template. Valid options are ``Yes`` and ``No``. </br>Only applies when Type is: <ul><li>``PaymentRequestSingleInvoice``</li><li>``PaymentRequestMultipleInvoice``</li><li>``PaymentRequestPrepayment``</li></ul> | 10 |
+| Delivery | String | Option to specify when the email should be sent. Valid options are ``LoginAndNewCustomer`` and ``LoginOnly``. </br>Only applies when Type is: <ul><li>``UserRegistration``</li></ul> | 20 |
+| InvoiceStatus | String | The invoice status this email template applies to. Valid values are ``Outstanding``, or ``PastDue``. </br>Only applies when Type is: <ul><li>``InvoiceReminderMultipleInvoice``</li></ul>  |  |
+| InvoiceTypes | Array of Strings | The invoice types this email template applies to. </br>Only applies when Type is: <ul><li>``InvoiceReminder``</li><li>``InvoiceReminderMultipleInvoice``</li><li> ``NewInvoiceNotificationOutstanding``</li><li>``NewInvoiceNotificationPartiallyPaid``</li><li>``NewInvoiceNotificationPaid``</li></ul>  |  |
+| Name | String | The name of the email template. Required if the type is ``InvoiceReminder``, ``InvoiceReminderMultipleInvoice``, ``PaymentRequestSingleInvoice``, ``PaymentRequestMultipleInvoice``, or ``PaymentRequestPrepayment`` | 50 |
+| ScheduleDays | Int | The number of days used for the schedule type. </br>Only applies when Type is: <ul><li>``InvoiceReminder``</li><li>``AutoPayUpcoming``</li></ul> |  |
+| ScheduleOptions | Array of Strings | The schedule options of when this email template should send. Valid options for ScheduleType of ``Weekly`` are ``Sunday`` through ``Saturday``. Valid options for ScheduleType of ``Monthly`` are 1-31. Only applies when Type is: <ul><li>``InvoiceReminderMultipleInvoice``</li></ul> |  |
+| ScheduleType | String | The schedule of when this email template should send. Valid options are ``AfterPostingDate``, ``BeforePastDueDate``, ``OnPastDueDate``, ``AfterPastDueDate``, ``Monthly``, ``Weekly``, ``ByAutoPayAmount``, and ``Always``. </br>Only applies when Type is: <ul><li>``InvoiceReminder``</li><li>``InvoiceReminderMultipleInvoice``</li><li>``AutoPayUpcoming``</li></ul> | 50 |
+| Subject | String | The subject of the email | 100 |
+| To | String | The email addresses to send the email to. </br>Only applies when Type is: <ul><li>``IntegrationStatusNotification``</li><li></ul> | 1000 |
+| Type | String | The type of the email template. Valid options are <ul><li>``UserRegistration``</li><li>``UserRegistrationComplete``</li><li>``UserNameRequest``</li><li>``ResetPasswordRequest``</li><li>``ResetPasswordConfirmation``</li><li>``NewInvoiceNotificationOutstanding``</li><li>``NewInvoiceNotificationPartiallyPaid``</li><li>``NewInvoiceNotificationPaid``</li><li>``InvoiceReminder``</li><li>``InvoiceReminderMultipleInvoice``</li><li>``ManualPaymentConfirmation``</li><li>``AutoPayPaymentConfirmation``</li><li>``AutoPayPaymentDeclined``</li><li>``SubscriptionPaymentDeclined``</li><li>``PaymentRequestSingleInvoice``</li><li>``PaymentRequestMultipleInvoice``</li><li>``PaymentRequestPrepayment``</li><li>``AutoPayRequest``</li><li>``PaymentMethodRequest``</li><li>``AutoPayActivated``</li><li>``AutoPayUpdated``</li><li>``AutoPayDeactivated``</li><li>``AutoPayUpcoming``</li><li>``IntegrationStatusNotification``</li></ul>  | 10 |
+
+## InvoiceTypeResponse
+This object is used when creating or updating the invoice type settings in the PayFabric Receivables website.
+
+| Attribute | Data Type | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- | :--------- |
+| Description | String | Description of the invoice type | 50 |
+| DefaultInvoiceType | Boolean | Mark as the default invoice type |  |
+| ID | String | Id of the invoice type | 50 |
+| InvoiceTemplate | String | Name of the invoice template to associate | 50 |

@@ -268,3 +268,76 @@ For more information on the available fields please see our [object reference](.
 ```text
 true
 ```
+
+
+Retrieve Email Templates
+--------------------
+
+* `GET /settings/emailtemplates` will get email templates PayFabric Receivables website based on the types provided.  
+
+###### Request
+```http
+GET /settings/emailtemplates?type=UserRegistration&type=ResetPasswordRequest HTTP/1.1
+```
+
+###### Response
+For more information on response fields please see our [object reference](../../Objects/Settings.md#EmailTemplatesResponse)
+```json
+[
+    {
+        "Type": "UserRegistration",
+        "Body": "<html>...</html>",
+        "Subject": "Please Register for our Customer Portal",
+        "BCC": "",
+        "To": null,
+        "Name": null,
+        "ScheduleType": null,
+        "ScheduleDays": null,
+        "ScheduleOptions": [],
+        "InvoiceStatus": null,
+        "InvoiceTypes": [],
+        "Attachment": null,
+        "Delivery": "LoginOnly",
+        "Default": null
+    },
+    {
+        "Type": "ResetPasswordRequest",
+        "Body": "<html>...</html>",
+        "Subject": "Reset Your Password",
+        "BCC": "",
+        "To": null,
+        "Name": null,
+        "ScheduleType": null,
+        "ScheduleDays": null,
+        "ScheduleOptions": [],
+        "InvoiceStatus": null,
+        "InvoiceTypes": [],
+        "Attachment": null,
+        "Delivery": null,
+        "Default": null
+    }
+]
+```
+
+Retrieve Invoice Types
+--------------------
+
+* `GET /settings/invoicetypes` will get invoice types on the PayFabric Receivables website.  
+
+###### Request
+```http
+GET /settings/invoicetypes HTTP/1.1
+```
+
+###### Response
+For more information on response fields please see our [object reference](../../Objects/Settings.md#InvoiceTypeResponse)
+```json
+[
+    {
+        "ID": "Default",
+        "Description": "Default",
+        "DefaultInvoiceType": true,
+        "InvoiceTemplate": "Original Template"
+    }
+]
+```

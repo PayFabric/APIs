@@ -29,8 +29,8 @@ Retrieve an Item
 * `GET /item` will get an item on the PayFabric Receivables website based on the id provided.  
 
 ###### Request
-```htpp
-GET /item?id=TEST
+```http
+GET /item?id=TEST HTTP/1.1
 ```
 
 ###### Response

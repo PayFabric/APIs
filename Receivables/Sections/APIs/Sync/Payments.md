@@ -162,8 +162,8 @@ Retrieve a Payment
 * `GET /payments/byId?id={id}` will get the payment information on the PayFabric Receivables website based on the URL parameters.
 
 ###### Request
-```htpp
-GET /payments/byId?id=WEBPMT0000000020
+```http
+GET /payments/byId?id=WEBPMT0000000020 HTTP/1.1
 ```
 
 ###### Response
@@ -258,8 +258,8 @@ Retrieve an Application Record
 * `GET /applications?applicationId={applicationId}` will get the payment application information on the PayFabric Receivables website based on the URL parameters.
 
 ###### Request
-```htpp
-GET /applications?applicationId=WEBPMT0000000020
+```http
+GET /applications?applicationId=WEBPMT0000000020 HTTP/1.1
 ```
 
 ###### Response
@@ -331,5 +331,82 @@ For more information on available fields please see our [object reference](../..
     "Result": true,
     "PaymentRequestURL": "https://sandbox.payfabric.com/customerportal/nodus/ExpressPay?accessCode=fcbd6fa32a9b437aaa4dc9cb31ca48dc",
     "AccessCode": "fcbd6fa32a9b437aaa4dc9cb31ca48dc"
+}
+```
+
+
+Retrieve Payments Report
+--------------------
+
+* `GET /reports/payments` will get the payment report on the PayFabric Receivables website based on the URL parameters.
+
+Options
+-------
+
+This request accepts the below query string parameters to add additional options to search. You can add them to your request URL by adding a '?' before the first parameter and connecting additional ones with a '&'.
+
+| QueryString | Description |
+| :------------- | :------------- |
+| PageSize | Number of results to return in a single page |
+| PageIndex | Page number of results |
+
+Criteria Options
+-------
+
+This request accepts the below query string parameters to add additional options to search via the criteria filtering. You can add them to your request URL by adding a '?' before the first parameter and connecting additional ones with a '&'.
+
+| QueryString | Description | Type |
+| :------------- | :------------- | :------------- |
+| PaymentId | Payment number | [String Filter](../QueryFilter.md#string-filter) |
+| CustomerId | Customer number | [String Filter](../QueryFilter.md#string-filter) |
+| CustomerName | Customer name | [String Filter](../QueryFilter.md#string-filter) |
+| PaymentType | Payment type. Valid options are ``CreditMemo``, ``Return``, and ``Payment`` | [String](../QueryFilter.md#string) |
+| PaymentMethod | Payment method | [String Filter](../QueryFilter.md#string-filter) |
+| CreatedOn | Search by the created on date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
+| Amount | Payment amount | [Numeric Range Filter](../QueryFilter.md#numeric-range-filter) |
+| BalanceAmount | Balance amount | [Numeric Range Filter](../QueryFilter.md#numeric-range-filter) |
+| Status | Payment status. Valid options are ``Scheduled``, ``Processed``, ``Failed``, ``Voided``, ``InProgress``, ``Incomplete``, and ``Authorized`` | [String](../QueryFilter.md#string) |
+| CCNumber | Last four digits of the credit card or eCheck account number | [String Filter](../QueryFilter.md#string-filter) |
+| CheckNumber | Check number | [String Filter](../QueryFilter.md#string-filter) |
+| Identity | Payment identity | [String Filter](../QueryFilter.md#string-filter) |
+| User | Search by the user who made the payment | [String Filter](../QueryFilter.md#string-filter) |
+
+###### Request
+```http 
+GET /reports/payments?filter.pageSize=10&filter.pageIndex=0&filter.criteria.CustomerId.EqualsTo=Nodus0001 HTTP/1.1
+```
+
+###### Response
+For more information on response fields please see our [object reference](../../Objects/Payment.md#PaymentReportPagingResponse)
+```json
+{
+    "Index": 0,
+    "Total": 1,
+    "Result": [
+        {
+            "BatchNumber": "20230101",
+            "PaymentMethod": "Cash",
+            "CCNumber": "",
+            "CheckNumber": "",
+            "CreatedOn": "2017-04-12T00:00:00.0000000Z",
+            "CustomerId": "Nodus0001",
+            "Identity": "PFR00001",
+            "PaymentId": "PFR00001",
+            "Amount": 4.00000,
+            "BalanceAmount": 4.00000,
+            "PaymentType": "Payment",
+            "Status": "Processed",
+            "User": "Bob",
+            "PaymentApplies": [],
+            "Currency": {
+                "Name": "USD",
+                "CurrencyCode": "Z-US$",
+                "Symbol": "$",
+                "LongName": "US Dollars",
+                "IsFuncCurrency": true
+            },
+            "CustomerName": "Nodus"
+        }
+    ]
 }
 ```

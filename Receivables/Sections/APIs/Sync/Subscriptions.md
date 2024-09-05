@@ -118,3 +118,61 @@ For more information on response fields please see our [object reference](../../
     }
 ]
 ```
+
+
+Retrieve Subscription Report
+--------------------
+
+* `GET /reports/subscriptions` will get the subscription report on the PayFabric Receivables website based on the URL parameters.
+
+Options
+-------
+
+This request accepts the below query string parameters to add additional options to search. You can add them to your request URL by adding a '?' before the first parameter and connecting additional ones with a '&'.
+
+| QueryString | Description |
+| :------------- | :------------- |
+| PageSize | Number of results to return in a single page |
+| PageIndex | Page number of results |
+
+Criteria Options
+-------
+
+This request accepts the below query string parameters to add additional options to search via the criteria filtering. You can add them to your request URL by adding a '?' before the first parameter and connecting additional ones with a '&'.
+
+| QueryString | Description | Type |
+| :------------- | :------------- | :------------- |
+| PaymentId | Payment number | [String Filter](../QueryFilter.md#string-filter) |
+| CreatedOn | Search by the created on date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
+| Id | Subscription Id | [String Filter](../QueryFilter.md#string-filter) |
+| CustomerId | Customer number | [String Filter](../QueryFilter.md#string-filter) |
+| CustomerName | Customer name | [String Filter](../QueryFilter.md#string-filter) |
+| Status | Subscription status | [String](../QueryFilter.md#string) |
+| NextBillDate | Search by the next bill date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
+| LastBillDate | Search by the last bill date within a specified interval | [Date Range Filter](../QueryFilter.md#date-range-filter) |
+
+###### Request
+```http 
+GET /reports/subscriptions?filter.pageSize=10&filter.pageIndex=0&filter.criteria.CustomerId.EqualsTo=Nodus0001 HTTP/1.1
+```
+
+###### Response
+For more information on response fields please see our [object reference](../../Objects/Subscription.md#SubscriptionReportResponse)
+```json
+{
+    "Index": 0,
+    "Total": 1,
+    "Result": [
+        {
+            "SubscriptionGuid": "f655f4af-5f50-ef11-a2fb-0050568f9b1b",
+            "Id": "S0000003",
+            "CustomerID": "Nodus0001",
+            "CustomerName": "Nodus",
+            "Status": "Open",
+            "NextBillDate": "2024-08-01T07:00:00.0000000Z",
+            "CreatedOn": "2024-08-01T23:42:27.6042003Z",
+            "LastBillDate": null
+        }
+    ]
+}
+```

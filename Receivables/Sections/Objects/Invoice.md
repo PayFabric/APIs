@@ -22,6 +22,7 @@ This object is used when creating or updating an invoice record on the PayFabric
 | ExtensionData | String | N | Additional invoice information | 4000 |
 | Freight | Decimal | N | Total freight amount | 19, 5 |
 | Identity | String | N | Additional unique identifier | 50 |
+| InvoicedToCustomerID | String | N | Invoiced to customer ID | 50 |
 | InvoiceId | String | Y | Invoice number | 50 |
 | InvoiceItems | [Array of Objects](InvoiceItem.md#InvoiceItemPost) | N | Invoice line item object |  |
 | InvoiceType | String | N | Invoice type | 50 |
@@ -64,6 +65,8 @@ This object is used when retrieving an invoice using the PayFabric Receivables S
 | ExtensionData | String | Additional invoice information | 4000 |
 | Freight | Decimal | Total freight amount | 19, 5 |
 | Identity | String | Additional unique identifier | 50 |
+| InvoicedToCustomerID | String | Invoiced to customer ID | 50 |
+| InvoicedToCustomerName | String | Invoiced to customer name | 50 |
 | InvoiceId | String | Invoice number | 50 |
 | InvoiceItems | [Array of Objects](InvoiceItem.md#InvoiceItemResponse) | Invoice line item object |  |
 | InvoiceType | String | Invoice type | 50 |
@@ -101,6 +104,8 @@ This object is used when retrieving an invoice using the PayFabric Receivables W
 | DueDate | DateTime | Timestamp indicating when this document is due. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" |  |
 | ExtensionData | String | Additional invoice information | 4000 |
 | Identity | String | Additional unique identifier | 50 |
+| InvoicedToCustomerID | String | Invoiced to customer ID | 50 |
+| InvoicedToCustomerName | String | Invoiced to customer name | 50 |
 | InvoiceId | String | Invoice number | 50 |
 | InvoiceGuid | Guid | Invoice unique identifier |  |
 | InvoiceType | String | Invoice type | 50 |
@@ -117,3 +122,45 @@ This object is used when getting invoice information through paging on the PayFa
 | Index | Int | Page number of results  |
 | Total | Int | Total number of results |
 | Result | [Array of Objects](Invoice.md#InvoiceResponse) | Invoice response details |
+
+## InvoiceReportPagingResponse
+This object is used when getting invoice information through paging on the PayFabric Receivables website.
+
+| Attribute | Data Type | Definition |
+| :----------- | :--------- | :--------- |
+| Index | Int | Page number of results  |
+| Total | Int | Total number of results |
+| Result | [Array of Objects](Invoice.md#InvoiceReportResponse) | Invoice response details |
+
+## InvoiceReportResponse
+This object is used when retrieving an invoice using the PayFabric Receivables Website APIs.
+
+| Attribute | Data Type | Definition | Max Length |
+| :----------- | :--------- | :--------- | :--------- |
+| Amount | Decimal | Total invoice amount  | 19, 5 |
+| AuthorizedPaymentAmount | Decimal | Total authorized payment amount  | 19, 5 |
+| BalanceDue | Decimal | Total balance due | 19, 5 |
+| CopyEmail | Array of Strings | CC'd recipients to be used in e-mail notifications regarding an individual invoice | 1000 |
+| Currency | [Object](Currency.md#currencyresponse) | Currency object |  |
+| CustomerEmail | String | Recipient to be used in e-mail notifications regarding an individual invoice, must be a single valid email address | 255 |
+| CustomerGuid | Guid | Unique identifier for the customer |  |
+| CustomerId | String | Customer ID specified by the client | 50 |
+| CustomerName | String | Customer name | 100 |
+| CustomerTaxExempt | Boolean | Tax exempt |  |
+| DiscountAmount | Decimal | Total discount | 19, 5 |
+| DiscountDate | DateTime | Discount date |  |
+| DueDate | DateTime | Timestamp indicating when this document is due. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" |  |
+| Email | String | Recipient to be used in e-mail notifications regarding an individual invoice, must be a single valid email address | 255 |
+| ExtensionData | String | Additional invoice information | 4000 |
+| Identity | String | Additional unique identifier | 50 |
+| IncompletedPaymentAmount | Decimal | Total incomplete payment amount  | 19, 5 |
+| InvoicedToCustomerId | String | Invoiced to Customer ID specified by the client | 50 |
+| InvoicedToCustomerName | String | Invoiced to Customer name | 100 |
+| InvoiceId | String | Invoice number | 50 |
+| InvoiceGuid | Guid | Invoice unique identifier |  |
+| InvoiceStatus | String | Invoice status | 50 |
+| InvoiceType | String | Invoice type | 50 |
+| PaymentTerms | String | Payment terms | 50 |
+| PONumber | String | Purchase order number | 50 |
+| PostingDate | DateTime | Date that the invoice was posted. Format should be "YYYY-MM-DD" or "YYYY-MM-DD HH:mm:ss" |  |
+| ProcessedPaymentAmount | Decimal | Total processed payment amount  | 19, 5 |
