@@ -115,7 +115,7 @@ as child elements of other objects.
 ### Subscription
 * [`POST` Create or Update a Subscription](Sections/APIs/Sync/Subscriptions.md#create-or-update-a-subscription)
 * [`GET` Retrieve a Subscription](Sections/APIs/Sync/Subscriptions.md#retrieve-a-subscription)
-* [`GET` Retrieve Sbuscription Report](Sections/APIs/Sync/Subscriptions.md#retrieve-subscription-report)
+* [`GET` Retrieve Subscription Report](Sections/APIs/Sync/Subscriptions.md#retrieve-subscription-report)
 
 ### Tax
 * [`POST` Create or Update a Tax](Sections/APIs/Sync/Taxes.md#create-or-update-a-tax)
