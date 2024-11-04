@@ -329,7 +329,7 @@ For more information on available fields please see our [object reference](../..
 {
     "Message": null,
     "Result": true,
-    "PaymentRequestURL": "https://sandbox.payfabric.com/customerportal/nodus/ExpressPay?accessCode=fcbd6fa32a9b437aaa4dc9cb31ca48dc",
+    "PaymentRequestURL": "https://sandbox.payfabric.com/customerportal/nodus/#/ExpressPay?accessCode=fcbd6fa32a9b437aaa4dc9cb31ca48dc",
     "AccessCode": "fcbd6fa32a9b437aaa4dc9cb31ca48dc"
 }
 ```
