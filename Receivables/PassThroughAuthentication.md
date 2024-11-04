@@ -50,7 +50,7 @@ If the HTTP Status Code is 200 - OK, you will receive the following **string** r
 #### Step 3: Direct the User to the Customer Portal
 Replace the `{PayFabric URL}` and `{PortalName}`, and `{AuthCode}` values in the below URL with the respective values. 
 
-`https://{PayFabric URL}/customerportal/{PortalName}/passthrough?accesscode={authCode}`  
+`https://{PayFabric URL}/customerportal/{PortalName}/#/passthrough?accesscode={authCode}`  
 
 ##### Options
 
@@ -65,7 +65,7 @@ This request accepts the below query string parameters to add additional options
 
 Example:  
 ```text
-https://sandbox.payfabric.com/customerportal/MyPortalName/passthrough?accesscode=12345678-1234-1234-1234-12345678abcd
+https://sandbox.payfabric.com/customerportal/MyPortalName/#/passthrough?accesscode=12345678-1234-1234-1234-12345678abcd
 ```
 
 Once the URL is prepared, direct the user to the URL to allow the user to pass through the authentication and land on the PayFabric Receivables Customer Portal as if the user logged in.
