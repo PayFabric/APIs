@@ -115,8 +115,7 @@ For more information and descriptions on available fields please see our [object
         {
             "Identity": "INV0001",
             "InvoiceId": "INV0001",
-            "PayAmount": 3,
-            "RowVersion": ""
+            "PayAmount": 30
         }
   	],
     "Comment": ""
