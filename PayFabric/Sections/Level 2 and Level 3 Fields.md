@@ -16,6 +16,7 @@ When submitting a [Transaction](Objects.md#transaction) developers can incorpora
 
   "Document": {
     "Head": [
+      { "Name": "CompanyName", "Value": "Aaron Fitz Electrical" },
       { "Name": "InvoiceNumber", "Value": "INV14-98870" },
       { "Name": "PONumber", "Value": "PUR14-009872" },
       { "Name": "DiscountAmount", "Value": "200.00" },
