@@ -5,7 +5,7 @@ The invoice item object represents a line item to be associated to an invoice. T
 | Attribute | Data Type | Required | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- | :--------- |
 | Comment | String | N | Additional comment for the item | 500 |
-| CommodityCode | String | N | Commodity code of the item | 255 |
+| CommodityCode | String | N | Commodity code of the item | 50 |
 | Description | String | N | Description of the item | 100 |
 | ExtendedPrice | Decimal | N | Total extended price | 19, 5 |
 | ExtensionData | String | N | Additional comment information | 4000 |
@@ -32,7 +32,7 @@ The invoice item object represents a line item to be associated to an invoice. T
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
 | Comment | String | Additional comment for the item | 500 |
-| CommodityCode | String | Commodity code of the item | 255 |
+| CommodityCode | String | Commodity code of the item | 50 |
 | Description | String | Description of the item | 100 |
 | ExtendedPrice | Decimal | Total extended price | 19, 5 |
 | ExtensionData | String | Additional comment information | 4000 |
@@ -55,3 +55,4 @@ The invoice item object represents a line item to be associated to an invoice. T
 | Taxes | [Array of Objects](InvoiceItemTax.md) | N | Invoice line item taxes |  |
 | UnitOfMeasure | String | Unit of measure | 25 |
 | UnitPrice | Decimal | Unit price | 19, 5 |
+
