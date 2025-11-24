@@ -30,7 +30,7 @@ This object is used when getting an applied credit on the PayFabric Receivables 
 | Attribute | Data Type | Definition | Max Length |
 | :----------- | :--------- | :--------- | :--------- |
 | DiscountAmount | Decimal | Discount amount applied to the invoice | 19, 5 |
-| Identity | Decimal | Invoice number identifier (Optional if using Invoice number) | 19, 5 |
+| Identity | String | Invoice number identifier (Optional if using Invoice number) | 50 |
 | InvoiceId | String | Invoice number | 30 |
 | InvoiceType | String | Invoice type | 50 |
 | Amount | Decimal | Payment amount applied to the invoice | 19, 5 |
