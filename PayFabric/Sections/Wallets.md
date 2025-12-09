@@ -506,6 +506,8 @@ Used when there are multiple PayFabric Devices. A Device can lock a wallet recor
 
 The Device that locks the record will always be able to delete the record, and only other Devices are prohibited from deletion.
 
+*Note*: lockreason is required in this API.
+
 ### Endpoint
 <kbd><kbd>GET</kbd> /payment/api/wallet/lock/<kbd>{WALLET_ID}</kbd>?lockreason=<kbd>{URL_ENCODED_STRING}</kbd></kbd>
 
