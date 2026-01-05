@@ -111,7 +111,7 @@ as child elements of other objects.
 * [Create Custom Report](/PayFabric/Sections/CustomReports.md#create-custom-report/PayFabric/Sections/CustomReports.md#create-custom-report)
 * [Edit Custom Report](/PayFabric/Sections/CustomReports.md#edit-custom-report)
 * [Delete Custom Report](/PayFabric/Sections/CustomReports.md#delete-custom-report)
-* [Manaual Execute Custom Report](/PayFabric/Sections/CustomReports.md#manual-execute-custom-report)
+* [Manual Execute Custom Report](/PayFabric/Sections/CustomReports.md#manual-execute-custom-report)
 
 ### Shipping Addresses
 * [Create Shipping Address](/PayFabric/Sections/ShippingAddress.md#create-shipping-address)
