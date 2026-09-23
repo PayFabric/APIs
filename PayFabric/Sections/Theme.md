@@ -52,12 +52,14 @@ Create Theme
     "CSS": "body{background-color:pink;}",
     "JS": "alert(123)",
     "Parameters": [
-        "NOBATCH",
-        "NOSETUPID",
-        "NOBILLTO",
-        "NOSHIPTO",
-        "NOHISTORYCARD",
-        "NOPAYLATER"
+        "NOBATCH",                 // Hides the Batch Number field on the hosted payment page.
+        "NOSETUPID",               // Hides the Gateway field on the hosted payment page.
+        "NOBILLTO",                // Hides the Billing Address section on the hosted payment page.
+        "NOSHIPTO",                // Hides the Shipping Address section on the hosted payment page.
+        "NOHISTORYCARD",           // Hides the saved payment methods (history card list) on the hosted payment page.
+        "NOPAYLATER",              // Hides the Pay Later option on the hosted payment page.
+        "LANGUAGEDETECTION",       // Automatically detects and applies the user's browser language.
+        "SINGLEFAILUREMESSAGE"     // Displays a unified failure message for transactions declined by the gateway.
     ]
 }
 </pre>
@@ -65,7 +67,7 @@ Create Theme
 ###### Response
 <pre>
 {
-    "ThemeId": "573028d6-d5a3-4318-beaa-a7df223ef08f",
+    "ThemeId": "c799928f-d9e8-4c99-ac21-0e8978abab6d",
     "Name": "abc",
     "CSS": "body{background-color:pink;}",
     "JS": "alert(123)",
@@ -75,7 +77,9 @@ Create Theme
         "NOBILLTO",
         "NOSHIPTO",
         "NOHISTORYCARD",
-        "NOPAYLATER"
+        "NOPAYLATER",
+        "LANGUAGEDETECTION",
+        "SINGLEFAILUREMESSAGE"
     ]
 }
 </pre>
